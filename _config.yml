@@ -7,57 +7,6 @@
 #   webpushrAuthToken: "7953"
 #   trackingCode: "BDMQzEpmBuoEMOFVQ5EiC7scntMuJzY5Ac2rYD9NPSxPXqZ_VpC8Xk_iuuW0s6M7jioHyy05qzqyD28i4ikaThw"
 
-
-# pwa:
-#   manifest:
-#     path: /manifest.json
-#     body:
-#       name: CC康纳百川
-#       short_name: CC康纳百川
-#       theme_color: "#49b1f5"
-#       background_color: "#49b1f5"
-#       display: standalone
-#       orientation: portrait
-#       scope: /
-#       start_url: /
-#       icons:
-#         - src: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/images/48.png
-#           type: image/png
-#           sizes: 48x48
-#         - src: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/images/96.png
-#           type: image/png
-#           sizes: 96x96
-#         - src: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/images/144.png
-#           type: image/png
-#           sizes: 144x144
-#         - src: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/images/192.png
-#           type: image/png
-#           sizes: 192x192
-#         - src: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/images/512.png
-#           type: image/png
-#           sizes: 512x512
-#         - src: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/images/apple-touch-icon.png
-#           type: image/png
-#           sizes: 512x512
-#   serviceWorker:
-#     path: /sw.js
-#     preload:
-#       urls:
-#         - /
-#       posts: 12
-#     opts:
-#       networkTimeoutSeconds: 30
-#     routes:
-#       - pattern: !!js/regexp /hm.baidu.com/
-#         strategy: networkOnly
-#       - pattern: !!js/regexp /www.google-analytics.com/
-#         strategy: networkOnly
-#       - pattern: !!js/regexp /.*\.(js|css|jpg|jpeg|png|gif)$/
-#         strategy: cacheFirst
-#       - pattern: !!js/regexp /\//
-#         strategy: networkFirst
-#   priority: 5
-
 # Site
 title: CC康纳百川
 subtitle: 'Hello Word'
@@ -93,8 +42,8 @@ root: /
 permalink: posts/:abbrlink/
 permalink_defaults:
 pretty_urls:
-  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: false # Set to false to remove trailing '.html' from permalinks
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -205,40 +154,18 @@ feed:
         template: 
         output: "feed.json"
 
-
 # offline config passed to sw-precache.
-
-# offline:
-#   maximumFileSizeToCacheInBytes: 10485760 # 緩存的最大文件大小，以字節為單位
-#   staticFileGlobs:
-#     - public/**/*.{js,html,css,png,jpg,gif,svg,webp,eot,ttf,woff,woff2}
-#   # 靜態文件合集，如果你的站點使用了例如webp格式的文件，請將文件類型添加進去。
-#   stripPrefix: public
-#   verbose: true
-#   runtimeCaching:
-#     # CDNs - should be cacheFirst, since they should be used specific versions so should not change
-#     - urlPattern: /* # 如果你需要加載CDN資源，請配置該選項，如果沒有，可以不配置。
-#       handler: cacheFirst
-#       options:
-#         origin: https://ccknbc.now.sh/ # 可替換成你的 url
-
-# offline config passed to sw-precache.
-# service_worker:
-#   maximumFileSizeToCacheInBytes: 5242880
-#   staticFileGlobs:
-#   - public/posts/*.{html}
-#   stripPrefix: public
-#   verbose: true
-
-# offline config passed to sw-precache.
-# service_worker:
-#   maximumFileSizeToCacheInBytes: 5242880
-#   staticFileGlobs:
-#   - public/**/*.{html,js,css,png,jpg,gif,svg,eot,ttf,woff,woff2}
-#   #- public/**/*.{js}
-#   - public/posts/**/*.{html}
-#   stripPrefix: public
-#   verbose: true
+service_worker:
+  maximumFileSizeToCacheInBytes: 5242880
+  staticFileGlobs:
+  - public/**/*.{js,html,css,png,jpg,gif,svg,eot,ttf,woff,woff2}
+  stripPrefix: public
+  verbose: true
+  runtimeCaching:
+    - urlPattern: /*
+      handler: cacheFirst
+      options:
+        origin: cdn.jsdelivr.net
         
 aplayer:
   asset_inject: false
