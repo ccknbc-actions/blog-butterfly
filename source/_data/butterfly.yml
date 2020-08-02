@@ -13,7 +13,8 @@ menu:
   分类: /categories/ || fa fa-folder-open
   友链: /link/ || fa fa-link
   留言: /comments/ || fa fa-comments
-  关于: /about/ || fa fa-heart  
+  说说: /cc-say/ || fas fa-clipboard-list
+  # 关于: /about/ || fa fa-heart  
   订阅 || fa fa-list:
     # - 音乐 || /music/ || fa fa-music
     # - 照片 || /gallery/ || fa fa-picture-o
@@ -666,7 +667,7 @@ aside:
       link: https://github.com/ccknbc
   card_announcement:
     enable: true
-    content: '<b><p><font color="#84fab0">本站已开启了</font><font color="#8FBC8F">PJAX</font></br>
+    content: '<b><p><font color="#46aef7">本站已开启了</font><font color="#8FBC8F">PJAX</font></br>
     <font color="#46aef7">反正也没人看,取消了浏览器订阅通知和更新刷新提示，等我有拿得出手的优质内容再打开</font></br>
     </b></p>
 <img src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/wechat.png"alt="微信公众号"/>'
