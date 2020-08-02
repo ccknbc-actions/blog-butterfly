@@ -14,7 +14,7 @@ menu:
   友链: /link/ || fa fa-link
   留言: /comments/ || fa fa-comments
   关于: /about/ || fa fa-heart  
-  清单 || fa fa-list:
+  订阅 || fa fa-list:
     # - 音乐 || /music/ || fa fa-music
     # - 照片 || /gallery/ || fa fa-picture-o
     # - 电影 || /movies/ || fa fa-film
@@ -348,7 +348,7 @@ valine:
   friends: 	"d0444153231c7f6d8ccf6ec90950c06c,95240b53f57d823ab135c20e6435c958"
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
   lang: zh-CN # i18n: zh-CN/zh-TW/en/ja
-  placeholder: 仅在昵称中填写QQ号或自定义填写相关信息；您的信息仅作你我收到回复通知使用,重要评论请点击切换评论系统
+  placeholder: 仅在昵称中填写QQ号或自定义填写相关信息\n您的信息仅作你我收到回复通知使用\n重要评论请点击切换评论系统
   #Valine系统暂时停用，恢复时间待定  # valine comment input placeholder(like: Please leave your footprints )
 
   guest_info: nick,mail,link #valine comment header info (nick/mail/link)
@@ -666,8 +666,9 @@ aside:
       link: https://github.com/ccknbc
   card_announcement:
     enable: true
-    content: '<b><p>本站已开启了<font color="#8FBC8F">PJAX</font>，
-    并本着尽可能不占用您过多缓存空间的初衷，在测试浏览器订阅网站被动更新推送和主动更新通知中，您可以清除浏本站缓存以体验新功能</b></p>
+    content: '<b><p><font color="#84fab0">本站已开启了</font><font color="#8FBC8F">PJAX</font></br>
+    <font color="#46aef7">反正也没人看,取消了浏览器订阅通知和更新刷新提示，等我有拿得出手的优质内容再打开</font></br>
+    </b></p>
 <img src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/wechat.png"alt="微信公众号"/>'
     # </br>
     # <a href="https://github.com/jerryc127/hexo-theme-butterfly/releases"><img alt="Theme" 
@@ -874,7 +875,7 @@ inject:
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/tags.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/css/flink.min.css">
     #- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/plugins.min.css">
-    - '<style type="text/css">.app-refresh{position:fixed;top:-2.2rem;left:0;right:0;z-index:99999;padding:0 1rem;font-size:15px;height:2.2rem;transition:all .3s ease}.app-refresh-wrap{display:flex;color:#fff;height:100%;align-items:center;justify-content:center}.app-refresh-wrap a{color:#fff;text-decoration:underline;cursor:pointer}</style>'
+    #- '<style type="text/css">.app-refresh{position:fixed;top:-2.2rem;left:0;right:0;z-index:99999;padding:0 1rem;font-size:15px;height:2.2rem;transition:all .3s ease}.app-refresh-wrap{display:flex;color:#fff;height:100%;align-items:center;justify-content:center}.app-refresh-wrap a{color:#fff;text-decoration:underline;cursor:pointer}</style>'
 
   bottom:
     - <script src="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/ccknbc.js"></script>
@@ -886,7 +887,7 @@ inject:
     # - <script src="https://cdn.jsdelivr.net/gh/ccknbc/ccknbc.github.io/js/jquery.js"></script>
     # - <script src="https://cdn.jsdelivr.net/gh/ccknbc/ccknbc.github.io/js/weather.js"></script>
     # - <script src="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/js/mouse_snow.min.js"></script>
-    - '<div class="app-refresh" id="app-refresh"> <div class="app-refresh-wrap"> <label> 网站已更新至最新版本 </label> <a href="javascript:void(0)" onclick="location.reload()">点击刷新</a> </div></div> <script>function showNotification(){if(GLOBAL_CONFIG.Snackbar){var t="light"===document.documentElement.getAttribute("data-theme")?GLOBAL_CONFIG.Snackbar.bgLight:GLOBAL_CONFIG.Snackbar.bgDark,e=GLOBAL_CONFIG.Snackbar.position;Snackbar.show({text:"网站部分内容已更新",backgroundColor:t,duration:5e5,pos:e,actionText:"点击刷新",actionTextColor:"#fff",onActionClick:function(t){location.reload()}})}else{var o=`top: 0; background: ${"light"===document.documentElement.getAttribute("data-theme")?"#49b1f5":"#1f1f1f"};`;document.getElementById("app-refresh").style.cssText=o}}"serviceWorker"in navigator&&(navigator.serviceWorker.controller&&navigator.serviceWorker.addEventListener("controllerchange",function(){showNotification()}),window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js")}));</script>'
+    #- '<div class="app-refresh" id="app-refresh"> <div class="app-refresh-wrap"> <label> 网站已更新至最新版本 </label> <a href="javascript:void(0)" onclick="location.reload()">点击刷新</a> </div></div> <script>function showNotification(){if(GLOBAL_CONFIG.Snackbar){var t="light"===document.documentElement.getAttribute("data-theme")?GLOBAL_CONFIG.Snackbar.bgLight:GLOBAL_CONFIG.Snackbar.bgDark,e=GLOBAL_CONFIG.Snackbar.position;Snackbar.show({text:"网站部分内容已更新",backgroundColor:t,duration:5e5,pos:e,actionText:"点击刷新",actionTextColor:"#fff",onActionClick:function(t){location.reload()}})}else{var o=`top: 0; background: ${"light"===document.documentElement.getAttribute("data-theme")?"#49b1f5":"#1f1f1f"};`;document.getElementById("app-refresh").style.cssText=o}}"serviceWorker"in navigator&&(navigator.serviceWorker.controller&&navigator.serviceWorker.addEventListener("controllerchange",function(){showNotification()}),window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js")}));</script>'
     # - <script src="https://cdn.jsdelivr.net/gh/lete114/CDN/Sum/title.js"></script>
 
 
@@ -902,10 +903,10 @@ inject:
 
 CDN:
   # main
-  main_css: /css/index.css
+  main_css: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/css/index.css
   jquery: https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js
-  main: /js/main.js
-  utils: /js/utils.js
+  main: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/main.js
+  utils: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/utils.js
 
   # pjax
   pjax: https://cdn.jsdelivr.net/npm/pjax/pjax.min.js
@@ -924,8 +925,8 @@ CDN:
   sharejs_css: https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css
 
   # search
-  local_search: /js/search/local-search.js
-  algolia_js: /js/search/algolia.js
+  local_search: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/search/local-search.js
+  algolia_js: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/search/algolia.js
   algolia_search: https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.js
   algolia_search_css: https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.css
 
@@ -940,9 +941,9 @@ CDN:
   busuanzi: //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
 
   # background effect
-  canvas_ribbon: /js/third-party/canvas-ribbon.js
-  canvas_ribbon_piao: /js/third-party/piao.js
-  canvas_nest: /js/third-party/canvas-nest.js
+  canvas_ribbon: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/third-party/canvas-ribbon.js
+  canvas_ribbon_piao: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/third-party/piao.js
+  canvas_nest: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/third-party/canvas-nest.js
 
   lazyload: https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js
   instantpage: https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js
@@ -960,16 +961,16 @@ CDN:
 
   # effect
   anime: https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js
-  activate_power_mode: /js/third-party/activate-power-mode.js
-  fireworks: /js/third-party/fireworks.js
-  click_heart: /js/third-party/click_heart.js
-  ClickShowText: /js/third-party/ClickShowText.js
+  activate_power_mode: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/third-party/activate-power-mode.js
+  fireworks: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/third-party/fireworks.js
+  click_heart: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/third-party/click_heart.js
+  ClickShowText: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/third-party/ClickShowText.js
 
   # fontawesome
   fontawesome: https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css
 
   # Conversion between Traditional and Simplified Chinese
-  translate: /js/tw_cn.js
+  translate: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/tw_cn.js
 
   # justifiedGallery
   justifiedGallery_js: https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js
