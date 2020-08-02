@@ -1,0 +1,283 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# webPushNotification:
+#   webpushrKey: "UIngQiMfLAHGhZ-LkzRFKtvHh9CqUYnY3yipDB2qPB0"
+#   webpushrAuthToken: "7953"
+#   trackingCode: "BDMQzEpmBuoEMOFVQ5EiC7scntMuJzY5Ac2rYD9NPSxPXqZ_VpC8Xk_iuuW0s6M7jioHyy05qzqyD28i4ikaThw"
+
+
+# pwa:
+#   manifest:
+#     path: /manifest.json
+#     body:
+#       name: CC康纳百川
+#       short_name: CC康纳百川
+#       theme_color: "#49b1f5"
+#       background_color: "#49b1f5"
+#       display: standalone
+#       orientation: portrait
+#       scope: /
+#       start_url: /
+#       icons:
+#         - src: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/images/48.png
+#           type: image/png
+#           sizes: 48x48
+#         - src: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/images/96.png
+#           type: image/png
+#           sizes: 96x96
+#         - src: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/images/144.png
+#           type: image/png
+#           sizes: 144x144
+#         - src: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/images/192.png
+#           type: image/png
+#           sizes: 192x192
+#         - src: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/images/512.png
+#           type: image/png
+#           sizes: 512x512
+#         - src: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/images/apple-touch-icon.png
+#           type: image/png
+#           sizes: 512x512
+#   serviceWorker:
+#     path: /sw.js
+#     preload:
+#       urls:
+#         - /
+#       posts: 12
+#     opts:
+#       networkTimeoutSeconds: 30
+#     routes:
+#       - pattern: !!js/regexp /hm.baidu.com/
+#         strategy: networkOnly
+#       - pattern: !!js/regexp /www.google-analytics.com/
+#         strategy: networkOnly
+#       - pattern: !!js/regexp /.*\.(js|css|jpg|jpeg|png|gif)$/
+#         strategy: cacheFirst
+#       - pattern: !!js/regexp /\//
+#         strategy: networkFirst
+#   priority: 5
+
+# Site
+title: CC康纳百川
+subtitle: 'Hello Word'
+description: '一个无趣的人'
+keywords: CC的部落格
+author: CC康纳百川
+# 需修改Hexo默认的空值为确切的语言列表，记得在主题languages目录下添加对应的语言.yml文件
+language: zh-CN
+timezone: 'Asia/Shanghai'
+
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: https://ccknbc.github.io/
+
+# abbrlink config
+abbrlink:
+  alg: crc32      #support crc16(default) and crc32
+  rep: dec        #support dec(default) and hex
+  drafts: false   #(true)Process draft,(false)Do not process draft. false(default) 
+  # Generate categories from directory-tree
+  # depth: the max_depth of directory-tree you want to generate, should > 0
+  auto_category:
+     enable: true  #true(default)
+     depth:        #3(default)
+     over_write: false 
+  auto_title: false #enable auto title, it can auto fill the title by path
+  auto_date: true #enable auto date, it can auto fill the date by time today
+  force: false #enable force mode,in this mode, the plugin will ignore the cache, and calc the abbrlink for every post even it already had abbrlink.
+
+
+root: /
+permalink: posts/:abbrlink/
+permalink_defaults:
+pretty_urls:
+  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
+
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :language
+skip_render:
+  - 404.html
+  - README.md
+  - robots.txt
+  - CNAME
+  - lete.html
+  - google7787a6577761be93.html
+  # - baidu_verify_W5KnhGrIiJ.html
+  # - baidu_verify_iDHY27SKF7.html
+  # - baidu_verify_VmoU6BLPQt.html
+  # - baidu_verify_Pzk56fVe1P.html
+  # - baidu_verify_rY1gqenItb.html
+
+# Writing
+new_post_name: :title.md # File name of new posts
+default_layout: post
+titlecase: true # Transform title into titlecase
+external_link:
+  enable: true # Open external links in new tab
+  field: site # Apply to the whole site
+  exclude: ''
+filename_case: 0
+render_drafts: true
+post_asset_folder: true
+relative_link: false
+future: false
+# highlight:
+#   enable: true
+#   line_number: false
+#   auto_detect: true
+#   tab_replace: ''
+#   wrap: true
+#   hljs: true
+
+highlight:
+  enable: true
+  line_number: true # 改为false
+  auto_detect: true
+  tab_replace:
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ''
+  per_page: 4
+  order_by: -updated
+
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
+meta_generator: true
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## Use post's date for updated date unless set in front-matter
+use_date_for_updated: true
+
+# Pagination
+## Set per_page to 0 to disable pagination
+per_page: 10
+pagination_dir: page
+
+# Include / Exclude file(s)
+## include:/exclude: options only apply to the 'source/' folder
+include:
+exclude: 
+ignore:
+
+# Extensions
+## Plugins: https://hexo.io/plugins/
+## Themes: https://hexo.io/themes/
+theme: butterfly
+# Extensions
+feed:
+    limit: 20
+    order_by: "-updated"
+    tag_dir: "tag"
+    category_dir: "category"
+    rss:
+        enable: true
+        template: 
+        output: "rss.xml"
+    atom:
+        enable: true
+        template: 
+        output: "atom.xml"
+    jsonFeed:
+        enable: true
+        template: 
+        output: "feed.json"
+
+
+# offline config passed to sw-precache.
+
+# offline:
+#   maximumFileSizeToCacheInBytes: 10485760 # 緩存的最大文件大小，以字節為單位
+#   staticFileGlobs:
+#     - public/**/*.{js,html,css,png,jpg,gif,svg,webp,eot,ttf,woff,woff2}
+#   # 靜態文件合集，如果你的站點使用了例如webp格式的文件，請將文件類型添加進去。
+#   stripPrefix: public
+#   verbose: true
+#   runtimeCaching:
+#     # CDNs - should be cacheFirst, since they should be used specific versions so should not change
+#     - urlPattern: /* # 如果你需要加載CDN資源，請配置該選項，如果沒有，可以不配置。
+#       handler: cacheFirst
+#       options:
+#         origin: https://ccknbc.now.sh/ # 可替換成你的 url
+
+# offline config passed to sw-precache.
+# service_worker:
+#   maximumFileSizeToCacheInBytes: 5242880
+#   staticFileGlobs:
+#   - public/posts/*.{html}
+#   stripPrefix: public
+#   verbose: true
+
+# offline config passed to sw-precache.
+# service_worker:
+#   maximumFileSizeToCacheInBytes: 5242880
+#   staticFileGlobs:
+#   - public/**/*.{html,js,css,png,jpg,gif,svg,eot,ttf,woff,woff2}
+#   #- public/**/*.{js}
+#   - public/posts/**/*.{html}
+#   stripPrefix: public
+#   verbose: true
+        
+aplayer:
+  asset_inject: false
+  meting: true
+
+# hexo-tag-dplayer:
+#   cdn:
+#     - https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js
+#     - https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css
+#   default: 
+#     api: https://api.prprpr.me/dplayer/
+#     loop: yes
+#     screenshot: yes
+#     autoplay: false
+#     hotkey: true
+#     playbackSpeed: [0.5, 0.75, 1, 1.25, 1.5, 2]
+#     theme: #FADFA3
+    
+    
+
+baidu_url_submit:
+  count: 50               # 提交最新的多少个链接
+  host: ccknbc.github.io  # 在百度站长平台中添加的域名
+  token: 9TyGjimf05CnCOTl   # 秘钥
+  path: baidu_urls.txt   # 文本文档的地址， 新链接会保存在此文本文档里
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+- type: 'git'
+  repo: 
+   a: git@github.com:CCKNBC/ccknbc.github.io.git
+   b: git@e.coding.net:ccknbc/blog.git
+   c: git@gitee.com:ccknbc/ccknbc.git
+   #d: git@gitee.com:ccknbcgroup/ccknbc.git
+  branch: master
+- type: baidu_url_submitter # 这是新加的主动推送
+  
+admin:
+ deployCommand: 'hexo-pubish.bat'
+
+

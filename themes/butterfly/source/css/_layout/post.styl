@@ -1,0 +1,336 @@
+beautify()
+  headStyle(fontsize)
+    padding-left: unit(fontsize + .4, 'rem')
+
+    code
+      font-size: unit(fontsize, 'rem')
+
+    &:before
+      margin-left: unit((-(fontsize + .2)), 'rem')
+      font-size: unit(fontsize, 'rem')
+
+    &:hover
+      padding-left: unit(fontsize + .6, 'rem')
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    transition: all .2s ease-out
+
+    &:before
+      position: absolute
+      top: calc(50% - .35rem)
+      color: $title-prefix-icon-color
+      content: $title-prefix-icon
+      line-height: 1
+      transition: all .2s ease-out
+      @extend .fontawesomeIcon
+
+    &:hover
+      &:before
+        color: $light-blue
+
+  h1
+    headStyle(1)
+
+  h2
+    headStyle(.9)
+
+  h3
+    headStyle(.8)
+
+  h4
+    headStyle(.7)
+
+  h5
+    headStyle(.6)
+
+  h6
+    headStyle(.6)
+
+  ol,
+  ul
+    margin-top: .4rem
+    padding: 0 0 0 .8rem
+    list-style: none
+    counter-reset: li
+
+    @media screen and (max-width: $sm)
+      padding: 0 0 0 .4rem
+
+    p
+      margin: 0 0 .5rem
+
+    ol,
+    ul
+      padding-left: .6rem
+
+      @media screen and (max-width: $sm)
+        padding-left: .2rem
+
+    li
+      &:not(.tab)
+        position: relative
+        margin: .2rem 0
+
+      &:hover
+        &:before
+          transform: rotate(360deg)
+
+      &:before
+        position: absolute
+        top: 0
+        left: 0
+        background: $light-blue
+        color: $white
+        cursor: pointer
+        transition: all .3s ease-out
+
+  ol
+    > li
+      &:not(.tab)
+        padding: .1rem .2rem .1rem 1.4rem
+
+      &:before
+        margin-top: .3rem
+        width: w = 1rem
+        height: h = w
+        border-radius: .5 * w
+        content: counter(li)
+        counter-increment: li
+        text-align: center
+        font-size: .6rem
+        line-height: h
+
+  ul
+    > li:not(.tab)
+      padding: .1rem .2rem .1rem 1rem
+
+      &:hover
+        &:before
+          border-color: $pseudo-hover
+
+      &:before
+        $w = .3rem
+        top: 10px
+        width: w = $w
+        height: h = w
+        border: .5 * w solid $light-blue
+        border-radius: w
+        background: transparent
+        content: ''
+        line-height: h
+
+no-beautify()
+  ol,
+  ul
+    margin-top: .4rem
+
+    p
+      margin: 0 0 .5rem
+
+    ol,
+    ul
+      padding-left: .5rem
+
+    li
+      position: relative
+      margin: .3rem 0
+      padding-left: .3rem
+
+#article-container
+  if hexo-config('beautify.enable') && hexo-config('beautify.field') == 'site'
+    beautify()
+  else if hexo-config('beautify.enable') && hexo-config('beautify.field') == 'post'
+    no-beautify()
+
+    &.post-content
+      beautify()
+  else
+    no-beautify()
+
+a
+  color: $a-link-color
+  text-decoration: none
+  word-wrap: break-word
+  transition: all .2s
+  overflow-wrap: break-word
+
+  &:hover
+    color: $light-blue
+
+a.fancybox
+  outline: none
+
+  &:focus
+    outline: none
+
+  display: inline-block
+  width: 100%
+  text-align: center
+
+img
+  max-width: 100%
+  transition: all .2s
+
+.katex-wrap
+  overflow: auto
+
+  if hexo-config('katex') && hexo-config('katex.hide_scrollbar')
+    &::-webkit-scrollbar
+      display: none
+
+.layout_post
+  margin: 0 auto
+  padding: 2rem 15px
+  max-width: 1000px
+
+  img
+    display: block
+
+  .tag_share
+    .post-meta
+      &__tag-list
+        display: inline-block
+
+      &__tags
+        display: inline-block
+        margin: .4rem .4rem .4rem 0
+        padding: 0 .6rem
+        width: fit-content
+        border: 1px solid $light-blue
+        border-radius: .6rem
+        color: $light-blue
+        font-size: 12px
+        cursor: pointer
+        transition: all .2s ease-in-out
+
+        &:hover
+          background: $light-blue
+          color: var(--white)
+
+    .post_share
+      display: inline-block
+      float: right
+      margin: .4rem 0
+      width: fit-content
+
+      .social-share
+        font-size: 12px
+
+        .social-share-icon
+          margin: 0 4px
+          width: 26px
+          height: 26px
+          font-size: 15px
+          line-height: 25px
+
+  .post-copyright
+    position: relative
+    margin: 2rem 0 .5rem
+    padding: .5rem .8rem
+    border: 1px solid var(--light-grey)
+    transition: box-shadow .3s ease-in-out
+
+    &:before
+      position: absolute
+      top: t = .5rem
+      right: t
+      width: w = .8rem
+      height: w
+      border-radius: w
+      background: $light-blue
+      content: ''
+
+    &:after
+      position: absolute
+      top: t = .7rem
+      right: t
+      width: w = .4rem
+      height: w
+      border-radius: w
+      background: var(--card-bg)
+      content: ''
+
+    &:hover
+      box-shadow: 0 0 8px 0 rgba(232, 237, 250, .6), 0 2px 4px 0 rgba(232, 237, 250, .5)
+
+    .post-copyright
+      &-meta
+        color: $light-blue
+        font-weight: bold
+
+      &-info
+        padding-left: .3rem
+
+        a
+          text-decoration: underline
+          word-break: break-word
+
+          &:hover
+            text-decoration: none
+
+#article-container
+  word-wrap: break-word
+  overflow-wrap: break-word
+
+  a
+    color: $theme-link-color
+
+    &:hover
+      text-decoration: underline
+
+  img
+    margin: 0 auto .8rem
+
+  p
+    margin: 0 0 .8rem
+
+  iframe
+    margin: 0 0 1rem
+
+  .post-outdate-notice
+    position: relative
+    margin: 0 0 1rem
+    padding: .5rem 1.2rem
+    border-radius: 3px
+    background-color: $noticeOutdate-bg
+    color: $noticeOutdate-color
+
+    if hexo-config('noticeOutdate.style') == 'flat'
+      padding: .5rem 1.2rem .5rem 1.8rem
+      border-left: 5px solid $noticeOutdate-border
+
+      &:before
+        @extend .fontawesomeIcon
+        position: absolute
+        top: 50%
+        left: 1em
+        color: $noticeOutdate-border
+        content: '\f071'
+        transform: translateY(-50%)
+
+@media screen and (max-width: 1024px)
+  .layout_post
+    width: auto
+
+@media screen and (max-width: $sm)
+  .layout_post
+    padding: 1rem 5px
+
+    & > #post
+      padding: 1.8rem .7rem
+
+// adjust the layout width in big screen
+@media screen and (min-width: $lr)
+  .layout_post
+    max-width: 1300px
+
+  .layout_page
+    max-width: 1500px
+
+    &.hide-aside
+      max-width: 1300px

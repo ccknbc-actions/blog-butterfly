@@ -1,0 +1,312 @@
+#page-header
+  position: relative
+  width: 100%
+  background-color: $light-blue
+  background-attachment: scroll
+  background-position: center center
+  background-size: cover
+  background-repeat: no-repeat
+  transition: all .5s
+
+  // index
+  &.full_page
+    height: $index_top_img_height
+    background-attachment: fixed
+
+    #site-info
+      position: absolute
+      top: $index_site_info_top
+      padding: 0 .5rem
+      width: 100%
+
+  #site_title,
+  #site_subtitle,
+  #scroll_down .scroll-down-effects
+    text-align: center
+    text-shadow: .1rem .1rem .2rem rgba(0, 0, 0, .15)
+    line-height: 1.5
+
+  #site_title
+    margin: 0
+    color: var(--white)
+    font-size: 1.3rem
+
+    @media screen and (min-width: $sm)
+      font-size: 2rem
+
+  #site_subtitle
+    color: var(--light-grey)
+    font-size: .8rem
+
+    @media screen and (min-width: $sm)
+      font-size: 1.2rem
+
+  #site_social_icons
+    display: none
+    margin: 0 auto
+    width: 15rem
+    text-align: center
+
+    @media screen and (max-width: $sm)
+      display: block
+
+    .social-icon
+      margin: 0 .5rem
+      color: var(--light-grey)
+      text-shadow: .1rem .1rem .2rem rgba(0, 0, 0, .15)
+      font-size: 1rem
+      cursor: pointer
+
+  #scroll_down
+    position: absolute
+    bottom: 0
+    width: 100%
+    cursor: pointer
+
+    .scroll-down-effects
+      position: relative
+      width: 100%
+      color: var(--light-grey)
+      font-size: 30px
+
+  // page
+  &.not-index-bg
+    height: 20rem
+
+    @media screen and (max-width: $sm)
+      height: 14rem
+
+  #page_site-info
+    position: absolute
+    top: 10rem
+    padding: 0 .5rem
+    width: 100%
+
+    @media screen and (max-width: $sm)
+      top: 7rem
+
+  // post
+  &.post-bg
+    height: 20rem
+
+    @media screen and (max-width: $sm)
+      height: 18rem
+
+    &:before
+      position: absolute
+      top: 0
+      left: 0
+      display: block
+      width: 100%
+      height: 100%
+      background-color: alpha($dark-black, .5)
+      content: ''
+
+    #post-info
+      position: absolute
+      bottom: 1.5rem
+      padding: 0 8%
+      width: 100%
+      text-align: left
+
+      @media screen and (max-width: $sm)
+        bottom: 1.1rem
+        padding: 0 1.1rem
+
+      #post-title
+        margin-bottom: .4rem
+        font-size: 1.5rem
+
+        @media screen and (max-width: $sm)
+          font-size: 1.2rem
+
+        .posttitle
+          @extend .limit-more-line
+          color: var(--white)
+          line-height: 1.5
+          -webkit-line-clamp: 3
+
+      #post-meta
+        color: var(--light-grey)
+        font-size: 95%
+
+        @media screen and (min-width: $sm)
+          > .meta-secondline
+            > span:first-child
+              display: none
+
+        @media screen and (max-width: $sm)
+          font-size: 90%
+
+          > .meta-firstline,
+          > .meta-secondline
+            display: inline
+
+        .post-meta
+          &-separator
+            margin: 0 .25rem
+
+          &-icon
+            margin-right: .2rem
+
+          &-label
+            if hexo-config('post_meta.post.label')
+              margin-right: .2rem
+            else
+              display: none
+
+        a
+          color: var(--light-grey)
+          transition: all .3s ease-out
+
+          &:hover
+            color: $text-hover
+            text-decoration: underline
+
+// css hack
+// all browser in ios and safari in all apple device
+_::-webkit-full-page-media,
+_:future,
+:root #page-header.full_page
+  background-attachment: scroll !important
+
+#nav
+  position: absolute
+  top: 0
+  z-index: 90
+  padding: 10px 36px
+  width: 100%
+  height: 58px
+  border: none
+  font-size: 18px
+  opacity: 0
+  transition: all .5s
+
+  @media screen and (max-width: $sm)
+    padding: 10px .8rem
+
+  &:not(.fixed)
+    .menus
+      padding-right: 0 !important
+
+  .toggle-menu
+    display: none
+    padding: .1rem 0 0 .3rem
+    vertical-align: top
+
+    &:hover
+      color: var(--white)
+
+    &.is-visible-inline
+      .site-page
+        font-size: inherit
+
+  a
+    color: var(--light-grey)
+
+    &:hover
+      color: var(--white)
+
+  &.fixed
+    position: fixed
+    top: -60px
+    z-index: 91
+    background: rgba(255, 255, 255, .8)
+    box-shadow: 0 5px 6px -5px alpha($grey, .6)
+    transition: transform .2s ease-in-out, opacity .2s ease-in-out
+
+    a,
+    #site-name,
+    .toggle-menu
+      color: var(--font-color)
+      text-shadow: none
+
+      &:hover
+        color: $light-blue
+
+  &.visible
+    transition: all .5s
+    transform: translate3d(0, 100%, 0)
+
+  #site-name
+    text-shadow: .1rem .1rem .2rem rgba($dark-black, .15)
+    font-weight: bold
+    cursor: pointer
+
+  .menus_items
+    display: inline
+
+    .menus_item
+      position: relative
+      display: inline-block
+      padding: 0 0 0 .7rem
+
+      &:hover
+        .menus_item_child
+          display: block
+
+        i.expand
+          transform: rotate(180deg) !important
+
+      i.expand
+        padding: 4px
+        transition: transform .3s
+
+      & > a
+        &:after
+          position: absolute
+          bottom: 0
+          left: 0
+          z-index: -1
+          width: 0
+          height: 3px
+          background-color: lighten($theme-color, 30%)
+          content: ''
+          transition: all .3s ease-in-out
+
+        &:hover
+          &:after
+            width: 100%
+
+      .menus_item_child
+        position: absolute
+        right: 0
+        display: none
+        margin-top: 8px
+        padding: 0
+        width: max-content
+        background-color: var(--sidebar-bg)
+        box-shadow: 0 5px 20px -4px rgba($dark-black, .5)
+        animation: sub_menus .3s .1s ease both
+
+        &:before
+          position: absolute
+          top: -8px
+          left: 0
+          width: 100%
+          height: 20px
+          content: ''
+
+        li
+          list-style: none
+
+          &:hover
+            background: var(--text-bg-hover)
+
+          a
+            display: inline-block
+            padding: .3rem .7rem
+            width: 100%
+            color: var(--font-color)
+            text-shadow: none
+
+  #search_button
+    display: inline
+    padding: 0 0 0 .7rem
+
+  .site-page
+    position: relative
+    padding-bottom: .3rem
+    text-shadow: .05rem .05rem .1rem rgba($dark-black, .3)
+    font-size: .7rem
+    cursor: pointer
