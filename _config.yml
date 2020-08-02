@@ -2,21 +2,14 @@
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
-# webPushNotification:
-#   webpushrKey: "UIngQiMfLAHGhZ-LkzRFKtvHh9CqUYnY3yipDB2qPB0"
-#   webpushrAuthToken: "7953"
-#   trackingCode: "BDMQzEpmBuoEMOFVQ5EiC7scntMuJzY5Ac2rYD9NPSxPXqZ_VpC8Xk_iuuW0s6M7jioHyy05qzqyD28i4ikaThw"
-
 # Site
 title: CC康纳百川
 subtitle: 'Hello Word'
 description: '一个无趣的人'
 keywords: CC的部落格
 author: CC康纳百川
-# 需修改Hexo默认的空值为确切的语言列表，记得在主题languages目录下添加对应的语言.yml文件
 language: zh-CN
 timezone: 'Asia/Shanghai'
-
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -52,7 +45,7 @@ tag_dir: tags
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
-i18n_dir: :language
+i18n_dir: :lang
 skip_render:
   - 404.html
   - README.md
@@ -60,38 +53,32 @@ skip_render:
   - CNAME
   - lete.html
   - google7787a6577761be93.html
-  # - baidu_verify_W5KnhGrIiJ.html
-  # - baidu_verify_iDHY27SKF7.html
-  # - baidu_verify_VmoU6BLPQt.html
-  # - baidu_verify_Pzk56fVe1P.html
-  # - baidu_verify_rY1gqenItb.html
 
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
-titlecase: true # Transform title into titlecase
+titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
   field: site # Apply to the whole site
   exclude: ''
 filename_case: 0
-render_drafts: true
-post_asset_folder: true
+render_drafts: false
+post_asset_folder: false
 relative_link: false
-future: false
-# highlight:
-#   enable: true
-#   line_number: false
-#   auto_detect: true
-#   tab_replace: ''
-#   wrap: true
-#   hljs: true
-
+future: true
 highlight:
   enable: true
-  line_number: true # 改为false
-  auto_detect: true
-  tab_replace:
+  line_number: false
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -99,8 +86,8 @@ highlight:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 4
-  order_by: -updated
+  per_page: 10
+  order_by: -date
 
 # Category & Tag
 default_category: uncategorized
@@ -117,8 +104,8 @@ meta_generator: true
 ## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
-## Use post's date for updated date unless set in front-matter
-use_date_for_updated: true
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -128,14 +115,14 @@ pagination_dir: page
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
 include:
-exclude: 
+exclude:
 ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: butterfly
-# Extensions
+
 feed:
     limit: 20
     order_by: "-updated"
@@ -171,21 +158,6 @@ aplayer:
   asset_inject: false
   meting: true
 
-# hexo-tag-dplayer:
-#   cdn:
-#     - https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js
-#     - https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css
-#   default: 
-#     api: https://api.prprpr.me/dplayer/
-#     loop: yes
-#     screenshot: yes
-#     autoplay: false
-#     hotkey: true
-#     playbackSpeed: [0.5, 0.75, 1, 1.25, 1.5, 2]
-#     theme: #FADFA3
-    
-    
-
 baidu_url_submit:
   count: 50               # 提交最新的多少个链接
   host: ccknbc.github.io  # 在百度站长平台中添加的域名
@@ -206,5 +178,3 @@ deploy:
   
 admin:
  deployCommand: 'hexo-pubish.bat'
-
-
