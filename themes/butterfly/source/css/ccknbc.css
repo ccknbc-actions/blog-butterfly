@@ -130,10 +130,10 @@ i:hover {
 
 /*页脚a标签*/
 
-#footer-wrap a:hover {
+/* #footer-wrap a:hover {
     text-decoration: none;
     cursor: url(https://cdn.jsdelivr.net/gh/lete114/CDN@1.0/Use/JkuClT.png), auto;
-}
+} */
 
 
 /*分页器*/
@@ -223,26 +223,4 @@ i:hover {
 
 #subtitle:before {
     background-color: rgba(0, 0, 0, 0);
-}
-
-/* 提交按钮 */
-
-#vcomment button {
-    padding: 0.3rem 0.8rem;
-    border-color: #fff;
-    background-color: #8FBC8F;
-    color: #fff;
-    font-size: 0.7rem;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    transition: all 0.3s;
-}
-
-/* 评论区代码块 */
-
-.v[data-class=v] code {
-    color: #8FBC8F;
-    background-color: #F9F2F4;
 }

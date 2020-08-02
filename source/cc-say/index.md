@@ -3,9 +3,7 @@ title: CC-Say
 type: "cc-say"
 comments: false
 aside: false
-layout: artitalk
 ---
-
 <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <body>
     <script>
