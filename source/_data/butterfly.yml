@@ -668,7 +668,7 @@ aside:
   card_announcement:
     enable: true
     content: '<b><p><font color="	#87CEFA">本站已开启了</font><font color="#8FBC8F">PJAX</font>
-    <font color="	#87CEFA">与</font></font><font color="#8FBC8F">PWA</font></br>
+    <font color="	#87CEFA">与</font></font><font color="#8FBC8F">PWA</font>
     <font color="	#87CEFA">测试浏览器订阅通知和更新刷新提示中</font></br></b></p>
     <img src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/wechat.png"alt="微信公众号"/>'
     # </br>
