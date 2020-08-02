@@ -1,1 +1,1 @@
-hexo g && gulp
+hexo g
