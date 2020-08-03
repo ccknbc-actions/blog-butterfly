@@ -287,8 +287,8 @@ comments:
   use:     
     #- github_issues 
     - Valine
-    - Livere/Utterances
-    # - Utterances    
+    #- Livere/Utterances
+    - Utterances    
   #  - Livere
   text: true # Display the comment name next to the button
   lazyload: false # The second comment system will auto load when visiting the website
