@@ -287,8 +287,8 @@ comments:
   use:     
     #- github_issues 
     - Valine
-    #- Livere/Utterances
-    - Utterances    
+    - Utterances/Livere
+    #- Utterances    
   #  - Livere
   text: true # Display the comment name next to the button
   lazyload: false # The second comment system will auto load when visiting the website
@@ -505,7 +505,7 @@ theme_color:
   paginator: "#00c4b6"
   button_hover: "#FF7242"
   text_selection: "#00c4b6"
-  link_color: "#99a9bf"
+  link_color: "#FF7242"
   meta_color: "#858585"
   hr_color: "#8FBC8F"
   code_foreground: "#F47466"
@@ -668,9 +668,9 @@ aside:
       link: https://github.com/ccknbc
   card_announcement:
     enable: true
-    content: '<b><p><font color="	#87CEFA">本站已开启了</font><font color="#8FBC8F">PJAX</font>
-    <font color="	#87CEFA">与</font></font><font color="#8FBC8F">PWA</font>
-    <font color="	#87CEFA">测试浏览器订阅通知和更新刷新提示中</font></br></b></p>
+    content: '<b><p><font color="	#87CEFA">本站已开启了</font><a href="https://https://github.com/defunkt/jquery-pjax" target="_blank" data-pjax-state="">PJAX</a>
+    <font color="	#87CEFA">与</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps" target="_blank" data-pjax-state="">PWA</a>
+    <font color="	#87CEFA">,测试浏览器订阅通知和更新刷新提示中</font></br></b></p>
     <img src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/wechat.png"alt="微信公众号"/>'
     # </br>
     # <a href="https://github.com/jerryc127/hexo-theme-butterfly/releases"><img alt="Theme" 

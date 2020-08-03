@@ -7,7 +7,7 @@ aside: false
 
 <div
   class="note icon font5 fas fa-bullhorn"
-  style="background: #fcf1f2;border-left-color: #d9534f;"
+  style="background: #fcf1f2;border-left-color: ##fed6e3;"
 >
-  <p>因Github API原因，Utterances可能无法正常加载，可直接前往<a href="https://github.com/CCKNBC/ccknbc.github.io/issues/4" rel="noopener" target="_blank"><font color="#8FBC8F">Github Issues</font></a></p>
+  因Github API原因，Utterances可能无法正常加载，可直接前往<a href="https://github.com/CCKNBC/ccknbc.github.io/issues/4" rel="noopener" target="_blank"><font color="#8FBC8F">Github Issues</font></a>
 </div>

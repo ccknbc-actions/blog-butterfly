@@ -18,13 +18,13 @@ gulp.task('generate-service-worker', () => {
   return workbox.injectManifest({
     swSrc: './sw-template.js',
     swDest: './public/sw.js',
-    globDirectory: './public',
-    globPatterns: [
-      "**/*.{css,js,json,woff2}"
-    ],
-    modifyURLPrefix: {
-        "": "./"
-    }
+    globDirectory: './public/posts',
+    // globPatterns: [
+    //   "**/*.{css,js,json,woff2}"
+    // ],
+    // modifyURLPrefix: {
+    //     "": "./"
+    // }
   });
 });
 
