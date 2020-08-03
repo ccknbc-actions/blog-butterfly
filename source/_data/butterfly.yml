@@ -669,7 +669,7 @@ aside:
     enable: true
     content: '<b><p><font color="	#87CEFA">本站已开启了</font><a href="https://https://github.com/defunkt/jquery-pjax" target="_blank" data-pjax-state="">PJAX</a>
     <font color="	#87CEFA">与</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps" target="_blank" data-pjax-state="">PWA</a>
-    <font color="	#87CEFA">,测试浏览器订阅通知和更新刷新提示中</font></br></b></p>
+    <font color="	#87CEFA">（点击地址栏右侧+号即可）,测试浏览器订阅通知和更新刷新提示中</font></br></b></p>
     <img src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/wechat.png"alt="微信公众号"/>'
     # </br>
     # <a href="https://github.com/jerryc127/hexo-theme-butterfly/releases"><img alt="Theme" 
