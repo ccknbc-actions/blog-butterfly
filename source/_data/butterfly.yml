@@ -186,8 +186,8 @@ post_meta:
 wordcount:
   enable: true
   post_wordcount: true
-  min2read: false
-  total_wordcount: false
+  min2read: true
+  total_wordcount: true
 
 # Display the article introduction on homepage
 # 1: description
@@ -428,7 +428,7 @@ footer:
   owner:
     enable: true
     since: 2020
-  custom_text: 国内备用地址 | <a href="https://ccknbc.gitee.io" rel="noopener" target="_blank"><font color="#c2e9fb">Gitee（推荐）</font></a> | <a href="https://y0znz6.coding-pages.com" rel="noopener" target="_blank"><font color="#c2e9fb">Coding</font></a> <br/> 国外备用地址 | <a href="https://ccknbc.now.sh" rel="noopener" target="_blank"><font color="#c2e9fb">Vercel（推荐）</font></a> | <a href="https://blog-ccknbc.netlify.app" rel="noopener" target="_blank"><font color="#c2e9fb">Netlify</font></a>
+  custom_text: #国内备用地址 | <a href="https://ccknbc.gitee.io" rel="noopener" target="_blank"><font color="#c2e9fb">Gitee（推荐）</font></a> | <a href="https://y0znz6.coding-pages.com" rel="noopener" target="_blank"><font color="#c2e9fb">Coding</font></a> <br/> 国外备用地址 | <a href="https://ccknbc.now.sh" rel="noopener" target="_blank"><font color="#c2e9fb">Vercel（推荐）</font></a> | <a href="https://blog-ccknbc.netlify.app" rel="noopener" target="_blank"><font color="#c2e9fb">Netlify</font></a>
   copyright: false # Copyright of theme and framework
   ICP: # Chinese ICP License
     enable: false
@@ -697,19 +697,19 @@ aside:
     format: MMMM YYYY # eg: YYYY年MM月
     order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
     limit: 8 # if set 0 will show all
-  card_webinfo: false
+  card_webinfo: true
 
 # busuanzi count for PV / UV in site
 # 訪問人數
 busuanzi:
-  site_uv: false
-  site_pv: false
-  page_pv: false
+  site_uv: true
+  site_pv: true
+  page_pv: true
 
 # Time difference between publish date and now (網頁運行時間)
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
-  enable: false
+  enable: true
   publish_date: 6/4/2020 00:00:00
 
 # Bottom right button (右下角按鈕)
@@ -856,7 +856,7 @@ disable_baidu_transformation: true
 Open_Graph_meta: true
 
 # Caches the contents in a fragment, speed up the generation (開啟hexo自帶的緩存,加快生成速度)
-fragment_cache: true
+fragment_cache: false
 
 # Inject
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)

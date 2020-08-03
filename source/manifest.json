@@ -2,7 +2,7 @@
   "name": "CC康纳百川", 
   "short_name": "CC康纳百川", 
   "theme_color": "#ffffff", 
-  "background_color": "#49b1f5",
+  "background_color": "#8FBC8F",
   "display": "minimal-ui",
   "scope": "/",
   "start_url": "/",

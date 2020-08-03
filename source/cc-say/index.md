@@ -1,9 +1,11 @@
 ---
 title: CC-Say
-type: "cc-say"
 comments: false
 aside: false
 ---
+{% note info icon %}
+因PJAX若说说无法加载请刷新页面
+{% endnote %}
 <script src="https://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <body>
     <script>
