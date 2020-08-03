@@ -20,8 +20,7 @@ gulp.task('generate-service-worker', () => {
     swDest: './public/sw.js',
     globDirectory: './public',
     globPatterns: [
-      "posts/*.{html}",
-      "**/*.{css,js,json}",
+      "public/feed.json"
     ],
     modifyURLPrefix: {
         "": "./"
