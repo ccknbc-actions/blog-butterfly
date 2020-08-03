@@ -287,7 +287,8 @@ comments:
   use:     
     #- github_issues 
     - Valine
-    - Utterances    
+    - Utterances/Livere
+    # - Utterances    
   #  - Livere
   text: true # Display the comment name next to the button
   lazyload: false # The second comment system will auto load when visiting the website
@@ -359,7 +360,7 @@ valine:
   emojiCDN: https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/
   #https://valinecdn.bili33.top/
   enableQQ: true # enable the Nickname box to automatically get QQ Nickname and QQ Avatar
-  requiredFields: nick,mail # required fields (nick/mail)
+  requiredFields: mail # required fields (nick/mail)
 
 # utterances
 # https://utteranc.es/
