@@ -287,8 +287,7 @@ comments:
   use:     
     #- github_issues 
     - Valine
-    - Livere/Utterances
-    #- Utterances    
+    - Utterances    
   #  - Livere
   text: true # Display the comment name next to the button
   lazyload: false # The second comment system will auto load when visiting the website
@@ -965,7 +964,7 @@ CDN:
 
   # effect
   anime: https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js
-  activate_power_mode: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/third-party/activate-power-mode.js
+  activate_power_mode: /js/third-party/activate-power-mode.js
   fireworks: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/third-party/fireworks.js
   click_heart: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/third-party/click_heart.js
   ClickShowText: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/third-party/ClickShowText.js

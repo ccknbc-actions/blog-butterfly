@@ -19,12 +19,12 @@ gulp.task('generate-service-worker', () => {
     swSrc: './sw-template.js',
     swDest: './public/sw.js',
     globDirectory: './public/posts',
-    // globPatterns: [
-    //   "**/*.{css,js,json,woff2}"
-    // ],
-    // modifyURLPrefix: {
-    //     "": "./"
-    // }
+    globPatterns: [
+      "**/*.{css,js,json,woff2}"
+    ],
+    modifyURLPrefix: {
+      "": "./"
+    }
   });
 });
 

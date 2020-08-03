@@ -35,7 +35,8 @@
     "hexo-server": "^1.0.0",
     "hexo-tag-aplayer": "^3.0.4",
     "hexo-wordcount": "^6.0.1",
-    "imagemin": "^7.0.1"
+    "imagemin": "^7.0.1",
+    "terser": "^5.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.0",
