@@ -5,13 +5,13 @@ var htmlclean = require('gulp-htmlclean');
 var imagemin = require('gulp-imagemin');
 var workbox = require("workbox-build");
 // babel
-var uglify = require('gulp-uglify');
-var babel = require('gulp-babel');
+// var uglify = require('gulp-uglify');
+// var babel = require('gulp-babel');
 //tester
-// var uglifyjs = require("terser");
-// var composer = require('gulp-uglify/composer');
-// var pump = require('pump');
-// var minify = composer(uglifyjs, console);
+var uglifyjs = require("terser");
+var composer = require('gulp-uglify/composer');
+var pump = require('pump');
+var minify = composer(uglifyjs, console);
 
 //pwa
 gulp.task('generate-service-worker', () => {
@@ -29,28 +29,28 @@ gulp.task('generate-service-worker', () => {
 });
 
 //minify js babel
-gulp.task('compress', () =>
-  gulp.src(['./public/**/*.js', '!./public/**/*.min.js'])
-        .pipe(babel({
-            presets: ['@babel/preset-env']
-        }))
-    .pipe(uglify().on('error', function(e){
-      console.log(e);
-    }))
-        .pipe(gulp.dest('./public'))
-);
+// gulp.task('compress', () =>
+//   gulp.src(['./public/**/*.js', '!./public/**/*.min.js'])
+//         .pipe(babel({
+//             presets: ['@babel/preset-env']
+//         }))
+//     .pipe(uglify().on('error', function(e){
+//       console.log(e);
+//     }))
+//         .pipe(gulp.dest('./public'))
+// );
 
 //minify js tester
-// gulp.task('compress', function (cb) {
-//   var options = {};
-//   pump([
-//     gulp.src(['./public/**/*.js', '!./public/**/*.min.js']),
-//     minify(options),
-//     gulp.dest('./public')
-//   ],
-//   cb
-//   );
-// });
+gulp.task('compress', function (cb) {
+  var options = {};
+  pump([
+    gulp.src(['./public/**/*.js', '!./public/**/*.min.js']),
+    minify(options),
+    gulp.dest('./public')
+  ],
+  cb
+  );
+});
 
 //css
 gulp.task('minify-css', () => {
