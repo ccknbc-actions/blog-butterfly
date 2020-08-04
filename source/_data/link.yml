@@ -1,5 +1,5 @@
 - class_name: CC的小伙伴们
-  class_desc: <b><p><font color="#FC625D">提交友链请到这里</font> <a href="/links" rel="noopener" target="_blank"><font color="#8FBC8F">👉点击直达👈</font></a></p></b>
+  class_desc: <b><p><font color="#FC625D">提交友链请到这里</font> <a href="/links" rel="noopener"><font color="#8FBC8F">👉点击直达👈</font></a></p></b>
 
   link_list: 
     - name: Steve  
