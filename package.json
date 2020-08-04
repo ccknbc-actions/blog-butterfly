@@ -36,6 +36,7 @@
     "hexo-tag-aplayer": "^3.0.4",
     "hexo-wordcount": "^6.0.1",
     "imagemin": "^7.0.1",
+    "npm-check": "^5.9.2",
     "terser": "^4.8.0"
   },
   "devDependencies": {

@@ -11,6 +11,7 @@ aside: false
 - name: CC康纳百川
   link: https://ccknbc.gitee.io/
   avatar: https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/ccknbc.png
+  favicon: https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/favicon.svg
   descr: 一个无趣的人
   # 以下若有可配置
   # 边框大小 默认为0 
