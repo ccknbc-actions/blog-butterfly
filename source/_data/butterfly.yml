@@ -964,7 +964,8 @@ CDN:
 
   # effect
   anime: https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js
-  activate_power_mode: /js/third-party/activate-power-mode.js
+  #activate_power_mode: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/third-party/activate-power-mode.js
+  activate_power_mode: https://cdn.jsdelivr.net/gh/CCKNBC/CDN@latest/butterfly/source/js/third-party/activate-power-mode.js
   fireworks: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/third-party/fireworks.js
   click_heart: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/third-party/click_heart.js
   ClickShowText: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/third-party/ClickShowText.js
