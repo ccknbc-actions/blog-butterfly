@@ -6,7 +6,6 @@ tags:
 categories: study
 abbrlink: 1
 date: 2020-06-09 20:52:00
-updated: 2020-06-09 21:00:00
 ---
 **数字水印技术原理**
 
@@ -20,15 +19,13 @@ updated: 2020-06-09 21:00:00
 
 在尽量保证水印不可感知性的前提下，嵌入最大强度的水印，可提高水印的稳健性。常用的水印嵌入准则有加法准则、乘法准则和融合准则。
 
-**3****水印检测**
+**3水印检测**
 
 指判断水印载体中是否存在水印的过程。
 
-**4****水印提取**
+**4水印提取**
 
 指水印被比较精确地提取的过程。 水印的提取和检测可以需要原始图像的参与（明检测）， 也可不需要原始图像的参与（盲检测）
-
-
 
 **数字水印的分类**
 
@@ -46,8 +43,6 @@ updated: 2020-06-09 21:00:00
 - 频域
 - 时域
 
- 
-
 数字水印技术基本上具有下面几个方面的特点：
 
 ----**安全性**：数字水印的信息应是安全的，难以篡改或伪造，同时，应当有较低的误检测率，当原内容发生变化时，数字水印应当发生变化，从而可以检测原始数据的变更；当然数字水印同样对重复添加有很强的抵抗性
@@ -62,11 +57,7 @@ updated: 2020-06-09 21:00:00
 
 **图1 数字水印嵌入与提取框图**
 
- 
-
 **典型的数字水印算法**
-
- 
 
 **数字水印的技术实现**
 
@@ -97,451 +88,233 @@ DCT以8x8的像素为单位进行，生成的是8x8的DCT系数数据块。DCT�
 - 阿里事件：阿里追查泄密员工的时间本身，说明，水印可以有效的追溯信息的释放源；
 - 隐蔽信息传递：水印可携带加密信息后，藏在多媒体文件中传播，并通过特定的提取方式获取水印。可以作为一种隐蔽信息的通信方式。
 
- 
-
-**源程序代码及部分注释**
-
- 
+**源程序代码及部分注释** 
 
 **基础设置模块，同时存储着密钥，全局变量 main.m**
 
 ```matlab
 global I ;
-
 global W;
-
 global P;
-
 global Iw;
-
 ntimes=23; % 秘钥1,Arnold置乱次数
-
 rngseed=59433; % 秘钥2，随机数种子
-
 flag=1; %是否显示图像，0 不显示，1 显示
 ```
 
- 
-
-**嵌入水印模块：setdwtwatermark.m**
+ **嵌入水印模块：setdwtwatermark.m**
 
 ```matlab
 matlabfunction [Iw,psnr]=setdwtwatermark(I,W,ntimes,rngseed,flag)
-
 %基于小波变换数字水印嵌入
-
 %I：载体图像，灰度图
-
 %W：水印图像，二值图，且长宽相等
-
 %ntimes: 秘钥1,Arnold置乱次数
-
 I=imcrop(I,[0 0 size(I,2) size(I,1)-1]);
-
 type=class(I);
-
 I=double(I);
-
 W=logical(W);
-
 [mI,nI]=size(I);
-
 [mW,nW]=size(W);
-
 if mW~=nW
-
   error('SETDWTWATERMARK:ARNOLD','ARNOLD置乱要求水印图像长宽必须相等！')
-
 end
-
 [ca1,ch1,cv1,cd1]=dwt2(I,'haar');
-
 [ca2,ch2,cv2,cd2]=dwt2(ca1,'haar');
-
 if flag
-
   figure('Name','载体小波分解')
-
   subplot(121)
-
   imagesc([wcodemat(ca1),wcodemat(ch1);wcodemat(cv1),wcodemat(cd1)])
-
   title('一级小波分解')
-
   subplot(122)
-
   imagesc([wcodemat(ca2),wcodemat(ch2);wcodemat(cv2),wcodemat(cd2)])
-
   title('二级小波分解')
-
 end
-
 Wa=W;
-
 H=[1,1;1,2]^ntimes; 
-
 for i=1:nW
-
   for j=1:nW
-
 ​    idx=mod(H*[i-1;j-1],nW)+1;
-
 ​    Wa(idx(1),idx(2))=W(i,j);
-
   end
-
 end 
-
 flag=1;
-
 if flag
-
   figure('Name','水印置乱与嵌入')
-
   subplot(221)
-
   imshow(W)
-
   title('原始水印')
-
   subplot(222)
-
   imshow(Wa)
-
   title(['置乱水印，变换次数=',num2str(ntimes)]);
-
 end
-
 %数字水印嵌入
-
 ca2w=ca2;
-
 rng(rngseed);
-
 idx=randperm(numel(ca2),numel(Wa));
-
 for i=1:numel(Wa)
-
   c=ca2(idx(i));
-
   z=mod(c,nW);
-
   if Wa(i)
-
 ​    if z<nW/4
-
 ​      f=c-nW/4-z;
-
 ​    else
-
 ​      f=c+nW*3/4-z;
-
 ​    end
-
   else 
-
 ​    if z<nW*3/4
-
 ​      f=c+nW/4-z;
-
 ​    else
-
 ​      f=c+nW*5/4-z;
-
 ​    end
-
   end
-
   ca2w(idx(i))=f;
-
 end
-
 ca1w=idwt2(ca2w,ch2,cv2,cd2,'haar');
-
 Iw=idwt2(ca1w,ch1,cv1,cd1,'haar');
-
 Iw=Iw(1:mI,1:nI);
-
 mn=numel(I);
-
 Imax=max(I(:));
-
 psnr=10*log10(mn*Imax^2/sum((I(:)-Iw(:)).^2));
-
 I=cast(I,type);
-
 Iw=cast(Iw,type);
-
 if flag
-
   subplot(223)
-
   imshow(I);
-
   title('原始图像')
-
   subplot(224);
-
   imshow(Iw);
-
   title(['添加水印，PSNR=',num2str(psnr)]);
-
-end
+end 
 ```
-
- 
 
 **提取水印模块：getdwtwatermark.m**
 
 ```matlab
 function [Wg,nc]=getdwtwatermark(Iw,W,P,ntimes,rngseed,flag)
-
 [mW,nW]=size(W);
-
 if mW~=nW
-
   error('GETDWTWATERMARK:ARNOLD','ARNOLD置乱要求水印图像长宽必须相等！')
-
 end
-
 Iw=double(Iw);
-
 W=logical(W);
-
 ca1w=dwt2(Iw,'haar');
-
 ca2w=dwt2(ca1w,'haar');
-
 Wa=W;
-
 rng(rngseed);
-
 idx=randperm(numel(ca2w),numel(Wa));
-
 for i=1:numel(Wa)
-
   c=ca2w(idx(i));
-
   z=mod(c,nW);
-
   if z<nW/2
-
 ​    Wa(i)=0;
-
   else
-
 ​    Wa(i)=1;
-
   end
-
 end
-
 Wg=Wa;
-
 H=[2 -1;-1,1]^ntimes;
-
 for i=1:nW
-
   for j=1:nW
-
 ​    idx=mod(H*[i-1;j-1],nW)+1;
-
 ​    Wg(idx(1),idx(2))=Wa(i,j);
-
   end
-
 end
-
 nc=sum(Wg(:).*W(:))/sqrt(sum(Wg(:).^2))/sqrt(sum(W(:).^2));
-
 flag=1;
-
 if flag
-
   figure('Name','数字水印提取结果')
-
   subplot(121)
-
   W=imcrop(W,[0 0 size(P,2) size(P,1)]);  
-
  imshow(W)
-
   title('原始水印')
-
   subplot(122)
-
   Wg=imcrop(Wg,[0 0 122 107]);
-
   imshow(Wg)
-
   title(['提取水印，NC=',num2str(nc)]);
-
 end
 ```
 
- 
-
-**GUI****调用模块 watermatk.m**
-
- 
+**GUI调用模块 watermatk.m**
 
 ```matlab
 function varargout = watermark(varargin)
-
 gui_Singleton = 1;
-
 gui_State = struct('gui_Name',    mfilename, ...
-
 ​          'gui_Singleton', gui_Singleton, ...
-
 ​          'gui_OpeningFcn', @watermark_OpeningFcn, ...
-
 ​          'gui_OutputFcn', @watermark_OutputFcn, ...
-
 ​          'gui_LayoutFcn', [] , ...
-
 ​          'gui_Callback',  []);
-
 if nargin && ischar(varargin{1})
-
   gui_State.gui_Callback = str2func(varargin{1});
-
 end
-
 if nargout
-
   [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
-
 else
-
   gui_mainfcn(gui_State, varargin{:});
-
 end
-
 function watermark_OpeningFcn(hObject, eventdata, handles, varargin)
-
 movegui( hObject,'center' );
-
 handles.output = hObject;%移动窗口到屏幕中心
-
 guidata(hObject, handles);
-
 function varargout = watermark_OutputFcn(hObject, eventdata, handles) 
-
 varargout{1} = handles.output 
-
 % --- Executes on button press in pushbutton1.
-
 function pushbutton1_Callback(hObject, eventdata, handles) 
-
 main
-
 [filename pathname]=uigetfile({'*.jpg;*.bmp';'*.*'},'请选择底图文件');
-
 %%打开图像
-
 I=imread(filename); %读取原始图像
-
 [filename pathname]=uigetfile({'*.png;*.tif';'*.*'},'请选择水印文件');
-
 helpdlg('选择完毕，您可点击查看以确认是否需要重新选择','提示');
-
 I = rgb2gray(I);%转换为灰度图
-
 W = imread(filename);%读取水印图像
-
 if strcmp(filename(end-3:end),'tif')
-
   W= rgb2gray(W);
-
   W=imbinarize(W);%转化成二值图像
-
 end
-
 P=W;
-
 Mm=size(W,1); %水印的行数
-
 Nm=size(W,2); %水印的列数
-
 %将图像扩展为长宽相等
-
 if Mm<Nm
-
   Max=Nm;
-
   Min=Mm;
-
   for i=Min:Max
-
 ​    for j=1:Max
-
 ​      W(i,j)=1;
-
 ​    end
-
   end
-
 else 
-
   Max=Mm;
-
   Min=Nm;
-
   for i=1:Max
-
 ​    for j=Min:Max
-
 ​      W(i,j)=1;
-
 ​    end
-
   end
-
 end  
-
 function pushbutton2_Callback(hObject, eventdata, handles)
-
 main
-
 figure('Name','载体图像与水印图像')
-
 subplot(211);
-
 imshow(I);
-
 title('载体图像')
-
 subplot(212);
-
 imshow(P);
-
 title('水印图像') 
-
 function pushbutton3_Callback(hObject, eventdata, handles)
-
 main
-
 [Iw,psnr]=setdwtwatermark(I,W,ntimes,rngseed,0); 
-
 function pushbutton4_Callback(hObject, eventdata, handles)
-
 main
-
 [Wg,nc]=getdwtwatermark(Iw,W,P,ntimes,rngseed,0);
 ```
 
- 
-
- 
-
 **基于小波的水印技术 运行结果演示**
 
- 
-
-**1****图像的选择与导入**
-
- 
+**1图像的选择与导入**
 
 进入GUI主界面
 
@@ -549,21 +322,15 @@ main
 
 **图2 GUI主界面**
 
- 
-
 点击选择图片，分别选择载体图像和水印图像
 
 ![tfs4wL.png](https://t1.picb.cc/uploads/2020/06/09/tfs4wL.png)
 
 **图3 选择底图文件**
 
- 
-
 ![tfsHFw.png](https://t1.picb.cc/uploads/2020/06/09/tfsHFw.png)
 
 **图4 选择水印文件**
-
- 
 
 两项都选择完毕后提示选择完成，
 
@@ -571,40 +338,28 @@ main
 
 **图5 选择完毕 帮助提示框**
 
- 
-
 对于取消选择未设置警告与报错提示，防止过多弹窗
 
- 
-
-**2****载体图像小波变换**
+**2载体图像小波变换**
 
 这部分未单独新开按钮和图片显示窗口，但程序的确执行了，用户无需知晓
 
- 
-
-**3****水印图像的预处理**
+**3水印图像的预处理**
 
 ![tfs5JR.png](https://t1.picb.cc/uploads/2020/06/09/tfs5JR.png)
 
 **图6 预处理成二值图像后的水印**
 
- 
-
-**4****小波数字水印的嵌入**
+**4小波数字水印的嵌入**
 
 ![tfsAjg.png](https://t1.picb.cc/uploads/2020/06/09/tfsAjg.png)
 
 **图7 原始水印和置乱水印以及原始图像和添加水印之后的图像对比**
 
- 
-
-**5****小波数字水印的提取**
+**5小波数字水印的提取**
 
 ![tfs848.png](https://t1.picb.cc/uploads/2020/06/09/tfs848.png)
 
 **图8 原始水印和提取的水印的对比**
-
- 
 
 将原始水印和提取水印进行对比，两个相关系数为0.99356，相关系数越接近1, 则提取的水印和原始水印越相似。

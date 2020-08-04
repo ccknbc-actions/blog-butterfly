@@ -5,7 +5,6 @@ categories: study
 author: CC
 abbrlink: 2
 date: 2020-06-29 21:00:00
-updated: 2020-06-30 21:00:00
 ---
 
 **等待更新中 时间为整点定时发布**
@@ -430,27 +429,15 @@ tol=chr[32]*128+chr[33]*64+chr[34]*32+chr[35]*16+chr[36]*8+chr[37]*4+chr[38]*2+c
 }
 ```
 
- 
-
- 
-
 串口串口显示情况1，此时温度为28℃，距离为275cm左右，都不满足舵机旋转的条件，红色指示灯常亮。
-
-
-
-
 
 对应的实际运行情况如下图所示：
 
-
-
 串口串口显示情况2，串口串口显示情况1，此时温度为28℃，距离为5cm左右，满足舵机旋转的条件，绿色指示灯常亮。
-
-
 
 对应的实际运行情况如下图所示
 
 
-## YouTube：
+###### **YouTube：**
 
-暂时取消嵌入
+<iframe width="900" height="506" src="https://www.youtube.com/embed/hSkkb7gR_kU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
