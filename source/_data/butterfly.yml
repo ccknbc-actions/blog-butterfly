@@ -645,7 +645,7 @@ subtitle:
   # source: 3  調用一句網（簡體） http://yijuzhan.com/
   # source: 4  調用今日詩詞（簡體） https://www.jinrishici.com/
   # subtitle 會先顯示 source , 再顯示 sub 的內容
-  source: 1
+  source: 2
   
 
 # Loading Animation (加載動畫)
@@ -667,15 +667,15 @@ aside:
       link: https://github.com/ccknbc
   card_announcement:
     enable: true
-    content: '<b><p><font color="	#87CEFA">本站已开启了</font><a href="https://https://github.com/defunkt/jquery-pjax" target="_blank" >PJAX</a>
+    content: '
+    <marquee direction=left behavior=scroll scrollamount=3 scrolldelay=10 align=top bgcolor=#ffffff hspace=20 vspace=10 onmouseover=this.stop() onmouseout=this.start()> <b><p><font color="	#87CEFA">本站已开启了</font><a href="https://https://github.com/defunkt/jquery-pjax" target="_blank" >PJAX</a>
     <font color="	#87CEFA">与</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps" target="_blank" >PWA</a>
     <font color="	#87CEFA">（若提示安装应用请叉掉就好，不是病毒流氓捆绑哦）,测试浏览器订阅通知和更新刷新提示中，本站404页面借用腾讯宝贝回家，</font>
-    <font color="	#A9A9A9">本站在国家法定日期将按照北京时间全站变灰以哀悼那些逝去的同胞们</font></br></b></p>
+    <font color="	#A9A9A9">本站在国家法定日期将按照北京时间全站变灰以哀悼那些逝去的同胞们</font></b></p> </marquee>
     <img src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/wechat.png"alt="微信公众号"/>
-    </br></a>
     <a href="https://hexo.io"><img alt="Hexo" src="https://img.shields.io/badge/Power By-Hexo-0e83c"/>
     <a href="https://github.com/jerryc127/hexo-theme-butterfly/releases"><img alt="Theme" src="https://img.shields.io/badge/Theme By-Butterfly-0e83c"/></a>
-    <a href="https://gitee.com/ccknbc/ccknbc/blob/master/README.md"><img alt="Hexo" src="https://img.shields.io/badge/Host By-Github/Gitee/Coding/Vercel/Netlify-0e83c"/>'
+    <a href="https://gitee.com/ccknbc/ccknbc/blob/master/README.md"><img alt="Hexo" src="https://img.shields.io/badge/Host By-Github/Gitee/Coding/Vercel/Netlify-0e83c"/></a>'
     # </a>&nbsp;<a href="https://gitee.com/"><img alt="Hexo" src="https://img.shields.io/badge/Host-Gitee-0e83c"/></a>
     # &nbsp;<a href="https://coding.net/"><img alt="Hexo" src="https://img.shields.io/badge/Host-Coding-0e83c"/></a>&nbsp;
     # <a href="https://vercel.com/"><img alt="Hexo" src="https://img.shields.io/badge/Host-Vercle-0e83c"/></a>&nbsp;
