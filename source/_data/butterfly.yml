@@ -673,9 +673,10 @@ aside:
     <font color="	#87CEFA">（若提示安装应用请叉掉就好，不是病毒流氓捆绑哦）,测试浏览器订阅通知和更新刷新提示中，本站404页面借用腾讯宝贝回家，</font>
     <font color="	#A9A9A9">本站在国家法定日期将按照北京时间全站变灰以哀悼那些逝去的同胞们</font></b></p> </marquee>
     <img src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/wechat.png"alt="微信公众号"/>
-    <a href="https://hexo.io"><img alt="Hexo" src="https://img.shields.io/badge/Power By-Hexo-0e83c"/>
-    <a href="https://github.com/jerryc127/hexo-theme-butterfly/releases"><img alt="Theme" src="https://img.shields.io/badge/Theme By-Butterfly-0e83c"/></a>
-    <a href="https://github.com/CCKNBC/ccknbc.github.io/blob/master/README.md"><img alt="Hexo" src="https://img.shields.io/badge/Host By-Github/Gitee/Coding/Vercel/Netlify-0e83c"/></a>'
+    <a href="https://hexo.io"><img alt="CDN" title="由jsDelivr提供CDN加速服务" src="https://img.shields.io/badge/CDN By-jsDelivr-e05d44"/>
+    <a href="https://hexo.io"><img alt="HEXO" title="由HEXO强力驱动" src="https://img.shields.io/badge/Powered By-Hexo V5.0.0-007ec6"/>
+    <a href="https://github.com/jerryc127/hexo-theme-butterfly/releases"><img alt="THEME" title="本站点主题使用Butterfly" src="https://img.shields.io/badge/Theme By-Butterfly V3.0.0 RC2-ffa500"/></a>
+    <a href="https://github.com/CCKNBC/ccknbc.github.io/blob/master/README.md"><img alt="HOST" title="静态网页托管于Github/Gitee/Coding/Vercel/Netlify" src="https://img.shields.io/badge/Hosted By-Github/Gitee/Coding/Vercel/Netlify-0e83c"/></a>'
     # </a>&nbsp;<a href="https://gitee.com/"><img alt="Hexo" src="https://img.shields.io/badge/Host-Gitee-0e83c"/></a>
     # &nbsp;<a href="https://coding.net/"><img alt="Hexo" src="https://img.shields.io/badge/Host-Coding-0e83c"/></a>&nbsp;
     # <a href="https://vercel.com/"><img alt="Hexo" src="https://img.shields.io/badge/Host-Vercle-0e83c"/></a>&nbsp;
