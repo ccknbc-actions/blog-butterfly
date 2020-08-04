@@ -667,15 +667,14 @@ aside:
       link: https://github.com/ccknbc
   card_announcement:
     enable: true
-    content: '<b><p><font color="	#87CEFA">本站已开启了</font><a href="https://https://github.com/defunkt/jquery-pjax" target="_blank" data-pjax-state="">PJAX</a>
-    <font color="	#87CEFA">与</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps" target="_blank" data-pjax-state="">PWA</a>
-    <font color="	#87CEFA">（点击地址栏右侧+号即可）,测试浏览器订阅通知和更新刷新提示中</font></br></b></p>
-    <img src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/wechat.png"alt="微信公众号"/>'
-    # </br>
-    # <a href="https://github.com/jerryc127/hexo-theme-butterfly/releases"><img alt="Theme" 
-    # src="https://img.shields.io/badge/Theme-Butterfly-0e83c"/>
-    # </a>&nbsp;<a href="https://hexo.io"><img alt="Hexo" src="https://img.shields.io/badge/Power-Hexo-0e83c"/>
-    # </a>&nbsp;<a href="https://pages.github.com"><img alt="Hexo" src="https://img.shields.io/badge/Host-Github-0e83c"/>
+    content: '<b><p><font color="	#87CEFA">本站已开启了</font><a href="https://https://github.com/defunkt/jquery-pjax" target="_blank" >PJAX</a>
+    <font color="	#87CEFA">与</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps" target="_blank" >PWA</a>
+    <font color="	#87CEFA">（若提示安装应用请叉掉就好，不是病毒流氓捆绑哦）,测试浏览器订阅通知和更新刷新提示中</font></br></b></p>
+    <img src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/wechat.png"alt="微信公众号"/>
+    </br></a>
+    <a href="https://hexo.io"><img alt="Hexo" src="https://img.shields.io/badge/Power By-Hexo-0e83c"/>
+    <a href="https://github.com/jerryc127/hexo-theme-butterfly/releases"><img alt="Theme" src="https://img.shields.io/badge/Theme By-Butterfly-0e83c"/></a>
+    <a href="https://pages.github.com"><img alt="Hexo" src="https://img.shields.io/badge/Host By-Github/Gitee/Coding/Vercel/Netlify-0e83c"/>'
     # </a>&nbsp;<a href="https://gitee.com/"><img alt="Hexo" src="https://img.shields.io/badge/Host-Gitee-0e83c"/></a>
     # &nbsp;<a href="https://coding.net/"><img alt="Hexo" src="https://img.shields.io/badge/Host-Coding-0e83c"/></a>&nbsp;
     # <a href="https://vercel.com/"><img alt="Hexo" src="https://img.shields.io/badge/Host-Vercle-0e83c"/></a>&nbsp;
