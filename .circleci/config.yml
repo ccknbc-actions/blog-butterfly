@@ -26,7 +26,6 @@ jobs:
     - name: Setup Hexo Dependencies
       run: |
         npm i hexo-cli -g
-        hexo init
         npm i hexo-generator-search
         npm i hexo-wordcount
         npm i hexo-feed  
