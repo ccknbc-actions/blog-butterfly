@@ -41,9 +41,11 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
+<<<<<<< HEAD
     "@babel/preset-env": "^7.11.0",
+=======
+>>>>>>> b1594ea65b9e80446258fbac99d6e419c2e7fa76
     "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-htmlclean": "^2.7.22",
     "gulp-imagemin": "^7.1.0",
