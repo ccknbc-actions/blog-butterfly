@@ -367,7 +367,8 @@ utterances:
   repo: CCKNBC/ccknbc.github.io
   # Issue Mapping: pathname/url/title/og:title
   issue_term: pathname
-  
+  label: comment
+  crossorigin: anonymous
   # Theme: github-light/github-dark/github-dark-orange/icy-dark/dark-blue/photon-dark
   light_theme: github-light
   dark_theme: photon-dark
