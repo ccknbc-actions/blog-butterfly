@@ -18,9 +18,9 @@ gulp.task('generate-service-worker', () => {
   return workbox.injectManifest({
     swSrc: './sw-template.js',
     swDest: './public/sw.js',
-    globDirectory: './public/posts',
+    globDirectory: './public',
     globPatterns: [
-      "**/*.{css,js,json,woff2}"
+      "**/*.{html,css,js,json,woff2}"
     ],
     modifyURLPrefix: {
       "": "./"

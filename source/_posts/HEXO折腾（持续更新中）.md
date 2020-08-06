@@ -141,7 +141,8 @@ npm install hexo-cli -g
 ```sh
 # '#' 字符后的文字代表注释，不需要输入
 # Windows
-cd C:\Users\YunYou\Documents\GitHub\
+cd C:\Users\CCKNBC\Documents\GitHub\
+#实际上我用的是D:blog目录,按需选择即可
 # macOS
 # cd /Users/yunyou/github/
 ```
