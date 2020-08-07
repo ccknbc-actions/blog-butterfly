@@ -922,8 +922,8 @@ CDN:
   valine: https://cdn.jsdelivr.net/gh/lete114/CDN/Valine/Valine-Lete3.2-min.js
   disqusjs: https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js
   disqusjs_css: https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css
-  utterances: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/client.js
-  #https://utteranc.es/client.js
+  utterances: https://utteranc.es/client.js
+  #https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/client.js
 
   # share
   addtoany: https://static.addtoany.com/menu/page.js
