@@ -614,11 +614,18 @@ inject:
     - <script src="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/ccknbc.js"></script>
 ```
 
-所以按照上面所说的对应的你的链接即为，其中`your name`是你的github用户名，请注意变通
+所以按照上面所说的对应的你的链接即为，其中`your name`是你的github用户名，请注意根据具体路径变通
 
 ```
 https://cdn.jsdelivr.net/gh/your name/your name.github.io@latest/xxx.css
 https://cdn.jsdelivr.net/gh/your name/your namec.github.io@latests/xxx.js
+```
+
+若是本地预览就可使用（请根据路径自己修改）
+
+```
+/css/ccknbc.css
+/js/ccknbc.js
 ```
 
 接下来分别编辑css和js文件即可，当然你可以直接复制粘贴或者直接引用我的链接
