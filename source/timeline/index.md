@@ -8,20 +8,16 @@ comments: false
 
 {% timeline 碎碎念 %}
 
-{% timenode 2020-08-06 [连接测试](https://xiaokang.me) %}
+{% timenode 2020-08-08 [更新时间线](https://ccknbc.github.io) %}
 
-今天是2020-08-06
+今天是2020-08-08
 
 {% endtimenode %}
 
-{% timenode 2020-08-05 [连接测试](https://xiaokang.me) %}
+{% timenode 2020-06-04 [本站诞生](https://ccknbc.github.io) %}
 
-今天是2020-08-05
+2020-06-04
 
 {% endtimenode %}
 
 {% endtimeline %}
-
-{% link 小康博客, http://www.antmoe.com/, https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/avatar.jpg %}
-
-{% link 如何参与项目, http://localhost:4000/music/, https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png %}

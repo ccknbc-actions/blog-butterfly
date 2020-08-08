@@ -1,9 +1,3 @@
-@font-face {
-    font-family: 'sleek';
-    src: url('https://cdn.jsdelivr.net/gh/lete114/CDN2/zaxiang/sleek.woff2');
-}
-
-
 /*标题颜色修改*/
 
 #page-header #site_title {
@@ -370,8 +364,9 @@ i:hover {
     color: var(--search-input-color);
     font-size: 0.7125rem;
   }
+
   /* TAG 时间线 */
-  span.p.h2,
+span.p.h2,
   p.p.h2 {
     font-size: 1.375rem;
     color: var(--font-color);
