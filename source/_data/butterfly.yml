@@ -441,7 +441,7 @@ footer:
     enable: true
     prefix: 📢本站已运行
     suffix: ✅
-    start_time: "2019-06-04T00:00:00"
+    start_time: "2020-06-04T00:00:00"
 
 # Analysis
 # --------------------------------------
@@ -712,7 +712,7 @@ busuanzi:
 # Time difference between publish date and now (網頁運行時間)
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
-  enable: true
+  enable: false
   publish_date: 6/4/2020 00:00:00
 
 # Bottom right button (右下角按鈕)
