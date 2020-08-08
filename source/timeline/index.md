@@ -22,4 +22,6 @@ comments: false
 
 {% endtimeline %}
 
-{% link 如何参与项目, http://localhost:4000/contributors/, https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png %}
+{% link 小康博客, http://www.antmoe.com/, https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/avatar.jpg %}
+
+{% link 如何参与项目, http://localhost:4000/music/, https://cdn.jsdelivr.net/gh/volantis-x/cdn-org/blog/Logo-NavBar@3x.png %}
