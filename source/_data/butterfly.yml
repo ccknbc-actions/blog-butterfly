@@ -21,8 +21,8 @@ menu:
     # - 照片 || /gallery/ || fa fa-picture-o
     # - 电影 || /movies/ || fa fa-film
     - RSS || https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/rss.xml || fas fa-rss
-    - Atom || https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/butterfly/source/atom.xml || far fa-bell
-    - Json || https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/butterfly/source/feed.json || fas fa-bullhorn
+    - Atom || https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/atom.xml || far fa-bell
+    - Json || https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/feed.json || fas fa-bullhorn
     # - WeChat Official Account || https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/wechat.png || fab fa-weixin
     # - Github || https://github.com/CCKNBC || fab fa-github
     # - OD || https://ccknbc.herokuapp.com || fas fa-cloud
