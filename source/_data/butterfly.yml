@@ -787,7 +787,7 @@ note:
 # Pjax [Beta]
 # It may contain bugs and unstable, give feedback when you find the bugs.
 # https://github.com/MoOx/pjax
-pjax: false
+pjax: true
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
