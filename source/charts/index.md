@@ -5,14 +5,12 @@ type: charts
 data-encode: true
 ---
 
-文章发布统计图
+{% note info icon %}
+因PJAX若统计页面无法加载请刷新页面
+{% endnote %}
 
 <div id="posts-chart"></div>
 
-标签统计图
-
 <div id="tags-chart" data-length="10"></div>
-
-文章分类统计图
 
 <div id="categories-chart"></div>
