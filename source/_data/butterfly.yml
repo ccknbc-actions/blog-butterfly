@@ -11,23 +11,23 @@ menu:
   归档: /archives/ || fa fa-archive
   标签: /tags/ || fa fa-tags
   分类: /categories/ || fa fa-folder-open
-  友链: /link/ || fa fa-link
-  留言: /comments/ || fa fa-comments
-  说说: /cc-say/ || fas fa-clipboard-list
-  时间线: /timeline/ || fas fa-stream
-  # 关于: /about/ || fa fa-heart  
-  订阅 || fa fa-list:
+  关于 || fas fa-destop:
+    - 时间线 || /timeline/ || fas fa-stream
+    - 统计 || /charts/ || fas fa-chart-bar
+    - 关于我 || /me/ || fas fa-heart
+    - 友链 || /link/ || fa fa-link
+    - 留言 || /comments/ || fa fa-comments
+    - 说说 || /say/ || fas fa-clipboard-list
+  清单 || fa fa-list:
     # - 音乐 || /music/ || fa fa-music
     # - 照片 || /gallery/ || fa fa-picture-o
     # - 电影 || /movies/ || fa fa-film
     - RSS || https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/rss.xml || fas fa-rss
     - Atom || https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/atom.xml || far fa-bell
     - Json || https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/feed.json || fas fa-bullhorn
-    # - WeChat Official Account || https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/wechat.png || fab fa-weixin
-    # - Github || https://github.com/CCKNBC || fab fa-github
-    # - OD || https://ccknbc.herokuapp.com || fas fa-cloud
-    # - GD || https://gd.ccknbc.workers.dev || fas fa-folder
-    # - 影院 || https://video.ccknbc.workers.dev || fas fa-film
+    - OD || https://ccknbc.herokuapp.com || fas fa-cloud
+    - GD || https://gd.ccknbc.workers.dev || fas fa-folder
+    - 影院 || https://video.ccknbc.workers.dev || fas fa-film
 
 
 # Code Blocks (代碼相關)
@@ -352,7 +352,6 @@ valine:
   lang: zh-CN # i18n: zh-CN/zh-TW/en/ja
   placeholder: 仅在昵称中填写QQ号或自定义填写相关信息\n您的信息仅作你我收到回复通知使用\n重要评论请点击切换评论系统
   #Valine系统暂时停用，恢复时间待定  # valine comment input placeholder(like: Please leave your footprints )
-
   guest_info: nick,mail,link #valine comment header info (nick/mail/link)
   recordIP: true # Record reviewer IP
   serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
@@ -906,6 +905,7 @@ inject:
   # valine: https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js
   # valine: https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js
   # valine: https://cdn.jsdelivr.net/gh/lete114/CDN/Valine/Valine-Lete3.2-min.js
+  # https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js
 
 
 
