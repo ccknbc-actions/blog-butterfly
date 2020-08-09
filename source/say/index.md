@@ -1,5 +1,5 @@
 ---
-title: CC-Say
+title: CC Say
 comments: false
 aside: false
 type: shuoshuo
