@@ -11,7 +11,7 @@ menu:
   归档: /archives/ || fa fa-archive
   标签: /tags/ || fa fa-tags
   分类: /categories/ || fa fa-folder-open
-  关于 || fas fa-destop:
+  关于 || fas fa-desktop:
     - 时间线 || /timeline/ || fas fa-stream
     - 统计 || /charts/ || fas fa-chart-bar
     - 关于我 || /me/ || fas fa-heart
