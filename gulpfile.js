@@ -92,7 +92,7 @@ gulp.task('minify-images', async () => {
     .pipe(gulp.dest('./public/img'));
 });
 
-// 執行 gulp 命令時執行的任務
-gulp.task("default", gulp.series("generate-service-worker", gulp.parallel(
+// 執行 gulp 命令時執行的任務gulp.series("generate-service-worker",
+gulp.task("default",  gulp.parallel(
     'compress','minify-html', 'minify-css', 'minify-images'
 )));
