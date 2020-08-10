@@ -1,3 +1,6 @@
+top.document.location.reload();
+window.location.reload(true);
+
 // 设置页脚博主会动的心
 $(document).ready(function(e){
     $('.copyright').html('©2020 <i style="color:#49B1F5;animation: announ_animation 0.8s linear infinite;" class="fa fa-heartbeat"></i> CC康纳百川');
