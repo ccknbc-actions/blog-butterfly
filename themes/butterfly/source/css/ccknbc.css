@@ -459,21 +459,3 @@ span.p.h2,
     background: #ff5722;
     transform: scale(1);
 }
-  
-
-
-#aside_content
-.card-archives
-ul.card-archive-list
-> .card-archive-list-item
-a
-span:first-child,
-#aside_content
-.card-categories
-ul.card-category-list
-> .card-category-list-item
-a
-span:first-child {
-  width: auto;
-  min-width: 50%;
-}

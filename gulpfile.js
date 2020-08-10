@@ -3,7 +3,7 @@ var cleanCSS = require('gulp-clean-css');
 var htmlmin = require('gulp-htmlmin');
 var htmlclean = require('gulp-htmlclean');
 var imagemin = require('gulp-imagemin');
-var workbox = require("workbox-build");
+// var workbox = require("workbox-build");
 // babel
 // var uglify = require('gulp-uglify');
 // var babel = require('gulp-babel');
@@ -14,19 +14,19 @@ var pump = require('pump');
 var minify = composer(uglifyjs, console);
 
 //pwa
-gulp.task('generate-service-worker', () => {
-  return workbox.injectManifest({
-    swSrc: './sw-template.js',
-    swDest: './public/sw.js',
-    globDirectory: './public',
-    globPatterns: [
-      "**/*.{css,js,json,woff2}"
-    ],
-    modifyURLPrefix: {
-      "": "./"
-    }
-  });
-});
+// gulp.task('generate-service-worker', () => {
+//   return workbox.injectManifest({
+//     swSrc: './sw-template.js',
+//     swDest: './public/sw.js',
+//     globDirectory: './public',
+//     globPatterns: [
+//       "**/*.{html,css,js,json,woff2}"
+//     ],
+//     modifyURLPrefix: {
+//       "": "./"
+//     }
+//   });
+// });
 
 //minify js babel
 // gulp.task('compress', () =>

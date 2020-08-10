@@ -666,9 +666,7 @@ aside:
   card_announcement:
     enable: true
     content: '
-    <marquee direction=left behavior=scroll scrollamount=3 scrolldelay=10 align=top hspace=10 vspace=15 onmouseover=this.stop() onmouseout=this.start()> <b><p><font color="	#87CEFA">本站已开启了</font><a href="https://https://github.com/defunkt/jquery-pjax" target="_blank" >PJAX</a>
-    <font color="	#87CEFA">与</font></font><a href="https://developer.mozilla.org/zh-CN/docs/Web/Progressive_web_apps" target="_blank" >PWA</a>
-    <font color="	#87CEFA">（若提示安装应用请叉掉就好，不是病毒流氓捆绑哦）,测试浏览器订阅通知和更新刷新提示中，本站404页面借用腾讯宝贝回家，</font>
+    <marquee direction=left behavior=scroll scrollamount=3 scrolldelay=10 align=top hspace=10 vspace=15 onmouseover=this.stop() onmouseout=this.start()> <b><p>本站404页面借用腾讯宝贝回家，</font>
     <font color="	#A9A9A9">本站在国家法定日期将按照北京时间全站变灰以哀悼那些逝去的同胞们</font></b></p> </marquee>
     <img src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/wechat.png"alt="微信公众号"/>
     <a href="https://hexo.io"><img alt="CDN" title="由jsDelivr提供CDN加速服务" src="https://img.shields.io/badge/CDN By-jsDelivr-e05d44"/>
@@ -679,6 +677,7 @@ aside:
     # &nbsp;<a href="https://coding.net/"><img alt="Hexo" src="https://img.shields.io/badge/Host-Coding-0e83c"/></a>&nbsp;
     # <a href="https://vercel.com/"><img alt="Hexo" src="https://img.shields.io/badge/Host-Vercle-0e83c"/></a>&nbsp;
     # <a href="https://www.netlify.com/"><img alt="Hexo" src="https://img.shields.io/badge/Host-Netlify-0e83c"/></a>'
+  
   card_recent_post:
     enable: false
     limit: 5 # if set 0 will show all
@@ -784,7 +783,7 @@ note:
 # Pjax [Beta]
 # It may contain bugs and unstable, give feedback when you find the bugs.
 # https://github.com/MoOx/pjax
-pjax: true
+pjax: false
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
@@ -824,7 +823,7 @@ lazyload:
 # See https://github.com/JLHwung/hexo-offline
 # ---------------
 pwa:
-  enable: true
+  enable: false
   manifest: /manifest.json
   theme_color: "#ffffff"
   apple_touch_icon: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/images/apple-touch-icon.png
@@ -875,13 +874,13 @@ inject:
     #- <div class="aplayer no-destroy" data-id="5146142770" data-server="netease" data-type='playlist' data-fixed='true' data-mini='true' data-listFolded='false' data-order='random' data-preload='none' data-autoplay='true' muted></div>
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/tags.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/css/flink.min.css">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/plugins.min.css">
-    - <link rel="stylesheet" href="/css/ccknbc.css">
+    #- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/plugins.min.css">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/css/ccknbc.css">
     #- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/plugins.min.css">
     - '<style type="text/css">.app-refresh{position:fixed;top:-2.2rem;left:0;right:0;z-index:99999;padding:0 1rem;font-size:15px;height:2.2rem;transition:all .3s ease}.app-refresh-wrap{display:flex;color:#fff;height:100%;align-items:center;justify-content:center}.app-refresh-wrap a{color:#fff;text-decoration:underline;cursor:pointer}</style>'
 
   bottom:
-    - <script src="/js/ccknbc.js"></script>
+    - <script src="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/ccknbc.js"></script>
     #- <script src="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/js/pool.min.js"></script>
     #- <div class="aplayer no-destroy" data-id="2726150570" data-server="netease" data-type='playlist' data-fixed='true' data-mini='true' data-listFolded='false' data-order='random' data-preload='none' data-autoplay='true' muted></div>
     #- <script src="https://player.ilt.me/player/js/player.js" key="112fe51b9b16481c9241470e8b3ec79b"></script>
