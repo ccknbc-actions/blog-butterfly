@@ -85,7 +85,7 @@ prismjs:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 3
+  per_page: 5
   order_by: -date
 
 # Category & Tag
@@ -153,10 +153,10 @@ feed:
 #       options:
 #         origin: cdn.jsdelivr.net
 
-# webPushNotification:
-#   webpushrKey: "UIngQiMfLAHGhZ-LkzRFKtvHh9CqUYnY3yipDB2qPB0"
-#   webpushrAuthToken: "7953"
-#   trackingCode: "BDMQzEpmBuoEMOFVQ5EiC7scntMuJzY5Ac2rYD9NPSxPXqZ_VpC8Xk_iuuW0s6M7jioHyy05qzqyD28i4ikaThw"
+webPushNotification:
+  webpushrKey: "UIngQiMfLAHGhZ-LkzRFKtvHh9CqUYnY3yipDB2qPB0"
+  webpushrAuthToken: "7953"
+  trackingCode: "BDMQzEpmBuoEMOFVQ5EiC7scntMuJzY5Ac2rYD9NPSxPXqZ_VpC8Xk_iuuW0s6M7jioHyy05qzqyD28i4ikaThw"
         
 aplayer:
   asset_inject: false

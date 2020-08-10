@@ -8,7 +8,13 @@ comments: false
 
 {% timeline 关于本站 %}
 {% timenode 2020-08-10 [更新时间线](https://ccknbc.github.io) %}
-HEXO升级为5.0.2，添加时间线，统计图，说说，关闭PWA,PJAX，启用H5悬浮音乐
+
+HEXO升级为5.0.2，添加时间线，统计图，说说
+
+重新启用web-push-notification
+
+关闭PWA，PJAX，APlayer
+
 {% endtimenode %}
 
 {% timenode 2020-06-04 [本站诞生](https://ccknbc.github.io) %}
