@@ -881,7 +881,7 @@ inject:
     #- '<style type="text/css">.app-refresh{position:fixed;top:-2.2rem;left:0;right:0;z-index:99999;padding:0 1rem;font-size:15px;height:2.2rem;transition:all .3s ease}.app-refresh-wrap{display:flex;color:#fff;height:100%;align-items:center;justify-content:center}.app-refresh-wrap a{color:#fff;text-decoration:underline;cursor:pointer}</style>'
 
   bottom:
-    - <script src="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/ccknbc.js"></script>
+    - <script src="/js/ccknbc.js"></script>
     #- <script id="ilt" src="https://player.ilt.me/player/js/player.js" key="112fe51b9b16481c9241470e8b3ec79b"></script>
     #- <script src="https://myhkw.cn/player/js/player.js" id="myhk" key="15945457616" ></script>
     #- <div id="music" key="5f129dca5ba10" api="https://music.m0x.cn"></div><script id="xplayer" src="https://music.m0x.cn/Static/player2/js/player.js" ></script>
