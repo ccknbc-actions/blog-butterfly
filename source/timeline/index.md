@@ -6,9 +6,9 @@ aside: false
 comments: false
 ---
 
-{% timeline 碎碎念 %}
-{% timenode 2020-08-08 [更新时间线](https://ccknbc.github.io) %}
-添加时间线功能
+{% timeline 关于本站 %}
+{% timenode 2020-08-10 [更新时间线](https://ccknbc.github.io) %}
+HEXO升级为5.0.2，添加时间线，统计图，说说，关闭PWA,PJAX，启用H5悬浮音乐
 {% endtimenode %}
 
 {% timenode 2020-06-04 [本站诞生](https://ccknbc.github.io) %}

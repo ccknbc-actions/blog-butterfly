@@ -882,6 +882,9 @@ inject:
 
   bottom:
     - <script src="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/ccknbc.js"></script>
+    #- <script id="ilt" src="https://player.ilt.me/player/js/player.js" key="112fe51b9b16481c9241470e8b3ec79b"></script>
+    #- <script src="https://myhkw.cn/player/js/player.js" id="myhk" key="15945457616" ></script>
+    - <div id="music" key="5f129dca5ba10" api="https://music.m0x.cn"></div><script id="xplayer" src="https://music.m0x.cn/Static/player2/js/player.js" ></script>
     #- <script src="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/js/pool.min.js"></script>
     #- <div class="aplayer no-destroy" data-id="2726150570" data-server="netease" data-type='playlist' data-fixed='true' data-mini='true' data-listFolded='false' data-order='random' data-preload='none' data-autoplay='true' muted></div>
     #- <script src="https://player.ilt.me/player/js/player.js" key="112fe51b9b16481c9241470e8b3ec79b"></script>
