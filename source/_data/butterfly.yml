@@ -537,7 +537,7 @@ background: '#efefef'
 footer_bg: true
 
 # the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
-rightside-bottom: 30
+rightside-bottom: 30px
 
 # Background effects (背景特效)
 # --------------------------------------
