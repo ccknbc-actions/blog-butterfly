@@ -1,5 +1,8 @@
-top.document.location.reload();
-window.location.reload(true);
+function myrefresh()
+{
+window.location.reload();
+}
+setTimeout('myrefresh()',300000); //指定1秒刷新一次
 
 // 设置页脚博主会动的心
 $(document).ready(function(e){
