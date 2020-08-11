@@ -293,11 +293,11 @@ comments:
 
 # GitHub Issues Link Button
 # https://help.github.com/en/github/searching-for-information-on-github/searching-issues-and-pull-requests
-# github_issues:
-#   enable: true
-#   username: CCKNBC
-#   repository: ccknbc.github.io
-#   filters: is:issue
+github_issues:
+  enable: true
+  username: CCKNBC
+  repository: ccknbc.github.io
+  filters: is:issue
 
 # disqus
 # https://disqus.com/

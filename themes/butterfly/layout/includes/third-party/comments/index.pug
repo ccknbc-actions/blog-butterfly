@@ -30,6 +30,7 @@ hr
           when 'Gitalk'
             #gitalk-container
           when 'Utterances'
+            a#github-issues.hty-button.hty-button--raised(href=`https://github.com/${theme.github_issues.username}/${theme.github_issues.repository}/issues?q=${theme.github_issues.filters}+${page.path}`)!="<b><center>若无法加载请点击前往</br>GitHub Issues</br>根据模板新建评论</center></b>"
             #utterances-wrap
           when 'Facebook Comments'
             .fb-comments(data-colorscheme = theme.display_mode === 'dark' ? 'dark' : 'light'
