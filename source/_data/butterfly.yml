@@ -364,7 +364,7 @@ valine:
 utterances:
   repo: CCKNBC/ccknbc.github.io
   # Issue Mapping: pathname/url/title/og:title
-  issue_term: pathname
+  issue_term: title
   label: comment
   crossorigin: anonymous
   # Theme: github-light/github-dark/github-dark-orange/icy-dark/dark-blue/photon-dark
@@ -376,7 +376,7 @@ utterances:
 beaudar:
   repo: CCKNBC/ccknbc.github.io
   # Issue Mapping: pathname/url/title/og:title
-  issue_term: pathname
+  issue_term: title
   label: comment
   crossorigin: anonymous
   # Theme: github-light/github-dark/github-dark-orange/icy-dark/dark-blue/photon-dark
