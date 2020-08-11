@@ -12,9 +12,9 @@ menu:
   标签: /tags/ || fa fa-tags
   分类: /categories/ || fa fa-folder-open
   关于 || fas fa-desktop:
-    - 时间线 || /timeline/ || fas fa-stream
+    - 本站 || /timeline/ || fas fa-stream
     - 统计 || /charts/ || fas fa-chart-bar
-    - 关于我 || /me/ || fas fa-heart
+    - 我 || /me/ || fas fa-heart
     - 友链 || /link/ || fa fa-link
     - 留言 || /comments/ || fa fa-comments
     - 说说 || /say/ || fas fa-clipboard-list
@@ -439,7 +439,7 @@ footer:
   owner:
     enable: true
     since: 2020
-  custom_text: #国内备用地址 | <a href="https://ccknbc.gitee.io" rel="noopener" target="_blank"><font color="#c2e9fb">Gitee（推荐）</font></a> | <a href="https://y0znz6.coding-pages.com" rel="noopener" target="_blank"><font color="#c2e9fb">Coding</font></a> <br/> 国外备用地址 | <a href="https://ccknbc.now.sh" rel="noopener" target="_blank"><font color="#c2e9fb">Vercel（推荐）</font></a> | <a href="https://blog-ccknbc.netlify.app" rel="noopener" target="_blank"><font color="#c2e9fb">Netlify</font></a>
+  custom_text: 国内备用地址 | <a href="https://ccknbc.gitee.io" rel="noopener" target="_blank"><font color="#3CB371">Gitee（推荐）</font></a> | <a href="https://y0znz6.coding-pages.com" rel="noopener" target="_blank"><font color="#3CB371">Coding</font></a> <br/> 国外备用地址 | <a href="https://ccknbc.now.sh" rel="noopener" target="_blank"><font color="#3CB371">Vercel（推荐）</font></a> | <a href="https://blog-ccknbc.netlify.app" rel="noopener" target="_blank"><font color="#3CB371">Netlify</font></a>
   copyright: false # Copyright of theme and framework
   ICP: # Chinese ICP License
     enable: false
@@ -679,8 +679,8 @@ aside:
   card_announcement:
     enable: true
     content: '
-    <marquee direction=left behavior=scroll scrollamount=3 scrolldelay=10 align=top hspace=10 vspace=15 onmouseover=this.stop() onmouseout=this.start()> <b><p>本站404页面借用腾讯宝贝回家，</font>
-    <font color="	#A9A9A9">本站在国家法定日期将按照北京时间全站变灰以哀悼那些逝去的同胞们</font></b></p> </marquee>
+    <marquee direction=left behavior=scroll scrollamount=3 scrolldelay=10 align=top onmouseover=this.stop() onmouseout=this.start()> <b><p><font color="#3CB371">本站404页面借用腾讯宝贝回家，</font>
+    <font color="	#A9A9A9">本站在国家法定日期将按照北京时间全站变灰以哀悼逝去的同胞</font></b></p> </marquee>
     <img src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/wechat.png"alt="微信公众号"/>
     <a href="https://hexo.io"><img alt="CDN" title="由jsDelivr提供CDN加速服务" src="https://img.shields.io/badge/CDN By-jsDelivr-e05d44"/>
     <a href="https://hexo.io"><img alt="HEXO" title="由HEXO强力驱动" src="https://img.shields.io/badge/Powered By-Hexo V5.0.2-007ec6"/>
