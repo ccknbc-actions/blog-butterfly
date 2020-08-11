@@ -6,14 +6,14 @@ aside: false
 comments: false
 ---
 
-{% timeline 关于本站 %}
-{% timenode 2020-08-10 [更新时间线](https://ccknbc.github.io) %}
+{% timeline 升级小助手 %}
 
-HEXO升级为5.0.2，添加时间线，统计图，说说
+{% timenode 2020-08-11 [更新时间线](https://ccknbc.github.io) %}
 
-重新启用web-push-notification
-
-关闭PWA，PJAX，APlayer
+1. `HEXO`升级为`5.0.2`，添加`时间线`，`统计图`，`说说`
+2. 评论系统由`Utterances` -> `Beaudar`
+3. 重新启用`web-push-notification`
+4. 关闭`PWA`，`PJAX`，`APlayer`
 
 {% endtimenode %}
 
@@ -21,5 +21,7 @@ HEXO升级为5.0.2，添加时间线，统计图，说说
 五处托管，若不能访问请记住备用站
 
 **[Github](https://ccknbc.github.io/) | [Vercel](https://ccknbc.gitee.io/) | [Netlify](https://blog-ccknbc.netlify.app/) | [Gitee](https://ccknbc.gitee.io/) | [Coding](https://y0znz6.coding-pages.com/)**
+
 {% endtimenode %}
+
 {% endtimeline %}
