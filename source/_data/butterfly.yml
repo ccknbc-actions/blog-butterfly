@@ -285,7 +285,8 @@ comments:
   use:     
     #- github_issues 
     - Valine
-    - Utterances    
+    - Beaudar
+    #- Utterances    
   #  - Livere
   text: true # Display the comment name next to the button
   lazyload: false # The second comment system will auto load when visiting the website
@@ -293,11 +294,11 @@ comments:
 
 # GitHub Issues Link Button
 # https://help.github.com/en/github/searching-for-information-on-github/searching-issues-and-pull-requests
-github_issues:
-  enable: true
-  username: CCKNBC
-  repository: ccknbc.github.io
-  filters: is:issue
+# github_issues:
+#   enable: true
+#   username: CCKNBC
+#   repository: ccknbc.github.io
+#   filters: is:issue
 
 # disqus
 # https://disqus.com/
@@ -361,6 +362,18 @@ valine:
 # utterances
 # https://utteranc.es/
 utterances:
+  repo: CCKNBC/ccknbc.github.io
+  # Issue Mapping: pathname/url/title/og:title
+  issue_term: pathname
+  label: comment
+  crossorigin: anonymous
+  # Theme: github-light/github-dark/github-dark-orange/icy-dark/dark-blue/photon-dark
+  light_theme: github-light
+  dark_theme: photon-dark
+
+# beaudar
+# https://beaudar.lipk.org/
+beaudar:
   repo: CCKNBC/ccknbc.github.io
   # Issue Mapping: pathname/url/title/og:title
   issue_term: pathname
@@ -925,6 +938,7 @@ CDN:
   disqusjs: https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js
   disqusjs_css: https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css
   utterances: https://utteranc.es/client.js
+  beaudar: https://beaudar.lipk.org/client.js
   #https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/client.js
 
   # share
