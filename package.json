@@ -25,7 +25,7 @@
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-baidu-sitemap": "^0.1.9",
     "hexo-generator-category": "^1.0.0",
-    "hexo-generator-indexed": "^1.2.0",
+    "hexo-generator-index": "^2.0.0",
     "hexo-generator-search": "^2.4.0",
     "hexo-generator-sitemap": "^2.1.0",
     "hexo-generator-tag": "^1.0.0",
@@ -34,12 +34,11 @@
     "hexo-renderer-marked": "^3.0.0",
     "hexo-renderer-pug": "^1.0.0",
     "hexo-renderer-stylus": "^1.1.0",
-    "hexo-server": "^1.0.0",
+    "hexo-server": "^2.0.0",
     "hexo-tag-aplayer": "^3.0.4",
     "hexo-web-push-notification": "^0.2.3",
     "hexo-wordcount": "^6.0.1",
     "imagemin": "^7.0.1",
-    "npm-check": "^5.9.2",
     "terser": "^4.8.0"
   },
   "devDependencies": {
