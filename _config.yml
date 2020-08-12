@@ -173,7 +173,8 @@ baidu_url_submit:
 deploy:
 - type: 'git'
   repo: 
-   a: git@github.com:CCKNBC/ccknbc.github.io.git
+   #a: git@github.com:CCKNBC/ccknbc.github.io.git
+   a: https://CCKNBC:725b8c1bd6a0bb31d40be4acead88c9f9ebeb1df@github.com/CCKNBC/ccknbc.github.io.git
    b: git@e.coding.net:ccknbc/blog.git
    c: git@gitee.com:ccknbc/ccknbc.git
    d: git@gitee.com:ccknbcgroup/ccknbc.git

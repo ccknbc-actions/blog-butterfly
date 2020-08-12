@@ -938,8 +938,8 @@ CDN:
   disqusjs: https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js
   disqusjs_css: https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css
   utterances: https://utteranc.es/client.js
-  beaudar: https://cdn.jsdelivr.net/gh/CCKNBC/CDN@latest/butterfly/source/js/client.js
-  #https://beaudar.lipk.org/client.js
+  beaudar: https://beaudar.lipk.org/client.js
+  #https://cdn.jsdelivr.net/gh/CCKNBC/CDN@latest/butterfly/source/js/client.js
 
   # share
   addtoany: https://static.addtoany.com/menu/page.js
