@@ -7,8 +7,6 @@ cover: https://cdn.jsdelivr.net/gh/CCKNBC/CDN/image/cover/2020-8-6.png
 top_img: https://cdn.jsdelivr.net/gh/CCKNBC/CDN/image/cover/2020-8-6.png
 abbrlink: 3
 sticky: 1
-copyright_author: CC康纳百川
-copyright_author_href: https://github.com/CCKNBC
 ---
 **个人目前使用主题为Butterfly `3.0.0`版本，HEXO `5.0.0`版本**
 
