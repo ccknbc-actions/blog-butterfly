@@ -160,7 +160,7 @@ webPushNotification:
         
 aplayer:
   asset_inject: false
-  meting: false
+  meting: true
 
 baidu_url_submit:
   count: 50               # 提交最新的多少个链接
