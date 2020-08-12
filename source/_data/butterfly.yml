@@ -684,7 +684,7 @@ aside:
     <img src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/wechat.png"alt="微信公众号"/>
     <a href="https://hexo.io"><img alt="CDN" title="由jsDelivr提供CDN加速服务" src="https://img.shields.io/badge/CDN By-jsDelivr-e05d44"/>
     <a href="https://hexo.io"><img alt="HEXO" title="由HEXO强力驱动" src="https://img.shields.io/badge/Powered By-Hexo V5.0.2-007ec6"/>
-    <a href="https://github.com/jerryc127/hexo-theme-butterfly"><img alt="THEME" title="本站点主题使用Butterfly" src="https://img.shields.io/badge/Theme By-Butterfly V3.0.0-ffa500"/></a>
+    <a href="https://github.com/jerryc127/hexo-theme-butterfly"><img alt="THEME" title="本站点主题使用Butterfly" src="https://img.shields.io/badge/Theme By-Butterfly V3.0.1-ffa500"/></a>
     <a href="https://github.com/CCKNBC/ccknbc.github.io/blob/master/README.md"><img alt="HOST" title="静态网页托管于Github/Gitee/Coding/Vercel/Netlify" src="https://img.shields.io/badge/Hosted By-Github/Gitee/Coding/Vercel/Netlify-0e83c"/></a>'
     # </a>&nbsp;<a href="https://gitee.com/"><img alt="Hexo" src="https://img.shields.io/badge/Host-Gitee-0e83c"/></a>
     # &nbsp;<a href="https://coding.net/"><img alt="Hexo" src="https://img.shields.io/badge/Host-Coding-0e83c"/></a>&nbsp;
@@ -938,8 +938,8 @@ CDN:
   disqusjs: https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js
   disqusjs_css: https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css
   utterances: https://utteranc.es/client.js
-  beaudar: https://beaudar.lipk.org/client.js
-  #https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/client.js
+  beaudar: https://cdn.jsdelivr.net/gh/CCKNBC/CDN@latest/butterfly/source/js/client.js
+  #https://beaudar.lipk.org/client.js
 
   # share
   addtoany: https://static.addtoany.com/menu/page.js
