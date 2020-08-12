@@ -177,7 +177,7 @@ deploy:
    a: https://CCKNBC:725b8c1bd6a0bb31d40be4acead88c9f9ebeb1df@github.com/CCKNBC/ccknbc.github.io.git
    b: git@e.coding.net:ccknbc/blog.git
    c: git@gitee.com:ccknbc/ccknbc.git
-   d: git@gitee.com:ccknbcgroup/ccknbcgroup.git
+   #d: git@gitee.com:ccknbcgroup/ccknbcgroup.git
   branch: master
 - type: baidu_url_submitter # 这是新加的主动推送
   
