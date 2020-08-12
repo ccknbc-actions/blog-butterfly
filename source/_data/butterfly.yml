@@ -895,6 +895,8 @@ inject:
 
   bottom:
     - <script src="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/ccknbc.js"></script>
+    - '<script>window.FPConfig = {delay: 0,ignoreKeywords: [],maxRPS: 3,hoverDelay: 50};</script>'
+    - <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
     #- <script id="ilt" src="https://player.ilt.me/player/js/player.js" key="112fe51b9b16481c9241470e8b3ec79b"></script>
     #- <script src="https://myhkw.cn/player/js/player.js" id="myhk" key="15945457616" ></script>
     #- <div id="music" key="5f129dca5ba10" api="https://music.m0x.cn"></div><script id="xplayer" src="https://music.m0x.cn/Static/player2/js/player.js" ></script>
