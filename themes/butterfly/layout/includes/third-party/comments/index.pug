@@ -31,7 +31,7 @@ hr
           when 'Utterances'
             #utterances-wrap
           when 'Beaudar'
-            a(href=`https://github.com/${theme.github_issues.username}/${theme.github_issues.repository}/issues?q=${theme.github_issues.filters}+${page.title}+|+CC康纳百川`)!="<center><b><p>点击前往对应的GitHub Issues</center></b></p>"
+            //- a(href=`https://github.com/${theme.github_issues.username}/${theme.github_issues.repository}/issues?q=${theme.github_issues.filters}+${page.title}+|+CC康纳百川`)!="<center><b><p>点击前往对应的GitHub Issues</center></b></p>"
             #beaudar-wrap
           when 'Facebook Comments'
             .fb-comments(data-colorscheme = theme.display_mode === 'dark' ? 'dark' : 'light'

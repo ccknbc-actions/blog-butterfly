@@ -8,7 +8,9 @@ top_img: https://cdn.jsdelivr.net/gh/CCKNBC/CDN/image/cover/2020-8-6.png
 abbrlink: 3
 sticky: 1
 ---
-**个人目前使用主题为Butterfly `3.0.0`版本，HEXO `5.0.0`版本**
+<a class="hty-button hty-button--raised" id="github-issues" target="_blank" rel="noopener" href="https://github.com/CCKNBC/ccknbc.github.io/issues?q=is:issue+HEXO折腾（持续更新中）+|+CC康纳百川"><center><b><p>点击前往对应的GitHub Issues</p></b></center><p></p></a>
+
+**个人目前使用主题为Butterfly `3.0.1`版本，HEXO `5.0.2`版本**
 
 请按照以下步骤依次安装相应依赖和框架
 
