@@ -283,7 +283,7 @@ comments:
   # Up to two comments system, the first will be shown as default
   # Disqus/Disqusjs/Livere/Gitalk/Valine/Utterances/Facebook Comments
   use:     
-    #- github_issues 
+    #- Github Issues 
     - Valine
     - Beaudar
     #- Utterances    
@@ -294,11 +294,11 @@ comments:
 
 # GitHub Issues Link Button
 # https://help.github.com/en/github/searching-for-information-on-github/searching-issues-and-pull-requests
-# github-issues:
-#   enable: true
-#   username: CCKNBC
-#   repository: ccknbc.github.io
-#   filters: is:issue
+github_issues:
+  # enable: true
+  username: CCKNBC
+  repository: ccknbc.github.io
+  filters: is:issue
 
 # disqus
 # https://disqus.com/
@@ -627,8 +627,8 @@ font:
 # Font settings for the site title and site subtitle
 # 左上角網站名字 主頁居中網站名字
 blog_title_font:
-  font_link: https://fonts.googleapis.com/css?family=Titillium+Web&display=swap
-  font-family: Titillium Web, 'PingFang SC', 'Hiragino Sans GB', Microsoft YaHei', sans-serif
+  font_link: #https://fonts.googleapis.com/css?family=Titillium+Web&display=swap
+  font-family: #Titillium Web, 'PingFang SC', 'Hiragino Sans GB', Microsoft YaHei', sans-serif
 
 # The setting of divider icon (水平分隔線圖標設置)
 hr_icon:
