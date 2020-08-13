@@ -5,4 +5,6 @@ title: 关于我
 aside: false
 comments: false
 ---
-## **什么也没有**
+[![CCKNBC's github stats](https://github-readme-stats.vercel.app/api?username=ccknbc)](https://github.com/anuraghazra/github-readme-stats)
+
+[![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=ccknbc&repo=ccknbc.github.io)](https://github.com/ccknbc/ccknbc.github.io)
