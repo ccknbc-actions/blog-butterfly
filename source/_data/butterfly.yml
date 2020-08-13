@@ -679,8 +679,8 @@ aside:
       link: https://github.com/ccknbc
   card_announcement:
     enable: true
-    content: 
-    '<center><a href="/timeline" rel="noopener"><b><p>备用/简约</b></p></a></center>
+    content: '
+    <center><a href="/timeline" rel="noopener"><b><p>备用/简约</b></p></a></center>
     <img src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/wechat.png"alt="微信公众号"/>
     <a href="https://hexo.io"><img alt="CDN" title="由jsDelivr提供CDN加速服务" src="https://img.shields.io/badge/CDN By-jsDelivr-e05d44"/>
     <a href="https://hexo.io"><img alt="HEXO" title="由HEXO强力驱动" src="https://img.shields.io/badge/Powered By-Hexo V5.0.2-007ec6"/>
