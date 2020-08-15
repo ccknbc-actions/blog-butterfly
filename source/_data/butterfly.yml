@@ -256,7 +256,7 @@ addThis:
 # https://github.com/overtrue/share.js
 sharejs:
   enable: true
-  sites: facebook,twitter,wechat,weibo,qq
+  sites: facebook,twitter,wechat,weibo,qq,qzone.linkedin
 
 # AddToAny
 # https://www.addtoany.com/
@@ -285,6 +285,7 @@ comments:
   use:     
     #- Github Issues 
     - Valine
+    #- Disqusjs
     - Beaudar
     #- Utterances    
   #  - Livere
@@ -309,13 +310,13 @@ disqus:
 # DisqusJS評論系統，可以實現在網路審查地區載入 Disqus 評論列表，兼容原版
 # https://github.com/SukkaW/DisqusJS
 disqusjs:
-  shortname:
-  siteName:
-  apikey:
-  api:
-  nocomment: # display when a blog post or an article has no comment attached
-  admin:
-  adminLabel:
+  shortname: CC
+  siteName: CC康纳百川
+  apikey: Z6F8Gc9KvW2YCh6p11VRVNvMBYfdaKR3IMRFLVmoYaIQJ2ysp38fZ9tivPdgyBWu
+  api: 4v63xHzI00OeJydMoedyNnKSPm5zVg1DapC6b6A4MuHB3YHMGcbptBUTopDvQtkV
+  nocomment: 还没有人评论 # display when a blog post or an article has no comment attached
+  admin: ccknbc
+  adminLabel: 作者
 
 # livere(來必力)
 # https://www.livere.com/
