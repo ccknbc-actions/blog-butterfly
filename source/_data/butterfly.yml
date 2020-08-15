@@ -25,6 +25,11 @@ menu:
     - OD || https://ccknbc.herokuapp.com || fas fa-cloud
     - GD || https://gd.ccknbc.workers.dev || fas fa-folder
     - 影院 || https://video.ccknbc.workers.dev || fas fa-film
+  语言 || fas fa-language:
+    - 测试ing
+    - 简体中文 || / || 
+    - 繁體中文 || /zh-TW/ ||
+    - English || /en/ ||
 
 
 # Code Blocks (代碼相關)
@@ -681,7 +686,6 @@ aside:
   card_announcement:
     enable: true
     content: '
-    <a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ccknbc"><i class="fab fa-github"></i><span>Github</span></a>
     <center><a href="/timeline" rel="noopener"><b><p>备用/简约</b></p></a></center>
     <img src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/wechat.png"alt="微信公众号"/>
     <a href="https://hexo.io"><img alt="CDN" title="由jsDelivr提供CDN加速服务" src="https://img.shields.io/badge/CDN By-jsDelivr-e05d44"/>
