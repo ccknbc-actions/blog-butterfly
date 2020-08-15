@@ -681,6 +681,7 @@ aside:
   card_announcement:
     enable: true
     content: '
+    <a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/ccknbc"><i class="fab fa-github"></i><span>Github</span></a>
     <center><a href="/timeline" rel="noopener"><b><p>备用/简约</b></p></a></center>
     <img src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/wechat.png"alt="微信公众号"/>
     <a href="https://hexo.io"><img alt="CDN" title="由jsDelivr提供CDN加速服务" src="https://img.shields.io/badge/CDN By-jsDelivr-e05d44"/>
