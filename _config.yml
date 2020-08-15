@@ -8,7 +8,11 @@ subtitle: 'Hello Word'
 description: '一个无趣的人'
 keywords: CC的部落格
 author: CC康纳百川
-language: zh-CN
+#language: zh-CN
+language: [zh-CN, zh-TW, en]
+i18n:
+  type: [page, post]
+  generator: [index, archive, categorie, tag]
 timezone: 'Asia/Shanghai'
 
 # URL
