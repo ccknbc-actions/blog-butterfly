@@ -129,8 +129,8 @@ theme: butterfly
 feed:
     limit: 20
     order_by: "-updated"
-    tag_dir: "tag"
-    category_dir: "category"
+    tag_dir: false #"tag"
+    category_dir: false #"category"
     rss:
         enable: true
         template: 
