@@ -22,8 +22,8 @@ aside: false
         labels: 'active',
         direction_sort: "asc",
         labelDescr: {
-            大佬们: "<span style='color:red;'>这是一群大佬哦！</span>",
-            菜鸡们: "<span style='color:red;'>这是一群菜鸡哦！</span>",
+            小伙伴们: "<span style='color:red;'>我的小伙伴们</span>",
+            测试卡: "<span style='color:red;'>嘻嘻嘻</span>",
         }
     })
 </script>
