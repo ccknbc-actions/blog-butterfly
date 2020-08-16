@@ -5,7 +5,7 @@ aside: false
 description: 请尽可能提供相应信息哦
 comments: true
 ---
-{% note success %} **申请友链请使用Valine，以下是我的信息** {% endnote %}
+{% note success %} **申请友链请使用[点击这里](https://gitee.com/ccknbc/friend/issues)，以下是我的信息** {% endnote %}
 ```yaml
 - name: CC康纳百川
   link: https://ccknbc.gitee.io/
