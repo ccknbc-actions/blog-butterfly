@@ -25,11 +25,11 @@ menu:
     - OD || https://ccknbc.herokuapp.com || fas fa-cloud
     - GD || https://gd.ccknbc.workers.dev || fas fa-folder
     - 影院 || https://video.ccknbc.workers.dev || fas fa-film
-  语言 || fas fa-language:
-    - 测试ing || /404 ||
-    - 简体中文 || / || 
-    - 繁體中文 || /zh-TW/ ||
-    - English || /en/ ||
+  # 语言 || fas fa-language:
+  #   - 测试ing || /404 ||
+  #   - 简体中文 || / || 
+  #   - 繁體中文 || /zh-TW/ ||
+  #   - English || /en/ ||
 
 
 # Code Blocks (代碼相關)

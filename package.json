@@ -39,8 +39,7 @@
     "hexo-web-push-notification": "^0.2.3",
     "hexo-wordcount": "^6.0.1",
     "imagemin": "^7.0.1",
-    "terser": "^4.8.0",
-    "hexo-generator-i18n": "^0.0.9"
+    "terser": "^4.8.0"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
