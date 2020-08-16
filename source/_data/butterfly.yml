@@ -261,7 +261,7 @@ addThis:
 # https://github.com/overtrue/share.js
 sharejs:
   enable: true
-  sites: facebook,twitter,wechat,weibo,qq,qzone.linkedin
+  sites: facebook,twitter,wechat,weibo,qq,qzone,linkedin
 
 # AddToAny
 # https://www.addtoany.com/
