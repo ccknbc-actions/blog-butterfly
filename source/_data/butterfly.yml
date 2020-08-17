@@ -46,7 +46,7 @@ code_word_wrap: true
 copy:
   enable: true
   copyright:
-    enable: true
+    enable: false
     limit_count: 50
 
 # social settings (社交圖標設置)
@@ -206,12 +206,12 @@ index_post_content:
 # toc (目錄)
 toc:
   enable: true
-  number: true
+  number: false
   auto_open: true # auto open the sidebar
 
 post_copyright:
   enable: true
-  decode: true
+  decode: false
   license: CC BY-NC-SA 4.0
   license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
