@@ -31,9 +31,9 @@
       #移除此链接的权重 0为否 非0为移除
       remove: 0
     - name: 小康博客
-      link: https://antmoe.com
+      link: https://www.antmoe.com
       avatar: https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/avatar.jpg
-      descr: 更多效果自行搭配
+      descr: 一个收藏回忆与分享技术的地方！
       # 边框大小 默认为0 
       width: 0px
       # 边框样式 默认 solid
