@@ -214,7 +214,8 @@
 # - class_name: 小伙伴们
 #   class_desc: <b>我的小伙伴们</b>
 #   link_list: 
-#     - name: Steve  
+#     - name: Steve 
+#       link:  
 #       avatar: https://cdn.jsdelivr.net/gh/CCKNBC/CDN/links/steve.jpg
 #       descr: Think Differently
 #       # 边框大小 默认为0 
