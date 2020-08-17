@@ -182,10 +182,10 @@
       #移除此链接的权重 0为否 非0为移除
       remove: 0
 
-    - name: Netlify
+    - name: 简约阅读站
       link: https://8dx09s.coding-pages.com/
       avatar: https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/ccknbc.png
-      descr: 简约阅读站
+      descr: Coding
       # 边框大小 默认为0 
       width: 0px
       # 边框样式 默认 solid
