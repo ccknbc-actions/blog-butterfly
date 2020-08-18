@@ -38,4 +38,6 @@ jobs:
     
     - name: Deploy
       run: |
+        git config --global user.name "CCKNBC"
+        git config --global user.email "zekangsun@outlook.com"
         hexo deploy
