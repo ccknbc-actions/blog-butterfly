@@ -5,7 +5,6 @@ script.
     ele.setAttribute('src', '!{url_for(theme.CDN.utterances)}')
     ele.setAttribute('repo', '!{theme.utterances.repo}')
     ele.setAttribute('issue-term', '!{theme.utterances.issue_term}')
-    ele.setAttribute('label', '!{theme.utterances.label}')
     let nowTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? '#{theme.utterances.dark_theme}' : '#{theme.utterances.light_theme}'
     ele.setAttribute('theme', nowTheme)
     ele.setAttribute('crossorigin', 'anonymous')
