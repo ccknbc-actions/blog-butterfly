@@ -32,7 +32,7 @@ menu:
   #   - English || /en/ ||
 
 # Hide the child menu items in mobile sidebar
-hide_sidebar_menu_child: true
+hide_sidebar_menu_child: false
 
 # Code Blocks (代碼相關)
 # --------------------------------------
