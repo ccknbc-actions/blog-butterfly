@@ -26,17 +26,14 @@ jobs:
         
     - name: Install Dependencies
       run: |
-        npm install hexo-cli gulp-cli -g
+        npm install hexo-cli-g
         npm install
 
     - name: Generate
       run: |
         hexo clean
         hexo generate
-        gulp
     
     - name: Deploy
       run: |
-        git config --global user.name "CCKNBC"
-        git config --global user.email "zekangsun@outlook.com"
         hexo deploy
