@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CC的小伙伴们 | CC康纳百川</title><meta name="description" content="if(typeof(Friend)&#x3D;&#x3D;&#39;undefined&#39;){         location.href&#x3D;&#39;&#x2F;friends&#39;     }     new Friend({         el: &#39;#friend1&#39;,         owner: &quot;ccknbc&quot;,         repo: &#39;friend&#39;,         labels: &#39;active&#39;,"><meta name="keywords" content="CC的部落格,CC康纳百川"><meta name="author" content="CC康纳百川"><meta name="copyright" content="CC康纳百川"><meta name="format-detection" content="telephone=no"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/favicon.svg"><link rel="canonical" href="https://ccknbc.github.io/link/"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><link rel="preconnect" href="//cdn.jsdelivr.net"><link rel="preconnect" href="//zz.bdstatic.com"><meta property="og:type" content="website"><meta property="og:title" content="CC的小伙伴们"><meta property="og:url" content="https://ccknbc.github.io/link/"><meta property="og:site_name" content="CC康纳百川"><meta property="og:description" content="if(typeof(Friend)&#x3D;&#x3D;&#39;undefined&#39;){         location.href&#x3D;&#39;&#x2F;friends&#39;     }     new Friend({         el: &#39;#friend1&#39;,         owner: &quot;ccknbc&quot;,         repo: &#39;friend&#39;,         labels: &#39;active&#39;,"><meta property="og:image" content="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/bg/mountain-blur-30px.jpg"><meta property="article:published_time" content="2020-06-04T14:17:49.000Z"><meta property="article:modified_time" content="2020-08-17T03:13:27.432Z"><meta name="twitter:card" content="summary"><script>var activateDarkMode = function () {
+  document.documentElement.setAttribute('data-theme', 'dark')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#000')
+  }
+}
+var activateLightMode = function () {
+  document.documentElement.setAttribute('data-theme', 'light')
+  if (document.querySelector('meta[name="theme-color"]') !== null) {
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', '#fff')
+  }
+}
+
+var getCookies = function (name) {
+  const value = `; ${document.cookie}`
+  const parts = value.split(`; ${name}=`)
+  if (parts.length === 2) return parts.pop().split(';').shift()
+}
+
+var autoChangeMode = '1'
+var t = getCookies('theme')
+if (autoChangeMode === '1') {
+  var isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+  var isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+  var isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+  var hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+  if (t === undefined) {
+    if (isLightMode) activateLightMode()
+    else if (isDarkMode) activateDarkMode()
+    else if (isNotSpecified || hasNoSupport) {
+      console.log('You specified no preference for a color scheme or your browser does not support it. I Schedule dark mode during night time.')
+      var now = new Date()
+      var hour = now.getHours()
+      var isNight = hour <= 6 || hour >= 18
+      isNight ? activateDarkMode() : activateLightMode()
+    }
+    window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+      if (Cookies.get('theme') === undefined) {
+        e.matches ? activateDarkMode() : activateLightMode()
+      }
+    })
+  } else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else if (autoChangeMode === '2') {
+  now = new Date()
+  hour = now.getHours()
+  isNight = hour <= 6 || hour >= 18
+  if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+  else if (t === 'light') activateLightMode()
+  else activateDarkMode()
+} else {
+  if (t === 'dark') activateDarkMode()
+  else if (t === 'light') activateLightMode()
+}</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.css"><script>var GLOBAL_CONFIG={root:"/",hexoversion:"5.0.2",algolia:void 0,localSearch:{path:"search.xml",languages:{hits_empty:"找不到您查询的内容：${query}"}},translate:{defaultEncoding:2,translateDelay:0,msgToTraditionalChinese:"繁",msgToSimplifiedChinese:"简"},noticeOutdate:{limitDay:30,position:"top",messagePrev:"本文最后一次更新为",messageNext:"天前，文章中的某些内容可能已过时！"},copy:{success:"复制成功",error:"复制错误",noSupport:"浏览器不支持"},bookmark:{message_prev:"按",message_next:"键将本页加入书签"},runtime_unit:"天",runtime:!1,copyright:void 0,ClickShowText:void 0,medium_zoom:!1,fancybox:!0,Snackbar:{bookmark:{message_prev:"按",message_next:"键将本页加入书签"},chs_to_cht:"你已切换为繁体",cht_to_chs:"你已切换为简体",day_to_night:"你已切换为深色模式",night_to_day:"你已切换为浅色模式",bgLight:"#8FBC8F",bgDark:"#121212",position:"bottom-left"},justifiedGallery:{js:"https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js",css:"https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css"},baiduPush:!0,highlightCopy:!0,highlightLang:!0,isPhotoFigcaption:!0,islazyload:!0,isanchor:!1}</script><script id="config_change">var GLOBAL_CONFIG_SITE={isPost:!1,isHome:!1,isHighlightShrink:!1,isSidebar:!1,postUpdate:"2020-08-17 11:13:27"}</script><noscript><style>#nav{opacity:1}.justified-gallery img{opacity:1}</style></noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/tags.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/css/flink.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/css/ccknbc.css"><meta name="generator" content="Hexo 5.0.2"></head><body><div id="mobile-sidebar"><div id="menu_mask"></div><div id="mobile-sidebar-menus"><div class="mobile_author_icon"><img class="avatar-img" data-lazy-src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/ccknbc.png" onerror='onerror=null,src="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/img/friend_404.gif"' alt="avatar"></div><div class="mobile_post_data"><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/archives/"><div class="headline">文章</div><div class="length_num">3</div></a></div></div><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/tags/"><div class="headline">标签</div><div class="length_num">6</div></a></div></div><div class="mobile_data_item is-center"><div class="mobile_data_link"><a href="/categories/"><div class="headline">分类</div><div class="length_num">4</div></a></div></div></div><hr><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i> <span>首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i> <span>归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i> <span>标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i> <span>分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-desktop"></i> <span>关于</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/timeline/"><i class="fa-fw fas fa-stream"></i> <span>本站</span></a></li><li><a class="site-page" href="/charts/"><i class="fa-fw fas fa-chart-bar"></i> <span>统计</span></a></li><li><a class="site-page" href="/me/"><i class="fa-fw fas fa-heart"></i> <span>我</span></a></li><li><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i> <span>友链</span></a></li><li><a class="site-page" href="/comments/"><i class="fa-fw fa fa-comments"></i> <span>留言</span></a></li><li><a class="site-page" href="/say/"><i class="fa-fw fas fa-clipboard-list"></i> <span>说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i> <span>清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/rss.xml"><i class="fa-fw fas fa-rss"></i> <span>RSS</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/atom.xml"><i class="fa-fw far fa-bell"></i> <span>Atom</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/feed.json"><i class="fa-fw fas fa-bullhorn"></i> <span>Json</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://ccknbc.herokuapp.com"><i class="fa-fw fas fa-cloud"></i> <span>OD</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://gd.ccknbc.workers.dev"><i class="fa-fw fas fa-folder"></i> <span>GD</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://video.ccknbc.workers.dev"><i class="fa-fw fas fa-film"></i> <span>影院</span></a></li></ul></div></div></div></div><div id="body-wrap"><div id="web_bg" data-type="color"></div><header class="not-index-bg" id="page-header" style="background-image:url(https://api.ixiaowai.cn/gqapi/gqapi.php)"><nav id="nav"><span class="pull-left" id="blog_name"><a class="blog_title" id="site-name" href="/">CC康纳百川</a></span><span class="pull-right menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i> <span>搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fa fa-home"></i> <span>首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-archive"></i> <span>归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i> <span>标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-folder-open"></i> <span>分类</span></a></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-desktop"></i> <span>关于</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" href="/timeline/"><i class="fa-fw fas fa-stream"></i> <span>本站</span></a></li><li><a class="site-page" href="/charts/"><i class="fa-fw fas fa-chart-bar"></i> <span>统计</span></a></li><li><a class="site-page" href="/me/"><i class="fa-fw fas fa-heart"></i> <span>我</span></a></li><li><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i> <span>友链</span></a></li><li><a class="site-page" href="/comments/"><i class="fa-fw fa fa-comments"></i> <span>留言</span></a></li><li><a class="site-page" href="/say/"><i class="fa-fw fas fa-clipboard-list"></i> <span>说说</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i> <span>清单</span><i class="fas fa-chevron-down expand"></i></a><ul class="menus_item_child"><li><a class="site-page" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/rss.xml"><i class="fa-fw fas fa-rss"></i> <span>RSS</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/atom.xml"><i class="fa-fw far fa-bell"></i> <span>Atom</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/feed.json"><i class="fa-fw fas fa-bullhorn"></i> <span>Json</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://ccknbc.herokuapp.com"><i class="fa-fw fas fa-cloud"></i> <span>OD</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://gd.ccknbc.workers.dev"><i class="fa-fw fas fa-folder"></i> <span>GD</span></a></li><li><a class="site-page" target="_blank" rel="noopener" href="https://video.ccknbc.workers.dev"><i class="fa-fw fas fa-film"></i> <span>影院</span></a></li></ul></div></div><span class="toggle-menu close"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="page_site-info"><h1 id="site_title">CC的小伙伴们</h1></div></header><main class="layout_page hide-aside" id="content-inner"><div id="page"><div class="flink" id="article-container"><h2>大佬</h2><div class="flink-desc"><b><p><font color="#FC625D">添加和申请本站友链请到这里</font> <a href="/links" rel="noopener"><font color="#8FBC8F">👉点击直达👈</font></a></p></b></div><div class="flink-list"><div class="flink-list-item" style="--primary-color:#fddb92;border-width:0;border-style:solid;animation:link_custom1 4s infinite alternate;background:#"><a href="https://blog.lete114.top/" title="乐特" target="_blank" rel="" style="--namecolor:#"><img class="lauto" data-lazy-src="https://cdn.jsdelivr.net/gh/lete114/lete114.github.io/img/Lete.png" onerror='this.onerror=null,this.src="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/img/friend_404.gif"' alt="乐特" style="--primary-rotate:360deg;--autotime:2s"><span class="flink-item-name">乐特</span><span class="flink-item-desc" title="我相信我可以，但我一直在路上，所以我有无限的可能！！">我相信我可以，但我一直在路上，所以我有无限的可能！！</span></a></div><div class="flink-list-item" style="--primary-color:#0078e7;border-width:0;border-style:solid;animation:link_custom1 4s infinite alternate;background:0"><a href="https://www.antmoe.com" title="小康博客" target="_blank" rel="" style="--namecolor:#ff9191"><img class="lauto" data-lazy-src="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/avatar.jpg" onerror='this.onerror=null,this.src="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/img/friend_404.gif"' alt="小康博客" style="--primary-rotate:360deg;--autotime:2s"><span class="flink-item-name">小康博客</span><span class="flink-item-desc" title="一个收藏回忆与分享技术的地方！">一个收藏回忆与分享技术的地方！</span></a></div></div><h2>备用</h2><div class="flink-list"><div class="flink-list-item" style="--primary-color:#fddb92;border-width:0;border-style:solid;animation:link_custom1 4s infinite alternate;background:#fddb92"><a href="https://ccknbc.gitee.io/" title="Gitee（荐）" target="_blank" rel="" style="--namecolor:#"><img class="lauto" data-lazy-src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/ccknbc.png" onerror='this.onerror=null,this.src="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/img/friend_404.gif"' alt="Gitee（荐）" style="--primary-rotate:360deg;--autotime:2s"><span class="flink-item-name">Gitee（荐）</span><span class="flink-item-desc" title="国内备用地址 1">国内备用地址 1</span></a></div><div class="flink-list-item" style="--primary-color:#84fab0;border-width:0;border-style:solid;animation:link_custom1 4s infinite alternate;background:#"><a href="https://y0znz6.coding-pages.com/" title="Coding" target="_blank" rel="" style="--namecolor:#"><img class="lauto" data-lazy-src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/ccknbc.png" onerror='this.onerror=null,this.src="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/img/friend_404.gif"' alt="Coding" style="--primary-rotate:360deg;--autotime:2s"><span class="flink-item-name">Coding</span><span class="flink-item-desc" title="国内备用地址 2">国内备用地址 2</span></a></div><div class="flink-list-item" style="--primary-color:#84fab0;border-width:0;border-style:solid;animation:link_custom1 4s infinite alternate;background:#7edbdc"><a href="https://ccknbc.now.sh/" title="Vercel（荐）" target="_blank" rel="" style="--namecolor:#"><img class="lauto" data-lazy-src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/ccknbc.png" onerror='this.onerror=null,this.src="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/img/friend_404.gif"' alt="Vercel（荐）" style="--primary-rotate:360deg;--autotime:2s"><span class="flink-item-name">Vercel（荐）</span><span class="flink-item-desc" title="国外备用地址 1">国外备用地址 1</span></a></div><div class="flink-list-item" style="--primary-color:#84fab0;border-width:0;border-style:solid;animation:link_custom1 4s infinite alternate;background:#"><a href="https://blog-ccknbc.netlify.app/" title="Netlify" target="_blank" rel="" style="--namecolor:#"><img class="latuo" data-lazy-src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/ccknbc.png" onerror='this.onerror=null,this.src="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/img/friend_404.gif"' alt="Netlify" style="--primary-rotate:360deg;--autotime:2s"><span class="flink-item-name">Netlify</span><span class="flink-item-desc" title="国外备用地址 2">国外备用地址 2</span></a></div><div class="flink-list-item" style="--primary-color:#84fab0;border-width:0;border-style:solid;animation:link_custom1 4s infinite alternate;background:#"><a href="https://8dx09s.coding-pages.com/" title="简约阅读站" target="_blank" rel="" style="--namecolor:#"><img class="latuo" data-lazy-src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/ccknbc.png" onerror='this.onerror=null,this.src="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/img/friend_404.gif"' alt="简约阅读站" style="--primary-rotate:360deg;--autotime:2s"><span class="flink-item-name">简约阅读站</span><span class="flink-item-desc" title="Coding">Coding</span></a></div></div><div id="friend1"></div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@09ca535/butterfly/js/Friend.js"></script><script>"undefined"==typeof Friend&&(location.href="/friends"),new Friend({el:"#friend1",owner:"ccknbc",repo:"friend",labels:"active",direction_sort:"asc",labelDescr:{"小伙伴们":"<span style='color:red;'>我的小伙伴们</span>","测试卡":"<span style='color:red;'>嘻嘻嘻</span>"}})</script></div></div></main><footer id="footer" style="background-image:url(https://api.ixiaowai.cn/gqapi/gqapi.php)" data-type="photo"><div id="footer-wrap"><div class="copyright">&copy;2020 By CC康纳百川</div><div class="live_time"><span>本站已运行</span><span id="display_live_time"></span><script>function blog_live_time() {
+  window.setTimeout(blog_live_time, 1000);
+  const start = new Date('2020-06-04T00:00:00');
+  const now = new Date();
+  //- const yearDiff = (now.getFullYear() - start.getFullYear());
+  const timeDiff = (now.getTime() - start.getTime());
+  const msPerMinute = 60 * 1000;
+  const msPerHour = 60 * msPerMinute;
+  const msPerDay = 24 * msPerHour;
+  const msPerYear = 365 * msPerDay;
+  //- const passYear= Math.floor(yearDiff);
+  const passYear = Math.floor(timeDiff / msPerYear);
+  const passDay = Math.floor((timeDiff % msPerYear)/ msPerDay);
+  const passHour = Math.floor((timeDiff % msPerDay) / 60 / 60 / 1000);
+  const passMinute = Math.floor((timeDiff % msPerHour) / 60 / 1000);
+  const passSecond = Math.floor((timeDiff % msPerMinute) / 1000);
+  display_live_time.innerHTML =  " " + passYear + " 年 " + passDay + " 天 " + passHour + " 小时 " + passMinute + " 分 " + passSecond + " 秒";
+}
+blog_live_time();</script></div></div></footer></div><section id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></section><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49b1f5">hexo-generator-search</a> <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/utils.js"></script><script src="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/main.js"></script><script src="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module" defer></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js" async></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar/dist/snackbar.min.js"></script><script>function panguFn () {
+  if (typeof pangu === 'object') pangu.spacingElementById('content-inner')
+  else {
+    $.getScript('https://cdn.jsdelivr.net/npm/pangu/dist/browser/pangu.min.js', () => {
+      pangu.spacingElementById('content-inner')
+    })
+  }
+}
+
+function panguInit () {
+  if (true){
+    GLOBAL_CONFIG_SITE.isPost && panguFn()
+  } else {
+    panguFn()
+  }
+}
+
+document.addEventListener('DOMContentLoaded', panguFn)</script><script src="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/search/local-search.js"></script><div class="js-pjax"><script>document.getElementsByClassName("mermaid").length&&(window.mermaidJsLoad?mermaid.init():$.getScript("https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js",function(){window.mermaidJsLoad=!0,mermaid.initialize({theme:"default"}),mermaid.init()}))</script></div><script src="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/ccknbc.js"></script><script>window.FPConfig={delay:0,ignoreKeywords:[],maxRPS:3,hoverDelay:50}</script><script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script><script src="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/third-party/activate-power-mode.js"></script><script>POWERMODE.colorful=!0,POWERMODE.shake=!1,document.body.addEventListener("input",POWERMODE)</script><script src="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/third-party/click_heart.js" async></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  'meta[name=description]',
+  '#config_change',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+const pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+})
+
+document.addEventListener('pjax:complete', function () {
+  refreshFn()
+
+  $('script[data-pjax]').each(function () {
+    $(this).parent().append($(this).remove())
+  })
+
+  GLOBAL_CONFIG.islazyload && lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  if (typeof gtag === 'function') {
+    gtag('config', '', {'page_path': window.location.pathname});
+  }
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+})
+
+document.addEventListener('pjax:send', function () {
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  $(window).off('scroll')
+
+  //reset readmode
+  $('body').hasClass('read-mode') && $('body').removeClass('read-mode')
+
+  //reset font-size
+  $('body').css('font-size') !== originFontSize && $('body').css('font-size', parseFloat(originFontSize))
+})</script></div><script>!function(e,p,s,u){e.webpushr=e.webpushr||function(){(e.webpushr.q=e.webpushr.q||[]).push(arguments)};var i,n=p.getElementsByTagName(s)[0];(i=p.createElement(s)).id="webpushr-jssdk",i.src="https://cdn.webpushr.com/app.min.js",n.parentNode.appendChild(i)}(window,document,"script"),webpushr("init","BDMQzEpmBuoEMOFVQ5EiC7scntMuJzY5Ac2rYD9NPSxPXqZ_VpC8Xk_iuuW0s6M7jioHyy05qzqyD28i4ikaThw")</script></body></html>
