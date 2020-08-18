@@ -26,7 +26,7 @@ jobs:
         
     - name: Install Dependencies
       run: |
-        npm install hexo-cli gulp-cli cnpm -g
+        cnpm install hexo-cli gulp-cli -g
         cnpm install
 
     - name: Generate
@@ -37,5 +37,6 @@ jobs:
     
     - name: Deploy
       run: |
-
+        git config --global user.name "CCKNBC"
+        git config --global user.email "zekangsun@outlook.com"
         hexo deploy
