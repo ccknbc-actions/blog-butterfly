@@ -5,25 +5,25 @@ type: link
 comments: false
 aside: false
 ---
-<div id="friend1"></div>
+<p><font color="#FC625D">添加或申请本站友链请到这里</font> <a href="/links" rel="noopener"><font color="#8FBC8F">👉点击直达👈</font></a></b>
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
-
-<script src="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@09ca535/butterfly/js/Friend.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src='https://unpkg.com/ifriend/index.js'></script>
 
 <script>
+    $('.flink').prepend('<div id="friend1"></div>')
     if(typeof(Friend)=='undefined'){
         location.href='/friends'
     }
     new Friend({
-        el: '#friend1',
+        el: "#friend1",
         owner: "ccknbc",
-        repo: 'friend',
-        labels: 'active',
+        repo: "link",
         direction_sort: "asc",
+        sort_container: [],
         labelDescr: {
-            小伙伴们: "<span style='color:red;'>我的小伙伴们</span>",
-            测试卡: "<span style='color:red;'>嘻嘻嘻</span>",
-        }
-    })
+        	小伙伴们: "",
+            大佬们: "<span style='color:red;'>这是一群大佬哦！</span>",
+            菜鸡们: "<span style='color:red;'>这是一群菜鸡哦！</span>",
+        },
+    });
 </script>

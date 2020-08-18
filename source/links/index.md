@@ -7,11 +7,11 @@ comments: true
 ---
 {% tabs links%}
 <!-- tab 申请须知@fas fa-check-circle -->
-1. **快速申请友链请[点击这里](https://gitee.com/ccknbc/friend/)按照模板提交Issue即可，但没有特效**
+1. **快速申请友链请[点击这里](https://gitee.com/ccknbc/link/)按照模板提交Issue即可，但没有特效**
 
 2. **当然您也可以在评论区提交，等待手动添加**
 
-3. **以下是我的信息，您可以复制后添加至您的友链**
+3. **点击我的信息，您可以复制后自行选择添加至您的友链**
 <!-- endtab -->
 
 <!-- tab 我的信息 @fas fa-id-card -->
