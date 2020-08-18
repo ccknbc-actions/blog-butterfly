@@ -710,9 +710,9 @@ aside:
     order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
     limit: 8 # if set 0 will show all
   card_webinfo:
-    enable: true
+    enable: false
     post_count: false
-    last_push_date: true
+    last_push_date: false
 
 # busuanzi count for PV / UV in site
 # 訪問人數

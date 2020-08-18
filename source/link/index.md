@@ -5,7 +5,8 @@ type: link
 comments: false
 aside: false
 ---
-<p><font color="#FC625D">添加或申请本站友链请到这里</font> <a href="/links" rel="noopener"><font color="#8FBC8F">👉点击直达👈</font></a></b>
+{% note success %} <b><font color="#FC625D">添加或申请本站友链请到这里</font> <a href="/links" rel="noopener"><font color="#8FBC8F">👉点击直达👈</font></a></b> {% endnote %}
+
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src='https://unpkg.com/ifriend/index.js'></script>
 
@@ -22,8 +23,9 @@ aside: false
         sort_container: [],
         labelDescr: {
         	小伙伴们: "",
-            大佬们: "<span style='color:red;'>这是一群大佬哦！</span>",
+            大佬们: "<span style='color:light-green;'>这是一群大佬哦！</span>",
             菜鸡们: "<span style='color:red;'>这是一群菜鸡哦！</span>",
+            备用站: "",
         },
     });
 </script>
