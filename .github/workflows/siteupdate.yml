@@ -26,8 +26,8 @@ jobs:
         
     - name: Install Dependencies
       run: |
-        cnpm install hexo-cli gulp-cli -g
-        cnpm install
+        npm install hexo-cli gulp-cli -g
+        npm install
 
     - name: Generate
       run: |
