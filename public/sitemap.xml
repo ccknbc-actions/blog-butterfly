@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ccknbc.github.io/posts/3632233996.html</loc>
+    
+    <lastmod>2020-08-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ccknbc.github.io/links/</loc>
     
     <lastmod>2020-08-17</lastmod>
@@ -102,50 +109,57 @@
 
   <url>
     <loc>https://ccknbc.github.io/</loc>
-    <lastmod>2020-08-17</lastmod>
+    <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
   <url>
-    <loc>https://ccknbc.github.io/tags/study/</loc>
-    <lastmod>2020-08-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ccknbc.github.io/tags/watermark/</loc>
-    <lastmod>2020-08-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ccknbc.github.io/tags/matlab/</loc>
-    <lastmod>2020-08-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ccknbc.github.io/tags/%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2020-08-17</lastmod>
+    <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ccknbc.github.io/tags/%E7%94%9F%E4%BA%A7%E5%AE%9E%E4%B9%A0/</loc>
-    <lastmod>2020-08-17</lastmod>
+    <lastmod>2020-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ccknbc.github.io/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2020-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ccknbc.github.io/tags/study/</loc>
+    <lastmod>2020-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ccknbc.github.io/tags/watermark/</loc>
+    <lastmod>2020-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ccknbc.github.io/tags/matlab/</loc>
+    <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ccknbc.github.io/tags/HEXO/</loc>
-    <lastmod>2020-08-17</lastmod>
+    <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -154,28 +168,28 @@
   
   <url>
     <loc>https://ccknbc.github.io/categories/%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2020-08-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ccknbc.github.io/categories/%E5%AD%A6%E4%B9%A0/matlab/</loc>
-    <lastmod>2020-08-17</lastmod>
+    <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ccknbc.github.io/categories/%E5%AD%A6%E4%B9%A0/%E7%94%9F%E4%BA%A7%E5%AE%9E%E4%B9%A0/</loc>
-    <lastmod>2020-08-17</lastmod>
+    <lastmod>2020-08-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ccknbc.github.io/categories/%E5%AD%A6%E4%B9%A0/matlab/</loc>
+    <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ccknbc.github.io/categories/HEXO/</loc>
-    <lastmod>2020-08-17</lastmod>
+    <lastmod>2020-08-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

@@ -3,13 +3,23 @@
     <id>https://ccknbc.github.io</id>
     <title>CC康纳百川</title>
     <link href="https://ccknbc.github.io" />
-    <updated>2020-06-30T16:00:00.000Z</updated>
+    <updated>2020-08-18T02:58:02.000Z</updated>
+    <category term="学习" />
+    <category term="生产实习" />
+    <category term="测试" />
     <category term="study" />
     <category term="watermark" />
     <category term="matlab" />
-    <category term="学习" />
-    <category term="生产实习" />
     <category term="HEXO" />
+    <entry>
+        <id>https://ccknbc.github.io/posts/3632233996.html</id>
+        <title>test</title>
+        <link rel="alternate" href="https://ccknbc.github.io/posts/3632233996.html"/>
+        <content type="html">&lt;p&gt;测试啊&lt;/p&gt;
+</content>
+        <category term="测试" />
+        <updated>2020-08-18T02:58:02.000Z</updated>
+    </entry>
     <entry>
         <id>https://ccknbc.github.io/posts/3.html</id>
         <title>HEXO折腾（持续更新中）</title>

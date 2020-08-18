@@ -5,14 +5,24 @@
         <link>https://ccknbc.github.io</link>
         <description>一个无趣的人</description>
         <language>zh-CN</language>
-        <pubDate>Wed, 01 Jul 2020 00:00:00 +0800</pubDate>
-        <lastBuildDate>Wed, 01 Jul 2020 00:00:00 +0800</lastBuildDate>
+        <pubDate>Tue, 18 Aug 2020 10:58:02 +0800</pubDate>
+        <lastBuildDate>Tue, 18 Aug 2020 10:58:02 +0800</lastBuildDate>
+        <category>学习</category>
+        <category>生产实习</category>
+        <category>测试</category>
         <category>study</category>
         <category>watermark</category>
         <category>matlab</category>
-        <category>学习</category>
-        <category>生产实习</category>
         <category>HEXO</category>
+        <item>
+            <guid isPermalink="true">https://ccknbc.github.io/posts/3632233996.html</guid>
+            <title>test</title>
+            <link>https://ccknbc.github.io/posts/3632233996.html</link>
+            <category>测试</category>
+            <pubDate>Tue, 18 Aug 2020 10:58:02 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;测试啊&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">https://ccknbc.github.io/posts/3.html</guid>
             <title>HEXO折腾（持续更新中）</title>

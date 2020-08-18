@@ -5,6 +5,16 @@
     "home_page_url": "https://ccknbc.github.io",
     "items": [
         {
+            "id": "https://ccknbc.github.io/posts/3632233996.html",
+            "url": "https://ccknbc.github.io/posts/3632233996.html",
+            "title": "test",
+            "date_published": "2020-08-18T02:58:02.000Z",
+            "content_html": "<p>测试啊</p>\n",
+            "tags": [
+                "测试"
+            ]
+        },
+        {
             "id": "https://ccknbc.github.io/posts/3.html",
             "url": "https://ccknbc.github.io/posts/3.html",
             "title": "HEXO折腾（持续更新中）",

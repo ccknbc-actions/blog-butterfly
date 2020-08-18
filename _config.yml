@@ -178,9 +178,9 @@ deploy:
 - type: 'git'
   repo: 
    #a: git@github.com:CCKNBC/ccknbc.github.io.git
-   a: https://CCKNBC:725b8c1bd6a0bb31d40be4acead88c9f9ebeb1df@github.com/CCKNBC/ccknbc.github.io.git
-   b: git@e.coding.net:ccknbc/blog.git
-   c: git@gitee.com:ccknbc/ccknbc.git
+   a: https://CCKNBC:1c6762d996054cce8fc66dd27345226b495262cc@github.com/CCKNBC/ccknbc.github.io.git
+   b: https://KPbCEGyNfo:4cf12fcccef338e64e941a23e46e0d8a43d117f0@e.coding.net/ccknbc/blog.git
+   c: https://ccknbc:eda882bb02f3b5a4614311aa8b47aba8@gitee.com/ccknbc/ccknbc.git
    #d: git@gitee.com:ccknbcgroup/ccknbcgroup.git
   branch: master
 - type: baidu_url_submitter # 这是新加的主动推送
