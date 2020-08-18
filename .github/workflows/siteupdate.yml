@@ -33,7 +33,6 @@ jobs:
       run: |
         hexo clean
         hexo generate
-        gulp build
         gulp
     
     - name: Deploy
