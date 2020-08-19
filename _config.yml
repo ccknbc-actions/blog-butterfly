@@ -56,6 +56,7 @@ skip_render:
   - robots.txt
   - CNAME
   - google7787a6577761be93.html
+  - ".github/**/*"
 
 # Writing
 new_post_name: :title.md # File name of new posts
