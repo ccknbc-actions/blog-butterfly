@@ -35,7 +35,7 @@ jobs:
       run: |
         rm -rf ./public
         rm -rf ./db.json
-
+        rm -rf ./.deploy_git
         hexo clean
         hexo generate
         gulp
