@@ -35,7 +35,6 @@ jobs:
       run: |
         rm -rf ./public
         rm -rf ./db.json
-
         hexo clean
         hexo generate
         gulp
