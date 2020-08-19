@@ -35,7 +35,7 @@ jobs:
       run: |
         rm -rf ./public
         rm -rf ./db.json
-        rm -rf ./.deploy_git
+
         hexo clean
         hexo generate
         gulp
@@ -45,10 +45,3 @@ jobs:
         git config --global user.name "CCKNBC"
         git config --global user.email "zekangsun@outlook.com"
         hexo deploy
-
-    # - name: Build Gitee Pages
-    #   uses: yanglbme/gitee-pages-action@master
-    #   with:
-    #       gitee-username: ccknbc
-    #       gitee-password: ${{ secrets.GITEE_PASSWORD }}
-    #       gitee-repo: ccknbc/ccknbc
