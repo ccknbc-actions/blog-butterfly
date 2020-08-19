@@ -360,7 +360,7 @@ valine:
 # utterances
 # https://utteranc.es/
 utterances:
-  repo: CCKNBC/ccknbc.github.io
+  repo: CCKNBC/comments
   # Issue Mapping: pathname/url/title/og:title
   issue_term: title
   label: 💬comment
@@ -372,7 +372,7 @@ utterances:
 # beaudar
 # https://beaudar.lipk.org/
 beaudar:
-  repo: CCKNBC/ccknbc.github.io
+  repo: CCKNBC/comments
   # Issue Mapping: pathname/url/title/og:title
   issue_term: title
   label: 💬comment
