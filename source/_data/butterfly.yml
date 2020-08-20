@@ -57,7 +57,7 @@ copy:
 social:
   # fab fa-github: https://github.com/CCKNBC || Github
   fas fa-envelope: mailto:ccknbc@outlook.com || Email
-  # fas fa-rss: /atom.xml || RSS
+  # fas fa-rss: /rss.xml || RSS
   fab fa-weibo: https://weibo.com/CommonCulture || Weibo
   fab fa-twitter: https://www.twitter.com/ccknbc || Twitter
   fab fa-instagram: https://www.instagram.com/ccknbc || Instagram
@@ -165,8 +165,8 @@ cover:
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
-  flink: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/img/friend_404.gif
-  post_page: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/img/404.jpg
+  flink: https://service-jb7jmcma-1300914868.hk.apigw.tencentcs.com/release/onemanager/friend_404.gif
+  post_page: https://service-jb7jmcma-1300914868.hk.apigw.tencentcs.com/release/onemanager/404.jpg
 
 # A simple 404 page
 error_404:
@@ -444,7 +444,7 @@ footer:
     enable: false
     url:
     text:
-    icon: /img/icp.png
+    icon: https://service-jb7jmcma-1300914868.hk.apigw.tencentcs.com/release/onemanager/icp.png
   live_time: #页脚运行时间
     enable: true
     prefix: 本站已运行
@@ -838,7 +838,7 @@ pangu:
 # https://github.com/verlok/lazyload
 lazyload:
   enable: true
-  post: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/img/loading.gif
+  post: https://service-jb7jmcma-1300914868.hk.apigw.tencentcs.com/release/onemanager/loading.gif
 
 # PWA
 # See https://github.com/JLHwung/hexo-offline
