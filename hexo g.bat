@@ -1,1 +1,1 @@
-hexo g && gulp
+hexo g && gulp && xcopy public .deploy_git /S/Y

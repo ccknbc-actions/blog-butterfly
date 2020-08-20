@@ -39,6 +39,8 @@ jobs:
         hexo clean
         hexo generate
         gulp
+        mkdir .deploy_git
+        xcopy public .deploy_git /S/Y
     
     - name: Deploy
       run: |

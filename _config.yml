@@ -56,7 +56,7 @@ skip_render:
   - robots.txt
   - CNAME
   - google7787a6577761be93.html
-  # - ".github/**/*"
+  - ".github/**/*"
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -119,7 +119,7 @@ pagination_dir: page
 # Include / Exclude file(s)
 ## include:/exclude: options only apply to the 'source/' folder
 include: 
-  # - ".github/**/*"
+  - ".github/**/*"
 exclude:
 ignore:
 
