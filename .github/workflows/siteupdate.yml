@@ -29,6 +29,7 @@ jobs:
         rm -rf ./node_modules
         npm install hexo-cli -g
         npm install
+        npm install pump
 
     - name: Generate
       run: |
@@ -37,6 +38,7 @@ jobs:
         rm -rf ./.deploy_git
         hexo clean
         hexo generate
+        gulp
     
     - name: Deploy
       run: |
