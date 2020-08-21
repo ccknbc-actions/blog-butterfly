@@ -26,7 +26,6 @@ jobs:
         
     - name: Install Dependencies
       run: |
-        npm config set registry http://r.cnpmjs.org/
         npm install hexo-cli gulp-cli -g
         npm install
 
