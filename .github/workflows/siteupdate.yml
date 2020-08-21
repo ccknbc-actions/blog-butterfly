@@ -1,96 +1,102 @@
-# name: Deploy
+name: Deploy
 
-# on: 
-#   push:
-#     branches:
-#       - master
-
-#   release:
-#     types:
-#       - published
-
-# jobs:
-#   deploy:
-#     runs-on: ubuntu-latest
-
-#     steps:
-#     - name: Checkout
-#       uses: actions/checkout@v2
-#       with:
-#         ref: master
-
-#     - name: Setup Node
-#       uses: actions/setup-node@v1
-#       with:
-#         node-version: "12.x"
-        
-#     - name: Install Dependencies
-#       run: |
-#         rm -rf ./node_modules
-#         npm install hexo-cli -g
-#         npm install
-#         npm install pump
-
-#     - name: Generate
-#       run: |
-#         rm -rf ./public
-#         rm -rf ./db.json
-#         rm -rf ./.deploy_git
-#         hexo clean
-#         hexo generate
-#         gulp
-    
-#     - name: Deploy
-#       run: |
-#         git config --global user.name "CCKNBC"
-#         git config --global user.email "zekangsun@outlook.com"
-#         hexo deploy
-
-#     - name: Build Gitee Pages
-#       uses: yanglbme/gitee-pages-action@master
-#       with:
-#           gitee-username: ccknbc
-#           gitee-password: ${{ secrets.GITEE_PASSWORD }}
-#           gitee-repo: ccknbc/ccknbc
-
-name: 自动部署HEXO
-
-on:
+on: 
   push:
     branches:
       - master
 
+  release:
+    types:
+      - published
+
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [10.x]
+
     steps:
-      - name: 1.检查 master 分支
-        uses: actions/checkout@master
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        ref: master
 
-      - name: 2.设置 Node.js
-        uses: actions/setup-node@master
-        with:
-          node-version: ${{ matrix.node-version }}
+    - name: Setup Node
+      uses: actions/setup-node@v1
+      with:
+        node-version: "12.x"
+        
+    - name: Install Dependencies
+      run: |
+        npm install hexo-cli -g
 
-      - name: 3.安装 Hexo CI
-        run: |
-          export TZ='Asia/Shanghai'
-          npm install hexo-cli -g
+    - name: Catch
+      uses: actions/cache@v1
+      id: cache-dependencies
+      with:
+        path: node_modules
+        key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
 
-      - name: 4.缓存
-        uses: actions/cache@v1
-        id: cache-dependencies
-        with:
-          path: node_modules
-          key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
+    - name: Install Dependencies
+      if: steps.cache-dependencies.outputs.cache-hit != 'true'
+      run: |
+        npm install
 
-      - name: 5.安装插件
-        if: steps.cache-dependencies.outputs.cache-hit != 'true'
-        run: |
-          npm install
+    - name: Generate
+      run: |
+        hexo clean
+        hexo generate
+        gulp
+    
+    - name: Deploy
+      run: |
+        git config --global user.name "CCKNBC"
+        git config --global user.email "zekangsun@outlook.com"
+        hexo deploy
+
+    - name: Build Gitee Pages
+      uses: yanglbme/gitee-pages-action@master
+      with:
+          gitee-username: ccknbc
+          gitee-password: ${{ secrets.GITEE_PASSWORD }}
+          gitee-repo: ccknbc/ccknbc
+
+# name: 自动部署HEXO
+
+# on:
+#   push:
+#     branches:
+#       - master
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     strategy:
+#       matrix:
+#         node-version: [10.x]
+#     steps:
+#       - name: 1.检查 master 分支
+#         uses: actions/checkout@master
+
+#       - name: 2.设置 Node.js
+#         uses: actions/setup-node@master
+#         with:
+#           node-version: ${{ matrix.node-version }}
+
+#       - name: 3.安装 Hexo CI
+#         run: |
+#           export TZ='Asia/Shanghai'
+#           npm install hexo-cli -g
+
+#       - name: 4.缓存
+#         uses: actions/cache@v1
+#         id: cache-dependencies
+#         with:
+#           path: node_modules
+#           key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
+
+#       - name: 5.安装插件
+#         if: steps.cache-dependencies.outputs.cache-hit != 'true'
+#         run: |
+#           npm install
 
       # - name: 6. 设置私钥信息
       #   env:
@@ -109,17 +115,17 @@ jobs:
       #     ssh-keyscan e.coding.net >> ~/.ssh/known_hosts
       #     ssh-keyscan gitee.com >> ~/.ssh/known_hosts
 
-      - name: 6.设置 git 信息
-        run: |
-        git config --global user.name "CCKNBC"
-        git config --global user.email "zekangsun@outlook.com"
+      # - name: 6.设置 git 信息
+      #   run: |
+      #   git config --global user.name "CCKNBC"
+      #   git config --global user.email "zekangsun@outlook.com"
 
-      - name: 7.部署博客
-        run: |
-          hexo clean
-          hexo generate 
-          gulp
-          hexo d
+      # - name: 7.部署博客
+      #   run: |
+      #     hexo clean
+      #     hexo generate 
+      #     gulp
+      #     hexo d
       #     cd ./public
       #     git init
       #     git add .
@@ -128,9 +134,9 @@ jobs:
       #     git push --force --quiet "https://${{secrets.CODING_TOKEN}}@${{secrets.CODING_REF}}" master:master
       #     git push --force --quiet "https://${{secrets.GITEE_TOKEN}}@${{secrets.GITEE_REF}}" master:master
 
-      - name: 8.更新 Gitee 部署
-        uses: yanglbme/gitee-pages-action@master
-        with:
-            gitee-username: ccknbc
-            gitee-password: ${{ secrets.GITEE_PASSWORD }}
-            gitee-repo: ccknbc/ccknbc
+      # - name: 8.更新 Gitee 部署
+      #   uses: yanglbme/gitee-pages-action@master
+      #   with:
+      #       gitee-username: ccknbc
+      #       gitee-password: ${{ secrets.GITEE_PASSWORD }}
+      #       gitee-repo: ccknbc/ccknbc
