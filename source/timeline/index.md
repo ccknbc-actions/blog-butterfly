@@ -8,7 +8,19 @@ comments: false
 
 {% timeline 升级小助手 %}
 
-{% timenode 2020-08-12 [更新时间线](https://ccknbc.github.io) %}
+{% timenode 2020-08-21 [更新时间线](https://ccknbc.github.io) %}
+
+`Butterfly`升级为`3.1.0-RC1`，自动部署失败,等待修复，原因未知，可能是我未完整复制主题，或者说我删了插件文件夹重新安装的
+
+{% endtimenode %}
+
+{% timenode 2020-08-18 [完成自动部署](https://ccknbc.github.io) %}
+
+完成`Github Actions`自动部署，并自动更新Gitee部署
+
+{% endtimenode %}
+
+{% timenode 2020-08-12 [添加时间线](https://ccknbc.github.io) %}
 
 1. `HEXO`升级为`5.0.2`，`Butterfly`升级为`3.0.1`，评论系统由`Utterances` -> `Beaudar`
 2. 添加`时间线`，`统计图`，`说说`
