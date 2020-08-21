@@ -165,8 +165,8 @@ cover:
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
-  flink: https://service-jb7jmcma-1300914868.hk.apigw.tencentcs.com/release/onemanager/friend_404.gif
-  post_page: https://service-jb7jmcma-1300914868.hk.apigw.tencentcs.com/release/onemanager/404.jpg
+  flink: https://cdn.jsdelivr.net/gh/CCKNBC/CDN/image/cover/friend_404.gif
+  post_page: https://cdn.jsdelivr.net/gh/CCKNBC/CDN/image/cover/404.jpg
 
 # A simple 404 page
 error_404:
@@ -446,7 +446,7 @@ footer:
     enable: false
     url:
     text:
-    icon: https://service-jb7jmcma-1300914868.hk.apigw.tencentcs.com/release/onemanager/icp.png
+    icon: https://cdn.jsdelivr.net/gh/CCKNBC/CDN/image/cover/icp.png
   live_time: #页脚运行时间
     enable: true
     prefix: 本站已运行
@@ -618,8 +618,6 @@ beautify:
   title-prefix-icon: '\f135'
   title-prefix-icon-color: '#F47466'
 
-# Global font settings
-# Don't modify the following settings unless you know how they work (非必要不要修改)
 # Global font settings
 # Don't modify the following settings unless you know how they work (非必要不要修改)
 font:
@@ -840,7 +838,7 @@ pangu:
 # https://github.com/verlok/lazyload
 lazyload:
   enable: true
-  post: https://service-jb7jmcma-1300914868.hk.apigw.tencentcs.com/release/onemanager/loading.gif
+  post: https://cdn.jsdelivr.net/gh/CCKNBC/CDN/image/cover/loading.gif
 
 # PWA
 # See https://github.com/JLHwung/hexo-offline
@@ -890,7 +888,7 @@ inject:
     # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/css/flink.min.css">
     - <link rel="stylesheet" href="https://unpkg.com/ifriend/friend.min.css">
     #- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/plugins.min.css">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/css/ccknbc.css">
+    - <link rel="stylesheet" href="/css/ccknbc.css">
     #- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/plugins.min.css">
     #- '<style type="text/css">.app-refresh{position:fixed;top:-2.2rem;left:0;right:0;z-index:99999;padding:0 1rem;font-size:15px;height:2.2rem;transition:all .3s ease}.app-refresh-wrap{display:flex;color:#fff;height:100%;align-items:center;justify-content:center}.app-refresh-wrap a{color:#fff;text-decoration:underline;cursor:pointer}</style>'
 
