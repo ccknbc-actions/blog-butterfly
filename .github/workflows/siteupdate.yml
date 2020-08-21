@@ -37,6 +37,7 @@ jobs:
         rm -rf ./.deploy_git
         hexo clean
         hexo generate
+        gulp build
         gulp
     
     - name: Deploy
