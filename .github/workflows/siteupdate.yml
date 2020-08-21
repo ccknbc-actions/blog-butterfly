@@ -27,7 +27,7 @@ jobs:
     - name: Install Dependencies
       run: |
         rm -rf ./node_modules
-        npm install hexo-cli gulp-cli -g
+        npm install hexo-cli -g
         npm install
 
     - name: Generate
@@ -37,8 +37,6 @@ jobs:
         rm -rf ./.deploy_git
         hexo clean
         hexo generate
-        gulp build
-        gulp
     
     - name: Deploy
       run: |
