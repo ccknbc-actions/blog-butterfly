@@ -1,4 +1,4 @@
-name: Deploy
+name: Auto Deploy HEXO
 
 on: 
   push:
@@ -24,7 +24,7 @@ jobs:
       with:
         node-version: "12.x"
         
-    - name: Install Dependencies
+    - name: Install CI
       run: |
         npm install hexo-cli -g
 
@@ -39,6 +39,7 @@ jobs:
       if: steps.cache-dependencies.outputs.cache-hit != 'true'
       run: |
         npm install
+        npm install pump
 
     - name: Generate
       run: |
