@@ -26,11 +26,15 @@ jobs:
         
     - name: Install Dependencies
       run: |
+        rm -rf ./node_modules
         npm install hexo-cli gulp-cli -g
         npm install
 
     - name: Generate
       run: |
+        rm -rf ./public
+        rm -rf ./db.json
+        rm -rf ./.deploy_git
         hexo clean
         hexo generate
         gulp
