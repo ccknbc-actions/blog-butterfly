@@ -53,7 +53,7 @@
 #           gitee-password: ${{ secrets.GITEE_PASSWORD }}
 #           gitee-repo: ccknbc/ccknbc
 
-name: 自动部署 HEXO
+name: 自动部署HEXO
 
 on:
   push:
@@ -67,27 +67,27 @@ jobs:
       matrix:
         node-version: [10.x]
     steps:
-      - name: 1. 检查 master 分支
+      - name: 1.检查 master 分支
         uses: actions/checkout@master
 
-      - name: 2. 设置 Node.js
+      - name: 2.设置 Node.js
         uses: actions/setup-node@master
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: 3. 安装 Hexo CI
+      - name: 3.安装 Hexo CI
         run: |
           export TZ='Asia/Shanghai'
           npm install hexo-cli -g
 
-      - name: 4. 缓存
+      - name: 4.缓存
         uses: actions/cache@v1
         id: cache-dependencies
         with:
           path: node_modules
           key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
 
-      - name: 5. 安装插件
+      - name: 5.安装插件
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
         run: |
           npm install
@@ -109,12 +109,12 @@ jobs:
       #     ssh-keyscan e.coding.net >> ~/.ssh/known_hosts
       #     ssh-keyscan gitee.com >> ~/.ssh/known_hosts
 
-      - name: 6. 设置 git 信息
+      - name: 6.设置 git 信息
         run: |
         git config --global user.name "CCKNBC"
         git config --global user.email "zekangsun@outlook.com"
 
-      - name: 7. 部署博客
+      - name: 7.部署博客
         run: |
           hexo clean
           hexo generate 
@@ -128,7 +128,7 @@ jobs:
       #     git push --force --quiet "https://${{secrets.CODING_TOKEN}}@${{secrets.CODING_REF}}" master:master
       #     git push --force --quiet "https://${{secrets.GITEE_TOKEN}}@${{secrets.GITEE_REF}}" master:master
 
-      - name: 8. 更新 Gitee 部署
+      - name: 8.更新 Gitee 部署
         uses: yanglbme/gitee-pages-action@master
         with:
             gitee-username: ccknbc
