@@ -13,7 +13,6 @@
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
-    "cnpm": "^6.1.1",
     "gulp-htmlmin": "^5.0.1",
     "hexo": "^5.0.2",
     "hexo-abbrlink": "^2.2.1",
@@ -38,7 +37,6 @@
     "hexo-tag-aplayer": "^3.0.4",
     "hexo-web-push-notification": "^0.2.3",
     "hexo-wordcount": "^6.0.1",
-    "imagemin": "^7.0.1",
     "terser": "^4.8.0"
   },
   "devDependencies": {
@@ -46,7 +44,6 @@
     "gulp-cli": "^2.3.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-htmlclean": "^2.7.22",
-    "gulp-imagemin": "^7.1.0",
     "gulp-uglify": "^3.0.2",
     "workbox-build": "^5.1.3"
   }
