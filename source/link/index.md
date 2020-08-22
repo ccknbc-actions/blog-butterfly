@@ -22,8 +22,8 @@ aside: false
         direction_sort: "asc",
         sort_container: [],
         labelDescr: {
-            大佬们: "<span style='color:light-green;'>这是一群大佬哦！</span>",
-            小伙伴们: "",
+            大佬们: "<span style='color:lightgreen;'>这是一群<b>大佬</b>哦！</span>",
+            小伙伴们: "<span style='color:skyblue;'>这是我的小伙伴们</span>",
             菜鸡们: "<span style='color:red;'>这是一群菜鸡哦！</span>",
             备用站: "",
         },
