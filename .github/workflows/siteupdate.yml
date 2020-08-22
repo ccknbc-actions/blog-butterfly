@@ -23,6 +23,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: "12.x"
+        
+    - name: Install HEXO CI
+      run: |
+        npm install hexo-cli -g
 
     - name: Catch
       uses: actions/cache@v1
