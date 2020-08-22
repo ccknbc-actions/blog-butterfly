@@ -13,7 +13,7 @@ aside: false
 <script>
     $('.flink').prepend('<div id="friend1"></div>')
     if(typeof(Friend)=='undefined'){
-        location.href='/friends'
+        location.href='/link'
     }
     new Friend({
         el: "#friend1",

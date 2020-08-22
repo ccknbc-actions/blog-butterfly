@@ -24,9 +24,9 @@ jobs:
       with:
         node-version: "12.x"
         
-    - name: Install HEXO CI
-      run: |
-        npm install hexo-cli -g
+    # - name: Install HEXO CI
+    #   run: |
+    #     npm install hexo-cli -g
 
     - name: Catch
       uses: actions/cache@v1
@@ -43,9 +43,6 @@ jobs:
 
     - name: Generate
       run: |
-        rm -rf ./public
-        rm -rf ./db.json
-        rm -rf ./.deploy_git
         hexo clean
         hexo generate
         gulp
