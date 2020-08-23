@@ -9,13 +9,12 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "5.0.2"
+    "version": "5.1.0"
   },
   "dependencies": {
-    "hexo": "^5.0.2",
     "cheerio": "^1.0.0-rc.3",
     "gulp-htmlmin": "^5.0.1",
-    "hexo-abbrlink": "^2.2.1",
+    "hexo": "^5.1.0",
     "hexo-baidu-url-submit": "^0.0.6",
     "hexo-charts": "^1.0.3",
     "hexo-cli": "^4.2.0",
@@ -30,13 +29,14 @@
     "hexo-generator-tag": "^1.0.0",
     "hexo-render-pug": "^2.1.4",
     "hexo-renderer-ejs": "^1.0.0",
-    "hexo-renderer-marked": "^3.0.0",
+    "hexo-renderer-marked": "^3.1.0",
     "hexo-renderer-pug": "^1.0.0",
     "hexo-renderer-stylus": "^2.0.0",
     "hexo-server": "^2.0.0",
     "hexo-tag-aplayer": "^3.0.4",
     "hexo-web-push-notification": "^0.2.3",
     "hexo-wordcount": "^6.0.1",
+    "pump": "^3.0.0",
     "terser": "^4.8.0"
   },
   "devDependencies": {

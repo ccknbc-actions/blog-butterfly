@@ -20,23 +20,23 @@ timezone: 'Asia/Shanghai'
 url: https://ccknbc.github.io/
 
 # abbrlink config
-abbrlink:
-  alg: crc32      #support crc16(default) and crc32
-  rep: dec        #support dec(default) and hex
-  drafts: false   #(true)Process draft,(false)Do not process draft. false(default) 
-  # Generate categories from directory-tree
-  # depth: the max_depth of directory-tree you want to generate, should > 0
-  auto_category:
-     enable: true  #true(default)
-     depth:        #3(default)
-     over_write: false 
-  auto_title: true #enable auto title, it can auto fill the title by path
-  auto_date: true #enable auto date, it can auto fill the date by time today
-  force: false #enable force mode,in this mode, the plugin will ignore the cache, and calc the abbrlink for every post even it already had abbrlink.
+# abbrlink:
+#   alg: crc32      #support crc16(default) and crc32
+#   rep: dec        #support dec(default) and hex
+#   drafts: false   #(true)Process draft,(false)Do not process draft. false(default) 
+#   # Generate categories from directory-tree
+#   # depth: the max_depth of directory-tree you want to generate, should > 0
+#   auto_category:
+#      enable: true  #true(default)
+#      depth:        #3(default)
+#      over_write: false 
+#   auto_title: true #enable auto title, it can auto fill the title by path
+#   auto_date: true #enable auto date, it can auto fill the date by time today
+#   force: false #enable force mode,in this mode, the plugin will ignore the cache, and calc the abbrlink for every post even it already had abbrlink.
 
 
 root: /
-permalink: posts/:abbrlink.html
+permalink: posts/:id
 permalink_defaults: 
 pretty_urls:
   trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
