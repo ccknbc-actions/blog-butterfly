@@ -1,6 +1,6 @@
 # This file is a template, and might need editing before it works on your project.
 # Full project: https://gitlab.com/pages/hexo
-image: node:10.15.3
+image: node:12-alpine
 
 pages:
   script:
