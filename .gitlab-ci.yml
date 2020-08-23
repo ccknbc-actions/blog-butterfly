@@ -4,7 +4,7 @@ image: node:10.15.3
 
 pages:
   script:
-    - npm install hexo-cli -g
+    - npm install hexo-cli gulp-cli -g
     - test -e package.json && npm install
     - hexo generate
     - gulp
