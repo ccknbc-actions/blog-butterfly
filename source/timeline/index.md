@@ -8,9 +8,15 @@ comments: false
 
 {% timeline 升级小助手 %}
 
-{% timenode 2020-08-21 [更新时间线](https://ccknbc.github.io) %}
+{% timenode 2020-08-23 [更新HEXO](https://ccknbc.github.io) %}
 
-`Butterfly`升级为`3.1.0-RC1`，自动部署使用`npm`源，减少不必要的插件安装，耗时明显减少
+`HEXO`升级为`5.1.0`
+
+{% endtimenode %}
+
+{% timenode 2020-08-21 [更新主题](https://ccknbc.github.io) %}
+
+`Butterfly`升级为`3.1.0-RC1`，自动部署使用`npm`源，减少不必要的插件安装，并缓存依赖目录，耗时明显减少
 
 {% endtimenode %}
 

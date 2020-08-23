@@ -2,6 +2,7 @@
 title: PoddKt
 date: 2020-08-22 20:38:43
 top_img: https://service-jb7jmcma-1300914868.hk.apigw.tencentcs.com/release/onemanager/header%20(3).png
+aside: false
 ---
 ![](https://service-jb7jmcma-1300914868.hk.apigw.tencentcs.com/release/onemanager/header%20(1).png)
 ![](https://service-jb7jmcma-1300914868.hk.apigw.tencentcs.com/release/onemanager/header%20(2).png)
