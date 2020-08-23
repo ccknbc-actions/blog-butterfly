@@ -39,7 +39,6 @@ jobs:
       if: steps.cache-dependencies.outputs.cache-hit != 'true'
       run: |
         npm install
-        npm uninstall hexo-abbrlink
 
     - name: Generate
       run: |
