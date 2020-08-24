@@ -8,6 +8,12 @@ comments: false
 
 {% timeline 升级小助手 %}
 
+{% timenode 2020-08-24 [更新HEXO](https://ccknbc.github.io) %}
+
+`HEXO`升级为`5.1.1`
+
+{% endtimenode %}
+
 {% timenode 2020-08-23 [更新HEXO](https://ccknbc.github.io) %}
 
 `HEXO`升级为`5.1.0`
@@ -39,9 +45,9 @@ comments: false
 
 **`6`** 处托管，若不能访问请记住备用站
 
-><a href="https://ccknbc.now.sh/"><img src="https://img.shields.io/badge/Host-Vercle-0e83c"/></a>&nbsp;<a href="https://ccknbc.netlify.app/"><img src="https://img.shields.io/badge/Host-Netlify-0e83c"/></a>&nbsp;<a href="https://ccknbc.gitlab.io/"><img  src="https://img.shields.io/badge/Host-Gitee-0e83c"/></a>&nbsp;<a href="https://ccknbc.github.io/"><img src="https://img.shields.io/badge/Host-Gitee-0e83c"/></a> 
-><a href="https://ccknbc.gitee.io/"><img src="https://img.shields.io/badge/Host-Gitee(推荐)-0e83c"/></a>&nbsp;<a href="https://y0znz6.coding-pages.com/"><img src="https://img.shields.io/badge/Host-Coding-0e83c"/></a>
-><a href="https://8dx09s.coding-pages.com"><img src="https://img.shields.io/badge/点击前往-简约站-0e83c"/></a>
+> **[Github](https://ccknbc.github.io/) | [Gitlab](https://ccknbc.gitlab.io/) | [Vercel](https://ccknbc.gitee.io/) | [Netlify](https://blog-ccknbc.netlify.app/) | [Gitee](https://ccknbc.gitee.io/) | [Coding](https://y0znz6.coding-pages.com/)**
+
+> 当然如果您喜欢简洁，可前往 **[简约站](https://8dx09s.coding-pages.com)**
 
 {% endtimenode %}
 

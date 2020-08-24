@@ -9,12 +9,12 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "5.1.0"
+    "version": "5.1.1"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
     "gulp-htmlmin": "^5.0.1",
-    "hexo": "^5.1.0",
+    "hexo": "^5.1.1",
     "hexo-baidu-url-submit": "^0.0.6",
     "hexo-charts": "^1.0.3",
     "hexo-cli": "^4.2.0",
