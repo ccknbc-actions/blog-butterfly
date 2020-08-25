@@ -54,7 +54,9 @@ $(function () {
 
   function search (path) {
     $.ajax({
-      url: GLOBAL_CONFIG.root + path,
+      url: "https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/search.xml",
+
+
       dataType: 'xml',
       success: function (xmlResponse) {
         // get the contents from search data

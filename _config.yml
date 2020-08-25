@@ -83,7 +83,8 @@ prismjs:
   preprocess: true
   line_number: true
   tab_replace: ''
-
+marked:
+  lazyload: true
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
@@ -189,3 +190,20 @@ deploy:
   
 admin:
  deployCommand: 'hexo-pubish.bat'
+
+# [core]
+	# repositoryformatversion = 0
+	# filemode = false
+	# bare = false
+	# logallrefupdates = true
+	# symlinks = false
+	# ignorecase = true
+# [remote "origin"]
+	# url = git@github.com:CCKNBC/Hexo.git
+	# fetch = +refs/heads/*:refs/remotes/origin/*
+	# url = git@e.coding.net:ccknbc/blog/source.git
+	# url = git@gitee.com:ccknbc/blog.git
+	# url = git@gitlab.com:CCKNBC/ccknbc.gitlab.io.git
+# [branch "master"]
+	# remote = origin
+	# merge = refs/heads/master

@@ -10,7 +10,7 @@ comments: false
 
 {% timenode 2020-08-24 [更新HEXO](https://ccknbc.github.io) %}
 
-`HEXO`升级为`5.1.1`
+`HEXO`升级为`5.1.1`，添加并完成`Gitlab`的`托管`和`自动部署`
 
 {% endtimenode %}
 
@@ -28,7 +28,7 @@ comments: false
 
 {% timenode 2020-08-18 [完成自动部署](https://ccknbc.github.io) %}
 
-完成`Github Actions`自动部署，并自动更新`Gitee`部署，至此五大平台能完成全自动更新
+完成`Github Actions`自动部署，并自动更新`Gitee`部署，至此五大平台能完成全`自动更新`
 
 {% endtimenode %}
 
