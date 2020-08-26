@@ -16,8 +16,9 @@ menu:
     - 统计 || /charts/ || fas fa-chart-bar
     - 我 || /me/ || fas fa-heart
     - 友链 || /link/ || fas fa-link
-    - 留言 || /comments/ || fas fa-comments
-    - 说说 || /say/ || fas fa-clipboard-list
+    - 留言 || /comments/ || far fa-comments
+    - 说说 || /say/ || far fa-comment
+    - 叨叨 || /speak/ || far fa-comment-alt
   清单 || fas fa-list:
     - RSS || https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/rss.xml || fas fa-rss
     - Atom || https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/atom.xml || far fa-bell
@@ -885,7 +886,7 @@ inject:
     #- <div class="aplayer no-destroy" data-id="5146142770" data-server="netease" data-type='playlist' data-fixed='true' data-mini='true' data-listFolded='false' data-order='random' data-preload='none' data-autoplay='true' muted></div>
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/tags.css">
     # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/css/flink.min.css">
-    - <link rel="stylesheet" href="https://unpkg.com/ifriend/friend.min.css">
+    # - <link rel="stylesheet" href="https://unpkg.com/ifriend/friend.min.css">
     #- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/plugins.min.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/css/ccknbc.css">
     #- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/plugins.min.css">
