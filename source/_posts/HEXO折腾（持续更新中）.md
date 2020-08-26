@@ -1,5 +1,5 @@
 ---
-title: HEXO折腾（持续更新中）
+title: HEXO折腾
 date: 2020-07-01 00:00:00
 updated: 2020-07-01 00:00:00
 tags: HEXO
@@ -7,7 +7,6 @@ categories: HEXO
 cover: https://cdn.jsdelivr.net/gh/CCKNBC/CDN/image/cover/2020-8-6.png
 top_img: https://cdn.jsdelivr.net/gh/CCKNBC/CDN/image/cover/2020-8-6.png
 id: 3
-sticky: 1
 ---
 **个人目前使用主题为Butterfly `3.0.1`版本，HEXO `5.0.2`版本**
 
