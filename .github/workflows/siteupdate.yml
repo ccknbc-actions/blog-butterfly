@@ -61,7 +61,7 @@ jobs:
         git add .
         git commit -m "%date% %time%: Updated By Github Actions"
         git push --force --quiet "https://${{secrets.GH_TOKEN}}@${{secrets.GH_REF}}" master:master
-        git push --force --quiet "https://${{secrets.CD_TOKEN}}@${{secrets.CD_REF}}" master:master
+        git push --force --quiet "https://${{secrets.CD_USER}}:${{secrets.CD_TOKEN}}@${{secrets.CD_REF}}" master:master
         git push --force --quiet "https://${{secrets.GT_TOKEN}}@${{secrets.GT_REF}}" master:master
 
     - name: Build Gitee Pages
