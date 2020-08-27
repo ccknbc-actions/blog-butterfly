@@ -9,8 +9,8 @@
 > **`国外`**  
 <a href="https://ccknbc.now.sh/"><img alt="Vercel" src="https://img.shields.io/badge/Host-Vercle-0e83c"/></a>&nbsp;
 <a href="https://ccknbc.netlify.app/"><img alt="Netlify" src="https://img.shields.io/badge/Host-Netlify-0e83c"/></a>&nbsp;
-<a href="https://ccknbc.gitlab.io/"><img alt="Gitlab" src="https://img.shields.io/badge/Host-Gitee-0e83c"/></a>&nbsp;
-<a href="https://ccknbc.github.io/"><img alt="Github" src="https://img.shields.io/badge/Host-Gitee-0e83c"/></a>  
+<a href="https://ccknbc.gitlab.io/"><img alt="Gitlab" src="https://img.shields.io/badge/Host-Gitlab-0e83c"/></a>&nbsp;
+<a href="https://ccknbc.github.io/"><img alt="Github" src="https://img.shields.io/badge/Host-Github-0e83c"/></a>  
 
 >  **`国内`**  
 <a href="https://ccknbc.gitee.io/"><img alt="Gitee" src="https://img.shields.io/badge/Host-Gitee(推荐)-0e83c"/></a>&nbsp;
