@@ -293,8 +293,8 @@ comments:
   # Disqus/Disqusjs/Livere/Gitalk/Valine/Utterances/Facebook Comments
   use:     
     # - Github Issues 
-    # - Valine
-    - Livere    
+    - Valine
+    # - Livere    
     # - Disqusjs
     # - Utterances  
     - Beaudar  
