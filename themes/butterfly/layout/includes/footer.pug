@@ -1,0 +1,50 @@
+#footer-wrap
+  if theme.footer.owner.enable
+    - var now = new Date()
+    - var nowYear = now.getFullYear()
+    if theme.footer.owner.since && theme.footer.owner.since != nowYear
+      .copyright!= `&copy;${theme.footer.owner.since} - ${nowYear} By ${config.author}`
+    else
+      .copyright!= `&copy;${nowYear} By ${config.author}`
+  if theme.footer.copyright
+    .framework-info
+      span= _p('footer.framework') + ' '
+      a(href='https://hexo.io')= 'Hexo'
+      span.footer-separator |
+      span= _p('footer.theme') + ' '
+      a(href='https://github.com/jerryc127/hexo-theme-butterfly')= 'Butterfly'
+  if theme.footer.custom_text
+    .footer_custom_text!=`${theme.footer.custom_text}`   
+  if theme.footer.ICP.enable
+    .icp
+      a(href=theme.footer.ICP.url)
+        if theme.footer.ICP.icon
+          img.icp-icon(src=url_for(theme.footer.ICP.icon))
+        span=theme.footer.ICP.text
+
+  if theme.footer.live_time.enable
+    .live_time
+      span!=theme.footer.live_time.prefix
+      span#display_live_time
+      if theme.footer.live_time.suffix
+        span.moe-text!=theme.footer.live_time.suffix
+      script.
+        function blog_live_time() {
+          window.setTimeout(blog_live_time, 1000);
+          const start = new Date('#{theme.footer.live_time.start_time}');
+          const now = new Date();
+          //- const yearDiff = (now.getFullYear() - start.getFullYear());
+          const timeDiff = (now.getTime() - start.getTime());
+          const msPerMinute = 60 * 1000;
+          const msPerHour = 60 * msPerMinute;
+          const msPerDay = 24 * msPerHour;
+          const msPerYear = 365 * msPerDay;
+          //- const passYear= Math.floor(yearDiff);
+          const passYear = Math.floor(timeDiff / msPerYear);
+          const passDay = Math.floor((timeDiff % msPerYear)/ msPerDay);
+          const passHour = Math.floor((timeDiff % msPerDay) / 60 / 60 / 1000);
+          const passMinute = Math.floor((timeDiff % msPerHour) / 60 / 1000);
+          const passSecond = Math.floor((timeDiff % msPerMinute) / 1000);
+          display_live_time.innerHTML =  " " + passYear + " 年 " + passDay + " 天 " + passHour + " 小时 " + passMinute + " 分 " + passSecond + " 秒";
+        }
+        blog_live_time();
