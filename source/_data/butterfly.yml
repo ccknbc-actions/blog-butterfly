@@ -745,13 +745,13 @@ newest_comments:
   limit: 6
   avatar: true
   leancloud:
-    enable: false
+    enable: true
     appId: 5J2LIPyE2TV7bXr3LTdOBfgO-MdYXbMMI
     appKey: L98Ar2uosDgo0tKBFE8gI5gJ
     serverURL: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
-    default_avatar: mp # mp/identicon/monsterid/wavatar/retro/robohash/blank
+    default_avatar: monsterid # mp/identicon/monsterid/wavatar/retro/robohash/blank
   github_issues:
-    enable: true
+    enable: false
     repo: ccknbc/comments
   disqus:
     enable: false
