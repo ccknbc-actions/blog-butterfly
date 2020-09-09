@@ -249,7 +249,7 @@ related_post:
   date_type: updated # or created or updated 文章日期顯示創建日或者更新日
 
 # figcaption (圖片描述文字)
-photofigcaption: true
+photofigcaption: false
 
 # anchor文章锚点
 # when you scroll in post, the URL will update according to header id.
@@ -259,7 +259,7 @@ anchor: false
 noticeOutdate:
   enable: true
   style: flat # style: simple/flat
-  limit_day: 30 # When will it be shown
+  limit_day: 15 # When will it be shown
   position: top # position: top/bottom
   message_prev: 本文最后一次更新为
   message_next: 天前，文章中的某些内容可能已过时！
