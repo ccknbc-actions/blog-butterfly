@@ -20,9 +20,9 @@ menu:
     - 说说 || /say/ || far fa-comment
     - 叨叨 || /speak/ || far fa-comment-alt
   清单 || fas fa-list:
-    - RSS || https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@butterfly/rss.xml || fas fa-rss
-    - Atom || https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@butterfly/atom.xml || far fa-bell
-    - Json || https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@butterfly/feed.json || fas fa-bullhorn
+    - RSS || https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@master/rss.xml || fas fa-rss
+    - Atom || https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@master/atom.xml || far fa-bell
+    - Json || https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@master/feed.json || fas fa-bullhorn
     - OD || https://ccknbc.herokuapp.com || fas fa-cloud
     - GD || https://gd.ccknbc.workers.dev || fas fa-folder
     - 影院 || https://video.ccknbc.workers.dev || fas fa-film
@@ -877,8 +877,8 @@ pwa:
   enable: false
   manifest: /manifest.json
   theme_color: "#ffffff"
-  apple_touch_icon: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@butterfly/images/apple-touch-icon.png
-  mask_icon: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@butterfly/images/safari-pinned-tab.svg
+  apple_touch_icon: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@master/images/apple-touch-icon.png
+  mask_icon: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@master/images/safari-pinned-tab.svg
 
 # pwa:
 #   enable: true
@@ -911,18 +911,18 @@ fragment_cache: true
 
 inject: 
   head: 
-    #https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@butterfly
+    #https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@master
     #- <div class="aplayer no-destroy" data-id="5146142770" data-server="netease" data-type='playlist' data-fixed='true' data-mini='true' data-listFolded='false' data-order='random' data-preload='none' data-autoplay='true' muted></div>
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/tags.css">
     # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/css/flink.min.css">
     # - <link rel="stylesheet" href="https://unpkg.com/ifriend/friend.min.css">
     #- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/plugins.min.css">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ccknbc/butterfly@butterfly/butterfly@0.0.1/css/ccknbc.css">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ccknbc/butterfly@master/butterfly@0.0.1/css/ccknbc.css">
     #- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/plugins.min.css">
     #- '<style type="text/css">.app-refresh{position:fixed;top:-2.2rem;left:0;right:0;z-index:99999;padding:0 1rem;font-size:15px;height:2.2rem;transition:all .3s ease}.app-refresh-wrap{display:flex;color:#fff;height:100%;align-items:center;justify-content:center}.app-refresh-wrap a{color:#fff;text-decoration:underline;cursor:pointer}</style>'
 
   bottom:
-    - <script src="https://cdn.jsdelivr.net/gh/ccknbc/butterfly@butterfly/butterfly@0.0.1/js/ccknbc.js"></script>
+    - <script src="https://cdn.jsdelivr.net/gh/ccknbc/butterfly@master/butterfly@0.0.1/js/ccknbc.js"></script>
     # - '<script>window.FPConfig = {delay: 0,ignoreKeywords: [],maxRPS: 3,hoverDelay: 50};</script>'
     # - <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
     # - <script id="ilt" src="https://player.ilt.me/player/js/player.js" key="112fe51b9b16481c9241470e8b3ec79b"></script>
@@ -953,10 +953,10 @@ inject:
 
 CDN:
   # main
-  main_css: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@butterfly/css/index.css
+  main_css: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@master/css/index.css
   jquery: https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js
-  main: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@butterfly/js/main.js
-  utils: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@butterfly/js/utils.js
+  main: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@master/js/main.js
+  utils: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@master/js/utils.js
 
   # pjax
   pjax: https://cdn.jsdelivr.net/npm/pjax/pjax.min.js
@@ -977,8 +977,8 @@ CDN:
   sharejs_css: https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css
 
   # search
-  local_search: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@butterfly/js/search/local-search.js
-  algolia_js: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@butterfly/js/search/algolia.js
+  local_search: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@master/js/search/local-search.js
+  algolia_js: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@master/js/search/algolia.js
   algolia_search: https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.js
   algolia_search_css: https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.5/dist/instantsearch.min.css
 
@@ -993,9 +993,9 @@ CDN:
   busuanzi: //busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js
 
   # background effect
-  canvas_ribbon: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@butterfly/js/third-party/canvas-ribbon.js
-  canvas_ribbon_piao: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@butterfly/js/third-party/piao.js
-  canvas_nest: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@butterfly/js/third-party/canvas-nest.js
+  canvas_ribbon: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@master/js/third-party/canvas-ribbon.js
+  canvas_ribbon_piao: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@master/js/third-party/piao.js
+  canvas_nest: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@master/js/third-party/canvas-nest.js
 
   lazyload: https://cdn.jsdelivr.net/npm/vanilla-lazyload/dist/lazyload.iife.min.js
   instantpage: https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js
@@ -1013,16 +1013,16 @@ CDN:
 
   # effect
   anime: https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js
-  activate_power_mode: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@butterfly/js/third-party/activate-power-mode.js
-  fireworks: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@butterfly/js/third-party/fireworks.js
-  click_heart: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@butterfly/js/third-party/click_heart.js
-  ClickShowText: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@butterfly/js/third-party/ClickShowText.js
+  activate_power_mode: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@master/js/third-party/activate-power-mode.js
+  fireworks: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@master/js/third-party/fireworks.js
+  click_heart: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@master/js/third-party/click_heart.js
+  ClickShowText: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@master/js/third-party/ClickShowText.js
 
   # fontawesome
   fontawesome: https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css
 
   # Conversion between Traditional and Simplified Chinese
-  translate: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@butterfly/js/tw_cn.js
+  translate: https://cdn.jsdelivr.net/gh/CCKNBC/butterfly@master/js/tw_cn.js
 
   # justifiedGallery
   justifiedGallery_js: https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js
