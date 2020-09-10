@@ -1,4 +1,4 @@
-name: Deploy
+name: Update Blog Butterfly Site
 
 on: 
   push:
@@ -61,7 +61,7 @@ jobs:
         git push --force --quiet "https://ccknbc:${{ secrets.GT_TOKEN }}@gitee.com/ccknbc/butterfly.git" master:master
         git push --force --quiet "https://${{ secrets.CD_USER }}:${{ secrets.CD_TOKEN }}@e.coding.net/ccknbc/blog/butterfly.git" master:master
 
-    - name: Build Gitee Pages
+    - name: Update Gitee Pages
       uses: yanglbme/gitee-pages-action@master
       with:
           gitee-username: ccknbc
