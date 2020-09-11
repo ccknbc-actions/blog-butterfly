@@ -114,16 +114,16 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/ico_transparent.png
+favicon: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/ico_transparent.png
 
 # Avatar (頭像)
 avatar:
-  img: https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/logo.png
+  img: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png
   effect: false
 
 # the banner image of home page
 index_img: https://area.sinaapp.com/bingImg/
-# https://cdn.jsdelivr.net/gh/CCKNBC/CDN/background/illustration.png
+# https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/background/illustration.png
 # https://area.sinaapp.com/bingImg/
 # https://bing.rthe.net/wallpaper
 # https://api.dujin.org/bing/1920.php
@@ -176,8 +176,8 @@ cover:
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
-  flink: https://cdn.jsdelivr.net/gh/CCKNBC/CDN/image/cover/friend_404.gif
-  post_page: https://cdn.jsdelivr.net/gh/CCKNBC/CDN/image/cover/404.jpg
+  flink: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/image/cover/friend_404.gif
+  post_page: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/image/cover/404.jpg
 
 # A simple 404 page
 error_404:
@@ -459,7 +459,7 @@ footer:
     enable: false
     url:
     text:
-    icon: https://cdn.jsdelivr.net/gh/CCKNBC/CDN/image/cover/icp.png
+    icon: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/image/cover/icp.png
   live_time: #页脚运行时间
     enable: true
     prefix: 本站已运行
@@ -694,7 +694,7 @@ aside:
   card_announcement:
     enable: true
     content: '
-    <img src="https://cdn.jsdelivr.net/gh/CCKNBC/CDN/logo/wechat.png"alt="微信公众号"/>
+    <img src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/wechat.png"alt="微信公众号"/>
     <a href="https://www.jsdelivr.com"><img alt="CDN" title="由jsDelivr提供CDN加速服务" src="https://img.shields.io/badge/CDN-jsDelivr-e05d44"/>&nbsp;
     <a href="https://hexo.io"><img alt="HEXO" title="由HEXO强力驱动" src="https://img.shields.io/badge/Powered-Hexo V5.1.1-007ec6"/>&nbsp;
     <a href="https://github.com/jerryc127/hexo-theme-butterfly"><img alt="THEME" title="本站点主题使用Butterfly" src="https://img.shields.io/badge/Theme-Butterfly V3.2.0 b1-ffa500"/></a>&nbsp;
@@ -868,7 +868,7 @@ pangu:
 # https://github.com/verlok/lazyload
 lazyload:
   enable: true
-  post: https://cdn.jsdelivr.net/gh/CCKNBC/CDN/image/cover/loading.gif
+  post: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/image/cover/loading.gif
 
 # PWA
 # See https://github.com/JLHwung/hexo-offline
@@ -969,7 +969,7 @@ CDN:
   disqusjs_css: https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css
   utterances: https://utteranc.es/client.js
   beaudar: https://beaudar.lipk.org/client.js
-  #https://cdn.jsdelivr.net/gh/CCKNBC/CDN@latest/butterfly/source/js/client.js
+  #https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/butterfly/source/js/client.js
 
   # share
   addtoany: https://static.addtoany.com/menu/page.js
