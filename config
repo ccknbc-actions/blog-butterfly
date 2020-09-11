@@ -6,7 +6,7 @@
 	symlinks = false
 	ignorecase = true
 [remote "origin"]
-	url = git@github.com:ccknbc/blog-butterfly.git
+	url = git@github.com:ccknbc-actions/blog-butterfly.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
 	url = git@e.coding.net:ccknbc/blog/blog-butterfly.git
 	url = git@gitee.com:ccknbc/blog-butterfly.git
