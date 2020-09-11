@@ -375,7 +375,7 @@ valine:
 # utterances
 # https://utteranc.es/
 utterances:
-  repo: CCKNBC/comments
+  repo: ccknbc-backup/comments
   # Issue Mapping: pathname/url/title/og:title
   issue_term: title
   label: 💬comment
@@ -387,7 +387,7 @@ utterances:
 # beaudar
 # https://beaudar.lipk.org/
 beaudar:
-  repo: CCKNBC/comments
+  repo: ccknbc-backup/comments
   # Issue Mapping: pathname/url/title/og:title
   issue_term: title
   label: 💬comment
@@ -752,7 +752,7 @@ newest_comments:
     default_avatar: monsterid # mp/identicon/monsterid/wavatar/retro/robohash/blank
   github_issues:
     enable: false
-    repo: ccknbc/comments
+    repo: ccknbc-backup/comments
   disqus:
     enable: false
     forum:
