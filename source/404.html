@@ -1,0 +1,184 @@
+<!doctype html><html lang="zh"><head><meta charset="UTF-8"><title>CC的部落格</title><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><meta name="robots" content="index,follow"><meta name="title" content="CC的部落格"><meta name="description" content="CC康纳百川"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/ico_transparent.png"><style>
+        html {
+            box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            background: #F1F2F7;
+            font-family: 'Muli', sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(115deg, #3AA27F 0%, #E8E580 100%);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .mobile .container {
+            display: block;
+        }
+
+        .left,
+        .center {
+            flex: 0 0 33%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .left {
+            align-self: center;
+            min-width: 500px;
+            padding: 0 70px 0 100px;
+            height: 100vh;
+        }
+        .mobile .left {
+            width: 100%;
+            padding: 120px 55px 0;
+            min-width: auto;
+            text-align: center;
+        }
+
+        .center {
+            min-width: 600px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+        #tidio-chat {
+            align-self: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .right {
+            flex: 0 1 33%;
+        }
+        .mobile .right {
+            display: none;
+        }
+
+        .heading h2{
+            font-size: 32px;
+            color: #fff;
+            font-weight: 800;
+            font-family: 'Muli',sans-serif;
+            margin-top: 0;
+            margin-bottom: 25px;
+            white-space: pre-line;
+            line-height: normal;
+            letter-spacing: -0.5px;
+            word-break: break-word;
+        }
+        .heading .emoji {
+            height: 32px;
+            width: auto;
+            margin: -2px 2px auto 2px;
+            vertical-align: middle;
+        }
+
+        .avatars-wrapper>div {
+            width: 52px;
+            height: 52px;
+            border-radius: 24px;
+            margin-bottom: 32px;
+            background-size: cover;
+            background-position: center;
+            display: inline-block;
+            -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+            position: relative;
+            z-index: 2;
+            background-image: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAMDAwMDAwQEBAQFBQUFBQcHBgYHBwsICQgJCAsRCwwLCwwLEQ8SDw4PEg8bFRMTFRsfGhkaHyYiIiYwLTA+PlQBAwMDAwMDBAQEBAUFBQUFBwcGBgcHCwgJCAkICxELDAsLDAsRDxIPDg8SDxsVExMVGx8aGRofJiIiJjAtMD4+VP/CABEIADwAPAMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABgEDBAUHAgn/2gAIAQEAAAAA+lYAj8cy5ndHO8VNN0IFrk62gjEYudH9iLQPN6lec+0VmtG038L9UpWh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAgBAhAAAAAAAP/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAIAQMQAAAAAAD/xAAuEAABAwMACAUEAwAAAAAAAAABAgMEAAURBhASEyAhQVEiMmKRwSNxcoExQqH/2gAIAQEAAT8A14PHdbuuMvcMY2wPGs88Z6ClT5qzlUh0n8qjXmawoFay8jqlfwaZebkNIdbOUrGRwCpxJmySf53qtdgJNu+zq+G7N7u4yPUoK9xrsyC3bWfUVL9zw6QxiS1IA5Y2F/Gpplb7qGkeZasCkNpabQhPlQkJH64CMDJ5DvWkk+Gu3uRm3wp5ak42Dkp2TnJNC4S2hhyPvT0Wg4z9xVqmuN3SNJl/TabUcITzxkY2j3piRHkjLLrbg9Ks1gjVL0nnvLVuAllHTllf7Jp+VKknLz7jn5K+KAAGNY8JykkHuDg0xe7rG5JkqUB/VY2x/tR9LkBvEmMsud2/KfeumrtXSu9dKFZNf//EABQRAQAAAAAAAAAAAAAAAAAAAED/2gAIAQIBAT8AB//EABQRAQAAAAAAAAAAAAAAAAAAAED/2gAIAQMBAT8AB//Z");
+        }
+        .mobile .avatars-wrapper>div {
+            margin-bottom: 30px;
+        }
+
+        .welcome-message,
+        .always-online-message {
+            font-weight: normal;
+            white-space: pre-wrap;
+            font-size: 16px;
+            color: #fff;
+            margin-top: 0;
+            letter-spacing: -0.2px;
+            word-break: break-word;
+        }
+        .welcome-message p,
+        .always-online-message p {
+            margin-top: 0;
+        }
+        .welcome-message .emoji {
+            height: 16px;
+            width: auto;
+            margin: -2px 2px auto 2px;
+            vertical-align: middle;
+        }
+
+        .logo-wrapper {
+            position: absolute;
+            max-width: 240px;
+            margin-bottom: 16px;
+            top: 32px;
+            left:32px;
+        }
+        .logo-wrapper img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            max-height: 70px;
+        }
+
+        @media screen and (max-width: 1100px) {
+            .left {
+                padding: 0 50px;
+                min-width: calc(100% - 480px);
+                width:auto;
+            }
+            .center {
+                background-size: cover;
+                min-width: 480px;
+            }
+        }
+        @media screen and (max-width: 875px) {
+            .left {
+                padding: 0 25px;
+            }
+        }
+    </style><link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,800&amp;subset=latin-ext,vietnamese" rel="stylesheet"></head><body><div class="container"><section class="left"><div class="logo-wrapper"> <a class="company-url-link" href="/" target="blank"><img src="https://tidio-images-messenger.s3.amazonaws.com/9fa3f1664fcd775f74752859070f8fd1.png" alt="Company logo"></a></div><div class="heading"><h2>CC的部落格</h2></div><div class="avatars-wrapper"><div class="ava48" style="background-image: url(https://s3.eu-west-1.amazonaws.com/avatars.tidiochat.com/e45b984cf44a735fdb11ac2eddf995fc.png);"></div></div><div class="welcome-message"><p><span>CC欢迎您的光临🌈<br><br>向我提问任何问题🎉<br><br>点击LOGO前往主页🌏</span></p></div></section><section class="right"></section></div><script src="//twemoji.maxcdn.com/2/twemoji.min.js?11.3"></script><script>
+    twemoji.parse(document.body);
+    function isMobile() {
+        try {
+            return !!(
+                navigator.userAgent &&
+                /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
+            );
+        } catch (e) {
+            return false;
+        }
+    }
+    if(isMobile()) {
+        document.body.classList.add('mobile');
+    }
+
+</script><script>
+    (function injectCode() {
+        var script = document.createElement('script');
+        script.src = 'https://widget-v4.tidiochat.com/code/rmnlrpff1oci9pui1djmeuvx1mftupfq.js';
+        document.body.appendChild(script);
+    })();
+</script></body></html>

@@ -1,0 +1,39 @@
+-
+  var options = {
+    prev_text: '<i class="fas fa-chevron-left fa-fw"></i>',
+    next_text: '<i class="fas fa-chevron-right fa-fw"></i>',
+    mid_size: 1,
+    escape: false
+  }
+
+if(!is_post())
+  nav#pagination
+    div.pagination
+      !=paginator(options)
+else
+  nav#pagination.pagination-post
+    if(page.prev)
+      - var hasPageNext = page.next ? 'pull-left' : 'pull-full'
+      .prev-post(class=hasPageNext)
+        - var pagination_cover = page.prev.cover === false ? page.prev.randomcover : page.prev.cover
+        a(href=url_for(page.prev.path))
+          if theme.lazyload.enable
+            img.prev-cover(data-lazy-src=url_for(pagination_cover) onerror=`onerror=null;src='${url_for(theme.error_img.post_page)}'` )
+          else
+            img.prev-cover(src=url_for(pagination_cover) onerror=`onerror=null;src='${url_for(theme.error_img.post_page)}'` )
+          .pagination-info
+            .label=_p('pagination.prev')
+            .prev_info=page.prev.title
+          
+    if(page.next)
+      - var hasPagePrev = page.prev ? 'pull-right' : 'pull-full'
+      - var pagination_cover = page.next.cover == false ? page.next.randomcover : page.next.cover
+      .next-post(class=hasPagePrev)
+        a(href=url_for(page.next.path))
+          if theme.lazyload.enable
+            img.next-cover(data-lazy-src=url_for(pagination_cover) onerror=`onerror=null;src='${url_for(theme.error_img.post_page)}'`)
+          else
+            img.next-cover(src=url_for(pagination_cover) onerror=`onerror=null;src='${url_for(theme.error_img.post_page)}'`)
+          .pagination-info
+            .label=_p('pagination.next')
+            .next_info=page.next.title 

@@ -1,0 +1,17 @@
+image: node:12-alpine
+
+pages:
+  script:
+    - npm install hexo-cli gulp-cli -g
+    - test -e package.json && npm install
+    - hexo generate
+    - gulp
+  artifacts:
+    paths:
+      - public
+  cache:
+    paths:
+      - node_modules
+    key: project
+  only:
+    - master
