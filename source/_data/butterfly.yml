@@ -475,7 +475,7 @@ footer:
 # baidu_analytics: 9f9cb1de5c11cf69ce72fc51449f1693
 
 # Google Analytics
-google_analytics: UA-170656478-1
+# google_analytics: UA-170656478-1
 
 # Tencent Analytics ID
 tencent_analytics:
@@ -932,7 +932,7 @@ inject:
 
   bottom:
     - <script src="https://cdn.jsdelivr.net/gh/ccknbc/butterfly@master/butterfly@0.0.1/js/ccknbc.js"></script>
-    - <script src="https://cdn.webpushr.com/sw-server.min.js"></script>
+    # - <script src="https://cdn.webpushr.com/sw-server.min.js"></script>
     # - '<script>window.FPConfig = {delay: 0,ignoreKeywords: [],maxRPS: 3,hoverDelay: 50};</script>'
     # - <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"></script>
     # - <script id="ilt" src="https://player.ilt.me/player/js/player.js" key="112fe51b9b16481c9241470e8b3ec79b"></script>
