@@ -21,6 +21,12 @@ comments: false
 
 {% timeline 升级小助手 %}
 
+{% timenode 2020-09-21 [更新主题]() %}
+
+`Butterfly`升级为`3.2.0-b6`
+
+{% endtimenode %}
+
 {% timenode 2020-09-17 [更新HEXO，主题](/butterfly) %}
 
 `HEXO`升级为`5.2.0`，`Butterfly`升级为`3.2.0-b5`
@@ -29,7 +35,7 @@ comments: false
 
 {% timenode 2020-09-14 [更新主题](/butterfly) %}
 
-`Butterfly`升级为`3.2.0-b3`，停用`Valine`评论系统，换用`Disqusjs`评论系统
+`Butterfly`升级为`3.2.0-b3`，停用`Valine`评论系统（因被刷评论，故不归档全部删除），换用`Disqusjs`评论系统，保留`Beaudar`评论系统，提高评论门槛，并加入在线聊天系统（由`Tidio`提供支持）
 
 {% endtimenode %}
 

@@ -54,7 +54,7 @@ $(function () {
 
   function search (path) {
     $.ajax({
-      url: GLOBAL_CONFIG.root + path,
+      url: "https://cdn.jsdelivr.net/gh/ccknbc/butterfly/search.xml",
       dataType: 'xml',
       success: function (xmlResponse) {
         // get the contents from search data
@@ -62,7 +62,7 @@ $(function () {
           return {
             title: $('title', this).text(),
             content: $('content', this).text(),
-            url: $('url', this).text()
+            url: GLOBAL_CONFIG.root + $('url', this).text()
           }
         }).get()
 

@@ -1,6 +1,6 @@
 # CC的部落格
 
-<a href="https://ccknbc.github.io"><img alt="Author" src="https://img.shields.io/badge/Author-CCKNBC-blur"/></a>&nbsp;<a href="https://hexo.io"><img alt="Hexo" src="https://img.shields.io/badge/HEXO-5.2.0-0e83c"/></a>&nbsp;<a href="https://github.com/jerryc127/hexo-theme-butterfly"><img alt="Theme" src="https://img.shields.io/badge/Theme-Butterfly 3.2.0 b5-0e83c"/></a>
+<a href="https://ccknbc.github.io"><img alt="Author" src="https://img.shields.io/badge/Author-CCKNBC-blur"/></a>&nbsp;<a href="https://hexo.io"><img alt="Hexo" src="https://img.shields.io/badge/HEXO-5.2.0-0e83c"/></a>&nbsp;<a href="https://github.com/jerryc127/hexo-theme-butterfly"><img alt="Theme" src="https://img.shields.io/badge/Theme-Butterfly 3.2.0 b6-0e83c"/></a>
 
 > **`6`** 处托管，若不能访问请记住备用站
 
