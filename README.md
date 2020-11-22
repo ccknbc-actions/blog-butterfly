@@ -1,0 +1,3 @@
+# CC的部落格
+
+<a href="https://ccknbc.cc"><img alt="Author" src="https://img.shields.io/badge/Author-CCKNBC-blur"/></a>&nbsp;<a href="https://hexo.io"><img alt="Hexo" src="https://img.shields.io/badge/HEXO-5.2.0-0e83c"/></a>&nbsp;<a href="https://github.com/jerryc127/hexo-theme-butterfly"><img alt="Theme" src="https://img.shields.io/badge/Theme-Butterfly 3.3.0-0e83c"/></a><br>![Update Blog](https://github.com/ccknbc-actions/blog-butterfly/workflows/Update%20Blog/badge.svg)
