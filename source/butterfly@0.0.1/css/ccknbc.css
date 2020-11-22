@@ -1,35 +1,3 @@
-/*标题颜色修改*/
-
-/* #page-header #site_title {
-  color: #8FBC8F;
-} */
-
-/* #page-header #site-name.blog_name {
-  color: #8FBC8F;
-} */
-
-/* 滚动条 */
-
-/* ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #8FBC8F;
-  background-image: -webkit-linear-gradient( 45deg, rgba(255, 255, 255, 0.4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.4) 75%, transparent 75%, transparent);
-  border-radius: 2em;
-}
-
-::-webkit-scrollbar-corner {
-  background-color: transparent;
-}
-
-::-moz-selection {
-  color: #fff;
-  background-color: #8FBC8F;
-} */
-
 #web_bg {
   background: -webkit-linear-gradient(
     0deg,
@@ -88,175 +56,25 @@
   );
 }
 
-/* 背景透明 */
-/* .layout_post>#post {
-background: rgba(255,255,255,.7);
-}
-#aside_content .card-widget, #recent-posts>.recent-post-item, .layout_page>div:first-child:not(.recent-posts), .layout_post>#page, .layout_post>#post, .read-mode .layout_post>#post{
-background: rgba(255,255,255,.7);
-} */
-
-/* a(链接)标签的默认颜色 */
-
-
-/* 宽度大于800小于9999执行 */
-
-
-/* @media only screen and (min-width: 800px) and (max-width: 9999px) {
-  
-  #article-container a {
-      color: #00c4b6;
-      display: inline-block;
-      position: relative;
-  }
-} */
-
-
-
-/* 打造效果渐变 */
-
-@-webkit-keyframes Gradient {
-  0% {
-      background-position: 0 50%;
-  }
-  50% {
-      background-position: 100% 50%;
-  }
-  100% {
-      background-position: 0 50%;
-  }
+#footer {
+  background: rgba(255,255,255,.15);
+  color: #000;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  backdrop-filter: saturate(100%) blur(5px)
 }
 
-@-moz-keyframes Gradient {
-  0% {
-      background-position: 0 50%;
-  }
-  50% {
-      background-position: 100% 50%;
-  }
-  100% {
-      background-position: 0 50%;
-  }
+#footer::before {
+  background: rgba(255,255,255,.15)
 }
 
-@keyframes Gradient {
-  0% {
-      background-position: 0 50%;
-  }
-  50% {
-      background-position: 100% 50%;
-  }
-  100% {
-      background-position: 0 50%;
-  }
+#footer #footer-wrap {
+  color: var(--font-color);
 }
 
-#subtitle {
-  background: linear-gradient(-45deg, #ffecd2, #fcb69f, #84fab0, #8fd3f4,#fddb92,#d1fdff,#e4afcb,#7edbdc,#eea2a2,#7ac5d8);
-  background-size: 400% 400%;
-  -webkit-animation: Gradient 10s ease infinite;
-  -moz-animation: Gradient 10s ease infinite;
-  animation: Gradient 10s ease infinite;
-  -o-user-select: none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+#footer #footer-wrap a {
+  color: var(--font-color);
 }
-
-#subtitle:before {
-  background-color: rgba(0, 0, 0, 0);
-}
-
-@keyframes gradientBG {
-0% {
-    background-position: 0% 50%;
-}
-50% {
-    background-position: 100% 50%;
-}
-100% {
-    background-position: 0% 50%;
-}
-}
-/* #web_bg {
-  background: linear-gradient(-45deg, #ffecd2, #fcb69f, #84fab0, #8fd3f4,#fddb92,#d1fdff,#e4afcb,#7edbdc,#eea2a2,#7ac5d8);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
-} */
-
-/* 评论框  */
-
-.vwrap {
-  box-shadow: 2px 2px 5px #bbb;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
-  padding: 30px;
-  margin: 30px 0px 30px 0px;
-}
-
-
-/* 提交按钮 */
-
-#vcomment button {
-  padding: 0.3rem 0.8rem;
-  border-color: #fff;
-  background-color: #e58a8a;
-  color: #fff;
-  font-size: 0.7rem;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  -ms-transition: all 0.3s;
-  transition: all 0.3s;
-}
-
-
-/* 评论区代码块 */
-
-.v[data-class=v] code {
-  color: #c7254e;
-  background-color: #F9F2F4;
-}
-/* 设置评论框 */
-
-.vcard {
-  box-shadow: 2px 2px 5px #bbb;
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
-  padding: 30px;
-  margin: 30px 0px 0px 0px;
-}
-
-
-/* 取消回复聊天框 */
-
-.vquote .vcard {
-  box-shadow: 2px 2px 5px transparent;
-  background: rgba(255, 255, 255, 0.0);
-  padding: 0px;
-}
-
-
-/* 顶部导航栏 */
-/* #nav a {
-  color: #f9f2f4;
-} */
-
-/*页脚a标签字体颜色*/
-/* #footer-wrap a {
-  color: #00c4b6;
-} */
-
-/*页脚自定义字段字体颜色*/
-/* 也就是配置文件里的footer_custom_text */
-/* .footer_custom_text {
-  color: #00c4b6;
-} */
 
 /* TAG Link */
 
@@ -428,65 +246,4 @@ div.timenode:hover .meta:before {
 div.timenode:hover .meta:after {
   background: #ff5722;
   transform: scale(1);
-}
-
-/* 页脚footer */
-/* 渐变色滚动动画 */
-@-webkit-keyframes Gradient {
-0% {
-    background-position: 0 50%;
-}
-
-50% {
-    background-position: 100% 50%;
-}
-
-100% {
-    background-position: 0 50%;
-}
-}
-
-@-moz-keyframes Gradient {
-0% {
-    background-position: 0 50%;
-}
-
-50% {
-    background-position: 100% 50%;
-}
-
-100% {
-    background-position: 0 50%;
-}
-}
-
-@keyframes Gradient {
-0% {
-    background-position: 0 50%;
-}
-
-50% {
-    background-position: 100% 50%;
-}
-
-100% {
-    background-position: 0 50%;
-}
-}
-#footer {
-background: linear-gradient(-45deg, #ffecd2, #fcb69f, #84fab0, #8fd3f4,#fddb92,#d1fdff,#e4afcb,#7edbdc,#eea2a2,#7ac5d8);
-background-size: 400% 400%;
--webkit-animation: Gradient 15s ease infinite;
--moz-animation: Gradient 15s ease infinite;
-animation: Gradient 15s ease infinite;
--o-user-select: none;
--ms-user-select: none;
--webkit-user-select: none;
--moz-user-select: none;
-user-select: none;
-border-top-left-radius: 10px;
-border-top-right-radius: 10px;
-}
-#footer:before {
-background-color: rgba(0, 0, 0, 0);
 }
