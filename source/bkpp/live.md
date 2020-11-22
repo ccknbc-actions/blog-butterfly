@@ -16,7 +16,7 @@ top_img: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_05_
 <script>
 const dp_live = new DPlayer({
     container: document.getElementById('dplayer-live'),
-    autoplay: false,
+    autoplay: true,
     theme: '#8fbc8f',
     preload: 'auto',
     volume: 1,

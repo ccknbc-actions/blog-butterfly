@@ -39,6 +39,7 @@ jobs:
     - name: Install Dependencies
       if: steps.cache-dependencies.outputs.cache-hit != 'true'
       run: |
+        npm uninstall hexo-plugin-readmore
         npm install
 
     - name: Generate

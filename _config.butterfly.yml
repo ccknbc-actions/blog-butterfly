@@ -556,7 +556,7 @@ tag_ui: # 留空或 index
 # The formal of color: '#49B202'
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
 # White color will be shown as default
-background: '#8FBC8F'
+background: '#FFF886'
 # https://bing.rthe.net/wallpaper
 # http://www.neweb.top/bing.php
 
@@ -927,18 +927,18 @@ inject:
     #https://cdn.jsdelivr.net/gh/ccknbc/ccknbc.github.io
     #- <div class="aplayer no-destroy" data-id="5146142770" data-server="netease" data-type='playlist' data-fixed='true' data-mini='true' data-listFolded='false' data-order='random' data-preload='none' data-autoplay='true' muted></div>
     - <meta name="referrer" content="no-referrer-when-downgrade" />
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/tags.css">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/css/buttons.min.css>
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/tags.css" media="none" onload="this.media='all'">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/css/buttons.min.css" media="none" onload="this.media='all'">
     # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/HexoStaticFile@latest/Hexo/css/flink.min.css">
     # - <link rel="stylesheet" href="https://unpkg.com/ifriend/friend.min.css">
     #- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/plugins.min.css">
-    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ccknbc/ccknbc.github.io/butterfly@0.0.1/css/ccknbc.css">
+    - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ccknbc/ccknbc.github.io/butterfly@0.0.1/css/ccknbc.css" media="none" onload="this.media='all'">
     #- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/plugins.min.css">
     #- '<style type="text/css">.app-refresh{position:fixed;top:-2.2rem;left:0;right:0;z-index:99999;padding:0 1rem;font-size:15px;height:2.2rem;transition:all .3s ease}.app-refresh-wrap{display:flex;color:#fff;height:100%;align-items:center;justify-content:center}.app-refresh-wrap a{color:#fff;text-decoration:underline;cursor:pointer}</style>'
 
   bottom:
-    - <script src="https://cdn.jsdelivr.net/gh/ccknbc/ccknbc.github.io/butterfly@0.0.1/js/ccknbc.js"></script>
-    - <script src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/js/snackbar.js"></script>
+    - <script src="https://cdn.jsdelivr.net/gh/ccknbc/ccknbc.github.io/butterfly@0.0.1/js/ccknbc.js" async></script>
+    - <script src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/js/snackbar.js" async></script>
     # - <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/js/mcjs.js");</script>
     # - '<script>window.FPConfig = {delay: 0,ignoreKeywords: [],maxRPS: 3,hoverDelay: 50};</script>'
     # - <script defer src="https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages/flying-pages.min.js"></script>

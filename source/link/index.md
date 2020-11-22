@@ -51,7 +51,7 @@ top_img: false
 
 {% endtabs %}
 
-<script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://unpkg.com/ifriend/dist/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src='https://unpkg.com/ifriend/dist/index.js'></script>
 
 <script>
     $('.flink').prepend('<div id="friend1"></div>')

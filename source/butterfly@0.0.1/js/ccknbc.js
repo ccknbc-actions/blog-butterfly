@@ -3,26 +3,6 @@
 //     $('.copyright').html('©2020 <i style="color:#49B1F5;animation: announ_animation 0.8s linear infinite;" class="fa fa-heartbeat"></i> CC康纳百川');
 // })
 
-if(aidaori()){
-    $("html").css({
-        "filter":"gray !important",
-        "filter":"progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)",
-        "filter":"grayscale(100%)",
-        "-webkit-filter":"grayscale(100%)",
-        "-moz-filter":"grayscale(100%)",
-        "-ms-filter":"grayscale(100%)",
-        "-o-filter":"grayscale(100%)" 
-    });
-    Snackbar.show({
-        pos: 'top-center',
-        text: '本站根据北京时间在国家法定默哀日进行全站变灰默哀',
-        textColor: '#D3D3D3',
-        actionText: '知道了',
-        actionTextColor: '#696969',
-        duration: '10000',
-    });
-}
-
 function aidaori(){
     var aidaoriarr=new Array("0405","0512","0918","1213");
     var mydate = new Date();
@@ -43,6 +23,26 @@ function aidaori(){
     }else{
         return 0;
     }
+}
+
+if(aidaori()){
+    $("html").css({
+        "filter":"gray !important",
+        "filter":"progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)",
+        "filter":"grayscale(100%)",
+        "-webkit-filter":"grayscale(100%)",
+        "-moz-filter":"grayscale(100%)",
+        "-ms-filter":"grayscale(100%)",
+        "-o-filter":"grayscale(100%)" 
+    });
+    Snackbar.show({
+        pos: 'top-center',
+        text: '本站根据北京时间在国家法定默哀日进行全站变灰默哀',
+        textColor: '#D3D3D3',
+        actionText: '知道了',
+        actionTextColor: '#696969',
+        duration: '10000',
+        });
 }
 
 // 可爱的Title
