@@ -37,7 +37,7 @@ if(aidaori()){
     });
     Snackbar.show({
         pos: 'top-center',
-        text: '本站根据北京时间在国家法定默哀日进行全站变灰默哀',
+        text: '本站根据北京时间在国家法定哀悼日进行全站变灰默哀',
         textColor: '#D3D3D3',
         actionText: '知道了',
         actionTextColor: '#696969',
