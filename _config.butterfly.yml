@@ -291,7 +291,7 @@ comments:
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
   lazyload: false
-  count: true # Dispaly comment count in top_img
+  count: false # Dispaly comment count in top_img
 
 # GitHub Issues Link Button
 # https://help.github.com/en/github/searching-for-information-on-github/searching-issues-and-pull-requests
@@ -900,7 +900,7 @@ lazyload:
 # See https://github.com/JLHwung/hexo-offline
 # ---------------
 pwa:
-  enable: false
+  enable: true
   manifest: /manifest.json
   theme_color: "#ffffff"
   apple_touch_icon: https://cdn.jsdelivr.net/gh/ccknbc/ccknbc.github.io/images/apple-touch-icon.png

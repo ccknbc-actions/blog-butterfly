@@ -39,10 +39,11 @@
     "terser": "^4.8.0"
   },
   "devDependencies": {
-    "gulp": "4.0.2",
-    "gulp-cli": "2.3.0",
+    "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "2.3.0",
     "gulp-htmlclean": "^2.7.22",
-    "gulp-uglify": "^3.0.2"
+    "gulp-uglify": "^3.0.2",
+    "workbox-build": "^5.1.4"
   }
 }
