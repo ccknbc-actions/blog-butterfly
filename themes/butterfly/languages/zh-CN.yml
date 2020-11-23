@@ -90,8 +90,8 @@ share: 分享
 
 rightside:
   readmode_title: 阅读模式
-  translate_title: 简繁转换
-  night_mode_title: 浅色和深色模式转换
+  translate_title: 简/繁转换
+  night_mode_title: 开启/关闭夜间模式
   back_to_top: 回到顶部
   toc: 目录
   scroll_to_comment: 直达评论
