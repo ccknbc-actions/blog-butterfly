@@ -66,18 +66,18 @@ jobs:
           gitee-password: ${{ secrets.GITEE_PASSWORD }}
           gitee-repo: ccknbc/ccknbc
 
-    - name: Set up python
+    - name: Set Up Python
       uses: actions/setup-python@v1
       with:
         python-version: 3.8
 
-    - name: Install requests
+    - name: Install Requests
       run: pip install requests
 
-    - name: generate
+    - name: Generate Txt
       run: python source/generate.py
 
-    - name: Push
+    - name: Baidu Push
       run: curl -H 'Content-Type:text/plain' --data-binary @urls.txt "${{ secrets.TOKEN }}"
 
 # git clone https://github.com/ccknbc/ccknbc.github.io.git public
