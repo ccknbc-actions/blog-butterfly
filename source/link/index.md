@@ -20,15 +20,15 @@ date: 2020-06-04 22:17:49
         el: "#friend1",
         owner: "ccknbc",
         repo: "link",
-        direction_sort: "asc",
-        sort_container: ["菜鸡","小嘉专属"],
+        direction_sort: "desc",
+        sort_container: [],
         labelDescr: {
-            大佬们: "<span style='color:lightgreen;'>这是一群<b>大佬</b>哦！</span>",
+            大佬们: "这是一群<span style='color:lightgreen;'><b>大佬</b></span>哦",
             小伙伴们: "<span style='color:skyblue;'>这是我的小伙伴们</span>",
             菜鸡们: "<span style='color:red;'>这是一群菜鸡哦！</span>",
-            备用站: "",
-            小嘉专属: "小嘉，这个人啊，说不清",
-            菜鸡: "这其实是个大佬",
+            备用站: "还是看关于站点界面吧",
+            小嘉专属: "<span style='color:#F5F5A3;'><b>小嘉</b></span>，这个人啊，说不清",
+            菜鸡: "这其实是个<span style='color:red;'><b>大佬</b></span>，不要相信他说的话就对了",
         },
     });
 </script>
@@ -36,11 +36,11 @@ date: 2020-06-04 22:17:49
 {% tabs links%}
 <!-- tab 申请须知@fas fa-check-circle -->
 
-1. **快速申请友链请[点击这里](https://gitee.com/ccknbc/link/)按照`README`和`模板`提交`Issue`即可**
-2. **点击我的信息，您可以复制后自行选择添加至您的友链**
-3. **鼠标悬停，可显示站点`预览图`**
-4. **每周`定时更新`，因此如果您想立即看到友链截图，可在审核通过后前往仓库点一下`star`**
-5. **若网站截图不显示，请刷新，还有此页有`BUG`**
+**快速申请友链请{% btn 'https://gitee.com/ccknbc/link/',点击这里,far fa-hand-point-right,outline green larger %}按照`README`和`模板`提交`Issue`即可**
+1. **点击我的信息，您可以复制后自行选择添加至您的友链**
+2. **鼠标悬停，可显示站点`预览图`**
+3. **每周`定时更新`，因此如果您想立即看到友链截图，可在审核通过后前往仓库点一下`star`**
+4. **若网站截图不显示，请刷新，还有此页有`BUG`**
 
 {% link 友链截图列表, https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
 
@@ -56,7 +56,7 @@ date: 2020-06-04 22:17:49
   avatar: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/ccknbc.png
   favicon: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/favicon.png
   descr: CC康纳百川
-``` 
+```
 ```yaml
   # 以下若有可配置
   # 边框大小 默认为0 

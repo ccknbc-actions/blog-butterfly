@@ -201,7 +201,7 @@ wordcount:
 # false: do not show the article introduction
 index_post_content:
   method: 2
-  length: 500 # if you set method to 2 or 3, the length need to config
+  length: 100 # if you set method to 2 or 3, the length need to config
 
 # Post
 # --------------------------------------
@@ -367,14 +367,12 @@ waline:
   serverURL: https://waline.ccknbc.now.sh # Waline server address url
   avatar: monsterid # gravatar style https://zh-tw.gravatar.com/site/implement/images/#default-image
   bg: false # waline background
-  pageSize: 10
-  meta: nick,mail,link
-  requiredFields: mail 
-  emojiCDN: https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/
-  #https://valinecdn.bili33.top/
-  placeholder: 1. 邮箱为必填项，您的信息仅作你我收到回复通知使用；请注意友好发言，垃圾评论将被删除,请勿在本站测试评论，谢谢合作,未来将采取登录评论制度\n2. 由于反垃圾检测和发布微信/QQ/Telagram/邮件通知等操作都需要时间,您点击发布按钮后可能已经发布但延迟显示，给您造成的不便深感抱歉
-  option:
-
+  option: 
+    pageSize: 10
+    requiredFields: mail 
+    emojiCDN: https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/
+    #https://valinecdn.bili33.top/
+    placeholder: 邮箱为必填项，您的信息仅作你我收到回复通知使用；请注意友好发言，垃圾评论将被删除,请勿在本站测试评论，谢谢合作,未来将采取登录评论制度;由于反垃圾检测和发布微信/QQ/Telagram/邮件通知等操作都需要时间,您点击发布按钮后可能已经发布但延迟显示，给您造成的不便深感抱歉
 # utterances
 # https://utteranc.es/
 utterances:
@@ -580,10 +578,10 @@ tag_ui: # 留空或 index
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
-background: 'linear-gradient(135deg, #fff1eb , #ace0f9 )'
+background: 'linear-gradient(135deg,#fff1eb,#ace0f9)'
 
 # Footer Background
-footer_bg: 'linear-gradient(135deg, #a1c4fd , #c2e9fb)'
+footer_bg: 'linear-gradient(135deg,#a1c4fd,#c2e9fb)'
 
 # the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
 rightside-bottom: #100px
