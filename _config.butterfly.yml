@@ -12,6 +12,7 @@ menu:
   标签: /tags/ || fa fa-tags
   分类: /categories/ || fa fa-folder-open
   友链: /link/ || fas fa-link
+  背景: /background/ || fas fa-adjust
   # 订阅更新: /sub/ || fas fa-rss
   # 网站地图: /sitemap/ || fas fa-sitemap
   列表 || fas fa-list:
@@ -579,6 +580,14 @@ tag_ui: # 留空或 index
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(http://xxxxxx.com/xxx.jpg)
 background: 'linear-gradient(135deg,#fff1eb,#ace0f9)'
+# 小康同款
+# background: 'linear-gradient(0deg,rgba(247, 149, 51, 0.1) 0,rgba(243, 112, 85, 0.1) 15%,rgba(239, 78, 123, 0.1) 30%,rgba(161, 102, 171, 0.1) 44%,rgba(80, 115, 184, 0.1) 58%,rgba(16, 152, 173, 0.1) 72%,rgba(7, 179, 155, 0.1) 86%,rgba(109, 186, 130, 0.1) 100%)'
+
+#其他配色
+# background: 'linear-gradient(-225deg, #7085B6 0%, #87A7D9 50%, #DEF3F8 100%)' 
+# background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%)'
+# background: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%)'
+# background: 'linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%)'
 
 # Footer Background
 footer_bg: 'linear-gradient(135deg,#a1c4fd,#c2e9fb)'
