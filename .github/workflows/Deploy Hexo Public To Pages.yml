@@ -58,9 +58,9 @@ jobs:
       with:
         token: ${{ secrets.GH_TOKEN }}
         commit-message: Update Yuque Catch
-        committer: github-actions[bot] github-actions[bot]@users.noreply.github.com
-        author: github-actions[bot] github-actions[bot]@users.noreply.github.com
-        signoff: true
+        committer: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+        author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+        signoff: false
         branch: yuque
         delete-branch: true
         title: 'Update Yuque Catch'
