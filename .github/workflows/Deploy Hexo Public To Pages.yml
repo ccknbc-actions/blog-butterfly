@@ -17,9 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Shanghai
-    if: github.event.organization.owner.id == github.event.sender.id
+    # if: github.event.organization.owner.id == github.event.sender.id
     # if: github.event.repository.owner.id == github.event.sender.id
-    # if: github.event.commits[][author][name] == ccknbc
+    if: github.event.commits[][author][name] == github.event.organization.owner.id
+
 
     steps:
     - name: Checkout
