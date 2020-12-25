@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Shanghai
-    if: github.event.organization.owner.id == github.event.actor.id
+    if: github.event.repository.owner.id == github.event.actor.id
 
     steps:
     - name: Checkout

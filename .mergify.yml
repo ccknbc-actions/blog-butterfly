@@ -1,8 +1,0 @@
-pull_request_rules:
-  - name: automatic merge for github-actions pull requests
-    conditions:
-      - author=github-actions[bot]
-
-    actions:
-      merge:
-        method: merge
