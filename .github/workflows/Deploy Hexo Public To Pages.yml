@@ -17,13 +17,16 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Shanghai
-    if: github.event.organization.owner.id == github.event.sender.id
+    # if: github.event.organization.owner.id == github.event.sender.id
     # if: (github.event.repository.owner.id == github.event.sender.id)
-    # if: (github.event.commits[][author] == github.event.organization.owner.id)
+    if: github.event.commits[][author] == ccknbc
 
 
     steps:
-
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        ref: master
 
     - name: Setup Node
       uses: actions/setup-node@v2
