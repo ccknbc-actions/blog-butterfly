@@ -52,6 +52,24 @@ jobs:
       run: |
         npm run github
 
+    - name: Create Pull Request
+      id: yuque
+      uses: peter-evans/create-pull-request@v3
+      with:
+        token: ${{ secrets.GH_TOKEN }}
+        commit-message: Update report
+        committer: GitHub <noreply@github.com>
+        author: GitHub <noreply@github.com>
+        signoff: true
+        branch: yuque
+        delete-branch: true
+        title: 'Update Yuque Catch'
+
+    - name: Check outputs
+      run: |
+        echo "Pull Request Number - ${{ steps.yuque.outputs.pull-request-number }}"
+        echo "Pull Request URL - ${{ steps.yuque.outputs.pull-request-url }}"
+
     # - name: Deploy Markdown Posts To Branch Posts
     #   uses: peaceiris/actions-gh-pages@v3
     #   with:

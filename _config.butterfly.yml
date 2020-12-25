@@ -12,7 +12,7 @@ menu:
   标签: /tags/ || fa fa-tags
   分类: /categories/ || fa fa-folder-open
   友链: /link/ || fas fa-link
-  背景: /background/ || fas fa-adjust
+  # 背景: /background/ || fas fa-adjust
   # 订阅更新: /sub/ || fas fa-rss
   # 网站地图: /sitemap/ || fas fa-sitemap
   列表 || fas fa-list:
