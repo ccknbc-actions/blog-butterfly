@@ -961,7 +961,7 @@ disable_baidu_transformation: true
 Open_Graph_meta: true
 
 # Caches the contents in a fragment, speed up the generation (開啟hexo自帶的緩存,加快生成速度)
-fragment_cache: false
+fragment_cache: true
 
 # Add the vendor prefixes to ensure compatibility
 css_prefix: true

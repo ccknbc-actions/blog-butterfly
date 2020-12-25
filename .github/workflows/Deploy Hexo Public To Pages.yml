@@ -56,7 +56,7 @@ jobs:
       id: yuque
       uses: peter-evans/create-pull-request@v3
       with:
-        token: ${{ secrets.GH_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         commit-message: Update Yuque Catch
         committer: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
         author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
