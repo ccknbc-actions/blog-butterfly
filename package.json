@@ -1,0 +1,65 @@
+{
+  "name": "ccknbc-blog",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "github": "yuque-hexo sync && hexo generate && hexo algolia && gulp",
+    "gitlab": "yuque-hexo sync && hexo generate && gulp",
+    "build": "hexo generate",
+    "clean": "hexo clean",
+    "deploy": "hexo deploy",
+    "server": "hexo server"
+  },
+  "yuqueConfig": {
+    "postPath": "source/_posts/语雀",
+    "cachePath": "yuque.json",
+    "mdNameFormat": "title",
+    "adapter": "hexo",
+    "concurrency": 1,
+    "baseUrl": "https://www.yuque.com/api/v2",
+    "login": "ccknbc",
+    "repo": "blog",
+    "onlyPublished": true,
+    "onlyPublic": true
+  },
+  "hexo": {
+    "version": "5.3.0"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "hexo": "^5.3.0",
+    "hexo-algoliasearch": "^1.0.0",
+    "hexo-bb": "^0.1.13",
+    "hexo-charts": "^1.0.3",
+    "hexo-deployer-git": "^2.1.0",
+    "hexo-filter-nofollow": "^2.0.2",
+    "hexo-generator-archive": "^1.0.0",
+    "hexo-generator-baidu-sitemap": "^0.1.9",
+    "hexo-generator-category": "^1.0.0",
+    "hexo-generator-feed": "^3.0.0",
+    "hexo-generator-index": "^2.0.0",
+    "hexo-generator-sitemap": "^2.1.0",
+    "hexo-generator-tag": "^1.0.0",
+    "hexo-render-pug": "^2.1.4",
+    "hexo-renderer-ejs": "^1.0.0",
+    "hexo-renderer-marked": "^3.3.0",
+    "hexo-renderer-stylus": "^2.0.1",
+    "hexo-server": "^2.0.0",
+    "hexo-tag-mmedia": "^0.2.1",
+    "hexo-translate-title-vss": "^1.0.14",
+    "hexo-wordcount": "^6.0.1",
+    "yuque-hexo": "^1.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-cli": "2.3.0",
+    "gulp-html-minifier-terser": "^6.0.1",
+    "gulp-htmlclean": "^2.7.22",
+    "gulp-uglify": "^3.0.2",
+    "workbox-build": "^6.0.2"
+  }
+}
