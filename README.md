@@ -2,7 +2,7 @@
 
 <center>
 <a target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo 5.3.0-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><br>
-<a target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly 3.6.0 b1-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a><br> 
+<a target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly 3.6.0 b2-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a><br> 
 <a target="_blank" href="https://metroui.org.ua/index.html "><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a><br> 
 <a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Vervel-brightgreen?style=flat&logo=Vercel" title="本站采用双线部署，境外线路托管于Vercel"></a><br> 
 <a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&logo=Codio" title="本站采用双线部署，境内线路托管于Coding"></a><br> 

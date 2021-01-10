@@ -245,6 +245,13 @@ related_post:
 # figcaption (圖片描述文字)
 photofigcaption: false
 
+# post_pagination (分頁)
+# value: 1 || 2 || false
+# 1: The 'next post' will link to old post
+# 2: The 'next post' will link to new post
+# false: disable pagination
+post_pagination: 2
+
 # anchor
 # when you scroll in post, the URL will update according to header id.
 anchor: true
@@ -751,7 +758,7 @@ aside:
     记得把本站加入广告屏蔽白名单，不然部分内容无法显示
     <center>
     <a target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo 5.3.0-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><br>
-    <a target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly 3.6.0 b1-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a><br> 
+    <a target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly 3.6.0 b2-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a><br> 
     <a target="_blank" href="https://metroui.org.ua/index.html "><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a><br> 
     <a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Vervel-brightgreen?style=flat&logo=Vercel" title="本站采用双线部署，境外线路托管于Vercel"></a><br> 
     <a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&logo=Codio" title="本站采用双线部署，境内线路托管于Coding"></a><br> 
@@ -936,9 +943,6 @@ snackbar:
   bg_light: '#323232' # The background color of Toast Notification in light mode
   bg_dark: '#121212' # The background color of Toast Notification in dark mode
 
-# Baidu Push (百度推送)
-baidu_push: false
-
 # https://instant.page/
 # prefetch (預加載)
 instantpage: true
@@ -965,15 +969,9 @@ pwa:
   apple_touch_icon: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/image/pwa/apple-touch-icon.png
   mask_icon: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/image/pwa/safari-pinned-tab.svg
 
-# Disable Baidu transformation on mobile devices (禁止百度轉碼)
-disable_baidu_transformation: true
-
 # Open graph meta tags
 # https://developers.facebook.com/docs/sharing/webmasters/
 Open_Graph_meta: true
-
-# Caches the contents in a fragment, speed up the generation (開啟hexo自帶的緩存,加快生成速度)
-fragment_cache: true
 
 # Add the vendor prefixes to ensure compatibility
 css_prefix: true
