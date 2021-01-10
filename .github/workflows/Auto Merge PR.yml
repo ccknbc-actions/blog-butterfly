@@ -1,0 +1,30 @@
+name: Auto Merge PR
+on:
+  pull_request:
+    types: opened
+
+jobs:
+  automerge:
+    name: Auto Merge PR
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto Merge PR
+        uses: "pascalgn/automerge-action@v0.13.0"
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          MERGE_FILTER_AUTHOR: "github-actions[bot]"
+
+      - name: Delete Workflow Runs
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          retain_days: 5
+          keep_minimum_runs: 6
+
+      - name: Telegram Notification
+        if: cancelled() == false
+        uses: xinthink/action-telegram@v1.1
+        with:
+          botToken: ${{ secrets.TG_BOT_TOKEN }} #use bot @BotFather
+          chatId: ${{ secrets.TG_CHAT_ID }} #use bot @userinfobot
+          jobStatus: ${{ job.status }}
+          skipSuccess: false
