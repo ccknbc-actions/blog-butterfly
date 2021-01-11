@@ -389,7 +389,7 @@ waline:
   option: 
     pageSize: 10
     requiredFields: mail 
-    placeholder: 您的评论必须经人工审核通过后才会显示，但您仍可收到相关回复邮件通知，因此 邮箱 为必填项
+    placeholder: 您的评论必须经人工审核通过后才会显示，但您仍可收到相关回复邮件通知，因此 邮箱 为必填项;社交登录只是一种选择，方便快速录入信息，未来也不会关闭匿名留言
     # avatarCDN: https://cn.gravatar.com/avatar/
     #https://valinecdn.bili33.top/
     # placeholder: 邮箱为必填项，您的信息仅作你我收到回复通知使用；请注意友好发言，垃圾评论将被删除,请勿在本站测试评论，谢谢合作,未来将采取登录评论制度;由于反垃圾检测和发布微信/QQ/Telegram/邮件通知等操作都需要时间,您点击发布按钮后可能已经发布但延迟显示，给您造成的不便深感抱歉
@@ -692,8 +692,8 @@ beautify:
 # Global font settings
 # Don't modify the following settings unless you know how they work (非必要不要修改)
 font:
-  global-font-size: 14.5px # The unit must be 'px', default is 14px
-  code-font-size: 14.5px 
+  global-font-size:  # The unit must be 'px', default is 14px
+  code-font-size: 
   # font-family: Quicksand
   font-family: -apple-system, 'Quicksand', 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
   # font-family: Quicksand, 'Georgia, -apple-system', 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif
@@ -713,9 +713,9 @@ hr_icon:
 
 # the subtitle on homepage (主頁subtitle)
 subtitle:
-  enable: false
+  enable: true
   # Typewriter Effect (打字效果)
-  effect: true
+  effect: false
   # loop (循環打字)
   loop: true
   # source調用第三方服務
@@ -731,6 +731,8 @@ subtitle:
   # 開頭不允許轉義字元，如需要，請把整個句子用雙引號包住
   # 如果關閉打字效果，subtitle只會顯示sub的第一行文字
   sub:
+    - 屏幕左侧侧栏默认隐藏
+    - 中间侧栏默认隐藏
 
 # Loading Animation (加載動畫)
 preloader: false
@@ -742,7 +744,7 @@ aside:
   enable: true
   hide: false
   button: true
-  mobile: false # display on mobile
+  mobile: true # display on mobile
   position: right # left or right
   card_author:
     enable: true
@@ -755,10 +757,10 @@ aside:
   card_announcement:
     enable: true
     content: '
-    记得把本站加入广告屏蔽白名单，不然部分内容无法显示
     <center>
+    记得把本站加入广告屏蔽白名单，不然部分内容无法显示，分类及文章默认展开目录请点击屏幕左中部<br>
     <a target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo 5.3.0-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><br>
-    <a target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly 3.6.0 b2-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a><br> 
+    <a target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly 3.6.0 b3-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a><br> 
     <a target="_blank" href="https://metroui.org.ua/index.html "><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a><br> 
     <a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Vervel-brightgreen?style=flat&logo=Vercel" title="本站采用双线部署，境外线路托管于Vercel"></a><br> 
     <a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&logo=Codio" title="本站采用双线部署，境内线路托管于Coding"></a><br> 
@@ -816,6 +818,7 @@ runtimeshow:
 newest_comments:
   enable: true
   limit: 5
+  storage: 10
   avatar: true
   sort_order: # Don't modify the setting unless you know how it works
   valine: false
@@ -865,7 +868,7 @@ darkmode:
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
-  autoChangeMode: 1
+  autoChangeMode: false
 
 # Lightbox (圖片大圖查看模式)
 # --------------------------------------
@@ -983,6 +986,7 @@ inject:
   head: 
     - <link rel="canonical" href="https://blog.ccknbc.cc/"/>
     - <link rel="dns-prefetch" href="https://blog.ccknbc.cc/">
+    # - '<style>html {font-size: 15px;}</style>'
     # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ccknbc/ccknbc.github.io/butterfly/css/ccknbc.css">
     # - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CodeByZach/pace/themes/silver/pace-theme-big-counter.css">
     - '<style type="text/css">.app-refresh{position:fixed;top:-2.2rem;left:0;right:0;z-index:99999;padding:0 1rem;font-size:15px;height:2.2rem;transition:all .3s ease}.app-refresh-wrap{display:flex;color:#fff;height:100%;align-items:center;justify-content:center}.app-refresh-wrap a{color:#fff;text-decoration:underline;cursor:pointer}</style>'

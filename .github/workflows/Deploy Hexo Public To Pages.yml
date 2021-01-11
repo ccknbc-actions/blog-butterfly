@@ -1,15 +1,6 @@
 name: Deploy Hexo Public To Pages
 
-on: 
-  push:
-    branches: 
-      - master
-  repository_dispatch:
-  workflow_dispatch:
-    inputs:
-      name:
-        description: 'Just Test'
-        required: false
+on: [push,repository_dispatch,workflow_dispatch]
 
 jobs:
   deploy:
@@ -19,7 +10,6 @@ jobs:
       TZ: Asia/Shanghai
       ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
       YUQUE_TOKEN: ${{ secrets.YUQUE_TOKEN }}
-    # if 
 
     steps:
     - name: Checkout
