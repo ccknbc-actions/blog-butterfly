@@ -34,8 +34,8 @@ jobs:
     - name: Delete Workflow Runs
       uses: Mattraks/delete-workflow-runs@main
       with:
-        retain_days: 5
-        keep_minimum_runs: 6
+        retain_days: 1
+        keep_minimum_runs: 1
 
     - name: Telegram Notification
       if: cancelled() == false
