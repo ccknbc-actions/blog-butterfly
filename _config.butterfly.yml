@@ -759,7 +759,6 @@ aside:
     enable: true
     content: '
     <center>
-    记得把本站加入广告屏蔽白名单，不然部分内容无法显示，分类及文章默认展开目录请点击屏幕左中部<br>
     <a target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo 5.3.0-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><br>
     <a target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly 3.6.0 b3-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a><br> 
     <a target="_blank" href="https://metroui.org.ua/index.html "><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a><br> 
@@ -1010,7 +1009,7 @@ inject:
     # - <script defer src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     # - <script>if('serviceWorker'in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('/service-worker.js')})}</script>
     - '<div class="app-refresh" id="app-refresh"> <div class="app-refresh-wrap"> <label>✨ 网站已更新 👉</label> <a href="javascript:void(0)" onclick="location.reload()">✔ <b>点击刷新</b> 💫</a> </div></div><script>function showNotification(){if(GLOBAL_CONFIG.Snackbar){var t="light"===document.documentElement.getAttribute("data-theme")?GLOBAL_CONFIG.Snackbar.bgLight:GLOBAL_CONFIG.Snackbar.bgDark,e=GLOBAL_CONFIG.Snackbar.position;Snackbar.show({text:"✨ 部落格已更新 👉",backgroundColor:t,duration:1e4,pos:e,actionText:"✔ 点击刷新 💫",textColor:"#8FBC8F",onActionClick:function(t){location.reload()}})}else{var o=`top: 0; background: ${"light"===document.documentElement.getAttribute("data-theme")?"#49b1f5":"#1f1f1f"};`;document.getElementById("app-refresh").style.cssText=o}}"serviceWorker"in navigator&&(navigator.serviceWorker.controller&&navigator.serviceWorker.addEventListener("controllerchange",function(){showNotification()}),window.addEventListener("load",function(){navigator.serviceWorker.register("/service-worker.js")}));</script>'
-    # - <script async data-pjax src="https://cdn.jsdelivr.net/npm/hexo-widget-tree@0.1.0/js/index.js"></script>
+    # - <script async data-pjax js-pjax src="https://cdn.jsdelivr.net/npm/hexo-widget-tree@0.1.1/js/index.min.js"></script>
     # - <script defer src="https://cdn.jsdelivr.net/gh/ccknbc/ccknbc.github.io/butterfly/js/ccknbc.js"></script>
     # - <script defer src="/butterfly/js/snackbar.js"></script>
     # - <script defer src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/js/snackbar.js"></script>

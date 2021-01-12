@@ -46,7 +46,7 @@
     "hexo-server": "^2.0.0",
     "hexo-tag-mmedia": "^0.2.1",
     "hexo-translate-title-vss": "^1.0.14",
-    "hexo-widget-tree": "^0.1.0",
+    "hexo-widget-tree": "^0.1.1",
     "hexo-wordcount": "^6.0.1",
     "yuque-hexo": "^1.7.0"
   },
