@@ -186,7 +186,7 @@ bb:
 
 widget_tree:
   cdn: true
-  hide: true
+  hide: false
   layout: default
   # layout:
   #   - home
@@ -206,7 +206,7 @@ widget_tree:
 # 要说临时更新真好用啊
 deploy:
   - type: git
-    repo: git@e.coding.net:ccknbc/blog/butterfly.git
+    repo: git@e.coding.net:ccknbc/blog/yun.git
 
   
 # admin:
