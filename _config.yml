@@ -184,22 +184,22 @@ bb:
  path: bb 
  content: '👉🏼此说说通过📱手机微信发出，主要记录CC碎片化思考和动态。📑'
 
-widget_tree:
-  cdn: true
-  hide: false
-  layout: default
-  # layout:
-  #   - home
-  #   - page
-  #   - post
-  #   - archive
-  #   - category
-  #   - tag
-  toc:
-    enable: true
-    max_depth: 
-    min_depth: 
-    list_number: true
+# widget_tree:
+#   cdn: true
+#   hide: true
+#   layout: default
+#   # layout:
+#   #   - home
+#   #   - page
+#   #   - post
+#   #   - archive
+#   #   - category
+#   #   - tag
+#   toc:
+#     enable: true
+#     max_depth: 6
+#     min_depth: 1
+#     list_number: true
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

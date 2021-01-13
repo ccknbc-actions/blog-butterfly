@@ -41,6 +41,7 @@ jobs:
     - name: Generate
       run: |
         git clone https://github.com/CCKNBC/ccknbc.github.io.git public
+        npm un hexo-widget-tree
         npm run start
       # git clone -b posts https://github.com/ccknbc-actions/blog-butterfly.git source/_posts
 
@@ -89,17 +90,13 @@ jobs:
           gitee-username: ccknbc
           gitee-password: ${{ secrets.GITEE_PASSWORD }}
           gitee-repo: ccknbc/ccknbc
-
-    - name: Setup Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
-        
-    - name: Install Requests
-      run: pip install requests
     
     - name: Purge JsDelivr CDN
-      run: curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/
+      run: |
+        curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/
+        curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/css/index.css
+        curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/js/main.js
+        curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/js/utils.js
 
     - name: Delete Workflow Runs
       uses: Mattraks/delete-workflow-runs@main
