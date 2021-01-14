@@ -40,9 +40,9 @@ jobs:
 
     - name: Generate
       run: |
-        git clone https://github.com/CCKNBC/ccknbc.github.io.git public
         npm run start
       # git clone -b posts https://github.com/ccknbc-actions/blog-butterfly.git source/_posts
+      # git clone https://github.com/CCKNBC/ccknbc.github.io.git public
 
     # - name: Create Pull Request
     #   id: yuque
@@ -68,6 +68,8 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: posts
         publish_dir: ./source/_posts
+        enable_jekyll: false
+        exclude_assets: ''
         user_name: 'github-actions[bot]'
         user_email: 'github-actions[bot]@users.noreply.github.com'
         full_commit_message: '${{ github.event.head_commit.message }} Updated By Github Actions'
@@ -77,6 +79,7 @@ jobs:
         cd ./public
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git init
         git add -A
         git commit -m "${{ github.event.head_commit.message }} $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By Github Actions"
         git push --force --quiet "https://ccknbc:${{ secrets.GH_TOKEN }}@github.com/CCKNBC/ccknbc.github.io.git" master:master
@@ -93,9 +96,9 @@ jobs:
     - name: Purge JsDelivr CDN
       run: |
         curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/
-        curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/css/index.css
-        curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/js/main.js
-        curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/js/utils.js
+      # curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/css/index.css
+      # curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/js/main.js
+      # curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/js/utils.js
 
     - name: Delete Workflow Runs
       uses: Mattraks/delete-workflow-runs@main
