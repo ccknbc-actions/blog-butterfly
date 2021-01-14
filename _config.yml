@@ -35,6 +35,8 @@ skip_render:
   - robots.txt
   - ads.txt
   - CNAME
+  - .nojekyll
+  - LICENSE
   - google7787a6577761be93.html
   - ".github/**/*"
   - "sitemap/**/*"
