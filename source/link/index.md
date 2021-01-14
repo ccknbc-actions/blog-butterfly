@@ -13,17 +13,11 @@ date: 2020-06-04 22:17:49
 <div id='Friends'></div>
 <script>
   var obj = {
-    // 容器选择器
     el: '#friend1',
-    // gitee主人id
     owner: 'ccknbc',
-    // gitee仓库
     repo: 'link',
-    // 排序方式
     direction_sort: 'asc',
-    // 按标签排序
     sort_container: ["效果展示"],
-    // 标签描述
     labelDescr: {
       效果: "<span style='color:#8FBC8F;'><b>部分组合效果展示</b></span>"
     }
@@ -42,7 +36,17 @@ date: 2020-06-04 22:17:49
     }
   }
 </script>
-
+<!-- <script src="https://cdn.jsdelivr.net/gh/zykjofficial-actions/screen_shot@main/screen_shot.js"></script>
+<script>
+    getFriendsScreenShot({
+        user:"ccknbc-actions",
+        repo:"blogroll",
+        branch:"webp",
+        suffix:"webp",
+        lazyImg: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-10~13_03_22.webp",
+        duration:"5e3"
+    })
+</script> -->
 {% tabs links%}
 <!-- tab 申请须知@fas fa-check-circle -->
 
@@ -88,8 +92,8 @@ img_animation: auto_rotate_right 0s linear infinite
 
 # 风格 可选项 item和card
 card_style: item
-# 自定义网站截图（当样式为card时可以自定义网站截图，防止api接口宕掉无法显示图）
-screenshot: 
+# 自定义网站截图（当样式为card时可以自定义网站截图，防止api接口宕掉无法显示图，或者您可以替换以下地址中我的域名部分为您的域名，每天会自动截图）
+screenshot: https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
 ```
 <!-- 1. **点击我的信息，您可以复制后自行选择添加至您的友链**
 2. **鼠标悬停，可显示站点`预览图`**
@@ -105,10 +109,21 @@ screenshot:
 <!-- tab 我的信息 @fas fa-id-card -->
 
 ```yaml
-- name: CC的部落格
-  link: https://blog.ccknbc.cc
-  avatar: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/ccknbc.png
-  descr: CC康纳百川
+name: CC的部落格
+link: https://blog.ccknbc.cc
+avatar: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/ccknbc.png
+descr: CC康纳百川
+```
+以下为选填信息
+```yaml
+--primary-color: linear-gradient(135deg, #84fab0 10%, #8fd3f4 100%)
+border-width: 1px
+border-style: solid
+--primary-rotate: 180deg
+animation: link_custom1 2s infinite alternate
+img_animation: auto_rotate_right 2s linear infinite
+card_style: item
+screenshot: https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
 ```
 <!-- endtab -->
 

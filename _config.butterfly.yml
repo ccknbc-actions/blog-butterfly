@@ -1039,11 +1039,11 @@ inject:
 
 CDN:
   # main
-  # main_css: https://cdn.jsdelivr.net/gh/ccknbc/ccknbc.github.io/css/index.css
+  main_css: https://cdn.jsdelivr.net/gh/ccknbc/ccknbc.github.io/css/index.css
   main: https://cdn.jsdelivr.net/gh/ccknbc/ccknbc.github.io/js/main.js
   utils: https://cdn.jsdelivr.net/gh/ccknbc/ccknbc.github.io/js/utils.js
   # 调试用
-  main_css: /css/index.css
+  # main_css: /css/index.css
   # main: /js/main.js
   # utils: /js/utils.js
 

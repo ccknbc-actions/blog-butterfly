@@ -41,7 +41,6 @@ jobs:
     - name: Generate
       run: |
         git clone https://github.com/CCKNBC/ccknbc.github.io.git public
-        npm un hexo-widget-tree
         npm run start
       # git clone -b posts https://github.com/ccknbc-actions/blog-butterfly.git source/_posts
 
