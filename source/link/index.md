@@ -10,6 +10,7 @@ date: 2020-06-04 22:17:49
 ---
 
 <script src='https://cdn.jsdelivr.net/npm/butterfly-friend/dist/friend.min.js'></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/zykjofficial-actions/screen_shot@main/screen_shot.js"></script> -->
 <div id='Friends'></div>
 <script>
   var obj = {
@@ -19,7 +20,7 @@ date: 2020-06-04 22:17:49
     direction_sort: 'asc',
     sort_container: ["效果展示"],
     labelDescr: {
-      效果: "<span style='color:#8FBC8F;'><b>部分组合效果展示</b></span>"
+      效果展示: "<span style='color:#8FBC8F;'><b>部分组合效果展示，关于之前的友链，这边做了全部删除 issue 处理，我以为回复会发送邮件（实际上并没有），格式问题部分友链不显示，本来我想一个一个自己改，但还是不知道大家会选择哪种风格，所以麻烦大家自己重新申请</b></span>"
     }
   }
   try {
@@ -36,8 +37,7 @@ date: 2020-06-04 22:17:49
     }
   }
 </script>
-<!-- <script src="https://cdn.jsdelivr.net/gh/zykjofficial-actions/screen_shot@main/screen_shot.js"></script>
-<script>
+<!-- <script>
     getFriendsScreenShot({
         user:"ccknbc-actions",
         repo:"blogroll",
@@ -50,7 +50,7 @@ date: 2020-06-04 22:17:49
 {% tabs links%}
 <!-- tab 申请须知@fas fa-check-circle -->
 
-快速申请友链请{% btn 'https://gitee.com/ccknbc/link/',点击这里,far fa-hand-point-right,outline green larger %}按照`README`和`模板`提交`Issue`即可
+快速申请友链请{% btn 'https://gitee.com/ccknbc/link?skip_mobile=true',点击这里,far fa-hand-point-right,outline green larger %}按照`README`和`模板`提交`Issue`即可
 
 **Issue 配置预览**
 
@@ -92,7 +92,7 @@ img_animation: auto_rotate_right 0s linear infinite
 
 # 风格 可选项 item和card
 card_style: item
-# 自定义网站截图（当样式为card时可以自定义网站截图，防止api接口宕掉无法显示图，或者您可以替换以下地址中我的域名部分为您的域名，每天会自动截图）
+# 自定义网站截图（当样式为card时可以自定义网站截图，可留空，但为防止api接口宕掉无法显示图，您还可以替换以下地址中我的域名部分为您的域名，每天会自动截图）
 screenshot: https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
 ```
 <!-- 1. **点击我的信息，您可以复制后自行选择添加至您的友链**
@@ -100,7 +100,7 @@ screenshot: https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.ccknbc
 3. **每周`定时更新`，因此如果您想立即看到友链截图，可在审核通过后前往仓库点一下`star`**
 4. **若网站截图不显示，请刷新，还有此页有`BUG`**
 
-{% link 友链截图列表, https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
+{% link 友链截图列表, https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
 
 {% ghcard ccknbc-actions/blogroll, theme=vue %}  -->
 
@@ -122,8 +122,10 @@ border-style: solid
 --primary-rotate: 180deg
 animation: link_custom1 2s infinite alternate
 img_animation: auto_rotate_right 2s linear infinite
-card_style: item
+card_style: card/item
 screenshot: https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
+# screenshot: https://image.thum.io/get/width/1024/crop/768/https://blog.ccknbc.cc
+# screenshot: https://s0.wordpress.com/mshots/v1/https://blog.ccknbc.cc?w=1280&h=960
 ```
 <!-- endtab -->
 
