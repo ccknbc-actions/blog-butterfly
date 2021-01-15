@@ -1,0 +1,18 @@
+image: node:12-alpine
+variable:
+  script:
+    - echo $YUQUE_TOKEN
+pages:
+  script:
+    - npm install hexo-cli
+    - test -e package.json && npm install
+    - npm run start
+  artifacts:
+    paths:
+      - public
+  cache:
+    paths:
+      - node_modules
+    key: project
+  only:
+    - master
