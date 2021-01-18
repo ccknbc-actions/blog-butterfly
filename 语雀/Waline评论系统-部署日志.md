@@ -16,7 +16,6 @@ id: 20
 
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/20)
 自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/waline-commens-system-deployment-logs)
-\*\*
 **以下内容转载自 **[**官方文档**](https://waline.js.org/)**（就是懒得截图再写一遍）**
 
 ---
@@ -41,45 +40,43 @@ Waline - 一款从 [Valine](https://valine.js.org) 衍生的带后端评论系�
   | | | SQLite |
   | | | PostgreSQL |
 
-对于想白嫖的小白，Vercel + LeanCloud 是不错的选择，如果你主要面向对象为大陆用户，使用 CloudBase 部署也是个不错的选择，它在海外表现也没那么差，或者您仅使用 CloudBase 来做数据存储
-{% note warning simple %}如果您使用 Vercel + LeanCloud，并且使用 Vercel 发送评论通知，您不必担心 LeanCloud 流控问题，并且之前使用过 Valine 或者部署过 Valine-Admin 项目的可以直接拿来用；对于评论转移，官方提供了[迁移助手](https://waline.js.org/migration/tool.html)供您使用，不用担心之前评论丢失的问题{% endnote %}
+对于想白嫖的小白， `Vercel`  + `LeanCloud`  是不错的选择，如果你主要面向对象为大陆用户，使用 `CloudBase`  部署也是个不错的选择，它在海外表现也没那么差，或者您仅使用 `CloudBase`  来做数据存储
+{% note warning simple %}如果您使用 `Vercel` + `LeanCloud` ，并且使用 `Vercel`  发送评论通知，您不必担心 LeanCloud 流控问题，并且之前使用过 Valine 或者部署过 `Valine-Admin`  项目的可以直接拿来用；对于评论转移，官方提供了[迁移助手](https://waline.js.org/migration/tool.html)供您使用，不用担心之前评论丢失的问题{% endnote %}
 
 ## Todo
 
-- ✅ 邮件通知
-- ✅ 微信通知
-- ✅ QQ 通知
-- ✅ Telegram 通知
-- ✅ Akismet
-- ✅ 文章统计
-- ✅ 多语言同步
-- ✅ 自定义语言支持
-- ✅ 登录支持
-- ✅ 评论管理
-- ✅ 评论删除
-- ✅ 其它数据库支持（已支持 LeanCloud, MySQL, MongoDB, SQLite, PostgreSQL)
-- ✅ 基于 IP 的发布评论频率限制
-- ✅ 基于关键词的评论过滤限制
-- ✅ IP 黑名单
-- ✅ 重复内容检测
-- ✅ CloudBase 腾讯云开发部署支持
-- ✅ 社交登录
-- AWS, GCP, Azure 部署支持
-- 置顶评论
-- 评论赞踩
-- 其它...
+{% checkbox green checked, 微信通知  %}
+{% checkbox green checked, QQ 通知 %}
+{% checkbox green checked, Telegram 通知 %}
+{% checkbox green checked, Akismet  %}
+{% checkbox green checked, 文章统计 %}
+{% checkbox green checked, 多语言同步%}
+{% checkbox green checked, 自定义语言支持 %}
+{% checkbox green checked, 登录支持 %}
+{% checkbox green checked, 评论管理 %}
+{% checkbox green checked, 评论删除 %}
+{% checkbox green checked, 其它数据库支持（已支持 LeanCloud, CloudBase, MySQL, MongoDB, SQLite, PostgreSQL) %}
+{% checkbox green checked, 基于 IP 的发布评论频率限制  %}
+{% checkbox green checked, 基于关键词的评论过滤限制 %}
+{% checkbox green checked, IP 黑名单 %}
+{% checkbox green checked, 重复内容检测 %}
+{% checkbox green checked, CloudBase 腾讯云开发部署支持 %}
+{% checkbox green checked, 社交登录 %}
+{% checkbox red,AWS, GCP, Azure 部署支持  %}
+{% checkbox red,置顶评论  %}
+{% checkbox red,评论赞踩  %}
+{% checkbox blue, 其它... %}
 
-真·欢迎你为 Waline 的开发做贡献。
-{% note warning simple %}目前社交登录仅支持 GitHub， 未来会支持更多平台 {% endnote %}
+{% note warning simple %}目前社交登录仅支持 `GitHub` ， 未来会支持更多平台 {% endnote %}
 
 ## Vercel + LeanCloud 部署
 
-这部分请前往[官方文档](https://waline.js.org/quick-start.html)查看，不过需要注意的是如果你的 GitHub 账号主邮箱是 QQ 邮箱的话建议更改为其他邮箱（毕竟他们认为 QQ 邮箱是垃圾邮箱）再去注册 Vercel（或者你可以选择给客服发一封邮件让他们帮忙解锁你的账号）
-如果您之前用过 Valine，那么关于 LeanCloud 部分你就不用做什么了，数据兼容，拿到那几个 key 即可
+这部分请前往[官方文档](https://waline.js.org/quick-start.html)查看，不过需要注意的是如果你的 `GitHub`  账号主邮箱是 `QQ`  邮箱的话建议更改为其他邮箱（毕竟他们认为 QQ 邮箱是垃圾邮箱）再去注册 Vercel（或者你可以选择给客服发一封邮件让他们帮忙解锁你的账号）
+如果您之前用过 Valine，那么关于 LeanCloud 部分你就不用做什么了，数据兼容，拿到那几个 `key`  即可
 
 ### 配置项
 
-这个可直接参考官方文档按需进行配置即可，因为目前云开发因众所周知的原因不支持连接 Telegram 服务器，所以如果您要配置电报新评论通知，请使用 Vercel 进行配置，不过因为目前没有异步通知，加上反垃圾检测等功能，发布评论可能需要很长时间，这个我使用了 LeanCloud 来继续帮我发送通知（反正我也没什么评论，流控问题第二天补发评论也不是不可）
+这个可直接参考官方文档按需进行配置即可，因为目前云开发因众所周知的原因不支持连接 `Telegram`  服务器，所以如果您要配置电报新评论通知，请使用 Vercel 进行配置，不过因为目前没有异步通知，加上反垃圾检测等功能，发布评论可能需要很长时间，这个我使用了 LeanCloud 来继续帮我发送通知（反正我也没什么评论，流控问题第二天补发评论也不是不可）
 {% note warning simple %}对于邮件通知部分，目前的设定是，对于新评论，如果博主配置了 QQ/微信/Telegram 通知中任意一种或多种，则邮件通知将会取消，而对于回复（子评论），博主和被回复者（如果填了邮箱的话）均可收到邮件通知{% endnote %}
 我目前使用的 Hexo Butterfly 主题已经从 3.5.0 beta3 版本起内置了 Waline 评论系统，如果您使用老版本主题请升级，或者根据您所用版本的 Valine 模板 pug 来照葫芦画瓢，根据官方配置进行对应修改，主题中 option 为可选配置，万一将来增加了某些配置，主题不必为此升级, bg 为主题配置项
 
@@ -99,7 +96,7 @@ waline:
     avatarCDN: https://sdn.geekzu.org/avatar/
 ```
 
-客户端脚本里可以通过 langMode.admin 这个配置自定义角标的文案,例如：
+客户端脚本里可以通过 `langMode.admin`  这个配置自定义角标的文案,例如：
 
 ```javascript
 function waline() {
@@ -129,29 +126,20 @@ function waline() {
 
 ### 一键部署
 
-Waline 还支持一键部署到腾讯云开发上。点击下方按钮，跳转至腾讯云开发进行快速部署。登录之后会让你选择部署的欢迎，你可以选择已有的应用，也可以选择新建应用。
-
-[ ![](https://cdn.nlark.com/yuque/0/2021/svg/8391407/1610869486672-8e5192f0-efdb-46ae-9a42-45935fc9dea5.svg#align=left&display=inline&height=32&margin=%5Bobject%20Object%5D&originHeight=32&originWidth=156&size=0&status=done&style=none&width=156) ](https://console.cloud.tencent.com/tcb/env/index?action=CreateAndDeployCloudBaseProject&tdl_anchor=github&tdl_site=0&appUrl=https%3A%2F%2Fgithub.com%25walinejs%2Ftcb-starter&workDir=%2F&appName=waline)
-
+一键脚本部署可以查看[官方文档](https://waline.js.org/server/cloudbase.html)，对于日访问量低于一万的站点来说够用了，但我因为删除了环境，再使用一键部署转圈之后控制台提示方法已失效，所以关于 Waline 的教程我也不怎么写了，反正我也是能不用腾讯云尽量不用，虽然白嫖很爽
 {% note warning simple %}
-一键部署虽然方便，但是仅支持按量计费环境——也就是说，**一键部署的环境，当免费资源用尽后，将会产生费用**。且按量计费环境无法切换为包年包月环境。
+一键部署虽然方便，但是仅支持按量计费环境——也就是说，**一键部署的环境，当免费资源用尽后，将会产生费用，**且按量计费环境无法切换为包年包月环境。
 大多数情况下，免费资源能够满足日访问量在 10,000 以下的站点（参考：[免费资源如何计算？](https://twikoo.js.org/faq.html#%E5%85%8D%E8%B4%B9%E8%B5%84%E6%BA%90%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97)）。
 如果您希望，当免费资源用尽时，不产生费用，请使用手动部署。{% endnote %}
-
-![](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610869486667-d7cc23ce-c0ae-4167-a410-85524718a44d.png#align=left&display=inline&height=2248&margin=%5Bobject%20Object%5D&originHeight=2248&originWidth=2082&size=0&status=done&style=none&width=2082)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610953378969-db93161e-24d3-4a48-8934-5566774b94d2.png#align=left&display=inline&height=204&margin=%5Bobject%20Object%5D&name=image.png&originHeight=204&originWidth=423&size=11059&status=done&style=none&width=423)
 对于新用户或者说没有创建过按量计费环境的用户会显示如下内容，记得勾选开启免费资源
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610873567827-825cde85-7c99-4c5a-95e0-44c0966784cb.png#align=left&display=inline&height=632&margin=%5Bobject%20Object%5D&name=image.png&originHeight=632&originWidth=1006&size=46404&status=done&style=none&width=1006)
-点击后再点击，就会跳转到应用部署界面自动进行部署。此时会提示你“构建中，预计 3-5 分钟”，稍等片刻，该条目右侧就会出现访问和管理按钮。
-
-![](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610869486759-1cbce382-e2b8-4b04-8b57-3771f0bc8cd4.png#align=left&display=inline&height=2248&margin=%5Bobject%20Object%5D&originHeight=2248&originWidth=2670&size=0&status=done&style=none&width=2670)
-
-点击 按钮获得最终部署好的网站地址，将其填入前端脚本的 `serverURL` 配置中，即可完成整个的配置。
 
 ### 手动部署
 
 首先前往**[腾讯云的活动区域](https://cloud.tencent.com/act/pro/cloudbase01)**，注册/登陆后往下滑，找到新用户专享云开发标准型（基础版 1）资源套餐，0 元购买一个免费包年包月环境
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610870670315-08e65148-3819-48fb-878e-03fdb0c9ab64.png#align=left&display=inline&height=536&margin=%5Bobject%20Object%5D&name=image.png&originHeight=536&originWidth=1493&size=52310&status=done&style=none&width=1493)
-按照提示购买后稍等几分钟，[在这个界面可查看您所购买的环境](https://console.cloud.tencent.com/tcb/env/index)，
+按照提示购买后稍等几分钟，[在这个界面可查看您所购买的环境](https://console.cloud.tencent.com/tcb/env/index)
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610870083481-8e4cad1a-c70a-4cad-9192-11be8003241c.png#align=left&display=inline&height=233&margin=%5Bobject%20Object%5D&name=image.png&originHeight=233&originWidth=523&size=10168&status=done&style=none&width=523)
 
 ##
@@ -162,9 +150,23 @@ Waline 还支持一键部署到腾讯云开发上。点击下方按钮，跳转�
 
 #### 手动升级
 
+找到 Vercel 帮你在创建的仓库，叫 `waline`  啦，编辑 `package.json`  中依赖版本号即可完成升级，版本号以 `npm` ![](https://img.shields.io/npm/v/@waline/vercel?color=critical&logo=npm&style=flat-square#align=left&display=inline&height=20&margin=%5Bobject%20Object%5D&originHeight=20&originWidth=105&status=done&style=none&width=105)  为准，因为 GitHub 由于考虑到电报机器人自动推送消息过于频繁影响到群友，会延迟推送
+
 #### 自动升级
 
+其实原理还是一样的，因为 Vercel 会监控仓库文件的变化来帮我们自动部署，那么我们要做的就是自动更改版本号，这里你可以用 `Github Actions`  实现，定时每隔半小时自动更新并 push，但这样似乎有点浪费资源，所以不怎么推荐，而我们这个仓库通常都是公开的（私有也没关系）
+首先你需要安装一个应用[Renovate](https://github.com/marketplace/renovate),选择免费版计划即可，他会帮我们监控所用依赖的版本更新变化，并为提交一个 `PR` ，我们要做的只是合并 PR 而已，但手动合并之前也讲过，多少有点不方便，自动合并我们知道有打标签自动合并，GitHub Actions 工具人自动合并，这些大家搜以下关键词就好，但这个应用它本身实际上支持自动合并，查看[官方文档](https://docs.renovatebot.com/configuration-options/#automerge)发现在 `renovate.json`  中配置即可，注意依赖版本是测试版还是正式版哦，目前我们用到的是 `dependencies`  而不是 devDependencies 所以不要只顾复制粘贴
+
+如果你是公开仓库，还可以使用[Mergify](https://github.com/marketplace/mergify)，安装完成后他能它免费帮我们自动合并公开仓库的 PR，我们设定一个条件，比如 PR 提交作者为 renovate，就自动帮我们点击合并，并删除多余分支，当然这些都需要配置，这里具体会在另一篇文档中讲到
+{% note info simple %}以上两个应用你可以选择安装到全部仓库，或者只安装到选择的仓库{% endnote %}
+
+如果你想懒的话可以先删除你现有的名为 Waine 的仓库，再 fork 我的仓库，然后去你的 Vercel 解绑之前的仓库，再绑定你 fork 的仓库，最后点一下重新部署即可
+
 ### CloudBase
+
+---
+
+这部分貌似有问题，我再看看吧，建议还是使用 Vercel 部署，你要想用 TCB 做数据库也行，参考[官方文档](https://waline.js.org/server/databases.html#cloudbase)即可
 
 #### 一键部署
 
@@ -172,6 +174,19 @@ Waline 还支持一键部署到腾讯云开发上。点击下方按钮，跳转�
 
 #### 手动部署
 
+[点击这里](https://console.cloud.tencent.com/tcb/scf)新建云函数，[按照官方仓库](https://github.com/walinejs/tcb-starter)所有文件新建文件，最后点击保存并安装依赖即可，因为函数入口等原因
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610952138456-e87fa0a3-7cbb-4ff7-8813-bce532860885.png#align=left&display=inline&height=582&margin=%5Bobject%20Object%5D&name=image.png&originHeight=582&originWidth=687&size=31215&status=done&style=none&width=687)
+
 ##### 手动升级
 
+就是去[仓库](https://github.com/walinejs/tcb-starter)复制粘贴的事情了
+
 ##### 自动升级
+
+你可以参考我的 [twikoo-update](https://github.com/ccknbc-actions/twikoo-update) 仓库进行更改，和上面提到的原理差不多，只是用到了 Actions（如果你之前没接触过这些，建议使用 Vercel 部署或者上面的一键部署，也比较方便），在合并 PR 后帮我们自动升级部署到云开发，解释一下几个环境变量
+
+| SECRETID   | API 访问密钥 ID，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                       |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SECRETKEY  | API 访问密钥 KEY，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                      |
+| TCBFUNNAME | 你想要新建/已有函数的名称，比如 `Waline`                                                                                                                 |
+| TCBENVID   | 环境 ID，可[点击这里](https://console.cloud.tencent.com/tcb/env/overview)或[这里](https://console.cloud.tencent.com/tcb/env/index)查看，地址栏后也会显示 |

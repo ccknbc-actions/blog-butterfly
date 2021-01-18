@@ -1,8 +1,8 @@
 ---
 title: GITHub 自动合并 PR 笔记
 translate_title: github-automatically-merges-pull-requests-notes
-date: 2021-01-01 00:00:00
-updated: 2021-01-01 00:00:00
+date: 2021-01-18 00:00:00
+updated: 2021-01-18 00:00:00
 tags: [工具, GitHub]
 categories: [工具, GitHub]
 keywords: [工具, GitHub]
