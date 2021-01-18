@@ -19,6 +19,8 @@ id: 20
 \*\*
 **以下内容转载自 **[**官方文档**](https://waline.js.org/)**（就是懒得截图再写一遍）**
 
+---
+
 Waline - 一款从 [Valine](https://valine.js.org) 衍生的带后端评论系统。可以将 Waline 等价成 With backend Valine.
 
 ## 特性
@@ -70,103 +72,10 @@ Waline - 一款从 [Valine](https://valine.js.org) 衍生的带后端评论系�
 真·欢迎你为 Waline 的开发做贡献。
 {% note warning simple %}目前社交登录仅支持 GitHub， 未来会支持更多平台 {% endnote %}
 
-## 快速开始
+## Vercel + LeanCloud 部署
 
-如果你想在某个网页或者文章页中使用 Waline，请参照以下步骤配置
-
-获取 APP ID 和 APP Key
-
-请先[登录](https://console.leancloud.app/login.html#/signin)或[注册](https://console.leancloud.app/login.html#/signup) `LeanCloud 国际版`, 进入[控制台](https://console.leancloud.app/applist.html#/apps)后点击左下角[创建应用](https://console.leancloud.app/applist.html#/newapp)：
-
-![](https://cdn.nlark.com/yuque/0/2021/jpeg/8391407/1610868219177-9a02156c-05b0-483d-9caa-77235c04852a.jpeg#align=left&display=inline&height=456&margin=%5Bobject%20Object%5D&originHeight=456&originWidth=616&size=0&status=done&style=none&width=616)
-
-应用创建好以后，进入刚刚创建的应用，选择左下角的`设置`>`应用Key`，然后就能看到你的`APP ID`,`APP Key`和`Master Key`了：
-
-![](https://cdn.nlark.com/yuque/0/2021/jpeg/8391407/1610868354384-7ecf0d71-1b44-4899-a7c0-b6c36e843066.jpeg#align=left&display=inline&height=533&margin=%5Bobject%20Object%5D&originHeight=533&originWidth=1202&size=0&status=done&style=none&width=1202)
-
-> **注：**
-> 这里推荐使用 Leancloud 国际版。如果你确实想用 Leancloud 国内版的话（国际版是 [leancloud.app](https://leancloud.app)，非国际版是 [leancloud.cn](https://leancloud.cn)），除了 `APP_ID`, `APP_Key` 和 `Master Key` 之外，还需要对应用进行域名绑定。
-> 进入应用后选择 >  > API 访问域名 > 输入需要绑定的已备案域名点击 。之后按照页面上的提示去 DNS 上做正确的 CNAME 解析即可。
-> ![](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610868218749-74f7fc74-7643-4216-bb1b-b72e955cbc52.png#align=left&display=inline&height=1259&margin=%5Bobject%20Object%5D&originHeight=1259&originWidth=2891&size=0&status=done&style=none&width=2891)
-
-## Vercel 部署
-
-[ ![](https://cdn.nlark.com/yuque/0/2021/svg/8391407/1610867589839-a3477ee0-1238-40d2-9099-8ca638620019.svg#align=left&display=inline&height=32&margin=%5Bobject%20Object%5D&originHeight=32&originWidth=92&size=0&status=done&style=none&width=92) ](https://vercel.com/import/project?template=https://github.com/lizheming/waline/tree/master/example)
-
-点击上方按钮，跳转至 Vercel 进行快速部署。未登录的话需要登录，这里选 Github 登录即可。登录后会让你输入 Vercel 项目名称。
-
-![](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610867589321-78ee1ab7-5ba8-4e29-95ce-cef3bbbb14d9.png#align=left&display=inline&height=1880&margin=%5Bobject%20Object%5D&originHeight=1880&originWidth=2200&size=0&status=done&style=none&width=2200)
-
-输入名称后点击 进入下一步，输入 Github 仓库名称。Vercel 会基于 waline 模板帮助你新建并初始化该仓库。
-
-![](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610867589161-d8ff248a-e504-4629-99d4-fe42d408fcb9.png#align=left&display=inline&height=1880&margin=%5Bobject%20Object%5D&originHeight=1880&originWidth=2200&size=0&status=done&style=none&width=2200)
-
-仓库初始化完毕后开始准备部署到 Vercel。这里需要在 Environment Variables 初配置 `LEAN_ID`, `LEAN_KEY` 和 `LEAN_MASTER_KEY` 三个环境变量。它们的值分别对应上一步在 LeanCloud 中获得的 `APP ID`, `APP KEY`, `Master Key`。如果你是 LeanCloud 国内版用户的话，还需要输入 `LEAN_SERVER` 环境变量，对应的是你在上一步上绑定的已备案域名。
-
-![](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610867589089-57cb1f84-bb5e-4f20-a190-15f915d08cfc.png#align=left&display=inline&height=2218&margin=%5Bobject%20Object%5D&originHeight=2218&originWidth=2200&size=0&status=done&style=none&width=2200)
-
-点击 就会开始进行部署了。稍等片刻，就会看到满屏的烟花庆祝你部署成功了。点击 会跳转到部署好的网站地址上，该地址即为之后需要填入的 `serverURL` 地址。
-
-![](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610867589610-8471bd9a-88c7-4604-86d1-d100563c914e.png#align=left&display=inline&height=1100&margin=%5Bobject%20Object%5D&originHeight=1100&originWidth=2143&size=0&status=done&style=none&width=2143)
-
-## HTML 片段
-
-修改初始化对象中的 `serverURL` 的值为上面刚刚获取到的二级域名即可(其他可以默认)。
-
-```html
-<head>
-  ..
-  <script src="//cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js"></script>
-  ...
-</head>
-<body>
-  ...
-  <div id="waline"></div>
-  <script>
-    new Waline({
-      el: "#waline",
-      path: location.pathname,
-      serverURL: "https://your-domain.vercel.app",
-    });
-  </script>
-</body>
-```
-
-## 配置
-
-修改初始化对象中的 `serverURL` 的值为上面刚刚获取到的二级域名即可(其他可以默认)。
-
-```javascript
-new Waline({
-  el: "#waline",
-  path: location.pathname,
-});
-```
-
-## NPM
-
-Waline 已发布到[npm](https://www.npmjs.com/package/@waline/client)，可以直接用命令安装：
-
-```bash
-# Install waline
-npm install @waline/client --save-dev
-```
-
-```javascript
-// Use import
-import Waline from "@waline/client";
-// or Use require
-const Waline = require("@waline/client");
-
-new Waline({
-  el: "#waline",
-  // other config
-});
-```
-
-## 评论数据管理
-
-Waline 还带有简单的后台，可以实现对评论的管理。部署完成后访问 `<serverURL>/ui/register` 进行注册，第一个注册的你会被设定成管理员。登录成功后就可以看到评论管理的界面了，大家可以收藏该地址方便后续使用。
+这部分请前往[官方文档](https://waline.js.org/quick-start.html)查看，不过需要注意的是如果你的 GitHub 账号主邮箱是 QQ 邮箱的话建议更改为其他邮箱（毕竟他们认为 QQ 邮箱是垃圾邮箱）再去注册 Vercel（或者你可以选择给客服发一封邮件让他们帮忙解锁你的账号）
+如果您之前用过 Valine，那么关于 LeanCloud 部分你就不用做什么了，数据兼容，拿到那几个 key 即可
 
 ### 配置项
 
@@ -209,6 +118,12 @@ function waline() {
   });
 }
 ```
+
+还有就是可能有人会觉得默认邮件通知模板太单调，想和 Valine-Admin 一样切换模板，其实有这个配置的，只是目前的方法是写在环境变量中，而环境变量限制长度（大小），或者说是不适合这种方式配置，如果要改的话可以先查看[issues/106](https://github.com/lizheming/waline/issues/106)相关内容，或者等以后优化再说；当然如果你的评论不是很多，并且之前配置过 Valine-Admin，那么你仍然可以使用 LeanCloud 来做异步发送通知，关闭默认的通知配置，或者使用 js 推送
+
+[评论 Hooks](https://waline.js.org/server/basic.html#%E8%AF%84%E8%AE%BA-hooks)，可以根据官方的例子自己做一些配置，相比于其他，违禁词，屏蔽 IP 等配置可以说是人性化了，但万一配置不好一些正常评论可能也会被判定为垃圾内容，所以我推荐使用人工审核功能，不过这边不得不说另一个评论系统 [Twikoo](https://twikoo.js.org/)，支持查看自己审核中的评论，评论置顶，点赞等，不过我想 Waline 将来也能实现，毕竟 Flag 立那了
+
+图片上传 uploadImage 部分配置 理论上是可以适配任何图床，配置例子可查看 [issues/123](https://github.com/lizheming/waline/issues/123)，当然内置了一个默认图床，开箱即用
 
 ## CloudBase 云开发部署
 
