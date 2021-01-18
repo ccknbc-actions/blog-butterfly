@@ -2,13 +2,13 @@
 
 if config.valine
   include ./valine.pug
-if config.waline
+else if config.waline
   include ./waline.pug
-if config.github_issues.enable
+else if config.github_issues.enable
   include ./github-issues.pug
-if config.disqus.enable
+else if config.disqus.enable
   include ./disqus-comment.pug
-if config.twikoo
+else if config.twikoo
   include ./twikoo-comment.pug
-if theme.newest_comments.artalk.enable
+else if config1.artalk
   include ./artalk-comment.pug

@@ -826,8 +826,8 @@ runtimeshow:
 # Aside widget - Newest Comments
 newest_comments:
   enable: true
-  limit: 10
-  storage: 10
+  limit: 5
+  storage: 1
   avatar: true
   sort_order: # Don't modify the setting unless you know how it works
   valine: false
@@ -838,7 +838,7 @@ newest_comments:
     enable: false
     forum: ccknbc
     api_key: Z6F8Gc9KvW2YCh6p11VRVNvMBYfdaKR3IMRFLVmoYaIQJ2ysp38fZ9tivPdgyBWu
-  twikoo: true
+  twikoo: false
   waline: true
   artalk:
     enable: false
