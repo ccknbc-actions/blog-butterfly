@@ -1,0 +1,14 @@
+- let config = theme.newest_comments
+
+if config.valine
+  include ./valine.pug
+if config.waline
+  include ./waline.pug
+if config.github_issues.enable
+  include ./github-issues.pug
+if config.disqus.enable
+  include ./disqus-comment.pug
+if config.twikoo
+  include ./twikoo-comment.pug
+if theme.newest_comments.artalk.enable
+  include ./artalk-comment.pug
