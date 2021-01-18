@@ -16,7 +16,7 @@ id: 20
 
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/20)
 自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/waline-commens-system-deployment-logs)
-**以下内容转载自 **[**官方文档**](https://waline.js.org/)**（就是懒得截图再写一遍）**
+**以下内容转载自 **[官方文档](https://waline.js.org/)**（就是懒得截图再写一遍）**
 
 ---
 
@@ -122,6 +122,8 @@ function waline() {
 
 图片上传 uploadImage 部分配置 理论上是可以适配任何图床，配置例子可查看 [issues/123](https://github.com/lizheming/waline/issues/123)，当然内置了一个默认图床，开箱即用
 
+表情配置和之前 Valine 是一样的，同主题还可使用 `walien.json`  的配置方式，具体可查看[主题文档](https://butterfly.js.org/posts/ceeb73f/#%E8%A9%95%E8%AB%96)
+
 ## CloudBase 云开发部署
 
 ### 一键部署
@@ -185,8 +187,9 @@ function waline() {
 
 你可以参考我的 [twikoo-update](https://github.com/ccknbc-actions/twikoo-update) 仓库进行更改，和上面提到的原理差不多，只是用到了 Actions（如果你之前没接触过这些，建议使用 Vercel 部署或者上面的一键部署，也比较方便），在合并 PR 后帮我们自动升级部署到云开发，解释一下几个环境变量
 
-| SECRETID   | API 访问密钥 ID，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                       |
+| 变量名     | 变量解释                                                                                                                                                 |
 | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SECRETID   | API 访问密钥 ID，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                       |
 | SECRETKEY  | API 访问密钥 KEY，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                      |
 | TCBFUNNAME | 你想要新建/已有函数的名称，比如 `Waline`                                                                                                                 |
 | TCBENVID   | 环境 ID，可[点击这里](https://console.cloud.tencent.com/tcb/env/overview)或[这里](https://console.cloud.tencent.com/tcb/env/index)查看，地址栏后也会显示 |
