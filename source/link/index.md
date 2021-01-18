@@ -98,10 +98,13 @@ card_style: item
 
 # 自定义网站截图，当样式为card时可以自定义网站截图
 # 留空会默认使用API截图，但为防止接口宕掉无法显示截图
-screenshot: 
+# 默认接口如下 https://image.thum.io/get/width/1024/crop/768/https://blog.ccknbc.cc
+# 备用接口: https://s0.wordpress.com/mshots/v1/https://blog.ccknbc.cc?w=1280&h=960
+# 也可替换以下连接中我的域名部分为您的域名，每天自动更新截图
+screenshot: https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
 ```
 
-{% link 友链截图列表, https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
+{% link 友链截图列表, https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
 
 {% ghcard ccknbc-actions/blogroll, theme=vue %} 
 
