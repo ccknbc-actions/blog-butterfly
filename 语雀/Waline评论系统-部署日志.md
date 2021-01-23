@@ -128,7 +128,7 @@ function waline() {
 
 ### 一键部署
 
-一键脚本部署可以查看[官方文档](https://waline.js.org/server/cloudbase.html)，对于日访问量低于一万的站点来说够用了，但我因为删除了环境，再使用一键部署转圈之后控制台提示方法已失效，所以关于 Waline 的教程我也不怎么写了，反正我也是能不用腾讯云尽量不用，虽然白嫖很爽
+一键脚本部署可以查看[官方文档](https://waline.js.org/server/cloudbase.html)，对于日访问量低于一万的站点来说够用了，但我因为删除了环境，懒得再弄了，包年包月环境挺好的
 {% note warning simple %}
 一键部署虽然方便，但是仅支持按量计费环境——也就是说，**一键部署的环境，当免费资源用尽后，将会产生费用，**且按量计费环境无法切换为包年包月环境。
 大多数情况下，免费资源能够满足日访问量在 10,000 以下的站点（参考：[免费资源如何计算？](https://twikoo.js.org/faq.html#%E5%85%8D%E8%B4%B9%E8%B5%84%E6%BA%90%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97)）。
@@ -136,6 +136,8 @@ function waline() {
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610953378969-db93161e-24d3-4a48-8934-5566774b94d2.png#align=left&display=inline&height=204&margin=%5Bobject%20Object%5D&name=image.png&originHeight=204&originWidth=423&size=11059&status=done&style=none&width=423)
 对于新用户或者说没有创建过按量计费环境的用户会显示如下内容，记得勾选开启免费资源
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610873567827-825cde85-7c99-4c5a-95e0-44c0966784cb.png#align=left&display=inline&height=632&margin=%5Bobject%20Object%5D&name=image.png&originHeight=632&originWidth=1006&size=46404&status=done&style=none&width=1006)
+
+为了日后升级的方便，不管您是否使用了 Vercel 部署，您都可以 fork [我的仓库](https://github.com/ccknbc-actions/waline) ，稍加配置即可完成自动部署更新
 
 ### 手动部署
 
@@ -162,13 +164,11 @@ function waline() {
 如果你是公开仓库，还可以使用[Mergify](https://github.com/marketplace/mergify)，安装完成后他能它免费帮我们自动合并公开仓库的 PR，我们设定一个条件，比如 PR 提交作者为 renovate，就自动帮我们点击合并，并删除多余分支，当然这些都需要配置，这里具体会在另一篇文档中讲到
 {% note info simple %}以上两个应用你可以选择安装到全部仓库，或者只安装到选择的仓库{% endnote %}
 
-如果你想懒的话可以先删除你现有的名为 Waine 的仓库，再 fork 我的仓库，然后去你的 Vercel 解绑之前的仓库，再绑定你 fork 的仓库，最后点一下重新部署即可
+如果你想懒的话可以先删除你现有的名为 Waine 的仓库，再 fork [我的仓库](https://github.com/ccknbc-actions/waline)，然后去你的 Vercel 解绑之前的仓库，再绑定你 fork 的仓库，最后点一下重新部署即可
 
 ### CloudBase
 
 ---
-
-这部分貌似有问题，我再看看吧，建议还是使用 Vercel 部署，你要想用 TCB 做数据库也行，参考[官方文档](https://waline.js.org/server/databases.html#cloudbase)即可
 
 #### 一键部署
 
@@ -185,11 +185,12 @@ function waline() {
 
 ##### 自动升级
 
-你可以参考我的 [twikoo-update](https://github.com/ccknbc-actions/twikoo-update) 仓库进行更改，和上面提到的原理差不多，只是用到了 Actions（如果你之前没接触过这些，建议使用 Vercel 部署或者上面的一键部署，也比较方便），在合并 PR 后帮我们自动升级部署到云开发，解释一下几个环境变量
+你可以 fork [我的仓库](https://github.com/ccknbc-actions/waline) 进行更改，和上面提到的原理差不多，只是用到了 Actions（如果你之前没接触过这些，建议使用 Vercel 部署或者上面的一键部署，也比较方便），在合并 PR 后帮我们自动升级部署到云开发，解释一下几个密钥，您需要在 仓库的 settings/secrets/actions 中配，组织的话可以把常用到的密钥添加为组织密钥
+，比如 ID KEY 等
 
-| 变量名     | 变量解释                                                                                                                                                 |
-| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SECRETID   | API 访问密钥 ID，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                       |
-| SECRETKEY  | API 访问密钥 KEY，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                      |
-| TCBFUNNAME | 你想要新建/已有函数的名称，比如 `Waline`                                                                                                                 |
-| TCBENVID   | 环境 ID，可[点击这里](https://console.cloud.tencent.com/tcb/env/overview)或[这里](https://console.cloud.tencent.com/tcb/env/index)查看，地址栏后也会显示 |
+| 变量名                   | 变量解释                                                                                                                                                 |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SECRETID                 | API 访问密钥 ID，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                       |
+| SECRETKEY                | API 访问密钥 KEY，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                      |
+| TCBFUNNAME（直接写算了） | 你想要新建/已有函数的名称，比如 `Waline`                                                                                                                 |
+| TCBENVID                 | 环境 ID，可[点击这里](https://console.cloud.tencent.com/tcb/env/overview)或[这里](https://console.cloud.tencent.com/tcb/env/index)查看，地址栏后也会显示 |
