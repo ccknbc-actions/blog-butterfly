@@ -1,0 +1,56 @@
+#rightside
+  #rightside-config-hide
+    if theme.edit.enable
+      if is_page() || is_post()
+        a.edit-cloud-studio(href=theme.edit.cloud_studio title=_p('edit.cloud_studio') + ' - ' + page.title target="_blank")
+          i.fas.fa-laptop-code
+        a.edit-gitlab-ide(href=theme.edit.gitlab_ide + page.source title=_p('edit.gitlab_ide') + ' - ' + page.title target="_blank")
+          i.fas.fa-code
+        a.edit-gitlab(href=theme.edit.gitlab + page.source title=_p('edit.gitlab') + ' - ' + page.title target="_blank")
+          i.fab.fa-gitlab
+      if is_post()
+        a.edit-yuque(href=theme.edit.yuque + page.id + '/edit/' title=_p('edit.yuque') + ' - ' + page.title target="_blank")
+          i.fas.fa-crow
+      else if is_home() || is_archive() || is_category() || is_tag()
+        a.edit-cloud-studio(href=theme.edit.cloud_studio title=_p('edit.cloud_studio') target="_blank")
+          i.fas.fa-laptop-code
+        a.edit-gitlab-ide(href=theme.edit.gitlab_ide title=_p('edit.gitlab_ide') target="_blank")
+          i.fas.fa-code
+    if is_post() && theme.readmode
+      button#readmode(type="button" title=_p('rightside.readmode_title'))
+        i.fas.fa-book-open
+    if theme.change_font_size
+      button#font-plus(type="button" title=_p('rightside.font_plus_title'))
+        i.fas.fa-plus.faa-pulse.animated
+      button#font-minus(type="button" title=_p('rightside.font_minus_title'))
+        i.fas.fa-minus.faa-pulse.animated
+    if theme.translate.enable
+      button#translateLink(type="button" title=_p('rightside.translate_title'))= theme.translate.default
+    if theme.darkmode.enable && theme.darkmode.button
+      button#darkmode(type="button" title=_p('rightside.night_mode_title'))
+        i.fas.fa-adjust.faa-flash.animated
+    if theme.aside.enable && theme.aside.button && page.aside !== false
+      button#hide-aside-btn(type="button" title=_p('rightside.aside'))
+        i.fas.fa-angle-double-right.faa-passing.animated
+        i.fas.fa-angle-double-left.faa-passing-reverse.animated
+  #rightside-config-show
+    if is_post()
+      if (theme.readmode || theme.translate.enable || (theme.darkmode.enable && theme.darkmode.button) || theme.change_font_size)
+        button#rightside_config(type="button" title=_p("rightside.setting"))
+          i.fas.fa-user-cog.faa-shake.animated
+      if showToc
+        button#mobile-toc-button.close(type="button" title=_p("rightside.toc"))
+          i.fas.fa-list-ul.faa-float.animated
+    else if theme.translate.enable || (theme.darkmode.enable && theme.darkmode.button) || theme.change_font_size
+      button#rightside_config(type="button" title=_p("rightside.setting"))
+        i.fas.fa-user-cog.faa-tada.animated
+
+    if theme.chat_btn
+      button#chat_btn(type="button" title=_p("rightside.chat_btn"))
+        i.fas.fa-sms.faa-horizontal.animated
+    if commentsJsLoad
+      a#to_comment(href="#post-comment" title=_p("rightside.scroll_to_comment"))
+        i.fas.fa-comments.faa-falling.animated
+    button#go-up(type="button" title=_p("rightside.back_to_top"))
+      i.fas.fa-arrow-up.faa-rising.animated
+//- && (is_post() || is_current('/messages'))
