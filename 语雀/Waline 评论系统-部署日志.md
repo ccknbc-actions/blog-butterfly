@@ -1,5 +1,5 @@
 ---
-title: Waline评论系统-部署日志
+title: Waline 评论系统-部署日志
 translate_title: waline-commens-system-deployment-logs
 date: 2021-01-17 00:00:00
 updated: 2021-01-17 00:00:00
