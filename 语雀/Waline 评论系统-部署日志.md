@@ -97,6 +97,7 @@ waline:
     avatarCDN: https://sdn.geekzu.org/avatar/
 ```
 
+这里注意一下 serverURL 以及环境变量里的 SITE_URL 网址最后的斜杠因为作者没做兼容，所以不要带上 / ，导致跳转不到对应评论界面
 客户端脚本里可以通过 `langMode.admin`  这个配置自定义角标的文案,例如：
 
 ```javascript
@@ -130,7 +131,7 @@ function waline() {
 ### 一键部署
 
 一键脚本部署可以查看[官方文档](https://waline.js.org/server/cloudbase.html)，对于日访问量低于一万的站点来说够用了，但我因为删除了环境，懒得再弄了，包年包月环境挺好的
-（至于我为什么拉不起云开发部署应用，就是作者链接给错了（见[Commit](https://github.com/lizheming/waline/commit/d815054bd4354e64016e147fb8deb50cf4511640)），当然我解决了之后，作者也不忘阴阳怪气的 “那您可真是棒棒的呢” ，当然是我自己不懂提问的智慧，这与作者没什么关系的，确信）
+（至于我为什么拉不起云开发部署应用，就是作者链接给错了,详见[Commit](https://github.com/lizheming/waline/commit/d815054bd4354e64016e147fb8deb50cf4511640)）
 
 ---
 
@@ -208,3 +209,7 @@ function waline() {
 | SECRETKEY                | API 访问密钥 KEY，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                      |
 | TCBFUNNAME（直接写算了） | 你想要新建/已有函数的名称，比如 `Waline`                                                                                                                 |
 | TCBENVID                 | 环境 ID，可[点击这里](https://console.cloud.tencent.com/tcb/env/overview)或[这里](https://console.cloud.tencent.com/tcb/env/index)查看，地址栏后也会显示 |
+
+---
+
+---
