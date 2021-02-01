@@ -66,7 +66,7 @@ card_style: item
 screenshot: 
 ```
 
-{% link 友链截图列表, https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
+{% link 友链截图列表, https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/ccknbc.png %}
 
 {% ghcard ccknbc-actions/blogroll, theme=vue %} 
 

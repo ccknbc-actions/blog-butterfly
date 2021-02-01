@@ -36,10 +36,11 @@ post:
   edit: 编辑
 
 edit: 
-  yuque: 在语雀上进行编辑/预览
-  gitlab: 在 GitLab 上进行编辑/预览
-  gitlab_ide: 在 GitLab IDE 上进行编辑/预览
-  cloud_studio: 在 Cloud Studio 上进行编辑/预览
+  yuque: 在语雀上编辑/预览
+  gitlab: 在 GitLab 上编辑/预览
+  gitlab_ide: 在 GitLab IDE 上编辑/预览
+  cloud_studio: 在 Cloud Studio 上编辑/预览
+  hexoplusplus: 在 HexoPlusPlus 上编辑
 
 search: 搜索
 algolia_search:

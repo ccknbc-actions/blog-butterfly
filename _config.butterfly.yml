@@ -110,7 +110,7 @@ favicon: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png
 
 # Avatar (頭像)
 avatar:
-  img: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png
+  img: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/ccknbc.png
   effect: false
 
 disable_top_img: false
@@ -241,13 +241,11 @@ reward:
 # Easily browse and edit blog source code online.
 edit:
   enable: true
-  # url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/
-  # For example: https://github.com/jerryc127/butterfly.js.org/edit/main/source/
-  # url: https://github.com/ccknbc-actions/blog-butterfly/edit/master/source/
   yuque: https://www.yuque.com/ccknbc/blog/
   gitlab: https://gitlab.com/CCKNBC/ccknbc.gitlab.io/-/edit/master/source/
   gitlab_ide: https://gitlab.com/-/ide/project/CCKNBC/ccknbc.gitlab.io/edit/master/-/
   cloud_studio: https://ccknbc.cloudstudio.net/ws/dbipsw
+  hexoplusplus: https://blog.ccknbc.workers.dev/hpp/admin/dash
 
 
 # Related Articles
@@ -310,11 +308,11 @@ comments:
   # - Beaudar
   # - Utterances
   # - Disqus
-  - Disqusjs
+  # - Disqusjs
   # - Livere
   # - Artalk
-  # - Waline
   - Twikoo
+  - Waline
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -775,7 +773,7 @@ aside:
     content: '
     <center>
     <a target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo 5.3.0-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><br>
-    <a target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly 3.6.0-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a><br> 
+    <a target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly 3.6.1-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a><br> 
     <a target="_blank" href="https://metroui.org.ua/index.html "><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a><br> 
     <a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Vervel-brightgreen?style=flat&logo=Vercel" title="本站采用双线部署，境外线路托管于Vercel"></a><br> 
     <a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&logo=Codio" title="本站采用双线部署，境内线路托管于Coding"></a><br> 
@@ -841,10 +839,10 @@ newest_comments:
     enable: false
     repo: ccknbc-backup/comments
   disqus:
-    enable: true
+    enable: false
     forum: ccknbc
     api_key: Z6F8Gc9KvW2YCh6p11VRVNvMBYfdaKR3IMRFLVmoYaIQJ2ysp38fZ9tivPdgyBWu
-  twikoo: false
+  twikoo: true
   waline: false
   artalk:
     enable: false
@@ -1076,8 +1074,8 @@ CDN:
   utterances: https://utteranc.es/client.js
   beaudar: https://beaudar.lipk.org/client.js
   twikoo: https://cdn.jsdelivr.net/npm/twikoo@beta/dist/twikoo.all.min.js
-  artalk: https://cdn.jsdelivr.net/gh/jalenchuh/Artalk@master/dist/Artalk.js
-  artalk_css: https://cdn.jsdelivr.net/gh/jalenchuh/Artalk@master/dist/Artalk.css
+  artalk: https://cdn.jsdelivr.net/gh/ArtalkJS/Artalk@dev/dist/Artalk.js
+  artalk_css: https://cdn.jsdelivr.net/gh/ArtalkJS/Artalk@dev/dist/Artalk.css
   waline: https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js
 
 
