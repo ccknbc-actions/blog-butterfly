@@ -36,7 +36,9 @@ post:
   edit: 编辑
 
 edit: 
-  yuque: 在语雀上编辑/预览
+  yuque: 在语雀上以富文本格式编辑/预览
+  yuque_markdown: 在语雀上以 MarkDown 格式编辑
+  yuque_html: 在语雀上以 Html 格式编辑
   gitlab: 在 GitLab 上编辑/预览
   gitlab_ide: 在 GitLab IDE 上编辑/预览
   cloud_studio: 在 Cloud Studio 上编辑/预览
