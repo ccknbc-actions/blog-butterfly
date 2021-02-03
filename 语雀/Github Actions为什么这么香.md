@@ -1,22 +1,21 @@
 ---
 title: Github Actions为什么这么香
+urlname: 09
+date: '2020-10-06 10:51:58 +0800'
 tags:
   - 工具
   - Github Actions
-
 id: 9
 categories:
   - 工具
   - Github Actions
-
 description: 本篇文章简单介绍了Github Actions的用法，以及一些变量的解释
 keywords: Github Actions
-cover: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-06~11_10_13.webp"
-photos: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-06~11_10_13.webp"
+cover: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-06~11_10_13.webp'
+photos: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-06~11_10_13.webp'
 translate_title: why-github-actions-is-so-popular
-date: 2020-10-06 10:51:58
+copyright_author_href: 'https://www.ccknbc.cc/'
 updated: 2020-10-06 12:00:00
-copyright_author_href: "https://www.ccknbc.cc/"
 ---
 
 ## 本文存在大量纰漏待修正

@@ -1,16 +1,17 @@
 ---
 title: HEXO折腾
+urlname: '03'
+date: '2020-07-01 08:00:00 +0800'
 tags: HEXO
 categories: HEXO
 description: 本篇文章简单介绍了HEXO博客的搭建，部署更新等过程
 keywords: HEXO
-cover: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~10_48_38.webp"
-photos: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~10_48_38.webp"
+cover: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~10_48_38.webp'
+photos: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~10_48_38.webp'
 id: 3
 translate_title: hexo-toss
-date: 2020-07-01 08:00:00
+copyright_author_href: 'https://www.ccknbc.cc/'
 updated: 2020-07-01 12:00:00
-copyright_author_href: "https://www.ccknbc.cc/"
 ---
 
 **个人目前使用主题为 Butterfly `3.0.1`版本，HEXO `5.0.2`版本**

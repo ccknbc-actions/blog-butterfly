@@ -1,17 +1,24 @@
 ---
 title: GitHub 自动合并 PR 笔记
+urlname: '21'
+date: '2021-01-18 00:00:00 +0800'
 translate_title: github-automatically-merges-pull-requests-notes
-date: 2021-01-18 00:00:00
-updated: 2021-01-18 00:00:00
-tags: [工具, GitHub]
-categories: [工具, GitHub]
-keywords: [工具, GitHub]
+tags:
+  - 工具
+  - GitHub
+categories:
+  - 工具
+  - GitHub
+keywords:
+  - 工具
+  - GitHub
 description: GitHub 自动合并 PR 笔记
-cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-01-17~17-57-41.webp
-photos: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-01-17~17-57-41.webp
+cover: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-01-17~17-57-41.webp'
+photos: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-01-17~17-57-41.webp'
 comments: true
-copyright_author_href: https://www.ccknbc.cc
+copyright_author_href: 'https://www.ccknbc.cc'
 id: 21
+updated: 2021-01-18 00:00:00
 ---
 
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/21)

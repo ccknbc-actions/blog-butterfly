@@ -1,17 +1,26 @@
 ---
 title: Waline 评论系统-部署日志
+urlname: '20'
+date: '2021-01-17 00:00:00 +0800'
 translate_title: waline-commens-system-deployment-logs
-date: 2021-01-17 00:00:00
-updated: 2021-01-17 00:00:00
-tags: [工具, 评论, Waline]
-categories: [工具, 评论]
-keywords: [工具, 评论, Waline]
+tags:
+  - 工具
+  - 评论
+  - Waline
+categories:
+  - 工具
+  - 评论
+keywords:
+  - 工具
+  - 评论
+  - Waline
 description: Waline评论系统-部署日志，希望你也能用上这款评论系统
-cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-01-17~15-08-37.webp
-photos: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-01-17~15-08-37.webp
+cover: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-01-17~15-08-37.webp'
+photos: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-01-17~15-08-37.webp'
 comments: true
-copyright_author_href: https://www.ccknbc.cc
+copyright_author_href: 'https://www.ccknbc.cc'
 id: 20
+updated: 2021-01-17 00:00:00
 ---
 
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/20)

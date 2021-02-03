@@ -1,22 +1,21 @@
 ---
 title: 为你的Hexo博客添加邮件订阅
+urlname: '11'
+date: '2020-10-16 18:00:00 +0800'
 tags:
   - 工具
   - 订阅
-
 id: 11
 categories:
   - 工具
   - 订阅
-
 description: 本篇文章简单介绍了利用mailchimp为你的Hexo博客添加邮件订阅功能
-keywords: 工具,订阅,邮件订阅
-cover: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-16~18_24_19.webp"
-photos: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-16~18_24_19.webp"
+keywords: '工具,订阅,邮件订阅'
+cover: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-16~18_24_19.webp'
+photos: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-16~18_24_19.webp'
 translate_title: add-email-subscription-to-your-hexo-blog
-date: 2020-10-16 18:00:00
+copyright_author_href: 'https://www.ccknbc.cc/'
 updated: 2020-11-29 11:20:00
-copyright_author_href: "https://www.ccknbc.cc/"
 ---
 
 你可能为你的 Hexo 博客配置了 RSS 订阅，但为什么不真正的利用它免费为你的博客添加邮件订阅呢？之前有讲过浏览器订阅，但只能本机订阅，并且数据清除了就相当于取消订阅，邮件订阅的自定义程度也蛮高的，所以个人也是极力推荐的

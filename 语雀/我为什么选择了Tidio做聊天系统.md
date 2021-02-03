@@ -1,22 +1,21 @@
 ---
 title: 我为什么选择了Tidio做聊天系统
+urlname: 08
+date: '2020-10-02 21:18:42 +0800'
 tags:
   - 工具
   - 聊天
-
 id: 8
 categories:
   - 工具
   - 聊天
-
 description: 本篇文章简单介绍了我使用不同聊天系统的体会
-keywords: 工具,聊天
-cover: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-12-15~18-17-57.webp"
-photos: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-12-15~18-17-57.webp"
+keywords: '工具,聊天'
+cover: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-12-15~18-17-57.webp'
+photos: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-12-15~18-17-57.webp'
 translate_title: why-did-i-choose-tidio-as-the-chat-system
-date: 2020-10-02 21:18:42
+copyright_author_href: 'https://www.ccknbc.cc/'
 updated: 2020-10-03 18:09:51
-copyright_author_href: "https://www.ccknbc.cc/"
 ---
 
 使用了很多聊天系统后，在这里做一个心得总结，虽然至今无人问津，但还是要坚持下去，有一天会有有缘人上门的
