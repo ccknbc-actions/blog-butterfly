@@ -160,13 +160,61 @@ function waline() {
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612359288449-66b53150-2146-4ec9-aa08-910b99aebd1b.png#align=left&display=inline&height=448&margin=%5Bobject%20Object%5D&name=image.png&originHeight=895&originWidth=1917&size=127338&status=done&style=none&width=958.5)
 下图中的函数代码部分填入以下代码
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612359460424-4b8cf9b4-2ef4-4758-92f6-09ae040a91ea.png#align=left&display=inline&height=396&margin=%5Bobject%20Object%5D&name=image.png&originHeight=791&originWidth=688&size=43150&status=done&style=none&width=344)
+
+```javascript
+/**
+ * Tencent is pleased to support the open source community by making CloudBaseFramework - 云原生一体化部署工具 available.
+ *
+ * Copyright (C) 2020 THL A29 Limited, a Tencent company.  All rights reserved.
+ *
+ * Please refer to license text included with this package for license details.
+ */
+module.exports.main = async (event, context) => {
+  context.callbackWaitsForEmptyEventLoop = false;
+  const entry = (() => {
+    const result = require("./app.js");
+    // const app = require('express')();
+    // result = app.use(result);
+    return result;
+  })();
+  const serverless = require("serverless-http");
+  let app = entry;
+
+  // support for async load app
+  if (entry && entry.tcbGetApp && typeof entry.tcbGetApp === "function") {
+    app = await entry.tcbGetApp();
+  }
+
+  return serverless(app, {
+    binary: [
+      "application/javascript",
+      "application/json",
+      "application/octet-stream",
+      "application/xml",
+      "font/eot",
+      "font/opentype",
+      "font/otf",
+      "image/*",
+      "video/*",
+      "audio/*",
+      "text/comma-separated-values",
+      "text/css",
+      "text/javascript",
+      "text/plain",
+      "text/text",
+      "text/xml",
+    ],
+  })(event, context);
+};
+```
+
 点击对应的云函数，进入在线编辑页面，按照[模板仓库](https://github.com/walinejs/tcb-starter)里的文件，新建对应的文件，并复制粘贴对应的内容即可
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612360652232-9eb2ad2b-bebe-4964-bb5f-75e2f9946d25.png#align=left&display=inline&height=283&margin=%5Bobject%20Object%5D&name=image.png&originHeight=566&originWidth=1171&size=59625&status=done&style=none&width=585.5)
 注意点击**保存并安装依赖**，可能会没有反应一会儿，然后等待转圈圈部署完毕即可
 **![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612360855940-241970ec-5c18-4bc8-9168-9fd945deb761.png#align=left&display=inline&height=71&margin=%5Bobject%20Object%5D&name=image.png&originHeight=142&originWidth=264&size=4012&status=done&style=none&width=132)![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612361085479-f39b6b2b-2293-4685-882e-9e20aa611dea.png#align=left&display=inline&height=32&margin=%5Bobject%20Object%5D&name=image.png&originHeight=64&originWidth=251&size=3262&status=done&style=none&width=125.5)**
 当然还没有结束，我们需要点击 `环境 --> HTTP 访问服务` （[点击直达](https://console.cloud.tencent.com/tcb/env/access))，如果你想绑定自定义域名可以照图中绑定，记得先申请一下证书，如果你想要 HTTPS（这个可能花的时间有点长）
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612361294908-3ef584b5-5cbc-43e5-b744-cda357057ec0.png#align=left&display=inline&height=336&margin=%5Bobject%20Object%5D&name=image.png&originHeight=671&originWidth=1596&size=62417&status=done&style=none&width=798)
-点击新建，新建触发路径，点击保存即可，注意路径最后没有 / ，等待构建完成后你就可通过对应的链接访问 demo 页面了，这个链接就是上面提到的 `serverURL` 
+点击新建，新建触发路径，点击保存即可，注意路径最后没有 / ，等待构建完成后你就可通过对应的链接访问 demo 页面了，这个链接就是上面提到的 `serverURL` ，例如我的 [https://tcb.ccknbc.cc/waline](https://tcb.ccknbc.cc/waline)
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612361631129-fecd45a5-f694-4154-8707-9976eb10adb5.png#align=left&display=inline&height=268&margin=%5Bobject%20Object%5D&name=image.png&originHeight=535&originWidth=753&size=29976&status=done&style=none&width=376.5)
 然后我们需要设置[ WEB 安全域名](https://console.cloud.tencent.com/tcb/env/safety)，把你的域名放入白名单即可（本地测试的话端口也要对应上哦）
 
@@ -203,19 +251,19 @@ function waline() {
 
 ##### 手动升级
 
-就是去[仓库](https://github.com/walinejs/tcb-starter)复制粘贴的事情了
+就是去[仓库](https://github.com/walinejs/tcb-starter)复制粘贴修改过的文件的事情了
 
 ##### 自动升级
 
 你可以 fork [我的仓库](https://github.com/ccknbc-actions/waline) 进行更改，和上面提到的原理差不多，只是用到了 Actions（如果你之前没接触过这些，建议使用 Vercel 部署或者上面的一键部署，也比较方便），在合并 PR 后帮我们自动升级部署到云开发，解释一下几个密钥，您需要在 仓库的 settings/secrets/actions 中配，组织的话可以把常用到的密钥添加为组织密钥
 ，比如 ID KEY 等
 
-| 变量名                   | 变量解释                                                                                                                                                 |
-| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SECRETID                 | API 访问密钥 ID，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                       |
-| SECRETKEY                | API 访问密钥 KEY，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                      |
-| TCBFUNNAME（直接写算了） | 你想要新建/已有函数的名称，比如 `Waline`                                                                                                                 |
-| TCBENVID                 | 环境 ID，可[点击这里](https://console.cloud.tencent.com/tcb/env/overview)或[这里](https://console.cloud.tencent.com/tcb/env/index)查看，地址栏后也会显示 |
+| 变量名                                | 变量解释                                                                                                                                                 |
+| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| SECRETID                              | API 访问密钥 ID，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                       |
+| SECRETKEY                             | API 访问密钥 KEY，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                      |
+| TCBFUNNAME（直接写算了，就叫 waline） | 你想要新建/已有函数的名称，比如 `Waline`                                                                                                                 |
+| TCBENVID                              | 环境 ID，可[点击这里](https://console.cloud.tencent.com/tcb/env/overview)或[这里](https://console.cloud.tencent.com/tcb/env/index)查看，地址栏后也会显示 |
 
 ---
 
