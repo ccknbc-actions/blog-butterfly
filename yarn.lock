@@ -3264,7 +3264,7 @@ gulp-clean-css@4.3.0:
     through2 "3.0.1"
     vinyl-sourcemaps-apply "0.2.1"
 
-gulp-cli@^1.4.0:
+gulp-cli@1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/gulp-cli/-/gulp-cli-1.4.0.tgz#6f5bbe2cd0bdb4849d12cf9e1246a5861f8b4f88"
   integrity sha1-b1u+LNC9tISdEs+eEkalhh+LT4g=
@@ -3346,7 +3346,7 @@ gulp-util@^3.0.0:
     through2 "^2.0.0"
     vinyl "^0.5.0"
 
-gulp@^3.9.1:
+gulp@3.9.1:
   version "3.9.1"
   resolved "https://registry.yarnpkg.com/gulp/-/gulp-3.9.1.tgz#571ce45928dd40af6514fc4011866016c13845b4"
   integrity sha1-VxzkWSjdQK9lFPxAEYZgFsE4RbQ=
@@ -3530,7 +3530,7 @@ hexo-cli@^4.0.0:
     resolve "^1.11.0"
     tildify "^2.0.0"
 
-hexo-deployer-git@^0.3.1:
+hexo-deployer-git@0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/hexo-deployer-git/-/hexo-deployer-git-0.3.1.tgz#26b085ecc50e2cc99ecd33d56c254c5544c02d21"
   integrity sha512-JSwSmTSknGpaiooGXwmP7sAhoSNW3c+xmBiCc5yyrvRSfQ3zIYWjmcqNXSj8m2DmheqQNgt5D4M7quYjw+L6tA==
