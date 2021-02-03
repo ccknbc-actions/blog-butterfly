@@ -42,7 +42,7 @@ edit:
   gitlab: 在 GitLab 上编辑/预览
   gitlab_ide: 在 GitLab IDE 上编辑/预览
   cloud_studio: 在 Cloud Studio 上编辑/预览
-  hexoplusplus: 在 HexoPlusPlus 上编辑
+  hexoplusplus: 在 HexoPlusPlus 上编辑/预览
 
 search: 搜索
 algolia_search:

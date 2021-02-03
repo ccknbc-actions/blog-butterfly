@@ -1,0 +1,126 @@
+name: Deploy Hexo Public To Pages
+
+on: 
+  workflow_dispatch:
+  push: 
+    branches: posts
+
+jobs:
+  deploy:
+    name: Deploy Hexo Public To Pages
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
+      ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        ref: master
+
+    - name: Setup Node
+      uses: actions/setup-node@v2
+      with:
+        node-version: "12.x"
+
+    - name: Install HEXO CLI
+      run: |
+        yarn global add hexo-cli
+
+    - name: Catch
+      uses: actions/cache@v2
+      id: cache-dependencies
+      with:
+        path: node_modules
+        key: ${{runner.OS}}-${{hashFiles('**/yarn.lock')}}
+
+    - name: Install Dependencies
+      if: steps.cache-dependencies.outputs.cache-hit != 'true'
+      run: |
+        yarn
+
+    - name: Generate
+      run: |
+        git clone -b posts https://github.com/ccknbc-actions/blog-butterfly.git source/_posts
+        hexo generate && hexo algolia && gulp
+      # git clone https://github.com/CCKNBC/ccknbc.github.io.git public
+
+    # - name: Create Pull Request
+    #   id: yuque
+    #   uses: peter-evans/create-pull-request@v3
+    #   with:
+    #     token: ${{ secrets.GITHUB_TOKEN }}
+    #     commit-message: Update Yuque Catch
+    #     committer: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+    #     author: github-actions[bot] <github-actions[bot]@users.noreply.github.com>
+    #     signoff: false
+    #     branch: posts
+    #     delete-branch: true
+    #     title: 'Update Yuque Catch'
+
+    # - name: Check Outputs
+    #   run: |
+    #     echo "Pull Request Number - ${{ steps.yuque.outputs.pull-request-number }}"
+    #     echo "Pull Request URL - ${{ steps.yuque.outputs.pull-request-url }}"
+
+    - name: Deploy Json To Branch Json
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: json
+        publish_dir: ./json
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+        full_commit_message: ${{ github.event.head_commit.message }}
+    
+    - name: Deploy Markdown Posts To Branch Posts
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: posts
+        publish_dir: ./source/_posts
+        user_name: 'github-actions[bot]'
+        user_email: 'github-actions[bot]@users.noreply.github.com'
+        full_commit_message: ${{ github.event.head_commit.message }}
+    
+    - name: Deploy Hexo Public To Pages
+      run: |
+        cd ./public
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git init
+        git add -A
+        git commit -m "${{ github.event.head_commit.message }} $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By Github Actions"
+        git push --force --quiet "https://ccknbc:${{ secrets.GH_TOKEN }}@github.com/CCKNBC/ccknbc.github.io.git" master:master
+        git push --force --quiet "https://${{ secrets.CD_USER }}:${{ secrets.CD_TOKEN }}@e.coding.net/ccknbc/blog/butterfly.git" master:master
+        git push --force --quiet "https://ccknbc:${{ secrets.GT_TOKEN }}@gitee.com/ccknbc/ccknbc.git" master:master
+
+    - name: Update Gitee Pages
+      uses: yanglbme/gitee-pages-action@main
+      with:
+          gitee-username: ccknbc
+          gitee-password: ${{ secrets.GITEE_PASSWORD }}
+          gitee-repo: ccknbc/ccknbc
+    
+    - name: Purge JsDelivr CDN
+      run: |
+        curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/
+      # curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/css/index.css
+      # curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/js/main.js
+      # curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/js/utils.js
+
+    - name: Delete Workflow Runs
+      uses: Mattraks/delete-workflow-runs@main
+      with:
+        retain_days: 1
+        keep_minimum_runs: 1
+
+    - name: Telegram Notification
+      if: cancelled() == false
+      uses: xinthink/action-telegram@v1.1
+      with:
+        botToken: ${{ secrets.TG_BOT_TOKEN }}
+        chatId: ${{ secrets.TG_CHAT_ID }}
+        jobStatus: ${{ job.status }}
+        skipSuccess: false

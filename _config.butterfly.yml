@@ -237,15 +237,14 @@ reward:
     #   link:
     #   text: alipay
 
-# Post edit
 # Easily browse and edit blog source code online.
 edit:
   enable: true
   yuque: https://www.yuque.com/ccknbc/blog/
-  gitlab: https://gitlab.com/CCKNBC/ccknbc.gitlab.io/-/edit/master/source/
-  gitlab_ide: https://gitlab.com/-/ide/project/CCKNBC/ccknbc.gitlab.io/edit/master/-/
+  gitlab: https://gitlab.com/CCKNBC/ccknbc.gitlab.io/-/edit/
+  gitlab_ide: https://gitlab.com/-/ide/project/CCKNBC/ccknbc.gitlab.io/edit/
   cloud_studio: https://ccknbc.cloudstudio.net/ws/dbipsw
-  hexoplusplus: https://blog.ccknbc.workers.dev/hpp/admin
+  hexoplusplus: https://blog.ccknbc.workers.dev/hpp/admin/dash/edit
 
 
 # Related Articles
@@ -308,11 +307,11 @@ comments:
   # - Beaudar
   # - Utterances
   # - Disqus
-  - Disqusjs
+  # - Disqusjs
   # - Livere
   # - Artalk
-  # - Twikoo
-  # - Waline
+  - Twikoo
+  - Waline
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -403,7 +402,7 @@ waline:
     pageSize: 10
     requiredFields: mail
     # anonymous: false 
-    placeholder: 可匿名评论，但您的评论必须经人工审核通过后才会显示，并可收到相关回复邮件通知，因此邮箱为必填项                                                                                     
+    placeholder: 社交登录可助您快速录入信息，可匿名评论，但您的评论必须经人工审核通过后才会显示，并可收到相关回复邮件通知，因此邮箱为必填项                                                                                     
     # avatarCDN: https://sdn.geekzu.org/avatar/
     #https://valinecdn.bili33.top/
     # placeholder: 邮箱为必填项，您的信息仅作你我收到回复通知使用；请注意友好发言，垃圾评论将被删除,请勿在本站测试评论，谢谢合作,未来将采取登录评论制度;由于反垃圾检测和发布微信/QQ/Telegram/邮件通知等操作都需要时间,您点击发布按钮后可能已经发布但延迟显示，给您造成的不便深感抱歉
@@ -773,7 +772,7 @@ aside:
     content: '
     <center>
     <a target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo 5.3.0-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><br>
-    <a target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly 3.6.1-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a><br> 
+    <a target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly 3.6.2-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a><br> 
     <a target="_blank" href="https://metroui.org.ua/index.html "><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a><br> 
     <a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Vervel-brightgreen?style=flat&logo=Vercel" title="本站采用双线部署，境外线路托管于Vercel"></a><br> 
     <a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&logo=Codio" title="本站采用双线部署，境内线路托管于Coding"></a><br> 
@@ -839,10 +838,10 @@ newest_comments:
     enable: false
     repo: ccknbc-backup/comments
   disqus:
-    enable: true
+    enable: false
     forum: ccknbc
     api_key: Z6F8Gc9KvW2YCh6p11VRVNvMBYfdaKR3IMRFLVmoYaIQJ2ysp38fZ9tivPdgyBWu
-  twikoo: false
+  twikoo: true
   waline: false
   artalk:
     enable: false

@@ -4,9 +4,9 @@
       if is_page() && !(is_current('/bb'))
         a.edit-cloud-studio(href=theme.edit.cloud_studio title=_p('edit.cloud_studio') target="_blank")
           i.fas.fa-laptop-code
-        a.edit-gitlab-ide(href=theme.edit.gitlab_ide + page.source title=_p('edit.gitlab_ide') + ' - ' + page.title target="_blank")
+        a.edit-gitlab-ide(href=theme.edit.gitlab_ide + 'master/-/source/' + page.source title=_p('edit.gitlab_ide') + ' - ' + page.title target="_blank")
           i.fas.fa-code
-        a.edit-gitlab(href=theme.edit.gitlab + page.source title=_p('edit.gitlab') + ' - ' + page.title target="_blank")
+        a.edit-gitlab(href=theme.edit.gitlab + 'master/source/' + page.source title=_p('edit.gitlab') + ' - ' + page.title target="_blank")
           i.fab.fa-gitlab
       else if is_home() || is_archive() || is_category() || is_tag()
         a.edit-cloud-studio(href=theme.edit.cloud_studio title=_p('edit.cloud_studio') target="_blank")
