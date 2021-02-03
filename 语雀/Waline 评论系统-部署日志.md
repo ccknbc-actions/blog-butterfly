@@ -16,6 +16,7 @@ id: 20
 
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/20)
 自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/waline-commens-system-deployment-logs)
+**这篇文章作废，我也不知道为什么要写，反正挺无语的**
 
 ---
 
@@ -130,19 +131,14 @@ function waline() {
 
 ### 一键部署
 
-一键脚本部署可以查看[官方文档](https://waline.js.org/server/cloudbase.html)，对于日访问量低于一万的站点来说够用了，但我因为删除了环境，懒得再弄了，包年包月环境挺好的
-（至于我为什么拉不起云开发部署应用，就是作者链接给错了,详见[Commit](https://github.com/lizheming/waline/commit/d815054bd4354e64016e147fb8deb50cf4511640)）
+一键脚本部署可以查看[官方文档](https://waline.js.org/server/cloudbase.html)，我删了之后就没成功过
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612362992018-14b2a225-27d6-4996-948b-e746d26bb2e0.png#align=left&display=inline&height=322&margin=%5Bobject%20Object%5D&name=image.png&originHeight=644&originWidth=1011&size=48650&status=done&style=none&width=505.5)
 
 ---
 
 警告内容来自 [Twikoo 官方文档](https://twikoo.js.org/quick-start.html) 建议您直接查看 [手动部署部分](#手动部署)！！！
 {% note warning simple %}
-一键部署虽然方便，但是仅支持按量计费环境——也就是说，**一键部署的环境，当免费资源用尽后，将会产生费用，**且按量计费环境无法切换为包年包月环境。
-大多数情况下，免费资源能够满足日访问量在 10,000 以下的站点（参考：[免费资源如何计算？](https://twikoo.js.org/faq.html#%E5%85%8D%E8%B4%B9%E8%B5%84%E6%BA%90%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97)）。
-如果您希望，当免费资源用尽时，不产生费用，请使用手动部署。
-注意：云开发免费额度变更
-腾讯云已取消免费的云开发基础版 1 套餐（参考[产品定价 (opens new window)](https://cloud.tencent.com/document/product/876/39095)），同时还调整了按量计费环境的免费额度（参考[免费额度 (opens new window)](https://cloud.tencent.com/document/product/876/47816)），新的免费额度数据库读操作数由原先的 50000 次 / 天降至 500 次 / 天，**已无法支撑 Twikoo 的运行需求**。请暂时放弃免费搭建或购买 6.9 元 / 月的新特惠基础版 1，Twikoo 将会尽快寻找解决方案。
-**此次免费额度变更暂时不会影响已有环境**，已有环境用户请勿随意销毁现有的基础版 1 环境。
+一键部署虽然方便，但是仅支持按量计费环境——也就是说，**一键部署的环境，当免费资源用尽后，将会产生费用**。且按量计费环境无法切换为包年包月环境。免费额度数据库读操作数只有 500 次 / 天，**无法支撑 Twikoo 的运行需求**。Twikoo 建议您[手动部署](#手动部署)以节约成本。
 {% endnote %}
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610953378969-db93161e-24d3-4a48-8934-5566774b94d2.png#align=left&display=inline&height=204&margin=%5Bobject%20Object%5D&name=image.png&originHeight=204&originWidth=423&size=11059&status=done&style=none&width=423)
 对于新用户或者说没有创建过按量计费环境的用户会显示如下内容，记得勾选开启免费资源
@@ -160,8 +156,19 @@ function waline() {
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610870670315-08e65148-3819-48fb-878e-03fdb0c9ab64.png#align=left&display=inline&height=536&margin=%5Bobject%20Object%5D&name=image.png&originHeight=536&originWidth=1493&size=52310&status=done&style=none&width=1493)
 按照提示购买后稍等几分钟，[在这个界面可查看您所购买的环境](https://console.cloud.tencent.com/tcb/env/index)
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610870083481-8e4cad1a-c70a-4cad-9192-11be8003241c.png#align=left&display=inline&height=233&margin=%5Bobject%20Object%5D&name=image.png&originHeight=233&originWidth=523&size=10168&status=done&style=none&width=523)
-
-##
+[点击云函数](https://console.cloud.tencent.com/tcb/scf/index)，新建云函数，函数内存选择 128M，名称随意，例如 Waline，其他默认,单击进入下一步
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612359288449-66b53150-2146-4ec9-aa08-910b99aebd1b.png#align=left&display=inline&height=448&margin=%5Bobject%20Object%5D&name=image.png&originHeight=895&originWidth=1917&size=127338&status=done&style=none&width=958.5)
+下图中的函数代码部分填入以下代码
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612359460424-4b8cf9b4-2ef4-4758-92f6-09ae040a91ea.png#align=left&display=inline&height=396&margin=%5Bobject%20Object%5D&name=image.png&originHeight=791&originWidth=688&size=43150&status=done&style=none&width=344)
+点击对应的云函数，进入在线编辑页面，按照[模板仓库](https://github.com/walinejs/tcb-starter)里的文件，新建对应的文件，并复制粘贴对应的内容即可
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612360652232-9eb2ad2b-bebe-4964-bb5f-75e2f9946d25.png#align=left&display=inline&height=283&margin=%5Bobject%20Object%5D&name=image.png&originHeight=566&originWidth=1171&size=59625&status=done&style=none&width=585.5)
+注意点击**保存并安装依赖**，可能会没有反应一会儿，然后等待转圈圈部署完毕即可
+**![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612360855940-241970ec-5c18-4bc8-9168-9fd945deb761.png#align=left&display=inline&height=71&margin=%5Bobject%20Object%5D&name=image.png&originHeight=142&originWidth=264&size=4012&status=done&style=none&width=132)![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612361085479-f39b6b2b-2293-4685-882e-9e20aa611dea.png#align=left&display=inline&height=32&margin=%5Bobject%20Object%5D&name=image.png&originHeight=64&originWidth=251&size=3262&status=done&style=none&width=125.5)**
+当然还没有结束，我们需要点击 `环境 --> HTTP 访问服务` （[点击直达](https://console.cloud.tencent.com/tcb/env/access))，如果你想绑定自定义域名可以照图中绑定，记得先申请一下证书，如果你想要 HTTPS（这个可能花的时间有点长）
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612361294908-3ef584b5-5cbc-43e5-b744-cda357057ec0.png#align=left&display=inline&height=336&margin=%5Bobject%20Object%5D&name=image.png&originHeight=671&originWidth=1596&size=62417&status=done&style=none&width=798)
+点击新建，新建触发路径，点击保存即可，注意路径最后没有 / ，等待构建完成后你就可通过对应的链接访问 demo 页面了，这个链接就是上面提到的 `serverURL` 
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612361631129-fecd45a5-f694-4154-8707-9976eb10adb5.png#align=left&display=inline&height=268&margin=%5Bobject%20Object%5D&name=image.png&originHeight=535&originWidth=753&size=29976&status=done&style=none&width=376.5)
+然后我们需要设置[ WEB 安全域名](https://console.cloud.tencent.com/tcb/env/safety)，把你的域名放入白名单即可（本地测试的话端口也要对应上哦）
 
 ## 如何升级
 
@@ -213,3 +220,7 @@ function waline() {
 ---
 
 ---
+
+最后表示算了 TCB 作者根本没修复 ，我把我函数删了重建，啪没了。。。
+还有就是管理界面略丑
+也不是很方便
