@@ -3,7 +3,7 @@ name: Deploy Hexo Public To Pages
 on: 
   repository_dispatch:
   workflow_dispatch:
-  push: 
+  push:
     branches: master
 
 jobs:
@@ -24,29 +24,30 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v2
       with:
-        node-version: "12.x"
+        node-version: "14.x"
 
     - name: Install HEXO CLI
       run: |
-        yarn global add hexo-cli
+        npm install hexo-cli -g
 
     - name: Catch
       uses: actions/cache@v2
       id: cache-dependencies
       with:
         path: node_modules
-        key: ${{runner.OS}}-${{hashFiles('**/yarn.lock')}}
+        key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
 
     - name: Install Dependencies
       if: steps.cache-dependencies.outputs.cache-hit != 'true'
       run: |
-        yarn
+        npm install
 
     - name: Generate
       run: |
         git clone -b json https://github.com/ccknbc-actions/blog-butterfly.git json
+        git clone -b posts https://github.com/ccknbc-actions/blog-butterfly.git source/_posts
         mv -f ./json/yuque.json ./
-        yuque-hexo sync && hexo generate && hexo algolia && gulp
+        npm run start
         mv -f yuque.json ./json/
       # git clone https://github.com/CCKNBC/ccknbc.github.io.git public
 

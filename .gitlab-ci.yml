@@ -5,9 +5,9 @@ variable:
     - echo $ALGOLIA_ADMIN_API_KEY
 pages:
   script:
-    - yarn hexo-cli
-    - test -e package.json && yarn install
-    - yarn start
+    - npm i -g hexo-cli
+    - test -e package.json && npm install
+    - npm run start
   artifacts:
     paths:
       - public
