@@ -5,7 +5,9 @@
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
-    "server": "hexo server"
+    "server": "hexo server",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "yuqueConfig": {
     "postPath": "source/_posts/语雀",
@@ -27,7 +29,7 @@
     "hexo-algoliasearch": "1.0.0",
     "hexo-bb": "0.1.13",
     "hexo-charts": "1.0.3",
-    "hexo-deployer-git": "^0.3.1",
+    "hexo-deployer-git": "^1.0.0",
     "hexo-filter-nofollow": "2.0.2",
     "hexo-generator-archive": "1.0.0",
     "hexo-generator-baidu-sitemap": "0.1.9",
@@ -45,7 +47,8 @@
     "hexo-tag-mmedia": "0.2.1",
     "hexo-translate-title-vss": "1.0.14",
     "hexo-wordcount": "6.0.1",
-    "yuque-hexo": "1.7.0"
+    "yuque-hexo": "1.7.0",
+    "snyk": "^1.440.5"
   },
   "devDependencies": {
     "@babel/core": "7.12.13",
@@ -59,5 +62,6 @@
     "gulp-htmlclean": "2.7.22",
     "gulp-uglify": "3.0.2",
     "workbox-build": "6.1.0"
-  }
+  },
+  "snyk": true
 }
