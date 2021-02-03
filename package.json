@@ -51,7 +51,7 @@
     "@babel/core": "7.12.13",
     "@babel/preset-env": "7.12.13",
     "cheerio": "1.0.0-rc.5",
-    "gulp": "3.9.1",
+    "gulp": "4.0.2",
     "gulp-babel": "8.0.0",
     "gulp-clean-css": "4.3.0",
     "gulp-cli": "1.4.0",
