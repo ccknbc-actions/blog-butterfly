@@ -128,6 +128,27 @@ function waline() {
 }
 ```
 
+对于同主题在主题配置里找到 `waline`  配置项相关内容
+
+```yaml
+# waline - A simple comment system with backend support fork from Valine
+# https://waline.js.org/
+waline:
+  serverURL: https://waline.ccknbc.ml # Waline server address url
+  avatar: monsterid # gravatar style https://zh-tw.gravatar.com/site/implement/images/#default-image
+  bg: # waline background
+  emojiCDN: https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/
+  option:
+    pageSize: 10
+    requiredFields: mail
+    # anonymous: false
+    placeholder: 社交登录可助您快速录入信息，可匿名评论，但您的评论必须经人工审核通过后才会显示，并可收到相关回复邮件通知，因此邮箱为必填项
+    # avatarCDN: https://sdn.geekzu.org/avatar/
+    #https://valinecdn.bili33.top/
+    langMode:
+      admin: 博主兼管理员
+```
+
 还有就是可能有人会觉得默认邮件通知模板太单调，想和 Valine-Admin 一样切换模板，其实有这个配置的，只是目前的方法是写在环境变量中，而环境变量限制长度（大小），或者说是不适合这种方式配置，如果要改的话可以先查看[issues/106](https://github.com/lizheming/waline/issues/106)相关内容，或者等以后优化再说；当然如果你的评论不是很多，并且之前配置过 Valine-Admin，那么你仍然可以使用 LeanCloud 来做异步发送通知，关闭默认的通知配置，或者使用 js 推送
 
 [评论 Hooks](https://waline.js.org/server/basic.html#%E8%AF%84%E8%AE%BA-hooks)，可以根据官方的例子自己做一些配置，相比于其他，违禁词，屏蔽 IP 等配置可以说是人性化了，但万一配置不好一些正常评论可能也会被判定为垃圾内容，所以我推荐使用人工审核功能，不过这边不得不说另一个评论系统 [Twikoo](https://twikoo.js.org/)，支持查看自己审核中的评论，评论置顶，点赞等，不过我想 Waline 将来也能实现，毕竟 Flag 立那了
