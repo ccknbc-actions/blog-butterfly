@@ -20,12 +20,11 @@ photos: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-01-17~15-08-
 comments: true
 copyright_author_href: 'https://www.ccknbc.cc'
 id: 20
-updated: 2021-01-17 00:00:00
+updated: 2021-02-07 23:15:00
 ---
 
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/20)
-自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/waline-commens-system-deployment-logs)
-**这篇文章作废，我也不知道为什么要写，反正挺无语的**
+自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/waline-commens-system-deployment-logs)\*\*
 
 ---
 
@@ -163,6 +162,7 @@ waline:
 
 一键脚本部署可以查看[官方文档](https://waline.js.org/server/cloudbase.html)，我删了之后就没成功过
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612362992018-14b2a225-27d6-4996-948b-e746d26bb2e0.png#align=left&display=inline&height=322&margin=%5Bobject%20Object%5D&name=image.png&originHeight=644&originWidth=1011&size=48650&status=done&style=none&width=505.5)
+截至文档最新更新日期，这个已被修复（不过 tcb-starter 那个链接还没改所以还是失败），不过我只能说作者非常不细心，毕竟能一天发十几个版本，详见 [commit](https://github.com/lizheming/waline/commit/d87d3092a34fd6b2b7f0b1c72bd95ad784a086e7)，他还是把链接协议头多打了一个 h ,所以请[点击这里](https://console.cloud.tencent.com/tcb/env/index?action=CreateAndDeployCloudBaseProject&appUrl=https%3A%2F%2Fgithub.com%2Fwalinejs%2Ftcb-starter&branch=master&appName=waline)一键部署
 
 ---
 
@@ -265,6 +265,7 @@ module.exports.main = async (event, context) => {
 {% note info simple %}以上两个应用你可以选择安装到全部仓库，或者只安装到选择的仓库{% endnote %}
 
 如果你想懒的话可以先删除你现有的名为 Waine 的仓库，再 fork [我的仓库](https://github.com/ccknbc-actions/waline)，然后去你的 Vercel 解绑之前的仓库，再绑定你 fork 的仓库，最后点一下重新部署即可
+但是如果你没用 tcb 就把 `.github/workflows/Update Waline TCB.yml`   里的文件删掉，因为涉及到自动部署更新云开发，还有环境变量问题，如果没设定会导致报错
 
 ### CloudBase
 
@@ -272,33 +273,24 @@ module.exports.main = async (event, context) => {
 
 #### 一键部署
 
-咕咕咕 因为我把环境删了，所以没办法截图，就是点击[我的应用](https://console.cloud.tencent.com/tcb/apps/index)找到 Waline 点击部署即可
+就是点击[我的应用](https://console.cloud.tencent.com/tcb/apps/index)找到 Waline 点击部署即可
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612711217029-250d0b1a-75d1-4a7c-9f4c-8a9413ab51fa.png#align=left&display=inline&height=409&margin=%5Bobject%20Object%5D&name=image.png&originHeight=818&originWidth=1814&size=86907&status=done&style=none&width=907)
 
 #### 手动部署
 
-[点击这里](https://console.cloud.tencent.com/tcb/scf)新建云函数，[按照官方仓库](https://github.com/walinejs/tcb-starter)所有文件新建文件，最后点击保存并安装依赖即可，因为函数入口等原因
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610952138456-e87fa0a3-7cbb-4ff7-8813-bce532860885.png#align=left&display=inline&height=582&margin=%5Bobject%20Object%5D&name=image.png&originHeight=582&originWidth=687&size=31215&status=done&style=none&width=687)
-
 ##### 手动升级
 
-就是去[仓库](https://github.com/walinejs/tcb-starter)复制粘贴修改过的文件的事情了
+就是去[仓库](https://github.com/walinejs/tcb-starter)复制粘贴修改过的文件的事情了，如果没有文件改动就点击 `保存并安装依赖`  即可（知道在哪了吧）
 
 ##### 自动升级
 
-你可以 fork [我的仓库](https://github.com/ccknbc-actions/waline) 进行更改，和上面提到的原理差不多，只是用到了 Actions（如果你之前没接触过这些，建议使用 Vercel 部署或者上面的一键部署，也比较方便），在合并 PR 后帮我们自动升级部署到云开发，解释一下几个密钥，您需要在 仓库的 settings/secrets/actions 中配，组织的话可以把常用到的密钥添加为组织密钥
+原理在上面讲了，结合 [Vercel 自动升级](#自动升级)部分查看
+你可以 fork [我的仓库](https://github.com/ccknbc-actions/waline) 进行更改，和上面提到的原理差不多，只是用到了 Actions（如果你之前没接触过这些，建议使用 Vercel 部署或者上面的一键部署，也比较方便），在合并 PR 后帮我们自动升级部署到云开发，解释一下几个密钥，您需要在 仓库的 `settings/secrets/actions` 中配置，组织的话可以把常用到的密钥添加为组织密钥
 ，比如 ID KEY 等
 
-| 变量名                                | 变量解释                                                                                                                                                 |
-| ------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| SECRETID                              | API 访问密钥 ID，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                       |
-| SECRETKEY                             | API 访问密钥 KEY，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                      |
-| TCBFUNNAME（直接写算了，就叫 waline） | 你想要新建/已有函数的名称，比如 `Waline`                                                                                                                 |
-| TCBENVID                              | 环境 ID，可[点击这里](https://console.cloud.tencent.com/tcb/env/overview)或[这里](https://console.cloud.tencent.com/tcb/env/index)查看，地址栏后也会显示 |
-
----
-
----
-
-最后表示算了 TCB 作者根本没修复 ，我把我函数删了重建，啪没了。。。
-还有就是管理界面略丑
-也不是很方便
+| 变量名                                         | 变量解释                                                                                                                                                                                         |
+| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| SECRETID                                       | API 访问密钥 ID，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                                                               |
+| SECRETKEY                                      | API 访问密钥 KEY，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                                                              |
+| TCBFUNNAME（没什么蒿甲醚的，就叫 waline 算了） | 你想要新建/已有函数的名称，比如 `Waline`                                                                                                                                                         |
+| TCBENVID                                       | 环境 ID，可[点击这里](https://console.cloud.tencent.com/tcb/env/overview)或[这里](https://console.cloud.tencent.com/tcb/env/index)查看，地址栏后也会显示，反正就是很多地方都在上面点一下就能看到 |
