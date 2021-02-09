@@ -24,7 +24,8 @@ updated: 2021-02-07 23:15:00
 ---
 
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/20)
-自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/waline-commens-system-deployment-logs)\*\*
+自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/waline-commens-system-deployment-logs)
+**本文仅作为官方文档的补充，若有错误，还望指正**
 
 ---
 
@@ -48,7 +49,7 @@ Waline - 一款从 [Valine](https://valine.js.org) 衍生的带后端评论系�
   | | | SQLite |
   | | | PostgreSQL |
 
-对于想白嫖的小白， `Vercel`  + `LeanCloud`  是不错的选择，如果你主要面向对象为大陆用户，使用 `CloudBase`  部署也是个不错的选择，它在海外表现也没那么差，或者您仅使用 `CloudBase`  来做数据存储
+对于想白嫖的小白， `Vercel`  + `LeanCloud（国际版）`  是不错的选择，如果你主要面向对象为大陆用户，使用 `CloudBase`  部署也是个不错的选择，它在海外表现也没那么差，或者您仅使用 `CloudBase`  来做数据存储
 {% note warning simple %}如果您使用 `Vercel` + `LeanCloud` ，并且使用 `Vercel`  发送评论通知，您不必担心 LeanCloud 流控问题，并且之前使用过 Valine 或者部署过 `Valine-Admin`  项目的可以直接拿来用；对于评论转移，官方提供了[迁移助手](https://waline.js.org/migration/tool.html)供您使用，不用担心之前评论丢失的问题{% endnote %}
 
 ## Todo
@@ -81,7 +82,7 @@ Waline - 一款从 [Valine](https://valine.js.org) 衍生的带后端评论系�
 
 ## Vercel + LeanCloud 部署
 
-这部分请前往[官方文档](https://waline.js.org/quick-start.html)查看，不过需要注意的是如果你的 `GitHub`  账号主邮箱是 `QQ`  邮箱的话建议更改为其他邮箱（毕竟他们认为 QQ 邮箱是垃圾邮箱）再去注册 Vercel（或者你可以选择给客服发一封邮件让他们帮忙解锁你的账号）
+这部分请前往[官方文档](https://waline.js.org/quick-start.html)查看，不过需要注意的是如果你的 `GitHub`  账号主邮箱是 `QQ`  邮箱的话建议更改为其他邮箱（毕竟他们认为 QQ 邮箱是垃圾邮箱）再去注册 Vercel（或者你可以选择给客服发一封邮件让他们帮忙解锁你的账号），环境变量配置部分官方文档也写了，这里不再赘述
 如果您之前用过 Valine，那么关于 LeanCloud 部分你就不用做什么了，数据兼容，拿到那几个 `key`  即可
 
 ### 配置项
@@ -163,6 +164,7 @@ waline:
 一键脚本部署可以查看[官方文档](https://waline.js.org/server/cloudbase.html)，我删了之后就没成功过
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612362992018-14b2a225-27d6-4996-948b-e746d26bb2e0.png#align=left&display=inline&height=322&margin=%5Bobject%20Object%5D&name=image.png&originHeight=644&originWidth=1011&size=48650&status=done&style=none&width=505.5)
 截至文档最新更新日期，这个已被修复（不过 tcb-starter 那个链接还没改所以还是失败），不过我只能说作者非常不细心，毕竟能一天发十几个版本，详见 [commit](https://github.com/lizheming/waline/commit/d87d3092a34fd6b2b7f0b1c72bd95ad784a086e7)，他还是把链接协议头多打了一个 h ,所以请[点击这里](https://console.cloud.tencent.com/tcb/env/index?action=CreateAndDeployCloudBaseProject&appUrl=https%3A%2F%2Fgithub.com%2Fwalinejs%2Ftcb-starter&branch=master&appName=waline)一键部署
+嗯，后来修复了，期待接下来的开发
 
 ---
 
@@ -173,6 +175,7 @@ waline:
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610953378969-db93161e-24d3-4a48-8934-5566774b94d2.png#align=left&display=inline&height=204&margin=%5Bobject%20Object%5D&name=image.png&originHeight=204&originWidth=423&size=11059&status=done&style=none&width=423)
 对于新用户或者说没有创建过按量计费环境的用户会显示如下内容，记得勾选开启免费资源
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610873567827-825cde85-7c99-4c5a-95e0-44c0966784cb.png#align=left&display=inline&height=632&margin=%5Bobject%20Object%5D&name=image.png&originHeight=632&originWidth=1006&size=46404&status=done&style=none&width=1006)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612859364523-006d98ba-bd5c-4868-878f-9c9ac158d836.png#align=left&display=inline&height=237&margin=%5Bobject%20Object%5D&name=image.png&originHeight=473&originWidth=999&size=25755&status=done&style=none&width=499.5)
 
 为了日后升级的方便，不管您是否使用了 Vercel 部署，您都可以 fork [我的仓库](https://github.com/ccknbc-actions/waline) ，稍加配置即可完成自动部署更新
 
@@ -186,6 +189,7 @@ waline:
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610870670315-08e65148-3819-48fb-878e-03fdb0c9ab64.png#align=left&display=inline&height=536&margin=%5Bobject%20Object%5D&name=image.png&originHeight=536&originWidth=1493&size=52310&status=done&style=none&width=1493)
 按照提示购买后稍等几分钟，[在这个界面可查看您所购买的环境](https://console.cloud.tencent.com/tcb/env/index)
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610870083481-8e4cad1a-c70a-4cad-9192-11be8003241c.png#align=left&display=inline&height=233&margin=%5Bobject%20Object%5D&name=image.png&originHeight=233&originWidth=523&size=10168&status=done&style=none&width=523)
+有能力的其实可以看一下 Vercel [自动升级](#自动升级)和 TCB[自动升级](#自动升级-1)部分，间接实现一键部署，自动更新
 [点击云函数](https://console.cloud.tencent.com/tcb/scf/index)，新建云函数，函数内存选择 128M，名称随意，例如 Waline，其他默认,单击进入下一步
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612359288449-66b53150-2146-4ec9-aa08-910b99aebd1b.png#align=left&display=inline&height=448&margin=%5Bobject%20Object%5D&name=image.png&originHeight=895&originWidth=1917&size=127338&status=done&style=none&width=958.5)
 下图中的函数代码部分填入以下代码
@@ -284,7 +288,7 @@ module.exports.main = async (event, context) => {
 
 ##### 自动升级
 
-原理在上面讲了，结合 [Vercel 自动升级](#自动升级)部分查看
+原理在上面讲了，结合 [Vercel 自动升级](#自动升级)部分查看，这部分其实可以作为上面的手动部署，或者自动部署？
 你可以 fork [我的仓库](https://github.com/ccknbc-actions/waline) 进行更改，和上面提到的原理差不多，只是用到了 Actions（如果你之前没接触过这些，建议使用 Vercel 部署或者上面的一键部署，也比较方便），在合并 PR 后帮我们自动升级部署到云开发，解释一下几个密钥，您需要在 仓库的 `settings/secrets/actions` 中配置，组织的话可以把常用到的密钥添加为组织密钥
 ，比如 ID KEY 等
 
