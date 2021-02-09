@@ -1,0 +1,19 @@
+image: node:latest
+variable:
+  script:
+    - echo $YUQUE_TOKEN
+    - echo $ALGOLIA_ADMIN_API_KEY
+pages:
+  script:
+    - npm i -g hexo-cli
+    - test -e package.json && npm install
+    - npm run yuque
+  artifacts:
+    paths:
+      - public
+  cache:
+    paths:
+      - node_modules
+    key: project
+  only:
+    - master

@@ -1,0 +1,187 @@
+// https://github.com/equinusocio/vsc-material-theme
+$highlight_theme = hexo-config('highlight_theme')
+$highlighEnable = hexo-config('highlight_settings') && hexo-config('highlight_settings.enable')
+$prismjsEnable = hexo-config('prismjs_settings') && hexo-config('prismjs_settings.enable')
+wordWrap = !hexo-config('highlight_settings.line_number') && hexo-config('code_word_wrap')
+
+@require 'theme'
+
+if $highlighEnable
+  @require 'highlight/index'
+
+if $prismjsEnable
+  @require 'prismjs/index'
+
+$code-block
+  overflow: auto
+  margin: 0 0 1rem
+  padding: 0
+  background: $highlight-background
+  color: $highlight-foreground
+  line-height: $line-height-code-block
+
+  if wordWrap
+    counter-reset: line
+    white-space: pre-wrap
+
+blockquote
+  margin: 0 0 1rem
+  padding: .1rem .8rem
+  border-left: .2rem solid $blockquote-padding-color
+  background-color: var(--blockquote-bg)
+  color: var(--blockquote-color)
+
+  a
+    word-break: break-all
+
+  p
+    margin: 0 !important
+    padding: .5rem 0
+
+  footer
+    padding: 0 0 .5rem
+
+    cite
+      &:before
+        padding: 0 .3em
+        content: '—'
+
+#article-container
+  pre,
+  code
+    font-size: $code-font-size
+    font-family: $code-font-family !important
+
+  code
+    padding: .1rem .2rem
+    background: $code-background
+    color: $code-foreground
+    word-wrap: break-word
+    word-break: break-word
+    overflow-wrap: break-word
+
+  pre
+    @extend $code-block
+    padding: 10px 20px
+
+    code
+      padding: 0
+      background: none
+      color: $highlight-foreground
+      text-shadow: none
+
+  figure.highlight
+    @extend $code-block
+    position: relative
+
+    pre
+      margin: 0
+      padding: 8px 0
+      border: none
+
+    figcaption,
+    .caption
+      padding: .3rem 0 .1rem .7rem
+      font-size: $code-font-size
+      line-height: 1em
+
+      a
+        float: right
+        padding-right: 10px
+        color: $highlight-foreground
+
+        &:hover
+          border-bottom-color: $highlight-foreground
+
+  .highlight-tools
+    position: relative
+    display: flex
+    align-items: center
+    overflow: hidden
+    min-height: 1.2rem
+    height: 2.15em
+    background: $highlight-tools.bg-color
+    color: $highlight-tools.color
+    font-size: $code-font-size
+
+    &.closed + table
+      display: none
+
+    .expand
+      position: absolute
+      padding: .4rem .7rem
+      cursor: pointer
+      transition: transform .3s
+
+      & + .code-lang
+        left: 1.7rem
+
+      &.closed
+        transition: all .3s
+        transform: rotate(-90deg) !important
+
+    .code-lang
+      position: absolute
+      left: .7rem
+      text-transform: uppercase
+      font-weight: bold
+      font-size: 1.15em
+      user-select: none
+
+    .copy-notice
+      position: absolute
+      right: 1.7rem
+      opacity: 0
+      transition: opacity .4s
+
+    .copy-button
+      position: absolute
+      right: .7rem
+      cursor: pointer
+      transition: color .2s
+
+      &:hover
+        color: $theme-color
+
+  .gutter
+    user-select: none
+
+  .gist table
+    width: auto
+
+    td
+      border: none
+
+  if $highlight_theme == 'mac' || ($highlight_theme == 'mac light')
+    figure.highlight
+      margin: 0 0 1.2rem
+      border-radius: 7px
+      box-shadow: 0 5px 10px 0 $highlight-mac-border
+      -webkit-transform: translateZ(0)
+
+      .highlight-tools
+        &:after
+          position: absolute
+          left: .7rem
+          width: 12px
+          height: 12px
+          border-radius: 50%
+          background: #fc625d
+          box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b
+          content: ' '
+
+        .expand
+          right: 0
+
+          &.closed
+            transition: all .3s
+            transform: rotate(90deg) !important
+
+          & ~ .copy-notice
+            right: 2.8rem
+
+          & ~ .copy-button
+            right: 1.8rem
+
+        .code-lang
+          left: 3.8rem !important
