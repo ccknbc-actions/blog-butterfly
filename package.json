@@ -28,7 +28,7 @@
     "hexo": "5.3.0",
     "hexo-algoliasearch": "1.0.0",
     "hexo-charts": "1.0.3",
-    "hexo-deployer-git": "2.1.0",
+    "hexo-deployer-git": "3.0.0",
     "hexo-filter-nofollow": "2.0.2",
     "hexo-generator-archive": "1.0.0",
     "hexo-generator-baidu-sitemap": "0.1.9",
