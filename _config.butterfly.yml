@@ -963,7 +963,7 @@ pjax:
     # - /bb/
     # - /me/
     # - /blogroll/
-    # - /music/
+    - /music/
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
