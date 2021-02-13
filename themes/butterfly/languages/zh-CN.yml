@@ -30,7 +30,7 @@ post:
     author: 文章作者
     link: 文章链接
     copyright_notice: 版权声明
-    copyright_content: '本博客所有文章除特别声明外，均采用
+    copyright_content: '本博客所有文章除特别声明外，均采用 
       <i style="color:#8fbc8f" class="fab fa-creative-commons"></i>
       <i style="color:#8fbc8f" class="fab fa-creative-commons-by"></i>
       <i style="color:#8fbc8f" class="fab fa-creative-commons-nc"></i>

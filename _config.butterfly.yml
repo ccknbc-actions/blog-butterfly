@@ -785,7 +785,7 @@ aside:
     content: '
     <center>
     <a target="_blank" href="https://hexo.io"><img src="https://img.shields.io/badge/Frame-Hexo 5.3.0-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><br>
-    <a target="_blank" href="https://butterfly.js.org"><img src="https://img.shields.io/badge/Theme-Butterfly 3.7.0 b1-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a><br> 
+    <a target="_blank" href="https://butterfly.js.org"><img src="https://img.shields.io/badge/Theme-Butterfly 3.7.0 b2-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a><br> 
     <a target="_blank" href="https://www.jsdelivr.com"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a><br> 
     <a target="_blank" href="https://vercel.com"><img src="https://img.shields.io/badge/Hosted-Vervel-brightgreen?style=flat&logo=Vercel" title="本站采用双线部署，境外线路托管于Vercel"></a><br> 
     <a target="_blank" href="https://vercel.com"><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&logo=Codio" title="本站采用双线部署，境内线路托管于Coding"></a><br> 
@@ -937,20 +937,42 @@ note:
 # Artitalk
 # see https://artitalk.js.org/
 artitalk:
+  enable: true
   appId: pvExDcJ4o0gsrOI1G1eGO01H-MdYXbMMI
   appKey: D4V4sTiVUkTmOqyVyBN79iDB
-  option:
-    shuoPla: 胡言乱语什么
-    avatarPla: 头像
+  path: say
+  js: 
+  option: 
+  front_matter: 
+    title: 说说
+    description: CC的部落格 说说
+    comments: false
+    aside: false
+    top_img: false
+    translate_title: say
+    date: 2021-02-11 22:38:59
+    updated: 2021-02-11 22:38:59
 
 # HexoPlusPlus Talk
 # see https://hexoplusplus.js.org
-hexoplusplus:
+hpptalk:
+  enable: true 
   domain: blog.ccknbc.workers.dev
-  talk:
-    limit: 10
-    start: 0
-    option:
+  path: talk
+  limit:
+  start:
+  js:
+  css:
+  option:
+  front_matter: 
+    title: 叨叨
+    top_img: false
+    comments: false
+    aside: false
+    translate_title: talk
+    date: 2021-02-11 22:38:59
+    updated: 2021-02-11 22:38:59
+    description: CC的部落格 叨叨
 
 # Pjax [Beta]
 # It may contain bugs and unstable, give feedback when you find the bugs.
