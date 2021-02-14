@@ -7,6 +7,9 @@ pages:
   script:
     - npm i -g hexo-cli
     - npm install
+    - git clone -b json https://github.com/ccknbc-actions/blog-butterfly.git json
+    - git clone -b posts https://gitlab.com/CCKNBC/ccknbc.gitlab.io.git source/_posts
+    - mv -f ./json/yuque.json ./
     - npm run yuque
   artifacts:
     paths:
