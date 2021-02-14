@@ -123,8 +123,8 @@ screenshot: https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.ccknbc
 
 {% endtabs %}
 
-<script data-pjax src="https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@main/blogroll.js"></script>
-<script data-pjax src="https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@main/screenshot.js"></script>
+<script data-pjax js-pjax src="https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@main/blogroll.js"></script>
+<script data-pjax js-pjax src="https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@main/screenshot.js"></script>
 <script> 
   if(typeof(Friend)=='undefined'){
     location.href='/blogroll'

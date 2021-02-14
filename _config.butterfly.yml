@@ -38,7 +38,6 @@ menu:
     # - 友链 || /blogroll/ || fas fa-user-friends
     # - 圈子 || /moments/ || fas fa-blog
   关于 || fas fa-desktop:
-    - 地图 || /sitemap/ || fas fa-sitemap
     - 本站 || /about/ || fas fa-stream
     - 统计 || /charts/ || fas fa-chart-bar
     - 订阅 || /sub/ || fas fa-rss

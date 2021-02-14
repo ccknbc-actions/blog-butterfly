@@ -105,5 +105,5 @@ float: right
     border-color: #3090e4
 }
 </style>
-<script data-pjax src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
-<script data-pjax src="https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll/moments.js"></script>
+<script data-pjax js-pjax src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script data-pjax js-pjax src="https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll/moments.js"></script>

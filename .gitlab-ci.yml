@@ -6,7 +6,7 @@ variable:
 pages:
   script:
     - npm i -g hexo-cli
-    - test -e package.json && npm install
+    - npm install
     - npm run yuque
   artifacts:
     paths:

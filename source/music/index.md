@@ -9,7 +9,7 @@ date: 2020-11-08 15:29:33
 ---
 
 <div class="artplayer-app" style="width:100%;height:480px;center"></div>
-<script data-pjax src="https://cdn.jsdelivr.net/npm/artplayer/dist/artplayer.js"></script>
+<script data-pjax js-pjax src="https://cdn.jsdelivr.net/npm/artplayer/dist/artplayer.js"></script>
 <script>
     var art = new Artplayer({
     container: '.artplayer-app',

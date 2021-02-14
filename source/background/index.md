@@ -58,17 +58,17 @@ setColor(opacity);
 ## 透明度调节
 
 <center style="margin-bottom:20px" id="opt">
-<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="0" data-pjax-state="">&nbsp;透明度&nbsp;0</a> &nbsp;
-<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="0.1" data-pjax-state="">&nbsp;透明度&nbsp;0.1</a> &nbsp;
-<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="0.2" data-pjax-state="">&nbsp;透明度&nbsp;0.2</a> &nbsp;
-<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="0.3" data-pjax-state="">&nbsp;透明度&nbsp;0.3</a> &nbsp;
-<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="0.4" data-pjax-state="">&nbsp;透明度&nbsp;0.4</a> &nbsp;
-<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="0.5" data-pjax-state="">&nbsp;透明度&nbsp;0.5</a> &nbsp;
-<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="0.6" data-pjax-state="">&nbsp;透明度&nbsp;0.6</a> &nbsp;
-<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="0.7" data-pjax-state="">&nbsp;透明度&nbsp;0.7</a> &nbsp;
-<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="0.8" data-pjax-state="">&nbsp;透明度&nbsp;0.8</a> &nbsp;
-<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="0.9" data-pjax-state="">&nbsp;透明度&nbsp;0.9</a> &nbsp;
-<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="1" data-pjax-state="">&nbsp;透明度&nbsp;1</a></center>
+<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="0" data-pjax js-pjax-state="">&nbsp;透明度&nbsp;0</a> &nbsp;
+<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="0.1" data-pjax js-pjax-state="">&nbsp;透明度&nbsp;0.1</a> &nbsp;
+<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="0.2" data-pjax js-pjax-state="">&nbsp;透明度&nbsp;0.2</a> &nbsp;
+<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="0.3" data-pjax js-pjax-state="">&nbsp;透明度&nbsp;0.3</a> &nbsp;
+<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="0.4" data-pjax js-pjax-state="">&nbsp;透明度&nbsp;0.4</a> &nbsp;
+<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="0.5" data-pjax js-pjax-state="">&nbsp;透明度&nbsp;0.5</a> &nbsp;
+<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="0.6" data-pjax js-pjax-state="">&nbsp;透明度&nbsp;0.6</a> &nbsp;
+<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="0.7" data-pjax js-pjax-state="">&nbsp;透明度&nbsp;0.7</a> &nbsp;
+<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="0.8" data-pjax js-pjax-state="">&nbsp;透明度&nbsp;0.8</a> &nbsp;
+<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="0.9" data-pjax js-pjax-state="">&nbsp;透明度&nbsp;0.9</a> &nbsp;
+<a style="margin-bottom:10px" href="#" class="far fa-hand-point-down fa-fw" data-opacity="1" data-pjax js-pjax-state="">&nbsp;透明度&nbsp;1</a></center>
 
 ## 背景调节
 

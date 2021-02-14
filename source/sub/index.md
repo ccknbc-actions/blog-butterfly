@@ -7,7 +7,7 @@ top_img: false
 translate_title: subscribe-to-blog-article-updates
 date: 2020-10-14 22:17:35
 ---
-<!-- <script data-pjax src="https://code.tidio.co/rmnlrpff1oci9pui1djmeuvx1mftupfq.js" async></script> -->
+<!-- <script data-pjax js-pjax src="https://code.tidio.co/rmnlrpff1oci9pui1djmeuvx1mftupfq.js" async></script> -->
 <!-- <script>(function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/25a36e78.js","daovoice")</script>
 <script>daovoice('init', {app_id: "25a36e78"});daovoice('update');</script> -->
 {% note success %} **以下方式均支持随时取消订阅** {% endnote %}
