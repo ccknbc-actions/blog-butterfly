@@ -48,6 +48,7 @@ Waline - 一款从 [Valine](https://valine.js.org) 衍生的带后端评论系�
   | | 独立部署 | MySQL |
   | | | SQLite |
   | | | PostgreSQL |
+  | | | GitHub |
 
 对于想白嫖的小白， `Vercel`  + `LeanCloud（国际版）`  是不错的选择，如果你主要面向对象为大陆用户，使用 `CloudBase`  部署也是个不错的选择，它在海外表现也没那么差，或者您仅使用 `CloudBase`  来做数据存储
 {% note warning simple %}如果您使用 `Vercel` + `LeanCloud` ，并且使用 `Vercel`  发送评论通知，您不必担心 LeanCloud 流控问题，并且之前使用过 Valine 或者部署过 `Valine-Admin`  项目的可以直接拿来用；对于评论转移，官方提供了[迁移助手](https://waline.js.org/migration/tool.html)供您使用，不用担心之前评论丢失的问题{% endnote %}
@@ -64,7 +65,7 @@ Waline - 一款从 [Valine](https://valine.js.org) 衍生的带后端评论系�
 {% checkbox green checked, 登录支持 %}
 {% checkbox green checked, 评论管理 %}
 {% checkbox green checked, 评论删除 %}
-{% checkbox green checked, 其它数据库支持（已支持 LeanCloud, CloudBase, MySQL, MongoDB, SQLite, PostgreSQL) %}
+{% checkbox green checked, 其它数据库支持（已支持 LeanCloud, CloudBase, MySQL, MongoDB, SQLite, PostgreSQL, GitHub) %}
 {% checkbox green checked, 基于 IP 的发布评论频率限制  %}
 {% checkbox green checked, 基于关键词的评论过滤限制 %}
 {% checkbox green checked, IP 黑名单 %}
