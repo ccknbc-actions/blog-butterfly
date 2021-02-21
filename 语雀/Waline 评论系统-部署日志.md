@@ -20,7 +20,7 @@ photos: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-01-17~15-08-
 comments: true
 copyright_author_href: 'https://www.ccknbc.cc'
 id: 20
-updated: 2021-02-07 23:15:00
+updated: 2021-02-21 14:35:00
 ---
 
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/20)
@@ -38,7 +38,7 @@ Waline - 一款从 [Valine](https://valine.js.org) 衍生的带后端评论系�
 - Markdown 语法支持
 - 轻量易用
 - 免费部署
-- 多种部署部署方式和存储服务支持，每列选择一项多达 48 种部署方式任君选择
+- 多种部署部署方式和存储服务支持，每列选择一项多达 56 种部署方式任君选择
   | | Waline | |
   | --- | --- | --- |
   | **客户端脚本** | **服务端部署** | **数据存储** |
@@ -65,7 +65,7 @@ Waline - 一款从 [Valine](https://valine.js.org) 衍生的带后端评论系�
 {% checkbox green checked, 登录支持 %}
 {% checkbox green checked, 评论管理 %}
 {% checkbox green checked, 评论删除 %}
-{% checkbox green checked, 其它数据库支持（已支持 LeanCloud, CloudBase, MySQL, MongoDB, SQLite, PostgreSQL, GitHub) %}
+{% checkbox green checked, 其它数据库支持 %}
 {% checkbox green checked, 基于 IP 的发布评论频率限制  %}
 {% checkbox green checked, 基于关键词的评论过滤限制 %}
 {% checkbox green checked, IP 黑名单 %}
@@ -297,5 +297,5 @@ module.exports.main = async (event, context) => {
 | ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | SECRETID                                       | API 访问密钥 ID，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                                                               |
 | SECRETKEY                                      | API 访问密钥 KEY，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                                                              |
-| TCBFUNNAME（没什么蒿甲醚的，就叫 waline 算了） | 你想要新建/已有函数的名称，比如 `Waline`                                                                                                                                                         |
+| TCBFUNNAME（没什么好加密的，就叫 waline 算了） | 你想要新建/已有函数的名称，比如 `Waline`                                                                                                                                                         |
 | TCBENVID                                       | 环境 ID，可[点击这里](https://console.cloud.tencent.com/tcb/env/overview)或[这里](https://console.cloud.tencent.com/tcb/env/index)查看，地址栏后也会显示，反正就是很多地方都在上面点一下就能看到 |
