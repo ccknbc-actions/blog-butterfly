@@ -14,7 +14,7 @@
     "cachePath": "yuque.json",
     "mdNameFormat": "title",
     "adapter": "hexo",
-    "concurrency": 3,
+    "concurrency": 1,
     "baseUrl": "https://www.yuque.com/api/v2",
     "login": "ccknbc",
     "repo": "blog",

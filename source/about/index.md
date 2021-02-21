@@ -9,7 +9,7 @@ date: 2020-08-08 14:55:19
 
 ## 镜像站点
 
-{% note success flat %} 以下排名不分先后，请选择适合自己访问较快的即可<br> **[GitHub](https://ccknbc.github.io) | [GitLab](https://ccknbc.gitlab.io) | [Gitee](https://ccknbc.gitee.io) | [Vercel](https://ccknbc.now.sh) | [Netlify](https://ccknbc.netlify.app) | [CloudFlare（等待获取测试资格中）]()** {% endnote %}
+{% note success flat %} 以下排名不分先后，请选择适合自己访问较快的即可<br> **[GitHub](https://ccknbc.github.io) | [GitLab](https://ccknbc.gitlab.io) | [Gitee](https://ccknbc.gitee.io) | [Vercel](https://ccknbc.now.sh) | [Netlify](https://ccknbc.netlify.app) | [CloudFlare](https://0210471e.blog-rdz0.pages.dev)** {% endnote %}
 
 ## 站点源码
 
@@ -19,17 +19,24 @@ date: 2020-08-08 14:55:19
 
 {% timeline %}
 
+{% timenode 2021-02-21 **镜像站点+1** %}
+
+1. 评论系统换为`DIsqusJS`和`LiveRe`（导出评论限制了我就是你们了）
+2. 镜像站点增加 **[CloudFlare](https://0210471e.blog-rdz0.pages.dev)** 的支持
+
+{% endtimenode %}
+
 {% timenode 2021-01-22 **小小的更新** %}
 
-1. 评论系统增加`Twikoo`，为双评论模式，但都配有人工审核
+1. 评论系统增加`Twikoo`，为双评论模式，但都配有人工审核（继续打脸）
 2. 友链去除了`Jquery`[@卓越科技](https://blog.zykjofficial.top)
-3. `rightside` 增加编辑按钮，并根据文章和页面进行自适应平台标题显示
+3. 增加编辑按钮，并根据文章和页面进行自适应平台标题显示
 
 {% endtimenode %}
 
 {% timenode 2021-01-05 **评论系统的更新** %}
 
-1. 评论系统换为`Waline`
+1. 评论系统换为`Waline`（测试卡打脸）
 2. 一些小改动
 
 {% endtimenode %}
