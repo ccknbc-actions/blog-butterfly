@@ -1,0 +1,22 @@
+image: node:latest
+variable:
+  script:
+    - echo $YUQUE_TOKEN
+    - echo $ALGOLIA_ADMIN_API_KEY
+pages:
+  script:
+    - npm i -g hexo-cli
+    - npm install
+    - git clone -b json https://github.com/ccknbc-actions/blog-butterfly.git json
+    - git clone -b posts https://gitlab.com/CCKNBC/ccknbc.gitlab.io.git source/_posts
+    - mv -f ./json/yuque.json ./
+    - npm run yuque
+  artifacts:
+    paths:
+      - public
+  cache:
+    paths:
+      - node_modules
+    key: project
+  only:
+    - master
