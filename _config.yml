@@ -185,6 +185,42 @@ aplayer:
   asset_inject: false
   meting: false
 
+mmedia:
+  audio:
+    default:
+      autoplay: false
+      key: vaule
+  video:
+    default:
+      autoplay: false
+      key: vaule
+  meting:
+    default:
+      theme: '#8fbc8f'
+      volume: '1'
+  dplayer:
+    default:
+      contents:
+        theme: '#8fbc8f'
+      volume: '1'
+  bilibili:
+    default:
+      page: 1
+      danmaku: true
+      allowfullscreen: allowfullscreen
+      sandbox: allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups
+      width: 100%
+      max_width: 850px
+      margin: auto
+  xigua:
+    default:
+      allowfullscreen: allowfullscreen
+      sandbox: allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups
+      width: 100%
+      max_width: 850px
+      margin: auto
+
+
 # widget_tree:
 #   cdn: true
 #   hide: true
@@ -207,7 +243,7 @@ aplayer:
 # 要说临时更新真好用啊
 deploy:
   - type: git
-    repo: git@e.coding.net:ccknbc/blog/yun.git
+    repo: git@e.coding.net:ccknbc/blog/butterfly.git
 
   
 # admin:

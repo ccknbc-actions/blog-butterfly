@@ -56,12 +56,11 @@ date: 2020-11-08 15:29:33
 
 <br><div class="btn-center"><div center>{% btn 'https://tv.line.me/15101475',LINETVTHAILAND版权所有,far fa-copyright,green larger %}</div>
 
-{% aplayer  "นอนไม่หลับ(The Remake)" "Three Man Down" "https://file.nmb.show/down.php/fc178ad5791961bf520fcfc7e4f0b450.flac" "https://gejiba.com/down.php/2308b7cb7d88beaafd79a2171494ebdf.jfif" "lrc:https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-11-08~21_39_21.lrc" %}
-
 <div class="btn-center">
 {% btn 'https://www.joox.com/th/single/I6Sexy9JkQ+0PXMj94lBdg==',JOOXTHAILAND版权所有,far fa-copyright,green larger %}{% btn 'https://www.joox.com/th/single/I6Sexy9JkQ+0PXMj94lBdg==',歌词由CC康纳百川制作,far fa-copyright,green larger %}</div>
 
-{% meting "auto:https://music.163.com/#/artist?id=12838890" "theme:#8fbc8f" %}
+{% mmedia "meting" "server=netease"	"type=artist" "id=12838890" %}
+
 
 
 

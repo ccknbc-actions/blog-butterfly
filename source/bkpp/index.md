@@ -1013,6 +1013,6 @@ BKPP开始拍摄新剧
 
 <a class="btn-beautify button--animated block center larger" href="/bkpp/live" title="直播页面" target="_blank"><i class="far fa-hand-point-right fa-fw"></i> 直播页面 </a>
 
-<!-- {% meting "1288173153" "xiami" "playlist" "mutex:true" "preload:auto" "theme:#8fbc8f" "volume:1" %} -->
+<!-- {% mmedia "meting" "1288173153" "xiami" "playlist" "mutex:true" "preload:auto" "theme:#8fbc8f" "volume:1" %} -->
 
-{% meting "5321262221" "netease" "playlist" "mutex:true" "preload:auto" "theme:#8fbc8f" "volume:1" %}
+{% mmedia "meting" "server=netease"	"type=playlist" "id=5321262221" %}
