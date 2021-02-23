@@ -77,7 +77,7 @@ marked:
 index_generator:
   path: ''
   per_page: 10
-  order_by: -date
+  order_by: -updated
 
 # Category & Tag
 default_category: 

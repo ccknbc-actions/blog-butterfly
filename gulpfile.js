@@ -57,7 +57,7 @@ gulp.task('generate-service-worker', () => {
   }).then(({count, size, warnings}) => {
     //打印错误
     warnings.forEach(console.warn);
-    console.log(`${count} 文件将被预缓存 共占用 ${size} bytes.`);
+    console.log(`${count} 文件将被预缓存 共占用 ${size/1024} kb`);
 
   });
 });

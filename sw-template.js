@@ -1,4 +1,4 @@
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.1.0/workbox-sw.js');
+importScripts('https://cdn.jsdelivr.net/npm/workbox-sw/build/workbox-sw.js');
 
 if (workbox) {
   console.log(`Yay! Workbox is loaded 🎉`);

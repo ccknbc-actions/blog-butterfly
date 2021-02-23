@@ -1,15 +1,38 @@
 #rightside
   #rightside-config-hide
     if theme.edit.enable
-      if is_page() && !is_current('say' || 'talk')
-        a.edit-cloud-studio(href=theme.edit.cloud_studio title=_p('edit.cloud_studio') target="_blank")
+      if is_post()
+        a.edit-yuque(href=theme.edit.yuque + page.id + '/markdown' title=_p('edit.yuque_markdown') + ' - ' + page.title target="_blank")
+          i.fab.fa-markdown
+        //- a.edit-yuque(href=theme.edit.yuque + page.id + '/html' title=_p('edit.yuque_html') + ' - ' + page.title target="_blank")
+        //-   i.fab.fa-html5
+        //-   span.post-meta-separator
+        a.edit-github1s(href=theme.edit.github1s + 'posts/语雀/' + page.title + '.md' title=_p('edit.github1s') + ' - ' + page.title target="_blank")
+          i.fas.fa-laptop-code
+        a.edit-gitlab-ide(href=theme.edit.gitlab_ide + 'posts/-/语雀/' + page.title + '.md' title=_p('edit.gitlab_ide') + ' - ' + page.title target="_blank")
+          i.fas.fa-code
+        a.edit-gitlab(href=theme.edit.gitlab + 'posts/语雀/' + page.title + '.md' title=_p('edit.gitlab') + ' - ' + page.title target="_blank")
+          i.fab.fa-gitlab
+        a.edit-yuque(href=theme.edit.yuque + page.id + '/edit' title=_p('edit.yuque') + ' - ' + page.title target="_blank")
+          i.fas.fa-crow
+        //- a.edit-hexoplusplus(href=theme.edit.hexoplusplus title=_p('edit.hexoplusplus') target="_blank")
+        //-   i.fas.fa-pencil-alt
+        //-   span.post-meta-separator
+        //- a.edit-cloud-studio(href=theme.edit.cloud_studio title=_p('edit.cloud_studio') target="_blank")
+        //-   i.fas.fa-laptop-code
+      else if is_page() && !is_current('say' || 'talk')
+        //- a.edit-cloud-studio(href=theme.edit.cloud_studio title=_p('edit.cloud_studio') target="_blank")
+        //-   i.fas.fa-laptop-code
+        a.edit-github1s(href=theme.edit.github1s + 'master/source/' + page.source title=_p('edit.github1s') + ' - ' + page.title target="_blank")
           i.fas.fa-laptop-code
         a.edit-gitlab-ide(href=theme.edit.gitlab_ide + 'master/-/source/' + page.source title=_p('edit.gitlab_ide') + ' - ' + page.title target="_blank")
           i.fas.fa-code
         a.edit-gitlab(href=theme.edit.gitlab + 'master/source/' + page.source title=_p('edit.gitlab') + ' - ' + page.title target="_blank")
           i.fab.fa-gitlab
-      else if is_home() || is_archive() || is_category() || is_tag()
-        a.edit-cloud-studio(href=theme.edit.cloud_studio title=_p('edit.cloud_studio') target="_blank")
+      else if is_home()
+        //- a.edit-cloud-studio(href=theme.edit.cloud_studio title=_p('edit.cloud_studio') target="_blank")
+        //-   i.fas.fa-laptop-code
+        a.edit-github1s(href=theme.edit.github1s + 'master/' title=_p('edit.github1s') target="_blank")
           i.fas.fa-laptop-code
         a.edit-gitlab-ide(href=theme.edit.gitlab_ide title=_p('edit.gitlab_ide') target="_blank")
           i.fas.fa-code
