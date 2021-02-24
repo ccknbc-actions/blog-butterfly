@@ -12,7 +12,7 @@ echo "[1] 初始化安装Hexo（仅在第一次安装时使用）"
 echo "[2] 从云端恢复Hexo（需要在脚本中配置仓库URL）"
 echo "=============以下功能需要在Hexo文件夹内使用================"
 echo "[3] 开启本地预览"
-echo "[4] 重新编译后开启本地预览（修改过_config.yml需使用这个才能看到变化）"
+echo "[4] GULP后开启本地预览"
 echo "[5] 开启5000端口本地预览"
 echo "[6] 部署页面到博客网站"
 echo "[7] 从远程仓库拉取最新版本（需要在脚本中配置仓库URL）"
@@ -88,7 +88,7 @@ hexo clean
 printf "\033[32mINFO \033[0m 正在重新编译静态页面...\n"
 hexo generate
 printf "\033[32mINFO \033[0m 正在压缩静态资源...\n"
-# gulp #gulp插件，未配置无需开启
+gulp #gulp插件，未配置无需开启
 printf "\033[32mINFO \033[0m 正在开启本地预览，可以按Ctrl+C退出\n"
 hexo server
 exec ${HexoPath}/hexo.sh

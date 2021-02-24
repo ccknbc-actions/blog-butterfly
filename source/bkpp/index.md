@@ -1015,4 +1015,8 @@ BKPP开始拍摄新剧
 
 <!-- {% mmedia "meting" "1288173153" "xiami" "playlist" "mutex:true" "preload:auto" "theme:#8fbc8f" "volume:1" %} -->
 
-{% mmedia "meting" "server=netease"	"type=playlist" "id=5321262221" %}
+<!-- {% mmedia "meting" "server=netease"	"type=playlist" "id=5321262221" %} -->
+
+<!-- {% meting "1288173153" "xiami" "playlist" "mutex:true" "preload:auto" "theme:#8fbc8f" "volume:1" %} -->
+
+{% meting "5321262221" "netease" "playlist" "mutex:true" "preload:auto" "theme:#8fbc8f" "volume:1" %}

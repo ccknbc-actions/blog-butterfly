@@ -181,10 +181,6 @@ nofollow:
     - 'exclude1.com'
     - 'exclude2.com'
 
-aplayer:
-  asset_inject: false
-  meting: false
-
 mmedia:
   audio:
     default:
@@ -197,29 +193,12 @@ mmedia:
   meting:
     default:
       theme: '#8fbc8f'
-      volume: '1'
-  dplayer:
+      key: vaule
+  aplayer:
     default:
       contents:
         theme: '#8fbc8f'
-      volume: '1'
-  bilibili:
-    default:
-      page: 1
-      danmaku: true
-      allowfullscreen: allowfullscreen
-      sandbox: allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups
-      width: 100%
-      max_width: 850px
-      margin: auto
-  xigua:
-    default:
-      allowfullscreen: allowfullscreen
-      sandbox: allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups
-      width: 100%
-      max_width: 850px
-      margin: auto
-
+        key: vaule
 
 # widget_tree:
 #   cdn: true

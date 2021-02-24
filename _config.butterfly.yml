@@ -785,7 +785,7 @@ aside:
       link: https://t.me/ccknbcTG
   card_announcement:
     enable: true
-    content: 接下来一段时间内不再更新，毕业重要（懒）
+    content: 接下来一段时间内不再更新，毕业重要（懒），如果更新了，那就是机器人自动更新插件导致的
     # '
     # <center>
     # <a target="_blank" href="https://hexo.io"><img src="https://img.shields.io/badge/Frame-Hexo 5.3.0-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><br>
