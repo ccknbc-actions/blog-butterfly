@@ -46,7 +46,7 @@
     "hexo-renderer-pug": "1.0.0",
     "hexo-renderer-stylus": "2.0.1",
     "hexo-server": "2.0.0",
-    "hexo-tag-mmedia": "1.0.0",
+    "hexo-tag-mmedia": "1.0.1",
     "hexo-translate-title-vss": "1.0.14",
     "hexo-wordcount": "6.0.1",
     "yuque-hexo": "1.7.0"
