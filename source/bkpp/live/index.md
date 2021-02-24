@@ -180,11 +180,3 @@ const dp_live = new DPlayer({
 <div class="btn-center">
 {% btn 'https://tv.line.me/special/live/4086',第5集官方直播页面（泰国IP）,far fa-hand-point-right,outline green larger %}
 </div> -->
-<!-- ## 网易(有歌词翻译) -->
-<!-- {% mmedia "meting" "5321262221" "netease" "playlist" "mutex:true" "preload:auto" "theme:#8fbc8f" "volume:1" %} -->
-
-<!-- {% mmedia "meting" "server=netease"	"type=playlist" "id=5321262221" %} -->
-
-<!-- {% meting "1288173153" "xiami" "playlist" "mutex:true" "preload:auto" "theme:#8fbc8f" "volume:1" %} -->
-
-{% meting "5321262221" "netease" "playlist" "mutex:true" "preload:auto" "theme:#8fbc8f" "volume:1" %}

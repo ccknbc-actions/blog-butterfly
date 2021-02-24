@@ -181,25 +181,6 @@ nofollow:
     - 'exclude1.com'
     - 'exclude2.com'
 
-mmedia:
-  audio:
-    default:
-      autoplay: false
-      key: vaule
-  video:
-    default:
-      autoplay: false
-      key: vaule
-  meting:
-    default:
-      theme: '#8fbc8f'
-      key: vaule
-  aplayer:
-    default:
-      contents:
-        theme: '#8fbc8f'
-        key: vaule
-
 # widget_tree:
 #   cdn: true
 #   hide: true

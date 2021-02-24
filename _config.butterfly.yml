@@ -317,12 +317,12 @@ comments:
   use:
   # - Utterances
   # - Disqus
-  # - Disqusjs
+  - Disqusjs
   # - Beaudar
   # - Livere
   # - Artalk
-  - Twikoo
-  - Waline
+  # - Twikoo
+  # - Waline
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -785,7 +785,7 @@ aside:
       link: https://t.me/ccknbcTG
   card_announcement:
     enable: true
-    content: 接下来一段时间内不再更新，毕业重要（懒），如果更新了，那就是机器人自动更新插件导致的
+    content: 接下来一段时间内不再更新，毕业重要（懒），如果更新了，那就是机器人自动更新插件导致的，以及有关音乐及视频部分全部存在bug
     # '
     # <center>
     # <a target="_blank" href="https://hexo.io"><img src="https://img.shields.io/badge/Frame-Hexo 5.3.0-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><br>
@@ -850,10 +850,10 @@ newest_comments:
     enable: false
     repo: ccknbc-backup/comments
   disqus:
-    enable: false
+    enable: true
     forum: ccknbc
     api_key: Z6F8Gc9KvW2YCh6p11VRVNvMBYfdaKR3IMRFLVmoYaIQJ2ysp38fZ9tivPdgyBWu
-  twikoo: true
+  twikoo: false
   waline: false
   artalk:
     enable: false

@@ -22,7 +22,7 @@ date: 2020-08-08 14:55:19
 {% timenode 2021-02-21 **镜像站点+1** %}
 
 1. 评论系统换为`DIsqusJS`和`LiveRe`（导出评论限制了我就是你们了）
-2. 镜像站点增加 **[CloudFlare](https://0210471e.blog-rdz0.pages.dev)** 的支持
+2. 镜像站点增加 **[CloudFlare](https://blog-rdz0.pages.dev)** 的支持
 
 {% endtimenode %}
 
