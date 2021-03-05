@@ -74,8 +74,8 @@ marked:
   smartLists: true
   smartypants: true
   quotes: '“”‘’'
-  modifyAnchors: 0
-  anchorAlias: false
+  modifyAnchors: 2
+  anchorAlias: true
   autolink: true
   mangle: true
   sanitizeUrl: false

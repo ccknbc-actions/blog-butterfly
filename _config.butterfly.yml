@@ -251,7 +251,7 @@ photofigcaption: false
 # 1: The 'next post' will link to old post
 # 2: The 'next post' will link to new post
 # false: disable pagination
-post_pagination: 2
+post_pagination: false
 
 # anchor
 # when you scroll in post, the URL will update according to header id.

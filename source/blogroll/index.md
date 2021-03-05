@@ -140,6 +140,7 @@ screenshot: https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.ccknbc
       "冰糖CP专属":"<marquee direction=right behavior=alternate scrollamount=5 scrolldelay=10 align=top width=220 onmouseover=this.stop() onmouseout=this.start()><b><font color=#FFCC99>一直白嫖一直爽</marquee>",
       "菜鸡专属":"<marquee direction=right behavior=scroll scrollamount=5 scrolldelay=10 align=top width=220 onmouseover=this.stop() onmouseout=this.start()><b><font color=#FF6666>这真的是大佬</marquee>",
     },
+    loading_img: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-10~13_03_22.webp',
     fail_img: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-10~13_03_22.webp'
   }
   document.querySelector('.flink').insertAdjacentHTML('afterbegin', "<div id='friend1'></div>")
