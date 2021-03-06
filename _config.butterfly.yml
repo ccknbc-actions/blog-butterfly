@@ -297,11 +297,11 @@ comments:
   # - Utterances
   # - Disqus
   # - Beaudar
-  - Livere
-  - Disqusjs
+  # - Livere
+  # - Disqusjs
   # - Artalk
-  # - Twikoo
-  # - Waline
+  - Twikoo
+  - Waline
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid

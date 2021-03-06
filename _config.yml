@@ -212,7 +212,7 @@ githubcalendar:
   color: "['#ebedf0', '#f0fff4', '#dcffe4', '#bef5cb', '#85e89d', '#34d058', '#28a745', '#22863a', '#176f2c', '#165c26', '#144620']"
   api: https://api.ccknbc.now.sh/api/github-calendar
   # api: https://python-gitee-calendar-api.vercel.app/api
-  calendar_js: https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar@1.16/hexo_githubcalendar.js
+  calendar_js: https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar/hexo_githubcalendar.js
 
 # widget_tree:
 #   cdn: true
