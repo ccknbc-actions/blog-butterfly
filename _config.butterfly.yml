@@ -296,12 +296,12 @@ comments:
   use:
   # - Utterances
   # - Disqus
-  # - Disqusjs
   # - Beaudar
-  # - Livere
+  - Livere
+  - Disqusjs
   # - Artalk
-  - Twikoo
-  - Waline
+  # - Twikoo
+  # - Waline
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -819,7 +819,7 @@ runtimeshow:
 
 # Aside widget - Newest Comments
 newest_comments:
-  enable: true
+  enable: false
   limit: 6
   storage: 10
   avatar: true
