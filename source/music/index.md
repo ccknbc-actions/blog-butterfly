@@ -10,7 +10,6 @@ date: 2020-11-08 15:29:33
 ### 建议 UA 切换为电脑版观看
 {% mmedias "artplayer"  %}
 {
-  container: '.yebunengmeng',
   style: 'width:100%;height:500px;max-width:1200px;center',
   url: "https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4",
   title: "夜不能寐",
@@ -94,6 +93,16 @@ date: 2020-11-08 15:29:33
       "theme": "#8fbc8f"
     }
   ]
+}
+{% endmmedias %}
+
+{% mmedias "dplayer" "hls:https://cdn.jsdelivr.net/npm/hls.js/dist/hls.min.js" "url:https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"  "pic:https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-12~18_03_38.webp" %}
+{
+  live: true,
+  theme: "#8fbc8f",
+  volume: 1,
+  mutex: true,
+  screenshot: true
 }
 {% endmmedias %}
 

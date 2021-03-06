@@ -15,7 +15,7 @@ date: 2020-06-04 22:17:49
 
 快速申请友链请前往{% btn 'https://gitee.com/ccknbc/blogroll/issues/new?skip_mobile=true',Gitee,far fa-hand-point-right,outline red larger %} 或 {% btn 'https://github.com/ccknbc-actions/blogroll/issues/new?assignees=&labels=&template=blogroll.md',GitHub,fab fa-github,outline green larger %}按照 {% emp Issue 模板 %}提交 Issue 即可
 
-{% note warning simple %}关于定时自动截图，由于换了一个免费的接口，由于没有延时参数设置，加上 jsDelivr 的缓存，所以你的站点可能某天（或者每一天）没有截图，对于 Item 样式，鼠标悬停会显示当天的截图，但是带壳截图好看啊！{% endnote %}
+{% note warning simple %}Item 效果鼠标悬停会显示自动截图的结果（极可能加载失败），如果你想要 [带壳截图](https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp)，可前往 **[友链仓库](https://github.com/ccknbc-actions/blogroll/blob/main/.github/workflows/screenshots.yml#L46)** fork仓库后 按照这个格式在下面添加一行，然后向我提交PR，或者在你的申请 Issue 下面评论告知我添加即可，每天定时自动更新{% endnote %}
 
 **Issue 配置预览**，若您想修改或者追加新配置可前往您所创建的 Issue 自行修改
 
@@ -67,7 +67,7 @@ card_style: item
 # 自定义网站截图，当样式为 card 时可以自定义网站截图
 # 1.如果您的站点不常更新，可留空，会使用默认接口 https://image.thum.io/get/width/1024/crop/768/https://blog.ccknbc.cc
 # 2.如果您的站点加载完毕耗时较长，请自行替换为此接口中网址部分填入 https://s0.wordpress.com/mshots/v1/https://blog.ccknbc.cc?w=1280&h=960 
-# 3.如果您的站点更新较为频繁，加载速度还不错，可替换此链接中域名部分填入 https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
+# 3.此外每天我还会帮您自动截图，您可直接替换域名部分为您的域名 https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
 # 如果您知道其他好用的接口，欢迎给我留言，谢谢！！！
 screenshot: 
 ```
@@ -125,13 +125,14 @@ screenshot: https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.ccknbc
 {% endtabs %}
 
 <script data-pjax src="https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@main/blogroll.js"></script>
+<script data-pjax src="https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@main/screenshot.js"></script>
 <script> 
   if(typeof(Friend)=='undefined'){
     location.href='/blogroll'
   }
   var obj = {
     el: '#friend1',
-    url: 'https://raw.sevencdn.com/ccknbc-actions/blogroll/blogroll/blogroll.json',
+    url: "https://api.ccknbc.now.sh/api/github?repo='blogroll'&user='ccknbc-actions'&branch='blogroll'&path='blogroll.json'",
     sort_container:["康特CP专属","冰糖CP专属","菜鸡专属","小伙伴们","渣男小嘉专属"],
     labelDescr:{
       "康特CP专属":"<span style='color:#49b1f5;'>有点甜！</span>",
@@ -145,4 +146,12 @@ screenshot: https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.ccknbc
   }
   document.querySelector('.flink').insertAdjacentHTML('afterbegin', "<div id='friend1'></div>")
   new Friend(obj)
+  getFriendsScreenShot({
+    user: "ccknbc-actions", // github用户名
+    repo: "blogroll", // github仓库名
+    branch: "webp", //  分支: 可选参数(默认gh-pages分支)
+    suffix: "webp", // 图片后缀: 可选参数(默认jpg)
+    lazyImg: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-10~13_03_22.webp", // 懒加载图片: 可选参数(默认https://cdn.jsdelivr.net/gh/zykjofficial/zykjofficial.github.io@master/img/loading.gif)
+    duration: 5000 //Snackbar的持续时间: 可选参数(默认5000毫秒)
+})
 </script>
