@@ -81,34 +81,55 @@ date: 2020-11-08 15:29:33
 <br>
 {% mmedias "aplayer" "autoplay:false" %}
 {
-  "volume": 0.8,
-  "audio":
+  volume: 0.8,
+  audio:
   [
     {
-      "name": "นอนไม่หลับ(The Remake)",
-      "artist": "Three Man Down",
-      "url": "https://file.nmb.show/down.php/fc178ad5791961bf520fcfc7e4f0b450.flac",
-      "cover": "https://img.maocdn.cn/img/2021/03/03/1000.jpg",
-      "lrc": "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-11-08~21_39_21.lrc",
-      "theme": "#8fbc8f"
+      name: "นอนไม่หลับ(The Remake)",
+      artist: "Three Man Down",
+      url: "https://file.nmb.show/down.php/fc178ad5791961bf520fcfc7e4f0b450.flac",
+      cover: "https://img.maocdn.cn/img/2021/03/03/1000.jpg",
+      lrc: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-11-08~21_39_21.lrc",
+      theme: "#8fbc8f"
     }
   ]
 }
 {% endmmedias %}
 
-{% mmedias "dplayer" "hls:https://cdn.jsdelivr.net/npm/hls.js/dist/hls.min.js" "url:https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"  "pic:https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-12~18_03_38.webp" %}
-{
-  live: true,
-  theme: "#8fbc8f",
-  volume: 1,
-  mutex: true,
-  screenshot: true
-}
-{% endmmedias %}
-
-<br><div class="btn-center"><div center>{% btn 'https://tv.line.me/15101475',LINETVTHAILAND版权所有,far fa-copyright,green larger %}</div>
+<div class="btn-center"><div center>{% btn 'https://tv.line.me/15101475',LINETVTHAILAND版权所有,far fa-copyright,green larger %}</div>
 
 <div class="btn-center">
 {% btn 'https://www.joox.com/th/single/I6Sexy9JkQ+0PXMj94lBdg==',JOOXTHAILAND版权所有,far fa-copyright,green larger %}{% btn 'https://www.joox.com/th/single/I6Sexy9JkQ+0PXMj94lBdg==',歌词由CC康纳百川制作,far fa-copyright,green larger %}</div>
+
+{% mmedias "dplayer" "hls:" %}
+{
+  video:
+  {
+    quality:
+    [
+      {
+        name: '1080P',
+        url: 'https://test-streams.mux.dev/x36xhzz/url_8/193039199_mp4_h264_aac_fhd_7.m3u8',
+        type: 'hls',
+      },
+      {
+        name: '720P',
+        url: 'https://test-streams.mux.dev/x36xhzz/url_0/193039199_mp4_h264_aac_hd_7.m3u8',
+        type: 'hls',
+      },
+      {
+        name: '480P',
+        url: 'https://test-streams.mux.dev/x36xhzz/url_6/193039199_mp4_h264_aac_hq_7.m3u8',
+        type: 'hls',
+      },
+    ],
+    defaultQuality: 0,
+    pic: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-12~18_03_38.webp',
+  },
+  theme: '#8fbc8f',
+  live: true,
+  screenshot: true,
+}
+{% endmmedias %}
 
 {% mmedia "meting" "auto=https://music.163.com/#/artist?id=12838890" "theme:#8fbc8f" %}
