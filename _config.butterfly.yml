@@ -14,8 +14,9 @@ menu:
   列表||fas fa-list:
     图库: /gallery/ || fas fa-images
     音乐: /music/ || fas fa-music
+    哔哔: /bb/ || fas fa-comment-alt
     说说: /say/ || fas fa-comment
-    叨叨: /talk/ || fas fa-comment-dots
+    叨叨: /talk/ || fas fa-comments
   关于||fas fa-desktop:
     本站: /about/ || fas fa-stream
     统计: /charts/ || fas fa-chart-bar
@@ -543,12 +544,12 @@ microsoft_clarity:
 # --------------------------------------
 
 # Google Adsense (谷歌廣告)
-# google_adsense:
-#   enable: true
-#   auto_ads: true
-#   js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
-#   client: ca-pub-4962482948943075
-#   enable_page_level_ads: true
+google_adsense:
+  enable: false
+  auto_ads: true
+  js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
+  client: ca-pub-4962482948943075
+  enable_page_level_ads: false
 
 # Insert ads manually (手動插入廣告)
 # ad:

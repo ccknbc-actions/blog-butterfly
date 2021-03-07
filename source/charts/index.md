@@ -8,6 +8,8 @@ top_img: false
 translate_title: charts
 date: 2020-08-09 21:58:47
 ---
+<iframe src="https://status.ccknbc.cc" width="100%" height="520" frameborder="0" scrolling="no"></iframe>
+
 <div id="posts-calendar"></div>
 
 <div id="posts-chart"></div>
