@@ -6,8 +6,8 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "start": "hexo generate && hexo algolia && gulp",
-    "yuque": "yuque-hexo sync && hexo generate && hexo algolia && gulp"
+    "start": "hexo generate && gulp",
+    "yuque": "yuque-hexo sync && hexo generate && gulp"
   },
   "yuqueConfig": {
     "postPath": "source/_posts/语雀",
@@ -29,7 +29,6 @@
     "hexo-algoliasearch": "1.0.0",
     "hexo-butterfly-artitalk": "1.0.1",
     "hexo-butterfly-hpptalk": "1.0.1",
-    "hexo-charts": "1.0.3",
     "hexo-deployer-git": "3.0.0",
     "hexo-filter-nofollow": "2.0.2",
     "hexo-generator-archive": "1.0.0",
@@ -47,6 +46,8 @@
     "hexo-renderer-pug": "1.0.0",
     "hexo-renderer-stylus": "2.0.1",
     "hexo-server": "2.0.0",
+    "hexo-statistics-charts": "3.3.1",
+    "hexo-tag-chart": "1.0.8",
     "hexo-tag-mmedia": "1.1.6",
     "hexo-translate-title-vss": "1.0.14",
     "hexo-wordcount": "6.0.1",

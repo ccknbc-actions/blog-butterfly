@@ -74,7 +74,7 @@ marked:
   smartLists: true
   smartypants: true
   quotes: '“”‘’'
-  modifyAnchors: 2
+  modifyAnchors: 0
   anchorAlias: true
   autolink: true
   mangle: true
@@ -151,6 +151,13 @@ feed:
   icon: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png
   autodiscovery: true
   template:
+
+sitemap:
+  path: sitemap.xml
+  template: 
+  rel: true
+  tags: false
+  categories: false
 
 # webPushNotification:
 #   webpushrKey: ""
