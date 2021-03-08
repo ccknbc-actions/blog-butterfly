@@ -22,3 +22,6 @@ date: 2020-08-09 21:58:47
 <div id="categories-radar"></div>
 
 <iframe src="https://status.ccknbc.cc" width="100%" height="520" frameborder="0" scrolling="no"></iframe>
+
+
+<script src="https://status.ccknbc.cc/config.js"></script><link href="https://status.ccknbc.cc/static/css/main.24c94d24.css" rel="stylesheet">><div id="app"></div><script src="https://status.ccknbc.cc/static/js/main.31e92b59.js"></script>

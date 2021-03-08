@@ -112,9 +112,9 @@ jobs:
     - name: Purge JsDelivr CDN
       run: |
         curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/
-      # curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/css/index.css
-      # curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/js/main.js
-      # curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/js/utils.js
+        curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/css/index.css
+        curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/js/main.js
+        curl https://purge.jsdelivr.net/gh/ccknbc/ccknbc.github.io/js/utils.js
 
     - name: Delete Workflow Runs
       uses: Mattraks/delete-workflow-runs@main
