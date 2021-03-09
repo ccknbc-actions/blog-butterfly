@@ -54,8 +54,8 @@
     "yuque-hexo": "1.7.0"
   },
   "devDependencies": {
-    "@babel/core": "7.13.8",
-    "@babel/preset-env": "7.13.9",
+    "@babel/core": "7.13.10",
+    "@babel/preset-env": "7.13.10",
     "cheerio": "1.0.0-rc.5",
     "gulp": "4.0.2",
     "gulp-babel": "8.0.0",
