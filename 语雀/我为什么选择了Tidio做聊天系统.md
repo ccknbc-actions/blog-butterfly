@@ -14,7 +14,6 @@ keywords: '工具,聊天'
 cover: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-12-15~18-17-57.webp'
 photos: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-12-15~18-17-57.webp'
 translate_title: why-did-i-choose-tidio-as-the-chat-system
-copyright_author_href: 'https://www.ccknbc.cc/'
 updated: 2020-10-03 18:09:51
 ---
 

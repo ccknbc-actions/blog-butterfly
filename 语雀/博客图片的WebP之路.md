@@ -7,7 +7,6 @@ tags:
   - 图床
   - 博客
 comments: true
-copyright_author_href: 'https://www.ccknbc.cc/'
 keywords: 'WebP,图床,博客'
 categories:
   - 博客

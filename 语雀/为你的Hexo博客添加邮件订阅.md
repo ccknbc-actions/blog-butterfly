@@ -14,7 +14,6 @@ keywords: '工具,订阅,邮件订阅'
 cover: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-16~18_24_19.webp'
 photos: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-16~18_24_19.webp'
 translate_title: add-email-subscription-to-your-hexo-blog
-copyright_author_href: 'https://www.ccknbc.cc/'
 updated: 2020-11-29 11:20:00
 ---
 

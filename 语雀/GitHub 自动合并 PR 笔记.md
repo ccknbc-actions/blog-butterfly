@@ -16,7 +16,6 @@ description: GitHub 自动合并 PR 笔记
 cover: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-01-17~17-57-41.webp'
 photos: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-01-17~17-57-41.webp'
 comments: true
-copyright_author_href: 'https://www.ccknbc.cc'
 id: 21
 updated: 2021-01-18 00:00:00
 ---
@@ -271,7 +270,7 @@ Install dependencies with `yarn`, and finally run `yarn it` (or `npm run it`).
 
 # bulldozer
 
-[![](https://cdn.nlark.com/yuque/0/2021/svg/8391407/1610874951039-f74d3099-f28f-4856-ade7-6c677ce4869d.svg#align=left&display=inline&height=20&margin=%5Bobject%20Object%5D&originHeight=20&originWidth=110&size=0&status=done&style=none&width=110)](https://bintray.com/palantir/releases/bulldozer/_latestVersion) [![](https://img.shields.io/docker/pulls/palantirtechnologies/bulldozer.svg#align=left&display=inline&height=20&margin=%5Bobject%20Object%5D&originHeight=20&originWidth=108&status=done&style=none&width=108)](https://hub.docker.com/r/palantirtechnologies/bulldozer/)
+[![](https://cdn.nlark.com/yuque/0/2021/svg/8391407/1610874951039-f74d3099-f28f-4856-ade7-6c677ce4869d.svg#align=left&display=inline&height=20&margin=%5Bobject%20Object%5D&originHeight=20&originWidth=110&size=0&status=done&style=none&width=110)](https://bintray.com/palantir/releases/bulldozer/_latestVersion) [![](https://img.shields.io/docker/pulls/palantirtechnologies/bulldozer.svg#align=left&display=inline&height=19&margin=%5Bobject%20Object%5D&originHeight=20&originWidth=114&status=done&style=none&width=108)](https://hub.docker.com/r/palantirtechnologies/bulldozer/)
 
 `bulldozer` is a [GitHub App](https://developer.github.com/apps/) that
 automatically merges pull requests (PRs) when (and only when) all required

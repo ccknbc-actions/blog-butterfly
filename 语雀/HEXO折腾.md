@@ -10,7 +10,6 @@ cover: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~10_48_3
 photos: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~10_48_38.webp'
 id: 3
 translate_title: hexo-toss
-copyright_author_href: 'https://www.ccknbc.cc/'
 updated: 2020-07-01 12:00:00
 ---
 

@@ -14,7 +14,6 @@ keywords: Github Actions
 cover: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-06~11_10_13.webp'
 photos: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-06~11_10_13.webp'
 translate_title: why-github-actions-is-so-popular
-copyright_author_href: 'https://www.ccknbc.cc/'
 updated: 2020-10-06 12:00:00
 ---
 

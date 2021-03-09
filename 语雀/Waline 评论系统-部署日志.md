@@ -18,7 +18,6 @@ description: Waline评论系统-部署日志，希望你也能用上这款评论
 cover: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-01-17~15-08-37.webp'
 photos: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-01-17~15-08-37.webp'
 comments: true
-copyright_author_href: 'https://www.ccknbc.cc'
 id: 20
 updated: 2021-02-21 14:35:00
 ---

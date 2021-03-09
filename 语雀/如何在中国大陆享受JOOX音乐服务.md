@@ -14,7 +14,6 @@ keywords: 'JOOX,music,音乐,大陆'
 cover: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-06~20_11_13.webp'
 photos: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-06~20_11_13.webp'
 translate_title: how-to-enjoy-joox-music-service-in-mainland-china
-copyright_author_href: 'https://www.ccknbc.cc/'
 updated: 2020-11-10 17:29:00
 ---
 
