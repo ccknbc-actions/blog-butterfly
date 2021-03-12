@@ -90,23 +90,6 @@ Waline - 一款从 [Valine](https://valine.js.org) 衍生的带后端评论系�
 这个可直接参考官方文档按需进行配置即可，因为目前云开发因众所周知的原因不支持连接 `Telegram`  服务器，所以如果您要配置电报新评论通知，请使用 Vercel 进行配置，不过因为目前没有异步通知，加上反垃圾检测等功能，发布评论可能需要很长时间，这个我使用了 LeanCloud 来继续帮我发送通知（反正我也没什么评论，流控问题第二天补发评论也不是不可）
 {% note warning simple %}对于邮件通知部分，目前的设定是，对于新评论，如果博主配置了 QQ/微信/Telegram 通知中任意一种或多种，则邮件通知将会取消，而对于回复（子评论），博主和被回复者（如果填了邮箱的话）均可收到邮件通知{% endnote %}
 我目前使用的 Hexo Butterfly 主题已经从 3.5.0 beta3 版本起内置了 Waline 评论系统，如果您使用老版本主题请升级，或者根据您所用版本的 Valine 模板 pug 来照葫芦画瓢，根据官方配置进行对应修改，主题中 option 为可选配置，万一将来增加了某些配置，主题不必为此升级, bg 为主题配置项
-
-```yaml
-# waline - A simple comment system with backend support fork from Valine
-# https://waline.js.org/
-waline:
-  serverURL: https://waline.ccknbc.ml # Waline server address url
-  avatar: monsterid # gravatar style https://zh-tw.gravatar.com/site/implement/images/#default-image
-  bg: false # waline background
-  emojiCDN: https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/
-  option:
-    pageSize: 10
-    requiredFields: mail
-    # anonymous: false
-    placeholder: 可匿名评论，但您的评论必须经人工审核通过后才会显示，并可收到相关回复邮件通知，因此邮箱为必填项
-    avatarCDN: https://sdn.geekzu.org/avatar/
-```
-
 这里注意一下 serverURL 以及环境变量里的 SITE_URL 网址最后的斜杠因为作者没做兼容，所以不要带上 / ，导致跳转不到对应评论界面
 客户端脚本里可以通过 `langMode.admin`  这个配置自定义角标的文案,例如：
 
@@ -138,15 +121,20 @@ waline:
   avatar: monsterid # gravatar style https://zh-tw.gravatar.com/site/implement/images/#default-image
   bg: # waline background
   emojiCDN: https://cdn.jsdelivr.net/gh/GamerNoTitle/ValineCDN@master/
+  visitor: false
   option:
     pageSize: 10
     requiredFields: mail
     # anonymous: false
-    placeholder: 社交登录可助您快速录入信息，可匿名评论，但您的评论必须经人工审核通过后才会显示，并可收到相关回复邮件通知，因此邮箱为必填项
-    # avatarCDN: https://sdn.geekzu.org/avatar/
+    placeholder:
+    avatarCDN: https://sdn.geekzu.org/avatar/
     #https://valinecdn.bili33.top/
     langMode:
       admin: 博主兼管理员
+      nick: 昵称(选填)
+      mail: 邮箱(必填)
+      link: 网址(选填)
+      sofa: 这里冷冷清清的，快来留下脚印吧！
 ```
 
 还有就是可能有人会觉得默认邮件通知模板太单调，想和 Valine-Admin 一样切换模板，其实有这个配置的，只是目前的方法是写在环境变量中，而环境变量限制长度（大小），或者说是不适合这种方式配置，如果要改的话可以先查看[issues/106](https://github.com/lizheming/waline/issues/106)相关内容，或者等以后优化再说；当然如果你的评论不是很多，并且之前配置过 Valine-Admin，那么你仍然可以使用 LeanCloud 来做异步发送通知，关闭默认的通知配置，或者使用 js 推送
@@ -298,3 +286,34 @@ module.exports.main = async (event, context) => {
 | SECRETKEY                                      | API 访问密钥 KEY，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                                                              |
 | TCBFUNNAME（没什么好加密的，就叫 waline 算了） | 你想要新建/已有函数的名称，比如 `Waline`                                                                                                                                                         |
 | TCBENVID                                       | 环境 ID，可[点击这里](https://console.cloud.tencent.com/tcb/env/overview)或[这里](https://console.cloud.tencent.com/tcb/env/index)查看，地址栏后也会显示，反正就是很多地方都在上面点一下就能看到 |
+
+## 附录
+
+## 邮件通知模板
+
+```javascript
+const Waline = require("@waline/vercel");
+
+module.exports = Waline({
+  forbiddenWords: ["快递", "空包", "代发"],
+  disallowIPList: ["220.173.125.83"],
+  secureDomains: [
+    "ccknbc.now.sh",
+    "ccknbc.netlify.app",
+    "ccknbc.pages.dev",
+    "ccknbc.gitlab.io",
+    "ccknbc.github.io",
+    "ccknbc.gitee.io",
+    "blog.ccknbc.cc",
+  ],
+  mailSubject:
+    "{{parent.nick}}，您在 {{site.name}} 上发表的评论,收到了来自 {{self.nick}} 的回复",
+  mailSubjectAdmin: "{{site.name}} 上收到了来自 {{self.nick}} 的留言",
+  mailTemplate:
+    '<head><base target="_blank"/><style id="scrollbar"type="text/css">::-webkit-scrollbar{width:0!important}pre{white-space:pre-wrap!important;word-wrap:break-word!important;*white-space:normal!important}pre{white-space:pre-wrap!important;word-wrap:break-word!important;*white-space:normal!important}#letter img{max-width:300px}</style><style id="from-wrapstyle"type="text/css">#form-wrap{overflow:hidden;height:447px;position:relative;top:0px;transition:all 1s ease-in-out.3s;z-index:0}</style><style id="from-wraphoverstyle"type="text/css">#form-wrap:hover{height:1300px;top:-200px}</style></head><body><div style="width: 530px;margin: 20px auto 0;height: 1000px;"><div id="form-wrap"><img src="https://cdn.jsdelivr.net/gh/Akilarlxh/Valine-Admin@v1.0/source/img/before.png"alt="before"style="position: absolute;bottom: 126px;left: 0px;background-repeat: no-repeat;width: 530px;height: 317px;z-index:-100"><div style="position: relative;overflow: visible;height: 1500px;width: 500px;margin: 0px auto;transition: all 1s ease-in-out .3s;padding-top:200px;"<form><div style="background: white;width: 95%;max-width: 800px;margin: auto auto;border-radius: 5px;border: 1px solid;overflow: hidden;-webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.12);box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.18);"><img style="width:100%;overflow: hidden;"src="https://area.sinaapp.com/bingImg"/><div style="padding: 5px 20px;"><br><div><h3 style="text-decoration: none; color: #8fbc8f;">{{parent.nick}}，见信安：</h3></div><br><div id="letter"style="overflow:auto;height:300px;width:100%;display:block;word-break: break-all;word-wrap: break-word;"><p style="display: inline-block;">您在<a style="text-decoration: none;color: #8fbc8f"target="_blank"href="{{site.postUrl}} display: inline-block;">{{site.name}}</a>上发表的评论:</p><div style="border-bottom: #ddd 1px solid;border-left: #ddd 1px solid;padding-bottom: 20px;background-color: #eee;margin: 15px 0px;padding-left: 20px;padding-right: 20px;border-top: #ddd 1px solid;border-right: #ddd 1px solid;padding-top: 20px;font-family: "Arial", "Microsoft YaHei" , "黑体" , "宋体" , sans-serif;">{{parent.comment | safe}}</div><p>收到了来自{{self.nick}}的回复：</p><div style="border-bottom: #ddd 1px solid;border-left: #ddd 1px solid;padding-bottom: 20px;background-color: #eee;margin: 15px 0px;padding-left: 20px;padding-right: 20px;border-top: #ddd 1px solid;border-right: #ddd 1px solid;padding-top: 20px;font-family: "Arial", "Microsoft YaHei" , "黑体" , "宋体" , sans-serif;">{{self.comment | safe}}</div></div><br><div style="text-align: center;margin-top: 40px;"><img src="https://ae01.alicdn.com/kf/U0968ee80fd5c4f05a02bdda9709b041eE.png"alt="hr"style="width:100%; margin:5px auto 5px auto; display: block;"/><a style="text-transform: uppercase;text-decoration: none;font-size: 14px;border: 2px solid #ace0f9;color: #FFFFFF;padding: 10px;display: inline-block;margin: 10px auto 0;background-color: #8fbc8f;"target="_blank"href="{{site.postUrl}}">{{site.name}}｜请您签收~</a></div><p style="font-size: 12px;text-align: center;color: #999;">自动书记人偶竭诚为您服务！<br>©2020 - 2021 <a style="text-decoration:none; color:#8fbc8f"href="{{site.url}}">{{site.name}}</a></p></div></div></form></div><img src="https://cdn.jsdelivr.net/gh/Akilarlxh/Valine-Admin@v1.0/source/img/after.png"alt="after"style="      position: absolute;bottom: -2px;left: 0;background-repeat: no-repeat;width: 530px;height: 259px;z-index:100"></div></div></body>',
+  mailTemplateAdmin:
+    '<head><base target="_blank"/><style id="scrollbar"type="text/css">::-webkit-scrollbar{width:0!important}pre{white-space:pre-wrap!important;word-wrap:break-word!important;*white-space:normal!important}#letter img{max-width:300px}</style><style id="from-wrapstyle"type="text/css">#form-wrap{overflow:hidden;height:447px;position:relative;top:0px;transition:all 1s ease-in-out.3s;z-index:0}</style><style id="from-wraphoverstyle"type="text/css">#form-wrap:hover{height:1300px;top:-200px}</style></head><body><div style="width: 530px;margin: 20px auto 0;height: 1000px;"><div id="form-wrap"><img src="https://cdn.jsdelivr.net/gh/Akilarlxh/Valine-Admin@v1.0/source/img/before.png"alt="before"style="position: absolute;bottom: 126px;left: 0px;background-repeat: no-repeat;width: 530px;height: 317px;z-index:-100"><div style="position: relative;overflow: visible;height: 1500px;width: 500px;margin: 0px auto;transition: all 1s ease-in-out .3s;padding-top:200px;"><form><div style="background: white;width: 95%;max-width: 800px;margin: auto auto;border-radius: 5px;border: 1px solid;overflow: hidden;-webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.12);box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.18);"><img style="width:100%;overflow: hidden;"src="https://area.sinaapp.com/bingImg"/><div style="padding: 5px 20px;"><br><div><h3 style="text-decoration: none; color: #8fbc8f;">来自{{self.nick}}的留言:</h3></div><br><br><div id="letter"style="overflow:auto;height:300px;width:100%;display:block;word-break: break-all;word-wrap: break-word;"><div style="border-bottom: #ddd 1px solid;border-left: #ddd 1px solid;padding-bottom: 20px;background-color: #eee;margin: 15px 0px;padding-left: 20px;padding-right: 20px;border-top: #ddd 1px solid;border-right: #ddd 1px solid;padding-top: 20px;font-family: "Arial", "Microsoft YaHei" , "黑体" , "宋体" , sans-serif;">{{self.comment | safe}}</div></div><div style="text-align: center;margin-top: 40px;"><img src="https://ae01.alicdn.com/kf/U0968ee80fd5c4f05a02bdda9709b041eE.png"alt="hr"style="width:100%; margin:5px auto 5px auto; display: block;"/><a style="text-transform: uppercase;text-decoration: none;font-size: 14px;border: 2px solid #ace0f9;color: #FFFFFF;padding: 10px;display: inline-block;margin: 10px auto 0;background-color: #8fbc8f;"target="_blank"href="{{site.postUrl}}">{{site.name}}｜请您过目~</a></div><p style="font-size: 12px;text-align: center;color: #999;">©2020 - 2021 <a style="text-decoration:none; color:#8fbc8f"href="{{site.url}}">{{site.name}}</a></p></div></div></form></div><img src="https://cdn.jsdelivr.net/gh/Akilarlxh/Valine-Admin@v1.0/source/img/after.png"alt="after"style="      position: absolute;bottom: -2px;left: 0;background-repeat: no-repeat;width: 530px;height: 259px;z-index:100"></div></div></body>',
+});
+```
+
+[邮件通知模板下载](https://file.nmb.show/down.php/4ca88b8fe0729c213cd3a425f87d2f51.rar)（包含 Waline/Valine/Twikoo），您可以下载后自行修改，对于本文未涉及到的内容，请自行查看官方文档
