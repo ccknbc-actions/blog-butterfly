@@ -7,9 +7,7 @@ tags:
   - 工具
   - 评论
   - Waline
-categories:
-  - 工具
-  - 评论
+categories: 工具
 keywords:
   - 工具
   - 评论
@@ -37,7 +35,7 @@ Waline - 一款从 [Valine](https://valine.js.org) 衍生的带后端评论系�
 - Markdown 语法支持
 - 轻量易用
 - 免费部署
-- 多种部署部署方式和存储服务支持，每列选择一项多达 56 种部署方式任君选择
+- 多种部署部署方式和存储服务支持，每列选择一项多达 56 种（可以更多）部署方式任君选择
   | | Waline | |
   | --- | --- | --- |
   | **客户端脚本** | **服务端部署** | **数据存储** |
@@ -246,7 +244,7 @@ module.exports.main = async (event, context) => {
 
 #### 手动升级
 
-找到 Vercel 帮你在创建的仓库，叫 `waline`  啦，编辑 `package.json`  中依赖版本号即可完成升级，版本号以 `npm` ![](https://img.shields.io/npm/v/@waline/vercel?color=critical&logo=npm&style=flat-square#align=left&display=inline&height=20&margin=%5Bobject%20Object%5D&originHeight=20&originWidth=105&status=done&style=none&width=105)  为准，因为 GitHub 由于考虑到电报机器人自动推送消息过于频繁影响到群友，会延迟推送
+找到 Vercel 帮你在创建的仓库，叫 `waline`  啦，编辑 `package.json`  中依赖版本号即可完成升级，版本号以 `npm` ![](https://img.shields.io/npm/v/@waline/vercel?color=critical&logo=npm&style=flat-square#align=left&display=inline&height=19&margin=%5Bobject%20Object%5D&originHeight=20&originWidth=111&status=done&style=none&width=105)  为准，因为 GitHub 由于考虑到电报机器人自动推送消息过于频繁影响到群友，会延迟推送
 
 #### 自动升级
 
@@ -289,7 +287,7 @@ module.exports.main = async (event, context) => {
 
 ## 附录
 
-## 邮件通知模板
+### 邮件通知模板
 
 ```javascript
 const Waline = require("@waline/vercel");
@@ -316,4 +314,4 @@ module.exports = Waline({
 });
 ```
 
-[邮件通知模板下载](https://file.nmb.show/down.php/4ca88b8fe0729c213cd3a425f87d2f51.rar)（包含 Waline/Valine/Twikoo），您可以下载后自行修改，对于本文未涉及到的内容，请自行查看官方文档
+[邮件通知模板下载](https://file.nmb.show/down.php/4ca88b8fe0729c213cd3a425f87d2f51.rar)（包含 Waline/Valine/Twikoo），您可以下载后根据官方文档提及的变量自行修改，对于本文未涉及到的其他内容，请自行查看官方文档，如有错误，欢迎只在，谢谢！

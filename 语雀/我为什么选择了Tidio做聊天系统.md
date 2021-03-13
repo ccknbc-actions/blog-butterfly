@@ -6,9 +6,7 @@ tags:
   - 工具
   - 聊天
 id: 08
-categories:
-  - 工具
-  - 聊天
+categories: 工具
 description: 本篇文章简单介绍了我使用不同聊天系统的体会
 keywords: '工具,聊天'
 cover: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-12-15~18-17-57.webp'

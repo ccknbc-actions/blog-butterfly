@@ -6,9 +6,7 @@ translate_title: github-automatically-merges-pull-requests-notes
 tags:
   - 工具
   - GitHub
-categories:
-  - 工具
-  - GitHub
+categories: 工具
 keywords:
   - 工具
   - GitHub

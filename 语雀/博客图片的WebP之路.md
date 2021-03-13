@@ -8,10 +8,7 @@ tags:
   - 博客
 comments: true
 keywords: 'WebP,图床,博客'
-categories:
-  - 博客
-  - 图床
-  - WebP
+categories: 博客
 description: 在主流浏览器都支持的情况下，我趁着文章还少，把所有文章的图片全部转换为WebP格式，以寻求更快的加载速度和丝滑的体验
 translate_title: the-webp-road-of-blog-pictures
 id: 15

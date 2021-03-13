@@ -6,9 +6,7 @@ tags:
   - 音乐
   - JOOX
 id: 10
-categories:
-  - 音乐
-  - JOOX
+categories: 音乐
 description: 本篇文章主要说明如何绕过版权地区限制，在中国大陆享受JOOX音乐服务
 keywords: 'JOOX,music,音乐,大陆'
 cover: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-06~20_11_13.webp'

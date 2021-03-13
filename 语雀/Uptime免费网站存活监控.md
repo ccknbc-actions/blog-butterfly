@@ -6,9 +6,7 @@ comments: false
 tags:
   - 工具
   - 网站存活监控
-categories:
-  - 工具
-  - 网站存活监控
+categories: 工具
 description: 本篇文章简单介绍了利用Uptime实现免费网站存活监控
 keywords: '网站存活监控,Uptime'
 cover: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~11_19_11.webp'
