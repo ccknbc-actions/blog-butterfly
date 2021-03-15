@@ -1618,7 +1618,7 @@ ghcard使用了`github-readme-stats`的API，支持直接使用markdown语法来
 <!-- tab 示例源码 -->
 
 {% note info %}
-对于很多同学提问的`gallerygroup`和`gallery`相册页的链接问题。这里说下我个人的使用习惯。
+对于很多同学提问的`gallerygroup`和`gallery`相册页的链接问题。这里说下 Aki 个人的使用习惯。
 一般使用相册图库的话，可以在导航栏加一个gallery的page(**使用指令`hexo new page gallery`添加**)，里面放相册图库作为封面。然后在`[Blogroot]/source/gallery/`下面建立相应的文件夹，例如若按照这里的示例，若欲使用`/gallery/MC/`路径访问MC相册，则需要新建`[Blogroot]/source/gallery/MC/index.md`，并在里面填入`gallery`相册内容。
 {% endnote %}
 
@@ -2018,7 +2018,7 @@ group=version:v4,v3,v2
 {% folding green,Github仓库配置方案 %}
 
 1.  
-    新建一个仓库，仓库名随意，这里我命名为`friend_link`,
+    新建一个仓库，仓库名随意，这里 Aki 命名为`friend_link`,
     新建文件`friend_link\.github\ISSUE_TEMPLATE.md`,
     并在其中输入以下内容作为`issues`模板。
 
@@ -2084,7 +2084,7 @@ group=version:v4,v3,v2
 {% folding yellow,Gitee仓库配置方案 %}
 
 1. 
-    新建一个仓库，仓库名随意，这里我命名为`friend_link`,
+    新建一个仓库，仓库名随意，这里 Aki 命名为`friend_link`,
     新建文件`friend_link\.gitee\ISSUE_TEMPLATE.md`,
     并在其中输入以下内容作为`issues`模板。
 
@@ -2653,8 +2653,8 @@ JSON 传参
 开发者要说的几句话
 
 1. 这个插件并不完美，如果使用中遇到问题，请熟读文档，如果还是有问题，请再读一遍文档，还是有问题，请向开发者反馈。
-2. 关于 JS 重复请求，请升级客户端浏览器版本，两个一样的 JS，只会请求一次，暂时没有想到什么好的办法，如果有，请及时告诉我。
-3. 关于 pjax，这东西真的不想去做兼容（其实也不难），如果以后闲得无聊的话，可能会做，但不要催我关于 pjax 兼容的问题。
+2. 关于 JS 重复请求，请升级客户端浏览器版本，两个一样的 JS，只会请求一次，暂时没有想到什么好的办法，如果有，请及时告诉 Aki 。
+3. 关于 pjax，这东西真的不想去做兼容（其实也不难），如果以后闲得无聊的话，可能会做，但不要催 Aki 关于 pjax 兼容的问题。
 4. 不要局限于示例，放开手脚，大胆去尝试，这个插件的开放性真的非常的大。
 <!-- endtab -->
 
@@ -3230,6 +3230,6 @@ mmedia:
 {% endchart %}
 ```
 
-关于预览，更多详细内容，请分别前往 [插件文档](https://shen-yu.gitee.io/2020/chartjs) | [原文档](https://chartjs.bootcss.com/docs) 查看（因 pjax 原因，我排除了 'chart*' 因此控制台会出现闪现报错情况）
+关于预览，更多详细内容，请分别前往 [插件文档](https://shen-yu.gitee.io/2020/chartjs) | [原文档](https://chartjs.bootcss.com/docs) 查看（因 pjax 原因， Aki 排除了 'chart*' 因此控制台会出现闪现报错情况）
 
 {% note blue 'fas fa-spinner' simple %}未完待续{% endnote %}
