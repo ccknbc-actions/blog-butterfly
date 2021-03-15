@@ -1,0 +1,18 @@
+# - class_name:
+#   id_name:
+#   name:
+#   icon:
+#   order:
+#   html:
+# - class_name: categories_radar
+#   id_name: categories_radar
+#   name: 分类
+#   icon: <fas fa-chart-pie
+#   order: 2
+#   html: '<iframe src="https://status.ccknbc.ml" width="100%" height="400" frameborder="0" scrolling="no"></iframe>'
+# - class_name: posts_calendar
+#   id_name: posts_calendar
+#   name: 写作日历
+#   icon: fas fa-pen
+#   order: 3
+#   html: '<div id="posts-calendar"></div>'

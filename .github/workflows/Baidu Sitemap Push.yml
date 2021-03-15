@@ -1,0 +1,47 @@
+name: Baidu Sitemap Push
+
+on:
+  schedule:
+    - cron: '0 16 * * *'
+  workflow_dispatch:
+    inputs:
+      name:
+        description: '手动触发推送'
+        required: false
+
+jobs:
+  build:
+    name: Baidu Sitemap Push
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Set Up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+
+    - name: Install Requests
+      run: pip install requests
+
+    - name: Generate Txt
+      run: python generate.py
+
+    - name: Baidu Push
+      run: curl -H 'Content-Type:text/plain' --data-binary @urls.txt "${{ secrets.BAIDU_TOKEN }}"
+
+    - name: Delete Workflow Runs
+      uses: Mattraks/delete-workflow-runs@main
+      with:
+        retain_days: 1
+        keep_minimum_runs: 1
+
+    - name: Telegram Notification
+      if: cancelled() == false
+      uses: xinthink/action-telegram@v1.1
+      with:
+        botToken: ${{ secrets.TG_BOT_TOKEN }} #use bot @BotFather
+        chatId: ${{ secrets.TG_CHAT_ID }} #use bot @userinfobot
+        jobStatus: ${{ job.status }}
+        skipSuccess: true
