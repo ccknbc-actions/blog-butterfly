@@ -1,7 +1,7 @@
 ---
 title: CC的部落格 外挂标签笔记
-tags: HEXO
-categories: HEXO
+tags: [博客,HEXO]
+categories: 博客
 description: CC的部落格 外挂标签笔记 
 translate_title: introduction-of-plugin-tags-based-on-butterfly
 date: 2021-03-05 12:00:00
