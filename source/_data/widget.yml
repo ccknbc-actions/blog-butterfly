@@ -1,0 +1,6 @@
+- class_name: dsq-widget
+  id_name: recentcomments
+  name: Disqus 最新评论
+  icon: fab fa-discourse
+  order: 
+  html: '<script type="text/javascript" src="https://ccknbc-disqus.ccknbc.workers.dev/recent_comments_widget.js?num_items=5&hide_avatars=0&avatar_size=32&excerpt_length=200&hide_mods=0"></script></div>'
