@@ -790,10 +790,10 @@ aside:
     expand: true # none/true/false
     sort_order: # Don't modify the setting unless you know how it works
   card_tags:
-    enable: false
+    enable: true
     limit: 40 # if set 0 will show all
     color: true
-    sort_order: # Don't modify the setting unless you know how it works
+    sort_order: 2 # Don't modify the setting unless you know how it works
   card_archives:
     enable: false
     type: monthly # yearly or monthly
@@ -805,7 +805,7 @@ aside:
     enable: true
     post_count: true
     last_push_date: true
-    sort_order: # Don't modify the setting unless you know how it works
+    sort_order: 0 # Don't modify the setting unless you know how it works
 
 # busuanzi count for PV / UV in site
 # 訪問人數

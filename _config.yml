@@ -231,18 +231,47 @@ nofollow:
     - 'exclude1.com'
     - 'exclude2.com'
 
-# githubcalendar:
-#   enable: true
-#   enable_page: /me/
-#   user: CCKNBC
-#   layout_id: article-container
-#   githubcalendar_html: '<div class="recent-post-item" style="width:100%;height:auto;padding:10px;"><div id="github_loading" style="width:10%;height:100%;margin:0 auto;display: block"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform></path></svg></div><div id="github_container"></div></div>'
-#   pc_minheight: 280px
-#   mobile_minheight: 0px
-#   color: "['#ebedf0', '#f0fff4', '#dcffe4', '#bef5cb', '#85e89d', '#34d058', '#28a745', '#22863a', '#176f2c', '#165c26', '#144620']"
-#   api: https://api.ccknbc.now.sh/api/github-calendar
-#   # api: https://python-gitee-calendar-api.vercel.app/api
-#   calendar_js: https://cdn.jsdelivr.net/gh/Zfour/hexo-github-calendar/hexo_githubcalendar.js
+magnet:
+  enable: true
+  priority: 0
+  enable_page: /
+  type: categories
+  devide: 1
+  display:
+    - name: 工具
+      display_name: 工具
+      icon: 📚
+    - name: 学习
+      display_name: 学习
+      icon: 🎮
+    - name: 博客
+      display_name: 博客
+      icon: 🐱‍👓
+    - name: 音乐
+      display_name: 音乐
+      icon: 👩‍💻
+    - name: 工作
+      display_name: 工作
+      icon: 📒
+    - name: 台湾
+      display_name: 台湾
+      icon: 💡
+  color_setting:
+    text_color: var(--global-text)
+    text_hover_color: '#f2b94b'
+    background_color: var(--global-bg)
+    background_hover_color: '#8fbc8f'
+  # layout:
+  #   type: id
+  #   name: magnet-container
+  #   index: 0
+  # temple_html: '<div id="catalog_magnet">${temple_html_item}</div>'
+  plus_style: ""
+  layout:
+    type: class
+    name: sticky_layout
+    index: 0
+  temple_html: '<div class="card-widget card-categories" style="order: 1"><div class="card-content"><div class="item-headline"><i class="fas fa-folder-open"></i><span>分类</span></div><div style=""><div id="catalog_magnet">${temple_html_item}</div></div></div>'
 
 # widget_tree:
 #   cdn: true

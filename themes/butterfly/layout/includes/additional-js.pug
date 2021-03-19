@@ -1,7 +1,9 @@
 div
   script(src=url_for(theme.CDN.utils))
   script(src=url_for(theme.CDN.main))
-  script(defer src=url_for(theme.CDN.statuspage))
+  
+  if is_home()
+    script(defer src=url_for(theme.CDN.statuspage))
 
   if theme.translate.enable
     script(defer src=url_for(theme.CDN.translate))
