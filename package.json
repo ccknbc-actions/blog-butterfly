@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.13.10",
-    "@babel/preset-env": "7.13.10",
+    "@babel/preset-env": "7.13.12",
     "cheerio": "1.0.0-rc.5",
     "gulp": "4.0.2",
     "gulp-babel": "8.0.0",
