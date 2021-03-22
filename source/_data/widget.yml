@@ -1,0 +1,18 @@
+- class_name: dsq-widget
+  id_name: recentcomments
+  name: Disqus 最新评论
+  icon: fas fa-comment
+  order: 4
+  html: '<script type="text/javascript" src="https://ccknbc-disqus.ccknbc.workers.dev/recent_comments_widget.js?num_items=5&hide_avatars=1&avatar_size=32&excerpt_length=200&hide_mods=1"></script>'
+# - class_name: bbTimeList container
+#   id_name: bbTimeList
+#   name: 即刻短文
+#   icon: far fa-comment-alt
+#   order: 5
+#   html: 
+# - class_name: dsq-widget
+#   id_name: recentcomments
+#   name: Disqus 最新评论
+#   icon: fas fa-comment
+#   order: 6
+#   html:

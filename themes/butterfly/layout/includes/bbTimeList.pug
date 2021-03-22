@@ -1,0 +1,10 @@
+if theme.showbb.enable
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css')
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@master/css/showbb.css')
+    #bbTimeList.bbTimeList.container(style="margin-top: 0")
+        i.far.fa-comment-alt(onclick="location='/essay/'",title="短文",style="font-size: 1rem;margin-top: 0.20rem")
+        #bbtalk.swiper-container
+            #bber-talk.swiper-wrapper(onclick="location='/essay/'")
+        i.fas.fa-angle-double-right.faa-passing.animated(onclick="location='/essay/'",title="查看全文",style="font-size: 1rem;margin-top: 0.15rem;")
+    script(src='https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js',defer='')
+    script(src='https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@master/js/showbb.min.js',defer='')
