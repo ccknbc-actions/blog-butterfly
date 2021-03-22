@@ -9,7 +9,8 @@ aside: false
 description: CC的部落格 即刻短文页面
 ---
 
-## 哔哔 CloudBase 版本
+<!-- ## 哔哔 CloudBase 版本(林木木) -->
+
 <div id="bber"></div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@master/css/bber.min.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" ></script>
@@ -17,14 +18,19 @@ description: CC的部落格 即刻短文页面
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/TencentCloudBase/tcb-js-sdk@master/tcbjs/1.10.10/tcb.min.js" >
 </script><script src="https://cdn.jsdelivr.net/gh/buddys/qq-wechat-emotion-parser@master/dist/qq-wechat-emotion-parser.min.js" 
 ></script>
-<script async="" type="text/javascript" src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@master/js/bber.min.js" ></script>
 <script>
 const app = tcb.init({
   env: 'ccknbc-154167'
   })
 </script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@master/js/bber.min.js" ></script>
 
-## 说说
+<!-- ## 哔哔 CloudBase 版本(Heo)
+
+<div id="bber"></div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@master/js/newbber.min.js" ></script>
+
+## 说说(Artitalk)
 
 <div id="artitalk_main"></div>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/artitalk"></script>
@@ -36,7 +42,7 @@ new Artitalk({
 })
 </script>
 
-## hpptalk
+## hpptalk(CYFan)
 
 <div id="hpp_talk"></div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HexoPlusPlus/HexoPlusPlus/talk.css" /> 
@@ -51,7 +57,7 @@ themecss: "https://cdn.jsdelivr.net/gh/HexoPlusPlus/CDN@master/plugin/theme/hpp_
 });
 </script>
 
-## 哔哔 LeanCloud 版本
+## 哔哔 LeanCloud 版本(黑石)
 
 <div id="bbtalk"></div>
 <script src="https://cdn.jsdelivr.net/npm/bbtalk@0.1.5/dist/bbtalk.min.js"></script>
@@ -63,4 +69,4 @@ bbtalk.init({
 })
 </script>
 
-## 求新版本啊啊啊
+## 求新版本啊啊啊 -->

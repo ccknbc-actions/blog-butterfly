@@ -919,7 +919,7 @@ showbb:
   enable: true
 
 statuspage:
-  enable: false
+  enable: true
 
 # Artitalk
 # see https://artitalk.js.org/
@@ -1177,4 +1177,4 @@ CDN:
 
   artitalk: https://cdn.jsdelivr.net/npm/artitalk
 
-  statuspage: https://mr4sbsfs40sw.statuspage.io/embed/script.js
+  statuspage: https://ccknbc.statuspage.io/embed/script.js
