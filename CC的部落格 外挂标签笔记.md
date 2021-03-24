@@ -3230,6 +3230,6 @@ mmedia:
 {% endchart %}
 ```
 
-关于预览，更多详细内容，请分别前往 [插件文档](https://shen-yu.gitee.io/2020/chartjs) | [原文档](https://chartjs.bootcss.com/docs) 查看（因 pjax 原因， Aki 排除了 'chart*' 因此控制台会出现闪现报错情况）
+关于预览，更多详细内容，请分别前往 [插件文档](https://shen-yu.gitee.io/2020/chartjs) | [原文档](https://chartjs.bootcss.com/docs) 查看（因 pjax 原因，我排除了 'chart*' 因此控制台会出现闪现报错情况）
 
 {% note blue 'fas fa-spinner' simple %}未完待续{% endnote %}
