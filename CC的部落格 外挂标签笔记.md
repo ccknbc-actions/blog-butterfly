@@ -1037,15 +1037,15 @@ You can regulate the speed of the animation by adding the CSS class or . faa-fas
 <!-- endtab -->
 
 <!-- tab 样式预览 -->
-{% link 外挂标签, , https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}{% link 外挂标签, /posts/introduction-of-plugin-tags-based-on-butterfly/, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}{% link 外挂标签, https://blog.ccknbc.cc/posts/introduction-of-plugin-tags-based-on-butterfly/, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
+{% link 外挂标签, , https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}{% link 外挂标签, /posts/introduction-of-plugin-tags-based-on-butterfly/, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}{% link 外挂标签, https://blog.ccknbc.cc/posts/introduction-of-plugin-tags-based-on-butterfly/, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
 <!-- endtab -->
 <!-- tab 示例源码 -->
 ```markdown
-{% link 外挂标签, , https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
+{% link 外挂标签, , https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
 
-{% link 外挂标签, /posts/introduction-of-plugin-tags-based-on-butterfly/, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
+{% link 外挂标签, /posts/introduction-of-plugin-tags-based-on-butterfly/, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
 
-{% link 外挂标签, https://blog.ccknbc.cc/posts/introduction-of-plugin-tags-based-on-butterfly/, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
+{% link 外挂标签, https://blog.ccknbc.cc/posts/introduction-of-plugin-tags-based-on-butterfly/, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
 ```
 <!-- endtab -->
 {% endtabs%}
@@ -1091,11 +1091,11 @@ You can regulate the speed of the animation by adding the CSS class or . faa-fas
 1. 如果需要显示类似「团队成员」之类的一组含有头像的链接：
 
     {% btns circle grid5 %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
+    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
+    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
+    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
+    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
+    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
     {% endbtns %}
 
 2. 或者含有图标的按钮：
@@ -1128,11 +1128,11 @@ You can regulate the speed of the animation by adding the CSS class or . faa-fas
 1. 如果需要显示类似「团队成员」之类的一组含有头像的链接：
     ```markdown
     {% btns circle grid5 %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
+    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
+    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
+    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
+    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
+    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
     {% endbtns %}
     ```
 
@@ -1952,7 +1952,7 @@ Demo 4 - 自定义Tab名 + 只有icon + icon和Tab名
 ## 数据集合 issues
 
 
-{% tabs issues,3 %}
+{% tabs issues,4 %}
 <!-- tab 标签语法 -->
 
 ```markdown
@@ -2150,7 +2150,7 @@ group=version:v4,v3,v2
 
 {% note warning simple %}
 
-因本主题已去 jquery 化（我也不想要，这个标签也不怎么用，不过那个时间线可以用来发说说什么的），所以为了演示先在此页引入了相关依赖，以便正常显示
+因本主题已去 jquery 化（我也不想要，这个标签也不怎么用，不过那个时间线可以用来发说说什么的），所以为了正常显示需要先引入相关依赖，这里不再演示，请直接查看源码即可
 
 ```markdown
 <script defer src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
@@ -2159,46 +2159,6 @@ group=version:v4,v3,v2
 
 {% endnote %}
 
-<script defer src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@latest/source/js/issues.min.js"></script>
-
-- 
-  时间轴标签`timeline`渲染
-  对应的仓库`issues`链接:
-  {% link xaoxuu/timeline, https://gitee.com/xaoxuu/timeline/issues, https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png %}
-  {% issues timeline | api=https://gitee.com/api/v5/repos/xaoxuu/timeline/issues?state=open&creator=xaoxuu&sort=created&direction=desc&page=1&per_page=100 %}
-
-- 网站卡片标签`sites`渲染
-
-  - gitee仓库示例
-
-    对应的仓库`issues`链接:
-
-    {% link xaoxuu/friends, https://gitee.com/xaoxuu/friends/issues, https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png %}
-
-    渲染后的标签：
-
-    {% issues sites | api=https://gitee.com/api/v5/repos/xaoxuu/friends/issues?sort=updated&state=open&page=1&per_page=100&labels=active %}
-
-  - github仓库示例
-
-    对应的仓库`issues`链接:
-
-    {% link xaoxuu/friends, https://github.com/xaoxuu/friends/issues, https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png %}
-
-    渲染后的标签：
-
-    {% issues sites | api=https://api.github.com/repos/xaoxuu/friends/issues?sort=updated&state=open&page=1&per_page=100&labels=active %}
-
-- 网站卡片标签`sites`分组渲染
-  这是`Volantis`主题官网的「示例博客」页面的数据：
-  对应的仓库`issues`链接:
-
-  {% link 如何参与项目, https://github.com/volantis-x/examples/issues, https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets@master/logo/256/safari.png %}
-
-  渲染后的标签：
-
-  {% issues sites | api=https://api.github.com/repos/volantis-x/examples/issues?sort=updated&state=open&page=1&per_page=100 | group=version:版本：^4.0,版本：^3.0,版本：^2.0 %}
 
 <!-- endtab -->
 <!-- tab 示例源码 -->
@@ -2223,9 +2183,9 @@ group=version:v4,v3,v2
 - 网站卡片标签`sites`分组渲染
   这是`Volantis`主题官网的「示例博客」页面的数据：
 
-      ```markdown
-      {% issues sites | api=https://api.github.com/repos/volantis-x/examples/issues?sort=updated&state=open&page=1&per_page=100 | group=version:版本：^4.0,版本：^3.0,版本：^2.0 %}
-      ```
+    ```markdown
+    {% issues sites | api=https://api.github.com/repos/volantis-x/examples/issues?sort=updated&state=open&page=1&per_page=100 | group=version:版本：^4.0,版本：^3.0,版本：^2.0 %}
+    ```
 
 <!-- endtab -->
 {% endtabs%}
