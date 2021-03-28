@@ -1592,25 +1592,37 @@ ghcard使用了`github-readme-stats`的API，支持直接使用markdown语法来
 - gallerygroup 相册图库
 
 <div class="gallery-group-main">
-{% galleryGroup 'demo' '仅仅是一个测试' '/gallery/demo' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_05_18.webp %}
+{% galleryGroup 'demo' '仅仅是一个测试' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_05_18.webp %}
 
+{% galleryGroup '真世代' '让真情反映世代，让情感串联台湾' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_08_18.webp %}
 
-{% galleryGroup 'BKPP' 'BKPP' '/bkpp' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_05_58.webp %}
+{% galleryGroup '工具' '工具' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-25-11.webp %}
 
-{% galleryGroup '真世代' '让真情反映世代，让情感串联台湾' '/gallery/real-style' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_08_18.webp %}
+{% galleryGroup '学习' '学习' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-33-28.webp %}
+
+{% galleryGroup '博客' '博客' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-12-14.webp %}
+
+{% galleryGroup '音乐' '音乐' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-42-19.webp %}
+
+{% galleryGroup '工作' '工作' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-39-40.webp %}
+
+{% galleryGroup '台湾' '台湾' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-51-39.webp %}
+
 </div>
 
 - gallery 相册
 
 {% gallery %}
 
+![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_07_20.webp)
+
 ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_05_18.webp)
 
 ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-02.gif)
 
-![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_07_20.webp)
-
 ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_07_42.webp)
+
+![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-42-19.webp)
 
 {% endgallery %}
 
@@ -1626,12 +1638,22 @@ ghcard使用了`github-readme-stats`的API，支持直接使用markdown语法来
 
     ```markdown
     <div class="gallery-group-main">
-    {% galleryGroup 'demo' '仅仅是一个测试' '/gallery/demo' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_05_18.webp %}
+    {% galleryGroup 'demo' '仅仅是一个测试' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_05_18.webp %}
 
+    {% galleryGroup '真世代' '让真情反映世代，让情感串联台湾' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_08_18.webp %}
 
-    {% galleryGroup 'BKPP' 'BKPP' '/bkpp' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_05_58.webp %}
+    {% galleryGroup '工具' '工具' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-25-11.webp %}
 
-    {% galleryGroup '真世代' '让真情反映世代，让情感串联台湾' '/gallery/real-style' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_08_18.webp %}
+    {% galleryGroup '学习' '学习' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-33-28.webp %}
+
+    {% galleryGroup '博客' '博客' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-12-14.webp %}
+
+    {% galleryGroup '音乐' '音乐' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-42-19.webp %}
+
+    {% galleryGroup '工作' '工作' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-39-40.webp %}
+
+    {% galleryGroup '台湾' '台湾' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-51-39.webp %}
+
     </div>
     ```
 
@@ -1640,11 +1662,15 @@ ghcard使用了`github-readme-stats`的API，支持直接使用markdown语法来
     ```markdown
     {% gallery %}
 
-    ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_05_18.webp)
-
     ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_07_20.webp)
 
+    ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_05_18.webp)
+
+    ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-02.gif)
+
     ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_07_42.webp)
+
+    ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-42-19.webp)
 
     {% endgallery %}
     ```
