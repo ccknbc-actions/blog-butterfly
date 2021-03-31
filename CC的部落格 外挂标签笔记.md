@@ -1037,15 +1037,15 @@ You can regulate the speed of the animation by adding the CSS class or . faa-fas
 <!-- endtab -->
 
 <!-- tab 样式预览 -->
-{% link 外挂标签, , https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}{% link 外挂标签, /posts/introduction-of-plugin-tags-based-on-butterfly/, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}{% link 外挂标签, https://blog.ccknbc.cc/posts/introduction-of-plugin-tags-based-on-butterfly/, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
+{% link 外挂标签, , https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}{% link 外挂标签, /posts/introduction-of-plugin-tags-based-on-butterfly/, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}{% link 外挂标签, https://blog.ccknbc.cc/posts/introduction-of-plugin-tags-based-on-butterfly/, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
 <!-- endtab -->
 <!-- tab 示例源码 -->
 ```markdown
-{% link 外挂标签, , https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
+{% link 外挂标签, , https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
 
-{% link 外挂标签, /posts/introduction-of-plugin-tags-based-on-butterfly/, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
+{% link 外挂标签, /posts/introduction-of-plugin-tags-based-on-butterfly/, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
 
-{% link 外挂标签, https://blog.ccknbc.cc/posts/introduction-of-plugin-tags-based-on-butterfly/, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
+{% link 外挂标签, https://blog.ccknbc.cc/posts/introduction-of-plugin-tags-based-on-butterfly/, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
 ```
 <!-- endtab -->
 {% endtabs%}
@@ -1091,11 +1091,11 @@ You can regulate the speed of the animation by adding the CSS class or . faa-fas
 1. 如果需要显示类似「团队成员」之类的一组含有头像的链接：
 
     {% btns circle grid5 %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
+    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
+    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
+    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
+    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
+    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
     {% endbtns %}
 
 2. 或者含有图标的按钮：
@@ -1128,11 +1128,11 @@ You can regulate the speed of the animation by adding the CSS class or . faa-fas
 1. 如果需要显示类似「团队成员」之类的一组含有头像的链接：
     ```markdown
     {% btns circle grid5 %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/CDN@master/logo/logo.png %}
+    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
+    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
+    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
+    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
+    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
     {% endbtns %}
     ```
 
