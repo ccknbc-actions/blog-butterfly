@@ -49,6 +49,7 @@ jobs:
     - name: Generate
       run: |
         git clone -b json https://github.com/ccknbc-actions/blog-butterfly.git json
+        git clone https://github.com/ccknbc/ccknbc.github.io.git public
         mv -f ./json/yuque.json ./
         npm run github-yuque
         mv -f yuque.json ./json/
@@ -97,7 +98,6 @@ jobs:
         git config --global init.defaultBranch master
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git init
         git add -A
         git branch -m master
         git commit -m "${{ github.event.head_commit.message }} $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By Github Actions"
