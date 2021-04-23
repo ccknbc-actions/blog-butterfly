@@ -49,7 +49,7 @@
     "hexo-tag-mmedia": "1.1.6",
     "hexo-translate-title-vss": "1.0.14",
     "hexo-wordcount": "6.0.1",
-    "workbox-build": "6.1.2",
+    "workbox-build": "^6.1.5",
     "yuque-hexo": "1.7.0"
   }
 }
