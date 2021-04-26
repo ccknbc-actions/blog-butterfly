@@ -13,8 +13,10 @@ keywords:
   - 评论
   - Waline
 description: Waline评论系统-部署日志，希望你也能用上这款评论系统
-cover: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-01-17~15-08-37.webp'
-photos: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-01-17~15-08-37.webp'
+cover: >-
+  https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-01-17~15-08-37.webp
+photos: >-
+  https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-01-17~15-08-37.webp
 comments: true
 id: 20
 updated: 2021-03-14 14:00:00
@@ -150,7 +152,7 @@ waline:
 ### 一键部署
 
 一键脚本部署可以查看[官方文档](https://waline.js.org/server/cloudbase.html)，我删了之后就没成功过
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612362992018-14b2a225-27d6-4996-948b-e746d26bb2e0.png#align=left&display=inline&height=322&margin=%5Bobject%20Object%5D&name=image.png&originHeight=644&originWidth=1011&size=48650&status=done&style=none&width=505.5)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612362992018-14b2a225-27d6-4996-948b-e746d26bb2e0.png#height=322&id=FOuRW&margin=%5Bobject%20Object%5D&name=image.png&originHeight=644&originWidth=1011&originalType=binary&size=48650&status=done&style=none&width=505.5)
 截至文档最新更新日期，这个已被修复（不过 tcb-starter 那个链接还没改所以还是失败），不过我只能说作者非常不细心，毕竟能一天发十几个版本，详见 [commit](https://github.com/lizheming/waline/commit/d87d3092a34fd6b2b7f0b1c72bd95ad784a086e7)，他还是把链接协议头多打了一个 h ,所以请[点击这里](https://console.cloud.tencent.com/tcb/env/index?action=CreateAndDeployCloudBaseProject&appUrl=https%3A%2F%2Fgithub.com%2Fwalinejs%2Ftcb-starter&branch=master&appName=waline)一键部署
 嗯，后来修复了，期待接下来的开发
 
@@ -160,28 +162,28 @@ waline:
 {% note warning simple %}
 一键部署虽然方便，但是仅支持按量计费环境——也就是说，**一键部署的环境，当免费资源用尽后，将会产生费用**。且按量计费环境无法切换为包年包月环境。免费额度数据库读操作数只有 500 次 / 天，**无法支撑 Twikoo 的运行需求**。Twikoo 建议您[手动部署](#手动部署)以节约成本。
 {% endnote %}
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610953378969-db93161e-24d3-4a48-8934-5566774b94d2.png#align=left&display=inline&height=204&margin=%5Bobject%20Object%5D&name=image.png&originHeight=204&originWidth=423&size=11059&status=done&style=none&width=423)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610953378969-db93161e-24d3-4a48-8934-5566774b94d2.png#height=204&id=BbUHK&margin=%5Bobject%20Object%5D&name=image.png&originHeight=204&originWidth=423&originalType=binary&size=11059&status=done&style=none&width=423)
 对于新用户或者说没有创建过按量计费环境的用户会显示如下内容，记得勾选开启免费资源
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610873567827-825cde85-7c99-4c5a-95e0-44c0966784cb.png#align=left&display=inline&height=632&margin=%5Bobject%20Object%5D&name=image.png&originHeight=632&originWidth=1006&size=46404&status=done&style=none&width=1006)
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612859364523-006d98ba-bd5c-4868-878f-9c9ac158d836.png#align=left&display=inline&height=237&margin=%5Bobject%20Object%5D&name=image.png&originHeight=473&originWidth=999&size=25755&status=done&style=none&width=499.5)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610873567827-825cde85-7c99-4c5a-95e0-44c0966784cb.png#height=632&id=v1Ort&margin=%5Bobject%20Object%5D&name=image.png&originHeight=632&originWidth=1006&originalType=binary&size=46404&status=done&style=none&width=1006)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612859364523-006d98ba-bd5c-4868-878f-9c9ac158d836.png#height=237&id=EOKkv&margin=%5Bobject%20Object%5D&name=image.png&originHeight=473&originWidth=999&originalType=binary&size=25755&status=done&style=none&width=499.5)
 
 为了日后升级的方便，不管您是否使用了 Vercel 部署，您都可以 fork [我的仓库](https://github.com/ccknbc-actions/waline) ，稍加配置即可完成自动部署更新
 
 ### 手动部署
 
-首先前往**[腾讯云的活动区域](https://cloud.tencent.com/act/pro/cloudbase01)**，注册/登陆后往下滑，找到新用户专享云开发标准型（基础版 1）资源套餐，0 元购买一个免费包年包月环境
+首先前往[**腾讯云的活动区域**](https://cloud.tencent.com/act/pro/cloudbase01)，注册/登陆后往下滑，找到新用户专享云开发标准型（基础版 1）资源套餐，0 元购买一个免费包年包月环境
 
 ---
 
 没错，这个环境不错吧
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610870670315-08e65148-3819-48fb-878e-03fdb0c9ab64.png#align=left&display=inline&height=536&margin=%5Bobject%20Object%5D&name=image.png&originHeight=536&originWidth=1493&size=52310&status=done&style=none&width=1493)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610870670315-08e65148-3819-48fb-878e-03fdb0c9ab64.png#height=536&id=DWotB&margin=%5Bobject%20Object%5D&name=image.png&originHeight=536&originWidth=1493&originalType=binary&size=52310&status=done&style=none&width=1493)
 按照提示购买后稍等几分钟，[在这个界面可查看您所购买的环境](https://console.cloud.tencent.com/tcb/env/index)
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610870083481-8e4cad1a-c70a-4cad-9192-11be8003241c.png#align=left&display=inline&height=233&margin=%5Bobject%20Object%5D&name=image.png&originHeight=233&originWidth=523&size=10168&status=done&style=none&width=523)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610870083481-8e4cad1a-c70a-4cad-9192-11be8003241c.png#height=233&id=Q9Z3p&margin=%5Bobject%20Object%5D&name=image.png&originHeight=233&originWidth=523&originalType=binary&size=10168&status=done&style=none&width=523)
 有能力的其实可以看一下 Vercel [自动升级](#自动升级)和 TCB[自动升级](#自动升级-1)部分，间接实现一键部署，自动更新
 [点击云函数](https://console.cloud.tencent.com/tcb/scf/index)，新建云函数，函数内存选择 128M，名称随意，例如 Waline，其他默认,单击进入下一步
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612359288449-66b53150-2146-4ec9-aa08-910b99aebd1b.png#align=left&display=inline&height=448&margin=%5Bobject%20Object%5D&name=image.png&originHeight=895&originWidth=1917&size=127338&status=done&style=none&width=958.5)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612359288449-66b53150-2146-4ec9-aa08-910b99aebd1b.png#height=448&id=gqDSy&margin=%5Bobject%20Object%5D&name=image.png&originHeight=895&originWidth=1917&originalType=binary&size=127338&status=done&style=none&width=958.5)
 下图中的函数代码部分填入以下代码
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612359460424-4b8cf9b4-2ef4-4758-92f6-09ae040a91ea.png#align=left&display=inline&height=396&margin=%5Bobject%20Object%5D&name=image.png&originHeight=791&originWidth=688&size=43150&status=done&style=none&width=344)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612359460424-4b8cf9b4-2ef4-4758-92f6-09ae040a91ea.png#height=396&id=QsO9K&margin=%5Bobject%20Object%5D&name=image.png&originHeight=791&originWidth=688&originalType=binary&size=43150&status=done&style=none&width=344)
 
 ```javascript
 /**
@@ -231,13 +233,13 @@ module.exports.main = async (event, context) => {
 ```
 
 点击对应的云函数，进入在线编辑页面，按照[模板仓库](https://github.com/walinejs/tcb-starter)里的文件，新建对应的文件，并复制粘贴对应的内容即可
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612360652232-9eb2ad2b-bebe-4964-bb5f-75e2f9946d25.png#align=left&display=inline&height=283&margin=%5Bobject%20Object%5D&name=image.png&originHeight=566&originWidth=1171&size=59625&status=done&style=none&width=585.5)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612360652232-9eb2ad2b-bebe-4964-bb5f-75e2f9946d25.png#height=283&id=t6ZUG&margin=%5Bobject%20Object%5D&name=image.png&originHeight=566&originWidth=1171&originalType=binary&size=59625&status=done&style=none&width=585.5)
 注意点击**保存并安装依赖**，可能会没有反应一会儿，然后等待转圈圈部署完毕即可
-**![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612360855940-241970ec-5c18-4bc8-9168-9fd945deb761.png#align=left&display=inline&height=71&margin=%5Bobject%20Object%5D&name=image.png&originHeight=142&originWidth=264&size=4012&status=done&style=none&width=132)![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612361085479-f39b6b2b-2293-4685-882e-9e20aa611dea.png#align=left&display=inline&height=32&margin=%5Bobject%20Object%5D&name=image.png&originHeight=64&originWidth=251&size=3262&status=done&style=none&width=125.5)**
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612360855940-241970ec-5c18-4bc8-9168-9fd945deb761.png#height=71&id=PlC1K&margin=%5Bobject%20Object%5D&name=image.png&originHeight=142&originWidth=264&originalType=binary&size=4012&status=done&style=none&width=132)![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612361085479-f39b6b2b-2293-4685-882e-9e20aa611dea.png#height=32&id=qWtmj&margin=%5Bobject%20Object%5D&name=image.png&originHeight=64&originWidth=251&originalType=binary&size=3262&status=done&style=none&width=125.5)
 当然还没有结束，我们需要点击 `环境 --> HTTP 访问服务` （[点击直达](https://console.cloud.tencent.com/tcb/env/access))，如果你想绑定自定义域名可以照图中绑定，记得先申请一下证书，如果你想要 HTTPS（这个可能花的时间有点长）
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612361294908-3ef584b5-5cbc-43e5-b744-cda357057ec0.png#align=left&display=inline&height=336&margin=%5Bobject%20Object%5D&name=image.png&originHeight=671&originWidth=1596&size=62417&status=done&style=none&width=798)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612361294908-3ef584b5-5cbc-43e5-b744-cda357057ec0.png#height=336&id=Y8wtR&margin=%5Bobject%20Object%5D&name=image.png&originHeight=671&originWidth=1596&originalType=binary&size=62417&status=done&style=none&width=798)
 点击新建，新建触发路径，点击保存即可，注意路径最后没有 / ，等待构建完成后你就可通过对应的链接访问 demo 页面了，这个链接就是上面提到的 `serverURL` ，例如我的 [https://tcb.ccknbc.cc/waline](https://tcb.ccknbc.cc/waline)
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612361631129-fecd45a5-f694-4154-8707-9976eb10adb5.png#align=left&display=inline&height=268&margin=%5Bobject%20Object%5D&name=image.png&originHeight=535&originWidth=753&size=29976&status=done&style=none&width=376.5)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612361631129-fecd45a5-f694-4154-8707-9976eb10adb5.png#height=268&id=EJKha&margin=%5Bobject%20Object%5D&name=image.png&originHeight=535&originWidth=753&originalType=binary&size=29976&status=done&style=none&width=376.5)
 然后我们需要设置[ WEB 安全域名](https://console.cloud.tencent.com/tcb/env/safety)，把你的域名放入白名单即可（本地测试的话端口也要对应上哦）
 
 ## 如何升级
@@ -246,7 +248,7 @@ module.exports.main = async (event, context) => {
 
 #### 手动升级
 
-找到 Vercel 帮你在创建的仓库，叫 `waline`  啦，编辑 `package.json`  中依赖版本号即可完成升级，版本号以 `npm` ![](https://img.shields.io/npm/v/@waline/vercel?color=critical&logo=npm&style=flat-square#align=left&display=inline&height=19&margin=%5Bobject%20Object%5D&originHeight=20&originWidth=111&status=done&style=none&width=105)  为准，因为 GitHub 由于考虑到电报机器人自动推送消息过于频繁影响到群友，会延迟推送
+找到 Vercel 帮你在创建的仓库，叫 `waline`  啦，编辑 `package.json`  中依赖版本号即可完成升级，版本号以 `npm` ![](https://img.shields.io/npm/v/@waline/vercel?color=critical&logo=npm&style=flat-square#height=19&id=ZBPqj&originHeight=20&originWidth=111&originalType=binary&status=done&style=none&width=105)  为准，因为 GitHub 由于考虑到电报机器人自动推送消息过于频繁影响到群友，会延迟推送
 
 #### 自动升级
 
@@ -266,7 +268,7 @@ module.exports.main = async (event, context) => {
 #### 一键部署
 
 就是点击[我的应用](https://console.cloud.tencent.com/tcb/apps/index)找到 Waline 点击部署即可
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612711217029-250d0b1a-75d1-4a7c-9f4c-8a9413ab51fa.png#align=left&display=inline&height=409&margin=%5Bobject%20Object%5D&name=image.png&originHeight=818&originWidth=1814&size=86907&status=done&style=none&width=907)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612711217029-250d0b1a-75d1-4a7c-9f4c-8a9413ab51fa.png#height=409&id=jhuJB&margin=%5Bobject%20Object%5D&name=image.png&originHeight=818&originWidth=1814&originalType=binary&size=86907&status=done&style=none&width=907)
 
 #### 手动部署
 
@@ -280,12 +282,21 @@ module.exports.main = async (event, context) => {
 你可以 fork [我的仓库](https://github.com/ccknbc-actions/waline) 进行更改，和上面提到的原理差不多，只是用到了 Actions（如果你之前没接触过这些，建议使用 Vercel 部署或者上面的一键部署，也比较方便），在合并 PR 后帮我们自动升级部署到云开发，解释一下几个密钥，您需要在 仓库的 `settings/secrets/actions` 中配置，组织的话可以把常用到的密钥添加为组织密钥
 ，比如 ID KEY 等
 
-| 变量名                                         | 变量解释                                                                                                                                                                                         |
-| ---------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| SECRETID                                       | API 访问密钥 ID，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                                                               |
-| SECRETKEY                                      | API 访问密钥 KEY，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看                                                                                                              |
-| TCBFUNNAME（没什么好加密的，就叫 waline 算了） | 你想要新建/已有函数的名称，比如 `Waline`                                                                                                                                                         |
-| TCBENVID                                       | 环境 ID，可[点击这里](https://console.cloud.tencent.com/tcb/env/overview)或[这里](https://console.cloud.tencent.com/tcb/env/index)查看，地址栏后也会显示，反正就是很多地方都在上面点一下就能看到 |
+| 变量名    | 变量解释                                                                           |
+| --------- | ---------------------------------------------------------------------------------- |
+| SECRETID  | API 访问密钥 ID，可[点击这里](https://console.cloud.tencent.com/cam/capi)新建/查看 |
+| SECRETKEY | API 访问密钥 KEY，可                                                               |
+
+[点击这里](https://console.cloud.tencent.com/cam/capi)
+新建/查看 |
+| TCBFUNNAME（没什么好加密的，就叫 waline 算了） | 你想要新建/已有函数的名称，比如
+`Waline`
+  |
+| TCBENVID | 环境 ID，可
+[点击这里](https://console.cloud.tencent.com/tcb/env/overview)
+或
+[这里](https://console.cloud.tencent.com/tcb/env/index)
+查看，地址栏后也会显示，反正就是很多地方都在上面点一下就能看到 |
 
 ## 附录
 
@@ -295,8 +306,8 @@ module.exports.main = async (event, context) => {
 const Waline = require("@waline/vercel");
 
 module.exports = Waline({
-  forbiddenWords: ["快递", "空包", "代发"],
-  disallowIPList: ["220.173.125.83"],
+  forbiddenWords: ["习近平", "毛泽东", "快递", "空包", "代发", "单号"],
+  disallowIPList: ["220.173.125.83", "222.83.150.92"],
   secureDomains: [
     "ccknbc.now.sh",
     "ccknbc.netlify.app",
@@ -316,4 +327,4 @@ module.exports = Waline({
 });
 ```
 
-[邮件通知模板下载](https://file.nmb.show/down.php/4ca88b8fe0729c213cd3a425f87d2f51.rar)（包含 Waline/Valine/Twikoo），您可以下载后根据官方文档提及的变量自行修改，对于本文未涉及到的其他内容，请自行查看官方文档，如有错误，欢迎指正，谢谢！
+[邮件通知模板下载](https://file.nmb.show/down.php/4ca88b8fe0729c213cd3a425f87d2f51.rar)（包含 Waline/Valine/Twikoo），您可以下载后根据官方文档提及的变量自行修改`index.js`相关内容，以上代码仅作参考，对于本文未涉及到的其他内容，请自行查看官方文档，如有错误，欢迎指正，谢谢！
