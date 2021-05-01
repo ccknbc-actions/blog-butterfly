@@ -1,17 +1,17 @@
 ---
 title: 如何在中国大陆享受JOOX音乐服务
-urlname: '10'
-date: '2020-10-06 12:00:00 +0800'
 tags:
   - 音乐
   - JOOX
+
 id: 10
 categories: 音乐
 description: 本篇文章主要说明如何绕过版权地区限制，在中国大陆享受JOOX音乐服务
-keywords: 'JOOX,music,音乐,大陆'
-cover: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-06~20_11_13.webp'
-photos: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-06~20_11_13.webp'
+keywords: JOOX,music,音乐,大陆
+cover: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-06~20_11_13.webp"
+photos: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-06~20_11_13.webp"
 translate_title: how-to-enjoy-joox-music-service-in-mainland-china
+date: 2020-10-06 12:00:00
 updated: 2020-11-10 17:29:00
 ---
 
