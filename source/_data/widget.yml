@@ -1,0 +1,18 @@
+- class_name: dsq-widget
+  id_name: recentcomments
+  name: Disqus 最新评论
+  icon: fas fa-comment
+  order: 1
+  html: <script type="text/javascript" src="https://ccknbc-disqus.ccknbc.workers.dev/recent_comments_widget.js?num_items=6&hide_avatars=0&avatar_size=48&excerpt_length=20&hide_mods=1"></script>
+# - class_name: dsq-widget
+#   id_name: disqus_recommendations
+#   name: 即刻短文
+#   icon: far fa-comment-alt
+#   order: 
+#   html: <script>(function(){var d=document,s=d.createElement('script');s.src='https://ccknbc-disqus.ccknbc.workers.dev/recommendations.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s)})();</script><noscript>Please enable JavaScript to view the<a href="https://disqus.com/?ref_noscript"rel="nofollow">comments powered by Disqus.</a></noscript>
+# - class_name: dsq-widget
+#   id_name: recentcomments
+#   name: Disqus 最新评论
+#   icon: fas fa-comment
+#   order: 6
+#   html:
