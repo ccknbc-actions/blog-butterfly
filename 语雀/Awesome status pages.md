@@ -8,7 +8,7 @@ translate_title: awesome-status-pages
 ---
 
 ---
-title: CC的StatusPage
+title: Awesome status pages
 translate_title: awesome-status-pages
 date: 2021-05-01 12:00:00
 updated: 2021-05-01 12:00:00
