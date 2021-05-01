@@ -8,8 +8,7 @@ translate_title: awesome-status-pages
 ---
 
 ---
-
-title: CC 的 StatusPage
+title: CC的StatusPage
 translate_title: awesome-status-pages
 date: 2021-05-01 12:00:00
 updated: 2021-05-01 12:00:00
@@ -26,15 +25,14 @@ copyright_info: 转载自 GitHub
 comments: true
 hide: false
 id: 23
-
-# Awesome status pages  ![](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg#id=AgS0Q&originHeight=20&originWidth=110&originalType=binary&status=done&style=none)
-
-Awesome list of status pages open source software, online services and public status pages of major internet companies
-
-_<!-- more -->_
+---
 
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/23)
 自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/awesome-status-pages)
+
+# Awesome status pages
+
+Awesome list of status pages open source software, online services and public status pages of major internet companies
 
 ### Table of contents
 
