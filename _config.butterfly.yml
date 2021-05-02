@@ -760,7 +760,7 @@ aside:
       link: https://www.tidio.com/talk/rmnlrpff1oci9pui1djmeuvx1mftupfq
   card_announcement:
     enable: true
-    content: '<center><iframe src="https://cc.instatus.com/embed-status/light-sm" loading="lazy" width="230" height="41" frameBorder="0" scrolling="no" style="border: none;" ></iframe>'
+    content: '<center><iframe src="https://cc.instatus.com/embed-status/light-sm" loading="lazy" width="230" height="41" frameBorder="0" scrolling="no" style="border: none;" ></iframe></center>'
     # '
     # <center>
     # <a target="_blank" href="https://hexo.io"><img src="https://img.shields.io/badge/Frame-Hexo 5.3.0-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><br>

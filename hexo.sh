@@ -70,42 +70,42 @@ exit 0
 else
 if [ "$answer" = "3" ] || [ "$answer" = "" ]; then
 printf "\033[32mINFO \033[0m 正在清理本地缓存...\n"
-npm run clean
+hexo clean
 printf "\033[32mINFO \033[0m 正在启动本地预览，可以按Ctrl+C退出\n"
-npm run server
+hexo server
 exec ${HexoPath}/hexo.sh
 else
 if [ "$answer" = "4" ]; then
 printf "\033[32mINFO \033[0m 正在清理本地缓存...\n"
-npm run clean
+hexo clean
 # printf "\033[32mINFO \033[0m 正在更新番剧列表...\n"
 # hexo bangumi -u #bilibili追番插件，未配置无需开启
 printf "\033[32mINFO \033[0m 正在重新编译静态页面...\n"
-npm run build
+hexo build
 printf "\033[32mINFO \033[0m 正在压缩静态资源...\n"
 gulp #gulp插件，未配置无需开启
 printf "\033[32mINFO \033[0m 正在开启本地预览，可以按Ctrl+C退出\n"
-npm run server
+hexo server
 exec ${HexoPath}/hexo.sh
 else
 if [ "$answer" = "5" ] || [ "$answer" = "" ]; then
 printf "\033[32mINFO \033[0m 正在清理本地缓存...\n"
-npm run clean
+hexo clean
 printf "\033[32mINFO \033[0m 正在启动本地预览(5000端口)，可以按Ctrl+C退出\n"
-npm run server -p 5000
+hexo server -p 5000
 exec ${HexoPath}/hexo.sh
 else
 if [ "$answer" = "6" ]; then
 printf "\033[32mINFO \033[0m 正在清理本地缓存...\n"
-npm run clean
+hexo clean
 # printf "\033[32mINFO \033[0m 正在更新番剧列表...\n"
 # hexo bangumi -u #bilibili追番插件，未配置无需开启
 printf "\033[32mINFO \033[0m 正在重新编译静态页面...\n"
-npm run build
+hexo build
 printf "\033[32mINFO \033[0m 正在压缩静态资源...\n"
 gulp #gulp插件，未配置无需开启
 printf "\033[32mINFO \033[0m 正在准备将最新修改部署至Hexo...\n"
-npm run deploy
+hexo deploy
 printf "\033[32mINFO \033[0m 部署完成，您的网站已经是最新版本！\n"
 sleep 1s
 exec ${HexoPath}/hexo.sh
@@ -119,7 +119,7 @@ exec ${HexoPath}/hexo.sh
 else
 if [ "$answer" = "8" ]; then
 printf "\033[32mINFO \033[0m 正在删除本地缓存...\n"
-npm run clean
+hexo clean
 # printf "\033[32mINFO \033[0m 正在删除语雀缓存...\n"
 # yuque-hexo clean
 printf "\033[32mINFO \033[0m 正在提交最新修改到远程仓库...\n"
