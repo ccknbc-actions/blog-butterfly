@@ -84,7 +84,7 @@ stylus:
 index_generator:
   path: ''
   per_page: 10
-  order_by: -date
+  order_by: -updated
 
 default_category: 
 category_map: 
@@ -162,3 +162,19 @@ nofollow:
   exclude:
     - 'ccknbc.com'
     - 'www.ccknbc.com'
+
+archive_generator:
+  enabled: true
+  per_page: 0
+  yearly: false
+  monthly: false
+  daily: false
+  order_by: -date
+
+category_generator:
+  per_page: 0
+  order_by: -date
+
+tag_generator:
+  per_page: 0
+  order_by: -date

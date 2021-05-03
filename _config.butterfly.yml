@@ -5,6 +5,10 @@ menu:
   # 首页: / || fas fa-home
   # 订阅: /sub/ || fas fa-rss
   # 友链: /blogroll/ || fas fa-user-friends
+  列表||fas fa-list:
+    归档: /archives/ || fas fa-archive
+    标签: /tags/ || fas fa-tags
+    分类: /categories/ || fas fa-folder-open
   关于 || fas fa-desktop:
     订阅: /sub/ || fas fa-rss
     友链: /blogroll/ || fas fa-user-friends
@@ -16,7 +20,6 @@ menu:
     统计: /charts/ || fas fa-chart-bar
   #   状态: https://ccknbc.statuspage.io || fas fa-server
   #   证书: https://ssl.ccknbc.cc || fab fa-expeditedssl
-  # 列表||fas fa-list:
 
 # Hide the child menu items in mobile sidebar
 hide_sidebar_menu_child: false
@@ -165,14 +168,14 @@ post_meta:
   page: # Home Page
     date_type: both # created or updated or both 主頁文章日期是創建日或者更新日或都顯示
     date_format: date # date/relative 顯示日期還是相對日期
-    categories: false # true or false 主頁是否顯示分類
-    tags: false # true or false 主頁是否顯示標籤
+    categories: true # true or false 主頁是否顯示分類
+    tags: true # true or false 主頁是否顯示標籤
     label: true # true or false 顯示描述性文字
   post:
     date_type: both # created or updated or both 文章頁日期是創建日或者更新日或都顯示
     date_format: date # date/relative 顯示日期還是相對日期
-    categories: false # true or false 文章頁是否顯示分類
-    tags: false # true or false 文章頁是否顯示標籤
+    categories: true # true or false 文章頁是否顯示分類
+    tags: true # true or false 文章頁是否顯示標籤
     label: true # true or false 顯示描述性文字
 
 # wordcount (字數統計)

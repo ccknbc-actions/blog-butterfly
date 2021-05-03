@@ -81,7 +81,7 @@ hexo clean
 # printf "\033[32mINFO \033[0m 正在更新番剧列表...\n"
 # hexo bangumi -u #bilibili追番插件，未配置无需开启
 printf "\033[32mINFO \033[0m 正在重新编译静态页面...\n"
-hexo build
+hexo generate
 printf "\033[32mINFO \033[0m 正在压缩静态资源...\n"
 gulp #gulp插件，未配置无需开启
 printf "\033[32mINFO \033[0m 正在开启本地预览，可以按Ctrl+C退出\n"
@@ -101,7 +101,7 @@ hexo clean
 # printf "\033[32mINFO \033[0m 正在更新番剧列表...\n"
 # hexo bangumi -u #bilibili追番插件，未配置无需开启
 printf "\033[32mINFO \033[0m 正在重新编译静态页面...\n"
-hexo build
+hexo generate
 printf "\033[32mINFO \033[0m 正在压缩静态资源...\n"
 gulp #gulp插件，未配置无需开启
 printf "\033[32mINFO \033[0m 正在准备将最新修改部署至Hexo...\n"
