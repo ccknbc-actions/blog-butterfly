@@ -2,7 +2,7 @@
 title: Waline 评论系统-部署日志
 translate_title: waline-commens-system-deployment-logs
 date: 2021-01-17 00:00:00
-updated: 2021-03-14 14:00:00
+updated: 2021-05-03 17:00:00
 tags: [工具, 评论, Waline]
 categories: 工具
 keywords: [工具, 评论, Waline]
@@ -28,13 +28,13 @@ Waline - 一款从 [Valine](https://valine.js.org) 衍生的带后端评论系�
 - Markdown 语法支持
 - 轻量易用
 - 免费部署
-- 多种部署部署方式和存储服务支持，每列选择一项多达 56 种（可以更多）部署方式任君选择
+- 多种部署部署方式和存储服务支持，每列选择一项多达 84 种（可以更多）部署方式任君选择
   | | Waline | |
   | --- | --- | --- |
   | **客户端脚本** | **服务端部署** | **数据存储** |
-  | @waline/client | Vercel | LeanCloud |
-  | MiniValine | CloudBase | CloudBase |
-  | | Docker | MongoDB |
+  | [**@waline/client**](https://waline.js.org/) | Vercel | LeanCloud |
+  | [**MiniValine**](https://minivaline.js.org/) | CloudBase | CloudBase |
+  | [**AprilComment**](https://github.com/innc11/AprilComment) | Docker | MongoDB |
   | | 独立部署 | MySQL |
   | | | SQLite |
   | | | PostgreSQL |
