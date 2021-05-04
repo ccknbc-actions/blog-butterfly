@@ -1,12 +1,8 @@
 ---
 title: 博客图片的WebP之路
-tags:
-  - WebP
-  - 图床
-  - 博客
-
+tags: [WebP, 图床, 博客]
 comments: true
-keywords: "WebP,图床,博客"
+keywords: [WebP, 图床, 博客]
 categories: 博客
 description: 在主流浏览器都支持的情况下，我趁着文章还少，把所有文章的图片全部转换为WebP格式，以寻求更快的加载速度和丝滑的体验
 translate_title: the-webp-road-of-blog-pictures
@@ -206,7 +202,7 @@ How to use PR Valet
 
 具体过程可通过下图查看（别问我为什么不重新截图）
 
-![](https://cdn.nlark.com/yuque/0/2020/png/8391407/1608792470422-d8276572-96b4-4b3b-9e7b-dfee414b9f5e.png#align=left&display=inline&height=997&margin=%5Bobject%20Object%5D&originHeight=997&originWidth=1156&size=0&status=done&style=none&width=1156)
+![](https://cdn.nlark.com/yuque/0/2020/png/8391407/1608792470422-d8276572-96b4-4b3b-9e7b-dfee414b9f5e.png#height=997&id=OFjp7&originHeight=997&originWidth=1156&originalType=binary&size=0&status=done&style=none&width=1156)
 
 {% endnote %}
 
@@ -809,3 +805,7 @@ module.exports = {
 [Gulp 中文文档](https://tangshuang.gitbooks.io/gulp-chinese-guide/content/)
 
 [Web 性能优化： 图片优化让网站大小减少 62%](https://segmentfault.com/a/1190000018392559)
+
+## CDN 解决方案
+
+拿又拍云来说，[图像处理，URL 作图](https://help.upyun.com/knowledge-base/image/) 是个不错的解决方案
