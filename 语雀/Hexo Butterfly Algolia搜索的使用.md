@@ -1,7 +1,7 @@
 ---
 
-title: Hexo Butterfly Algolia
-translate_title: Hexo Butterfly Algolia
+title: Hexo Butterfly Algolia搜索的使用
+translate_title: hexo-butterfly-algolia
 date: 2021-05-11 11:00:00
 updated: 2021-05-11 11:00:00
 tags: [Hexo,Butterfly,Algolia]
