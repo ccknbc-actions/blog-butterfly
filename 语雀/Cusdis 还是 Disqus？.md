@@ -2,7 +2,7 @@
 title: Cusdis 还是 Disqus？
 urlname: '25'
 date: '2021-05-11 18:00:00 +0800'
-translate_title: cusdis or disqus
+translate_title: cusdis-or-disqus
 tags:
   - 工具
   - 评论
@@ -111,8 +111,11 @@ Below are the pros and cons of Cusdis:
 - You have to manually moderate comments which are not display by default until you approve it, since we dont't have a spam filter.
 - Disqus is a company, we aren't.
 
+​
+
 ## 我的观点
 
 观望中，适配起来也很简单，但目前不打算投入使用。好在由于很简约，语言也可以自定义，也做了深色模式适配，放在侧栏当做留言板给不能访问 Disqus 的游客使用，但有人肯定会问，是 Tidio 不能满足要求吗？还是其他评论看不上？
+​
 
 开头已经说了，我不想收集用户过多隐私信息，Tidio 和其他评论系统，都会记录下系统信息，IP 等不必要的敏感信息，对于静态博客来说，其实没必要。Disqus 虽然记录其实包括邮箱在内的信息全都\*\*\*打码了，这也就是导出后的 Disqus 评论仅能作为一个备份，导入其他平台因为缺少邮箱这个信息头像无法显示的原因。Disqus 可以设定一个默认头像，当匿名评论者或者已注册的无头像用户评论时可以显示默认头像，而 Cusdis 没有头像显示这一功能，但后续应该会添加选项决定是否显示，导入 Disqus 评论后就可完美兼容，而又因为只有 5kb，不如 Disqus 那样臃肿，并且这个广告是让人无法忍受的，虽然我的博客因为流量太少官方瞧不起，不给我插广告躲过了，但万一哪天政策改了，免费用户强制广告，体验将极速降低，因为他不可控。再来我可以把数据掌握在自己手里，拥有一个够用的管理面板就够了，虽然 Disqus 侧边栏管理评论很方便，并且可以通过邮件回复完成评论审核，但也因为这样，当你关闭评论审核，新评论通知就不发送了，所以我用上了 RSS 来获取评论通知。显然 Cusdis 那边 Issue 里也有人提出希望支持 RSS 评论通知，作者也很人性的将提供了同本博客 RSS 通过邮件订阅时，自动发送的确认邮件通知和取消订阅的选项。处于快速迭代发展的它目前功能并不完善，但可以看出，它将是一个很好的评论系统。
