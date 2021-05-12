@@ -15,7 +15,7 @@ description: 本文介绍了 Hexo Butterfly 主题下 Algolia 搜索的使用
 cover: >-
   https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-05-11~11-06-48.webp
 id: 24
-updated: 2021-05-11 11:00:00
+updated: 2021-05-12 12:00:00
 ---
 
 本文介绍了 Hexo Butterfly 主题下 Algolia 搜索的使用
