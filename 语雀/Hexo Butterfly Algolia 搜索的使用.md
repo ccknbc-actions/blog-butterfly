@@ -30,14 +30,10 @@ updated: 2021-05-11 11:00:00
 ## 注册账号
 
 前往 [Algolia](https://www.algolia.com/users/sign_up) 官网注册一个账号，新建 应用和 index
-​
-
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620791672826-3bac29b1-3f60-4be8-bdc5-7b615e72f78a.png#clientId=u50de1c71-7253-4&from=paste&id=u2756c9ea&margin=%5Bobject%20Object%5D&name=image.png&originHeight=721&originWidth=1469&originalType=binary&size=115021&status=done&style=none&taskId=u85376cf5-9559-4c6e-a79c-5b9b4d06f19)
 数据中心建议选择新加坡或香港，当然根据你自己情况而定
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620791714386-d2a2ac19-edfd-4c8b-ab02-9de7b770ff21.png#clientId=u50de1c71-7253-4&from=paste&id=uce195a9b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=771&originWidth=1204&originalType=binary&size=116921&status=done&style=none&taskId=ue0e0dc18-54e1-472c-942f-8732dbb7f20)
-
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620791516501-3f36941d-cf13-49aa-bdb4-e956f632283a.png#clientId=u50de1c71-7253-4&from=paste&id=u8c5cd22c&margin=%5Bobject%20Object%5D&name=image.png&originHeight=447&originWidth=799&originalType=binary&size=23823&status=done&style=none&taskId=u75a48b58-86ab-4545-8c39-381944dc8d2)
-​
 
 ## 安装插件
 
@@ -86,17 +82,11 @@ local_search:
   enable: false
 ```
 
-​
-
 然后来看以下具体的参数配置获取方式
 `appId`，`apiKey`，`adminApiKey`可在 API Keys 页面获取，注意保管好你的 Admin Key，不要让其他人知道，不建议直接写在配置中
-
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620789827112-9247b7ae-f3c9-4807-93cd-46c2b8dbb2bc.png#clientId=u7b8d348a-52f3-4&from=paste&id=u63248bc0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=707&originWidth=1900&originalType=binary&size=115433&status=done&style=none&taskId=ub8ef9b9a-88ab-41cd-aff9-e093bd50885)
-
 对于 Windows 系统，如果你不想每次都进行设定变量操作，可以添加到系统的环境变量中
-
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620789745876-cbf0d411-f694-45c7-bcbd-c0987f71f718.png#clientId=u7b8d348a-52f3-4&from=paste&id=ub7f3b987&name=image.png&originHeight=217&originWidth=839&originalType=binary&size=13413&status=done&style=none&taskId=ua2589fa9-ec9a-42b8-90b6-db0c3b19f60)
-
 如果你和我一样使用的自动部署，例如 Github Actions，你可以在工作流中一开始或者对应的步骤添加环境变量，记得 Secrets 中也要添加哦
 
 ```yaml
@@ -167,18 +157,9 @@ hexo algolia --no-clear
 ```
 
 注意查看命令行输出信息，然后去官网检查索引是否生成
-​
-
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792250950-8c6c2e31-a5f4-41d3-8526-c101b88ca2f0.png#clientId=u50de1c71-7253-4&from=paste&id=u0aaf2648&margin=%5Bobject%20Object%5D&name=image.png&originHeight=676&originWidth=1865&originalType=binary&size=125864&status=done&style=none&taskId=uea2f9a66-9b8f-4ae5-826d-0be0a612f03)
-​
 
 ## Algolia 配置
-
-​
-
-​
-
-​
 
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792329244-9538543c-aafa-4a2a-a13b-a856839d99b4.png#clientId=u50de1c71-7253-4&from=paste&id=u96dacffc&margin=%5Bobject%20Object%5D&name=image.png&originHeight=490&originWidth=1526&originalType=binary&size=53168&status=done&style=none&taskId=u85f555d2-50c9-4cb6-8d41-4a43d3b494d)
 
@@ -187,9 +168,7 @@ hexo algolia --no-clear
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792429374-c10f685c-42df-4b2f-8112-b63b811686f5.png#clientId=u50de1c71-7253-4&from=paste&id=u8c98eecf&margin=%5Bobject%20Object%5D&name=image.png&originHeight=815&originWidth=1524&originalType=binary&size=88864&status=done&style=none&taskId=u073ae6de-ac2f-4946-ba73-482f86e3fca)
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792467160-7192cedf-ad20-4fd0-bcb2-4f7557fc904d.png#clientId=u50de1c71-7253-4&from=paste&id=u6ca53735&margin=%5Bobject%20Object%5D&name=image.png&originHeight=567&originWidth=1515&originalType=binary&size=65520&status=done&style=none&taskId=u6dc209d7-a0e2-4e88-831d-78b3ea862c1)
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792523507-460b449b-cd80-4efc-897b-898aa544d09a.png#clientId=u50de1c71-7253-4&from=paste&height=592&id=u28791a5d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1183&originWidth=1537&originalType=binary&size=130557&status=done&style=none&taskId=uf9ecfd07-bb9e-4466-9ae8-93407bdc42b&width=768.5)![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792559182-d559fb1a-94e4-49ad-a13a-f9848fa7f784.png#clientId=u50de1c71-7253-4&from=paste&height=363&id=u5d9546e2&margin=%5Bobject%20Object%5D&name=image.png&originHeight=725&originWidth=1511&originalType=binary&size=75980&status=done&style=none&taskId=u6e95754a-d940-49f3-99f2-48bc937d0a8&width=755.5)![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792603109-0c127f51-0fd2-4f86-9290-1f25cf7b4deb.png#clientId=u50de1c71-7253-4&from=paste&id=u1977ad48&margin=%5Bobject%20Object%5D&name=image.png&originHeight=358&originWidth=999&originalType=binary&size=26859&status=done&style=none&taskId=uaac8482c-9d89-468a-95cc-5e7661cc223)![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792626661-af14bf9c-6dfb-4306-beaf-d4153095ffbf.png#clientId=u50de1c71-7253-4&from=paste&id=uf6f4182f&margin=%5Bobject%20Object%5D&name=image.png&originHeight=444&originWidth=997&originalType=binary&size=27018&status=done&style=none&taskId=u71e9f2c4-fd03-4cb8-8a02-d9c5b3a10e3)![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792659190-7a5767d3-64f9-4f57-a247-1bbe65f45da5.png#clientId=u50de1c71-7253-4&from=paste&id=u51baa85f&margin=%5Bobject%20Object%5D&name=image.png&originHeight=196&originWidth=976&originalType=binary&size=17315&status=done&style=none&taskId=ub5daf87f-af07-4f14-9c36-f843dfc4f43)
-
 这里不细节讲，你可以查阅[官方文档](https://community.algolia.com/instantsearch.js/v2/getting-started.html)，虽然有些过时的参数，但结合 [Upgrade from v2 to v3](https://www.algolia.com/doc/guides/building-search-ui/upgrade-guides/js/#upgrade-from-v2-to-v3) 还是勉强能用，蝴蝶已经做好了高亮标题，虽然会查询文章内容，但并不会高亮文章内容节选，我们要做的就是修改部分 js 内容，并对应的设置好 Algolia，以便按照我们要求的优先顺序展示搜索结果，而不是默认的很奇怪的排序，毕竟针对中文分词他是一个一个分不能按照英语那样，针对英文我们可以开启分词查询，驼峰查找而不是盲目的匹配整个单词，并且允许拼错字母或汉字的情况存在，这些都是一个搜索系统要考虑的问题。然后针对搜索速度，我们可以对文章内容进行切片或者属性的刻画，但 V2 所支持的功能实在太少，派的上用场的大概就是 匹配的字词内容，匹配度，匹配内容的摘录（默认 10 个字词），还有高级搜索用法的启用。
-​
 
 ## JS 修改
 
@@ -229,4 +208,4 @@ CDN:
         },
 ```
 
-如有错误，还望指正！
+### 如有错误，还望指正！
