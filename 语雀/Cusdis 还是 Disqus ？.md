@@ -95,8 +95,16 @@ Disqus 的匿名评论还有一点，就是需要谷歌真人验证 🤔，可�
 若您无法访问 Disqus，可在此处留言，但我的回复目前你也收不到通知，仅仅是一个 DEMO
 ​
 
-<script src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/js/cusdis.js"></script><script async defer src="https://cusdis.ccknbc.cc/js/cusdis.es.js"></script><div id="cusdis_thread"  data-host="https://cusdis.ccknbc.cc"  data-app-id="2b20db28-cc27-4e04-8c94-bab2bce7788b"  data-page-id="{{ PAGE_ID }}"  data-page-url="{{ PAGE_URL }}"  data-page-title="{{ PAGE_TITLE }}"></div>
-
+<script src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/js/cusdis.js"></script>
+<!--<script defer src="https://cusdis.ccknbc.cc/js/widget/lang/zh-cn.js"></script>-->
+<script async defer src="https://cusdis.ccknbc.cc/js/cusdis.es.js"></script>
+<div id="cusdis_thread"  
+     data-host="https://cusdis.ccknbc.cc"  
+     data-app-id="blog"  
+     data-page-id="demo"  
+     data-page-url="/cusdis-or-disqus"  
+     data-page-title="demo">
+</div>
 ​
 
 ```html
@@ -106,9 +114,86 @@ Disqus 的匿名评论还有一点，就是需要谷歌真人验证 🤔，可�
 <div
   id="cusdis_thread"
   data-host="https://cusdis.ccknbc.cc"
-  data-app-id="2b20db28-cc27-4e04-8c94-bab2bce7788b"
+  data-app-id="blog"
   data-page-id="demo"
   data-page-url="/cusdis-or-disqus"
   data-page-title="demo"
 ></div>
+```
+
+## Widget
+
+### 评论
+
+<div id="wpac-comment"></div>
+<script type="text/javascript">
+wpac_init = window.wpac_init || [];
+wpac_init.push({widget: 'Comment', id: 25905});
+(function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = 'https://embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+})();
+</script>
+<a href="https://widgetpack.com" class="wpac-cr">Comments System WIDGET PACK</a>
+
+```html
+<div id="wpac-comment"></div>
+<script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({ widget: "Comment", id: 25905 });
+  (function () {
+    if ("WIDGETPACK_LOADED" in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement("script");
+    mc.type = "text/javascript";
+    mc.async = true;
+    mc.src = "https://embed.widgetpack.com/widget.js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+</script>
+<a href="https://widgetpack.com" class="wpac-cr">Comments System WIDGET PACK</a>
+```
+
+### 点评
+
+<div id="wpac-review"></div>
+<script type="text/javascript">
+wpac_init = window.wpac_init || [];
+wpac_init.push({widget: 'Review', id: 25905});
+(function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = 'https://embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+})();
+</script>
+<a href="https://widgetpack.com" class="wpac-cr">Reviews System WIDGET PACK</a>
+​
+
+```html
+<div id="wpac-review"></div>
+<script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({ widget: "Review", id: 25905 });
+  (function () {
+    if ("WIDGETPACK_LOADED" in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement("script");
+    mc.type = "text/javascript";
+    mc.async = true;
+    mc.src = "https://embed.widgetpack.com/widget.js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+</script>
+<a href="https://widgetpack.com" class="wpac-cr">Reviews System WIDGET PACK</a>
 ```
