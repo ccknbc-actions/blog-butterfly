@@ -21,4 +21,4 @@ updated: 2021-05-15 21:00:00
 
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/24)
 
-自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/hexo-butterfly-algolia)
+自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/the-real-addthis)
