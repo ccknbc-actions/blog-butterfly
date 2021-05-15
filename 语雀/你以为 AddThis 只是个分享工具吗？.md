@@ -2,7 +2,7 @@
 title: 你以为 AddThis 只是个分享工具吗？
 urlname: '26'
 date: '2021-05-15 21:00:00 +0800'
-translate_title: hexo-butterfly-algolia
+translate_title: the-real-addthis
 tags:
   - 工具
   - AddThis
@@ -18,9 +18,7 @@ updated: 2021-05-15 21:00:00
 ---
 
 **Turn your visitors into engaged customers.**
-​
 
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/24)
-​
 
 自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/hexo-butterfly-algolia)
