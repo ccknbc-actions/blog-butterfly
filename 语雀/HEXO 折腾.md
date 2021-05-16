@@ -1,10 +1,10 @@
 ---
-title: HEXO折腾
+title: HEXO 折腾
 urlname: '03'
 date: '2020-07-01 08:00:00 +0800'
 tags: HEXO
 categories: 博客
-description: 本篇文章简单介绍了HEXO博客的搭建，部署更新等过程
+description: 本篇文章简单介绍了 HEXO 博客的搭建，部署更新等过程
 keywords: HEXO
 cover: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~10_48_38.webp'
 photos: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~10_48_38.webp'
@@ -13,7 +13,7 @@ translate_title: hexo-toss
 updated: 2020-07-01 12:00:00
 ---
 
-**个人目前使用主题为 Butterfly `3.0.1`版本，HEXO `5.0.2`版本**
+**个人目前使用主题为 Butterfly **`**3.0.1**`**版本，HEXO **`**5.0.2**`**版本**
 
 请按照以下步骤依次安装相应依赖和框架
 
@@ -49,7 +49,7 @@ Linux 用户右上角关闭本标签页。
 
 对了，国内使用 npm 可能很慢。
 
-**你可以考虑切换为 `taobao` 镜像源。**
+**你可以考虑切换为 **`**taobao**`** 镜像源。**
 
 ```sh
 npm config set registry https://registry.npm.taobao.org
@@ -222,9 +222,9 @@ theme: butterfly
 npm install hexo-renderer-pug hexo-renderer-stylus --save
 ```
 
-> 在进行配置修改之前，为了以后主题通过 git pull 平滑升级，请不要随意改动主题源码，虽然你可以通过强制合并来解决，但保险点总是没错的，并且由于主题的**`约定>配置`**特性，因此我们通常在 Hexo 根目录**`sorce/_data`**下把主题的**`_config.yml`**（主题目录）复制过来，并且重命名为**`butterfly.yml`**，然后再对 butterfly.yml 进行修改即可
+> 在进行配置修改之前，为了以后主题通过 git pull 平滑升级，请不要随意改动主题源码，虽然你可以通过强制合并来解决，但保险点总是没错的，并且由于主题的`**约定>配置**`特性，因此我们通常在 Hexo 根目录`**sorce/_data**`下把主题的`**_config.yml**`（主题目录）复制过来，并且重命名为`**butterfly.yml**`，然后再对 butterfly.yml 进行修改即可
 
-有了上面的基础，我们就可以根据对应的**[文档](https://demo.jerryc.me)**修改相应的配置了,以下不再赘述
+有了上面的基础，我们就可以根据对应的[**文档**](https://demo.jerryc.me)修改相应的配置了,以下不再赘述
 
 ### 生成静态文件
 
@@ -537,7 +537,7 @@ hexo new page xxx
 
 ### 备份方式
 
-不能在一棵树上吊死，所以我选择了多平台备份，分别是 Github,Gitee,Coding 三个平台，多一个平台，多一份保障，这里注册账号实名认证什么的不再赘述，大家应该都会，注意的一点就是我们建的仓库选择**`私有仓库`**，不然别人把你 md 一拷走，就成别人的的了，不过大多数人比较自觉，我们这静态博客，F12 源码什么的也看的清清楚楚，爬走很简单，主要靠自觉，防止转载（其实无所谓，秉着开源共享的理念，其实标明出处大家也就不会特别在意）
+不能在一棵树上吊死，所以我选择了多平台备份，分别是 Github,Gitee,Coding 三个平台，多一个平台，多一份保障，这里注册账号实名认证什么的不再赘述，大家应该都会，注意的一点就是我们建的仓库选择`**私有仓库**`，不然别人把你 md 一拷走，就成别人的的了，不过大多数人比较自觉，我们这静态博客，F12 源码什么的也看的清清楚楚，爬走很简单，主要靠自觉，防止转载（其实无所谓，秉着开源共享的理念，其实标明出处大家也就不会特别在意）
 
 首先在博客`根目录`使用以下命令初始化本地仓库添加一个远程仓库
 
@@ -553,7 +553,7 @@ git init
 git remote add <shortname> <url>
 ```
 
-比如 `git remote add origin git@github.com:CCKNBC/Hexo.git`，添加多个仓库地址等更多操作请参考**[Git-基础-远程仓库的使用]()**，按照个人喜好来添加多个仓库地址，我这里全部使用的 origin,通过手动添加了 coding,gitee 的仓库地址，不影响使用就行
+比如 `git remote add origin git@github.com:CCKNBC/Hexo.git`，添加多个仓库地址等更多操作请参考**Git-基础-远程仓库的使用**，按照个人喜好来添加多个仓库地址，我这里全部使用的 origin,通过手动添加了 coding,gitee 的仓库地址，不影响使用就行
 
 然后我们运行`git remote -v`查看一下结果，是自己想要的即可
 
@@ -634,7 +634,7 @@ https://cdn.jsdelivr.net/gh/your name/your namec.github.io@latests/xxx.js
 
 接下来分别编辑 css 和 js 文件即可，当然你可以直接复制粘贴或者直接引用我的链接
 
-**`css`**
+`**css**`
 
 ```css
 @font-face {
@@ -873,7 +873,7 @@ i:hover {
 }
 ```
 
-**`js`**
+`**js**`
 
 ```javascript
 // 设置页脚博主会动的心

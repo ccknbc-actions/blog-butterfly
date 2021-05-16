@@ -5,16 +5,82 @@ categories: 博客
 description: CC的部落格 外挂标签笔记 
 translate_title: introduction-of-plugin-tags-based-on-butterfly
 date: 2021-03-05 12:00:00
-updated: 2021-03-11 12:00:00
+updated: 2021-05-16 12:00:00
 cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-05~14-36-33.png
 hide: false
 ---
 
-{% note green success modern %}CC的部落格 外挂标签笔记 ，其中大部分完整转载至糖果屋店长原文，根据本站实际情况进行了增减{% link 糖果屋教程贴, https://akilar.top/posts/615e2dec/, https://cdn.jsdelivr.net/gh/Akilarlxh/akilarlxh.github.io/img/siteicon/favicon.ico %}{% endnote %}
+{% note green success modern %}CC的部落格 外挂标签笔记 ，其中大部分完整转载至糖果屋店长原文，根据本站实际情况进行了增减，仅保留源码和参数说明部分，若要查看具体效果，可前往{% link 糖果屋教程贴, https://akilar.top/posts/615e2dec/, https://cdn.jsdelivr.net/gh/Akilarlxh/akilarlxh.github.io/img/siteicon/favicon.ico %}{% endnote %}
+
+## 按钮 Button
+
+### 行内
+
+```markdown
+{% btn '#',# %}
+{% btn '#',#,outline%}
+```
+
+### 固定
+
+```markdown
+{% btn '#',#,far fa-hand-point-right,block larger %}
+{% btn '#',#,far fa-hand-point-right,block center larger %}
+{% btn '#',#,far fa-hand-point-right,block right blue larger %}
+```
+
+### 居中多个
+
+```markdown
+<div class="btn-center">
+{% btn '#',#,far fa-hand-point-right,larger %}
+{% btn '#',#,far fa-hand-point-right,blue larger %}
+{% btn '#',#,far fa-hand-point-right,pink larger %}
+{% btn '#',#,far fa-hand-point-right,red larger %}
+{% btn '#',#,far fa-hand-point-right,purple larger %}
+{% btn '#',#,far fa-hand-point-right,orange larger %}
+{% btn '#',#,far fa-hand-point-right,green larger %}
+</div>
+```
+
+```markdown
+<div class="btn-center">
+{% btn '#',#,far fa-hand-point-right,outline larger %}
+{% btn '#',#,far fa-hand-point-right,outline blue larger %}
+{% btn '#',#,far fa-hand-point-right,outline pink larger %}
+{% btn '#',#,far fa-hand-point-right,outline red larger %}
+{% btn '#',#,far fa-hand-point-right,outline purple larger %}
+{% btn '#',#,far fa-hand-point-right,outline orange larger %}
+{% btn '#',#,far fa-hand-point-right,outline green larger %}
+</div>
+```
+
+## 按钮 btns
+```markdown
+{% btns 样式参数 %}
+{% cell 标题, 链接, 图片或者图标 %}
+{% cell 标题, 链接, 图片或者图标 %}
+{% endbtns %}
+```
+
+1. 圆角样式：rounded, circle
+2. 增加文字样式：可以在容器内增加 `<b>标题</b> `和` <p>描述文字</p>`
+3. 布局方式：
+    默认为自动宽度，适合视野内只有一两个的情况。
+
+|参数|含义|
+|:-:|:---:|
+|wide|宽一点的按钮|
+|fill|填充布局，自动铺满至少一行，多了会换行|
+|center|居中，按钮之间是固定间距|
+|around|居中分散|
+|grid2|等宽最多2列，屏幕变窄会适当减少列数|
+|grid3|等宽最多3列，屏幕变窄会适当减少列数|
+|grid4|等宽最多4列，屏幕变窄会适当减少列数|
+|grid5|等宽最多5列，屏幕变窄会适当减少列数|
 
 ## 行内文本样式 text
-{% tabs text,2 %}
-<!-- tab 标签语法 -->
+
 ```markdown
 {% u 文本内容 %}
 {% emp 文本内容 %}
@@ -22,50 +88,20 @@ hide: false
 {% del 文本内容 %}
 {% kbd 文本内容 %}
 {% psw 文本内容 %}
+{% label 文本内容 标签颜色 %}
 ```
-<!-- endtab -->
-<!-- tab 样式预览 -->
-1. 带 {% u 下划线 %} 的文本
-2. 带 {% emp 着重号 %} 的文本
-3. 带 {% wavy 波浪线 %} 的文本
-4. 带 {% del 删除线 %} 的文本
-5. 键盘样式的文本 {% kbd command %} + {% kbd D %}
-6. 密码样式的文本：{% psw 这里没有验证码 %}
-<!-- endtab -->
-<!-- tab 示例源码 -->
-```markdown
-1. 带 {% u 下划线 %} 的文本
-2. 带 {% emp 着重号 %} 的文本
-3. 带 {% wavy 波浪线 %} 的文本
-4. 带 {% del 删除线 %} 的文本
-5. 键盘样式的文本 {% kbd command %} + {% kbd D %}
-6. 密码样式的文本：{% psw 这里没有验证码 %}
-```
-<!-- endtab -->
-{% endtabs%}
 
 ## 行内文本 span
-{% tabs span,3 %}
-<!-- tab 标签语法 -->
+
 ```markdown
 {% span 样式参数(参数以空格划分), 文本内容 %}
 ```
-<!-- endtab -->
-<!-- tab 配置参数 -->
+
 1. 字体: logo, code
 2. 颜色: {% span red, red %},{% span yellow, yellow %},{% span green, green %},{% span cyan, cyan %},{% span blue, blue %},{% span gray, gray %}
 3. 大小: small, h4, h3, h2, h1, large, huge, ultra
 4. 对齐方向: left, center, right
-<!-- endtab -->
-<!-- tab 样式预览 -->
-- 彩色文字
-在一段话中方便插入各种颜色的标签，包括：{% span red, 红色 %}、{% span yellow, 黄色 %}、{% span green, 绿色 %}、{% span cyan, 青色 %}、{% span blue, 蓝色 %}、{% span gray, 灰色 %}。
-- 超大号文字
-文档「开始」页面中的标题部分就是超大号文字。
-{% span center logo large, 康纳百川 %}
-{% span center small, 康纳百川 %}
-<!-- endtab -->
-<!-- tab 示例源码 -->
+
 ```markdown
 - 彩色文字
 在一段话中方便插入各种颜色的标签，包括：{% span red, 红色 %}、{% span yellow, 黄色 %}、{% span green, 绿色 %}、{% span cyan, 青色 %}、{% span blue, 蓝色 %}、{% span gray, 灰色 %}。
@@ -74,32 +110,18 @@ hide: false
 {% span center logo large, 康纳百川 %}
 {% span center small, 康纳百川 %}
 ```
-<!-- endtab -->
-{% endtabs%}
-
 
 ## 段落文本 p
-{% tabs p,3 %}
-<!-- tab 标签语法 -->
+
 ```markdown
 {% p 样式参数(参数以空格划分), 文本内容 %}
 ```
-<!-- endtab -->
-<!-- tab 配置参数 -->
+
 1. 字体: logo, code
 2. 颜色: {% span red, red %},{% span yellow, yellow %},{% span green, green %},{% span cyan, cyan %},{% span blue, blue %},{% span gray, gray %}
 3. 大小: small, h4, h3, h2, h1, large, huge, ultra
 4. 对齐方向: left, center, right
-<!-- endtab -->
-<!-- tab 样式预览 -->
-- 彩色文字
-在一段话中方便插入各种颜色的标签，包括：{% p red, 红色 %}、{% p yellow, 黄色 %}、{% p green, 绿色 %}、{% p cyan, 青色 %}、{% p blue, 蓝色 %}、{% p gray, 灰色 %}。
-- 超大号文字
-文档「开始」页面中的标题部分就是超大号文字。
-{% p center logo large, CC's Blog %}
-{% p center small, CC's Blog %}
-<!-- endtab -->
-<!-- tab 示例源码 -->
+
 ```markdown
 - 彩色文字
 在一段话中方便插入各种颜色的标签，包括：{% p red, 红色 %}、{% p yellow, 黄色 %}、{% p green, 绿色 %}、{% p cyan, 青色 %}、{% p blue, 蓝色 %}、{% p gray, 灰色 %}。
@@ -108,20 +130,9 @@ hide: false
 {% p center logo large, CC's Blog %}
 {% p center small, CC's Blog %}
 ```
-<!-- endtab -->
-{% endtabs%}
-
 
 ## 引用 note
 
-{% note warning %}
-最新版`butterfly`标签支持引用`fontawesome V5`图标，效果上已经优于`volantis`的note标签。故不再额外引入`volantis的note样式`。~~做样式适配好麻烦的啊，能偷懒就偷懒吧~~
-{% endnote %}
-{% note blue 'fas fa-bullhorn' modern %}
-以下是`butterfly`主题的note写法。
-{% endnote %}
-{% tabs note,4 %}
-<!-- tab 通用配置 -->
 修改主题配置文件
 ```yml
 note:
@@ -138,229 +149,54 @@ note:
   light_bg_offset: 0
 ```
 `Note`标签外挂有两种用法。`icons`和`light_bg_offset`只对方法一生效。
-<!-- endtab -->
-<!-- tab 语法格式 -->
-{% folding cyan , 方法一 %}
+
+方法一
 ```markdown
 {% note [class] [no-icon] [style] %}
 Any content (support inline tags too.io).
 {% endnote %}
 ```
-{% endfolding %}
 
-{% folding blue , 方法二 %}
+方法二
 ```markdown
 {% note [color] [icon] [style] %}
 Any content (support inline tags too.io).
 {% endnote %}
 ```
-{% endfolding %}
-<!-- endtab -->
-<!-- tab 配置参数 -->
-{% folding cyan , 方法一 %}
+
+方法一
+
 |参数|用法|
-|:--|:-------------|
+|:-:|:------------:|
 |class|【可选】标识，不同的标识有不同的配色<br>（ default / primary / success / info / warning / danger ）|
 |no-icon|【可选】不显示 icon|
 |style|	【可选】可以覆盖配置中的 style<br>（simple/modern/flat/disabled）|
-{% endfolding %}
-{% folding blue , 方法二 %}
+
+方法二
+
 |参数|用法|
-|:--|:-------------|
+|:-:|:------------:|
 |class|【可选】标识，不同的标识有不同的配色<br>（ default / primary / success / info / warning / danger ）|
 |no-icon|【可选】可配置自定义 icon (只支持 fontawesome 图标, 也可以配置 no-icon )|
 |style|	【可选】可以覆盖配置中的 style<br>（simple/modern/flat/disabled）|
-{% endfolding %}
 
-<!-- endtab -->
-<!-- tab 样式预览 -->
-{% folding cyan , 方法一 %}
-
-1. `simple`样式
-
-    {% note simple %}默认 提示块标签{% endnote %}
-
-    {% note default simple %}default 提示块标签{% endnote %}
-
-    {% note primary simple %}primary 提示块标签{% endnote %}
-
-    {% note success simple %}success 提示块标签{% endnote %}
-
-    {% note info simple %}info 提示块标签{% endnote %}
-
-    {% note warning simple %}warning 提示块标签{% endnote %}
-
-    {% note danger simple %}danger 提示块标签{% endnote %}
-
-2. `modern`样式
-
-    {% note modern %}默认 提示块标签{% endnote %}
-
-    {% note default modern %}default 提示块标签{% endnote %}
-
-    {% note primary modern %}primary 提示块标签{% endnote %}
-
-    {% note success modern %}success 提示块标签{% endnote %}
-
-    {% note info modern %}info 提示块标签{% endnote %}
-
-    {% note warning modern %}warning 提示块标签{% endnote %}
-
-    {% note danger modern %}danger 提示块标签{% endnote %}
-
-3. `flat`样式
-
-    {% note flat %}默认 提示块标签{% endnote %}
-
-    {% note default flat %}default 提示块标签{% endnote %}
-
-    {% note primary flat %}primary 提示块标签{% endnote %}
-
-    {% note success flat %}success 提示块标签{% endnote %}
-
-    {% note info flat %}info 提示块标签{% endnote %}
-
-    {% note warning flat %}warning 提示块标签{% endnote %}
-
-    {% note danger flat %}danger 提示块标签{% endnote %}
-
-4. `disabled`样式
-
-    {% note disabled %}默认 提示块标签{% endnote %}
-
-    {% note default disabled %}default 提示块标签{% endnote %}
-
-    {% note primary disabled %}primary 提示块标签{% endnote %}
-
-    {% note success disabled %}success 提示块标签{% endnote %}
-
-    {% note info disabled %}info 提示块标签{% endnote %}
-
-    {% note warning disabled %}warning 提示块标签{% endnote %}
-
-    {% note danger disabled %}danger 提示块标签{% endnote %}
-
-5. `no-icon`样式
-
-    {% note no-icon %}默认 提示块标签{% endnote %}
-
-    {% note default no-icon %}default 提示块标签{% endnote %}
-
-    {% note primary no-icon %}primary 提示块标签{% endnote %}
-
-    {% note success no-icon %}success 提示块标签{% endnote %}
-
-    {% note info no-icon %}info 提示块标签{% endnote %}
-
-    {% note warning no-icon %}warning 提示块标签{% endnote %}
-
-    {% note danger no-icon %}danger 提示块标签{% endnote %}
-
-{% endfolding %}
-{% folding blue , 方法二 %}
-
-1. simple样式
-
-    {% note 'fab fa-cc-visa' simple %}你是刷 Visa 还是 UnionPay{% endnote %}
-
-    {% note blue 'fas fa-bullhorn' simple %}2021年快到了....{% endnote %}
-
-    {% note pink 'fas fa-car-crash' simple %}小心开车 安全至上{% endnote %}
-
-    {% note red 'fas fa-fan' simple%}这是三片呢？还是四片？{% endnote %}
-
-    {% note orange 'fas fa-battery-half' simple %}你是刷 Visa 还是 UnionPay{% endnote %}
-
-    {% note purple 'far fa-hand-scissors' simple %}剪刀石头布{% endnote %}
-
-    {% note green 'fab fa-internet-explorer' simple %}前端最讨厌的浏览器{% endnote %}
-
-2. modern样式
-
-    {% note 'fab fa-cc-visa' modern %}你是刷 Visa 还是 UnionPay{% endnote %}
-
-    {% note blue 'fas fa-bullhorn' modern %}2021年快到了....{% endnote %}
-
-    {% note pink 'fas fa-car-crash' modern %}小心开车 安全至上{% endnote %}
-
-    {% note red 'fas fa-fan' modern%}这是三片呢？还是四片？{% endnote %}
-
-    {% note orange 'fas fa-battery-half' modern %}你是刷 Visa 还是 UnionPay{% endnote %}
-
-    {% note purple 'far fa-hand-scissors' modern %}剪刀石头布{% endnote %}
-
-    {% note green 'fab fa-internet-explorer' modern %}前端最讨厌的浏览器{% endnote %}
-
-3. flat样式
-
-    {% note 'fab fa-cc-visa' flat %}你是刷 Visa 还是 UnionPay{% endnote %}
-
-    {% note blue 'fas fa-bullhorn' flat %}2021年快到了....{% endnote %}
-
-    {% note pink 'fas fa-car-crash' flat %}小心开车 安全至上{% endnote %}
-
-    {% note red 'fas fa-fan' flat%}这是三片呢？还是四片？{% endnote %}
-
-    {% note orange 'fas fa-battery-half' flat %}你是刷 Visa 还是 UnionPay{% endnote %}
-
-    {% note purple 'far fa-hand-scissors' flat %}剪刀石头布{% endnote %}
-
-    {% note green 'fab fa-internet-explorer' flat %}前端最讨厌的浏览器{% endnote %}
-
-4. disabled样式
-
-    {% note 'fab fa-cc-visa' disabled %}你是刷 Visa 还是 UnionPay{% endnote %}
-
-    {% note blue 'fas fa-bullhorn' disabled %}2021年快到了....{% endnote %}
-
-    {% note pink 'fas fa-car-crash' disabled %}小心开车 安全至上{% endnote %}
-
-    {% note red 'fas fa-fan' disabled %}这是三片呢？还是四片？{% endnote %}
-
-    {% note orange 'fas fa-battery-half' disabled %}你是刷 Visa 还是 UnionPay{% endnote %}
-
-    {% note purple 'far fa-hand-scissors' disabled %}剪刀石头布{% endnote %}
-
-    {% note green 'fab fa-internet-explorer' disabled %}前端最讨厌的浏览器{% endnote %}
-
-5. no-icon样式
-
-    {% note no-icon %}你是刷 Visa 还是 UnionPay{% endnote %}
-
-    {% note blue no-icon %}2021年快到了....{% endnote %}
-
-    {% note pink no-icon %}小心开车 安全至上{% endnote %}
-
-    {% note red no-icon %}这是三片呢？还是四片？{% endnote %}
-
-    {% note orange no-icon %}你是刷 Visa 还是 UnionPay{% endnote %}
-
-    {% note purple no-icon %}剪刀石头布{% endnote %}
-
-    {% note green no-icon %}前端最讨厌的浏览器{% endnote %}
-
-{% endfolding %}
-
-<!-- endtab -->
-<!-- tab 示例源码 -->
-{% folding cyan , 方法一 %}
-
+方法一
 
 1. `simple`样式
 
     ```markdown
     {% note simple %}默认 提示块标签{% endnote %}
-
+    
     {% note default simple %}default 提示块标签{% endnote %}
-
+    
     {% note primary simple %}primary 提示块标签{% endnote %}
-
+    
     {% note success simple %}success 提示块标签{% endnote %}
-
+    
     {% note info simple %}info 提示块标签{% endnote %}
-
+    
     {% note warning simple %}warning 提示块标签{% endnote %}
-
+    
     {% note danger simple %}danger 提示块标签{% endnote %}
     ```
 
@@ -368,17 +204,17 @@ Any content (support inline tags too.io).
 
     ```markdown
     {% note modern %}默认 提示块标签{% endnote %}
-
+    
     {% note default modern %}default 提示块标签{% endnote %}
-
+    
     {% note primary modern %}primary 提示块标签{% endnote %}
-
+    
     {% note success modern %}success 提示块标签{% endnote %}
-
+    
     {% note info modern %}info 提示块标签{% endnote %}
-
+    
     {% note warning modern %}warning 提示块标签{% endnote %}
-
+    
     {% note danger modern %}danger 提示块标签{% endnote %}
     ```
 
@@ -386,17 +222,17 @@ Any content (support inline tags too.io).
 
     ```markdown
     {% note flat %}默认 提示块标签{% endnote %}
-
+    
     {% note default flat %}default 提示块标签{% endnote %}
-
+    
     {% note primary flat %}primary 提示块标签{% endnote %}
-
+    
     {% note success flat %}success 提示块标签{% endnote %}
-
+    
     {% note info flat %}info 提示块标签{% endnote %}
-
+    
     {% note warning flat %}warning 提示块标签{% endnote %}
-
+    
     {% note danger flat %}danger 提示块标签{% endnote %}
     ```
 
@@ -404,17 +240,17 @@ Any content (support inline tags too.io).
 
     ```markdown
     {% note disabled %}默认 提示块标签{% endnote %}
-
+    
     {% note default disabled %}default 提示块标签{% endnote %}
-
+    
     {% note primary disabled %}primary 提示块标签{% endnote %}
-
+    
     {% note success disabled %}success 提示块标签{% endnote %}
-
+    
     {% note info disabled %}info 提示块标签{% endnote %}
-
+    
     {% note warning disabled %}warning 提示块标签{% endnote %}
-
+    
     {% note danger disabled %}danger 提示块标签{% endnote %}
     ```
 
@@ -422,38 +258,37 @@ Any content (support inline tags too.io).
 
     ```markdown
     {% note no-icon %}默认 提示块标签{% endnote %}
-
+    
     {% note default no-icon %}default 提示块标签{% endnote %}
-
+    
     {% note primary no-icon %}primary 提示块标签{% endnote %}
-
+    
     {% note success no-icon %}success 提示块标签{% endnote %}
-
+    
     {% note info no-icon %}info 提示块标签{% endnote %}
-
+    
     {% note warning no-icon %}warning 提示块标签{% endnote %}
-
+    
     {% note danger no-icon %}danger 提示块标签{% endnote %}
     ```
 
-{% endfolding %}
-{% folding blue , 方法二 %}
+方法二
 
 1. `simple`样式
 
     ```markdown
     {% note 'fab fa-cc-visa' simple %}你是刷 Visa 还是 UnionPay{% endnote %}
-
+    
     {% note blue 'fas fa-bullhorn' simple %}2021年快到了....{% endnote %}
-
+    
     {% note pink 'fas fa-car-crash' simple %}小心开车 安全至上{% endnote %}
-
+    
     {% note red 'fas fa-fan' simple%}这是三片呢？还是四片？{% endnote %}
-
+    
     {% note orange 'fas fa-battery-half' simple %}你是刷 Visa 还是 UnionPay{% endnote %}
-
+    
     {% note purple 'far fa-hand-scissors' simple %}剪刀石头布{% endnote %}
-
+    
     {% note green 'fab fa-internet-explorer' simple %}前端最讨厌的浏览器{% endnote %}
     ```
 
@@ -461,17 +296,17 @@ Any content (support inline tags too.io).
 
     ```markdown
     {% note 'fab fa-cc-visa' modern %}你是刷 Visa 还是 UnionPay{% endnote %}
-
+    
     {% note blue 'fas fa-bullhorn' modern %}2021年快到了....{% endnote %}
-
+    
     {% note pink 'fas fa-car-crash' modern %}小心开车 安全至上{% endnote %}
-
+    
     {% note red 'fas fa-fan' modern%}这是三片呢？还是四片？{% endnote %}
-
+    
     {% note orange 'fas fa-battery-half' modern %}你是刷 Visa 还是 UnionPay{% endnote %}
-
+    
     {% note purple 'far fa-hand-scissors' modern %}剪刀石头布{% endnote %}
-
+    
     {% note green 'fab fa-internet-explorer' modern %}前端最讨厌的浏览器{% endnote %}
     ```
 
@@ -479,17 +314,17 @@ Any content (support inline tags too.io).
 
     ```markdown
     {% note 'fab fa-cc-visa' flat %}你是刷 Visa 还是 UnionPay{% endnote %}
-
+    
     {% note blue 'fas fa-bullhorn' flat %}2021年快到了....{% endnote %}
-
+    
     {% note pink 'fas fa-car-crash' flat %}小心开车 安全至上{% endnote %}
-
+    
     {% note red 'fas fa-fan' flat%}这是三片呢？还是四片？{% endnote %}
-
+    
     {% note orange 'fas fa-battery-half' flat %}你是刷 Visa 还是 UnionPay{% endnote %}
-
+    
     {% note purple 'far fa-hand-scissors' flat %}剪刀石头布{% endnote %}
-
+    
     {% note green 'fab fa-internet-explorer' flat %}前端最讨厌的浏览器{% endnote %}
     ```
 
@@ -497,17 +332,17 @@ Any content (support inline tags too.io).
 
     ```markdown
     {% note 'fab fa-cc-visa' disabled %}你是刷 Visa 还是 UnionPay{% endnote %}
-
+    
     {% note blue 'fas fa-bullhorn' disabled %}2021年快到了....{% endnote %}
-
+    
     {% note pink 'fas fa-car-crash' disabled %}小心开车 安全至上{% endnote %}
-
+    
     {% note red 'fas fa-fan' disabled %}这是三片呢？还是四片？{% endnote %}
-
+    
     {% note orange 'fas fa-battery-half' disabled %}你是刷 Visa 还是 UnionPay{% endnote %}
-
+    
     {% note purple 'far fa-hand-scissors' disabled %}剪刀石头布{% endnote %}
-
+    
     {% note green 'fab fa-internet-explorer' disabled %}前端最讨厌的浏览器{% endnote %}
     ```
 
@@ -515,24 +350,19 @@ Any content (support inline tags too.io).
 
     ```markdown
     {% note no-icon %}你是刷 Visa 还是 UnionPay{% endnote %}
-
+    
     {% note blue no-icon %}2021年快到了....{% endnote %}
-
+    
     {% note pink no-icon %}小心开车 安全至上{% endnote %}
-
+    
     {% note red no-icon %}这是三片呢？还是四片？{% endnote %}
-
+    
     {% note orange no-icon %}你是刷 Visa 还是 UnionPay{% endnote %}
-
+    
     {% note purple no-icon %}剪刀石头布{% endnote %}
-
+    
     {% note green no-icon %}前端最讨厌的浏览器{% endnote %}
     ```
-
-{% endfolding %}
-
-<!-- endtab -->
-{% endtabs %}
 
 ## 上标标签 tip
 
@@ -540,31 +370,12 @@ Any content (support inline tags too.io).
 主要样式参考自[小康的butterfly渐变背景标签](https://www.antmoe.com/posts/3b43914f/),自己写了个`tip.js`来渲染标签，精简了一下代码。
 {% endtip %}
 
-{% tabs tip,3 %}
-<!-- tab 标签语法 -->
 ```markdown
 {% tip [参数，可选] %}文本内容{% endtip %}
 ```
-<!-- endtab -->
-<!-- tab 配置参数 -->
 1. 样式: success,error,warning,bolt,ban,home,sync,cogs,key,bell
 2. 自定义图标: 支持fontawesome。
-<!-- endtab -->
-<!-- tab 样式预览 -->
-{% tip %}默认情况{% endtip %}
-{% tip success %}success{% endtip %}
-{% tip error %}error{% endtip %}
-{% tip warning %}warning{% endtip %}
-{% tip bolt %}bolt{% endtip %}
-{% tip ban %}ban{% endtip %}
-{% tip home %}home{% endtip %}
-{% tip sync %}sync{% endtip %}
-{% tip cogs %}cogs{% endtip %}
-{% tip key %}key{% endtip %}
-{% tip bell %}bell{% endtip %}
-{% tip fa-atom %}自定义font awesome图标{% endtip %}
-<!-- endtab -->
-<!-- tab 示例源码 -->
+
 ```markdown
 {% tip %}默认情况{% endtip %}
 {% tip success %}success{% endtip %}
@@ -579,35 +390,22 @@ Any content (support inline tags too.io).
 {% tip bell %}bell{% endtip %}
 {% tip fa-atom %}自定义font awesome图标{% endtip %}
 ```
-<!-- endtab -->
-{% endtabs%}
 
 ## 动态标签 anima
-{% tip faa-horizontal animated %}
-动态标签的实质是引用了[font-awesome-animation](https://github.com/l-lin/font-awesome-animation)的css样式，不一定局限于tip标签，也可以是其他标签。
-只不过这里`tip.js`是糖果屋自己写的，所以店长清楚它会怎么被渲染成html，才用的这个写法。
-可以熟读文档，使用html语言来编写其他标签类型。{% endtip %}
 
-{% tabs tip,3 %}
-
-<!-- tab 标签语法 -->
 ```markdown
 {% tip [参数，可选] %}文本内容{% endtip %}
 ```
-<!-- endtab -->
-<!-- tab 配置参数 -->
 
-
-{% note blue 'fas fa-bullhorn' simple %}
 更多详情请参看[font-awesome-animation文档](http://l-lin.github.io/font-awesome-animation/)
 1. 将所需的CSS类添加到图标（或DOM中的任何元素）。
 2. 对于父级悬停样式，需要给目标元素添加指定CSS类，同时还要给目标元素的父级元素添加CSS类`faa-parent animated-hover`。（详情见示例及示例源码）
 You can regulate the speed of the animation by adding the CSS class or . faa-fastfaa-slow
 3. 可以通过给目标元素添加CSS类`faa-fast`或`faa-slow`来控制动画快慢。
-{% endnote %}
+
 
 |On DOM load<br>当页面加载时<br>显示动画|On hover<br>当鼠标悬停时<br>显示动画|On parent hover<br>当鼠标悬停<br>在父级元素时<br>显示动画|
-|:-----|:-----|:-----|
+|:----:|:----:|:----:|
 |<span><i class="fas fa-wrench faa-wrench animated"></i>&nbsp;faa-wrench animated</span>|<span><i class="fas fa-wrench faa-wrench animated-hover"></i>&nbsp;faa-wrench animated-hover</span>|<span class="faa-parent animated-hover"><i class="fas fa-wrench faa-wrench"></i>&nbsp;faa-wrench</span>|
 |<span><i class="fas fa-bell faa-ring animated"></i>&nbsp;faa-ring animated</span>|<span><i class="fas fa-bell faa-ring animated-hover"></i>&nbsp;faa-ring animated-hover</span>|<span class="faa-parent animated-hover"><i class="fas fa-bell faa-ring"></i>&nbsp;faa-ring</span>|
 |<span><i class="fas fa-envelope faa-horizontal animated"></i>&nbsp;faa-horizontal animated</span>|<span><i class="fas fa-envelope faa-horizontal animated-hover"></i>&nbsp;faa-horizontal animated-hover</span>|<span class="faa-parent animated-hover"><i class="fas fa-envelope faa-horizontal"></i>&nbsp;faa-horizontal</span>|
@@ -625,30 +423,6 @@ You can regulate the speed of the animation by adding the CSS class or . faa-fas
 |<span><i class="fas fa-star faa-falling animated"></i>&nbsp;faa-falling animated</span>|<span><i class="fas fa-star faa-falling animated-hover"></i>&nbsp;faa-falling animated-hover</span>|<span class="faa-parent animated-hover"><i class="fas fa-star faa-falling"></i>&nbsp;faa-falling</span>|
 |<span><i class="fas fa-rocket faa-rising animated"></i>&nbsp;faa-rising animated</span>|<span><i class="fas fa-rocket faa-rising animated-hover"></i>&nbsp;faa-rising animated-hover</span>|<span class="faa-parent animated-hover"><i class="fas fa-rocket faa-rising"></i>&nbsp;faa-rising</span>|
 
-<!-- endtab -->
-<!-- tab 样式预览 -->
-1. On DOM load（当页面加载时显示动画）
-
-    {% tip warning faa-horizontal animated %}warning{% endtip %}
-    {% tip ban faa-flash animated %}ban{% endtip %}
-
-2. 调整动画速度。
-
-    {% tip warning faa-horizontal animated faa-fast %}warning{% endtip %}
-    {% tip ban faa-flash animated faa-slow %}ban{% endtip %}
-
-3. On hover（当鼠标悬停时显示动画）
-
-    {% tip warning faa-horizontal animated-hover %}warning{% endtip %}
-    {% tip ban faa-flash animated-hover %}ban{% endtip %}
-
-4. On parent hover（当鼠标悬停在父级元素时显示动画）
-
-    {% tip warning faa-parent animated-hover %}<p class="faa-horizontal">warning</p>{% endtip %}
-    {% tip ban faa-parent animated-hover %}<p class="faa-flash">ban</p>{% endtip %}
-
-<!-- endtab -->
-<!-- tab 示例源码 -->
 1. On DOM load（当页面加载时显示动画）
 
     ```markdown
@@ -677,72 +451,15 @@ You can regulate the speed of the animation by adding the CSS class or . faa-fas
     {% tip ban faa-parent animated-hover %}<p class="faa-flash">ban</p>{% endtip %}
     ```
 
-<!-- endtab -->
-{% endtabs%}
-
-## 复选列表 checkbox
-{% tabs checkbox,3 %}
-<!-- tab 标签语法 -->
-```markdown
-{% checkbox 样式参数（可选）, 文本（支持简单md） %}
-```
-<!-- endtab -->
-<!-- tab 配置参数 -->
-1. 样式: plus, minus, times
-2. 颜色: {% span red, red %},{% span yellow, yellow %},{% span green, green %},{% span cyan, cyan %},{% span blue, blue %},{% span gray, gray %}
-3. 选中状态: checked
-<!-- endtab -->
-<!-- tab 样式预览 -->
-{% checkbox 纯文本测试 %}
-{% checkbox checked, 支持简单的 [markdown](https://guides.github.com/features/mastering-markdown/) 语法 %}
-{% checkbox red, 支持自定义颜色 %}
-{% checkbox green checked, 绿色 + 默认选中 %}
-{% checkbox yellow checked, 黄色 + 默认选中 %}
-{% checkbox cyan checked, 青色 + 默认选中 %}
-{% checkbox blue checked, 蓝色 + 默认选中 %}
-{% checkbox plus green checked, 增加 %}
-{% checkbox minus yellow checked, 减少 %}
-{% checkbox times red checked, 叉 %}
-<!-- endtab -->
-<!-- tab 示例源码 -->
-```markdown
-{% checkbox 纯文本测试 %}
-{% checkbox checked, 支持简单的 [markdown](https://guides.github.com/features/mastering-markdown/) 语法 %}
-{% checkbox red, 支持自定义颜色 %}
-{% checkbox green checked, 绿色 + 默认选中 %}
-{% checkbox yellow checked, 黄色 + 默认选中 %}
-{% checkbox cyan checked, 青色 + 默认选中 %}
-{% checkbox blue checked, 蓝色 + 默认选中 %}
-{% checkbox plus green checked, 增加 %}
-{% checkbox minus yellow checked, 减少 %}
-{% checkbox times red checked, 叉 %}
-```
-<!-- endtab -->
-{% endtabs%}
-
-
 ## 单选列表 radio
-{% tabs radio,3 %}
-<!-- tab 标签语法 -->
+
 ```markdown
 {% radio 样式参数（可选）, 文本（支持简单md） %}
 ```
-<!-- endtab -->
-<!-- tab 配置参数 -->
 
 1. 颜色: {% span red, red %},{% span yellow, yellow %},{% span green, green %},{% span cyan, cyan %},{% span blue, blue %},{% span gray, gray %}
 2. 选中状态: checked
-<!-- endtab -->
-<!-- tab 样式预览 -->
-{% radio 纯文本测试 %}
-{% radio checked, 支持简单的 [markdown](https://guides.github.com/features/mastering-markdown/) 语法 %}
-{% radio red, 支持自定义颜色 %}
-{% radio green, 绿色 %}
-{% radio yellow, 黄色 %}
-{% radio cyan, 青色 %}
-{% radio blue, 蓝色 %}
-<!-- endtab -->
-<!-- tab 示例源码 -->
+
 ```markdown
 {% radio 纯文本测试 %}
 {% radio checked, 支持简单的 [markdown](https://guides.github.com/features/mastering-markdown/) 语法 %}
@@ -752,13 +469,32 @@ You can regulate the speed of the animation by adding the CSS class or . faa-fas
 {% radio cyan, 青色 %}
 {% radio blue, 蓝色 %}
 ```
-<!-- endtab -->
-{% endtabs%}
 
+## 复选列表 checkbox
+
+```markdown
+{% checkbox 样式参数（可选）, 文本（支持简单md） %}
+```
+
+1. 样式: plus, minus, times
+2. 颜色: {% span red, red %},{% span yellow, yellow %},{% span green, green %},{% span cyan, cyan %},{% span blue, blue %},{% span gray, gray %}
+3. 选中状态: checked
+
+```markdown
+{% checkbox 纯文本测试 %}
+{% checkbox checked, 支持简单的 [markdown](https://guides.github.com/features/mastering-markdown/) 语法 %}
+{% checkbox red, 支持自定义颜色 %}
+{% checkbox green checked, 绿色 + 默认选中 %}
+{% checkbox yellow checked, 黄色 + 默认选中 %}
+{% checkbox cyan checked, 青色 + 默认选中 %}
+{% checkbox blue checked, 蓝色 + 默认选中 %}
+{% checkbox plus green checked, 增加 %}
+{% checkbox minus yellow checked, 减少 %}
+{% checkbox times red checked, 叉 %}
+```
 
 ## 时间轴 timeline
-{% tabs timeline,2 %}
-<!-- tab 标签语法 -->
+
 ```markdown
 {% timeline 时间线标题（可选） %}
 {% timenode 时间节点（标题） %}
@@ -769,400 +505,12 @@ You can regulate the speed of the animation by adding the CSS class or . faa-fas
 {% endtimenode %}
 {% endtimeline %}
 ```
-<!-- endtab -->
-
-<!-- tab 样式预览 -->
-{% timeline %}
-
-{% timenode 2021-02-21 **镜像站点+1** %}
-
-镜像站点增加 **[CloudFlare](https://ccknbc.pages.dev)** 的支持
-
-{% endtimenode %}
-
-{% timenode 2021-01-22 **小小的更新** %}
-
-1. 评论系统增加`Twikoo`，为双评论模式，但都配有人工审核（继续打脸）
-2. 友链去除了`Jquery`[@卓越科技](https://blog.zykjofficial.top)
-3. 增加编辑按钮，并根据文章和页面进行自适应平台标题显示
-
-{% endtimenode %}
-
-{% timenode 2021-01-05 **评论系统的更新** %}
-
-1. 评论系统换为`Waline`（测试卡打脸）
-2. 一些小改动
-
-{% endtimenode %}
-
-{% timenode 2020-12-28 **关于自我认知的更新** %}
-
-1. 谷歌字体换为官方源
-2. 重新启用谷歌分析（慢还是要在乎海外表现啊）
-3. 评论系统换为需要登陆的`DIsqusJS`和`LiveRe`，并在文章底部引导至`语雀`评论区
-4. 博客原文全部托管在`语雀`，开始用心经营`语雀`，并且不要脸的申请了{% span blue, 原创声明 %}
-5. 自动部署触发感谢`Gitlab`和`百度云函数`
-
-    立个{% span green, Flag %}：不再折腾评论系统 
-    {% span red, 因本人太菜，加上现在人其实不怎么会评论了，关于垃圾评论，登录至少劝退一波 %}{% emp （确认无误）%} 
-
-{% endtimenode %}
-
-{% timenode 2020-12-15 **出于博客体验的更新** %}
-
-1. 引入了谷歌字体，由 `DogeDoge` 提供 `CDN` 加速
-
-2. 增加了[站点地图](/sitemap)单页面
-3. 去除了无用`js`引入
-4. 封面换为静态图
-5. `SEO`优化，站点访问速度优化
-6. 搜索换为 `Algolia`
-7. 其他更新，继续优化中......
-
-{% endtimenode %}
-
-{% timenode 2020-11-26 **~~出于花里胡哨的回滚~~** %}
-
-1. ~~关闭了`Tidio`在线聊天（因此`邮件订阅`文章更新方式-1，无所谓，也不会有人订阅）~~
-
-2. ~~关闭了浏览器订阅文章更新通知（我也没什么`公告`，临时公告采用`snackbar`读取js的方式）~~
-
-3. ~~关闭了`百度统计`，`不蒜子统计`~~
-
-4. ~~关闭了`阅读`模式，`简繁`转换按钮~~
-
-5. ~~限制了`境外IP`访问某些页面~~
-
-6. ~~主`评论`系统换为 **[Twikoo](https://twikoo.js.org/)**~~
-
-7. ~~全站`默哀`日当天加入7秒`弹窗`提示（单纯喜欢7，可手动关闭）~~
-
-8. ~~其他小更改，后续可能会关闭`封面`和`顶部图`~~
-
-{% note success %} ***简而言之，因为本来就没人访问，体验不重要了*** {% endnote %}
-
-{% endtimenode %}
-
-{% timenode 2020-11-23 **出于博客体验的更新** %}
-
-👆看上面
-
-{% endtimenode %}
-
-{% timenode 2020-10-15 **订阅方式更新** %}
-
-{% note success %} 新增了邮件订阅，恢复了浏览器订阅 {% endnote %}
-
-{% endtimenode %}
-
-{% timenode 2020-10-07 **修复问题** %}
-
-{% note warning %} 因使用`Github Actions`配合`gulp`、`imagemin`定时自动压缩优化图片，导致文件名重写，批量修改文章图片链接以修复图片加载失败，现已正常显示 {% endnote %}
-
-{% endtimenode %}
-
-{% timenode 2020-10-02 **小幅修改** %}
-
-`Github Actions`触发方式修改，并借助`Actions`配置定时百度推送以优化`SEO`，补齐封面
-
-{% endtimenode %}
-
-{% timenode 2020-10-01 **突发状况** %}
-
-{% note warning %} 因`不蒜子`证书到期原因，https协议无法访问，统计功能受限，恢复时间未知 {% endnote %}
-
-{% endtimenode %}
-
-{% timenode 2020-09-14 **评论系统更换** %}
-
-1. 停用`Valine`评论系统，换用`Disqusjs`评论系统，保留`Beaudar`评论系统
-
-2. 加入在线聊天系统（由`Tidio`提供支持）
-
-{% endtimenode %}
-
-{% timenode 2020-08-18 **完成自动部署** %}
-
-{% note success %} 完成`Github Actions`以及`Gitlab CI`自动动部署，并配有自动更新`Gitee`部署 {% endnote %}
-
-{% note warning %} 因仓库以及博客采用匹配次级目录索引方式，`Coding`、`Netlify`、`Vercel` 无法正常索引和获取样式，已取消托管服务 {% endnote %}
-
-{% endtimenode %}
-
-{% timenode 2020-06-04 **[本站诞生](https://blog.ccknbc.cc/)** %}
-
-{% note success %} **[本站诞生](https://blog.ccknbc.cc)** {% endnote %}
-
-{% endtimenode %}
-
-{% endtimeline %}
-<!-- endtab -->
-<!-- tab 示例源码 -->
-```markdown
-{% timeline %}
-
-{% timenode 2021-02-21 **镜像站点+1** %}
-
-镜像站点增加 **[CloudFlare](https://ccknbc.pages.dev)** 的支持
-
-{% endtimenode %}
-
-{% timenode 2021-01-22 **小小的更新** %}
-
-1. 评论系统增加`Twikoo`，为双评论模式，但都配有人工审核（继续打脸）
-2. 友链去除了`Jquery`[@卓越科技](https://blog.zykjofficial.top)
-3. 增加编辑按钮，并根据文章和页面进行自适应平台标题显示
-
-{% endtimenode %}
-
-{% timenode 2021-01-05 **评论系统的更新** %}
-
-1. 评论系统换为`Waline`（测试卡打脸）
-2. 一些小改动
-
-{% endtimenode %}
-
-{% timenode 2020-12-28 **关于自我认知的更新** %}
-
-1. 谷歌字体换为官方源
-2. 重新启用谷歌分析（慢还是要在乎海外表现啊）
-3. 评论系统换为需要登陆的`DIsqusJS`和`LiveRe`，并在文章底部引导至`语雀`评论区
-4. 博客原文全部托管在`语雀`，开始用心经营`语雀`，并且不要脸的申请了{% span blue, 原创声明 %}
-5. 自动部署触发感谢`Gitlab`和`百度云函数`
-
-    立个{% span green, Flag %}：不再折腾评论系统 
-    {% span red, 因本人太菜，加上现在人其实不怎么会评论了，关于垃圾评论，登录至少劝退一波 %}{% emp （确认无误）%} 
-
-{% endtimenode %}
-
-{% timenode 2020-12-15 **出于博客体验的更新** %}
-
-1. 引入了谷歌字体，由 `DogeDoge` 提供 `CDN` 加速
-
-2. 增加了[站点地图](/sitemap)单页面
-3. 去除了无用`js`引入
-4. 封面换为静态图
-5. `SEO`优化，站点访问速度优化
-6. 搜索换为 `Algolia`
-7. 其他更新，继续优化中......
-
-{% endtimenode %}
-
-{% timenode 2020-11-26 **~~出于花里胡哨的回滚~~** %}
-
-1. ~~关闭了`Tidio`在线聊天（因此`邮件订阅`文章更新方式-1，无所谓，也不会有人订阅）~~
-
-2. ~~关闭了浏览器订阅文章更新通知（我也没什么`公告`，临时公告采用`snackbar`读取js的方式）~~
-
-3. ~~关闭了`百度统计`，`不蒜子统计`~~
-
-4. ~~关闭了`阅读`模式，`简繁`转换按钮~~
-
-5. ~~限制了`境外IP`访问某些页面~~
-
-6. ~~主`评论`系统换为 **[Twikoo](https://twikoo.js.org/)**~~
-
-7. ~~全站`默哀`日当天加入7秒`弹窗`提示（单纯喜欢7，可手动关闭）~~
-
-8. ~~其他小更改，后续可能会关闭`封面`和`顶部图`~~
-
-{% note success %} ***简而言之，因为本来就没人访问，体验不重要了*** {% endnote %}
-
-{% endtimenode %}
-
-{% timenode 2020-11-23 **出于博客体验的更新** %}
-
-👆看上面
-
-{% endtimenode %}
-
-{% timenode 2020-10-15 **订阅方式更新** %}
-
-{% note success %} 新增了邮件订阅，恢复了浏览器订阅 {% endnote %}
-
-{% endtimenode %}
-
-{% timenode 2020-10-07 **修复问题** %}
-
-{% note warning %} 因使用`Github Actions`配合`gulp`、`imagemin`定时自动压缩优化图片，导致文件名重写，批量修改文章图片链接以修复图片加载失败，现已正常显示 {% endnote %}
-
-{% endtimenode %}
-
-{% timenode 2020-10-02 **小幅修改** %}
-
-`Github Actions`触发方式修改，并借助`Actions`配置定时百度推送以优化`SEO`，补齐封面
-
-{% endtimenode %}
-
-{% timenode 2020-10-01 **突发状况** %}
-
-{% note warning %} 因`不蒜子`证书到期原因，https协议无法访问，统计功能受限，恢复时间未知 {% endnote %}
-
-{% endtimenode %}
-
-{% timenode 2020-09-14 **评论系统更换** %}
-
-1. 停用`Valine`评论系统，换用`Disqusjs`评论系统，保留`Beaudar`评论系统
-
-2. 加入在线聊天系统（由`Tidio`提供支持）
-
-{% endtimenode %}
-
-{% timenode 2020-08-18 **完成自动部署** %}
-
-{% note success %} 完成`Github Actions`以及`Gitlab CI`自动动部署，并配有自动更新`Gitee`部署 {% endnote %}
-
-{% note warning %} 因仓库以及博客采用匹配次级目录索引方式，`Coding`、`Netlify`、`Vercel` 无法正常索引和获取样式，已取消托管服务 {% endnote %}
-
-{% endtimenode %}
-
-{% timenode 2020-06-04 **[本站诞生](https://blog.ccknbc.cc/)** %}
-
-{% note success %} **[本站诞生](https://blog.ccknbc.cc)** {% endnote %}
-
-{% endtimenode %}
-
-{% endtimeline %}
-```
-<!-- endtab -->
-{% endtabs%}
 
 ## 链接卡片 link
 
-{% tabs link,2 %}
-<!-- tab 标签语法 -->
 ```markdown
 {% link 标题, 链接, 图片链接（可选） %}
 ```
-<!-- endtab -->
-
-<!-- tab 样式预览 -->
-{% link 外挂标签, , https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}{% link 外挂标签, /posts/introduction-of-plugin-tags-based-on-butterfly/, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}{% link 外挂标签, https://blog.ccknbc.cc/posts/introduction-of-plugin-tags-based-on-butterfly/, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-<!-- endtab -->
-<!-- tab 示例源码 -->
-```markdown
-{% link 外挂标签, , https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-
-{% link 外挂标签, /posts/introduction-of-plugin-tags-based-on-butterfly/, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-
-{% link 外挂标签, https://blog.ccknbc.cc/posts/introduction-of-plugin-tags-based-on-butterfly/, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-```
-<!-- endtab -->
-{% endtabs%}
-
-## 按钮 btns
-{% note blue 'fas fa-bullhorn' simple %}
-`Volantis`的按钮使用的是`btn`和`btns`标签。`btns`和`butterfly`的`button`不冲突，但是`btn`会被强制渲染，导致部分参数失效,而且`btn`的效果还是`butterfly`的`button`更好看些。所以就只适配了`btns`。
-{% endnote %}
-{% tabs btn,3 %}
-<!-- tab 标签语法 -->
-
-```markdown
-{% btns 样式参数 %}
-{% cell 标题, 链接, 图片或者图标 %}
-{% cell 标题, 链接, 图片或者图标 %}
-{% endbtns %}
-```
-
-<!-- endtab -->
-<!-- tab 参数配置 -->
-
-1. 圆角样式：rounded, circle
-2. 增加文字样式：可以在容器内增加 `<b>标题</b> `和` <p>描述文字</p>`
-3. 布局方式：
-    默认为自动宽度，适合视野内只有一两个的情况。
-
-|参数|含义|
-|:--|:----|
-|wide|宽一点的按钮|
-|fill|填充布局，自动铺满至少一行，多了会换行|
-|center|居中，按钮之间是固定间距|
-|around|居中分散|
-|grid2|等宽最多2列，屏幕变窄会适当减少列数|
-|grid3|等宽最多3列，屏幕变窄会适当减少列数|
-|grid4|等宽最多4列，屏幕变窄会适当减少列数|
-|grid5|等宽最多5列，屏幕变窄会适当减少列数|
-
-
-
-<!-- endtab -->
-<!-- tab 样式预览 -->
-
-1. 如果需要显示类似「团队成员」之类的一组含有头像的链接：
-
-    {% btns circle grid5 %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-    {% endbtns %}
-
-2. 或者含有图标的按钮：
-
-    {% btns rounded grid5 %}
-    {% cell 下载源码, /, fas fa-download %}
-    {% cell 查看文档, /, fas fa-book-open %}
-    {% endbtns %}
-
-3. 圆形图标 + 标题 + 描述 + 图片 + 网格5列 + 居中
-
-    {% btns circle center grid5 %}
-    <a href='https://apps.apple.com/cn/app/heart-mate-pro-hrm-utility/id1463348922?ls=1'>
-      <i class='fab fa-apple'></i>
-      <b>心率管家</b>
-      {% p red, 专业版 %}
-      <img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/qrcode/heartmate_pro.png'>
-    </a>
-    <a href='https://apps.apple.com/cn/app/heart-mate-lite-hrm-utility/id1475747930?ls=1'>
-      <i class='fab fa-apple'></i>
-      <b>心率管家</b>
-      {% p green, 免费版 %}
-      <img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/qrcode/heartmate_lite.png'>
-    </a>
-    {% endbtns %}
-
-<!-- endtab -->
-<!-- tab 示例源码 -->
-
-1. 如果需要显示类似「团队成员」之类的一组含有头像的链接：
-    ```markdown
-    {% btns circle grid5 %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-    {% cell ccknbc, https://blog.ccknbc.cc, https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png %}
-    {% endbtns %}
-    ```
-
-2. 或者含有图标的按钮：
-    ```markdown
-    {% btns rounded grid5 %}
-    {% cell 下载源码, /, fas fa-download %}
-    {% cell 查看文档, /, fas fa-book-open %}
-    {% endbtns %}
-    ```
-
-3. 圆形图标 + 标题 + 描述 + 图片 + 网格5列 + 居中
-    ```markdown
-    {% btns circle center grid5 %}
-    <a href='https://apps.apple.com/cn/app/heart-mate-pro-hrm-utility/id1463348922?ls=1'>
-      <i class='fab fa-apple'></i>
-      <b>心率管家</b>
-      {% p red, 专业版 %}
-      <img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/qrcode/heartmate_pro.png'>
-    </a>
-    <a href='https://apps.apple.com/cn/app/heart-mate-lite-hrm-utility/id1475747930?ls=1'>
-      <i class='fab fa-apple'></i>
-      <b>心率管家</b>
-      {% p green, 免费版 %}
-      <img src='https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/qrcode/heartmate_lite.png'>
-    </a>
-    {% endbtns %}
-    ```
-<!-- endtab -->
-{% endtabs%}
 
 ## github卡片 ghcard
 
@@ -1170,46 +518,24 @@ You can regulate the speed of the animation by adding the CSS class or . faa-fas
 ghcard使用了`github-readme-stats`的API，支持直接使用markdown语法来写。
 {% endnote %}
 
-{% tabs ghcard,3 %}
-<!-- tab 标签语法 -->
-
 ```markdown
 {% ghcard 用户名, 其它参数（可选） %}
 {% ghcard 用户名/仓库, 其它参数（可选） %}
 ```
-<!-- endtab -->
-<!-- tab 配置参数 -->
+
 更多参数可以参考：
 {% ghcard anuraghazra/github-readme-stats %}
 使用`,`分割各个参数。写法为：`参数名=参数值`
 以下只写几个常用参数值。
 
 |参数名|取值|释义|
-|:--|:----|:-------------|
+|:-:|:---:|:------------:|
 |hide|stars,commits,prs,issues,contribs|隐藏指定统计|
 |count_private|true|将私人项目贡献添加到总提交计数中|
 |show_icons|true|显示图标|
 |theme|请查阅[Available Themes](https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md)|主题|
 
-<!-- endtab -->
-<!-- tab 样式预览 -->
 
-1. 用户信息卡片
-  | {% ghcard ccknbc %} | {% ghcard ccknbc, theme=vue %} |
-  | -- | -- |
-  | {% ghcard ccknbc, theme=buefy %} | {% ghcard ccknbc, theme=solarized-light %} |
-  | {% ghcard ccknbc, theme=onedark %} | {% ghcard ccknbc, theme=solarized-dark %} |
-  | {% ghcard ccknbc, theme=algolia %} | {% ghcard ccknbc, theme=calm %} |
-
-2. 仓库信息卡片
-  | {% ghcard ccknbc-actions/blogroll %} | {% ghcard ccknbc-actions/blogroll, theme=vue %} |
-  | -- | -- |
-  | {% ghcard ccknbc-actions/blogroll, theme=buefy %} | {% ghcard ccknbc-actions/blogroll, theme=solarized-light %} |
-  | {% ghcard ccknbc-actions/blogroll, theme=onedark %} | {% ghcard ccknbc-actions/blogroll, theme=solarized-dark %} |
-  | {% ghcard ccknbc-actions/blogroll, theme=algolia %} | {% ghcard ccknbc-actions/blogroll, theme=calm %} |
-
-<!-- endtab -->
-<!-- tab 示例源码 -->
 1. 用户信息卡片
 
     ```markdown
@@ -1230,20 +556,15 @@ ghcard使用了`github-readme-stats`的API，支持直接使用markdown语法来
     | {% ghcard ccknbc-actions/blogroll, theme=algolia %} | {% ghcard ccknbc-actions/blogroll, theme=calm %} |
     ```
 
-<!-- endtab -->
-{% endtabs%}
-
 ## github徽标 ghbdage
 {% tip cogs %}
 关于ghbdage参数的更多具体用法可以参看糖果屋教程：[添加github徽标](https://akilar.top/posts/e87ad7f8)
 {% endtip %}
-{% tabs ghbdage,3 %}
-<!-- tab 标签语法 -->
+
 ```markdown
 {% bdage [right],[left],[logo]||[color],[link],[title]||[option] %}
 ```
-<!-- endtab -->
-<!-- tab 配置参数 -->
+
 1. `left`：徽标左边的信息，必选参数。
 2. `right`: 徽标右边的信息，必选参数，
 3. `logo`：徽标图标，图标名称详见[simpleicons](https://simpleicons.org/)，可选参数。
@@ -1251,25 +572,7 @@ ghcard使用了`github-readme-stats`的API，支持直接使用markdown语法来
 5. `link`：指向的链接，可选参数。
 6. `title`：徽标的额外信息，可选参数。主要用于优化SEO，但`object`标签不会像`a`标签一样在鼠标悬停显示`title`信息。
 7. `option`：自定义参数，支持[shields.io](https://shields.io/)的全部API参数支持，具体参数可以参看上文中的拓展写法示例。形式为`name1=value2&name2=value2`。
-<!-- endtab -->
-<!-- tab 样式预览 -->
-{% note info modern %}
-本外挂标签的参数分为三组，用`||`分割。
-{% endnote %}
-1. 基本参数
-  <br>
-  {% bdage Theme,Butterfly %}
-  {% bdage Frame,Hexo,hexo %}
-2. 信息参数
-  <br>
-  {% bdage CDN,JsDelivr,jsDelivr||abcdef,https://metroui.org.ua/index.html,本站使用JsDelivr为静态资源提供CDN加速 %}
-  {% bdage Source,GitHub,GitHub||,https://github.com/ %}
-3. 拓展参数
-  <br>
-  {% bdage Hosted,Vercel,Vercel||brightgreen,https://vercel.com/,本站采用双线部署，默认线路托管于Vercel||style=social&logoWidth=40 %}
-  {% bdage Hosted,Vercel,Vercel||||style=social&logoWidth=40&logoColor=violet %}
-<!-- endtab -->
-<!-- tab 示例源码 -->
+
 {% note info modern %}
 本外挂标签的参数分为三组，用`||`分割。
 {% endnote %}
@@ -1295,214 +598,48 @@ ghcard使用了`github-readme-stats`的API，支持直接使用markdown语法来
     {% bdage Hosted,Vercel,Vercel||brightgreen,https://vercel.com/,本站采用双线部署，默认线路托管于Vercel||style=social&logoWidth=20 %}
     //如果是跨顺序省略可选参数组，仍然需要写双竖线||用作分割
     {% bdage Hosted,Vercel,Vercel||||style=social&logoWidth=20&logoColor=violet %}
-  ```
-
-<!-- endtab -->
-{% endtabs%}
-
+    ```
 ## 网站卡片 sites
 
-{% tabs site,2 %}
-<!-- tab 标签语法 -->
-
 ```markdown
 {% sitegroup %}
 {% site 标题, url=链接, screenshot=截图链接, avatar=头像链接（可选）, description=描述（可选） %}
 {% site 标题, url=链接, screenshot=截图链接, avatar=头像链接（可选）, description=描述（可选） %}
 {% endsitegroup %}
 ```
-<!-- endtab -->
-
-<!-- tab 样式预览 -->
-
-{% sitegroup %}
-{% site xaoxuu, url=https://xaoxuu.com, screenshot=https://i.loli.net/2020/08/21/VuSwWZ1xAeUHEBC.jpg, avatar=https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png, description=简约风格 %}
-{% site inkss, url=https://inkss.cn, screenshot=https://i.loli.net/2020/08/21/Vzbu3i8fXs6Nh5Y.jpg, avatar=https://cdn.jsdelivr.net/gh/inkss/common@master/static/web/avatar.jpg, description=这是一段关于这个网站的描述文字 %}
-{% site MHuiG, url=https://blog.mhuig.top, screenshot=https://i.loli.net/2020/08/22/d24zpPlhLYWX6D1.png, avatar=https://cdn.jsdelivr.net/gh/MHuiG/imgbed@master/data/p.png, description=这是一段关于这个网站的描述文字 %}
-{% site Colsrch, url=https://colsrch.top, screenshot=https://i.loli.net/2020/08/22/dFRWXm52OVu8qfK.png, avatar=https://cdn.jsdelivr.net/gh/Colsrch/images/Colsrch/avatar.jpg, description=这是一段关于这个网站的描述文字 %}
-{% site Linhk1606, url=https://linhk1606.github.io, screenshot=https://i.loli.net/2020/08/21/3PmGLCKicnfow1x.png, avatar=https://i.loli.net/2020/02/09/PN7I5RJfFtA93r2.png, description=这是一段关于这个网站的描述文字 %}
-{% endsitegroup %}
-
-<!-- endtab -->
-<!-- tab 示例源码 -->
-
-```markdown
-{% sitegroup %}
-{% site xaoxuu, url=https://xaoxuu.com, screenshot=https://i.loli.net/2020/08/21/VuSwWZ1xAeUHEBC.jpg, avatar=https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png, description=简约风格 %}
-{% site inkss, url=https://inkss.cn, screenshot=https://i.loli.net/2020/08/21/Vzbu3i8fXs6Nh5Y.jpg, avatar=https://cdn.jsdelivr.net/gh/inkss/common@master/static/web/avatar.jpg, description=这是一段关于这个网站的描述文字 %}
-{% site MHuiG, url=https://blog.mhuig.top, screenshot=https://i.loli.net/2020/08/22/d24zpPlhLYWX6D1.png, avatar=https://cdn.jsdelivr.net/gh/MHuiG/imgbed@master/data/p.png, description=这是一段关于这个网站的描述文字 %}
-{% site Colsrch, url=https://colsrch.top, screenshot=https://i.loli.net/2020/08/22/dFRWXm52OVu8qfK.png, avatar=https://cdn.jsdelivr.net/gh/Colsrch/images/Colsrch/avatar.jpg, description=这是一段关于这个网站的描述文字 %}
-{% site Linhk1606, url=https://linhk1606.github.io, screenshot=https://i.loli.net/2020/08/21/3PmGLCKicnfow1x.png, avatar=https://i.loli.net/2020/02/09/PN7I5RJfFtA93r2.png, description=这是一段关于这个网站的描述文字 %}
-{% endsitegroup %}
-```
-
-<!-- endtab -->
-{% endtabs%}
 
 ## 行内图片 inlineimage
-
-
-{% tabs inlineimage,3 %}
-<!-- tab 标签语法 -->
-
 ```markdown
 {% inlineimage 图片链接, height=高度（可选） %}
 ```
-<!-- endtab -->
-<!-- tab 参数配置 -->
 
-1. 高度：height=20px
-
-<!-- endtab -->
-<!-- tab 样式预览 -->
-
-这是 {% inlineimage https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/aru-l/0000.gif %} 一段话。
-
-这又是 {% inlineimage https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/aru-l/5150.gif, height=40px %} 一段话。
-
-<!-- endtab -->
-<!-- tab 示例源码 -->
-
-```markdown
-这是 {% inlineimage https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/aru-l/0000.gif %} 一段话。
-
-这又是 {% inlineimage https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/aru-l/5150.gif, height=40px %} 一段话。
-```
-
-<!-- endtab -->
-{% endtabs%}
+高度：height=**px
 
 ## 单张图片 image
-{% tabs image,3 %}
-<!-- tab 标签语法 -->
 
 ```markdown
 {% image 链接, width=宽度（可选）, height=高度（可选）, alt=描述（可选）, bg=占位颜色（可选） %}
 ```
-<!-- endtab -->
-<!-- tab 参数配置 -->
+
 1. 图片宽度高度：width=300px, height=32px
 2. 图片描述：alt=图片描述（butterfly需要在主题配置文件中开启图片描述）
 3. 占位背景色：bg=#f2f2f2
-<!-- endtab -->
-<!-- tab 样式预览 -->
 
-1. 添加描述：
-
-    {% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, alt=每天下课回宿舍的路，没有什么故事。 %}
-
-2. 指定宽度：
-
-    {% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, width=400px %}
-
-3. 指定宽度并添加描述：
-
-    {% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, width=400px, alt=每天下课回宿舍的路，没有什么故事。 %}
-
-4. 设置占位背景色：
-
-    {% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, width=400px, bg=#1D0C04, alt=优化不同宽度浏览的观感 %}
-
-<!-- endtab -->
-<!-- tab 示例源码 -->
-
-1. 添加描述：
-
-    ```markdown
-    {% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, alt=每天下课回宿舍的路，没有什么故事。 %}
-    ```
-
-2. 指定宽度：
-
-    ```markdown
-    {% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, width=400px %}
-    ```
-
-3. 指定宽度并添加描述：
-
-    ```markdown
-    {% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, width=400px, alt=每天下课回宿舍的路，没有什么故事。 %}
-    ```
-
-4. 设置占位背景色：
-
-    ```markdown
-    {% image https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper-minimalist/2020/025.jpg, width=400px, bg=#1D0C04, alt=优化不同宽度浏览的观感 %}
-    ```
-
-<!-- endtab -->
-{% endtabs%}
 
 ## 音频 audio
-
-
-{% tabs audio,2 %}
-<!-- tab 标签语法 -->
 
 ```markdown
 {% audio 音频链接 %}
 ```
-<!-- endtab -->
-
-<!-- tab 样式预览 -->
-
-{% audio https://file.nmb.show/down.php/fc178ad5791961bf520fcfc7e4f0b450.flac %}
-
-<!-- endtab -->
-<!-- tab 示例源码 -->
-
-```markdown
-{% audio https://file.nmb.show/down.php/fc178ad5791961bf520fcfc7e4f0b450.flac %}
-```
-
-<!-- endtab -->
-{% endtabs%}
-
 
 ## 视频 video
-
-
-{% tabs video,3 %}
-<!-- tab 标签语法 -->
 
 ```markdown
 {% video 视频链接 %}
 ```
-<!-- endtab -->
-<!-- tab 参数配置 -->
+
 1. 对其方向：left, center, right
 2. 列数：逗号后面直接写列数，支持 1 ～ 4 列。
-<!-- endtab -->
-<!-- tab 样式预览 -->
-1. 100%宽度
-
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-
-2. 50%宽度
-
-    {% videos, 2 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% endvideos %}
-
-3. 25%宽度
-
-    {% videos, 4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% endvideos %}
-
-<!-- endtab -->
-<!-- tab 示例源码 -->
-
 
 1. 100%宽度
 
@@ -1514,10 +651,9 @@ ghcard使用了`github-readme-stats`的API，支持直接使用markdown语法来
 
     ```markdown
     {% videos, 2 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
+
+    ......
+
     {% endvideos %}
     ```
 
@@ -1525,30 +661,13 @@ ghcard使用了`github-readme-stats`的API，支持直接使用markdown语法来
 
     ```markdown
     {% videos, 4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
-    {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
+    
+    ......
+    
     {% endvideos %}
     ```
-
-<!-- endtab -->
-{% endtabs%}
 
 ## 相册 gallery
-{% note blue 'fas fa-bullhorn' disabled %}
-`Butterfly`自带`gallery`相册，而且会根据图片大小自动调整排版，效果比`Volantis`的`gallery`更好，故不再收录`Volantis`的`gallery`标签。
-{% endnote %}
-{% note %}
-以下为`Butterfly`自带的`gallery`标签写法。相册图库和相册配合使用。
-{% endnote %}
-
-{% tabs gallery,3 %}
-<!-- tab 标签语法 -->
 
 1. gallerygroup 相册图库
 
@@ -1572,7 +691,7 @@ ghcard使用了`github-readme-stats`的API，支持直接使用markdown语法来
 1. gallerygroup 相册图库
 
     |参数名|释义|
-    |:--|:--|
+    |:-:|:-:|
     |name|图库名字|
     |description|图库描述|
     |link|链接到对应相册的地址|
@@ -1586,208 +705,46 @@ ghcard使用了`github-readme-stats`的API，支持直接使用markdown语法来
 
     区别于旧版的Gallery相册,新的Gallery相册会自动根据图片长度进行排版，书写也更加方便，与markdown格式一样。可根据需要插入到相应的md。无需再自己配置长宽。**建议在粘贴时故意使用长短、大小、横竖不一的图片**，会有更好的效果。（尺寸完全相同的图片只会平铺输出，效果很糟糕）
 
-<!-- endtab -->
-<!-- tab 样式预览 -->
+## 隐藏折叠 tag-hide
+### hide-inline
 
-- gallerygroup 相册图库
+```markdown
+{% hideInline 描述,按钮颜色,字体颜色 %}
+{% hideInline 描述 %}
+```
 
-<div class="gallery-group-main">
-{% galleryGroup 'demo' '仅仅是一个测试' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_05_18.webp %}
+### hide-block
 
-{% galleryGroup '真世代' '让真情反映世代，让情感串联台湾' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_08_18.webp %}
+```markdown
+{% hideBlock 描述 %}
 
-{% galleryGroup '工具' '工具' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-25-11.webp %}
+......
 
-{% galleryGroup '学习' '学习' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-33-28.webp %}
+{% endhideBlock %}
+```
 
-{% galleryGroup '博客' '博客' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-12-14.webp %}
+### hide-toggle
 
-{% galleryGroup '音乐' '音乐' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-42-19.webp %}
+```markdown
+{% hideToggle 描述 %}
 
-{% galleryGroup '工作' '工作' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-39-40.webp %}
+......
 
-{% galleryGroup '台湾' '台湾' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-51-39.webp %}
-
-</div>
-
-- gallery 相册
-
-{% gallery %}
-
-![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_07_20.webp)
-
-![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_05_18.webp)
-
-![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-02.gif)
-
-![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_07_42.webp)
-
-![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-42-19.webp)
-
-{% endgallery %}
-
-<!-- endtab -->
-<!-- tab 示例源码 -->
-
-{% note info %}
-对于很多同学提问的`gallerygroup`和`gallery`相册页的链接问题。这里说下 Aki 个人的使用习惯。
-一般使用相册图库的话，可以在导航栏加一个gallery的page(**使用指令`hexo new page gallery`添加**)，里面放相册图库作为封面。然后在`[Blogroot]/source/gallery/`下面建立相应的文件夹，例如若按照这里的示例，若欲使用`/gallery/MC/`路径访问MC相册，则需要新建`[Blogroot]/source/gallery/MC/index.md`，并在里面填入`gallery`相册内容。
-{% endnote %}
-
-1. gallerygroup 相册图库
-
-    ```markdown
-    <div class="gallery-group-main">
-    {% galleryGroup 'demo' '仅仅是一个测试' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_05_18.webp %}
-
-    {% galleryGroup '真世代' '让真情反映世代，让情感串联台湾' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_08_18.webp %}
-
-    {% galleryGroup '工具' '工具' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-25-11.webp %}
-
-    {% galleryGroup '学习' '学习' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-33-28.webp %}
-
-    {% galleryGroup '博客' '博客' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-12-14.webp %}
-
-    {% galleryGroup '音乐' '音乐' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-42-19.webp %}
-
-    {% galleryGroup '工作' '工作' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-39-40.webp %}
-
-    {% galleryGroup '台湾' '台湾' '#相册-gallery' https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-51-39.webp %}
-
-    </div>
-    ```
-
-2. gallery 相册
-
-    ```markdown
-    {% gallery %}
-
-    ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_07_20.webp)
-
-    ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_05_18.webp)
-
-    ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-02.gif)
-
-    ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~20_07_42.webp)
-
-    ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-18~09-42-19.webp)
-
-    {% endgallery %}
-    ```
-
-<!-- endtab -->
-{% endtabs%}
+{% endhideToggle %}
+```
 
 ## 折叠框 folding
-{% note blue 'fas fa-bullhorn' disabled %}
-`Butterfly`虽然也有内置折叠框`hideToggle`标签，但是`Volantis`的`folding`折叠框更好看一些。
-{% endnote %}
-{% tabs folding,3 %}
-<!-- tab 标签语法 -->
 
 ```markdown
 {% folding 参数（可选）, 标题 %}
 ![](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg)
 {% endfolding %}
 ```
-<!-- endtab -->
-<!-- tab 配置参数 -->
+
 1. 颜色：blue, cyan, green, yellow, red
 2. 状态：状态填写 open 代表默认打开。
-<!-- endtab -->
-<!-- tab 样式预览 -->
-
-{% folding 查看图片测试 %}
-
-![](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg)
-
-{% endfolding %}
-
-{% folding cyan open, 查看默认打开的折叠框 %}
-
-这是一个默认打开的折叠框。
-
-{% endfolding %}
-
-{% folding green, 查看代码测试 %}
-```markdown
-![](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg)
-```
-{% endfolding %}
-
-{% folding yellow, 查看列表测试 %}
-
-- haha
-- hehe
-
-{% endfolding %}
-
-{% folding red, 查看嵌套测试 %}
-
-{% folding blue, 查看嵌套测试2 %}
-
-{% folding 查看嵌套测试3 %}
-
-hahaha <span><img src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/%E6%BB%91%E7%A8%BD.png' style='height:24px'></span>
-
-{% endfolding %}
-
-{% endfolding %}
-
-{% endfolding %}
-
-<!-- endtab -->
-<!-- tab 示例源码 -->
-
-```markdown
-{% folding 查看图片测试 %}
-
-![](https://cdn.jsdelivr.net/gh/volantis-x/cdn-wallpaper/abstract/41F215B9-261F-48B4-80B5-4E86E165259E.jpeg)
-
-{% endfolding %}
-
-{% folding cyan open, 查看默认打开的折叠框 %}
-
-这是一个默认打开的折叠框。
-
-{% endfolding %}
-
-{% folding green, 查看代码测试 %}
-假装这里有代码块（代码块没法嵌套代码块）
-{% endfolding %}
-
-{% folding yellow, 查看列表测试 %}
-
-- haha
-- hehe
-
-{% endfolding %}
-
-{% folding red, 查看嵌套测试 %}
-
-{% folding blue, 查看嵌套测试2 %}
-
-{% folding 查看嵌套测试3 %}
-
-hahaha <span><img src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/%E6%BB%91%E7%A8%BD.png' style='height:24px'></span>
-
-{% endfolding %}
-
-{% endfolding %}
-
-{% endfolding %}
-```
-
-<!-- endtab -->
-{% endtabs%}
 
 ## 分栏 tab
-
-{% note blue 'fas fa-bullhorn' disabled %}
-`Butterfly`的`tab`标签和`Volantis`的`tab`标签都是移值自`NexT`主题，所以写法和效果一模一样。
-{% endnote %}
-{% tabs folding,3 %}
-<!-- tab 标签语法 -->
 
 ```markdown
 {% tabs Unique name, [index] %}
@@ -1795,11 +752,8 @@ hahaha <span><img src='https://cdn.jsdelivr.net/gh/volantis-x/cdn-emoji/tieba/%E
 Any content (support inline tags too).
 <!-- endtab -->
 {% endtabs %}
-
-
 ```
-<!-- endtab -->
-<!-- tab 配置参数 -->
+
 1. Unique name :
     - 选项卡块标签的唯一名称，不带逗号。
     - 将在#id中用作每个标签及其索引号的前缀。
@@ -1820,173 +774,26 @@ Any content (support inline tags too).
     - 可以指定带空格或不带空格；
     - 例如'Tab caption @icon' 和 'Tab caption@icon'.
     - 可选参数。
-<!-- endtab -->
-<!-- tab 样式预览 -->
 
-{% note primary %}
-Demo 1 - 预设选择第一个【默认】
-{% endnote %}
+嵌套
 
-{% tabs test1 %}
-<!-- tab -->
-**This is Tab 1.**
-<!-- endtab -->
-
-<!-- tab -->
-**This is Tab 2.**
-<!-- endtab -->
-
-<!-- tab -->
-**This is Tab 3.**
-<!-- endtab -->
-{% endtabs %}
-
-{% note primary %}
-Demo 2 - 预设选择tabs
-{% endnote %}
-
-{% tabs test2, 3 %}
-<!-- tab -->
-**This is Tab 1.**
-<!-- endtab -->
-
-<!-- tab -->
-**This is Tab 2.**
-<!-- endtab -->
-
-<!-- tab -->
-**This is Tab 3.**
-<!-- endtab -->
-{% endtabs %}
-
-{% note primary %}
-Demo 3 - 没有预设值
-{% endnote %}
-
-{% tabs test3, -1 %}
-<!-- tab -->
-**This is Tab 1.**
-<!-- endtab -->
-
-<!-- tab -->
-**This is Tab 2.**
-<!-- endtab -->
-
-<!-- tab -->
-**This is Tab 3.**
-<!-- endtab -->
-{% endtabs %}
-
-{% note primary %}
-Demo 4 - 自定义Tab名 + 只有icon + icon和Tab名
-{% endnote %}
-
-{% tabs test4 %}
-<!-- tab 第一个Tab -->
-**tab名字为第一个Tab**
-<!-- endtab -->
-
-<!-- tab @fab fa-apple-pay -->
-**只有图标 没有Tab名字**
-<!-- endtab -->
-
-<!-- tab 炸弹@fas fa-bomb -->
-**名字+icon**
-<!-- endtab -->
-{% endtabs %}
-
-<!-- endtab -->
-<!-- tab 示例源码 -->
-
-
-{% note primary %}
-Demo 1 - 预设选择第一个【默认】
-{% endnote %}
 ```markdown
-{% tabs test1 %}
-<!-- tab -->
-**This is Tab 1.**
-<!-- endtab -->
+{% subtabs name %}
 
-<!-- tab -->
-**This is Tab 2.**
-<!-- endtab -->
+......
 
-<!-- tab -->
-**This is Tab 3.**
-<!-- endtab -->
-{% endtabs %}
+
+{% endsubtabs %}
+
 ```
-{% note primary %}
-Demo 2 - 预设选择tabs
-{% endnote %}
-```markdown
-{% tabs test2, 3 %}
-<!-- tab -->
-**This is Tab 1.**
-<!-- endtab -->
-
-<!-- tab -->
-**This is Tab 2.**
-<!-- endtab -->
-
-<!-- tab -->
-**This is Tab 3.**
-<!-- endtab -->
-{% endtabs %}
-```
-{% note primary %}
-Demo 3 - 没有预设值
-{% endnote %}
-```markdown
-{% tabs test3, -1 %}
-<!-- tab -->
-**This is Tab 1.**
-<!-- endtab -->
-
-<!-- tab -->
-**This is Tab 2.**
-<!-- endtab -->
-
-<!-- tab -->
-**This is Tab 3.**
-<!-- endtab -->
-{% endtabs %}
-```
-{% note primary %}
-Demo 4 - 自定义Tab名 + 只有icon + icon和Tab名
-{% endnote %}
-```markdown
-{% tabs test4 %}
-<!-- tab 第一个Tab -->
-**tab名字为第一个Tab**
-<!-- endtab -->
-
-<!-- tab @fab fa-apple-pay -->
-**只有图标 没有Tab名字**
-<!-- endtab -->
-
-<!-- tab 炸弹@fas fa-bomb -->
-**名字+icon**
-<!-- endtab -->
-{% endtabs %}
-```
-
-<!-- endtab -->
-{% endtabs%}
 
 ## 数据集合 issues
-
-
-{% tabs issues,4 %}
-<!-- tab 标签语法 -->
 
 ```markdown
 {% issues type | api=url | group=key:value1,value2（可选） %}
 ```
-<!-- endtab -->
-<!-- tab 参数配置 -->
-{% span center logo large, type(类型)： %}
+
+type(类型)
 根据需求不同，会将 issues 内容解析成不同的 HTML 标签，目前支持的类型有：
 
 1. 时间轴`timeline`: 解析成`timeline`标签，`issue`的标题对应`timeline`的时间，`issue`的内容对应`timeline`的内容。
@@ -2005,22 +812,23 @@ Demo 4 - 自定义Tab名 + 只有icon + icon和Tab名
     ```
 
 |参数|释义|
-|:--|:--|
+|:-:|:-:|
 |title|网站名称|
 |screenshot|网站预览图|
 |url|网站链接，需要添加<br>`https://`协议组成完整域名。<br>否则可能被识别成站点相对路径。|
 |avatar|站长头像|
 |「keywords」|分组依据，<br>未必要叫「keywords」，<br>详见下文group(分组)|
 
-{% span center logo large, api(接口)： %}
+api(接口)
 url为可以调的通的API，例如：
+
 ```
 api=https://gitee.com/api/v5/repos/xaoxuu/friends/issues?sort=updated&state=open&page=1&per_page=100&labels=active
 api=https://api.github.com/repos/xaoxuu/friends/issues?sort=updated&state=open&page=1&per_page=100&labels=active
 ```
 
 |参数|释义|
-|:--|:--|
+|:-:|:-:|
 | https://gitee.com/api/v5/ | gitee仓库的api |
 | https://api.github.com/ | github仓库的api |
 | repos/xaoxuu/friends/issues | repos/用户名/仓库名/issues |
@@ -2028,8 +836,7 @@ api=https://api.github.com/repos/xaoxuu/friends/issues?sort=updated&state=open&p
 |page=1&per_page=100|读取前100条issues|
 |labels=active|控制默认的issue不显示，<br>只有自己审核通过<br>添加了active标签之后才会显示|
 
-
-{% span center logo large, group(分组)： %}
+group(分组)
 `sites`类型的`issues`默认不分组，如果需要分组，可指定分组依据`「keywords」`，和分组白名单`「value1」`、`「value2」`等，例如：
 
 ```yml
@@ -2039,142 +846,7 @@ group=version:v4,v3,v2
 
 这个参数的作用就是，筛选出`JSON`中包含`"version": "v4"`或者`"version":"v3"`或者`"version": "v2"`的数据，并分组显示。
 
-{% span center logo large, 仓库ISSUES模板配置 %}
-
-{% folding green,Github仓库配置方案 %}
-
-1.  
-    新建一个仓库，仓库名随意，这里 Aki 命名为`friend_link`,
-    新建文件`friend_link\.github\ISSUE_TEMPLATE.md`,
-    并在其中输入以下内容作为`issues`模板。
-
-    {% tip warning faa-horizontal animated fa-slow %}
-    其中的json代码块前面的反斜杠记得删去。此处这么写主要是为了转义，否则无法嵌套代码块。
-    {% endtip %}
-
-      ```markdown
-      ---
-      name: 友链模板
-      about: 请根据指示规范填写友链格式。
-      ---
-
-      <!-- 请在下方代码块的双引号中填写 -->
-      \```json
-      {
-          "title": "",
-          "screenshot": "",
-          "url": "",
-          "avatar": "",
-          "description": "",
-          "keywords": ""
-      }
-      \```
-
-      <!--
-      "title": "站点名称",
-      "screenshot": "站点预览图链接",
-      "url": "站点链接",
-      "avatar": "头像链接",
-      "description": "站点描述",
-      "keywords": "关键词，作为分组名"
-      -->
-
-      <!-- 示例 -->
-
-      <!--
-      "title": "Akilarの糖果屋",
-      "screenshot": "https://cdn.jsdelivr.net/gh/Akilarlxh/ScreenShot@gh-pages/akilar.top.jpg",
-      "url": "https://akilar.top/",
-      "avatar": "https://akilar.top/img/siteicon/favicon.png",
-      "description": "期待您的光临！",
-      "keywords": "糖果屋"
-      -->
-
-      ```
-
-2. 新建active label
-
-    ![新建label用于控制审核结果](https://cdn.jsdelivr.net/gh/Akilarlxh/Picgo/assets/d63b5c0c.png)
-
-    ![配置名称描述颜色](https://cdn.jsdelivr.net/gh/Akilarlxh/Picgo/assets/6311f960.png)
-
-3. 提交示例
-
-    ![填写规范](https://cdn.jsdelivr.net/gh/Akilarlxh/Picgo/assets/f87ebfd3.png)
-    ![审核通过](https://cdn.jsdelivr.net/gh/Akilarlxh/Picgo/assets/efdfc67d.png)
-
-4. 从审核通过到页面读取有一段api的缓存期，稍微有点耐心。
-
-{% endfolding %}
-
-{% folding yellow,Gitee仓库配置方案 %}
-
-1. 
-    新建一个仓库，仓库名随意，这里 Aki 命名为`friend_link`,
-    新建文件`friend_link\.gitee\ISSUE_TEMPLATE.md`,
-    并在其中输入以下内容作为`issues`模板。
-
-    {% tip warning faa-horizontal animated fa-slow %}
-    其中的json代码块前面的反斜杠记得删去。此处这么写主要是为了转义，否则无法嵌套代码块。
-    {% endtip %}
-
-      ```markdown
-      ---
-      name: 友链模板
-      about: 请根据指示规范填写友链格式。
-      ---
-
-      <!-- 请在下方代码块的双引号中填写 -->
-      \```json
-      {
-          "title": "",
-          "screenshot": "",
-          "url": "",
-          "avatar": "",
-          "description": "",
-          "keywords": ""
-      }
-      \```
-
-      <!--
-      "title": "站点名称",
-      "screenshot": "站点预览图链接",
-      "url": "站点链接",
-      "avatar": "头像链接",
-      "description": "站点描述",
-      "keywords": "关键词，作为分组名"
-      -->
-
-      <!-- 示例 -->
-
-      <!--
-      "title": "Akilarの糖果屋",
-      "screenshot": "https://cdn.jsdelivr.net/gh/Akilarlxh/ScreenShot@gh-pages/akilar.top.jpg",
-      "url": "https://akilar.top/",
-      "avatar": "https://akilar.top/img/siteicon/favicon.png",
-      "description": "期待您的光临！",
-      "keywords": "糖果屋"
-      -->
-
-      ```
-
-2. 新建active标签
-
-    ![新建标签用于控制审核结果](https://cdn.jsdelivr.net/gh/Akilarlxh/Picgo/assets/7522911b.png)
-
-3. 提交示例
-
-    ![填写规范](https://cdn.jsdelivr.net/gh/Akilarlxh/Picgo/assets/dd334eea.png)
-    ![审核通过](https://cdn.jsdelivr.net/gh/Akilarlxh/Picgo/assets/72d06ae1.png)
-
-4. 从审核通过到页面读取有一段api的缓存期，稍微有点耐心。
-
-{% endfolding %}
-
-<!-- endtab -->
-<!-- tab 样式预览 -->
-
-{% note warning simple %}
+仓库ISSUES模板配置
 
 因本主题已去 jquery 化（我也不想要，这个标签也不怎么用，不过那个时间线可以用来发说说什么的），所以为了正常显示需要先引入相关依赖，这里不再演示，请直接查看源码即可
 
@@ -2183,11 +855,6 @@ group=version:v4,v3,v2
 <script defer src="https://cdn.jsdelivr.net/npm/hexo-theme-volantis@latest/source/js/issues.min.js"></script>
 ```
 
-{% endnote %}
-
-
-<!-- endtab -->
-<!-- tab 示例源码 -->
 
 - 时间轴标签`timeline`渲染
 
@@ -2213,61 +880,13 @@ group=version:v4,v3,v2
     {% issues sites | api=https://api.github.com/repos/volantis-x/examples/issues?sort=updated&state=open&page=1&per_page=100 | group=version:版本：^4.0,版本：^3.0,版本：^2.0 %}
     ```
 
-<!-- endtab -->
-{% endtabs%}
-
 ## 诗词标签 poem
-
-{% tabs poem,3 %}
-<!-- tab 标签语法 -->
 
 ```markdown
 {% poem [title],[author] %}
 诗词内容
 {% endpoem %}
 ```
-<!-- endtab -->
-<!-- tab 参数配置 -->
-
-1. title：诗词标题
-2. author：作者，可以不写
-
-<!-- endtab -->
-<!-- tab 样式预览 -->
-
-{% poem 水调歌头,苏轼 %}
-
-明月几时有？把酒问青天。
-不知天上宫阙，今夕是何年？
-我欲乘风归去，又恐琼楼玉宇，高处不胜寒。
-起舞弄清影，何似在人间？
-转朱阁，低绮户，照无眠。
-不应有恨，何事长向别时圆？
-人有悲欢离合，月有阴晴圆缺，此事古难全。
-但愿人长久，千里共婵娟。
-{% endpoem %}
-
-<!-- endtab -->
-
-<!-- tab 示例源码 -->
-
-```markdown
-{% poem 水调歌头,苏轼 %}
-丙辰中秋，欢饮达旦，大醉，作此篇，兼怀子由。
-明月几时有？把酒问青天。
-不知天上宫阙，今夕是何年？
-我欲乘风归去，又恐琼楼玉宇，高处不胜寒。
-起舞弄清影，何似在人间？
-
-转朱阁，低绮户，照无眠。
-不应有恨，何事长向别时圆？
-人有悲欢离合，月有阴晴圆缺，此事古难全。
-但愿人长久，千里共婵娟。
-{% endpoem %}
-```
-
-<!-- endtab -->
-{% endtabs%}
 
 ## 进度条 progress
 
@@ -2275,36 +894,79 @@ group=version:v4,v3,v2
 进度条标签参考[沂佰孜猫-给HEXO文章添加彩色进度条](https://rongbuqiu.com/jdt.html)。
 源样式提取自[Cuteen](https://zwying0814.gitbook.io/cuteen/)主题。
 {% endnote %}
-{% tabs progress,3 %}
-<!-- tab 标签语法 -->
+
 ```markdown
 {% progress [width] [color] [text] %}
 ```
-<!-- endtab -->
-<!-- tab 参数配置 -->
+
 1. `width`: 0到100的阿拉伯数字
 2. `color`: 颜色，取值有{% span red, red %},{% span yellow, yellow %},{% span green, green %},{% span cyan, cyan %},{% span blue, blue %},{% span gray, gray %}
 3. `text`:进度条上的文字内容
-<!-- endtab -->
-<!-- tab 样式预览 -->
-{% progress 10 red 进度条样式预览 %}
-{% progress 30 yellow 进度条样式预览 %}
-{% progress 50 green 进度条样式预览 %}
-{% progress 70 cyan 进度条样式预览 %}
-{% progress 90 blue 进度条样式预览 %}
-{% progress 100 gray 进度条样式预览 %}
-<!-- endtab -->
-<!-- tab 示例源码 -->
+
+## mermaid
+
 ```markdown
-{% progress 10 red 进度条样式预览 %}
-{% progress 30 yellow 进度条样式预览 %}
-{% progress 50 green 进度条样式预览 %}
-{% progress 70 cyan 进度条样式预览 %}
-{% progress 90 blue 进度条样式预览 %}
-{% progress 100 gray 进度条样式预览 %}
+{% mermaid %}
+pie
+    title Key elements in Product X
+    "Calcium" : 42.96
+    "Potassium" : 50.05
+    "Magnesium" : 10.01
+    "Iron" :  5
+{% endmermaid %}
+
+{% mermaid %}
+gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2014-01-12  , 12d
+    another task      : 24d
+{% endmermaid %}
+
+{% mermaid %}
+gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2014-01-12  , 12d
+    another task      : 24d
+{% endmermaid %}
 ```
-<!-- endtab -->
-{% endtabs%}
+
+## 动态图表 chartjs
+
+```markdown
+{% chart 90% 300 %}
+    {
+    type: 'line',
+    data: {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [{
+        label: 'My First dataset',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [0, 10, 5, 2, 20, 30, 45]
+        }]
+    },
+    options: {
+        responsive: true,
+        title: {
+        display: true,
+        text: 'Chart.js Line Chart'
+        }
+    }
+}
+{% endchart %}
+```
+
+关于预览，更多详细内容，请分别前往 [插件文档](https://shen-yu.gitee.io/2020/chartjs) | [原文档](https://chartjs.bootcss.com/docs) 查看
 
 ## 媒体 mmedia
 
@@ -2535,18 +1197,6 @@ mmedia:
 }
 {% endmmedias %}
 ```
-
-
-
-使用原则
-
-
-必看
-
-
-规则
-
-标签
 
 markdown 内可以使用两种标签作为插件，分别是 `mmedia` 和 `mmedias`，使用方式为：
 
@@ -3163,194 +1813,7 @@ mmedia:
 
 <!-- tab 预览 -->
 
-请前往 <a target="_blank"  href="/music">音乐界面</a> 预览部分效果，分别用到了 Artplayer, Aplayer, Dplayer, Meting，一下仅作为写法备份
-
-```markdown
-{% mmedias "artplayer"  %}
-{
-  style: 'width:100%;height:500px;max-width:1200px;center',
-  url: "https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4",
-  title: "夜不能寐",
-  poster: "https://img.maocdn.cn/img/2021/03/03/f8cf7f0e7ef97df7f20da1289eb6608c.jpg",
-  theme: "#8FBC8F",
-  volume: 1,
-  isLive: false,
-  muted: false,
-  autoplay: false,
-  pip: true,
-  autoSize: true,
-  autoMini: true,
-  screenshot: false,
-  setting: true,
-  loop: false,
-  flip: true,
-  rotate: true,
-  playbackRate: true,
-  aspectRatio: true,
-  fullscreen: true,
-  fullscreenWeb: false,
-  subtitleOffset: true,
-  miniProgressBar: true,
-  localVideo: true,
-  localSubtitle: true,
-  networkMonitor: true,
-  mutex: true,
-  light: true,
-  backdrop: true,
-  subtitle: {
-    url: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-11-09~10_24_06.srt",
-    bilingual: false,
-    style: {
-      color: '#5cb85c'
-    }
-  },
-  thumbnails: {
-    url: 'https://img.maocdn.cn/img/2021/03/03/d66c31ee22c75fb85c8a891fc5885379.png',
-    number: 60,
-    width: 160,
-    height: 90,
-    column: 10
-  },
-  highlight: [
-    {
-      time: 30,
-      text: '30秒哦',
-    },
-    {
-      time: 60,
-      text: '一分钟咯',
-    },
-    {
-      time: 90,
-      text: '90秒哦',
-    },
-    {
-      time: 120,
-      text: '两分钟咯',
-    },
-    {
-      time: 240,
-      text: '要放完啦',
-    },
-  ],
-  subtitleOffset: true
-}
-{% endmmedias %}
-<br>
-{% mmedias "aplayer" "autoplay:false" %}
-{
-  volume: 0.8,
-  audio:
-  [
-    {
-      name: "นอนไม่หลับ(The Remake)",
-      artist: "Three Man Down",
-      url: "https://file.nmb.show/down.php/fc178ad5791961bf520fcfc7e4f0b450.flac",
-      cover: "https://img.maocdn.cn/img/2021/03/03/1000.jpg",
-      lrc: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-11-08~21_39_21.lrc",
-      theme: "#8fbc8f"
-    }
-  ]
-}
-{% endmmedias %}
-
-<div class="btn-center"><div center>{% btn 'https://tv.line.me/15101475',LINETVTHAILAND版权所有,far fa-copyright,green larger %}</div>
-
-<div class="btn-center">
-{% btn 'https://www.joox.com/th/single/I6Sexy9JkQ+0PXMj94lBdg==',JOOXTHAILAND版权所有,far fa-copyright,green larger %}{% btn 'https://www.joox.com/th/single/I6Sexy9JkQ+0PXMj94lBdg==',歌词由CC康纳百川制作,far fa-copyright,green larger %}</div>
-
-{% mmedias "dplayer" "hls:" %}
-{
-  video:
-  {
-    quality:
-    [
-      {
-        name: '自动',
-        url: 'https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8',
-        type: 'hls',
-      },
-      {
-        name: '1080P',
-        url: 'https://test-streams.mux.dev/x36xhzz/url_8/193039199_mp4_h264_aac_fhd_7.m3u8',
-        type: 'hls',
-      },
-      {
-        name: '720P',
-        url: 'https://test-streams.mux.dev/x36xhzz/url_0/193039199_mp4_h264_aac_hd_7.m3u8',
-        type: 'hls',
-      },
-      {
-        name: '480P',
-        url: 'https://test-streams.mux.dev/x36xhzz/url_6/193039199_mp4_h264_aac_hq_7.m3u8',
-        type: 'hls',
-      },
-    ],
-    defaultQuality: 0,
-    pic: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-12~18_03_32.webp',
-  },
-  theme: '#8fbc8f',
-  live: true,
-  screenshot: true,
-}
-{% endmmedias %}
-<br>
-{% mmedia "meting" "auto=https://music.163.com/#/artist?id=12838890" "theme:#8fbc8f" %}
-```
+请前往 <a target="_blank"  href="/music">音乐界面</a> 预览部分效果，分别用到了 Artplayer, Aplayer, Dplayer, Meting
 
 <!-- endtab -->
 {% endtabs %}
-
-## 动态图表 chartjs
-
-{% chart 90% 300 %}
-    {
-    type: 'line',
-    data: {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-    datasets: [{
-        label: 'My First dataset',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
-        data: [0, 10, 5, 2, 20, 30, 45]
-        }]
-    },
-    options: {
-        responsive: true,
-        title: {
-        display: true,
-        text: 'Chart.js Line Chart'
-        }
-    }
-}
-{% endchart %}
-
-示例源码
-
-```markdown
-{% chart 90% 300 %}
-    {
-    type: 'line',
-    data: {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-    datasets: [{
-        label: 'My First dataset',
-        backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgb(255, 99, 132)',
-        data: [0, 10, 5, 2, 20, 30, 45]
-        }]
-    },
-    options: {
-        responsive: true,
-        title: {
-        display: true,
-        text: 'Chart.js Line Chart'
-        }
-    }
-}
-{% endchart %}
-```
-
-关于预览，更多详细内容，请分别前往 [插件文档](https://shen-yu.gitee.io/2020/chartjs) | [原文档](https://chartjs.bootcss.com/docs) 查看（因 pjax 原因，我排除了 'chart*' 因此控制台会出现闪现报错情况）
-
-{% note blue 'fas fa-spinner' simple %}未完待续{% endnote %}

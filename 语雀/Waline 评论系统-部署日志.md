@@ -12,7 +12,7 @@ keywords:
   - 工具
   - 评论
   - Waline
-description: Waline评论系统-部署日志，希望你也能用上这款评论系统
+description: Waline 评论系统-部署日志，希望你也能用上这款评论系统
 cover: >-
   https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-01-17~15-08-37.webp
 photos: >-
