@@ -19,6 +19,9 @@ updated: 2021-05-12 12:00:00
 ---
 
 在中国大陆，如果追求用户的隐私保护，是否有更好的评论解决方案？
+​
+
+<!-- more -->
 
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/25)
 自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/cusdis-or-disqus)
@@ -95,8 +98,7 @@ Disqus 的匿名评论还有一点，就是需要谷歌真人验证 🤔，可�
 若您无法访问 Disqus，可在此处留言，但我的回复目前你也收不到通知，仅仅是一个 DEMO
 ​
 
-<script src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/js/cusdis.js"></script>
-<!--<script defer src="https://cusdis.ccknbc.cc/js/widget/lang/zh-cn.js"></script>-->
+<script defer src="https://cusdis.ccknbc.cc/js/widget/lang/zh-cn.js"></script>
 <script async defer src="https://cusdis.ccknbc.cc/js/cusdis.es.js"></script>
 <div id="cusdis_thread"  
      data-host="https://cusdis.ccknbc.cc"  
@@ -108,8 +110,7 @@ Disqus 的匿名评论还有一点，就是需要谷歌真人验证 🤔，可�
 ​
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/js/cusdis.js"></script>
-<!--<script defer src="https://cusdis.ccknbc.cc/js/widget/lang/zh-cn.js"></script>-->
+<script defer src="https://cusdis.ccknbc.cc/js/widget/lang/zh-cn.js"></script>
 <script async defer src="https://cusdis.ccknbc.cc/js/cusdis.es.js"></script>
 <div
   id="cusdis_thread"
@@ -125,8 +126,7 @@ Disqus 的匿名评论还有一点，就是需要谷歌真人验证 🤔，可�
 
 ### 评论
 
-<div id="wpac-comment"></div>
-<script type="text/javascript">
+<div id="wpac-comment"></div><script type="text/javascript">
 wpac_init = window.wpac_init || [];
 wpac_init.push({widget: 'Comment', id: 25905});
 (function() {
