@@ -6,10 +6,10 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "github-yuque": "yuque-hexo sync && npm run build && hexo algolia && gulp",
-    "gitlab-yuque": "yuque-hexo sync && npm run build && gulp",
-    "github": "npm run build && hexo algolia && gulp",
-    "gitlab": "npm run build && gulp"
+    "github-yuque": "yuque-hexo sync && npm run build && hexo algolia && gulp && npm run deploy",
+    "gitlab-yuque": "yuque-hexo sync && npm run build && gulp && npm run deploy",
+    "github": "npm run build && hexo algolia && gulp && npm run deploy",
+    "gitlab": "npm run build && gulp && npm run deploy"
   },
   "yuqueConfig": {
     "postPath": "source/_posts/语雀",
@@ -51,6 +51,7 @@
     "hexo-tag-chart": "1.0.8",
     "hexo-tag-mmedia": "1.1.6",
     "hexo-translate-title-vss": "1.0.14",
+    "hexo-web-push-notification": "^0.4.0",
     "hexo-wordcount": "6.0.1",
     "node-fetch": "2.6.1",
     "workbox-build": "6.1.5",
