@@ -15,7 +15,7 @@ cover: >-
   https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-05-15~21-52-56.webp
 id: 26
 aside: false
-updated: 2021-05-15 21:00:00
+updated: 2021-05-18 12:00:00
 ---
 
 本文介绍了 AddThis 的使用
@@ -47,3 +47,4 @@ updated: 2021-05-15 21:00:00
 当需要发布临时公告时，我会根据重要程度选择左下角或者顶栏
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1621144072301-650ffe7c-8331-4bc4-ab8e-a8870f62dce1.png#height=405&id=uca0d9fc5&margin=%5Bobject%20Object%5D&name=image.png&originHeight=405&originWidth=1583&originalType=binary&size=32828&status=done&style=none&width=1583)
 就免费来说，他做的很不错了，相比于专门做弹窗的 [poptin](https://www.poptin.com/blog/zh/create-mailchimp-pop-ups-grow-email-list/) 似乎更简单的与 mailchimp 集成，但毕竟术业有专攻，比弹窗肯定不如人家，但白嫖来说已经够了，我也不用使用 snackbar 刷新 jsd 缓存来实现临时公告了。
+而我现在重新使用了 webpushr 来实现浏览器通知，不管是否订阅，我均可以发送公告，并可保留最近 3 条公告，然后这就涉及到了空间利用率和用户体验的问题，所以我就得考虑关闭一些小部件，比如邮件订阅弹窗（据说会影响浏览器权重），还有分享按钮。电脑上无所谓，手机上显得有点挤，即使我放在右下角，分享按钮放在左下角。所以我在公告栏加入了邮件订阅表格，并添加链接导向订阅页。
