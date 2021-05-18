@@ -14,8 +14,9 @@ date: 2020-10-14 22:17:35
 
 1. 浏览器订阅，在弹出来的窗口点击订阅即可在文章有更新时通过浏览器给您发送通知，这个功能需要一定的权限，因此需要经过您的同意。不过如果你经到这个界面了，应该已经做了选择。即使您清除了本站浏览器数据，当您重新浏览本站时，也会为您自动重新订阅，除非您主动取消订阅
 
-2. 在弹出框或下表中填入您的电子邮件（或其他相关信息），点击订阅，按照邮件内容点击确认订阅链接即可
+2. 在下表中填入您的电子邮件（或其他相关信息），点击订阅，按照邮件内容点击确认订阅链接即可
 <!-- Begin Mailchimp Signup Form -->
+<script async src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
 <link href="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/css/mailchimp.css" rel="stylesheet" type="text/css">
 <div id="mc_embed_signup">
 <form action="https://ccknbc.us2.list-manage.com/subscribe/post?u=a0aadd04e3d48349de29068f8&amp;id=7518e18fcd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -51,7 +52,7 @@ date: 2020-10-14 22:17:35
     </div>
 </form>
 </div>
-<script defer type='text/javascript' src='/https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/js/mailchimp.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday'; }(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<script defer type='text/javascript' src='https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/js/mailchimp.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday'; }(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <!--End mc_embed_signup-->
 
 3. RSS订阅 [rss](/rss.xml) 或 [atom](/atom.xml) 通过邮件或阅读器阅读

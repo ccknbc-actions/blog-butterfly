@@ -87,12 +87,12 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 |                       第三方服务商                        |                         用途                         |
 | :-------------------------------------------------------: | :--------------------------------------------------: |
 |     [Instatus](https://instatus.com/policies/privacy)     |                 用于展示网站运行状态                 |
-|      [Tidio](https://www.tidio.com/privacy-policy/)       |                用于与我联络，邮件订阅                |
+|      [Tidio](https://www.tidio.com/privacy-policy/)       |           用于与我联络，邮件订阅，访问统计           |
 |     [MailChimp](https://mailchimp.com/legal/privacy/)     |       订阅页嵌入或与其他服务集成以完成邮件订阅       |
 | [AddThis](https://www.addthis.com/privacy/privacy-policy) |    用于文章页面分享，访问统计，弹窗公告，邮件订阅    |
 |    [Webpushr](https://www.webpushr.com/privacy-policy)    | 用于文章更新弹窗提示更新，以及订阅统计，其他弹窗公告 |
 |           [百度统计](https://tongji.baidu.com/)           |     用于国内用户统计站内访问情况，进行针对性优化     |
-| [谷歌分析](https://policies.google.com/privacy?hl=zh-CN)  |     用于国外用户统计站内访问情况，进行针对性优化     |
+| [谷歌分析](https://policies.google.com/privacy?hl=zh-CN)  |        用于国外用户统计站内访问情况，行为特征        |
 | [谷歌广告](https://policies.google.com/privacy?hl=zh-CN)  |              用于镜像站点，展示谷歌广告              |
 
 如何管理 Cookies ？
