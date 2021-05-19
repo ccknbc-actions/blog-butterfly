@@ -19,11 +19,8 @@ updated: 2021-05-18 12:00:00
 ---
 
 本文介绍了 AddThis 的使用
-​
 
 <!-- more -->
-
-​
 
 打开 [**AddThis**](https://www.addthis.com/) 官网，标语是 Turn your visitors into engaged customers.\*\* \*\*听起来是个营销工具，但[主题集成](https://butterfly.js.org/posts/ceeb73f/#分享)的时候选择了它，并且没有做特别说明，只是让我们找到 `pub-id` ，并没有说如何配置
 
