@@ -14,6 +14,7 @@ jobs:
       TZ: Asia/Shanghai
       ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
       YUQUE_TOKEN: ${{ secrets.YUQUE_TOKEN }}
+      ID_RSA: ${{ secrets.ID_RSA }}
 
     steps:
     - name: Checkout
@@ -48,6 +49,10 @@ jobs:
         mv -f ./json/yuque.json ./
         npm run github-yuque
         mv -f yuque.json ./json/
+        mkdir -p ~/.ssh/
+        echo "$ID_RSA" > ~/.ssh/id_rsa 
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan github.com,e.coding.net,gitee.com >> ~/.ssh/known_hosts
 
     - name: Deploy Json To Branch Json
       uses: peaceiris/actions-gh-pages@v3
@@ -80,9 +85,12 @@ jobs:
         git add -A
         git branch -m master
         git commit -m "${{ github.event.head_commit.message }} $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By Github Actions"
-        git push --force --quiet "https://ccknbc:${{ secrets.GH_TOKEN }}@github.com/CCKNBC/ccknbc.github.io.git" master:master
-        git push --force --quiet "https://${{ secrets.CD_USER }}:${{ secrets.CD_TOKEN }}@e.coding.net/ccknbc/blog/butterfly.git" master:master
-        git push --force --quiet "https://ccknbc:${{ secrets.GT_TOKEN }}@gitee.com/ccknbc/ccknbc.git" master:master
+        git push --force --quiet "git@github.com:CCKNBC/ccknbc.github.io.git" master:master
+        git push --force --quiet "git@e.coding.net:ccknbc/blog/butterfly.git" master:master
+        git push --force --quiet "git@gitee.com:ccknbc/ccknbc.git" master:master
+      # git push --force --quiet "https://ccknbc:${{ secrets.GH_TOKEN }}@github.com/CCKNBC/ccknbc.github.io.git" master:master
+      # git push --force --quiet "https://${{ secrets.CD_USER }}:${{ secrets.CD_TOKEN }}@e.coding.net/ccknbc/blog/butterfly.git" master:master
+      # git push --force --quiet "https://ccknbc:${{ secrets.GT_TOKEN }}@gitee.com/ccknbc/ccknbc.git" master:master
 
     - name: Update Gitee Pages
       uses: yanglbme/gitee-pages-action@main
