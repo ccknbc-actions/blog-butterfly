@@ -73,7 +73,7 @@ jobs:
       run: |
         cd ./public
         git config --global init.defaultBranch master
-        git config –global http.postBuffer 524288000
+        git config –-global http.postBuffer 524288000
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git init
