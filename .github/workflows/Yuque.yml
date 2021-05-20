@@ -72,16 +72,17 @@ jobs:
     - name: Deploy Hexo Public To Pages
       run: |
         cd ./public
-        git config --global http.postBuffer 157286400
+        git config --global init.defaultBranch master
+        git config --global http.postBuffer 524288000
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git init
         git add -A
         git branch -m master
         git commit -m "${{ github.event.head_commit.message }} $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By Github Actions"
-        git push --force --quiet "https://ccknbc:${{ secrets.GT_TOKEN }}@gitee.com/ccknbc/ccknbc.git" master:master
         git push --force --quiet "https://ccknbc:${{ secrets.GH_TOKEN }}@github.com/CCKNBC/ccknbc.github.io.git" master:master
         git push --force --quiet "https://${{ secrets.CD_USER }}:${{ secrets.CD_TOKEN }}@e.coding.net/ccknbc/blog/butterfly.git" master:master
+        git push --force --quiet "https://ccknbc:${{ secrets.GT_TOKEN }}@gitee.com/ccknbc/ccknbc.git" master:master
 
     - name: Update Gitee Pages
       uses: yanglbme/gitee-pages-action@main
