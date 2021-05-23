@@ -1,0 +1,188 @@
+title: CC的部落格
+subtitle: CC康纳百川
+description: CC的部落格，CC康纳百川的小窝，与你分享二三事
+keywords: CC的部落格,CC康纳百川,ccknbc,blog
+copyright_author_href: https://www.ccknbc.cc
+author: CC康纳百川
+language: zh-CN
+timezone: Asia/Shanghai
+
+url: https://blog.ccknbc.cc
+root: /
+permalink: posts/:translate_title/
+permalink_defaults: posts/:translate_title/
+pretty_urls:
+  trailing_index: false 
+  trailing_html: false 
+
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
+
+# Writing
+new_post_name: :title.md
+default_layout: post
+auto_spacing: true
+titlecase: false
+external_link:
+  enable: true
+  field: site
+  exclude: ''
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: false
+  auto_detect: false
+  tab_replace: ''
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocess: true
+  line_number: true
+  tab_replace: ''
+marked:
+  gfm: true
+  pedantic: false
+  breaks: true
+  smartLists: true
+  smartypants: true
+  quotes: '“”‘’'
+  modifyAnchors: 0
+  anchorAlias: true
+  autolink: true
+  mangle: true
+  sanitizeUrl: false
+  headerIds: true
+  lazyload: true
+  prependRoot: false
+  postAsset: false
+  external_link:
+    enable: true
+    exclude: [www.ccknbc.cc,ccknbc.cc]
+    nofollow: true
+  disableNunjucks: false
+  descriptionLists: true
+stylus:
+  compress: true
+  sourcemaps:
+    comment: true
+    inline: true
+    sourceRoot: ''
+    basePath: .
+  plugins: 'nib'
+
+index_generator:
+  path: ''
+  per_page: 10
+  order_by: -date
+
+default_category: 
+category_map: 
+tag_map: 
+
+meta_generator: true
+
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+updated_option: 'mtime'
+
+per_page: 0
+pagination_dir: page
+
+include: 
+exclude:
+ignore:
+
+theme: butterfly
+
+feed:
+  enable: true
+  type:
+    - atom
+    - rss2
+  path:
+    - atom.xml
+    - rss.xml
+  limit: 1
+  hub:
+  content: true
+  content_limit: false
+  content_limit_delim: ' '
+  order_by: -updated
+  icon: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png
+  autodiscovery: true
+  template:
+
+sitemap:
+  path: sitemap.xml
+  template: 
+  rel: true
+  tags: false
+  categories: false
+
+translate_title:
+  translate_way:  google
+  youdao_api_key: ''
+  youdao_keyfrom: xxxx-blog
+  is_need_proxy: false
+  proxy_url: http://localhost:8080 
+  baidu_appid: ''
+  baidu_appkey: ''
+  rewrite: false
+
+use_webp: false
+
+plugins:
+  - hexo-algoliasearch
+
+algolia:
+  appId: "947RX7HP3E"
+  apiKey: "9114b3fa2a3307b2cc8eec7e3ae5a8ea"
+  chunkSize: 5000
+  indexName: "ccknbc-blog"
+  fields:
+    - path
+    - title
+    - content:strip
+
+nofollow:
+  enable: true
+  field: site
+  exclude:
+    - 'ccknbc.com'
+    - 'www.ccknbc.com'
+
+archive_generator:
+  enabled: true
+  per_page: 0
+  yearly: false
+  monthly: false
+  daily: false
+  order_by: -date
+
+category_generator:
+  per_page: 0
+  order_by: -date
+
+tag_generator:
+  per_page: 0
+  order_by: -date
+
+webPushNotification:
+  webpushrKey: "19e7fc04388c7dd68a5926d7326f3bea"
+  webpushrAuthToken: "16778"
+  trackingCode: "BB9Y-w9p3u0CKA7UP9nupB6I-_NqE2MuODmKJjyC4W2YflX06Ff_hEhrNJfonrut5l6gCa28gC83q2OII7Qv-oA"
+
+memorial_day:
+  enable: false
+  day: 2021-05-22
