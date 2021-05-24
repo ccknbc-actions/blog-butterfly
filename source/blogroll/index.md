@@ -2,7 +2,6 @@
 title: CC的小伙伴们
 description: CC的部落格 友情链接
 type: link
-comments: true
 aside: false
 top_img: false
 translate_title: cc-friends

@@ -2,7 +2,6 @@
 title: 订阅部落格文章更新
 description: CC的部落格 订阅文章更新页面
 aside: false
-comments: false
 top_img: false
 translate_title: subscribe-to-blog-article-updates
 date: 2020-10-14 22:17:35

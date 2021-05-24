@@ -2,7 +2,6 @@
 title: 关于本站
 description: CC的部落格 更新日志
 aside: false
-comments: false
 top_img: false
 translate_title: about
 date: 2020-08-08 14:55:19

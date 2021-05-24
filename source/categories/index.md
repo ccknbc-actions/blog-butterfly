@@ -1,7 +1,6 @@
 ---
 title: 文章分类
 top_img: false
-comments: false
 aside: false
 translate_title: categories
 date: 2021-05-03 10:56:52

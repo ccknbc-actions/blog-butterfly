@@ -1,7 +1,6 @@
 ---
 title: 遺書
 description: 孙泽康的遗书
-comments: false
 aside: false
 top_img: false
 translate_title: suicide-note

@@ -33,7 +33,7 @@ description: CC的部落格 隐私政策
 | 设备        | <div id="userAgentDevice"></div>                  |
 <script type="text/javascript">getIpInfo()</script>
 
-- 本站已关闭评论系统，请使用 [Tidio](https://www.tidio.com/privacy-policy/) 直接与我沟通，您可发送多条消息，这些内容将会整合成邮件发送给我，若您同意在本站留言即默认同意 [Tidio](https://www.tidio.com/privacy-policy/) 获取您上述提到的隐私内容
+- 本站使用 [Disqus](https://help.disqus.com/en/articles/1717103-disqus-privacy-policy) 评论系统，并开启了匿名评论，无论您是否选择登录，我都无法获取您的隐私信息。若您无法访问 [Disqus](https://help.disqus.com/en/articles/1717103-disqus-privacy-policy) 请使用 [Tidio](https://www.tidio.com/privacy-policy/) 直接与我沟通，您可发送多条消息，这些内容将会整合成邮件发送给我，若您同意在本站留言即默认同意 [Tidio](https://www.tidio.com/privacy-policy/) 获取您上述提到的隐私内容
 
 ## 如何使用 Cookies 和本地 LocalStorage 存储
 
@@ -84,16 +84,17 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 *   改善网站功能；
 *   监督我的版权协议和隐私政策的遵守情况。
 
-|                       第三方服务商                        |                         用途                         |
-| :-------------------------------------------------------: | :--------------------------------------------------: |
-|     [Instatus](https://instatus.com/policies/privacy)     |                 用于展示网站运行状态                 |
-|      [Tidio](https://www.tidio.com/privacy-policy/)       |           用于与我联络，邮件订阅，访问统计           |
-|     [MailChimp](https://mailchimp.com/legal/privacy/)     |       订阅页嵌入或与其他服务集成以完成邮件订阅       |
-| [AddThis](https://www.addthis.com/privacy/privacy-policy) |    用于文章页面分享，访问统计，弹窗公告，邮件订阅    |
-|    [Webpushr](https://www.webpushr.com/privacy-policy)    | 用于文章更新弹窗提示更新，以及订阅统计，其他弹窗公告 |
-|           [百度统计](https://tongji.baidu.com/)           |     用于国内用户统计站内访问情况，进行针对性优化     |
-| [谷歌分析](https://policies.google.com/privacy?hl=zh-CN)  |        用于国外用户统计站内访问情况，行为特征        |
-| [谷歌广告](https://policies.google.com/privacy?hl=zh-CN)  |              用于镜像站点，展示谷歌广告              |
+|                         第三方服务商                         |                         用途                         |
+| :----------------------------------------------------------: | :--------------------------------------------------: |
+|      [Instatus](https://instatus.com/policies/privacy)       |                 用于展示网站运行状态                 |
+| [Disqus](https://help.disqus.com/en/articles/1717103-disqus-privacy-policy) |         用于网站评论，检测是否可访问官方服务         |
+|        [Tidio](https://www.tidio.com/privacy-policy/)        |           用于与我联络，邮件订阅，访问统计           |
+|      [MailChimp](https://mailchimp.com/legal/privacy/)       |       订阅页嵌入或与其他服务集成以完成邮件订阅       |
+|  [AddThis](https://www.addthis.com/privacy/privacy-policy)   |    用于文章页面分享，访问统计，弹窗公告，邮件订阅    |
+|     [Webpushr](https://www.webpushr.com/privacy-policy)      | 用于文章更新弹窗提示更新，以及订阅统计，其他弹窗公告 |
+|            [百度统计](https://tongji.baidu.com/)             |     用于国内用户统计站内访问情况，进行针对性优化     |
+|   [谷歌分析](https://policies.google.com/privacy?hl=zh-CN)   |        用于国外用户统计站内访问情况，行为特征        |
+|   [谷歌广告](https://policies.google.com/privacy?hl=zh-CN)   |              用于镜像站点，展示谷歌广告              |
 
 如何管理 Cookies ？
 --------------------------------------------
@@ -115,4 +116,4 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 
 我可能对此 Cookies 政策所做的任何更改都将发布在此页面上。如果更改很重要，我会在我的主页或应用上明确指出该政策已更新。
 
-{% btn '#',最后修订时间：2021 年 5 月 17 日 12:36,fas fa-history,block right green smaller %}
+{% btn '#',最后修订时间：2021 年 5 月 24 日 12:20,fas fa-history,block right green smaller %}
