@@ -8,7 +8,7 @@
     "server": "hexo server",
     "github-yuque": "yuque-hexo sync && npm run build && hexo algolia && gulp && npm run deploy",
     "gitlab-yuque": "yuque-hexo sync && npm run build && gulp && npm run deploy",
-    "github": "npm run build && hexo algolia && gulpy && npm run deploy",
+    "github": "npm run build && hexo algolia && gulp && npm run deploy",
     "gitlab": "npm run build && gulp && npm run deploy"
   },
   "yuqueConfig": {
