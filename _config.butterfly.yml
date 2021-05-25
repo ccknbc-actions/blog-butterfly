@@ -292,12 +292,12 @@ comments:
   # - Utterances
   # - Disqus
   # - Livere
-  # - Waline
+  - Waline
   # - Artalk
-  - Disqusjs
+  # - Disqusjs
   # - Cusdis
+  - Twikoo
   # - Waline
-  # - Twikoo
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -310,19 +310,18 @@ comments:
 waline:
   serverURL: https://waline.ccknbc.ml # Waline server address url
   avatar: monsterid # gravatar style https://zh-tw.gravatar.com/site/implement/images/#default-image
-  bg: # waline background
+  bg: https://cdn.jsdelivr.net/gh/LGBT-CN/logo/v0/flag.svg # waline background
   emojiCDN: https://cdn.jsdelivr.net/gh/GamerNoTitle/Valinecdn/
   option: 
     pageSize: 10
-    requiredFields: []
-    anonymous: 
+    requiredMeta: []
+    login: 
     visitor: false
-    copyRight: true
-    placeholder: 您可以完全匿名评论                                                                       
+                                                                    
     avatarCDN: #sdn.geekzu.org/avatar/
     # https://gravatar.loli.net/avatar/
     # https://cdn.v2ex.com/gravatar/
-    langMode:
+    locale:
       admin: 博主兼管理员
       nick: ' 昵称 (选填)'
       mail: ' 邮箱 (选填)'
@@ -1096,7 +1095,7 @@ CDN:
   # comments
   valine: https://cdn.jsdelivr.net/gh/lete114/CDN/Valine/Valine-Lete3.2-min.js
   beaudar: https://beaudar.lipk.org/client.js
-  twikoo: https://cdn.jsdelivr.net/npm/twikoo@beta/dist/twikoo.all.min.js
+  # twikoo: https://cdn.jsdelivr.net/npm/twikoo@beta/dist/twikoo.all.min.js
   artalk: https://cdn.jsdelivr.net/gh/ArtalkJS/Artalk@master/dist/Artalk.js
   artalk_css: https://cdn.jsdelivr.net/gh/ArtalkJS/Artalk@master/dist/Artalk.css
 

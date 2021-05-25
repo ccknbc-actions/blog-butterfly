@@ -33,7 +33,18 @@ description: CC的部落格 隐私政策
 | 设备        | <div id="userAgentDevice"></div>                  |
 <script type="text/javascript">getIpInfo()</script>
 
-- 本站使用 [Disqus](https://help.disqus.com/en/articles/1717103-disqus-privacy-policy) 评论系统，并开启了匿名评论，无论您是否选择登录，我都无法获取您的隐私信息。若您无法访问 [Disqus](https://help.disqus.com/en/articles/1717103-disqus-privacy-policy) 请使用 [Tidio](https://www.tidio.com/privacy-policy/) 直接与我沟通，您可发送多条消息，这些内容将会整合成邮件发送给我，若您同意在本站留言即默认同意 [Tidio](https://www.tidio.com/privacy-policy/) 获取您上述提到的隐私内容
+- 本站使用 [Tidio](https://www.tidio.com/privacy-policy/) 聊天系统，您可使用 [Tidio](https://www.tidio.com/privacy-policy/) 直接与我沟通，您可发送多条消息，这些内容将会整合成邮件发送给我，若您同意在本站留言即默认同意 [Tidio](https://www.tidio.com/privacy-policy/) 获取您上述提到的隐私内容，当然我会在您继续前要求您选择是否同意我获取您的部分隐私内容
+
+在您评论时，仅会出于以下目的，收集和使用您的个人信息：
+
+主评论使用的是可匿名登录的评论系统 [Waline](https://waline.js.org/)基于（ [Vercel](https://vercel.com/) 和 [LeanCloud 国际版](https://leancloud.app/)，您可以填写真实的、虚假的信息作为您评论的展示信息。鼓励您使用不易被人恶意识别的昵称进行评论，但是建议您填写真实的邮箱以便收到回复。如果您选择注册账号登录后评论，即使已经加密我无法得知您的密码内容，但我仍建议您选择和常用账号密码不同的密码，当然我更推荐使用社交账号登录，走官方渠道减少您隐私内容泄露的可能性。
+
+副评论使用的是无登陆系统的匿名评论系统 [Twikoo](https://twikoo.js.org/) 基于 [CloudBase 腾讯云开发](https://cloud.tencent.com/act/pro/cloudbase01)，注意事项同上
+
+- 评论时会记录您的 QQ 号（如果在邮箱位置填写 QQ 邮箱或 QQ 号），方便获取您的 QQ 头像。如果使用 QQ 邮箱但不想展示 QQ 头像，可以填写不含 QQ 号的自定义邮箱。（主动，存储）
+- 评论时会记录您的邮箱，当我回复后会通过邮件通知您（主动，存储，不会公开邮箱）
+- 评论时会记录您的 IP 地址，作为反垃圾的用户判别依据（被动，存储，不会公开 IP ）
+- 评论会记录您的浏览器代理，用作展示系统版本、浏览器版本方便展示您使用的设备，快速定位问题（被动，存储）
 
 ## 如何使用 Cookies 和本地 LocalStorage 存储
 
@@ -94,7 +105,6 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 |     [Webpushr](https://www.webpushr.com/privacy-policy)      | 用于文章更新弹窗提示更新，以及订阅统计，其他弹窗公告 |
 |            [百度统计](https://tongji.baidu.com/)             |     用于国内用户统计站内访问情况，进行针对性优化     |
 |   [谷歌分析](https://policies.google.com/privacy?hl=zh-CN)   |        用于国外用户统计站内访问情况，行为特征        |
-|   [谷歌广告](https://policies.google.com/privacy?hl=zh-CN)   |              用于镜像站点，展示谷歌广告              |
 
 如何管理 Cookies ？
 --------------------------------------------
@@ -116,4 +126,4 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 
 我可能对此 Cookies 政策所做的任何更改都将发布在此页面上。如果更改很重要，我会在我的主页或应用上明确指出该政策已更新。
 
-{% btn '#',最后修订时间：2021 年 5 月 24 日 12:20,fas fa-history,block right green smaller %}
+{% btn '#',最后修订时间：2021 年 5 月 25 日 10:52,fas fa-history,block right green smaller %}

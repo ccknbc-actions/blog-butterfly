@@ -15,7 +15,7 @@ date: 2020-10-14 22:17:35
 
 2. 在下表中填入您的电子邮件（或其他相关信息），点击订阅，按照邮件内容点击确认订阅链接即可
 <!-- Begin Mailchimp Signup Form -->
-<script async src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
 <link href="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/css/mailchimp.css" rel="stylesheet" type="text/css">
 <div id="mc_embed_signup">
 <form action="https://ccknbc.us2.list-manage.com/subscribe/post?u=a0aadd04e3d48349de29068f8&amp;id=7518e18fcd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
