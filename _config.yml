@@ -186,3 +186,32 @@ webPushNotification:
 memorial_day:
   enable: false
   day: 2021-05-22
+
+douban:
+  user: CCKNBC
+  builtin: true
+  # book:
+  #   title: 'This is my book title'
+  #   quote: 'This is my book quote'
+  #   meta: true
+  #   comments: true
+  #   top_img: false
+  #   aside: false
+  #   path: books
+  movie:
+    title: '我看过的影视'
+    quote: '我看过的影视'
+    meta: true
+    comments: true
+    top_img: false
+    aside: false
+    path: movies
+  # game:
+  #   title: 'This is my game title'
+  #   quote: 'This is my game quote'
+  #   meta: true
+  #   comments: true
+  #   top_img: false
+  #   aside: false
+  #   path: games
+  timeout: 10000 
