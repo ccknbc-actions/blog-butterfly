@@ -1,21 +1,14 @@
 ---
 title: Hexo Butterfly Algolia 搜索的使用
-urlname: '24'
-date: '2021-05-11 11:00:00 +0800'
 translate_title: hexo-butterfly-algolia
-tags:
-  - 工具
-  - Algolia
-keywords:
-  - Hexo
-  - Butterfly
-  - Algolia
+date: 2021-05-11 11:00:00
+updated: 2021-05-12 12:00:00
+tags: [工具, Algolia]
+keywords: [Hexo, Butterfly, Algolia]
 categories: 工具
 description: 本文介绍了 Hexo Butterfly 主题下 Algolia 搜索的使用
-cover: >-
-  https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-05-11~11-06-48.webp
+cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-05-11~11-06-48.webp
 id: 24
-updated: 2021-05-12 12:00:00
 ---
 
 本文介绍了 Hexo Butterfly 主题下 Algolia 搜索的使用

@@ -1,15 +1,14 @@
 ---
 title: HEXO 折腾
-urlname: '03'
-date: '2020-07-01 08:00:00 +0800'
 tags: HEXO
 categories: 博客
 description: 本篇文章简单介绍了 HEXO 博客的搭建，部署更新等过程
 keywords: HEXO
-cover: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~10_48_38.webp'
-photos: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~10_48_38.webp'
-id: 3
+cover: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~10_48_38.webp"
+photos: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~10_48_38.webp"
+id: 03
 translate_title: hexo-toss
+date: 2020-07-01 08:00:00
 updated: 2020-07-01 12:00:00
 ---
 

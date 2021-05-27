@@ -1,21 +1,15 @@
 ---
 title: 你以为 AddThis 只是个分享工具吗？
-urlname: '26'
-date: '2021-05-15 21:00:00 +0800'
 translate_title: the-real-addthis
-tags:
-  - 工具
-  - AddThis
-keywords:
-  - 工具
-  - AddThis
+date: 2021-05-15 21:00:00
+updated: 2021-05-18 12:00:00
+tags: [工具, AddThis]
+keywords: [工具, AddThis]
 categories: 工具
 description: 本文介绍了 AddThis 的使用
-cover: >-
-  https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-05-15~21-52-56.webp
+cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-05-15~21-52-56.webp
 id: 26
 aside: false
-updated: 2021-05-18 12:00:00
 ---
 
 本文介绍了 AddThis 的使用

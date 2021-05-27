@@ -1,21 +1,14 @@
 ---
 title: Cusdis 还是 Disqus ？
-urlname: '25'
-date: '2021-05-11 18:00:00 +0800'
 translate_title: cusdis-or-disqus
-tags:
-  - 工具
-  - 评论
-keywords:
-  - Hexo
-  - Cusdis
-  - Disqus
+date: 2021-05-11 18:00:00
+updated: 2021-05-12 12:00:00
+tags: [工具, 评论]
+keywords: [Hexo, Cusdis, Disqus]
 categories: 工具
 description: 在中国大陆，如果追求用户的隐私保护，是否有更好的评论解决方案？
-cover: >-
-  https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-05-11~19-58-44.webp
+cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-05-11~19-58-44.webp
 id: 25
-updated: 2021-05-12 12:00:00
 ---
 
 在中国大陆，如果追求用户的隐私保护，是否有更好的评论解决方案？
