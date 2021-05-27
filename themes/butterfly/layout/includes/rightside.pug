@@ -12,7 +12,7 @@
           i.fas.fa-pencil-alt
         a.edit-yuque(href=theme.edit.yuque + page.id + '/edit' title=_p('edit.yuque') + ' - ' + page.title)
           i.fas.fa-crow
-      else if is_page() && is_category()
+      else if is_page() || is_category() || is_tag() 
         a.edit-cloud-studio(href=theme.edit.cloud_studio title=_p('edit.cloud_studio'))
           i.fas.fa-laptop-code
         a.edit-gitlab-ide(href=theme.edit.gitlab_ide + 'master/-/source/' + page.source title=_p('edit.gitlab_ide') + ' - ' + page.title)

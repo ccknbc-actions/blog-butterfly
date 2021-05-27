@@ -2,7 +2,6 @@ title: CC的部落格
 subtitle: CC康纳百川
 description: CC的部落格，CC康纳百川的小窝，与你分享二三事
 keywords: CC的部落格,CC康纳百川,ccknbc,blog
-copyright_author_href: https://www.ccknbc.cc
 author: CC康纳百川
 email: blog@ccknbc.cc
 language: zh-CN
@@ -11,7 +10,7 @@ timezone: Asia/Shanghai
 url: https://blog.ccknbc.cc
 root: /
 permalink: posts/:translate_title/
-permalink_defaults: posts/:translate_title/
+permalink_defaults: 
 pretty_urls:
   trailing_index: false 
   trailing_html: false 
@@ -112,8 +111,8 @@ feed:
     - atom
     - rss2
   path:
-    - atom
-    - rss
+    - atom.xml
+    - rss.xml
   limit: 1
   hub:
   content: true

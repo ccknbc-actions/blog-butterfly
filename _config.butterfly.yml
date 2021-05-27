@@ -245,11 +245,11 @@ photofigcaption: false
 # 1: The 'next post' will link to old post
 # 2: The 'next post' will link to new post
 # false: disable pagination
-post_pagination: 1
+post_pagination: true
 
 # anchor
 # when you scroll in post, the URL will update according to header id.
-anchor: false
+anchor: true
 
 # Displays outdated notice for a post (文章過期提醒)
 noticeOutdate:

@@ -43,6 +43,8 @@ img[data-lazy-src]:not(.loaded) {
 
   {% tabs links%}
 
+  <!-- endtab -->
+
   <!-- tab 朋友圈@fas fa-blog -->
 
   <div id="moments_container"></div>
@@ -50,9 +52,9 @@ img[data-lazy-src]:not(.loaded) {
 
   <!-- endtab -->
 
-  <!-- tab 申请须知@fas fa-check-circle -->
+  <!-- tab 申请友链@fas fa-check-circle -->
 
-  快速申请友链请前往{% btn 'https://github.com/ccknbc-actions/blogroll',GitHub(推荐),fab fa-github,outline green larger %} 按照提示和 {% emp Issue 模板 %}提交 Issue 即可，会自动打标签通过
+  快速申请友链请前往{% btn 'https://github.com/ccknbc-actions/blogroll',GitHub(推荐),fab fa-github,outline green larger %} 按照提示和 {% emp Issue 模板 %}提交 Issue 即可，会自动打标签通过并截图，尽量不要在评论区留言，处理速度比较慢
 
   {% note warning simple %}之前使用 {% btn 'https://gitee.com/ccknbc/blogroll?skip_mobile=true',Gitee,far fa-hand-point-right,outline red larger %} 申请的，仍可以前往修改，如果您访问 GitHub 有困难，也可使用 Gitee 申请等待人工审核 {% endnote %}
 
@@ -104,6 +106,7 @@ img[data-lazy-src]:not(.loaded) {
   card_style: item
   screenshot: https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/www.ccknbc.cc.webp
   ```
+
   <!-- endtab -->
 
   {% endtabs %}
