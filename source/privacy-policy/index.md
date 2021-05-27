@@ -95,16 +95,15 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 *   改善网站功能；
 *   监督我的版权协议和隐私政策的遵守情况。
 
-|                         第三方服务商                         |                         用途                         |
-| :----------------------------------------------------------: | :--------------------------------------------------: |
-|      [Instatus](https://instatus.com/policies/privacy)       |                 用于展示网站运行状态                 |
-| [Disqus](https://help.disqus.com/en/articles/1717103-disqus-privacy-policy) |         用于网站评论，检测是否可访问官方服务         |
-|        [Tidio](https://www.tidio.com/privacy-policy/)        |           用于与我联络，邮件订阅，访问统计           |
-|      [MailChimp](https://mailchimp.com/legal/privacy/)       |       订阅页嵌入或与其他服务集成以完成邮件订阅       |
-|  [AddThis](https://www.addthis.com/privacy/privacy-policy)   |    用于文章页面分享，访问统计，弹窗公告，邮件订阅    |
-|     [Webpushr](https://www.webpushr.com/privacy-policy)      | 用于文章更新弹窗提示更新，以及订阅统计，其他弹窗公告 |
-|            [百度统计](https://tongji.baidu.com/)             |     用于国内用户统计站内访问情况，进行针对性优化     |
-|   [谷歌分析](https://policies.google.com/privacy?hl=zh-CN)   |        用于国外用户统计站内访问情况，行为特征        |
+|                       第三方服务商                        |                         用途                         |
+| :-------------------------------------------------------: | :--------------------------------------------------: |
+|     [Instatus](https://instatus.com/policies/privacy)     |                 用于展示网站运行状态                 |
+|      [Tidio](https://www.tidio.com/privacy-policy/)       |           用于与我联络，邮件订阅，访问统计           |
+|     [MailChimp](https://mailchimp.com/legal/privacy/)     |       订阅页嵌入或与其他服务集成以完成邮件订阅       |
+| [AddThis](https://www.addthis.com/privacy/privacy-policy) |    用于文章页面分享，访问统计，弹窗公告，邮件订阅    |
+|    [Webpushr](https://www.webpushr.com/privacy-policy)    | 用于文章更新弹窗提示更新，以及订阅统计，其他弹窗公告 |
+|           [百度统计](https://tongji.baidu.com/)           |     用于国内用户统计站内访问情况，进行针对性优化     |
+| [谷歌分析](https://policies.google.com/privacy?hl=zh-CN)  |        用于国外用户统计站内访问情况，行为特征        |
 
 如何管理 Cookies ？
 --------------------------------------------
@@ -126,4 +125,4 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 
 我可能对此 Cookies 政策所做的任何更改都将发布在此页面上。如果更改很重要，我会在我的主页或应用上明确指出该政策已更新。
 
-{% btn '#',最后修订时间：2021 年 5 月 25 日 10:52,fas fa-history,block right green smaller %}
+{% btn '#',最后修订时间：2021 年 5 月 26 日 20:59,fas fa-history,block right green smaller %}

@@ -47,12 +47,12 @@ copy:
 #   icon: link || the description
 social:
   # fab fa-github: https://github.com/CCKNBC || GitHub
-  fas fa-envelope: mailto:blog@ccknbc.cc || Email
+  # fas fa-envelope: mailto:blog@ccknbc.cc || Email
   # fas fa-rss: /rss.xml || RSS
   fab fa-telegram: https://t.me/ccknbc || Telegram
   # fab fa-telegram-plane: https://t.me/ccknbcTG || Telegram Group
   # fab fa-line: https://line.me/ti/p/1vqM_WDef1 || LINE
-  fab fa-weibo: https://weibo.com/CommonCulture || Weibo
+  # fab fa-weibo: https://weibo.com/CommonCulture || Weibo
   fab fa-twitter: https://www.twitter.com/ccknbc || Twitter
   # fab fa-instagram: https://www.instagram.com/ccknbc || Instagram
   # fab fa-facebook: https://www.facebook.com/ccknbc || Facebook
@@ -292,11 +292,11 @@ comments:
   # - Utterances
   # - Disqus
   # - Livere
-  - Waline
+  # - Waline
   # - Artalk
-  # - Disqusjs
+  - Disqusjs
   # - Cusdis
-  - Twikoo
+  # - Twikoo
   # - Waline
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.

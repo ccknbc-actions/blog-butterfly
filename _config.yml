@@ -4,6 +4,7 @@ description: CC的部落格，CC康纳百川的小窝，与你分享二三事
 keywords: CC的部落格,CC康纳百川,ccknbc,blog
 copyright_author_href: https://www.ccknbc.cc
 author: CC康纳百川
+email: blog@ccknbc.cc
 language: zh-CN
 timezone: Asia/Shanghai
 
@@ -111,8 +112,8 @@ feed:
     - atom
     - rss2
   path:
-    - atom.xml
-    - rss.xml
+    - atom
+    - rss
   limit: 1
   hub:
   content: true
@@ -122,6 +123,8 @@ feed:
   icon: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png
   autodiscovery: true
   template:
+    - ./source/_data/atom.xml
+    - ./source/_data/rss.xml
 
 sitemap:
   path: sitemap.xml
