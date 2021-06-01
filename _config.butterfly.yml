@@ -12,7 +12,7 @@ menu:
   便签 || fas fa-sticky-note:
     友链: /blogroll || fas fa-blog
     音乐: /music || fas fa-music
-    统计: /charts || fas fa-chart-bar
+    # 统计: /charts || fas fa-chart-bar
   关于 || fas fa-desktop:
     订阅: /sub || fas fa-rss
     本站: /about || fas fa-stream
@@ -311,13 +311,11 @@ waline:
   serverURL: https://waline.ccknbc.ml # Waline server address url
   avatar: monsterid # gravatar style https://zh-tw.gravatar.com/site/implement/images/#default-image
   bg: https://cdn.jsdelivr.net/gh/LGBT-CN/logo/v0/flag.svg # waline background
-  emojiCDN: https://cdn.jsdelivr.net/gh/GamerNoTitle/Valinecdn/
   option: 
     pageSize: 10
     requiredMeta: []
     login: 
-    visitor: false
-                                                                    
+    visitor: false                                                           
     avatarCDN: #sdn.geekzu.org/avatar/
     # https://gravatar.loli.net/avatar/
     # https://cdn.v2ex.com/gravatar/
