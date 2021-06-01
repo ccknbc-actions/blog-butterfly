@@ -7,6 +7,7 @@ tags: [工具, 评论, Waline]
 categories: 工具
 keywords: [工具, 评论, Waline]
 description: Waline 评论系统部署日志，希望你也能用上这款评论系统
+cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-01-17~15-08-37.webp
 id: 20
 ---
 
@@ -237,7 +238,7 @@ module.exports.main = async (event, context) => {
 
 #### 手动升级
 
-找到 Vercel 帮你在创建的仓库，叫 `waline`  啦，编辑 `package.json`  中依赖版本号即可完成升级，版本号以 `npm` ![](https://img.shields.io/npm/v/@waline/vercel?color=critical&logo=npm&style=flat-square#height=19&id=ZBPqj&originHeight=20&originWidth=111&originalType=binary&status=done&style=none&width=105)  为准，因为 GitHub 由于考虑到电报机器人自动推送消息过于频繁影响到群友，会延迟推送
+找到 Vercel 帮你在创建的仓库，叫 `waline`  啦，编辑 `package.json`  中依赖版本号即可完成升级，版本号以 `npm` ![](https://img.shields.io/npm/v/@waline/vercel?color=critical&logo=npm&style=flat-square#height=20&id=ZBPqj&originHeight=20&originWidth=105&originalType=binary&status=done&style=none&width=105)  为准，因为 GitHub 由于考虑到电报机器人自动推送消息过于频繁影响到群友，会延迟推送
 
 #### 自动升级
 
