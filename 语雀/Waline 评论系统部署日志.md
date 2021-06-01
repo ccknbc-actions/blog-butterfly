@@ -1,18 +1,16 @@
 ---
-title: Waline 评论系统-部署日志
+title: Waline 评论系统部署日志
 translate_title: waline-commens-system-deployment-logs
 date: 2021-01-17 00:00:00
 updated: 2021-05-03 17:00:00
 tags: [工具, 评论, Waline]
 categories: 工具
 keywords: [工具, 评论, Waline]
-description: Waline 评论系统-部署日志，希望你也能用上这款评论系统
-cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-01-17~15-08-37.webp
-photos: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-01-17~15-08-37.webp
-comments: true
+description: Waline 评论系统部署日志，希望你也能用上这款评论系统
 id: 20
 ---
 
+{% note danger simple %}本文大部分内容已作废，请直接查看[**官方文档**](https://waline.js.org/){% endnote %}
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/20)
 自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/waline-commens-system-deployment-logs)
 **本文仅作为官方文档的补充，若有错误，还望指正**

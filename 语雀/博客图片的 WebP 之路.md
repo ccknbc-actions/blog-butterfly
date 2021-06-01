@@ -10,7 +10,6 @@ id: 15
 date: 2020-11-29 16:38:36
 updated: 2020-12-15 13:30:00
 cover: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-11-29~19-02-50.webp"
-photos: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-11-29~19-02-50.webp"
 ---
 
 在主流浏览器都支持的情况下，我趁着文章还少，把所有文章的图片全部转换为 WebP 格式，以寻求更快的加载速度和丝滑的体验

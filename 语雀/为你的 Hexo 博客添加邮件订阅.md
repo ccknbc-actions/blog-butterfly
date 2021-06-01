@@ -9,7 +9,6 @@ categories: 工具
 description: 本篇文章简单介绍了利用mailchimp为你的Hexo博客添加邮件订阅功能
 keywords: 工具,订阅,邮件订阅
 cover: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-16~18_24_19.webp"
-photos: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-16~18_24_19.webp"
 translate_title: add-email-subscription-to-your-hexo-blog
 date: 2020-10-16 18:00:00
 updated: 2021-05-15 21:30:00

@@ -9,7 +9,6 @@ categories: 工具
 description: 本篇文章简单介绍了 Github Actions 的用法，以及一些变量的解释
 keywords: Github Actions
 cover: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-06~11_10_13.webp"
-photos: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-06~11_10_13.webp"
 translate_title: why-github-actions-is-so-popular
 date: 2020-10-06 10:51:58
 updated: 2020-10-06 12:00:00

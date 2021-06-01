@@ -8,20 +8,19 @@ categories: 工具
 keywords: [工具, GitHub]
 description: GitHub 自动合并 PR 笔记
 cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-01-17~17-57-41.webp
-photos: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-01-17~17-57-41.webp
 comments: true
 id: 21
 ---
 
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/21)
 自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/github-automatically-merges-pull-requests-notes)
-\*\*
+**​**
 
 # automerge-action
 
 GitHub action to automatically merge pull requests when they are ready.
 
-![](https://cdn.nlark.com/yuque/0/2021/svg/8391407/1610874798961-ae345ffc-d1e6-425f-900a-8f69e4ee5a53.svg#align=left&display=inline&height=45&margin=%5Bobject%20Object%5D&originHeight=256&originWidth=564&size=0&status=done&style=none&width=100)
+![](https://cdn.nlark.com/yuque/0/2021/svg/8391407/1610874798961-ae345ffc-d1e6-425f-900a-8f69e4ee5a53.svg#height=45&id=oSNvE&originHeight=256&originWidth=564&originalType=binary&size=0&status=done&style=none&width=100)
 
 When added, this action will run the following tasks on pull requests with the
 `automerge` label:
@@ -106,10 +105,10 @@ The following merge options are supported:
   When an empty string (`""`) is given, no labels will be removed.
 - `MERGE_METHOD`: Which method to use when merging the pull request into
   the base branch. Possible values are
-  [`merge`](https://help.github.com/en/articles/about-pull-request-merges) (create a merge commit),
-  [`rebase`](https://help.github.com/en/articles/about-pull-request-merges#rebase-and-merge-your-pull-request-commits)
+  `[merge](https://help.github.com/en/articles/about-pull-request-merges)` (create a merge commit),
+  `[rebase](https://help.github.com/en/articles/about-pull-request-merges#rebase-and-merge-your-pull-request-commits)`
   (rebase all commits of the branch onto the base branch)
-  or [`squash`](https://help.github.com/en/articles/about-pull-request-merges#squash-and-merge-your-pull-request-commits)
+  or `[squash](https://help.github.com/en/articles/about-pull-request-merges#squash-and-merge-your-pull-request-commits)`
   (squash all commits into a single commit). The default option is `merge`.
 - `MERGE_METHOD_LABELS`: Set to allow labels to determine the merge method
   (see `MERGE_METHOD` for possible values).
@@ -227,7 +226,7 @@ For more information on when these occur, see the Github documentation on [event
 
 - When a pull request is merged by this action, the merge will not trigger other GitHub workflows.
   Similarly, when another GitHub workflow creates a pull request, this action will not be triggered.
-  This is because [an action in a workflow run can't trigger a new workflow run](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows). However, the [`workflow_run`](https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#workflow_run) event is triggered as expected.
+  This is because [an action in a workflow run can't trigger a new workflow run](https://help.github.com/en/actions/automating-your-workflow-with-github-actions/events-that-trigger-workflows). However, the `[workflow_run](https://docs.github.com/en/free-pro-team@latest/actions/reference/events-that-trigger-workflows#workflow_run)` event is triggered as expected.
 - When [using a personal access token (PAT) to work around the above limitation](https://help.github.com/en/actions/reference/events-that-trigger-workflows#triggering-new-workflows-using-a-personal-access-token), note that when the user issuing the PAT is an administrator and [branch restrictions do not include administrators](https://help.github.com/en/github/administering-a-repository/enabling-branch-restrictions), pull requests may be merged even if they are not mergeable for non-administrators (see [#65](https://github.com/pascalgn/automerge-action/issues/65)).
 - Currently, there is no way to trigger workflows when the pull request branch
   becomes out of date with the base branch. There is a request in the
@@ -263,7 +262,7 @@ Install dependencies with `yarn`, and finally run `yarn it` (or `npm run it`).
 
 # bulldozer
 
-[![](https://cdn.nlark.com/yuque/0/2021/svg/8391407/1610874951039-f74d3099-f28f-4856-ade7-6c677ce4869d.svg#align=left&display=inline&height=20&margin=%5Bobject%20Object%5D&originHeight=20&originWidth=110&size=0&status=done&style=none&width=110)](https://bintray.com/palantir/releases/bulldozer/_latestVersion) [![](https://img.shields.io/docker/pulls/palantirtechnologies/bulldozer.svg#align=left&display=inline&height=19&margin=%5Bobject%20Object%5D&originHeight=20&originWidth=114&status=done&style=none&width=108)](https://hub.docker.com/r/palantirtechnologies/bulldozer/)
+![](https://cdn.nlark.com/yuque/0/2021/svg/8391407/1610874951039-f74d3099-f28f-4856-ade7-6c677ce4869d.svg#height=20&id=oob8t&originHeight=20&originWidth=110&originalType=binary&size=0&status=done&style=none&width=110) ![](https://img.shields.io/docker/pulls/palantirtechnologies/bulldozer.svg#height=19&id=FEtmj&originHeight=20&originWidth=114&originalType=binary&status=done&style=none&width=108)
 
 `bulldozer` is a [GitHub App](https://developer.github.com/apps/) that
 automatically merges pull requests (PRs) when (and only when) all required
@@ -582,7 +581,7 @@ details.
 
 ### Example Files
 
-Example `.bulldozer.yml` files can be found in [`config/examples`](https://github.com/palantir/bulldozer/tree/develop/config/examples)
+Example `.bulldozer.yml` files can be found in `[config/examples](https://github.com/palantir/bulldozer/tree/develop/config/examples)`
 
 ### Migrating: Version 0.4.X to 1.X
 
@@ -643,8 +642,8 @@ This application is made available under the [Apache 2.0 License](http://www.apa
 
 # probot-auto-merge
 
-[![](https://travis-ci.org/bobvanderlinden/probot-auto-merge.svg?branch=master#align=left&display=inline&height=20&margin=%5Bobject%20Object%5D&originHeight=20&originWidth=90&status=done&style=none&width=90)](https://travis-ci.org/bobvanderlinden/probot-auto-merge)
-[![](https://img.shields.io/coveralls/github/bobvanderlinden/probot-auto-merge.svg#align=left&display=inline&height=20&margin=%5Bobject%20Object%5D&originHeight=20&originWidth=96&status=done&style=none&width=96)](https://coveralls.io/github/bobvanderlinden/probot-auto-merge)
+![](https://travis-ci.org/bobvanderlinden/probot-auto-merge.svg?branch=master#height=20&id=aSSyK&originHeight=20&originWidth=90&originalType=binary&status=done&style=none&width=90)
+![](https://img.shields.io/coveralls/github/bobvanderlinden/probot-auto-merge.svg#height=20&id=LDRWo&originHeight=20&originWidth=96&originalType=binary&status=done&style=none&width=96)
 
 A GitHub App built with [Probot](https://github.com/probot/probot) that automatically merges PRs
 
@@ -1122,7 +1121,7 @@ For more, check out the [Contributing Guide](CONTRIBUTING.md).
 
 This action checks all open Pull Requests for merge conflicts and marks them with a Github label.
 
-![](./demo.png#alt=Github%20action%20in%20action)
+![](./demo.png#id=IgY1W&originalType=binary&status=done&style=none)
 
 Once a conflict is resolved the label is automatically removed.
 

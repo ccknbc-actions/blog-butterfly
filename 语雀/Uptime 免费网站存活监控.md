@@ -9,7 +9,6 @@ categories: 工具
 description: 本篇文章简单介绍了利用 Uptime 实现免费网站存活监控
 keywords: 网站存活监控,Uptime
 cover: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~11_19_11.webp"
-photos: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~11_19_11.webp"
 copyright_author: 大白萝卜
 copyright_author_href: "https://dabailuobo.com"
 copyright_url: "https://blog.dabailuobo.com/ba779920"
