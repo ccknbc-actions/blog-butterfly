@@ -5,13 +5,13 @@ categories: 博客
 description: 本篇文章简单介绍了 HEXO 博客的搭建，部署更新等过程
 keywords: HEXO
 cover: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~10_48_38.webp"
-id: 03
+id: -3
 translate_title: hexo-toss
 date: 2020-07-01 08:00:00
 updated: 2020-07-01 12:00:00
 ---
 
-**个人目前使用主题为 Butterfly **`**3.0.1**`**版本，HEXO **`**5.0.2**`**版本**
+个人目前使用主题为 Butterfly `3.0.1`版本，HEXO `5.0.2`版本
 
 请按照以下步骤依次安装相应依赖和框架
 
@@ -47,7 +47,7 @@ Linux 用户右上角关闭本标签页。
 
 对了，国内使用 npm 可能很慢。
 
-**你可以考虑切换为 **`**taobao**`** 镜像源。**
+你可以考虑切换为 `taobao` 镜像源。
 
 ```sh
 npm config set registry https://registry.npm.taobao.org
