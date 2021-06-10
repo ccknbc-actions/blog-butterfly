@@ -2,7 +2,7 @@
 title: Hexo Butterfly Algolia 搜索的使用
 translate_title: hexo-butterfly-algolia
 date: 2021-05-11 11:00:00
-updated: 2021-05-12 12:00:00
+updated: 2021-06-10 12:00:00
 tags: [工具, Algolia]
 keywords: [Hexo, Butterfly, Algolia]
 categories: 工具
@@ -38,8 +38,8 @@ npm install hexo-algoliasearch --save
 > Index your hexo website content to Algolia Search.  
 > 🔎 A plugin to index posts of your Hexo blog on Algolia
 
-也就很明显了，如果你想要全站搜索可选择搜索，如果你只想搜索文章两者兼可，
-然后就是 HEXO 配置文件中添加以下内容，下文基本以 `hexo-algoliasearch` 为例，因为我个人认为访客只会搜文章吧（事实上是搜索根本没人用，毕竟也根本没人访问），hexo-algolia 可查看官方文档，注意配置和命令的区别极了
+也就很明显了，如果你想要全站搜索可选择前者，如果你只想搜索文章两者兼可，
+然后就是 HEXO 配置文件中添加以下内容，下文基本以 `hexo-algoliasearch` 为例，因为我个人认为访客只会搜文章吧（事实上是搜索根本没人用，毕竟也根本没人访问），hexo-algolia 可查看官方文档，注意配置和命令的区别
 
 > \_config.yml :
 
@@ -225,6 +225,7 @@ CDN:
 ## 最终效果
 
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1623297948979-16f7476e-0978-49ee-a667-2dc060896c88.png#clientId=uc24fb27d-4fc5-4&from=paste&id=ud3ca95b0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=413&originWidth=753&originalType=binary&ratio=2&size=40542&status=done&style=none&taskId=u9d85e4b7-062e-432f-b6d8-854d2e5d2eb)
+（这个是因为我修改了源码，实际上也能通过修改 JS 实现，但大多数人不会关心这些搜索小贴士）
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1623298049726-3cded22e-2e40-44b3-a445-d542b3bc3c80.png#clientId=uc24fb27d-4fc5-4&from=paste&id=u13b48f0e&margin=%5Bobject%20Object%5D&name=image.png&originHeight=601&originWidth=750&originalType=binary&ratio=2&size=61545&status=done&style=none&taskId=ua59892ff-66db-45b5-a905-ac97bcb7b4d)
 对于中文它当作单字匹配
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1623298062241-b4dd37f7-aa87-485f-a394-950943e0c211.png#clientId=uc24fb27d-4fc5-4&from=paste&id=u8d3029fa&margin=%5Bobject%20Object%5D&name=image.png&originHeight=498&originWidth=752&originalType=binary&ratio=2&size=40466&status=done&style=none&taskId=uca3eae79-9718-4088-8c72-c34e98f6782)

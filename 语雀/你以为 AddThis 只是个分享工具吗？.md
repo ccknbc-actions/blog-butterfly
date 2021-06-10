@@ -16,7 +16,7 @@ aside: false
 
 <!-- more -->
 
-打开 [**AddThis**](https://www.addthis.com/) 官网，标语是 Turn your visitors into engaged customers.\*\* \*\*听起来是个营销工具，但[主题集成](https://butterfly.js.org/posts/ceeb73f/#分享)的时候选择了它，并且没有做特别说明，只是让我们找到 `pub-id` ，并没有说如何配置
+打开 [**AddThis**](https://www.addthis.com/) 官网，标语是 Turn your visitors into engaged customers. 听起来是个营销工具，但[主题集成](https://butterfly.js.org/posts/ceeb73f/#分享)的时候选择了它，并且没有做特别说明，只是让我们找到 `pub-id` ，并没有说如何配置
 
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/24)
 
