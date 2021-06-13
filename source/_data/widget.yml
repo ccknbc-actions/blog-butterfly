@@ -1,0 +1,14 @@
+bottom:
+  - class_name: dsq-widget
+    id_name: recentcomments
+    name: Disqus 最新评论
+    icon: fas fa-comment
+    order: 2
+    html: <script src="https://ccknbc-disqus.ccknbc.workers.dev/recent_comments_widget.js?num_items=3&hide_avatars=0&avatar_size=32&excerpt_length=20&hide_mods=1"></script>
+# top:
+#   - class_name: dsq-widget
+#     id_name: recentcomments
+#     name: Disqus 最新评论
+#     icon: fas fa-comment
+#     order: 0
+#     html: <script src="https://ccknbc-disqus.ccknbc.workers.dev/recent_comments_widget.js?num_items=3&hide_avatars=0&avatar_size=48&excerpt_length=20&hide_mods=1"></script>
