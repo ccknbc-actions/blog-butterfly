@@ -1,5 +1,5 @@
 ---
-title: "CC的部落格 外挂标签笔记"
+title: CC的部落格 外挂标签笔记
 tags: [博客, HEXO]
 categories: 博客
 description: CC的部落格 外挂标签笔记
