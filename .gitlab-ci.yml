@@ -1,0 +1,19 @@
+image: node:latest
+variable:
+  script:
+    - echo $YUQUE_TOKEN
+pages:
+  script:
+    - npm install
+    - git clone -b json https://github.com/ccknbc-actions/blog-butterfly.git json
+    - mv -f ./json/yuque.json ./
+    - npm run gitlab-yuque
+  artifacts:
+    paths:
+      - public
+  cache:
+    paths:
+      - node_modules
+    key: project
+  only:
+    - master
