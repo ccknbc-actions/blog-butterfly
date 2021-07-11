@@ -113,7 +113,7 @@ feed:
   path:
     - atom.xml
     - rss.xml
-  limit: 1
+  limit: 5
   hub:
   content: true
   content_limit: false
