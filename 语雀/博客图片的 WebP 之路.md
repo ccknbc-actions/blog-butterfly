@@ -6,6 +6,7 @@ keywords: [WebP, 图床, 博客]
 categories: 博客
 description: 在主流浏览器都支持的情况下，我趁着文章还少，把所有文章的图片全部转换为 WebP 格式，以寻求更快的加载速度和丝滑的体验
 translate_title: the-webp-road-of-blog-pictures
+subtitle: The WebP Road-of Blog Pictures
 id: 15
 date: 2020-11-29 16:38:36
 updated: 2020-12-15 13:30:00
@@ -201,7 +202,7 @@ How to use PR Valet
 
 具体过程可通过下图查看（别问我为什么不重新截图）
 
-![](https://cdn.nlark.com/yuque/0/2020/png/8391407/1608792470422-d8276572-96b4-4b3b-9e7b-dfee414b9f5e.png#height=997&id=OFjp7&originHeight=997&originWidth=1156&originalType=binary&size=0&status=done&style=none&width=1156)
+![](https://cdn.nlark.com/yuque/0/2020/png/8391407/1608792470422-d8276572-96b4-4b3b-9e7b-dfee414b9f5e.png#height=997&id=OFjp7&originHeight=997&originWidth=1156&originalType=binary&ratio=1&size=0&status=done&style=none&width=1156)
 
 {% endnote %}
 

@@ -2,14 +2,15 @@
 title: Github Actions 为什么这么香
 tags:
   - 工具
-  - Github Actions
+  - GitHub Actions
 
-id: 09
+id: -9
 categories: 工具
 description: 本篇文章简单介绍了 Github Actions 的用法，以及一些变量的解释
-keywords: Github Actions
+keywords: GitHub Actions
 cover: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-06~11_10_13.webp"
 translate_title: why-github-actions-is-so-popular
+subtitle: Why GitHub Actions Is So Popular
 date: 2020-10-06 10:51:58
 updated: 2020-10-06 12:00:00
 ---
@@ -28,11 +29,11 @@ Github 本身自带的模板是 OK 的，但毕竟很多新手完全不懂，但
 
 首先我们得明白，要让 Github 能在你 git push 上去后能自动部署博客，你得知道博客的源文件是必须要的，但备份哪些呢，下图只是以本站做一个示例，框中的是必须要有的（如果你不打算修改主题源码其实也不用备份，但毕竟可以节约时间，第一次备份前记得在主题文件夹删掉`.git`隐藏文件夹，不然推上去是空的会导致运行失败），其他根据个人需求，，配一个证书或者 README 等，但你还在疑惑；我没有.github 文件夹啊，没错这个就是我们自己新建的文件夹，在博客根目录依次建立`.github/workflows/*.yml`文件
 
-![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-06~11_57_17.webp#height=637&id=Vyye0&originHeight=637&originWidth=744&originalType=binary&status=done&style=none&width=744)
+![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-06~11_57_17.webp#height=637&id=Vyye0&originHeight=637&originWidth=744&originalType=binary&ratio=1&status=done&style=none&width=744)
 
 就像下图这样，工作流文件.yml 你可以随便命名啦，然后我们在工作流文件中添加如下内容
 
-![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-06~12_03_33.webp#height=119&id=heF8i&originHeight=119&originWidth=329&originalType=binary&status=done&style=none&width=329)
+![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-06~12_03_33.webp#height=119&id=heF8i&originHeight=119&originWidth=329&originalType=binary&ratio=1&status=done&style=none&width=329)
 
 ```yaml
 name: Update Blog Butterfly Site

@@ -10,6 +10,7 @@ description: 本篇文章简单介绍了我使用不同聊天系统的体会
 keywords: 工具,聊天
 cover: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-12-15~18-17-57.webp"
 translate_title: why-did-i-choose-tidio-as-the-chat-system
+subtitle: Why Did I Choose Tidio As The Chat System
 date: 2020-10-02 21:18:42
 updated: 2020-10-03 18:09:51
 ---
