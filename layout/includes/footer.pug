@@ -1,0 +1,62 @@
+#footer-wrap
+  if theme.footer.custom_text
+    .footer_custom_text!=`${theme.footer.custom_text}`
+  if theme.footer.copyright
+    .framework-info
+      span= _p('footer.framework') + ' '
+      a(href='https://hexo.io')= 'Hexo'
+      span.footer-separator |
+      span= _p('footer.theme') + ' '
+      a(href='https://github.com/jerryc127/hexo-theme-butterfly')= 'Butterfly'
+  if theme.footer.upyun.enable
+    .upyun
+      a(href=theme.footer.upyun.url)
+        if theme.footer.upyun.icon
+          img.icp-icon(src=url_for(theme.footer.upyun.icon) alt='upyun')
+        span=theme.footer.upyun.text
+  if theme.footer.ICP.enable
+    .icp
+      a(href=theme.footer.ICP.url)
+        if theme.footer.ICP.icon
+          img.icp-icon(src=url_for(theme.footer.ICP.icon) alt='ICP')
+        span=theme.footer.ICP.text
+  if theme.footer.gongan.enable
+    .gongan
+      a(href=theme.footer.gongan.url)
+        if theme.footer.gongan.icon
+          img.gongan-icon(src=url_for(theme.footer.gongan.icon) alt='gongan')
+        span=theme.footer.gongan.text
+  if theme.footer.live.enable
+    .live
+      span!=theme.footer.live.prefix
+      span#display_live
+      if theme.footer.live.suffix
+        span.moe-text!=theme.footer.live.suffix
+      script.
+        function blog_live() {
+          window.setTimeout(blog_live, 1000);
+          var start = new Date('#{theme.footer.live.start}');
+          var now = new Date();
+          var nowYear = now.getFullYear();
+          //- var yearDiff = (now.getFullYear() - start.getFullYear());
+          var timeDiff = (now.getTime() - start.getTime());
+          var msPerMinute = 60 * 1000;
+          var msPerHour = 60 * msPerMinute;
+          var msPerDay = 24 * msPerHour;
+          var msPerYear = 365 * msPerDay;
+          //- var passYear= Math.floor(yearDiff);
+          var passYear = Math.floor(timeDiff / msPerYear);
+          var passDay = Math.floor((timeDiff % msPerYear)/ msPerDay);
+          var passHour = Math.floor((timeDiff % msPerDay) / 60 / 60 / 1000);
+          var passMinute = Math.floor((timeDiff % msPerHour) / 60 / 1000);
+          var passSecond = Math.floor((timeDiff % msPerMinute) / 1000);
+          display_live.innerHTML =  ' ' + passYear + ' 年 ' + passDay + ' 天 ' + passHour + ' 小时 ' + passMinute + ' 分 ' + passSecond + ' 秒' + '<br>' + '&copy; 2020' + ' - ' + nowYear +' ' ;
+        }
+        blog_live();
+  if theme.footer.owner.enable
+    - var now = new Date()
+    - var nowYear = now.getFullYear()
+    if theme.footer.owner.since && theme.footer.owner.since != nowYear
+      .copyright!= `&copy; ${theme.footer.owner.since} - ${nowYear} ${config.author} All Rights Reserved.`
+    else
+      .copyright!= `&copy; ${nowYear} ${config.author} All Rights Reserved.`

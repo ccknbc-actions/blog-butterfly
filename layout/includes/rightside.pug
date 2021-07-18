@@ -1,0 +1,73 @@
+#rightside
+  #rightside-config-hide
+    if theme.edit.enable && page.edit !== false
+      if is_post()
+        if theme.edit.cloud_studio !== false
+          a.edit-cloud-studio(href=theme.edit.cloud_studio title=_p('edit.cloud_studio'))
+            i.fas.fa-laptop-code
+        if theme.edit.gitlab_ide !== false
+          a.edit-gitlab-ide(href=theme.edit.gitlab_ide + 'posts/-/语雀/' + page.title + '.md' title=_p('edit.gitlab_ide') + ' - ' + page.title)
+            i.fas.fa-code
+        if theme.edit.gitlab !== false
+          a.edit-gitlab(href=theme.edit.gitlab + 'posts/语雀/' + page.title + '.md' title=_p('edit.gitlab') + ' - ' + page.title)
+            i.fab.fa-gitlab
+        if theme.edit.hexoplusplus !== false
+          a.edit-hexoplusplus(href=theme.edit.hexoplusplus title=_p('edit.hexoplusplus'))
+            i.fas.fa-pencil-alt
+        if theme.edit.yuque !== false
+          a.edit-yuque(href=theme.edit.yuque + page.id + '/edit' title=_p('edit.yuque') + ' - ' + page.title)
+            i.fas.fa-crow
+      else if is_page() || is_category() || is_tag()
+        if theme.edit.cloud_studio !== false
+          a.edit-cloud-studio(href=theme.edit.cloud_studio title=_p('edit.cloud_studio'))
+            i.fas.fa-laptop-code
+        if theme.edit.gitlab_ide  !== false
+          a.edit-gitlab-ide(href=theme.edit.gitlab_ide + 'master/-/source/' + page.source title=_p('edit.gitlab_ide') + ' - ' + page.title)
+            i.fas.fa-code
+        if theme.edit.gitlab !== false
+          a.edit-gitlab(href=theme.edit.gitlab + 'master/source/' + page.source title=_p('edit.gitlab') + ' - ' + page.title)
+            i.fab.fa-gitlab
+      else if is_home()
+        if theme.edit.cloud_studio !== false
+          a.edit-cloud-studio(href=theme.edit.cloud_studio title=_p('edit.cloud_studio'))
+            i.fas.fa-laptop-code
+        if theme.edit.gitlab_ide !== false
+          a.edit-gitlab-ide(href=theme.edit.gitlab_ide title=_p('edit.gitlab_ide'))
+            i.fas.fa-code
+    if is_post() && theme.readmode
+      button#readmode(type="button" title=_p('rightside.readmode_title'))
+        i.fas.fa-book-open
+    if theme.change_font_size
+      button#font-plus(type="button" title=_p('rightside.font_plus_title'))
+        i.fas.fa-plus
+      button#font-minus(type="button" title=_p('rightside.font_minus_title'))
+        i.fas.fa-minus
+    if theme.translate.enable
+      button#translateLink(type="button" title=_p('rightside.translate_title'))= theme.translate.default
+    if theme.darkmode.enable && theme.darkmode.button
+      button#darkmode(type="button" title=_p('rightside.night_mode_title'))
+        i.fas.fa-adjust
+    if theme.aside.enable && theme.aside.button && page.aside !== false
+      button#hide-aside-btn(type="button" title=_p('rightside.aside'))
+        i.fas.fa-angle-double-right
+        i.fas.fa-angle-double-left
+  #rightside-config-show
+    if is_post()
+      if (theme.readmode || theme.translate.enable || (theme.darkmode.enable && theme.darkmode.button) || theme.change_font_size)
+        button#rightside_config(type="button" title=_p("rightside.setting"))
+          i.fas.fa-user-cog
+      if showToc
+        button#mobile-toc-button.close(type="button" title=_p("rightside.toc"))
+          i.fas.fa-list-ul
+    else if theme.translate.enable || (theme.darkmode.enable && theme.darkmode.button) || theme.change_font_size
+      button#rightside_config(type="button" title=_p("rightside.setting"))
+        i.fas.fa-user-cog
+
+    if theme.chat_btn
+      button#chat_btn(type="button" title=_p("rightside.chat_btn"))
+        i.fas.fa-comment-alt
+    if commentsJsLoad
+      a#to_comment(href="#post-comment" title=_p("rightside.scroll_to_comment"))
+        i.fas.fa-comments
+    button#go-up(type="button" title=_p("rightside.back_to_top"))
+      i.fas.fa-arrow-up
