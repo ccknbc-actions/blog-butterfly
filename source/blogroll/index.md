@@ -4,8 +4,10 @@ description: CC的部落格 友情链接
 type: link
 aside: false
 top_img: false
-translate_title: cc-friends
+translate_title: blogroll
+subtitle: Blogroll
 date: 2020-06-04 22:17:49
+updated: 2021-07-18 19:38:19
 ---
 
 <script src="https://cdn.jsdelivr.net/npm/butterfly-friend/dist/friend.min.js"></script>

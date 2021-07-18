@@ -3,7 +3,7 @@ bottom:
     id_name: recentcomments
     name: Disqus 最新评论
     icon: fas fa-comment
-    order: 2
+    order: 3
     html: 仅提醒用，已隐藏评论内容<script src="https://ccknbc-disqus.ccknbc.workers.dev/recent_comments_widget.js?num_items=1&hide_avatars=0&avatar_size=32&excerpt_length=3&hide_mods=1"></script>
 # top:
 #   - class_name: dsq-widget

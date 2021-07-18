@@ -4,7 +4,9 @@ description: CC的部落格 订阅文章更新页面
 aside: false
 top_img: false
 translate_title: subscribe-to-blog-article-updates
+subtitle: Sub
 date: 2020-10-14 22:17:35
+updated: 2021-07-18 19:38:19
 ---
 {% note success %} **以下方式均支持随时取消订阅，偏好可随时更改** {% endnote %}
 

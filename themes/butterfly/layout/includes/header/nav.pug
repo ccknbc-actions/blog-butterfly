@@ -1,7 +1,17 @@
 nav#nav
-  span#blog_name
-    a#site-name(href=url_for('/')) #[=config.title]
-    
+  //- span#blog_name
+  //-   a#site-name(href=url_for('/')) #[=config.title]
+  - var pagedescr = page.description ? page.description : 'CC的部落格欢迎您的光临'
+  - var subtitle = page.subtitle ? page.subtitle : page.title
+  if is_post()
+    span#blog_name
+      a#site-name(onclick='btf.scrollToDest(0, 500)' data-title=pagedescr) #[=subtitle]
+  else if is_page()
+    span#blog_name
+      a#site-name(href=url_for('/') data-title=pagedescr) #[=subtitle]
+  else
+    span#blog_name
+      a#site-name(href=url_for('/') data-title=pagedescr) #[=config.title]
   #menus
     if (theme.algolia_search.enable || theme.local_search.enable)
       #search-button
@@ -13,5 +23,3 @@ nav#nav
     #toggle-menu
       a.site-page
         i.fas.fa-bars.fa-fw
-
-

@@ -1,4 +1,6 @@
 #footer-wrap
+  if theme.footer.custom_text
+    .footer_custom_text!=`${theme.footer.custom_text}`
   if theme.footer.copyright
     .framework-info
       span= _p('footer.framework') + ' '
@@ -58,5 +60,3 @@
       .copyright!= `&copy; ${theme.footer.owner.since} - ${nowYear} ${config.author} All Rights Reserved.`
     else
       .copyright!= `&copy; ${nowYear} ${config.author} All Rights Reserved.`
-  if theme.footer.custom_text
-    .footer_custom_text!=`${theme.footer.custom_text}`

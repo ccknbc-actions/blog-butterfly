@@ -2,7 +2,7 @@
 # --------------------------------------
 
 menu:
-  # 首页: / || fas fa-home
+  首页: / || fas fa-home
   # 订阅: /sub/ || fas fa-rss
   # 友链: /blogroll/ || fas fa-user-friends
   文章 || fas fa-book-reader:
@@ -18,7 +18,7 @@ menu:
     本站: /about || fas fa-stream
     隐私: /privacy-policy || fas fa-user-secret
   #   自己: /me/ || far fa-user
-  #   状态: https://ccknbc.statuspage.io || fas fa-server
+  #   状态: https://cc.instatus.com || fas fa-server
   #   证书: https://ssl.ccknbc.cc || fab fa-expeditedssl
 
 # Hide the child menu items in mobile sidebar
@@ -291,7 +291,7 @@ comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Valine/Waline/Utterances/Beaudar//Gitalk/Facebook Comments/Twikoo
   use:
-  # - Beaudar
+  - Beaudar
   # - Utterances
   # - Disqus
   # - Livere
@@ -437,9 +437,14 @@ beaudar:
   # Issue Mapping: pathname/url/title/og:title
   issue_term: title
   label: 💬comment
+  keep_theme: false
+  loading: true
+  comment_order: desc
+  input_position: top
   # Theme: github-light/github-dark/github-dark-orange/icy-dark/dark-blue/photon-dark
   light_theme: github-light
-  dark_theme: photon-dark
+  dark_theme: github-dark
+
 # Facebook Comments Plugin
 # https://developers.facebook.com/docs/plugins/comments/
 facebook_comments:
@@ -457,7 +462,7 @@ facebook_comments:
 chat_btn: true
 
 # The origin chat button is displayed when scrolling up, and the button is hidden when scrolling down
-chat_hide_show: false
+chat_hide_show: true
 
 # chatra
 # https://chatra.io/
@@ -495,7 +500,7 @@ footer:
   owner:
     enable: false
     since: 2020
-  custom_text:
+  custom_text: '<iframe src="https://cc.instatus.com/embed-status/light-sm" width="158" height="43" frameBorder="0" scrolling="no" style="border: none;" ></iframe>'
   copyright: false # Copyright of theme and framework
   ICP: # Chinese ICP License
     enable: true
@@ -826,11 +831,11 @@ runtimeshow:
 
 # Aside widget - Newest Comments
 newest_comments:
-  enable: false
+  enable: true
   limit: 3
   storage: 10
   avatar: true
-  sort_order: 3 # Don't modify the setting unless you know how it works
+  sort_order: 2 # Don't modify the setting unless you know how it works
 
 # Bottom right button (右下角按鈕)
 # --------------------------------------
@@ -904,10 +909,6 @@ note:
 
 # other
 # --------------------------------------
-
-## show bber index(home)
-showbb:
-  enable: false
 
 statuspage:
   enable: false

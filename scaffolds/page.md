@@ -1,6 +1,7 @@
 ---
 title: {{ title }}
 translate_title: 
+subtitle: 
 date: {{ date }}
 updated: {{ date }}
 keywords: 

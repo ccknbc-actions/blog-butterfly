@@ -7,6 +7,10 @@ script.
     ele.setAttribute('branch', '!{theme.beaudar.branch}')
     ele.setAttribute('issue-term', '!{theme.beaudar.issue_term}')
     ele.setAttribute('label', '!{theme.beaudar.label}')
+    ele.setAttribute('keep-theme', '!{theme.beaudar.keep_theme}')
+    ele.setAttribute('loading', '!{theme.beaudar.loading}')
+    ele.setAttribute('comment-order', '!{theme.beaudar.comment_order}')
+    ele.setAttribute('input-position', '!{theme.beaudar.input_position}')
     let nowTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? '#{theme.beaudar.dark_theme}' : '#{theme.beaudar.light_theme}'
     ele.setAttribute('theme', nowTheme)
     ele.setAttribute('crossorigin', 'anonymous')

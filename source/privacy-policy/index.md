@@ -3,8 +3,9 @@ title: 隐私政策
 top_img: false
 aside: false
 translate_title: privacy-policy
+subtitle: Privacy Policy
 date: 2021-05-14 17:12:24
-updated: 2021-05-127 18:24:24
+updated: 2021-07-18 19:38:19
 keywords: privacy-policy
 description: CC的部落格 隐私政策
 ---
@@ -32,19 +33,6 @@ description: CC的部落格 隐私政策
 | 运营商        | <div id="userAgentIsp"></div>                  |
 | 设备        | <div id="userAgentDevice"></div>                  |
 <script type="text/javascript">getIpInfo()</script>
-
-- ~~本站使用 [Disqus](https://help.disqus.com/en/articles/1717103-disqus-privacy-policy) 评论系统，并开启了匿名评论，无论您是否选择登录，我都无法获取您的隐私信息。若您无法访问 [Disqus](https://help.disqus.com/en/articles/1717103-disqus-privacy-policy) 请使用 [Tidio](https://www.tidio.com/privacy-policy/) 直接与我沟通，您可发送多条消息，这些内容将会整合成邮件发送给我，若您同意在本站留言即默认同意 [Tidio](https://www.tidio.com/privacy-policy/) 获取您上述提到的隐私内容（会在您发送信息前要求您选择确认！）~~
-
-在您评论时，仅会出于以下目的，收集和使用您的个人信息：
-
-主评论使用的是无登陆系统的匿名评论系统  [Twikoo](https://twikoo.js.org)， （基于 ~~[CloudBase 腾讯云开发](https://cloud.tencent.com/act/pro/cloudbase01)~~  [Vercel](https://vercel.com) 和 [MongoDB](https://www.mongodb.com)）。您可以填写真实的、虚假的信息作为您评论的展示信息。鼓励您使用不易被人恶意识别的昵称进行评论，但是建议您填写真实的邮箱以便收到回复。
-
-副评论使用的是可匿名登录的评论系统 [Waline](https://waline.js.org)，（基于 [Vercel](https://vercel.com) 和 [LeanCloud 国际版](https://leancloud.app)）。您可以填写真实的、虚假的信息作为您评论的展示信息。鼓励您使用不易被人恶意识别的昵称进行评论，但是建议您填写真实的邮箱以便收到回复。如果您选择注册账号登录后评论，即使已经加密我无法得知您的密码内容，但我仍建议您选择和常用账号密码不同的密码，当然我更推荐使用更加便捷的社交账号登录自动录入信息。
-
-- 评论时会记录您的 QQ 号（如果在邮箱位置填写 QQ 邮箱或 QQ 号），方便获取您的 QQ 头像。如果使用 QQ 邮箱但不想展示 QQ 头像，可以填写不含 QQ 号的自定义邮箱。（主动，存储）
-- 评论时会记录您的邮箱，当我回复后会通过邮件通知您（主动，存储，不会公开邮箱）
-- 评论时会记录您的 IP 地址，作为反垃圾的用户判别依据（被动，存储，不会公开 IP ）
-- 评论会记录您的浏览器代理，用作展示系统版本、浏览器版本方便展示您使用的设备，快速定位问题（被动，存储）
 
 ## 如何使用 Cookies 和本地 LocalStorage 存储
 
@@ -82,7 +70,7 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 |         授权         | 您登录我的网站时，我可通过 Cookie 提供正确信息，为您打造个性化的体验。例如： Cookies 会告知您通过搜索引擎搜索的具体内容来改善文章的标题优化关键词、或者创建更符合您搜索需求的文章内容。 |
 |       安全措施       | 我通过 Cookies 启用及支持安全功能，监控和防止可疑活动、欺诈性流量和违反版权协议的行为。 |
 |   偏好、功能和服务   | 我使用功能性 Cookies 来让我记住您的偏好，或保存您向我提供的有关您的喜好或其他信息。 |
-|      个性化广告      |     我使用 Cookies 在镜像站提供个性化广告（主站无广告）      |
+|    ~~个性化广告~~    |   ~~我使用 Cookies 在镜像站提供个性化广告（主站无广告）~~    |
 | 网站性能、分析和研究 | 我使用这些 Cookies 来监控网站性能。这使我能够通过快速识别和解决出现的任何问题来提供高质量的体验。 |
 
 ### 我的网站上的第三方 Cookies
@@ -98,7 +86,8 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 |                         第三方服务商                         |                         用途                         |
 | :----------------------------------------------------------: | :--------------------------------------------------: |
 |      [Instatus](https://instatus.com/policies/privacy)       |                 用于展示网站运行状态                 |
-| [Disqus](https://help.disqus.com/en/articles/1717103-disqus-privacy-policy) |         用于网站评论，检测是否可访问官方服务         |
+| [Beaudar](https://github.com/beaudar/beaudar/blob/master/PRIVACY-POLICY.md) |        用于网站评论，存取您的 GitHub 访问令牌        |
+| [Disqus&DisqusJS](https://help.disqus.com/en/articles/1717103-disqus-privacy-policy) |      用于网站评论，存取您的验证信息及可访问状态      |
 |        [Tidio](https://www.tidio.com/privacy-policy/)        |           用于与我联络，邮件订阅，访问统计           |
 |      [MailChimp](https://mailchimp.com/legal/privacy/)       |       订阅页嵌入或与其他服务集成以完成邮件订阅       |
 |  [AddThis](https://www.addthis.com/privacy/privacy-policy)   |    用于文章页面分享，访问统计，弹窗公告，邮件订阅    |
@@ -126,4 +115,4 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 
 我可能对此 Cookies 政策所做的任何更改都将发布在此页面上。如果更改很重要，我会在我的主页或应用上明确指出该政策已更新。
 
-{% btn '#',最后修订时间：2021 年 6 月 18 日 20:43,fas fa-history,block right green smaller %}
+{% btn '#',最后修订时间：2021 年 7 月 18 日 19:43,fas fa-history,block right green smaller %}
