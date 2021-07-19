@@ -2,7 +2,7 @@
 # --------------------------------------
 
 menu:
-  首页: / || fas fa-home
+  # 首页: / || fas fa-home
   # 订阅: /sub/ || fas fa-rss
   # 友链: /blogroll/ || fas fa-user-friends
   文章 || fas fa-book-reader:
@@ -224,14 +224,14 @@ reward:
 edit:
   enable: true
   yuque: https://www.yuque.com/ccknbc/blog/
-  # gitlab: false
-  # gitlab_ide: false
-  # cloud_studio: false
-  # hexoplusplus: false
-  gitlab: https://gitlab.com/CCKNBC/ccknbc.gitlab.io/-/edit/
-  gitlab_ide: https://gitlab.com/-/ide/project/CCKNBC/ccknbc.gitlab.io/edit/
-  cloud_studio: https://ccknbc.cloudstudio.net/ws/dbipsw
-  hexoplusplus: https://hpp.ccknbc.workers.dev/hpp/admin/dash/edit
+  gitlab: false
+  gitlab_ide: false
+  cloud_studio: false
+  hexoplusplus: false
+  # gitlab: https://gitlab.com/CCKNBC/ccknbc.gitlab.io/-/edit/
+  # gitlab_ide: https://gitlab.com/-/ide/project/CCKNBC/ccknbc.gitlab.io/edit/
+  # cloud_studio: https://ccknbc.cloudstudio.net/ws/dbipsw
+  # hexoplusplus: https://hpp.ccknbc.workers.dev/hpp/admin/dash/edit
 
 
 # Related Articles
@@ -439,9 +439,9 @@ beaudar:
   label: 💬comment
   keep_theme: false
   loading: true
-  comment_order: desc
-  input_position: top
-  # Theme: github-light/github-dark/github-dark-orange/icy-dark/dark-blue/photon-dark
+  comment_order: asc
+  input_position: bottom
+  # Theme: github-light/github-dark/preferred-color-scheme/github-dark-orange/hugo-terminal-orange/icy-dark/dark-blue/photon-dark/classic-dark
   light_theme: github-light
   dark_theme: github-dark
 
@@ -832,8 +832,8 @@ runtimeshow:
 # Aside widget - Newest Comments
 newest_comments:
   enable: true
-  limit: 3
-  storage: 10
+  limit: 1
+  storage: 1
   avatar: true
   sort_order: 2 # Don't modify the setting unless you know how it works
 

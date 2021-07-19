@@ -3,7 +3,8 @@ title: 遺書
 description: 孙泽康的遗书
 aside: false
 top_img: false
-translate_title: suicide-note
+translate_title: will
+subtitle: Will
 date: 2020-10-21 21:00:00
 updated: 2020-10-21 21:00:00
 ---
