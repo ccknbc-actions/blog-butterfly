@@ -1,20 +1,15 @@
 ---
-
-title: Ta 什么都不说
-translate_title: ta-said-nothing
+title: Ta 什么都不说
+translate_title: ta-said-nothing
 subtitle: Ta Said Nothing
-date: 2020-07-20 20:00:00
-updated: 2020-07-20 20:00:00
-tags: 生活
-keywords: 生活
-categories: 生活
-description: Ta 所认为的理所当然，原来根本就不存在
-cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-07-20~20-55-14.webp
-comments: true
-hide: false
-edit: true
-id: 27
-
+date: 2021-07-20 21:00:00
+updated: 2021-07-20 21:00:00
+tags: [生活]
+keywords: 生活
+categories: 生活
+description: Ta 所认为的理所当然，原来根本就不存在
+cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-07-20~20-55-14.webp
+id: 27
 ---
 
 Ta 所认为的理所当然，原来根本就不存在
