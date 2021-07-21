@@ -317,11 +317,11 @@ waline:
   avatarCDN: https://sdn.geekzu.org/avatar/
   # https://gravatar.loli.net/avatar/
   # https://cdn.v2ex.com/gravatar/
+  visitor: false
   option:
     pageSize: 10
     requiredMeta: ['nick', 'mail']
     login:
-    visitor: false
     locale:
       admin: 博主兼管理员
       nick: ' 昵称 (必填)'
@@ -367,12 +367,13 @@ disqus:
 # https://github.com/SukkaW/DisqusJS
 disqusjs:
   shortname: ccknbc
-  siteName: CC的部落格
   apikey: Z6F8Gc9KvW2YCh6p11VRVNvMBYfdaKR3IMRFLVmoYaIQJ2ysp38fZ9tivPdgyBWu # emm，也不会有人想打DISQUS的注意吧
-  api: https://disqus.ccknbc.workers.dev/api/
-  nocomment: 这里冷冷清清的，快来留下脚印吧！
-  admin: ccknbc
-  adminLabel: 博主兼管理员
+  option:
+    siteName: CC的部落格
+    api: https://disqus.ccknbc.workers.dev/api/
+    nocomment: 这里冷冷清清的，快来留下脚印吧！
+    admin: ccknbc
+    adminLabel: 博主兼管理员
 
 # livere (來必力)
 # https://www.livere.com/
@@ -387,35 +388,33 @@ gitalk:
   repo:
   owner:
   admin:
-  language: en # en, zh-CN, zh-TW, es-ES, fr, ru
-  perPage: 10 # Pagination size, with maximum 100.
-  distractionFreeMode: false # Facebook-like distraction free mode.
-  pagerDirection: last # Comment sorting direction, available values are last and first.
-  createIssueManually: true # Gitalk will create a corresponding github issue for your every single page automatically
   option:
+    language: en # en, zh-CN, zh-TW, es-ES, fr, ru
+    perPage: 10 # Pagination size, with maximum 100.
+    distractionFreeMode: false # Facebook-like distraction free mode.
+    pagerDirection: last # Comment sorting direction, available values are last and first.
+    createIssueManually: true # Gitalk will create a corresponding github issue for your every single page automatically
 
 # valine
 # https://valine.js.org
 valine:
   appId:
   appKey:
-  pageSize: 10 # comment list page size
-  master: "1928aaddbe6e7107395bf3ac99f35886,e3fd33fcc97d0fb8d1095f19a4bc5e45,ae255049cc3f836c5b01dbfa72f7bff9"
-  friends: "d0444153231c7f6d8ccf6ec90950c06c,95240b53f57d823ab135c20e6435c958"
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
-  lang: zh-CN # i18n: zh-CN/zh-TW/en/ja
-  placeholder: 仅在昵称中填写QQ号或自定义填写相关信息\n您的信息仅作你我收到回复通知使用\n重要评论请点击切换评论系统
-  #Valine系统暂时停用，恢复时间待定  # valine comment input placeholder(like: Please leave your footprints )
-  guest_info: nick,mail,link #valine comment header info (nick/mail/link)
-  recordIP: true # Record reviewer IP
   serverURLs: https://5J2LIPyE.api.lncldglobal.com # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
   bg: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/image/comments/bg.jpg
-  emojiCDN: https://cdn.jsdelivr.net/gh/GamerNoTitle/Valinecdn/
-  #https://valinecdn.bili33.top/
-  enableQQ: true # enable the Nickname box to automatically get QQ Nickname and QQ Avatar
-  requiredFields: mail # required fields (nick/mail)
   visitor: false
   option:
+    pageSize: 10 # comment list page size
+    lang: zh-CN # i18n: zh-CN/zh-TW/en/ja
+    placeholder: 仅在昵称中填写QQ号或自定义填写相关信息\n您的信息仅作你我收到回复通知使用\n重要评论请点击切换评论系统
+    #Valine系统暂时停用，恢复时间待定  # valine comment input placeholder(like: Please leave your footprints )
+    guest_info: nick,mail,link #valine comment header info (nick/mail/link)
+    recordIP: true # Record reviewer IP
+    emojiCDN: https://cdn.jsdelivr.net/gh/GamerNoTitle/Valinecdn/
+    #https://valinecdn.bili33.top/
+    enableQQ: true # enable the Nickname box to automatically get QQ Nickname and QQ Avatar
+    requiredFields: mail # required fields (nick/mail)
 
 # utterances
 # https://utteranc.es/
