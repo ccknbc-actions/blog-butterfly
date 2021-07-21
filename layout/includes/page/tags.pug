@@ -3,3 +3,5 @@
   span.tag-cloud-amount= site.tags.length
 .tag-cloud-list.is-center
   !=cloudTags({source: site.tags, minfontsize: 1.2, maxfontsize: 2.1, limit: 0, unit: 'em'})
+  //- !=list_tags(site.tags,{orderby: 'length', order: 'desc', amount: 0})
+  != tagcloud({min_font: 1.1, max_font: 1.5, amount: tagLimit , color: true, start_color: '#999', end_color: '#99a9bf', unit: 'em'})
