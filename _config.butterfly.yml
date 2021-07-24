@@ -291,16 +291,16 @@ comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Valine/Waline/Utterances/Beaudar//Gitalk/Facebook Comments/Twikoo
   use:
-  - Beaudar
+  # - Beaudar
   # - Utterances
   # - Disqus
   # - Livere
   # - Waline
   # - Artalk
-  - Disqusjs
+  # - Disqusjs
   # - Cusdis
   # - Twikoo
-  # - Waline
+  - Waline
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -321,13 +321,19 @@ waline:
   option:
     pageSize: 10
     requiredMeta: ['nick', 'mail']
-    login:
+    login: force
+    copyright: false
     locale:
       admin: 博主兼管理员
-      nick: ' 昵称 (必填)'
-      mail: ' 邮箱 (必填)'
-      link: ' 网址 (选填)'
+      # nick: ' 昵称 (必填)'
+      # mail: ' 邮箱 (必填)'
+      # link: ' 网址 (选填)'
       sofa: 这里冷冷清清的，快来留下脚印吧！
+      placeholder: 未开启评论审核，仅允许已登录用户评论
+    emoji: [
+      'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji',
+      'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw'
+    ]
 
 # Twikoo
 # https://github.com/imaegoo/twikoo
@@ -831,7 +837,7 @@ runtimeshow:
 # Aside widget - Newest Comments
 newest_comments:
   enable: true
-  limit: 1
+  limit: 3
   storage: 1
   avatar: true
   sort_order: 2 # Don't modify the setting unless you know how it works
@@ -915,7 +921,7 @@ statuspage:
 # Artitalk
 # see https://artitalk.js.org/
 artitalk:
-  enable: true
+  enable: false
   appId: pvExDcJ4o0gsrOI1G1eGO01H-MdYXbMMI
   appKey: D4V4sTiVUkTmOqyVyBN79iDB
   path: say
@@ -934,7 +940,7 @@ artitalk:
 # HexoPlusPlus Talk
 # see https://hexoplusplus.js.org
 hpptalk:
-  enable: true
+  enable: false
   domain: blog.ccknbc.workers.dev
   path: talk
   limit:
