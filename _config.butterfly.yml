@@ -505,7 +505,7 @@ footer:
   owner:
     enable: false
     since: 2020
-  custom_text: '<iframe src="https://cc.instatus.com/embed-status/light-sm" width="158" height="43" frameBorder="0" scrolling="no" style="border: none;" ></iframe>'
+  custom_text: 
   copyright: false # Copyright of theme and framework
   ICP: # Chinese ICP License
     enable: true
@@ -560,17 +560,17 @@ microsoft_clarity:
 
 # Google Adsense (谷歌廣告)
 google_adsense:
-  enable: false
-  auto_ads: false
+  enable: true
+  auto_ads: true
   js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
   client: ca-pub-4962482948943075
   enable_page_level_ads: false
 
 # Insert ads manually (手動插入廣告)
-# ad:
-#   index: <ins class="adsbygoogle"     style="display:block"     data-ad-format="fluid"     data-ad-layout-key="-6t+ed+2i-1n-4w"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="4937963308"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
-#   aside: <ins class="adsbygoogle"     style="display:block"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="4550249483"     data-ad-format="auto"     data-full-width-responsive="true"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
-#   post: <ins class="adsbygoogle"     style="display:block; text-align:center;"     data-ad-layout="in-article"     data-ad-format="fluid"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="1143882169"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
+ad:
+  # index: <ins class="adsbygoogle"     style="display:block"     data-ad-format="fluid"     data-ad-layout-key="-6t+ed+2i-1n-4w"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="4937963308"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
+  aside: <ins class="adsbygoogle"     style="display:block"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="4550249483"     data-ad-format="auto"     data-full-width-responsive="true"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
+  # post: <ins class="adsbygoogle"     style="display:block; text-align:center;"     data-ad-layout="in-article"     data-ad-format="fluid"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="1143882169"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
 
 # Verification (站長驗證)
 # --------------------------------------
@@ -780,8 +780,8 @@ aside:
       text: 多种订阅更新方案
       link: /sub
   card_announcement:
-    enable: false
-    content: '<center><iframe src="https://cc.instatus.com/embed-status/light-sm" loading="lazy" width="190" height="41" frameBorder="0" scrolling="no" style="border: none;" ></iframe></center>'
+    enable: true
+    content: '<center><iframe src="https://cc.instatus.com/embed-status/light-sm" loading="lazy" width="158" height="43" frameBorder="0" scrolling="no" style="border: none;" ></iframe><div id="he-plugin-standard"></div><script>WIDGET = {  "CONFIG": {    "layout": "2",    "width": "230",    "height": "290",    "background": "1",    "dataColor": "FFFFFF",    "borderRadius": "5",    "key": "dac79a62255345c9b4a31b585c3434a4"  }}</script><script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>'
     # '<center><iframe src="https://cc.instatus.com/embed-status/light-sm" loading="lazy" width="190" height="41" frameBorder="0" scrolling="no" style="border: none;" ></iframe>
     # <center>
     # <a target="_blank" href="https://hexo.io"><img src="https://img.shields.io/badge/Frame-Hexo 5.3.0-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><br>
@@ -797,7 +797,7 @@ aside:
     enable: true
     limit: 3 # if set 0 will show all
     sort: updated # date or updated
-    sort_order: 1 # Don't modify the setting unless you know how it works
+    sort_order: # Don't modify the setting unless you know how it works
   card_categories:
     enable: false
     limit: 8 # if set 0 will show all
@@ -819,7 +819,7 @@ aside:
     enable: true
     post_count: true
     last_push_date: true
-    sort_order: 0 # Don't modify the setting unless you know how it works
+    sort_order: # Don't modify the setting unless you know how it works
 
 # busuanzi count for PV / UV in site
 # 訪問人數
@@ -840,7 +840,7 @@ newest_comments:
   limit: 3
   storage: 1
   avatar: true
-  sort_order: 2 # Don't modify the setting unless you know how it works
+  sort_order: # Don't modify the setting unless you know how it works
 
 # Bottom right button (右下角按鈕)
 # --------------------------------------
@@ -1036,9 +1036,9 @@ inject:
 
 CDN:
   # main
-  main_css: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/css/index.css
-  main: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/main.js
-  utils: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/utils.js
+  # main_css: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/css/index.css
+  # main: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/main.js
+  # utils: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/utils.js
 
   # comments
   valine: https://cdn.jsdelivr.net/gh/lete114/CDN/Valine/Valine-Lete3.2-min.js
