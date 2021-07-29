@@ -332,6 +332,7 @@ waline:
       placeholder: 未开启评论审核，仅允许已登录用户评论
     emoji: [
       'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji',
+      'https://cdn.jsdelivr.net/gh/zhheo/Sticker-Heo@latest/Sticker-100/',
       'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw'
     ]
 

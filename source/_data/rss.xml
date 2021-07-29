@@ -22,13 +22,15 @@
     {% if config.feed.hub %}<atom:link href="{{ config.feed.hub | uriencode }}" rel="hub"/>{% endif %}
     <description>{{ config.description }}</description>
     <pubDate>{% if posts.first().updated %}{{ posts.first().updated.toDate().toUTCString() }}{% else %}{{ posts.first().date.toDate().toUTCString() }}{% endif %}</pubDate>
-    <generator>CC的部落格 https://blog.ccknbc.cc</generator>
+    <lastBuildDate>{% if posts.first().updated %}{{ posts.first().updated.toDate().toUTCString() }}{% else %}{{ posts.first().date.toDate().toUTCString() }}{% endif %}</lastBuildDate>
+    <generator>CC的部落格</generator>
+    <copyright>2020-2021 CC康纳百川 All rights reserved.</copyright>
     {% for post in posts.toArray() %}
     <item>
       <title>{{ post.title }}</title>
       <link>{{ post.permalink | uriencode }}</link>
       <guid>{{ post.permalink | uriencode }}</guid>
-      <pubDate>{{ post.date.toDate().toUTCString() }}</pubDate>
+      <pubDate>{{ post.updated.toDate().toUTCString() }}</pubDate>
       {% if post.description %}
       <description>{{ post.description }}</description>
       {% elif post.intro %}
