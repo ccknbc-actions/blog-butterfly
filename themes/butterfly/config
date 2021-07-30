@@ -6,7 +6,7 @@
 	symlinks = false
 	ignorecase = true
 [remote "origin"]
-	url = https://hub.fastgit.org/jerryc127/hexo-theme-butterfly.git
+	url = git@github.com:jerryc127/hexo-theme-butterfly.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
 [branch "dev"]
 	remote = origin
