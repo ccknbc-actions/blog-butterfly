@@ -561,17 +561,17 @@ microsoft_clarity:
 
 # Google Adsense (谷歌廣告)
 google_adsense:
-  enable: true
+  enable: false
   auto_ads: false
   js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
   client: ca-pub-4962482948943075
   enable_page_level_ads: false
 
 # Insert ads manually (手動插入廣告)
-ad:
-  index: <ins class="adsbygoogle"     style="display:block"     data-ad-format="fluid"     data-ad-layout-key="-6t+ed+2i-1n-4w"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="4937963308"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
-  aside: <ins class="adsbygoogle"     style="display:block"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="4550249483"     data-ad-format="auto"     data-full-width-responsive="true"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
-  post: <ins class="adsbygoogle"     style="display:block; text-align:center;"     data-ad-layout="in-article"     data-ad-format="fluid"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="1143882169"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
+# ad:
+#   index: <ins class="adsbygoogle"     style="display:block"     data-ad-format="fluid"     data-ad-layout-key="-6t+ed+2i-1n-4w"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="4937963308"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
+#   aside: <ins class="adsbygoogle"     style="display:block"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="4550249483"     data-ad-format="auto"     data-full-width-responsive="true"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
+#   post: <ins class="adsbygoogle"     style="display:block; text-align:center;"     data-ad-layout="in-article"     data-ad-format="fluid"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="1143882169"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
 
 # Verification (站長驗證)
 # --------------------------------------
@@ -735,7 +735,7 @@ blog_title_font:
 hr_icon:
   enable: true
   icon: '\f863' # the unicode value of Font Awesome icon
-  icon-top:
+  icon-top: '\f863'
 
 # the subtitle on homepage (主頁subtitle)
 subtitle:
@@ -781,7 +781,7 @@ aside:
       text: 多种订阅更新方案
       link: /sub
   card_announcement:
-    enable: true
+    enable: false
     content: '<center><iframe src="https://cc.instatus.com/embed-status/light-sm" loading="lazy" width="158" height="43" frameBorder="0" scrolling="no" style="border: none;" ></iframe><div id="he-plugin-standard"></div><script>WIDGET = {  "CONFIG": {    "layout": "2",    "width": "230",    "height": "290",    "background": "1",    "dataColor": "FFFFFF",    "borderRadius": "5",    "key": "dac79a62255345c9b4a31b585c3434a4"  }}</script><script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>'
     # '<center><iframe src="https://cc.instatus.com/embed-status/light-sm" loading="lazy" width="190" height="41" frameBorder="0" scrolling="no" style="border: none;" ></iframe>
     # <center>
