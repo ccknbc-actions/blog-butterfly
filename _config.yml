@@ -62,13 +62,14 @@ marked:
   autolink: true
   mangle: true
   sanitizeUrl: false
+  dompurify: false
   headerIds: true
   lazyload: true
   prependRoot: false
   postAsset: false
   external_link:
     enable: true
-    exclude: [www.ccknbc.cc,ccknbc.cc]
+    exclude: []
     nofollow: true
   disableNunjucks: false
   descriptionLists: true

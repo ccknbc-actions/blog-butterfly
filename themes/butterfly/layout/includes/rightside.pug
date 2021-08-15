@@ -46,7 +46,7 @@
       button#translateLink(type="button" title=_p('rightside.translate_title'))= theme.translate.default
     if theme.darkmode.enable && theme.darkmode.button
       button#darkmode(type="button" title=_p('rightside.night_mode_title'))
-        i.fas.fa-adjust
+        i.fas.fa-adjust.faa-spin.animated
     if theme.aside.enable && theme.aside.button && page.aside !== false
       button#hide-aside-btn(type="button" title=_p('rightside.aside'))
         i.fas.fa-angle-double-right
@@ -70,4 +70,4 @@
       a#to_comment(href="#post-comment" title=_p("rightside.scroll_to_comment"))
         i.fas.fa-comments
     button#go-up(type="button" title=_p("rightside.back_to_top"))
-      i.fas.fa-arrow-up
+      i.fas.fa-arrow-up.faa-rising.animated

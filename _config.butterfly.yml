@@ -48,12 +48,12 @@ copy:
 social:
   # fab fa-github: https://github.com/CCKNBC || GitHub
   # fas fa-envelope: mailto:blog@ccknbc.cc || Email
-  # fas fa-rss: /rss.xml || RSS
-  fab fa-telegram: https://t.me/ccknbcTG || Telegram
+  fas fa-bell faa-ring animated: /sub || 多种订阅方式
+  fab fa-telegram faa-pulse animated: https://t.me/ccknbcTG || Telegram
   # fab fa-telegram-plane: https://t.me/ccknbcTG || Telegram Group
   # fab fa-line: https://line.me/ti/p/1vqM_WDef1 || LINE
   # fab fa-weibo: https://weibo.com/CommonCulture || Weibo
-  fab fa-twitter: https://www.twitter.com/ccknbc || Twitter
+  fab fa-twitter faa-shake animated: https://www.twitter.com/ccknbc || Twitter
   # fab fa-instagram: https://www.instagram.com/ccknbc || Instagram
   # fab fa-facebook: https://www.facebook.com/ccknbc || Facebook
   # fab fa-facebook-messenger: https://m.me/ccknbc || Messenger
@@ -777,9 +777,9 @@ aside:
     description: ''
     button:
       enable: true
-      icon: fas fa-rss faa-ring animated
-      text: 多种订阅更新方案
-      link: /sub
+      icon: fas fa-circle faa-burst animated
+      text: CC的状态监控
+      link: https://cc.instatus.com
   card_announcement:
     enable: false
     content: '<center><iframe src="https://cc.instatus.com/embed-status/light-sm" loading="lazy" width="158" height="43" frameBorder="0" scrolling="no" style="border: none;" ></iframe><div id="he-plugin-standard"></div><script>WIDGET = {  "CONFIG": {    "layout": "2",    "width": "230",    "height": "290",    "background": "1",    "dataColor": "FFFFFF",    "borderRadius": "5",    "key": "dac79a62255345c9b4a31b585c3434a4"  }}</script><script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>'
@@ -798,7 +798,7 @@ aside:
     enable: true
     limit: 3 # if set 0 will show all
     sort: updated # date or updated
-    sort_order: # Don't modify the setting unless you know how it works
+    sort_order: 1 # Don't modify the setting unless you know how it works
   card_categories:
     enable: false
     limit: 8 # if set 0 will show all
@@ -820,7 +820,7 @@ aside:
     enable: true
     post_count: true
     last_push_date: true
-    sort_order: # Don't modify the setting unless you know how it works
+    sort_order: 0 # Don't modify the setting unless you know how it works
 
 # busuanzi count for PV / UV in site
 # 訪問人數
@@ -841,7 +841,7 @@ newest_comments:
   limit: 3
   storage: 1
   avatar: true
-  sort_order: # Don't modify the setting unless you know how it works
+  sort_order: 2 # Don't modify the setting unless you know how it works
 
 # Bottom right button (右下角按鈕)
 # --------------------------------------
