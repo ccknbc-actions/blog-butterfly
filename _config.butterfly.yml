@@ -199,7 +199,8 @@ index_post_content:
 
 # toc (目錄)
 toc:
-  enable: true
+  post: true
+  page: true
   number: true
   style_simple: true
 
@@ -1037,9 +1038,9 @@ inject:
 
 CDN:
   # main
-  # main_css: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/css/index.css
-  # main: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/main.js
-  # utils: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/utils.js
+  main_css: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/css/index.css
+  main: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/main.js
+  utils: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/utils.js
 
   # comments
   valine: https://cdn.jsdelivr.net/gh/lete114/CDN/Valine/Valine-Lete3.2-min.js
