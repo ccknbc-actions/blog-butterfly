@@ -55,14 +55,14 @@
     if is_post()
       if (theme.readmode || theme.translate.enable || (theme.darkmode.enable && theme.darkmode.button) || theme.change_font_size)
         button#rightside_config(type="button" title=_p("rightside.setting"))
-          i.fas.fa-user-cog
-      if showToc
-        button#mobile-toc-button.close(type="button" title=_p("rightside.toc"))
-          i.fas.fa-list-ul
+          i.fas.fa-cog.fa-spin
     else if theme.translate.enable || (theme.darkmode.enable && theme.darkmode.button) || theme.change_font_size
       button#rightside_config(type="button" title=_p("rightside.setting"))
         i.fas.fa-user-cog
 
+    if showToc
+      button#mobile-toc-button.close(type="button" title=_p("rightside.toc"))
+        i.fas.fa-list-ul
     if theme.chat_btn
       button#chat_btn(type="button" title=_p("rightside.chat_btn"))
         i.fas.fa-comment-alt
