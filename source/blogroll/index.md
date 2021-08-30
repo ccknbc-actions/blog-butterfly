@@ -9,8 +9,8 @@ subtitle: Blogroll
 date: 2020-06-04 22:17:49
 updated: 2021-07-18 19:38:19
 ---
-
-<script src="https://cdn.jsdelivr.net/npm/butterfly-friend/dist/friend.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@main/blogroll.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/butterfly-friend/dist/friend.min.js"></script> -->
 <!-- <script src="https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@main/screenshot.js"></script> -->
 <script>
   var obj = {

@@ -48,12 +48,15 @@ copy:
 social:
   # fab fa-github: https://github.com/CCKNBC || GitHub
   # fas fa-envelope: mailto:blog@ccknbc.cc || Email
-  fas fa-bell faa-ring animated: /sub || 多种订阅方式
-  fab fa-telegram faa-pulse animated: https://t.me/ccknbcTG || Telegram
+  fas fa-bell: /sub || 多种订阅方式
+  fab fa-telegram: https://t.me/ccknbcTG || Telegram
+  # fas fa-bell faa-ring animated: /sub || 多种订阅方式
+  # fab fa-telegram faa-pulse animated: https://t.me/ccknbcTG || Telegram
   # fab fa-telegram-plane: https://t.me/ccknbcTG || Telegram Group
   # fab fa-line: https://line.me/ti/p/1vqM_WDef1 || LINE
   # fab fa-weibo: https://weibo.com/CommonCulture || Weibo
-  fab fa-twitter faa-shake animated: https://www.twitter.com/ccknbc || Twitter
+  fab fa-twitter: https://www.twitter.com/ccknbc || Twitter
+  # fab fa-twitter faa-shake animated: https://www.twitter.com/ccknbc || Twitter
   # fab fa-instagram: https://www.instagram.com/ccknbc || Instagram
   # fab fa-facebook: https://www.facebook.com/ccknbc || Facebook
   # fab fa-facebook-messenger: https://m.me/ccknbc || Messenger
@@ -253,7 +256,7 @@ post_pagination: true
 
 # anchor
 # when you scroll in post, the URL will update according to header id.
-anchor: true
+anchor: false
 
 # Displays outdated notice for a post (文章過期提醒)
 noticeOutdate:
@@ -315,14 +318,14 @@ waline:
   serverURL: https://waline.ccknbc.ml # Waline server address url
   avatar: monsterid # gravatar style https://zh-tw.gravatar.com/site/implement/images/#default-image
   bg:  # waline background
-  avatarCDN: https://sdn.geekzu.org/avatar/
+  avatarCDN:
   # https://gravatar.loli.net/avatar/
   # https://cdn.v2ex.com/gravatar/
   visitor: false
   option:
     pageSize: 10
     requiredMeta: ['nick', 'mail']
-    login: force
+    login: false
     copyright: false
     locale:
       admin: 博主兼管理员
@@ -330,7 +333,7 @@ waline:
       # mail: ' 邮箱 (必填)'
       # link: ' 网址 (选填)'
       sofa: 这里冷冷清清的，快来留下脚印吧！
-      placeholder: 未开启评论审核，仅允许已登录用户评论
+      placeholder:
     emoji: [
       'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji',
       'https://cdn.jsdelivr.net/gh/zhheo/Sticker-Heo@latest/Sticker-100/',
@@ -507,7 +510,7 @@ footer:
   owner:
     enable: false
     since: 2020
-  custom_text: 
+  custom_text:
   copyright: false # Copyright of theme and framework
   ICP: # Chinese ICP License
     enable: true
@@ -713,8 +716,8 @@ display_mode: light
 beautify:
   enable: true
   field: site # site/post
-  title-prefix-icon: '\f0c1'
-  title-prefix-icon-color: '#F47466'
+  title-prefix-icon: '\f13d'
+  title-prefix-icon-color: '#2FCC66'
 
 # Global font settings
 # Don't modify the following settings unless you know how they work (非必要不要修改)
@@ -734,9 +737,9 @@ blog_title_font:
 
 # The setting of divider icon (水平分隔線圖標設置)
 hr_icon:
-  enable: true
-  icon: '\f863' # the unicode value of Font Awesome icon
-  icon-top: '\f863'
+  enable: false
+  icon: '' # the unicode value of Font Awesome icon
+  icon-top: ''
 
 # the subtitle on homepage (主頁subtitle)
 subtitle:
@@ -839,10 +842,10 @@ runtimeshow:
 # Aside widget - Newest Comments
 newest_comments:
   enable: true
-  limit: 3
+  limit: 0
   storage: 1
   avatar: true
-  sort_order: 2 # Don't modify the setting unless you know how it works
+  sort_order: 3 # Don't modify the setting unless you know how it works
 
 # Bottom right button (右下角按鈕)
 # --------------------------------------
@@ -1038,9 +1041,9 @@ inject:
 
 CDN:
   # main
-  main_css: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/css/index.css
-  main: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/main.js
-  utils: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/utils.js
+  # main_css: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/css/index.css
+  # main: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/main.js
+  # utils: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/utils.js
 
   # comments
   valine: https://cdn.jsdelivr.net/gh/lete114/CDN/Valine/Valine-Lete3.2-min.js
