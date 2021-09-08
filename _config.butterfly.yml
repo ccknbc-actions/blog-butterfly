@@ -299,12 +299,11 @@ comments:
   # - Utterances
   # - Disqus
   # - Livere
-  # - Waline
+  - Waline
   # - Artalk
-  # - Disqusjs
+  - Disqusjs
   # - Cusdis
   # - Twikoo
-  - Waline
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -333,7 +332,7 @@ waline:
       # mail: ' 邮箱 (必填)'
       # link: ' 网址 (选填)'
       sofa: 这里冷冷清清的，快来留下脚印吧！
-      placeholder:
+      placeholder: 如果您觉得此评论系统仍不够安全，不如点击上方按钮切换为DisqusJS享受更安全的匿名评论
     emoji: [
       'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji',
       'https://cdn.jsdelivr.net/gh/zhheo/Sticker-Heo@latest/Sticker-100/',
@@ -842,8 +841,8 @@ runtimeshow:
 # Aside widget - Newest Comments
 newest_comments:
   enable: true
-  limit: 0
-  storage: 1
+  limit: 3
+  storage: 10
   avatar: true
   sort_order: 3 # Don't modify the setting unless you know how it works
 
@@ -1041,9 +1040,9 @@ inject:
 
 CDN:
   # main
-  # main_css: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/css/index.css
-  # main: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/main.js
-  # utils: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/utils.js
+  main_css: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/css/index.css
+  main: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/main.js
+  utils: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/utils.js
 
   # comments
   valine: https://cdn.jsdelivr.net/gh/lete114/CDN/Valine/Valine-Lete3.2-min.js
@@ -1053,13 +1052,13 @@ CDN:
   artalk_css: https://cdn.jsdelivr.net/gh/ArtalkJS/Artalk@master/dist/Artalk.css
 
   # search
-  local_search: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/search/local-search.js
-  algolia_js: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/search/algolia.js
+  local_search: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/search/local-search.js
+  algolia_js: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/search/algolia.js
 
   # Conversion between Traditional and Simplified Chinese
-  translate: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/tw_cn.js
+  translate: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/tw_cn.js
 
   # other
   statuspage: https://ccknbc.statuspage.io/embed/script.js
   pace: https://cdn.jsdelivr.net/gh/CodeByZach/pace/pace.min.js
-  ccknbc: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/js/ccknbc.js
+  ccknbc: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/js/ccknbc.js

@@ -83,13 +83,6 @@ jobs:
     #       gitee-password: ${{ secrets.GITEE_PASSWORD }}
     #       gitee-repo: ccknbc/ccknbc
 
-    - name: Purge JsDelivr CDN
-      run: |
-        curl https://purge.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/
-        curl https://purge.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/css/index.css
-        curl https://purge.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/main.js
-        curl https://purge.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/utils.js
-
     - name: Sync RSS
       run: |
         curl 'https://kkapi.vercel.app/api/github?type=dispatch&owner=ccknbc-actions&repo=home&token=${{ secrets.GH_TOKEN }}&runit_text=RSS'

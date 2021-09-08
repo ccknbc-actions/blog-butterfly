@@ -49,8 +49,22 @@ img[data-lazy-src]:not(.loaded) {
 
   <!-- tab 朋友圈@fas fa-blog -->
 
-  <div id="moments_container"></div>
-  <script defer src="https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll/moments.js"></script>
+  <script>
+      id:"fcircleContainer"  //容器id
+      // 全局变量声明区域
+      var fdata = {
+          apiurl: 'https://moments.ccknbc.vercel.app/api', //api地址
+          initnumber: 10, //【可选】页面初始化展示文章数量
+          stepnumber: 10 //【可选】每次加载增加的篇数
+      }
+  </script>
+
+  <!-- 友链朋友圈依赖 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Rock-Candy-Tea/hexo-friendcircle-demo@main/css/butterfly.css">            <!-- css -->
+  <script async src="https://cdn.jsdelivr.net/gh/Rock-Candy-Tea/hexo-friendcircle-demo@main/js/fcircle.js" charset="utf-8"></script>    <!-- js -->
+
+  <!-- 启用挂载友链朋友圈的容器 -->
+  <div id="fcircleContainer"></div>
 
   <!-- endtab -->
 
