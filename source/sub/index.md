@@ -10,11 +10,7 @@ updated: 2021-07-18 19:38:19
 ---
 {% note success %} **以下方式均支持随时取消订阅，偏好可随时更改** {% endnote %}
 
-{% note warning %} **很抱歉，因为关闭了浏览器订阅(好像也没啥用，还会给读者造成不好的体验，但说真的很好用)，请使用邮件订阅** {% endnote %}
-
-~~1. 浏览器订阅，点击 {% label 右下角小铃铛 green %}订阅按钮，并确认允许通知后，即可在文章有更新时通过浏览器给您发送通知（建议您在 Windows 或 Mac 上采取此种方式，对于安卓用户，由于谷歌推送服务的原因基本接收不到通知，对于 IOS 用户因为我穷不可能买证书的所以也无法推送。即使您清除了本站浏览器数据，当您重新浏览本站时，也会为您自动重新订阅，除非您主动取消订阅）。~~
-
-2. 在下表中填入您的电子邮件（或其他相关信息），点击订阅，按照邮件内容点击确认订阅链接即可
+- 在下表中填入您的电子邮件（或其他相关信息），点击订阅，按照邮件内容点击确认订阅链接即可
 <!-- Begin Mailchimp Signup Form -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
 <link href="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/css/mailchimp.css" rel="stylesheet" type="text/css">
@@ -55,6 +51,6 @@ updated: 2021-07-18 19:38:19
 <script defer type='text/javascript' src='https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/js/mailchimp.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday'; }(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <!--End mc_embed_signup-->
 
-3. RSS订阅 [rss](/rss.xml) 或 [atom](/atom.xml) 通过邮件或阅读器阅读
+- RSS订阅 [Rss](/rss.xml) 或 [Atom](/atom.xml) 通过邮件或阅读器阅读
 <!-- 3. 邮件订阅，前往 [订阅界面一](https://briefcake.com/s/ccknbc) 或 [订阅界面二](https://ccknbc.mailchimpsites.com) -->
-4. 邮件订阅，点击 {% label 右下角聊天按钮 green %}给CC留言，任意发送一条消息后，出现介绍自己界面时勾选订阅点击发送即可完成订阅 
+- 邮件订阅，点击 {% label 右下角聊天按钮 green %}给CC留言，任意发送一条消息后，出现介绍自己界面时勾选订阅点击发送即可完成订阅 

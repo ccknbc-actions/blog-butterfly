@@ -1,6 +1,6 @@
 ---
 title: 关于本站
-description: CC的部落格 更新日志
+description: CC的部落格 关于页面
 aside: false
 top_img: false
 translate_title: about

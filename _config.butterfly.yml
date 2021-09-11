@@ -12,6 +12,7 @@ menu:
   便签 || fas fa-sticky-note:
     友链: /blogroll || fas fa-blog
     音乐: /music || fas fa-music
+    短文: /essay || fas fa-comment-alt
     # 统计: /charts || fas fa-chart-bar
   关于 || fas fa-desktop:
     订阅: /sub || fas fa-rss
@@ -317,7 +318,7 @@ waline:
   serverURL: https://waline.ccknbc.ml # Waline server address url
   avatar: monsterid # gravatar style https://zh-tw.gravatar.com/site/implement/images/#default-image
   bg:  # waline background
-  avatarCDN:
+  avatarCDN: https://gravatar.loli.net/avatar/
   # https://gravatar.loli.net/avatar/
   # https://cdn.v2ex.com/gravatar/
   visitor: false
@@ -334,9 +335,9 @@ waline:
       sofa: 这里冷冷清清的，快来留下脚印吧！
       placeholder: 如果您觉得此评论系统仍不够安全，不如点击上方按钮切换为DisqusJS享受更安全的匿名评论
     emoji: [
-      'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji',
       'https://cdn.jsdelivr.net/gh/zhheo/Sticker-Heo@latest/Sticker-100/',
-      'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw'
+      'https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/tw-emoji',
+      'https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/tw'
     ]
 
 # Twikoo
@@ -509,7 +510,7 @@ footer:
   owner:
     enable: false
     since: 2020
-  custom_text:
+  custom_text: '<a href="https://webify.cloudbase.net/" target="_blank" rel="noopener noreferrer">CloudBase Webify</a> 提供网站托管服务'
   copyright: false # Copyright of theme and framework
   ICP: # Chinese ICP License
     enable: true
@@ -529,7 +530,7 @@ footer:
   live: #页脚运行时间
     enable: true
     prefix: '本站已运行'
-    suffix: 'CC康纳百川 All Rights Reserved.'
+    suffix: 'CCKNBC All Rights Reserved.'
     start: "2020-06-04T00:00:00"
 
 # Analysis
@@ -878,7 +879,7 @@ darkmode:
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
-  autoChangeMode: 2
+  autoChangeMode: false
 
 # Lightbox (圖片大圖查看模式)
 # --------------------------------------

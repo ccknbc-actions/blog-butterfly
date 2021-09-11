@@ -60,7 +60,7 @@ img[data-lazy-src]:not(.loaded) {
   </script>
 
   <!-- 友链朋友圈依赖 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Rock-Candy-Tea/hexo-friendcircle-demo@main/css/butterfly.css">            <!-- css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Rock-Candy-Tea/hexo-friendcircle-demo@main/css/heo.css">            <!-- css -->
   <script async src="https://cdn.jsdelivr.net/gh/Rock-Candy-Tea/hexo-friendcircle-demo@main/js/fcircle.js" charset="utf-8"></script>    <!-- js -->
 
   <!-- 启用挂载友链朋友圈的容器 -->
