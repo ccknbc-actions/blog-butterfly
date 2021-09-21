@@ -1,6 +1,4 @@
 #footer-wrap
-  if theme.footer.custom_text
-    .footer_custom_text!=`${theme.footer.custom_text}`
   if theme.footer.copyright
     .framework-info
       span= _p('footer.framework') + ' '
@@ -26,6 +24,8 @@
         if theme.footer.gongan.icon
           img.gongan-icon(src=url_for(theme.footer.gongan.icon) alt='gongan')
         span=theme.footer.gongan.text
+  if theme.footer.custom_text
+    .footer_custom_text!=`${theme.footer.custom_text}`
   if theme.footer.live.enable
     .live
       span!=theme.footer.live.prefix
