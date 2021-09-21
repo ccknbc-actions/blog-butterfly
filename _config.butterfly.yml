@@ -315,10 +315,10 @@ comments:
 # waline - A simple comment system with backend support fork from Valine
 # https://waline.js.org/
 waline:
-  serverURL: https://waline.ccknbc.ml # Waline server address url
+  serverURL: https://waline.ccknbc.vercel.app # Waline server address url
   avatar: monsterid # gravatar style https://zh-tw.gravatar.com/site/implement/images/#default-image
   bg:  # waline background
-  avatarCDN: https://gravatar.loli.net/avatar/
+  # avatarCDN: https://gravatar.loli.net/avatar/
   # https://gravatar.loli.net/avatar/
   # https://cdn.v2ex.com/gravatar/
   visitor: false
@@ -326,7 +326,7 @@ waline:
     pageSize: 10
     requiredMeta: ['nick', 'mail']
     login: false
-    copyright: false
+    copyright: true
     locale:
       admin: 博主兼管理员
       # nick: ' 昵称 (必填)'
@@ -510,7 +510,7 @@ footer:
   owner:
     enable: false
     since: 2020
-  custom_text: '<a href="https://webify.cloudbase.net/" target="_blank" rel="noopener noreferrer">CloudBase Webify</a> 提供网站托管服务'
+  custom_text: #'<a href="https://webify.cloudbase.net/" target="_blank" rel="noopener noreferrer">CloudBase Webify</a> 提供网站托管服务'
   copyright: false # Copyright of theme and framework
   ICP: # Chinese ICP License
     enable: true
