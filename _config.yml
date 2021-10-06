@@ -198,6 +198,11 @@ use_webp: false
 plugins:
   - hexo-algoliasearch
 
+search:
+  path: search.json
+  field: all
+  content: true
+
 algolia:
   appId: "947RX7HP3E"
   applicationID: "947RX7HP3E"
@@ -270,12 +275,13 @@ douban:
 tag_plugins:
   enable: true # 开关
   priority: 5 #过滤器优先权
-  issues: false #issues标签依赖注入开关
+  issues: false #issues标签开关
   CDN:
     anima: https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css #动画标签anima的依赖
-    jquery: false #https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #issues标签依赖
-    issues: false #https://cdn.jsdelivr.net/npm/hexo-theme-volantis@latest/source/js/issues.min.js #issues标签依赖
-    iconfont: false #//at.alicdn.com/t/font_2032782_8d5kxvn09md.js #参看https://akilar.top/posts/d2ebecef/
+    jquery: https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #issues标签依赖
+    issues: https://cdn.jsdelivr.net/npm/hexo-theme-volantis@latest/source/js/issues.min.js #issues标签依赖
+    iconfont: //at.alicdn.com/t/font_2032782_8d5kxvn09md.js #参看https://akilar.top/posts/d2ebecef/
+    carousel: https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/carousel-touch.min.js
 
 wowjs:
   enable: false #控制动画开关。true是打开，false是关闭

@@ -145,11 +145,11 @@ category_per_img:
 cover:
   # display the cover or not (是否顯示文章封面)
   index_enable: true
-  aside_enable: true
+  aside_enable: false
   archives_enable: true
   # the position of cover in home page (封面顯示的位置)
   # left/right/both
-  position: right
+  position: left
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
   default_cover: https://api.zylearning.top/api/wallpaper?lx=fj
   # https://img.ccknbc.cc/blog/2020-10-12~18_03_32.webp
@@ -241,7 +241,7 @@ edit:
 
 # Related Articles
 related_post:
-  enable: true
+  enable: false
   limit: 6 # Number of posts displayed
   date_type: created # or created or updated 文章日期顯示創建日或者更新日
 
@@ -299,10 +299,10 @@ comments:
   # - Beaudar
   # - Utterances
   # - Disqus
-  # - Livere
-  - Waline
+  # - Waline
   # - Artalk
   - Disqusjs
+  # - Livere
   # - Cusdis
   # - Twikoo
   text: true # Display the comment name next to the button
@@ -342,7 +342,7 @@ waline:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: ccknbc-154167 # https://twikoo.ccknbc.ml #
+  envId: https://twikoo.ccknbc.vercel.app #ccknbc-154167
   region:
   visitor: false
   option:
@@ -564,17 +564,17 @@ microsoft_clarity:
 
 # Google Adsense (谷歌廣告)
 google_adsense:
-  enable: true
+  enable: false
   auto_ads: false
   js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
   client: ca-pub-4962482948943075
   enable_page_level_ads: false
 
 # Insert ads manually (手動插入廣告)
-ad:
-  index: <ins class="adsbygoogle"     style="display:block"     data-ad-format="fluid"     data-ad-layout-key="-6t+ed+2i-1n-4w"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="4937963308"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
-  # aside: <ins class="adsbygoogle"     style="display:block"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="4550249483"     data-ad-format="auto"     data-full-width-responsive="true"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
-  post: <ins class="adsbygoogle"     style="display:block; text-align:center;"     data-ad-layout="in-article"     data-ad-format="fluid"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="1143882169"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
+# ad:
+#   index: <ins class="adsbygoogle"     style="display:block"     data-ad-format="fluid"     data-ad-layout-key="-6t+ed+2i-1n-4w"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="4937963308"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
+#   aside: <ins class="adsbygoogle"     style="display:block"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="4550249483"     data-ad-format="auto"     data-full-width-responsive="true"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
+#   post: <ins class="adsbygoogle"     style="display:block; text-align:center;"     data-ad-layout="in-article"     data-ad-format="fluid"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="1143882169"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
 
 # Verification (站長驗證)
 # --------------------------------------
@@ -840,7 +840,7 @@ runtimeshow:
 
 # Aside widget - Newest Comments
 newest_comments:
-  enable: true
+  enable: false
   limit: 3
   storage: 10
   avatar: true

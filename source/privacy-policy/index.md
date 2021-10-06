@@ -10,7 +10,7 @@ keywords: privacy-policy
 description: CC的部落格 隐私政策
 ---
 
-本站非常重视用户的隐私和个人信息保护。您在使用网站时，可能会收集和使用您的相关信息。通过《隐私政策》向您说明在您访问 {% label blog.ccknbc.cc blue %} 网站时，如何收集、使用、保存、共享和转让这些信息。
+本站非常重视用户的隐私和个人信息保护。您在使用网站时，可能会收集和使用您的相关信息。通过《隐私政策》向您说明在您访问 {% label blog.ccknbc.cc green %} 网站时，如何收集、使用、保存、共享和转让这些信息。
 
 ## 如何收集和使用您的个人信息
 
@@ -18,7 +18,7 @@ description: CC的部落格 隐私政策
 
 在您访问时，仅会处于以下目的，使用您的个人信息：
 
-- [百度](https://tongji.baidu.com/web/help/article?id=330&type=0)/[谷歌](https://policies.google.com/privacy?hl=zh-CN)/[AddThis](https://www.addthis.com/privacy/privacy-policy)/[Tidio](https://www.tidio.com/privacy-policy/) 统计工具会收集您的访问信息，用于网站的优化与文章分类、恶意访问识别（被动，存储，系统定期清理）
+[百度](https://tongji.baidu.com/web/help/article?id=330&type=0)/[谷歌](https://policies.google.com/privacy?hl=zh-CN)/[AddThis](https://www.addthis.com/privacy/privacy-policy)/[Tidio](https://www.tidio.com/privacy-policy/) 统计工具会收集您的访问信息，用于网站的优化与文章分类、恶意访问识别（被动，存储，系统定期清理）
 
 您应该知道在您访问的时候以下信息会被统计功能使用：
 
@@ -40,7 +40,7 @@ description: CC的部落格 隐私政策
 
 关于如何[在 Chrome 中清除、启用和管理 Cookies](https://support.google.com/chrome/answer/95647?co=GENIE.Platform=Desktop&hl=zh-Hans)
 
-三、如何共享、转让您的个人信息
+## 如何共享、转让您的个人信息
 
 不会与任何公司、组织和个人共享您的个人信息
 不会将您的个人信息转让给任何公司、组织和个人
@@ -70,7 +70,7 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 |         授权         | 您登录我的网站时，我可通过 Cookie 提供正确信息，为您打造个性化的体验。例如： Cookies 会告知您通过搜索引擎搜索的具体内容来改善文章的标题优化关键词、或者创建更符合您搜索需求的文章内容。 |
 |       安全措施       | 我通过 Cookies 启用及支持安全功能，监控和防止可疑活动、欺诈性流量和违反版权协议的行为。 |
 |   偏好、功能和服务   | 我使用功能性 Cookies 来让我记住您的偏好，或保存您向我提供的有关您的喜好或其他信息。 |
-|    ~~个性化广告~~    |   ~~我使用 Cookies 在镜像站提供个性化广告（主站无广告）~~    |
+|    ~~个性化广告~~    |   ~~我使用 Cookies 提供个性化广告~~    |
 | 网站性能、分析和研究 | 我使用这些 Cookies 来监控网站性能。这使我能够通过快速识别和解决出现的任何问题来提供高质量的体验。 |
 
 ### 我的网站上的第三方 Cookies
@@ -85,7 +85,7 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 
 |                         第三方服务商                         |                      用途                      |
 | :----------------------------------------------------------: | :--------------------------------------------: |
-|      [Instatus](https://instatus.com/policies/privacy)       |              用于展示网站运行状态              |
+|      ~~[Instatus](https://instatus.com/policies/privacy)~~       |              ~~用于展示网站运行状态~~              |
 | [Disqus&DisqusJS](https://help.disqus.com/en/articles/1717103-disqus-privacy-policy) |   用于网站评论，存取您的验证信息及可访问状态   |
 |        [Tidio](https://www.tidio.com/privacy-policy/)        |        用于与我联络，邮件订阅，访问统计        |
 |      [MailChimp](https://mailchimp.com/legal/privacy/)       |    订阅页嵌入或与其他服务集成以完成邮件订阅    |
@@ -113,4 +113,4 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 
 我可能对此 Cookies 政策所做的任何更改都将发布在此页面上。如果更改很重要，我会在我的主页或应用上明确指出该政策已更新。
 
-{% btn '#',最后修订时间：2021 年 9 月 13 日 21:46,fas fa-history,block right green smaller %}
+{% btn '',最后修订时间：2021 年 10 月 5 日 20:33,fas fa-history,block right green smaller %}
