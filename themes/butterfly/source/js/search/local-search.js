@@ -10,7 +10,7 @@ window.addEventListener('load', () => {
       loadFlag = true
     }
     // shortcut: ESC
-    document.addEventListener('keydown', function f(event) {
+    document.addEventListener('keydown', function f (event) {
       if (event.code === 'Escape') {
         closeSearch()
         document.removeEventListener('keydown', f)
@@ -41,16 +41,16 @@ window.addEventListener('load', () => {
     searchClickFn()
   })
 
-  async function search(path) {
+  async function search (path) {
     let datas = []
     const typeF = path.split('.')[1]
     const response = await fetch(GLOBAL_CONFIG.root + path)
     if (typeF === 'json') {
       datas = await response.json()
     } else if (typeF === 'xml') {
-      let res = await response.text()
-      let t = await new window.DOMParser().parseFromString(res, 'text/xml')
-      let a = await t
+      const res = await response.text()
+      const t = await new window.DOMParser().parseFromString(res, 'text/xml')
+      const a = await t
       datas = [...a.querySelectorAll('entry')].map(function (item) {
         return {
           title: item.querySelector('title').textContent,
