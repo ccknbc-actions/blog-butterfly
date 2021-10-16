@@ -220,23 +220,23 @@ reward:
   enable: false
   QR_code:
     # - img: /img/wechat.jpg
-    #   link:
-    #   text: wechat
+    #   link: 
+    #   text: 微信
     # - img: /img/alipay.jpg
-    #   link:
-    #   text: alipay
+    #   link: 
+    #   text: 支付宝
 
 # Easily browse and edit blog source code online.
 edit:
   enable: true
   yuque: https://www.yuque.com/ccknbc/blog/
-  gitlab: false
-  gitlab_ide: false
-  cloud_studio: false
+  # gitlab: false
+  # gitlab_ide: false
+  # cloud_studio: false
   hexoplusplus: false
-  # gitlab: https://gitlab.com/CCKNBC/ccknbc.gitlab.io/-/edit/
-  # gitlab_ide: https://gitlab.com/-/ide/project/CCKNBC/ccknbc.gitlab.io/edit/
-  # cloud_studio: https://ccknbc.cloudstudio.net/ws/dbipsw
+  gitlab: https://gitlab.com/CCKNBC/ccknbc.gitlab.io/-/edit/
+  gitlab_ide: https://gitlab.com/-/ide/project/CCKNBC/ccknbc.gitlab.io/edit/
+  cloud_studio: https://ccknbc.cloudstudio.net/ws/zknrue
   # hexoplusplus: https://hpp.ccknbc.workers.dev/hpp/admin/dash/edit
 
 

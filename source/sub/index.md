@@ -10,7 +10,7 @@ updated: 2021-07-18 19:38:19
 ---
 {% note success %} **以下方式均支持随时取消订阅，偏好可随时更改** {% endnote %}
 
-- 在下表中填入您的电子邮件（或其他相关信息），点击订阅，按照邮件内容点击确认订阅链接即可
+- 邮件订阅：在下表中填入您的电子邮件（或其他相关信息），点击订阅，按照邮件内容点击确认订阅链接即可
 <!-- Begin Mailchimp Signup Form -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
 <link href="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/css/mailchimp.css" rel="stylesheet" type="text/css">
@@ -38,7 +38,7 @@ updated: 2021-07-18 19:38:19
 		<span class="subfield dayfield"><input class="birthday " type="text" pattern="[0-9]*" value="" placeholder="DD" size="2" maxlength="2" name="BIRTHDAY[day]" id="mce-BIRTHDAY-day"></span> 
 		<span class="small-meta nowrap">( 月 / 日 )</span>
 	</div>
-</div><p><a href="https://us2.campaign-archive.com/home/?u=a0aadd04e3d48349de29068f8&id=7518e18fcd" title="查看历史文章更新记录">查看更新历史</a></p>
+</div>
 	<div id="mce-responses" class="clear">
 		<div class="response" id="mce-error-response" style="display:none"></div>
 		<div class="response" id="mce-success-response" style="display:none"></div>
@@ -51,6 +51,7 @@ updated: 2021-07-18 19:38:19
 <script defer type='text/javascript' src='https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/js/mailchimp.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday'; }(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <!--End mc_embed_signup-->
 
-- RSS订阅 [Rss](/rss.xml) 或 [Atom](/atom.xml) 通过邮件或阅读器阅读
-<!-- 3. 邮件订阅，前往 [订阅界面一](https://briefcake.com/s/ccknbc) 或 [订阅界面二](https://ccknbc.mailchimpsites.com) -->
-- 邮件订阅，点击 {% label 右下角聊天按钮 green %}给CC留言，任意发送一条消息后，出现介绍自己界面时勾选订阅点击发送即可完成订阅 
+- RSS订阅：复制{% btn '/rss.xml',Rss,fas fa-rss,outline orange %}或{% btn '/atom.xml',Atom,fas fa-atom,outline blue %}地址通过邮件或阅读器阅读
+- 邮件订阅：点击 {% label 右下角聊天按钮 green %}给CC留言，任意发送一条消息后，出现介绍自己界面时勾选订阅点击发送即可完成订阅
+{% btn 'https://us2.campaign-archive.com/home/?u=a0aadd04e3d48349de29068f8&id=7518e18fcd',查看历史文章RSS更新记录（需可正常访问外网）,fas fa-history,block right pink smaller %}
+
