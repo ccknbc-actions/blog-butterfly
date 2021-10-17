@@ -29,7 +29,7 @@ mixin postUI(posts)
                 i.far.fa-calendar-alt
                 span.article-meta-label=_p('post.created')
                 time.post-meta-date-created(datetime=date_xml(article.date) title=_p('post.created') + ' ' + full_date(article.date))=date(article.date, config.date_format)
-                span.article-meta__separator |
+                span.article-meta__separator  | 
                 i.fas.fa-history
                 span.article-meta-label=_p('post.updated')
                 time.post-meta-date-updated(datetime=date_xml(article.updated) title=_p('post.updated') + ' ' + full_date(article.updated))=date(article.updated, config.date_format)
