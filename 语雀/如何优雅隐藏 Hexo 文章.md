@@ -5,7 +5,9 @@ translate_title: how-to-hide-hexo-articles-gracefully
 subtitle: How to hide Hexo articles gracefully
 date: 2021-10-22 21:00:00
 updated: 2021-10-22 21:00:00
-tags: [博客,Hexo]
+tags:
+ - 博客
+ - Hexo
 keywords: [博客,Hexo]
 categories: 博客
 description: 本文介绍三种方法来优雅隐藏 Hexo 文章
