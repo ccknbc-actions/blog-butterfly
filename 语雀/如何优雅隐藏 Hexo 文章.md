@@ -1,5 +1,4 @@
 ---
-
 title: 如何优雅隐藏 Hexo 文章
 translate_title: how-to-hide-hexo-articles-gracefully
 subtitle: How to hide Hexo articles gracefully
@@ -12,7 +11,6 @@ categories: 博客
 description: 本文介绍三种方法来优雅隐藏 Hexo 文章
 cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-10-22~23-50-29.webp
 id: 30
-
 ---
 
 本文介绍三种方法来优雅隐藏 Hexo 文章
