@@ -116,8 +116,8 @@ markdown:
     collisionSuffix: '' # 如果遇到重复的锚点 ID 为其添加数字编号时在这个数字后添加的后缀.
     # 以下为标题锚点配置
     permalink: true # false # 如果为 true 则创建一个除标题外带有固定地址的的锚点标签.
-    permalinkClass: 'fas fa-anchor faa-pulse animated' # 定义固定锚点的 class 名.
-    permalinkSide: 'left' # 设定为 right 则会在标题后添加固定链接.
+    permalinkClass: 'fas fa-hashtag faa-pulse animated' # 定义固定锚点的 class 名.
+    permalinkSide: 'right' # 设定为 right 则会在标题后添加固定链接.
     permalinkSymbol: '' # 定义固定链接使用的符号
     # 标题固定锚点到此结束
     case: 0 # 转换锚点 ID 中的字母为大写或小写 # "0" 不转换, "1" 为小写, "2" 为大写.
