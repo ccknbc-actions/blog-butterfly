@@ -3,7 +3,7 @@ title: Google Adsense 配置手册
 translate_title: google-adsense-configuration-manual
 subtitle: Google Adsense Configuration Manual
 date: 2021-10-24 20:25:00
-updated: 2021-10-28 21:15:00
+updated: 2021-10-28 23:11:00
 tags: google adsense
 keywords: google adsense
 categories: 博客
@@ -18,7 +18,7 @@ sticky: 100
 
 ## 写在前面
 
-当作是一个公告了，如果你“不幸”点开了这篇文章，那么麻烦您动动小手，关闭您的广告屏蔽插件，然后回到主页刷新一下点击一次广告后继续浏览本篇置顶文章
+当作是一个公告了，如果你“不幸”点开了这篇文章，那么麻烦您动动小手，关闭您的广告屏蔽插件，然后刷新一下点击一次广告后继续浏览本篇文章
 ​
 
 ## 缘起
