@@ -3,7 +3,7 @@ title: Google Adsense 配置手册
 translate_title: google-adsense-configuration-manual
 subtitle: Google Adsense Configuration Manual
 date: 2021-10-24 20:25:00
-updated: 2021-10-28 23:11:00
+updated: 2021-10-30 16:38:00
 tags: google adsense
 keywords: google adsense
 categories: 博客
@@ -18,7 +18,7 @@ sticky: 100
 
 ## 写在前面
 
-当作是一个公告了，如果你“不幸”点开了这篇文章，那么麻烦您动动小手，关闭您的广告屏蔽插件，然后刷新一下点击一次广告后继续浏览本篇文章
+当作是一个公告了，如果你“不幸”点开了这篇文章，那么麻烦您动动小手，关闭您的广告屏蔽插件，或者添加本站到白名单，然后刷新一下点击一次广告（虽然还是有几率看不到广告）后继续浏览本篇文章
 ​
 
 ## 缘起
@@ -51,9 +51,20 @@ Q：如果你的流量还可以，自认为文章写的还不错，有了一定�
 > 2. 普通类别，最为典型的就是赌博和网络连接类应用，但即使这样屏蔽掉，还是偶尔会有漏网之鱼，因此我会定期手动屏蔽不合适的广告
 
 ![所有网站-–-Google-AdSense.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1635427863020-de9f1391-95d7-4794-9c6b-b4b716b92b63.png#clientId=ud2d03121-7696-4&from=drop&id=ub032e38e&margin=%5Bobject%20Object%5D&name=%E6%89%80%E6%9C%89%E7%BD%91%E7%AB%99-%E2%80%93-Google-AdSense.png&originHeight=2471&originWidth=1920&originalType=binary&ratio=1&size=371923&status=done&style=none&taskId=u464ad97d-52dd-44c1-89b2-26620541000)
+
+> 其实类别还有其他，后续也会慢慢更新，只是这张图就不再更新了，因为长截图吗（懒），所以看下面的图片就好了
+
 ![所有网站1-–-Google-AdSense.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1635427884580-ac7e7e2e-a27a-4005-9169-9283b02e0aef.png#clientId=ud2d03121-7696-4&from=drop&id=uacd846f0&margin=%5Bobject%20Object%5D&name=%E6%89%80%E6%9C%89%E7%BD%91%E7%AB%991-%E2%80%93-Google-AdSense.png&originHeight=1026&originWidth=1920&originalType=binary&ratio=1&size=167430&status=done&style=none&taskId=u40757193-cf4f-40e1-b830-77fa250ad52)
 ![所有网站2-–-Google-AdSense.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1635427903527-4d4de4a0-8509-485c-b508-b2ec35a3f59e.png#clientId=ud2d03121-7696-4&from=drop&id=u825a6f03&margin=%5Bobject%20Object%5D&name=%E6%89%80%E6%9C%89%E7%BD%91%E7%AB%992-%E2%80%93-Google-AdSense.png&originHeight=200&originWidth=1390&originalType=binary&ratio=1&size=41118&status=done&style=none&taskId=u6e59097f-d658-4c24-b97a-3a34b224a3a)
 ![所有网站3-–-Google-AdSense.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1635427910515-bda36ebb-6767-44da-ae60-3ae4065a2a12.png#clientId=ud2d03121-7696-4&from=drop&id=u1db67d41&margin=%5Bobject%20Object%5D&name=%E6%89%80%E6%9C%89%E7%BD%91%E7%AB%993-%E2%80%93-Google-AdSense.png&originHeight=391&originWidth=1380&originalType=binary&ratio=1&size=74911&status=done&style=none&taskId=u13b1ca38-4653-4bd1-accb-f937fc1eff8)![所有网站4-–-Google-AdSense.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1635427917121-d47b5ed8-55b3-45ab-b12d-8c24d14c2784.png#clientId=ud2d03121-7696-4&from=drop&id=ubdca728c&margin=%5Bobject%20Object%5D&name=%E6%89%80%E6%9C%89%E7%BD%91%E7%AB%994-%E2%80%93-Google-AdSense.png&originHeight=177&originWidth=1372&originalType=binary&ratio=1&size=46106&status=done&style=none&taskId=u3719f3a6-5647-45e0-babf-ee77f651c28)![所有网站16-–-Google-AdSense.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1635427952977-dcf2645b-5b32-41ea-87fd-26f0174e90e9.png#clientId=ud2d03121-7696-4&from=drop&id=u3669b3b1&margin=%5Bobject%20Object%5D&name=%E6%89%80%E6%9C%89%E7%BD%91%E7%AB%9916-%E2%80%93-Google-AdSense.png&originHeight=892&originWidth=1920&originalType=binary&ratio=1&size=493330&status=done&style=none&taskId=u70491bc9-040e-4c13-bccd-11310a1e6bd)![所有网站17-–-Google-AdSense.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1635427965638-fe4fec45-0413-444f-88fe-4a0e9a4aefcf.png#clientId=ud2d03121-7696-4&from=drop&id=u546bcac0&margin=%5Bobject%20Object%5D&name=%E6%89%80%E6%9C%89%E7%BD%91%E7%AB%9917-%E2%80%93-Google-AdSense.png&originHeight=892&originWidth=1920&originalType=binary&ratio=1&size=357143&status=done&style=none&taskId=u300930e4-0dd9-48c0-b830-cbed994b160)
+说真的，关于这个社交网络在线社区类别我觉得有必要考量一下，有待后续观察中，因为展示百分比算少的，但是占收入很高，所以可能和色情相关联？
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1635581743419-6fb8762e-ddbb-4580-8605-4b5ce5d578a8.png#clientId=u7aab50a4-01af-4&from=paste&id=ua452a6cd&margin=%5Bobject%20Object%5D&name=image.png&originHeight=560&originWidth=841&originalType=binary&ratio=1&size=40621&status=done&style=none&taskId=u66017954-922e-4518-a776-824897d27db)
+
+> 总之，屏蔽类别关键词：`软件`，`烟草`，`酒精`​
+
+还有存疑的类别就是`网络安全软件`，`浏览器`和`电视节目`，因为我们看到的不符合法律要求的广告，在我看来，他们应该属于这些范畴内
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1635583311753-d05538e3-ecca-4018-a312-d15d225a49bc.png#clientId=u7aab50a4-01af-4&from=paste&id=u36d34177&margin=%5Bobject%20Object%5D&name=image.png&originHeight=254&originWidth=1376&originalType=binary&ratio=1&size=36573&status=done&style=none&taskId=ua9609a93-0a86-4140-bf73-34ed7b57951)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1635582314358-9009611c-3999-490c-bca3-374058af2c9d.png#clientId=u7aab50a4-01af-4&from=paste&height=257&id=u372c93c5&margin=%5Bobject%20Object%5D&name=image.png&originHeight=513&originWidth=1385&originalType=binary&ratio=1&size=57515&status=done&style=none&taskId=uf498f87a-8ca0-40fa-a6d9-7cc16fdaf27&width=692.5)
 
 ### 隐私保护
 
