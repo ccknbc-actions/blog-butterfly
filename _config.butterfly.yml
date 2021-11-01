@@ -111,23 +111,16 @@ disable_top_img: false
 # The banner image of home page
 index_img: false
 # linear-gradient(135deg,#fff1eb,#ace0f9)
-# https://api.zylearning.top/api/wallpaper?lx=fj
-# https://api.zylearning.top/api/wallpaper?lx=4k
-# https://area.sinaapp.com/bingImg/
-# https://bing.ioliu.cn/v1/rand?w=1920&h=1080
-# https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture
-# https://api.ixiaowai.cn/gqapi/gqapi.php
-# if the banner of page not setting,it will show the top_img
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: https://area.sinaapp.com/bingImg/
+default_top_img: https://gejiba.com/view.php/30106ec3a76c920ea3d82885ffbcf711.webp
 
 # The banner image of archive page
-archive_img: false
+archive_img: https://gejiba.com/view.php/30106ec3a76c920ea3d82885ffbcf711.webp
 
 # If the banner of tag page not setting, it will show the top_img
 # note: tag page, not tags page (子標籤頁面的 top_img)
-tag_img: false
+tag_img: https://gejiba.com/view.php/30106ec3a76c920ea3d82885ffbcf711.webp
 
 # The banner image of tag page
 # format:
@@ -136,7 +129,7 @@ tag_per_img:
 
 # If the banner of category page not setting, it will show the top_img
 # note: category page, not categories page (子分類頁面的 top_img)
-category_img: false
+category_img: https://gejiba.com/view.php/30106ec3a76c920ea3d82885ffbcf711.webp
 
 # The banner image of category page
 # format:
@@ -152,10 +145,8 @@ cover:
   # left/right/both
   position: left
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
-  default_cover: https://api.zylearning.top/api/wallpaper?lx=fj
-  # https://img.ccknbc.cc/blog/2020-10-12~18_03_32.webp
-  #  - https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture
-  #- https://area.sinaapp.com/bingImg/
+  default_cover: https://gejiba.com/view.php/546d8de5d57bf690777957ed068234e4.webp
+
 
 
 # Replace Broken Images (替換無法顯示的圖片)
@@ -167,7 +158,7 @@ error_img:
 error_404:
   enable: true
   subtitle: 请尝试站内搜索文章
-  background: https://api.zylearning.top/api/wallpaper?lx=fj
+  background: https://gejiba.com/view.php/3c3845c98419b590d7f6b6c8ec6add1c.gif
 
 post_meta:
   page: # Home Page
@@ -300,12 +291,13 @@ comments:
   # - Beaudar
   # - Utterances
   # - Disqus
-  # - Waline
+  # - Giscus
+  - Waline
   # - Artalk
-  - Disqusjs
+  # - Disqusjs
   # - Livere
   # - Cusdis
-  # - Twikoo
+  - Twikoo
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -335,9 +327,9 @@ waline:
       sofa: 这里冷冷清清的，快来留下脚印吧！
       placeholder: 如果您觉得此评论系统仍不够安全，不如点击上方按钮切换为DisqusJS享受更安全的匿名评论
     emoji: [
-      'https://cdn.jsdelivr.net/gh/zhheo/Sticker-Heo@latest/Sticker-100/',
-      'https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/tw-emoji',
-      'https://cdn.jsdelivr.net/gh/walinejs/emojis@latest/tw'
+      'https://cdn.jsdelivr.net/gh/zhheo/Sticker-Heo@main/Sticker-100/',
+      'https://cdn.jsdelivr.net/gh/walinejs/emojis@main/tw-emoji',
+      'https://cdn.jsdelivr.net/gh/walinejs/emojis@main/tw'
     ]
 
 # Twikoo
@@ -452,6 +444,20 @@ beaudar:
   comment_order: asc
   input_position: bottom
   # Theme: github-light/github-dark/preferred-color-scheme/github-dark-orange/hugo-terminal-orange/icy-dark/dark-blue/photon-dark/classic-dark
+  light_theme: github-light
+  dark_theme: github-dark
+
+# giscus
+# https://giscus.app/
+giscus:
+  data-repo: ccknbc-backup/comments
+  data-repo-id: MDEwOlJlcG9zaXRvcnkzNTAyMjg5NTk=
+  data-category: Comments
+  data-category-id: DIC_kwDOFOAR384B-bwn
+  data-mapping: pathname
+  data-reactions-enabled: 1
+  data-emit-metadata: 1
+  data-lang: zh-CN
   light_theme: github-light
   dark_theme: github-dark
 
@@ -629,8 +635,8 @@ index_top_img_height:
 # The user interface setting of category and tag page (category和tag頁的UI設置)
 # index - same as Homepage UI (index 值代表 UI將與首頁的UI一樣)
 # default - same as archives UI 默認跟archives頁面UI一樣
-category_ui: # 留空或 index
-tag_ui: # 留空或 index
+category_ui: index # 留空或 index
+tag_ui: index # 留空或 index
 
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
@@ -837,10 +843,10 @@ runtimeshow:
 
 # Aside widget - Newest Comments
 newest_comments:
-  enable: false
+  enable: true
   limit: 3
   storage: 10
-  avatar: true
+  avatar: false
   sort_order: 3 # Don't modify the setting unless you know how it works
 
 # Bottom right button (右下角按鈕)
@@ -1037,7 +1043,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    - '<style type="text/css">.app-refresh{position:fixed;top:-2.2rem;left:0;right:0;z-index:99999;padding:0 1rem;font-size:15px;height:2.2rem;transition:all .3s ease}.app-refresh-wrap{display:flex;color:#fff;height:100%;align-items:center;justify-content:center}.app-refresh-wrap a{color:#fff;text-decoration:underline;cursor:pointer}</style>'
+    - <style type="text/css">.app-refresh{position:fixed;top:-2.2rem;left:0;right:0;z-index:99999;padding:0 1rem;font-size:15px;height:2.2rem;transition:all .3s ease}.app-refresh-wrap{display:flex;color:#fff;height:100%;align-items:center;justify-content:center}.app-refresh-wrap a{color:#fff;text-decoration:underline;cursor:pointer}</style>
   bottom:
     # - <div class="aplayer no-destroy" data-id="12838890" data-server="netease" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div>
     - '<div class="app-refresh" id="app-refresh"> <div class="app-refresh-wrap"> <label>✨ 网站已更新 👉</label> <a href="javascript:void(0)" onclick="location.reload()">✔ <b>点击刷新</b> 💫</a> </div></div><script>function showNotification(){if(GLOBAL_CONFIG.Snackbar){let t="light"===document.documentElement.getAttribute("data-theme")?GLOBAL_CONFIG.Snackbar.bgLight:GLOBAL_CONFIG.Snackbar.bgDark,e=GLOBAL_CONFIG.Snackbar.position;Snackbar.show({text:"✨ 部落格已更新 👉",backgroundColor:t,duration:1e4,pos:e,actionText:"✔ 点击刷新 💫",textColor:"#8FBC8F",actionTextColor:"#4CAF50",onActionClick:function(t){location.reload()}})}else{let o=`top: 0; background: ${"light"===document.documentElement.getAttribute("data-theme")?"#49b1f5":"#1f1f1f"};`;document.getElementById("app-refresh").style.cssText=o}}"serviceWorker"in navigator&&(navigator.serviceWorker.controller&&navigator.serviceWorker.addEventListener("controllerchange",function(){showNotification()}),window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js")}));</script>'
@@ -1047,23 +1053,25 @@ inject:
 
 CDN:
   # main
-  main_css: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/css/index.css
-  main: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/main.js
-  utils: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/utils.js
+  main_css: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/css/index.css
+  main: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/main.js
+  utils: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/utils.js
 
   # comments
   beaudar: https://beaudar.lipk.org/client.js
+  giscus: https://giscus.app/client.js
   artalk: https://cdn.jsdelivr.net/gh/ArtalkJS/Artalk@master/dist/Artalk.js
   artalk_css: https://cdn.jsdelivr.net/gh/ArtalkJS/Artalk@master/dist/Artalk.css
 
   # search
-  local_search: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/search/local-search.js
-  algolia_js: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/search/algolia.js
+  local_search: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/search/local-search.js
+  algolia_js: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/search/algolia.js
+
 
   # Conversion between Traditional and Simplified Chinese
-  translate: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@latest/js/tw_cn.js
+  translate: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/tw_cn.js
 
   # other
   statuspage: https://ccknbc.statuspage.io/embed/script.js
   pace: https://cdn.jsdelivr.net/gh/CodeByZach/pace/pace.min.js
-  ccknbc: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/js/ccknbc.js
+  ccknbc: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@master/js/ccknbc.js

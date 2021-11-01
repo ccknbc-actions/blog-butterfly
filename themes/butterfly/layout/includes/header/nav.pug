@@ -1,17 +1,15 @@
 nav#nav
-  //- span#blog_name
-  //-   a#site-name(href=url_for('/')) #[=config.title]
   - var pagedescr = page.description ? page.description : "CC的部落格欢迎您的光临"
   - var subtitle = page.subtitle ? page.subtitle : "CC's Blog"
-  if is_page() || is_post() || is_category() || is_tag()
-    span#blog_name
-      a#site-name(href=url_for('/') data-title=pagedescr) #[=subtitle]
-  else if is_home()
+  if is_home()
     span#blog_name
       a#site-name(onclick='btf.scrollToDest(0, 500)' data-title=pagedescr) #[=subtitle]
   else if is_archive()
     span#blog_name
       a#site-name(href=url_for('/') data-title=pagedescr) #[='Archives']
+  else if !(is_archive() || is_home())
+    span#blog_name
+      a#site-name(href=url_for('/') data-title=pagedescr) #[=subtitle]
   #menus
     #toggle-menu
       a.site-page
@@ -21,4 +19,4 @@ nav#nav
       #search-button
         a.site-page.social-icon.search
           i.fas.fa-search.fa-fw
-          span=' '+_p('search')
+          span=' '+_p('search.title')

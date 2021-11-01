@@ -23,8 +23,8 @@
     <description>{{ config.description }}</description>
     <pubDate>{% if posts.first().updated %}{{ posts.first().updated.toDate().toUTCString() }}{% else %}{{ posts.first().date.toDate().toUTCString() }}{% endif %}</pubDate>
     <lastBuildDate>{% if posts.first().updated %}{{ posts.first().updated.toDate().toUTCString() }}{% else %}{{ posts.first().date.toDate().toUTCString() }}{% endif %}</lastBuildDate>
-    <generator>CC的部落格</generator>
-    <copyright>2020-2021 CC康纳百川 All rights reserved.</copyright>
+    <generator>{{ config.title }}</generator>
+    <copyright>2020 - 2021 {{ config.author }} All rights reserved.</copyright>
     {% for post in posts.toArray() %}
     <item>
       <title>{{ post.title }}</title>
