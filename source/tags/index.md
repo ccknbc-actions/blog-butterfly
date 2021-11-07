@@ -1,6 +1,5 @@
 ---
 title: 文章标签
-top_img: false
 aside: false
 translate_title: tags
 subtitle: Tags

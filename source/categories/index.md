@@ -1,6 +1,5 @@
 ---
 title: 文章分类
-top_img: false
 aside: false
 translate_title: categories
 subtitle: Categories
