@@ -3,7 +3,7 @@ title: Google Adsense 配置手册
 translate_title: google-adsense-configuration-manual
 subtitle: Google Adsense Configuration Manual
 date: 2021-10-24 20:25:00
-updated: 2021-10-30 16:38:00
+updated: 2021-11-08 19:20:00
 tags: google adsense
 keywords: google adsense
 categories: 博客
@@ -39,6 +39,8 @@ Q：如果你的流量还可以，自认为文章写的还不错，有了一定�
 ![所有网站15-–-Google-AdSense.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1635428346469-f4520c37-4d94-45c7-b508-82c486ab7f63.png#clientId=ud2d03121-7696-4&from=drop&id=u34996628&margin=%5Bobject%20Object%5D&name=%E6%89%80%E6%9C%89%E7%BD%91%E7%AB%9915-%E2%80%93-Google-AdSense.png&originHeight=536&originWidth=900&originalType=binary&ratio=1&size=54095&status=done&style=none&taskId=ueafa19b2-49e6-472a-9db4-36ef7af8503)
 ![所有网站11-–-Google-AdSense.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1635428396535-48847476-a0f6-48b9-a9d6-03ca4b239f7f.png#clientId=ud2d03121-7696-4&from=drop&id=uc3d9ad6f&margin=%5Bobject%20Object%5D&name=%E6%89%80%E6%9C%89%E7%BD%91%E7%AB%9911-%E2%80%93-Google-AdSense.png&originHeight=666&originWidth=451&originalType=binary&ratio=1&size=53097&status=done&style=none&taskId=u21478629-a5bb-47c0-8e93-0368c7e5da4)
 ![所有网站12-–-Google-AdSense.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1635428402109-0b01d130-db6a-4287-9108-d3f62c216bb3.png#clientId=ud2d03121-7696-4&from=drop&id=u617414fc&margin=%5Bobject%20Object%5D&name=%E6%89%80%E6%9C%89%E7%BD%91%E7%AB%9912-%E2%80%93-Google-AdSense.png&originHeight=1385&originWidth=449&originalType=binary&ratio=1&size=58805&status=done&style=none&taskId=uf602eea2-118b-47f7-ac3a-55fc796c845)
+至于排除网页，因为开启了匹配内容，那么我们有必要屏蔽掉 404 页面
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1636370271352-de513540-99e3-4c69-a1f3-0c6b9302303f.png#clientId=u0b8af91e-07e4-4&from=paste&height=220&id=u3a172f83&margin=%5Bobject%20Object%5D&name=image.png&originHeight=440&originWidth=452&originalType=binary&ratio=1&size=19473&status=done&style=none&taskId=uc63976a3-4686-4795-a9c1-393eefc36dc&width=226)
 此外，如果你使用的是自定义广告单元广告，按照使用体验，可在首页放置信息流广告，侧边栏放置展示广告，文章页放置内嵌广告（在对应位置插入对应代码）
 ![所有网站14-–-Google-AdSense.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1635428577592-1583d7c2-dda4-4528-af6e-b84be4133140.png#clientId=ud2d03121-7696-4&from=drop&id=uf58ebec4&margin=%5Bobject%20Object%5D&name=%E6%89%80%E6%9C%89%E7%BD%91%E7%AB%9914-%E2%80%93-Google-AdSense.png&originHeight=1126&originWidth=1920&originalType=binary&ratio=1&size=186457&status=done&style=none&taskId=ue97a6c12-617c-4f0b-8c80-d37b7bf495d)
 
