@@ -311,8 +311,6 @@ waline:
   serverURL: https://waline.ccknbc.vercel.app # Waline server address url
   avatar: monsterid # gravatar style https://zh-tw.gravatar.com/site/implement/images/#default-image
   bg:  # waline background
-  avatarCDN: https://seccdn.libravatar.org/avatar/
-  # https://gravatar.loli.net/avatar/
   visitor: false
   option:
     pageSize: 10
@@ -321,11 +319,8 @@ waline:
     copyright: true
     locale:
       admin: 博主兼管理员
-      # nick: ' 昵称 (必填)'
-      # mail: ' 邮箱 (必填)'
-      # link: ' 网址 (选填)'
       sofa: 这里冷冷清清的，快来留下脚印吧！
-      placeholder: 如果您觉得此评论系统仍不够安全，不如点击上方按钮切换为DisqusJS享受更安全的匿名评论
+      placeholder: 感谢各位的批评指正，期待与您交流！
     emoji: [
       'https://cdn.jsdelivr.net/gh/zhheo/Sticker-Heo@main/Sticker-100/',
       'https://cdn.jsdelivr.net/gh/walinejs/emojis@main/tw-emoji',
@@ -348,7 +343,7 @@ artalk:
   defaultAvatar: monsterid
   sendBtn: 发送
   serverUrl: https://ccknbc.000webhostapp.com/public/index.php
-  gravatar_cdn: sdn.geekzu.org/avatar/
+  gravatar_cdn: https://seccdn.libravatar.org/avatar/
   pageSize: 5
   autoLoad: true
 

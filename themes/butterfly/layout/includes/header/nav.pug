@@ -7,7 +7,7 @@ nav#nav
   else if is_archive()
     span#blog_name
       a#site-name(href=url_for('/') data-title=pagedescr) #[='Archives']
-  else if !(is_archive() || is_home())
+  else
     span#blog_name
       a#site-name(href=url_for('/') data-title=pagedescr) #[=subtitle]
   #menus

@@ -218,8 +218,8 @@ nofollow:
   enable: true
   field: site
   exclude:
-    - 'ccknbc.com'
-    - 'www.ccknbc.com'
+    - 'ccknbc.cc'
+    - 'www.ccknbc.cc'
 
 archive_generator:
   enabled: true
