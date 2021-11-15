@@ -198,6 +198,7 @@ toc:
   post: true
   page: true
   number: true
+  expand: true
   style_simple: true
 
 post_copyright:
@@ -285,19 +286,7 @@ addtoany:
 # --------------------------------------
 
 comments:
-  # Up to two comments system, the first will be shown as default
-  # Choose: Disqus/Disqusjs/Livere/Valine/Waline/Utterances/Beaudar//Gitalk/Facebook Comments/Twikoo
-  use:
-  # - Beaudar
-  # - Utterances
-  # - Disqus
-  # - Giscus
-  - Waline
-  # - Artalk
-  # - Disqusjs
-  # - Livere
-  # - Cusdis
-  - Twikoo
+  use: Waline,Twikoo
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -305,11 +294,23 @@ comments:
   count: false # Display comment count in post's top_img
   card_post_count: false # Display comment count in Home Page
 
+# Giscus
+# https://giscus.app/
+giscus:
+  repo: ccknbc-backup/comments
+  repo_id: MDEwOlJlcG9zaXRvcnkzNTAyMjg5NTk=
+  category_id: DIC_kwDOFOAR384B-bwn
+  theme:
+    light: light
+    dark: dark
+  option:
+    data-lang: 'zh-CN'
+    data-category: Comments
+
 # waline - A simple comment system with backend support fork from Valine
 # https://waline.js.org/
 waline:
   serverURL: https://waline.ccknbc.vercel.app # Waline server address url
-  avatar: monsterid # gravatar style https://zh-tw.gravatar.com/site/implement/images/#default-image
   bg:  # waline background
   visitor: false
   option:
@@ -347,12 +348,6 @@ artalk:
   pageSize: 5
   autoLoad: true
 
-# cusdis
-# https://cusdis.com/
-cusdis:
-  host: https://cusdis.ccknbc.cc
-  app_id: blog
-  lang: zh-cn
 
 # disqus
 # https://disqus.com/
@@ -439,20 +434,6 @@ beaudar:
   comment_order: asc
   input_position: bottom
   # Theme: github-light/github-dark/preferred-color-scheme/github-dark-orange/hugo-terminal-orange/icy-dark/dark-blue/photon-dark/classic-dark
-  light_theme: github-light
-  dark_theme: github-dark
-
-# giscus
-# https://giscus.app/
-giscus:
-  data-repo: ccknbc-backup/comments
-  data-repo-id: MDEwOlJlcG9zaXRvcnkzNTAyMjg5NTk=
-  data-category: Comments
-  data-category-id: DIC_kwDOFOAR384B-bwn
-  data-mapping: pathname
-  data-reactions-enabled: 1
-  data-emit-metadata: 1
-  data-lang: zh-CN
   light_theme: github-light
   dark_theme: github-dark
 
@@ -1054,7 +1035,6 @@ CDN:
 
   # comments
   beaudar: https://beaudar.lipk.org/client.js
-  giscus: https://giscus.app/client.js
   artalk: https://cdn.jsdelivr.net/gh/ArtalkJS/Artalk@master/dist/Artalk.js
   artalk_css: https://cdn.jsdelivr.net/gh/ArtalkJS/Artalk@master/dist/Artalk.css
 
