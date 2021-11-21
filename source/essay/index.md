@@ -9,30 +9,40 @@ aside: false
 description: CC的部落格 即刻短文页面
 ---
 
-<div id="daodao"></div>
+<!-- <div id="daodao"></div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/css/daodao.min.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/js/daodao.min.js" ></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/js/daodao.min.js" ></script> -->
 
 <!-- <div id="bber"></div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/css/newbber.min.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/js/newbber.min.js" ></script> -->
 
-<!-- <div id='speak-bber'></speak>
+<div id='speak'></speak>
+<!-- 使用markdown渲染 -->
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber-md.min.js" charset="utf-8" ></script> -->
+<!-- 不使用markdown渲染 -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber.min.js" charset="utf-8" ></script>
+<!-- 解析微信表情（参考：https://github.com/buddys/qq-wechat-emotion-parser） -->
+<script src="https://cdn.jsdelivr.net/gh/buddys/qq-wechat-emotion-parser@master/dist/qq-wechat-emotion-parser.min.js"></script>
 <script>
 ispeakBber
     .init({
-      el: '#speak-bber',
-      name: 'CC 🦄', // 显示的昵称
+      el: '#speak', // 容器选择器
+      name: 'CC 😊', // 显示的昵称
       envId: 'ccknbc-154167', // 环境id
       region: 'ap-shanghai', // 腾讯云地址，默认为上海
-      limit: 5, // 每次加载的条数，默认为5
+      limit: 10, // 每次加载的条数，默认为5
       avatar: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png',
-      fromColor:'#8FBC8F',
-      loadingImg: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif', 
-      dbName:'talks'
+      fromColor:'rgb(245, 150, 170)', // 下方标签背景颜色 默认 rgb(245, 150, 170)
+      loadingImg: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif', // 自定义loading的图片，示例值为默认值
+      dbName:'talks' // 数据的名称，默认talks，避免有人的命名不是这个，所以加入此配置字段。
     })
-</script> -->
+    .then(function() {
+      // 哔哔加载完成后的回调函数，你可以写你自己的功能
+      console.log('哔哔 加载完成')
+    })
+</script>
+
 
 <!-- ## 哔哔 CloudBase 版本(林木木) -->
 

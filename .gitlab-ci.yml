@@ -1,30 +1,17 @@
 image: node:latest
+variable:
+  script:
+    - echo $YUQUE_TOKEN
 pages:
-  job1: yuque
-    script:
-      - echo $YUQUE_TOKEN
-      - npm install
-      - npm run gitlab-yuque
-    artifacts:
-      paths:
-        - public
-    cache:
-      paths:
-        - node_modules
-      key: project
-    rules:
-      - if: $CI_COMMIT_BRANCH == "master"
-  job2: gitlab
-    script:
-      - npm install
-      - git clone -b posts git@gitlab.com:CCKNBC/ccknbc.gitlab.io.git source/_posts
-      - npm run gitlab
-    artifacts:
-      paths:
-        - public
-    cache:
-      paths:
-        - node_modules
-      key: project
-    rules:
-      - if: $CI_COMMIT_BRANCH == "posts"
+  script:
+    - npm install
+    - npm run gitlab-yuque
+  artifacts:
+    paths:
+      - public
+  cache:
+    paths:
+      - node_modules
+    key: project
+  only:
+    - master

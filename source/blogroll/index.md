@@ -11,37 +11,18 @@ updated: 2021-07-18 19:38:19
 ---
 <script src="https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@main/blogroll.js"></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/butterfly-friend/dist/friend.min.js"></script> -->
-<!-- <script src="https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@main/screenshot.js"></script> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@main//style.css">
 <script>
-  var obj = {
-    el: '#friend1',
-    url: "https://api.ccknbc.vercel.app/api/github?repo='blogroll'&user='ccknbc-actions'&branch='blogroll'&path='blogroll.json'",
-    sort_container:[],
-    labelDescr:{
+  document.querySelector(".flink").insertAdjacentHTML("afterbegin",
+    "<div id='friend1'></div>"), xkFriend.init({
+    el: "#friend1",
+    url: "https://api.ccknbc.vercel.app/api/github?repo=%27blogroll%27&user=%27ccknbc-actions%27&branch=%27blogroll%27&path=%27blogroll.json%27",
+    labelDesc: {
     },
-    loading_img: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif',
-    fail_img: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-28.gif'
-  }
-  document.querySelector('.flink').insertAdjacentHTML('afterbegin', "<div id='friend1'></div>")
-  new Friend(obj)
-  //   getFriendsScreenShot({
-  //   user: "ccknbc-actions",
-  //   repo: "blogroll",
-  //   branch: "webp",
-  //   suffix: "webp",
-  //   lazyImg: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-10~13_03_22.webp",
-  //   duration: 5e3
-  // })
+    loading_img: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif",
+    fail_img: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-28.gif"
+  })
 </script>
-<style>
-img[data-lazy-src]:not(.loaded) {
-  filter: blur(0);
-}
-[data-theme=dark]
-img[data-lazy-src]:not(.loaded) {
-  filter: blur(0) brightness(.6);
-}
-</style><br>
 
   {% tabs links%}
 
