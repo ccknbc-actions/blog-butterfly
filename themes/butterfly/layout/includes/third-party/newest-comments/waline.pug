@@ -52,7 +52,7 @@ script.
           const walineArray = res.comments.map(e => {
             return {
               'content': changeContent(e.comment),
-              'avatar': e.avatar,
+              'avatar': e.avatar + '?default=monsterid',
               'nick': e.nick,
               'url': e.url + '#' + e.objectId,
               'date': e.updatedAt,

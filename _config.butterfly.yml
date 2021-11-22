@@ -234,7 +234,7 @@ edit:
 
 # Related Articles
 related_post:
-  enable: false
+  enable: true
   limit: 6 # Number of posts displayed
   date_type: created # or created or updated 文章日期顯示創建日或者更新日
 
@@ -318,6 +318,7 @@ waline:
     requiredMeta: ['nick', 'mail']
     login: false
     copyright: true
+    avatar: monsterid
     locale:
       admin: 博主兼管理员
       sofa: 这里冷冷清清的，快来留下脚印吧！
@@ -823,7 +824,7 @@ newest_comments:
   limit: 3
   storage: 10
   avatar: false
-  sort_order: 3 # Don't modify the setting unless you know how it works
+  sort_order: 2 # Don't modify the setting unless you know how it works
 
 # Bottom right button (右下角按鈕)
 # --------------------------------------
