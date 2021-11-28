@@ -1,14 +1,12 @@
 ---
 title: 隐私政策
 top_img: false
-aside: false
 translate_title: privacy-policy
 subtitle: Privacy Policy
 date: 2021-05-14 17:12:24
 updated: 2021-07-18 19:38:19
 description: CC的部落格 隐私政策
 ---
-{% note warning %} **本页存在 Bug，请点击左上角标题返回主页** {% endnote %}
 本站非常重视用户的隐私和个人信息保护。您在使用网站时，可能会收集和使用您的相关信息。通过《隐私政策》向您说明在您访问 {% label blog.ccknbc.cc green %} 网站时，如何收集、使用、保存、共享和转让这些信息。
 
 ## 如何收集和使用您的个人信息

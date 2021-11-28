@@ -72,12 +72,12 @@ jobs:
         git push --force --quiet "https://${{ secrets.CD_USER }}:${{ secrets.CD_TOKEN }}@e.coding.net/ccknbc/blog/butterfly.git" master:master
         git push --force --quiet "https://ccknbc:${{ secrets.GT_TOKEN }}@gitee.com/ccknbc/ccknbc.git" master:master
 
-    # - name: Update Gitee Pages
-    #   uses: yanglbme/gitee-pages-action@main
-    #   with:
-    #       gitee-username: ccknbc
-    #       gitee-password: ${{ secrets.GITEE_PASSWORD }}
-    #       gitee-repo: ccknbc/ccknbc
+    - name: Update Gitee Pages
+      uses: yanglbme/gitee-pages-action@main
+      with:
+          gitee-username: ccknbc
+          gitee-password: ${{ secrets.GITEE_PASSWORD }}
+          gitee-repo: ccknbc/ccknbc
 
     - name: Sync RSS
       run: |
