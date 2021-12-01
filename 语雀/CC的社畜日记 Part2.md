@@ -12,5 +12,5 @@ cover:
 id: 33
 ---
 
-查看本文[**语雀**](https://www.yuque.com/ccknbc/blog/)版本【首发】，自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/ccs-work-diary-part2)，如果你还没有注册语雀，欢迎[**点击这里注册**]()！
+查看本文[**语雀**](https://www.yuque.com/ccknbc/blog/33)版本【首发】，自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/ccs-work-diary-part2)，如果你还没有注册语雀，欢迎[**点击这里注册**]()！
 ​
