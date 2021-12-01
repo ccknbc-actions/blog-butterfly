@@ -3,7 +3,7 @@ title: Hexo Butterfly Algolia 搜索的使用
 translate_title: hexo-butterfly-algolia
 subtitle: Hexo Butterfly Algolia
 date: 2021-05-11 11:00:00
-updated: 2021-11-01 21:47:00
+updated: 2021-12-01 20:09:00
 tags: [工具, Algolia]
 keywords: [Hexo, Butterfly, Algolia]
 categories: 工具
@@ -190,6 +190,8 @@ hexo algolia --no-clear
 
 ## JS 修改
 
+### 主题 4.0.0 以下版本
+
 到这里还没有结束，如果你这样操作就会有一个问题，假设你的访问流量很大，有很多人用搜索功能，那么免费的 1 万次搜索额度可能不够一个月的使用，需要按下`ENTER`键再执行搜索而不是实时搜索，因此可以稍作修改（blog\themes\butterfly\source\js\search\algolia.js) js 的部分内容，不想动源码的可以保存到其他与主题不冲突的路径，然后更换 CDN 地址或者使用我的地址即可
 
 ```yaml
@@ -226,7 +228,158 @@ CDN:
         },
 ```
 
+### 主题 4.0.0 以上版本
+
+已经升级到 V4 版本，那么一些特性就可以使用了，修改内容其实差不多，只是建议还是
+对于第 87 行的页数限制，主要是为了手机上排版美观，不会转到下一行，但是这样会有一个问题，如果结果超过 5 页，那么将无法显示，最后一页代表第 5 页，所以我个人会选择删掉这个参数限制，同时合并删除了部分代码，以及使用 widget 的 powerby 组件而不是官方的 svg 代码解决方案
+同样的部分参数发生了改变（L55-59），可以自行比对或查看[**官方文档**](https://www.algolia.com/doc/guides/building-search-ui/getting-started/js/)
+
+```javascript
+window.addEventListener("load", () => {
+  const openSearch = () => {
+    const bodyStyle = document.body.style;
+    bodyStyle.width = "100%";
+    bodyStyle.overflow = "hidden";
+    btf.animateIn(document.getElementById("search-mask"), "to_show 0.5s");
+    btf.animateIn(
+      document.querySelector("#algolia-search .search-dialog"),
+      "titleScale 0.5s"
+    );
+    setTimeout(() => {
+      document.querySelector("#algolia-search .ais-SearchBox-input").focus();
+    }, 100);
+
+    // shortcut: ESC
+    document.addEventListener("keydown", function f(event) {
+      if (event.code === "Escape") {
+        closeSearch();
+        document.removeEventListener("keydown", f);
+      }
+    });
+  };
+
+  const closeSearch = () => {
+    const bodyStyle = document.body.style;
+    bodyStyle.width = "";
+    bodyStyle.overflow = "";
+    btf.animateOut(
+      document.querySelector("#algolia-search .search-dialog"),
+      "search_close .5s"
+    );
+    btf.animateOut(document.getElementById("search-mask"), "to_hide 0.5s");
+  };
+
+  const searchClickFn = () => {
+    document
+      .querySelector("#search-button > .search")
+      .addEventListener("click", openSearch);
+    document
+      .getElementById("search-mask")
+      .addEventListener("click", closeSearch);
+    document
+      .querySelector("#algolia-search .search-close-button")
+      .addEventListener("click", closeSearch);
+  };
+
+  searchClickFn();
+
+  window.addEventListener("pjax:complete", function () {
+    getComputedStyle(document.querySelector("#algolia-search .search-dialog"))
+      .display === "block" && closeSearch();
+    searchClickFn();
+  });
+
+  const algolia = GLOBAL_CONFIG.algolia;
+  const isAlgoliaValid = algolia.appId && algolia.apiKey && algolia.indexName;
+  if (!isAlgoliaValid) {
+    return console.error("Algolia setting is invalid!");
+  }
+
+  const searchClient = window.algoliasearch(algolia.appId, algolia.apiKey);
+  const search = instantsearch({
+    indexName: algolia.indexName,
+    searchClient,
+  });
+
+  search.addWidgets([
+    instantsearch.widgets.searchBox({
+      container: "#algolia-search-input",
+      showReset: false,
+      showSubmit: false,
+      placeholder: GLOBAL_CONFIG.algolia.languages.input_placeholder,
+      searchAsYouType: false,
+      showLoadingIndicator: true,
+    }),
+    instantsearch.widgets.configure({
+      hitsPerPage: algolia.hits.per_page || 5,
+    }),
+    instantsearch.widgets.hits({
+      container: "#algolia-hits",
+      templates: {
+        item: function (data) {
+          const link = data.permalink
+            ? data.permalink
+            : GLOBAL_CONFIG.root + data.path;
+          return `
+            <a href="${link}" class="algolia-hit-item-link">
+            <b>${data._highlightResult.title.value || "no-title"}</b>
+            <br>${data._snippetResult.contentStrip.value}</br>
+            匹配字词: <em><mark>${
+              data._highlightResult.contentStrip.matchedWords
+            }</mark></em> | 匹配等级: <em><mark>${
+            data._highlightResult.contentStrip.matchLevel
+          }</emmark></em>
+            </a>`;
+        },
+        empty: function (data) {
+          return (
+            '<div id="algolia-hits-empty">' +
+            GLOBAL_CONFIG.algolia.languages.hits_empty.replace(
+              /\$\{query}/,
+              data.query
+            ) +
+            "</div>"
+          );
+        },
+      },
+    }),
+    instantsearch.widgets.pagination({
+      container: "#algolia-pagination",
+      totalPages: 5,
+      templates: {
+        first: '<i class="fas fa-angle-double-left" title="第一页"></i>',
+        last: '<i class="fas fa-angle-double-right" title="最后一页"></i>',
+        previous: '<i class="fas fa-angle-left" title="上一页"></i>',
+        next: '<i class="fas fa-angle-right" title="下一页"></i>',
+      },
+    }),
+    instantsearch.widgets.stats({
+      container: "#algolia-stats",
+      templates: {
+        text: function (data) {
+          const stats = GLOBAL_CONFIG.algolia.languages.hits_stats
+            .replace(/\$\{hits}/, data.nbHits)
+            .replace(/\$\{time}/, data.processingTimeMS);
+          return `${stats}`;
+        },
+      },
+    }),
+    instantsearch.widgets.poweredBy({
+      container: "#algolia-powered-by",
+    }),
+  ]);
+  search.start();
+
+  window.pjax &&
+    search.on("render", () => {
+      window.pjax.refresh(document.getElementById("algolia-hits"));
+    });
+});
+```
+
 ## 最终效果
+
+### 主题 4.0.0 以下版本
 
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1623297948979-16f7476e-0978-49ee-a667-2dc060896c88.png#clientId=uc24fb27d-4fc5-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=ud3ca95b0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=413&originWidth=753&originalType=binary&ratio=2&rotation=0&showTitle=false&size=40542&status=done&style=none&taskId=u9d85e4b7-062e-432f-b6d8-854d2e5d2eb&title=)
 （这个是因为我修改了源码，实际上也能通过修改 JS 实现，但大多数人不会关心这些搜索小贴士）
@@ -236,4 +389,8 @@ CDN:
 允许拼写错误
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1623298137784-eb2713f9-377f-4f5d-824d-a7a7b7a881c4.png#clientId=uc24fb27d-4fc5-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=uc7968f09&margin=%5Bobject%20Object%5D&name=image.png&originHeight=598&originWidth=750&originalType=binary&ratio=2&rotation=0&showTitle=false&size=61697&status=done&style=none&taskId=u9c8b459e-8141-46ef-9d7e-11bd8cc917f&title=)
 
-### 如有错误，还望指正！
+### 主题 4.0.0 以上版本
+
+本博客目前使用效果点击搜索按钮即可查看
+
+## 如有错误，还望指正！
