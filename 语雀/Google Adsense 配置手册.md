@@ -10,7 +10,6 @@ categories: 博客
 description: 本文根据 CC 个人使用经验来介绍 Google Adsense 的食用方法
 cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-10-24~20-21-41.webp
 id: 31
-sticky: 100
 ---
 
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/31)，自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/google-adsense-configuration-manual)
