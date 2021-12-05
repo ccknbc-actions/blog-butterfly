@@ -192,14 +192,7 @@ hexo algolia --no-clear
 
 ### 主题 4.0.0 以下版本
 
-到这里还没有结束，如果你这样操作就会有一个问题，假设你的访问流量很大，有很多人用搜索功能，那么免费的 1 万次搜索额度可能不够一个月的使用，需要按下`ENTER`键再执行搜索而不是实时搜索，因此可以稍作修改（blog\themes\butterfly\source\js\search\algolia.js) js 的部分内容，不想动源码的可以保存到其他与主题不冲突的路径，然后更换 CDN 地址或者使用我的地址即可
-
-```yaml
-CDN:
-  # search
-  algolia_js: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/search/algolia.js
-```
-
+到这里还没有结束，如果你这样操作就会有一个问题，假设你的访问流量很大，有很多人用搜索功能，那么免费的 1 万次搜索额度可能不够一个月的使用，需要按下`ENTER`键再执行搜索而不是实时搜索，因此可以稍作修改（blog\themes\butterfly\source\js\search\algolia.js) js 的部分内容，不想动源码的可以保存到其他与主题不冲突的路径，然后更换 CDN 地址即可
 主要修改以下内容，然后就是排版问题改了改位置，不喜欢的可以不改，很直白就不用过多解释了，这样就可获得和本博客一样的搜索效果了
 
 ```diff
@@ -232,7 +225,13 @@ CDN:
 
 已经升级到 V4 版本，那么一些特性就可以使用了，修改内容其实差不多，只是建议还是
 对于第 87 行的页数限制，主要是为了手机上排版美观，不会转到下一行，但是这样会有一个问题，如果结果超过 5 页，那么将无法显示，最后一页代表第 5 页，所以我个人会选择删掉这个参数限制，同时合并删除了部分代码，以及使用 widget 的 powerby 组件而不是官方的 svg 代码解决方案
-同样的部分参数发生了改变（L55-59），可以自行比对或查看[**官方文档**](https://www.algolia.com/doc/guides/building-search-ui/getting-started/js/)
+同样的部分参数发生了改变（L55-59），可以自行比对或查看[**官方文档**](https://www.algolia.com/doc/guides/building-search-ui/getting-started/js/)，也可以直接[**引用我的**](https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/search/algolia.js)
+
+```yaml
+CDN:
+  # search
+  algolia_js: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/search/algolia.js
+```
 
 ```javascript
 window.addEventListener("load", () => {
