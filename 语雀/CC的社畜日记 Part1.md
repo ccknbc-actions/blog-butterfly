@@ -9,6 +9,7 @@ keywords: 工作
 categories: 工作
 description: 一个半月的实习期过去了，我的生活发生了怎样的改变呢？
 cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-08-29~01-09-41.webp
+aside: false
 id: 28
 ---
 
