@@ -29,7 +29,7 @@ updated: 2021-07-18 19:38:19
   <!-- endtab -->
 
   <!-- tab 朋友圈@fas fa-blog -->
-  
+
   <!-- 友链朋友圈样式 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Rock-Candy-Tea/hexo-friendcircle-demo@main/css/butterfly.css">
 
@@ -43,7 +43,7 @@ updated: 2021-07-18 19:38:19
       apiurl: 'https://moments.ccknbc.vercel.app/api',
       initnumber: 20, //【可选】页面初始化展示文章数量
       stepnumber: 10,//【可选】每次加载增加的篇数
-      error_img: '/image/404.gif' //【可选】头像加载失败时默认显示的头像
+      error_img: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-28.gif' //【可选】头像加载失败时默认显示的头像
     }
     //存入本地存储
     localStorage.setItem("fdatalist",JSON.stringify(fdata))
