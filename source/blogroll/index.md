@@ -58,11 +58,11 @@ updated: 2021-07-18 19:38:19
 
   <!-- tab 申请友链@fas fa-check-circle -->
 
-  快速申请友链请前往{% btn 'https://github.com/ccknbc-actions/blogroll',GitHub(推荐),fab fa-github,outline green larger %} 按照提示和 {% emp Issue 模板 %}提交 Issue 即可，会自动打标签通过并截图，尽量不要在评论区留言，处理速度比较慢
+  快速申请友链请前往{% btn 'https://github.com/ccknbc-actions/blogroll',GitHub(推荐),fab fa-github,outline green larger %} 按照提示和 {% emp Issue 模板 %}提交 Issue 即可，会自动打标签通过并截图，尽量不要在评论区留言，处理速度比较慢。另外因平时工作时间无法及时处理友链，虽然方便了我，但还是和您说声抱歉，因为添加友链这一操作似乎变成了您的单方面动作，我甚至免审核，但好处是您可以自行更新相关信息，当然如果您在评论区留言的我会帮您填写至 GitHub Issue，因为这本该是我的工作，感谢理解！
 
   {% note warning flat %}之前使用 {% btn 'https://gitee.com/ccknbc/blogroll?skip_mobile=true',Gitee,far fa-hand-point-right,outline red larger %} 申请的，仍可以前往修改，如果您访问 GitHub 有困难，也可使用 Gitee 申请等待人工审核 {% endnote %}
 
-  {% link 顺便看看友链截图列表，您可复制使用啦, https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/, https://cdn.jsdelivr.net/www.jsdelivr.com/d6676c4e3046776d2d26c7801f5b0d82ed45a59a/img/logo-horizontal.svg %}
+  {% link 顺便看看友链截图列表，您可复制使用啦, https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/, https://cdn.jsdelivr.net/www.jsdelivr.com/c903573129ce0afdbc8b006baf86dba514615495/img/logo-horizontal.svg %}
 
   <!-- {% ghcard ccknbc-actions/blogroll, theme=vue %}  -->
 
@@ -90,8 +90,8 @@ updated: 2021-07-18 19:38:19
   card_style: card/item
   screenshot: https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
   # screenshot: https://s0.wordpress.com/mshots/v1/https://blog.ccknbc.cc?w=1280&h=960
-  # screenshot: https://image.thum.io/get/width/1024/crop/768/www://blog.ccknbc.cc
-  # 帮我选一个适合您站点的截图呗
+  # screenshot: https://image.thum.io/get/width/1024/crop/768/https://blog.ccknbc.cc
+  # 帮我选一个适合您站点的截图呗，默认的jsd每天更新
   ```
   完整信息
   ```yaml
