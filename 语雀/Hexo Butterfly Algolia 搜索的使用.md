@@ -92,9 +92,25 @@ local_search:
 `appId`，`apiKey`，`adminApiKey`可在 API Keys 页面获取，注意保管好你的 Admin Key，不要让其他人知道，不建议直接写在配置中
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620789827112-9247b7ae-f3c9-4807-93cd-46c2b8dbb2bc.png#crop=0&crop=0&crop=1&crop=1&height=707&id=u63248bc0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=707&originWidth=1900&originalType=binary&ratio=1&rotation=0&showTitle=false&size=115433&status=done&style=none&title=&width=1900)
 ![](https://cdn.jsdelivr.net/gh/oncletom/hexo-algolia@main/algolia-write-key.png#crop=0&crop=0&crop=1&crop=1&id=E3NUV&originHeight=1172&originWidth=1176&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
-对于 Windows 系统，如果你不想每次都进行设定变量操作，可以添加到系统的环境变量中
+对于 Windows 系统，如果你不想每次都进行设定变量操作，可以添加`ALGOLIA_ADMIN_API_KEY`到系统的环境变量中
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620789745876-cbf0d411-f694-45c7-bcbd-c0987f71f718.png#crop=0&crop=0&crop=1&crop=1&height=217&id=ub7f3b987&name=image.png&originHeight=217&originWidth=839&originalType=binary&ratio=1&rotation=0&showTitle=false&size=13413&status=done&style=none&title=&width=839)
-或者使用 `set` 或 `setx` 设置临时或永久环境变量，而 hexo-algolia 插件环境变量名称为 `HEXO_ALGOLIA_INDEXING_KEY` 注意根据对应的文档更改
+而 hexo-algolia 插件环境变量名称为 `HEXO_ALGOLIA_INDEXING_KEY` 注意根据对应的文档更改，当然也可以使用命令行工具
+
+```bash
+# Windows
+## 微软的 powershell)
+$env:ALGOLIA_ADMIN_API_KEY = ""
+
+## cmd
+建议不用 cmd，正经人不用 cmd
+
+# Linux
+## sh/bash
+export ALGOLIA_ADMIN_API_KEY=
+
+## fish
+set -xg ALGOLIA_ADMIN_API_KEY ""
+```
 
 如果你和我一样使用的自动部署，例如 Github Actions，你可以在工作流中一开始或者对应的步骤添加环境变量，记得 Secrets 中也要添加哦
 
