@@ -84,7 +84,6 @@ window.addEventListener('load', () => {
     }),
     instantsearch.widgets.pagination({
       container: '#algolia-pagination',
-      totalPages: 5,
       templates: {
         first: '<i class="fas fa-angle-double-left" title="第一页"></i>',
         last: '<i class="fas fa-angle-double-right" title="最后一页"></i>',

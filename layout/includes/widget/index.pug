@@ -1,6 +1,6 @@
 #aside-content.aside-content
   //- post
-  if is_post()
+  if is_page() || is_post()
     - const tocStyle = page.style_simple
     - const tocStyleVal = tocStyle === true || tocStyle === false ? tocStyle : theme.toc.style_simple
     if showToc && tocStyleVal
