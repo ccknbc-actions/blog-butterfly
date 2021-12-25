@@ -1030,22 +1030,20 @@ inject:
 
 CDN:
   # main
-  main_css: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/css/index.css
-  main: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/main.js
-  utils: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/utils.js
+  # main_css: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/css/index.css
+  # main: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/main.js
+  # utils: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/utils.js
 
   # comments
   beaudar: https://beaudar.lipk.org/client.js
-  artalk: https://cdn.jsdelivr.net/gh/ArtalkJS/Artalk@master/dist/Artalk.js
-  artalk_css: https://cdn.jsdelivr.net/gh/ArtalkJS/Artalk@master/dist/Artalk.css
 
   # search
-  local_search: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/search/local-search.js
-  algolia_js: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/search/algolia.js
+  # local_search: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/search/local-search.js
+  # algolia_js: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/search/algolia.js
 
 
   # Conversion between Traditional and Simplified Chinese
-  translate: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/tw_cn.js
+  # translate: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/tw_cn.js
 
   # other
   statuspage: https://ccknbc.statuspage.io/embed/script.js

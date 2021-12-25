@@ -276,8 +276,12 @@ tag_plugins:
   enable: true # 开关
   priority: 5 #过滤器优先权
   issues: false #issues标签开关
+  link:
+    placeholder: /img/link.png #link_card标签默认的图标图片
   CDN:
-    anima: https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css #动画标签anima的依赖
+    anima: https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
+    tag_plugins_css: https://unpkg.zhimg.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css
+
 
 wowjs:
   enable: false #控制动画开关。true是打开，false是关闭
