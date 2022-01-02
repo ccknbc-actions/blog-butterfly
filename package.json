@@ -56,7 +56,7 @@
     "hexo-translate-title-vss": "1.0.14",
     "hexo-wordcount": "6.0.1",
     "workbox-build": "6.4.2",
-    "yuque-hexo": "1.7.0",
+    "yuque-hexo": "1.8.0",
     "yuque-hexo-lyrics": "1.0.0"
   }
 }
