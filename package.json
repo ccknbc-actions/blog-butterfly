@@ -50,7 +50,7 @@
     "hexo-renderer-markdown-it": "5.0.0",
     "hexo-renderer-pug": "2.0.0",
     "hexo-renderer-stylus": "2.0.1",
-    "hexo-server": "2.0.0",
+    "hexo-server": "3.0.0",
     "hexo-tag-chart": "1.0.8",
     "hexo-tag-mmedia": "1.1.7",
     "hexo-translate-title-vss": "1.0.14",
