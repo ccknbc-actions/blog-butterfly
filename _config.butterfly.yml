@@ -209,14 +209,14 @@ post_copyright:
 
 # Sponsor/reward
 reward:
-  enable: false
+  enable: true
   QR_code:
-    # - img: /img/wechat.jpg
-    #   link: 
-    #   text: 微信
-    # - img: /img/alipay.jpg
-    #   link: 
-    #   text: 支付宝
+    - img: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/qr.png
+      link: https://www.rocschool.com/tool/qr/qr/id/51.html
+      text: 三合一
+    - img: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/afdian.png
+      link: https://afdian.net/@ccknbc
+      text: 爱发电
 
 # Easily browse and edit blog source code online.
 edit:
@@ -316,8 +316,9 @@ waline:
   option:
     pageSize: 10
     requiredMeta: ['nick', 'mail']
-    login: false
+    login: enable
     copyright: true
+    uploadImage: false
     avatar: monsterid
     locale:
       admin: 博主兼管理员
@@ -325,8 +326,7 @@ waline:
       placeholder: 感谢各位的批评指正，期待与您交流！
     emoji: [
       'https://cdn.jsdelivr.net/gh/zhheo/Sticker-Heo@main/Sticker-100/',
-      'https://cdn.jsdelivr.net/gh/walinejs/emojis@main/tw-emoji',
-      'https://cdn.jsdelivr.net/gh/walinejs/emojis@main/tw'
+      'https://cdn.jsdelivr.net/gh/walinejs/emojis@main/tw-emoji'
     ]
 
 # Twikoo
