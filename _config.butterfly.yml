@@ -50,14 +50,17 @@ copy:
 social:
   # fab fa-github: https://github.com/CCKNBC || GitHub
   # fas fa-envelope: mailto:blog@ccknbc.cc || Email
-  fas fa-bell: /sub || 多种订阅方式
-  fab fa-telegram: https://t.me/ccknbcTG || Telegram
+  cc icon-bilibili: https://space.bilibili.com/1404413254 || 哔哩哔哩
+  cc icon-weibo: https://weibo.com/CommonCulture || 微博
+  cc icon-rss: /sub || 订阅更新
+  cc icon-telegram: https://t.me/ccknbcTG || 电报群组
+  cc icon-twitter: https://www.twitter.com/ccknbc || 推特
   # fas fa-bell faa-ring animated: /sub || 多种订阅方式
   # fab fa-telegram faa-pulse animated: https://t.me/ccknbcTG || Telegram
   # fab fa-telegram-plane: https://t.me/ccknbcTG || Telegram Group
   # fab fa-line: https://line.me/ti/p/1vqM_WDef1 || LINE
   # fab fa-weibo: https://weibo.com/CommonCulture || Weibo
-  fab fa-twitter: https://www.twitter.com/ccknbc || Twitter
+  
   # fab fa-twitter faa-shake animated: https://www.twitter.com/ccknbc || Twitter
   # fab fa-instagram: https://www.instagram.com/ccknbc || Instagram
   # fab fa-facebook: https://www.facebook.com/ccknbc || Facebook

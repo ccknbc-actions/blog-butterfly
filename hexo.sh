@@ -19,6 +19,7 @@ echo "[11] 升级 Butterfly 主题"
 echo "=============以下功能为全局指令================"
 echo "[12] 安装ssh密钥"
 echo "[13] 验证ssh密钥"
+echo "[14] 拉取语雀最新文章"
 echo " "
 printf "请选择需要的功能，默认选择[3] 开启本地预览"
 echo " "
@@ -206,6 +207,13 @@ ssh -T git@github.com
 printf "\033[32mINFO \033[0m 验证完毕，您的SSHkey已成功绑定至Github！\n"
 sleep 1s
 exec ${HexoPath}/hexo.sh
+else
+if [ "$answer" = "14" ]; then
+printf "\033[32mINFO \033[0m 正在拉取语雀最新文章 ...\n"
+yuque-hexo sync
+printf "\033[32mINFO \033[0m 语雀最新文章拉取完毕，您可以开始预览！\n"
+sleep 1s
+exec ${HexoPath}/hexo.sh
 
 else
 if [ "$answer" = "0" ]; then
@@ -216,6 +224,7 @@ else
 printf "\033[31mERROR \033[0m 输入错误，请返回重新选择...\n"
 sleep 1s
 exec ${HexoPath}/hexo.sh
+fi
 fi
 fi
 fi

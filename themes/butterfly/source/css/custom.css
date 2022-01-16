@@ -1,0 +1,10 @@
+@import "https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Source+Code+Pro:wght@500&display=swap";
+@import "https://at.alicdn.com/t/font_3144543_qm4x4j2uswe.css";
+
+.cc {
+    font-family: "cc" !important;
+    font-size: 24.5px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    }
