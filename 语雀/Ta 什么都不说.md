@@ -8,7 +8,7 @@ tags: [生活]
 keywords: 生活
 categories: 生活
 description: Ta 所认为的理所当然，原来根本就不存在
-cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-07-20~20-55-14.webp
+cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/13a2a73a8f1af7ee2585a86ce1992506_w1920_h1080_s80.jpg
 id: 27
 ---
 

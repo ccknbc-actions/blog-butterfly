@@ -4,7 +4,7 @@ tags: HEXO
 categories: 博客
 description: 本篇文章简单介绍了 HEXO 博客的搭建，部署更新等过程
 keywords: HEXO
-cover: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~10_48_38.webp"
+cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/45d888bd81b86777b3364e4a16ff72c6_w2240_h1260_s476.jpg
 id: -3
 translate_title: hexo-toss
 subtitle: Hexo Toss

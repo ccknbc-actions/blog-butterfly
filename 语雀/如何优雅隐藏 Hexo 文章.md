@@ -7,7 +7,7 @@ updated: 2021-10-23 22:00:00
 tags: [博客, Hexo]
 categories: 博客
 description: 本文介绍三种方法来优雅隐藏 Hexo 文章
-cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-10-22~23-50-29.webp
+cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/aa5ebc0731a66fa5fb73df76da759ae3_w1920_h1080_s557.jpg
 id: 30
 ---
 

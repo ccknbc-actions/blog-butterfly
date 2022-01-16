@@ -8,7 +8,7 @@ tags: google adsense
 keywords: google adsense
 categories: 博客
 description: 本文根据 CC 个人使用经验来介绍 Google Adsense 的食用方法
-cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-10-24~20-21-41.webp
+cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/0a77436f677dd11422579e07ba6423b3_w1920_h1080_s188.jpg
 id: 31
 ---
 

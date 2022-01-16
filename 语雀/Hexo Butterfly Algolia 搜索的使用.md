@@ -8,7 +8,7 @@ tags: [工具, Algolia]
 keywords: [Hexo, Butterfly, Algolia]
 categories: 工具
 description: 本文介绍了 Hexo Butterfly 主题下 Algolia 搜索的使用
-cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-05-11~11-06-48.webp
+cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/c9dcd19b9621a425f914ffb64cf2f8c1_w1920_h1080_s281.jpg
 id: 24
 ---
 

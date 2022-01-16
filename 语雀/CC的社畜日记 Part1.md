@@ -8,7 +8,7 @@ tags: [生活, 工作]
 keywords: 工作
 categories: 工作
 description: 一个半月的实习期过去了，我的生活发生了怎样的改变呢？
-cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-08-29~01-09-41.webp
+cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/de8b6a69a663b6e9aeb5ac3793fcadb6_w1920_h1080_s180.jpg
 aside: false
 id: 28
 ---

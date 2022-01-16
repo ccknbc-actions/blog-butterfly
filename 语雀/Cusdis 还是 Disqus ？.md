@@ -8,7 +8,7 @@ tags: [工具, 评论]
 keywords: [Hexo, Cusdis, Disqus]
 categories: 工具
 description: 在中国大陆，如果追求用户的隐私保护，是否有更好的评论解决方案？
-cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-05-11~19-58-44.webp
+cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/826d1d0e2095fde8cdd3db7dff112b2c_w1920_h1080_s583.jpg
 id: 25
 ---
 

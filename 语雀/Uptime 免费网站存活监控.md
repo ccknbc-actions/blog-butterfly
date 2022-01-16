@@ -8,7 +8,7 @@ tags:
 categories: 工具
 description: 本篇文章简单介绍了利用 Uptime 实现免费网站存活监控
 keywords: 网站存活监控,Uptime
-cover: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-05~11_19_11.webp"
+cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/b1ef2519a492a061d11625023833d7f3_w2240_h1260_s2039.jpg
 copyright_author: 大白萝卜
 copyright_author_href: "https://dabailuobo.com"
 copyright_url: "https://blog.dabailuobo.com/ba779920"
@@ -20,7 +20,7 @@ date: 2020-08-20 09:58:09
 updated: 2020-08-20 09:58:09
 ---
 
-![](https://cdn.jsdelivr.net/gh/laugh0608/CDN/img/20200820100301.png#height=633&id=EaR2t&originHeight=633&originWidth=1341&originalType=binary&ratio=1&status=done&style=none&width=1341)
+![](https://cdn.jsdelivr.net/gh/laugh0608/CDN/img/20200820100301.png#crop=0&crop=0&crop=1&crop=1&height=633&id=EaR2t&originHeight=633&originWidth=1341&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=1341)
 
 ## 前言
 
@@ -38,15 +38,15 @@ UptimeRobot 是一个免费提供网站存活监控的服务商，免费版本�
 
 注册完成之后登录会直接进入控制台
 
-![](https://cdn.jsdelivr.net/gh/laugh0608/CDN/img/20200820104637.png#height=631&id=PAyAO&originHeight=631&originWidth=1343&originalType=binary&ratio=1&status=done&style=none&width=1343)
+![](https://cdn.jsdelivr.net/gh/laugh0608/CDN/img/20200820104637.png#crop=0&crop=0&crop=1&crop=1&height=631&id=PAyAO&originHeight=631&originWidth=1343&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=1343)
 
 创建新的监视器
 
-![](https://cdn.jsdelivr.net/gh/laugh0608/CDN/img/20200820104721.png#height=499&id=XndR7&originHeight=499&originWidth=808&originalType=binary&ratio=1&status=done&style=none&width=808)
+![](https://cdn.jsdelivr.net/gh/laugh0608/CDN/img/20200820104721.png#crop=0&crop=0&crop=1&crop=1&height=499&id=XndR7&originHeight=499&originWidth=808&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=808)
 
 选择你要监视的方式，`https` 是通过访问的形式，`ping` 就是 ping 你的地址，`port` 就是监视端口
 
-![](https://cdn.jsdelivr.net/gh/laugh0608/CDN/img/20200820105159.jpg#height=623&id=IHlIy&originHeight=623&originWidth=788&originalType=binary&ratio=1&status=done&style=none&width=788)
+![](https://cdn.jsdelivr.net/gh/laugh0608/CDN/img/20200820105159.jpg#crop=0&crop=0&crop=1&crop=1&height=623&id=IHlIy&originHeight=623&originWidth=788&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=788)
 
 这就创建好一个监视器啦
 
@@ -54,19 +54,19 @@ UptimeRobot 是一个免费提供网站存活监控的服务商，免费版本�
 
 我们要访问监视器总不能每次都登录吧，Uptime 贴心的准备了可以生成公共页面，还可以绑定自定义域名哦
 
-![](https://cdn.jsdelivr.net/gh/laugh0608/CDN/img/20200820105358.png#height=456&id=VlheG&originHeight=456&originWidth=1144&originalType=binary&ratio=1&status=done&style=none&width=1144)
+![](https://cdn.jsdelivr.net/gh/laugh0608/CDN/img/20200820105358.png#crop=0&crop=0&crop=1&crop=1&height=456&id=VlheG&originHeight=456&originWidth=1144&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=1144)
 
-![](https://cdn.jsdelivr.net/gh/laugh0608/CDN/img/20200820105432.png#height=155&id=Aneak&originHeight=155&originWidth=767&originalType=binary&ratio=1&status=done&style=none&width=767)
+![](https://cdn.jsdelivr.net/gh/laugh0608/CDN/img/20200820105432.png#crop=0&crop=0&crop=1&crop=1&height=155&id=Aneak&originHeight=155&originWidth=767&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=767)
 
-![](https://cdn.jsdelivr.net/gh/laugh0608/CDN/img/20200820105544.png#height=269&id=PqV7E&originHeight=269&originWidth=536&originalType=binary&ratio=1&status=done&style=none&width=536)
+![](https://cdn.jsdelivr.net/gh/laugh0608/CDN/img/20200820105544.png#crop=0&crop=0&crop=1&crop=1&height=269&id=PqV7E&originHeight=269&originWidth=536&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=536)
 
 选择要显示的监视器，是全部显示还是只显示选中
 
-![](https://cdn.jsdelivr.net/gh/laugh0608/CDN/img/20200820105833.png#height=621&id=aKuiD&originHeight=621&originWidth=516&originalType=binary&ratio=1&status=done&style=none&width=516)
+![](https://cdn.jsdelivr.net/gh/laugh0608/CDN/img/20200820105833.png#crop=0&crop=0&crop=1&crop=1&height=621&id=aKuiD&originHeight=621&originWidth=516&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=516)
 
 创建完成之后就可以使用你的自定义域名来访问啦，或者使用默认域名
 
-![](https://cdn.jsdelivr.net/gh/laugh0608/CDN/img/20200820105936.png#height=283&id=OFtky&originHeight=283&originWidth=734&originalType=binary&ratio=1&status=done&style=none&width=734)
+![](https://cdn.jsdelivr.net/gh/laugh0608/CDN/img/20200820105936.png#crop=0&crop=0&crop=1&crop=1&height=283&id=OFtky&originHeight=283&originWidth=734&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=734)
 
 在这里进行访问
 
@@ -83,7 +83,7 @@ UptimeRobot 是一个免费提供网站存活监控的服务商，免费版本�
 
 fork 到自己仓库后，修改相关配置即可
 
-![](https://cdn.jsdelivr.net/gh/laugh0608/CDN/img/20200820110242.png#height=383&id=Hhnem&originHeight=383&originWidth=738&originalType=binary&ratio=1&status=done&style=none&width=738)
+![](https://cdn.jsdelivr.net/gh/laugh0608/CDN/img/20200820110242.png#crop=0&crop=0&crop=1&crop=1&height=383&id=Hhnem&originHeight=383&originWidth=738&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=738)
 
 三种 APIkey 自己按照需要任选其一生成即可，在配置文件中进行修改，之后自己部署完毕就 OK 啦
 

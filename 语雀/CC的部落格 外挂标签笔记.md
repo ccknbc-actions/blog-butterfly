@@ -8,7 +8,7 @@ subtitle: Introduction Of Plugin Tags Based On Butterfly
 date: 2021-03-05 12:00:00
 updated: 2021-05-16 12:00:00
 id: 22
-cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-05~14-36-33.png
+cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/666ccfeb387717d69a0e3333cc1170dc_w1004_h591_s48.jpg
 hide: false
 ---
 

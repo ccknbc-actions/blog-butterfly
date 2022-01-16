@@ -8,7 +8,7 @@ tags: [生活, 工作]
 keywords: 工作
 categories: 工作
 description: 选择一个人做好自己的本职工作，还是说去为了跳槽随便跳个坑？
-cover: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-12-01~22-10-37.webp
+cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/9f2faee04285de50560e0e522b9915a5_w1920_h1080_s1118.jpg
 aside: false
 id: 33
 ---

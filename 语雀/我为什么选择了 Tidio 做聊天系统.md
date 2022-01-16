@@ -8,7 +8,7 @@ id: -8
 categories: 工具
 description: 本篇文章简单介绍了我使用不同聊天系统的体会
 keywords: 工具,聊天
-cover: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-12-15~18-17-57.webp"
+cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/374954d02e9ba8b6387616ae3029b4b9_w2240_h1260_s757.jpg
 translate_title: why-did-i-choose-tidio-as-the-chat-system
 subtitle: Why Did I Choose Tidio As The Chat System
 date: 2020-10-02 21:18:42
@@ -46,9 +46,9 @@ updated: 2020-10-03 18:09:51
 5. 机器人引导，免费的够用了，很大的操作空间
 6. 自定义快速回复，这个其他的也有配备
 7. 主要是给了用户更多选择，告知用户我可能会记录你的`IP`等隐私信息，算是一种信任培养
-   ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-03~14_51_35.webp#height=562&id=Twd0i&originHeight=562&originWidth=502&originalType=binary&ratio=1&status=done&style=none&width=502)官方小部件概览
-   ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-03~14_52_16.webp#height=826&id=gegKF&originHeight=826&originWidth=381&originalType=binary&ratio=1&status=done&style=none&width=381)离线状态
-   ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-03~14_52_23.webp#height=759&id=ttfZV&originHeight=759&originWidth=373&originalType=binary&ratio=1&status=done&style=none&width=373)在线状态
-   ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-03~14_55_44.webp#height=895&id=nzCLx&originHeight=895&originWidth=1920&originalType=binary&ratio=1&status=done&style=none&width=1920)
+   ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-03~14_51_35.webp#crop=0&crop=0&crop=1&crop=1&height=562&id=Twd0i&originHeight=562&originWidth=502&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=502)官方小部件概览
+   ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-03~14_52_16.webp#crop=0&crop=0&crop=1&crop=1&height=826&id=gegKF&originHeight=826&originWidth=381&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=381)离线状态
+   ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-03~14_52_23.webp#crop=0&crop=0&crop=1&crop=1&height=759&id=ttfZV&originHeight=759&originWidth=373&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=373)在线状态
+   ![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-03~14_55_44.webp#crop=0&crop=0&crop=1&crop=1&height=895&id=nzCLx&originHeight=895&originWidth=1920&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=1920)
 
-![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-03~15_02_00.webp#height=3169&id=E78nI&originHeight=3169&originWidth=1920&originalType=binary&ratio=1&status=done&style=none&width=1920)
+![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-03~15_02_00.webp#crop=0&crop=0&crop=1&crop=1&height=3169&id=E78nI&originHeight=3169&originWidth=1920&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=1920)
