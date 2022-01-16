@@ -1,12 +1,15 @@
 nav#nav
-  - var pagedescr = page.description ? page.description : "CC的部落格欢迎您的光临"
+  - var pagedescr = page.description ? page.description : "CC的部落格 欢迎您的光临"
   - var subtitle = page.subtitle ? page.subtitle : "CC's Blog"
   if is_home()
     span#blog_name
       a#site-name(onclick='btf.scrollToDest(0, 500)' data-title=pagedescr) #[=subtitle]
   else if is_archive()
     span#blog_name
-      a#site-name(href=url_for('/') data-title=pagedescr) #[='Archives']
+      a#site-name(href=url_for('/') data-title='CC的部落格 文章归档页') #[='Archives']
+  else if is_current('/404')
+    span#blog_name
+      a#site-name(href=url_for('/') data-title='CC的部落格 404页面') #[='404 Not Found']
   else
     span#blog_name
       a#site-name(href=url_for('/') data-title=pagedescr) #[=subtitle]

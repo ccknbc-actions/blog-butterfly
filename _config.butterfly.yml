@@ -50,14 +50,17 @@ copy:
 social:
   # fab fa-github: https://github.com/CCKNBC || GitHub
   # fas fa-envelope: mailto:blog@ccknbc.cc || Email
-  fas fa-bell: /sub || 多种订阅方式
-  fab fa-telegram: https://t.me/ccknbcTG || Telegram
+  cc icon-bilibili: https://space.bilibili.com/1404413254 || 哔哩哔哩
+  cc icon-weibo: https://weibo.com/CommonCulture || 微博
+  cc icon-rss: /sub || 订阅更新
+  cc icon-telegram: https://t.me/ccknbcTG || 电报群组
+  cc icon-twitter: https://www.twitter.com/ccknbc || 推特
   # fas fa-bell faa-ring animated: /sub || 多种订阅方式
   # fab fa-telegram faa-pulse animated: https://t.me/ccknbcTG || Telegram
   # fab fa-telegram-plane: https://t.me/ccknbcTG || Telegram Group
   # fab fa-line: https://line.me/ti/p/1vqM_WDef1 || LINE
   # fab fa-weibo: https://weibo.com/CommonCulture || Weibo
-  fab fa-twitter: https://www.twitter.com/ccknbc || Twitter
+  
   # fab fa-twitter faa-shake animated: https://www.twitter.com/ccknbc || Twitter
   # fab fa-instagram: https://www.instagram.com/ccknbc || Instagram
   # fab fa-facebook: https://www.facebook.com/ccknbc || Facebook
@@ -157,7 +160,7 @@ error_img:
 # A simple 404 page
 error_404:
   enable: true
-  subtitle: 请尝试站内搜索文章
+  subtitle: 此页面无法打开，由于网络原因，我们无法从任何一个镜像站获取到最新的博客内容。
   background: https://gejiba.com/view.php/3c3845c98419b590d7f6b6c8ec6add1c.gif
 
 post_meta:
@@ -337,19 +340,6 @@ twikoo:
   visitor: false
   option:
 
-# artalk
-# https://artalk.js.org
-artalk:
-  placeholder: 没什么好评论的，这么垃圾的内容，并且需要验证码，还是别浪费时间了！
-  noComment: 这里冷冷清清的，快点离开吧！'
-  defaultAvatar: monsterid
-  sendBtn: 发送
-  serverUrl: https://ccknbc.000webhostapp.com/public/index.php
-  gravatar_cdn: https://seccdn.libravatar.org/avatar/
-  pageSize: 5
-  autoLoad: true
-
-
 # disqus
 # https://disqus.com/
 disqus:
@@ -421,22 +411,6 @@ utterances:
   # Theme: github-light/github-dark/github-dark-orange/icy-dark/dark-blue/photon-dark
   light_theme: github-light
   dark_theme: photon-dark
-
-# beaudar
-# https://beaudar.lipk.org/
-beaudar:
-  repo: ccknbc-backup/comments
-  branch: main
-  # Issue Mapping: pathname/url/title/og:title
-  issue_term: title
-  label: 💬comment
-  keep_theme: false
-  loading: true
-  comment_order: asc
-  input_position: bottom
-  # Theme: github-light/github-dark/preferred-color-scheme/github-dark-orange/hugo-terminal-orange/icy-dark/dark-blue/photon-dark/classic-dark
-  light_theme: github-light
-  dark_theme: github-dark
 
 # Facebook Comments Plugin
 # https://developers.facebook.com/docs/plugins/comments/
@@ -862,9 +836,9 @@ darkmode:
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment
 # Don't repeat 不要重複
 rightside_item_order:
-  enable: false
-  hide: # readmode,translate,darkmode,hideAside
-  show: # toc,chat,comment
+  enable: true
+  hide: hideAside,chat
+  show: toc,translate,readmode,darkmode,comment
 
 # Lightbox (圖片大圖查看模式)
 # --------------------------------------
@@ -1034,9 +1008,6 @@ CDN:
   # main_css: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/css/index.css
   # main: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/main.js
   # utils: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/utils.js
-
-  # comments
-  beaudar: https://beaudar.lipk.org/client.js
 
   # search
   # local_search: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/search/local-search.js

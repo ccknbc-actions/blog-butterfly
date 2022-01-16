@@ -6,8 +6,8 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "github-yuque": "yuque-hexo-lyrics sync && npm run build && hexo algolia && gulp",
-    "gitlab-yuque": "yuque-hexo-lyrics sync && npm run build && gulp",
+    "github-yuque": "yuque-hexo sync && npm run build && hexo algolia && gulp",
+    "gitlab-yuque": "yuque-hexo sync && npm run build && gulp",
     "github": "npm run build && hexo algolia && gulp",
     "gitlab": "npm run build && gulp"
   },

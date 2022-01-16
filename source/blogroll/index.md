@@ -1,6 +1,6 @@
 ---
 title: CC的小伙伴们
-description: CC的部落格 友情链接
+description: CC的部落格 友情链接页面
 type: link
 aside: false
 top_img: false
