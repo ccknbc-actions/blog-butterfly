@@ -1,6 +1,6 @@
 ---
 title: CC的小伙伴们
-description: CC的部落格 友情链接
+description: CC的部落格 友情链接页面
 type: link
 aside: false
 top_img: false
@@ -9,7 +9,7 @@ subtitle: Blogroll
 date: 2020-06-04 22:17:49
 updated: 2021-07-18 19:38:19
 ---
-<script src="https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@main/blogroll.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@main/blogroll.js" data-pjax></script>
 <!-- <script src="https://cdn.jsdelivr.net/npm/butterfly-friend/dist/friend.min.js"></script> -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@main//style.css">
 <script>
@@ -50,7 +50,7 @@ updated: 2021-07-18 19:38:19
   </script>
 
   <!-- 全局引入抓取方法 -->
-  <script defer src="https://cdn.jsdelivr.net/gh/Rock-Candy-Tea/hexo-friendcircle-demo@main/js/fetch.js"></script>
+  <!-- <script defer src="https://cdn.jsdelivr.net/gh/Rock-Candy-Tea/hexo-friendcircle-demo@main/js/fetch.js"></script> -->
   <!-- 局部引入页面元素生成方法 -->
   <script async src="https://cdn.jsdelivr.net/gh/Rock-Candy-Tea/hexo-friendcircle-demo@main/js/fcircle.js" charset="utf-8"></script>    <!-- js -->
 

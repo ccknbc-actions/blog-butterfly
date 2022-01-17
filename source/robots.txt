@@ -1,2 +1,5 @@
+User-agent: *
+Disallow: /categories/
+Disallow: /tags/
 Sitemap: https://blog.ccknbc.cc/baidusitemap.xml
 Sitemap: https://blog.ccknbc.cc/sitemap.xml

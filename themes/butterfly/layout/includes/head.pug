@@ -24,12 +24,11 @@ meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-sca
 title= tabTitle
 if pageKeywords
   meta(name="keywords" content=pageKeywords)
-  meta(name="author" content=pageAuthor)
-  meta(name="copyright" content=pageCopyright)
-  meta(name ="format-detection" content="telephone=no")
-  meta(name="theme-color" content=themeColor)
-if is_post()
-  meta(name='referrer' content='no-referrer')
+meta(name="author" content=pageAuthor)
+meta(name="copyright" content=pageCopyright)
+meta(name ="format-detection" content="telephone=no")
+meta(name="theme-color" content=themeColor)
+meta(name='referrer' content='no-referrer')
 
 //- Open_Graph
 include ./head/Open_Graph.pug
