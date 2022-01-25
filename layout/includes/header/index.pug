@@ -29,11 +29,11 @@ else
   - var isHomeClass = 'not-top-img'
 
 header#page-header(class=isHomeClass style=bg_img)
-  include ./nav.pug
+  !=partial('includes/header/nav', {}, {cache: false})
   if top_img !== false
     if is_post()
       include ./post-info.pug
-    else if is_home()
+    else if is_home() 
       #site-info
         h1#site-title=site_title
         if theme.subtitle.enable
