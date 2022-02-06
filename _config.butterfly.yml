@@ -322,7 +322,6 @@ waline:
     login: enable
     copyright: true
     uploadImage: false
-    avatar: monsterid
     locale:
       admin: 博主兼管理员
       sofa: 这里冷冷清清的，快来留下脚印吧！
@@ -930,8 +929,10 @@ hpptalk:
 pjax:
   enable: true
   exclude:
-    # - /blogroll/
+    - /privacy-policy/
+    - /blogroll/
     - /music/
+    - /essay/
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
@@ -970,7 +971,7 @@ pace:
   enable: true
 
 snow:
-  enable: true
+  enable: false
 
 # PWA
 # See https://github.com/JLHwung/hexo-offline
