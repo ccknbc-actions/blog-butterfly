@@ -8,6 +8,9 @@ div
   if is_home() && theme.statuspage.enable
     script(async src=url_for(theme.CDN.statuspage))
 
+  if !(is_post()) && theme.snow.enable
+    script(defer src=`https://api.vvhan.com/api/snow`)
+
   if theme.translate.enable
     script(defer src=url_for(theme.CDN.translate))
 
