@@ -31,7 +31,7 @@ post:
     link: 文章链接
     copyright_notice: 版权声明
     copyright_content: '本博客所有文章除特别声明外，均采用
-      <a href="%s"> <i style="color:#8fbc8f" class="fab fa-creative-commons"></i> <i style="color:#8fbc8f" class="fab fa-creative-commons-by"></i> <i style="color:#8fbc8f" class="fab fa-creative-commons-nc"></i> <i style="color:#8fbc8f" class="fab fa-creative-commons-sa"></i> %s</a> 许可协议。转载请注明来自 <a href="%s">%s</a>！'
+      <a href="%s"> <i style="color:#8fbc8f" class="fa-brands fa-creative-commons"></i> <i style="color:#8fbc8f" class="fa-brands fa-creative-commons-by"></i> <i style="color:#8fbc8f" class="fa-brands fa-creative-commons-nc"></i> <i style="color:#8fbc8f" class="fa-brands fa-creative-commons-sa"></i> %s</a> 许可协议。转载请注明来自 <a href="%s">%s</a>！'
   recommend: 相关推荐
   edit: 编辑
 
@@ -114,7 +114,7 @@ rightside:
   scroll_to_comment: 直达评论
   setting: 设置
   aside: 单栏和双栏切换
-  chat_btn: 给 CC 留言
+  chat: 给 CC 留言
 
 copy_copyright:
   author: 作者

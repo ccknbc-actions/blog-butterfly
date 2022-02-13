@@ -3,25 +3,25 @@
 # --------------------------------------
 
 menu:
-  # 首页: / || fas fa-home
-  # 订阅: /sub/ || fas fa-rss
-  # 友链: /blogroll/ || fas fa-user-friends
-  文章 || fas fa-book-reader:
-    归档: /archives || fas fa-archive
-    标签: /tags || fas fa-tags
-    分类: /categories || fas fa-folder-open
-  便签 || fas fa-sticky-note:
-    友链: /blogroll || fas fa-blog
-    音乐: /music || fas fa-music
-    短文: /essay || fas fa-comment-alt
-    # 统计: /charts || fas fa-chart-bar
-  关于 || fas fa-desktop:
-    订阅: /sub || fas fa-rss
-    本站: /about || fas fa-stream
-    隐私: /privacy-policy || fas fa-user-secret
+  # 首页: / || fa-solid fa-home
+  # 订阅: /sub/ || fa-solid fa-rss
+  # 友链: /blogroll/ || ffa-solid fa-user-friends
+  文章 || fa-solid fa-book-reader:
+    归档: /archives || fa-solid fa-box-archive
+    标签: /tags || fa-solid fa-tags
+    分类: /categories || fa-solid fa-folder-open
+  便签 || fa-solid fa-sticky-note:
+    友链: /blogroll || fa-solid fa-blog
+    音乐: /music || fa-solid fa-music
+    短文: /essay || fa-solid fa-comment-alt
+    # 统计: /charts || fa-solid fa-chart-bar
+  关于 || fa-solid fa-desktop:
+    订阅: /sub || fa-solid fa-rss
+    本站: /about || fa-solid fa-stream
+    隐私: /privacy-policy || fa-solid fa-user-secret
   #   自己: /me/ || far fa-user
-  #   状态: https://cc.instatus.com || fas fa-server
-  #   证书: https://ssl.ccknbc.cc || fab fa-expeditedssl
+  #   状态: https://cc.instatus.com || fa-solid fa-server
+  #   证书: https://ssl.ccknbc.cc || fa-brands fa-expeditedssl
 
 # Hide the child menu items in mobile sidebar
 hide_sidebar_menu_child: false
@@ -48,24 +48,19 @@ copy:
 # formal:
 #   icon: link || the description
 social:
-  # fab fa-github: https://github.com/CCKNBC || GitHub
-  # fas fa-envelope: mailto:blog@ccknbc.cc || Email
-  cc icon-bilibili: https://space.bilibili.com/1404413254 || 哔哩哔哩
-  cc icon-weibo: https://weibo.com/CommonCulture || 微博
-  cc icon-yuque: https://www.yuque.com/ccknbc || 语雀
-  cc icon-telegram: https://t.me/ccknbcTG || 电报群组
-  cc icon-twitter: https://www.twitter.com/ccknbc || 推特
-  # fas fa-bell faa-ring animated: /sub || 多种订阅方式
-  # fab fa-telegram faa-pulse animated: https://t.me/ccknbcTG || Telegram
-  # fab fa-telegram-plane: https://t.me/ccknbcTG || Telegram Group
-  # fab fa-line: https://line.me/ti/p/1vqM_WDef1 || LINE
-  # fab fa-weibo: https://weibo.com/CommonCulture || Weibo
-  
-  # fab fa-twitter faa-shake animated: https://www.twitter.com/ccknbc || Twitter
-  # fab fa-instagram: https://www.instagram.com/ccknbc || Instagram
-  # fab fa-facebook: https://www.facebook.com/ccknbc || Facebook
-  # fab fa-facebook-messenger: https://m.me/ccknbc || Messenger
-  # fab fa-youtube: https://www.youtube.com/channel/UCpwvRmdjIYbhjEaoEl6hI8Q || YouTube
+  # fa-brands fa-github: https://github.com/CCKNBC || GitHub
+  # fa-solid fa-envelope: mailto:blog@ccknbc.cc || Email
+  fa-brands fa-bilibili: https://space.bilibili.com/1404413254 || 哔哩哔哩
+  fa-brands fa-weibo: https://weibo.com/CommonCulture || 微博
+  fa-solid fa-crow: https://www.yuque.com/ccknbc || 语雀
+  fa-brands fa-telegram: https://t.me/ccknbcTG || 电报群组
+  fa-brands fa-twitter: https://www.twitter.com/ccknbc || 推特
+  # fa-solid fa-bell faa-ring animated: /sub || 多种订阅方式
+  # fa-brands fa-line: https://line.me/ti/p/1vqM_WDef1 || LINE
+  # fa-brands fa-instagram: https://www.instagram.com/ccknbc || Instagram
+  # fa-brands fa-facebook: https://www.facebook.com/ccknbc || Facebook
+  # fa-brands fa-facebook-messenger: https://m.me/ccknbc || Messenger
+  # fa-brands fa-youtube: https://www.youtube.com/channel/UCpwvRmdjIYbhjEaoEl6hI8Q || YouTube
 
 # search (搜索)
 # --------------------------------------
@@ -734,7 +729,7 @@ aside:
     description: ''
     button:
       enable: true
-      icon: fas fa-circle faa-burst animated
+      icon: fa-solid fa-circle faa-burst animated
       text: CC的状态监控
       link: https://cc.instatus.com
   card_announcement:
@@ -1001,6 +996,8 @@ inject:
     - '<div class="app-refresh" id="app-refresh"> <div class="app-refresh-wrap"> <label>✨ 网站已更新 👉</label> <a href="javascript:void(0)" onclick="location.reload()">✔ <b>点击刷新</b> 💫</a> </div></div><script>function showNotification(){if(GLOBAL_CONFIG.Snackbar){let t="light"===document.documentElement.getAttribute("data-theme")?GLOBAL_CONFIG.Snackbar.bgLight:GLOBAL_CONFIG.Snackbar.bgDark,e=GLOBAL_CONFIG.Snackbar.position;Snackbar.show({text:"✨ 部落格已更新 👉",backgroundColor:t,duration:1e4,pos:e,actionText:"✔ 点击刷新 💫",textColor:"#8FBC8F",actionTextColor:"#4CAF50",onActionClick:function(t){location.reload()}})}else{let o=`top: 0; background: ${"light"===document.documentElement.getAttribute("data-theme")?"#49b1f5":"#1f1f1f"};`;document.getElementById("app-refresh").style.cssText=o}}"serviceWorker"in navigator&&(navigator.serviceWorker.controller&&navigator.serviceWorker.addEventListener("controllerchange",function(){showNotification()}),window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js")}));</script>'
     # - <script defer src='https://api.vvhan.com/api/snow'></script>
     # - <script defer src="https://api.vvhan.com/api/denglong"></script>
+    # - <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+    # - <div id="music" key="6208da041a763" api="https://music.mx142.ltd"></div><script id="xplayer" src="https://music.mx142.ltd/Static/player4/js/player.js" ></script>
 
 # Don't modify the following settings unless you know how they work
 # 非必要請不要修改

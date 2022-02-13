@@ -16,7 +16,7 @@ if theme.menu
             if labelArray[1]
               i.fa-fw(class=trim(labelArray[1]))
             span=' '+ trim(labelArray[0])
-            i.fas.fa-chevron-down
+            i.fa-solid.fa-chevron-down
           ul.menus_item_child
             each val,lab in value 
               - const valArray = val.split('||')

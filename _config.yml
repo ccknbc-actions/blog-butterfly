@@ -78,7 +78,7 @@ marked:
   descriptionLists: true
 
 markdown:
-  preset: "default" # 渲染器默认预设 # "commonmark": 使用严格 CommandMark 规定. # "default": 默认配置, 类似于 GFM # "zero": 禁用所有预设.
+  preset: "default" # 渲染器默认预设 # "commonmark": 使用严格 CommandMark 规定. # "": 默认配置, 类似于 GFM # "zero": 禁用所有预设.
 # 以下为 render 选项
   render:
     html: true # 是否解析 HTML 内容, 如果为 true 则表示解析, false 表示将 HTML 转意为文本.
@@ -102,7 +102,7 @@ markdown:
     - markdown-it-abbr # https://github.com/markdown-it/markdown-it-abbr
     - markdown-it-cjk-breaks # https://github.com/markdown-it/markdown-it-cjk-breaks
     - markdown-it-container # https://github.com/markdown-it/markdown-it-container
-#    - markdown-it-deflist # https://github.com/markdown-it/markdown-it-deflist
+    - markdown-it-deflist # https://github.com/markdown-it/markdown-it-deflist
     - markdown-it-emoji # https://github.com/markdown-it/markdown-it-emoji
     - markdown-it-footnote # https://github.com/markdown-it/markdown-it-footnote
     - markdown-it-ins # https://github.com/markdown-it/markdown-it-ins
@@ -110,13 +110,13 @@ markdown:
     - markdown-it-sub # https://github.com/markdown-it/markdown-it-sub
     - markdown-it-sup # https://github.com/markdown-it/markdown-it-sup
 #以下为额外安装插件
-#    - markdown-it-task-lists # https://github.com/revin/markdown-it-task-lists
+    - markdown-it-task-lists # https://github.com/revin/markdown-it-task-lists
   anchors: # 锚点的配置
     level: 1 # 开始创建锚点的等级 # 如 "2" 则表示从 H2 开始创建一直到 H6(最后).
     collisionSuffix: '' # 如果遇到重复的锚点 ID 为其添加数字编号时在这个数字后添加的后缀.
     # 以下为标题锚点配置
     permalink: true # false # 如果为 true 则创建一个除标题外带有固定地址的的锚点标签.
-    permalinkClass: 'fas fa-hashtag faa-pulse animated' # 定义固定锚点的 class 名.
+    permalinkClass: 'fa-solid fa-hashtag faa-pulse animated' # 定义固定锚点的 class 名.
     permalinkSide: 'right' # 设定为 right 则会在标题后添加固定链接.
     permalinkSymbol: '' # 定义固定链接使用的符号
     # 标题固定锚点到此结束

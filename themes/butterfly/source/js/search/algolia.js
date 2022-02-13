@@ -85,10 +85,10 @@ window.addEventListener('load', () => {
     instantsearch.widgets.pagination({
       container: '#algolia-pagination',
       templates: {
-        first: '<i class="fas fa-angle-double-left" title="第一页"></i>',
-        last: '<i class="fas fa-angle-double-right" title="最后一页"></i>',
-        previous: '<i class="fas fa-angle-left" title="上一页"></i>',
-        next: '<i class="fas fa-angle-right" title="下一页"></i>'
+        first: '<i class="fa-solid fa-angle-double-left" title="第一页"></i>',
+        last: '<i class="fa-solid fa-angle-double-right" title="最后一页"></i>',
+        previous: '<i class="fa-solid fa-angle-left" title="上一页"></i>',
+        next: '<i class="fa-solid fa-angle-right" title="下一页"></i>'
       }
     }),
     instantsearch.widgets.stats({

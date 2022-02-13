@@ -11,13 +11,13 @@
             span.post-meta-label= _p('post.created')
             time.post-meta-date-created(datetime=date_xml(page.date) title=_p('post.created') + ' ' + full_date(page.date))=date(page.date, config.date_format)
             span.post-meta-separator |
-            i.fas.fa-history.fa-fw.post-meta-icon
+            i.fa-solid.fa-history.fa-fw.post-meta-icon
             span.post-meta-label= _p('post.updated')
             time.post-meta-date-updated(datetime=date_xml(page.updated) title=_p('post.updated') + ' ' + full_date(page.updated))=date(page.updated, config.date_format)
           else
             - let data_type_update = theme.post_meta.post.date_type === 'updated'
             - let date_type = data_type_update ? 'updated' : 'date'
-            - let date_icon = data_type_update ? 'fas fa-history' :'far fa-calendar-alt'
+            - let date_icon = data_type_update ? 'fa-solid fa-history' :'far fa-calendar-alt'
             - let date_title = data_type_update ? _p('post.updated') : _p('post.created')
             i.fa-fw.post-meta-icon(class=date_icon)
             span.post-meta-label= date_title
@@ -28,10 +28,10 @@
             span.post-meta-separator |
 
           each item, index in page.categories.data
-            i.fas.fa-inbox.fa-fw.post-meta-icon
+            i.fa-solid.fa-inbox.fa-fw.post-meta-icon
             a(href=url_for(item.path)).post-meta-categories #[=item.name]
             if (index < page.categories.data.length - 1)
-              i.fas.fa-angle-right.post-meta-separator
+              i.fa-solid.fa-angle-right.post-meta-separator
 
     .meta-secondline
       - let postWordcount = theme.wordcount.enable && (theme.wordcount.post_wordcount || theme.wordcount.min2read)

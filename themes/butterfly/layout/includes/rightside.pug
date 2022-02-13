@@ -5,30 +5,30 @@ mixin rightsideItem(array)
       when 'readmode'
         if is_post() && readmode
           button#readmode(type="button" title=_p('rightside.readmode_title'))
-            i.fas.fa-book-open
+            i.fa-solid.fa-book-open
       when 'translate'
         if translate.enable
           button#translateLink(type="button" title=_p('rightside.translate_title'))= translate.default
       when 'darkmode'
         if darkmode.enable && darkmode.button
           button#darkmode(type="button" title=_p('rightside.night_mode_title'))
-            i.fas.fa-adjust
+            i.fa-solid.fa-adjust
       when 'hideAside'
         if aside.enable && aside.button && page.aside !== false
           button#hide-aside-btn(type="button" title=_p('rightside.aside'))
-            i.fas.fa-arrows-alt-h
+            i.fa-solid.fa-arrows-alt-h
       when 'toc'
         if showToc
           button#mobile-toc-button.close(type="button" title=_p("rightside.toc"))
-            i.fas.fa-list-ul
+            i.fa-solid.fa-list-ul
       when 'chat'
         if chat_btn
-          button#chat_btn(type="button" title=_p("rightside.chat_btn"))
-            i.fas.fa-sms
+          button#chat_btn(type="button" title=_p("rightside.chat"))
+            i.fa-solid.fa-sms
       when 'comment'
         if commentsJsLoad
           a#to_comment(href="#post-comment" title=_p("rightside.scroll_to_comment"))
-            i.fas.fa-comments
+            i.fa-solid.fa-comments
 
 #rightside
   - const { enable, hide, show } = theme.rightside_item_order
@@ -41,54 +41,54 @@ mixin rightsideItem(array)
       if is_post()
         if theme.edit.cloud_studio !== false
           a.edit-cloud-studio(href=theme.edit.cloud_studio title=_p('edit.cloud_studio'))
-            i.fas.fa-laptop-code
+            i.fa-solid.fa-laptop-code
         if theme.edit.gitlab_ide !== false
           a.edit-gitlab-ide(href=theme.edit.gitlab_ide + 'posts/-/语雀/' + page.title + '.md' title=_p('edit.gitlab_ide') + ' - ' + page.title)
-            i.fas.fa-code
+            i.fa-solid.fa-code
         if theme.edit.gitlab !== false
           a.edit-gitlab(href=theme.edit.gitlab + 'posts/语雀/' + page.title + '.md' title=_p('edit.gitlab') + ' - ' + page.title)
-            i.fab.fa-gitlab
+            i.fa-brands.fa-gitlab
         if theme.edit.hexoplusplus !== false
           a.edit-hexoplusplus(href=theme.edit.hexoplusplus title=_p('edit.hexoplusplus'))
-            i.fas.fa-pencil-alt
+            i.fa-solid.fa-pencil-alt
         if theme.edit.yuque !== false
           a.edit-yuque(href=theme.edit.yuque + page.id + '/edit' title=_p('edit.yuque') + ' - ' + page.title)
-            i.fas.fa-crow
+            i.fa-solid.fa-crow
       else if is_page() || is_category() || is_tag()
         if theme.edit.cloud_studio !== false
           a.edit-cloud-studio(href=theme.edit.cloud_studio title=_p('edit.cloud_studio'))
-            i.fas.fa-laptop-code
+            i.fa-solid.fa-laptop-code
         if theme.edit.gitlab_ide  !== false
           a.edit-gitlab-ide(href=theme.edit.gitlab_ide + 'master/-/source/' + page.source title=_p('edit.gitlab_ide') + ' - ' + page.title)
-            i.fas.fa-code
+            i.fa-solid.fa-code
         if theme.edit.gitlab !== false
           a.edit-gitlab(href=theme.edit.gitlab + 'master/source/' + page.source title=_p('edit.gitlab') + ' - ' + page.title)
-            i.fab.fa-gitlab
+            i.fa-brands.fa-gitlab
       else if is_home()
         if theme.edit.cloud_studio !== false
           a.edit-cloud-studio(href=theme.edit.cloud_studio title=_p('edit.cloud_studio'))
-            i.fas.fa-laptop-code
+            i.fa-solid.fa-laptop-code
         if theme.edit.gitlab_ide !== false
           a.edit-gitlab-ide(href=theme.edit.gitlab_ide title=_p('edit.gitlab_ide'))
-            i.fas.fa-code
+            i.fa-solid.fa-code
     if hideArray
       +rightsideItem(hideArray)
   #rightside-config-show
     if enable
       if hide
         button#rightside_config(type="button" title=_p("rightside.setting"))
-          i.fas.fa-cog
+          i.fa-solid.fa-cog
     else
       if is_post()
         if (readmode || translate.enable || (darkmode.enable && darkmode.button))
           button#rightside_config(type="button" title=_p("rightside.setting"))
-            i.fas.fa-cog
+            i.fa-solid.fa-cog
       else if translate.enable || (darkmode.enable && darkmode.button)
         button#rightside_config(type="button" title=_p("rightside.setting"))
-          i.fas.fa-cog
+          i.fa-solid.fa-cog
 
     if showArray
       +rightsideItem(showArray)
 
     button#go-up(type="button" title=_p("rightside.back_to_top"))
-      i.fas.fa-arrow-up
+      i.fa-solid.fa-arrow-up

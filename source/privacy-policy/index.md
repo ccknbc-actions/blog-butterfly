@@ -110,4 +110,4 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 
 我可能对此 Cookies 政策所做的任何更改都将发布在此页面上。如果更改很重要，我会在我的主页或应用上明确指出该政策已更新。
 
-{% btn '',最后修订时间：2021 年 10 月 5 日 20:33,fas fa-history,block right green smaller %}
+{% btn '',最后修订时间：2021 年 10 月 5 日 20:33,fa-solid fa-history,block right green smaller %}
