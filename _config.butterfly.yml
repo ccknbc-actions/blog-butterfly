@@ -5,7 +5,7 @@
 menu:
   # 首页: / || fa-solid fa-home
   # 订阅: /sub/ || fa-solid fa-rss
-  # 友链: /blogroll/ || ffa-solid fa-user-friends
+  # 友链: /blogroll/ || fa-solid fa-user-friends
   文章 || fa-solid fa-book-reader:
     归档: /archives || fa-solid fa-box-archive
     标签: /tags || fa-solid fa-tags
@@ -1003,19 +1003,64 @@ inject:
 # 非必要請不要修改
 
 CDN:
-  # main
-  # main_css: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/css/index.css
-  # main: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/main.js
-  # utils: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/utils.js
-
-  # search
-  # local_search: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/search/local-search.js
-  # algolia_js: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/search/algolia.js
-
-
-  # Conversion between Traditional and Simplified Chinese
-  # translate: https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io@master/js/tw_cn.js
-
+  # The CDN provider of internal scripts (主題內部 js 的 cdn 配置)
+  # option: local/jsdelivr
+  # Dev version cannot choose jsdelivr (dev版的主題不能設置為 jsdelivr)
+  internal_provider: local
+  # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
+  # option: local/jsdelivr
+  # when set it to local, you need to install hexo-butterfly-extjs
+  third_party_provider: jsdelivr
+  option:
+    # main_css:
+    # main:
+    # utils:
+    # translate:
+    # local_search:
+    # algolia_js:
+    # algolia_search_v4:
+    # instantsearch_v4:
+    # pjax:
+    # gitalk:
+    # gitalk_css:
+    # blueimp_md5:
+    # valine:
+    # disqusjs:
+    # disqusjs_css:
+    # twikoo:
+    # waline:
+    # sharejs:
+    # sharejs_css:
+    # mathjax:
+    # katex:
+    # katex_copytex:
+    # katex_copytex_css:
+    # mermaid:
+    # canvas_ribbon:
+    # canvas_fluttering_ribbon:
+    # canvas_nest:
+    # lazyload:
+    # instantpage:
+    # typed:
+    # pangu:
+    # fancybox_css_v4:
+    # fancybox_v4:
+    # medium_zoom:
+    # snackbar_css:
+    # snackbar:
+    # activate_power_mode:
+    # fireworks:
+    # click_heart:
+    # ClickShowText:
+    # fontawesomeV6:
+    # flickr_justified_gallery_js:
+    # flickr_justified_gallery_css:
+    # aplayer_css:
+    # aplayer_js:
+    # meting_js:
+    # prismjs_js:
+    # prismjs_lineNumber_js:
+    # prismjs_autoloader:
   # other
   statuspage: https://ccknbc.statuspage.io/embed/script.js
   pace: https://cdn.jsdelivr.net/gh/CodeByZach/pace/pace.min.js
