@@ -83,11 +83,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const highlightShrinkClass = isHighlightShrink === true ? 'closed' : ''
 
     if (isHighlightShrink !== undefined) {
-      highlightShrinkEle = `<i class="fas fa-angle-down expand ${highlightShrinkClass}"></i>`
+      highlightShrinkEle = `<i class="fa-solid fa-angle-down expand ${highlightShrinkClass}"></i>`
     }
 
     if (isHighlightCopy) {
-      highlightCopyEle = '<div class="copy-notice"></div><i class="fas fa-paste copy-button"></i>'
+      highlightCopyEle = '<div class="copy-notice"></div><i class="fa-solid fa-paste copy-button"></i>'
     }
 
     const copy = (text, ctx) => {
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (highlightHeightLimit && item.offsetHeight > highlightHeightLimit + 30) {
         const ele = document.createElement('div')
         ele.className = 'code-expand-btn'
-        ele.innerHTML = '<i class="fas fa-angle-double-down"></i>'
+        ele.innerHTML = '<i class="fa-solid fa-angle-double-down"></i>'
         ele.addEventListener('click', expandCode)
         fragment.appendChild(ele)
       }
@@ -452,7 +452,7 @@ document.addEventListener('DOMContentLoaded', function () {
       $body.classList.add('read-mode')
       const newEle = document.createElement('button')
       newEle.type = 'button'
-      newEle.className = 'fas fa-sign-out-alt exit-readmode'
+      newEle.className = 'fa-solid fa-sign-out-alt exit-readmode'
       $body.appendChild(newEle)
 
       function clickFn () {

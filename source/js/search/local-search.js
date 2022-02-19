@@ -72,7 +72,7 @@ window.addEventListener('load', () => {
     const $loadingStatus = document.getElementById('loading-status')
     $input.addEventListener('input', function () {
       const keywords = this.value.trim().toLowerCase().split(/[\s]+/)
-      if (keywords[0] !== '') $loadingStatus.innerHTML = '<i class="fas fa-spinner fa-pulse"></i>'
+      if (keywords[0] !== '') $loadingStatus.innerHTML = '<i class="fa-solid fa-spinner fa-pulse"></i>'
 
       $resultContent.innerHTML = ''
       let str = '<div class="search-result-list">'
