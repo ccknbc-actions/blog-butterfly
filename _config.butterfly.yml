@@ -3,21 +3,21 @@
 # --------------------------------------
 
 menu:
-  # 首页: / || fa-solid fa-home
+  # 首页: / || fa-solid fa-house-chimney
   # 订阅: /sub/ || fa-solid fa-rss
   # 友链: /blogroll/ || fa-solid fa-user-friends
   文章 || fa-solid fa-book-reader:
     归档: /archives || fa-solid fa-box-archive
     标签: /tags || fa-solid fa-tags
     分类: /categories || fa-solid fa-folder-open
-  便签 || fa-solid fa-sticky-note:
+  社交 || fa-solid fa-cubes:
     友链: /blogroll || fa-solid fa-blog
     音乐: /music || fa-solid fa-music
     短文: /essay || fa-solid fa-comment-alt
     # 统计: /charts || fa-solid fa-chart-bar
   关于 || fa-solid fa-desktop:
     订阅: /sub || fa-solid fa-rss
-    本站: /about || fa-solid fa-stream
+    本站: /about || fa-solid fa-list-check
     隐私: /privacy-policy || fa-solid fa-user-secret
   #   自己: /me/ || far fa-user
   #   状态: https://cc.instatus.com || fa-solid fa-server
@@ -284,7 +284,7 @@ addtoany:
 # --------------------------------------
 
 comments:
-  use: Waline,Disqusjs
+  use: Waline,Discuss
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -325,6 +325,15 @@ waline:
       'https://cdn.jsdelivr.net/gh/zhheo/Sticker-Heo@main/Sticker-100/',
       'https://cdn.jsdelivr.net/gh/walinejs/emojis@main/tw-emoji'
     ]
+
+discuss:
+  serverURLs: https://discuss.ccknbc.vercel.app # Discuss server address url
+  visitStat: false # 是否开启访问统计，默认: false
+  option:
+    master: 博主兼管理员  # 博主标签占位符，默认: 博主
+    placeholder: 感谢各位的批评指正，期待与您交流！ # 评论框占位符，默认: 评论你的想法~
+    lang: zh_CN # 评论语言，默认: zh_CN ，可选: [zh_CN , en_US]
+    imgLoading:  # 评论图片懒加载，加载动画，默认为1像素白色base64图
 
 # Twikoo
 # https://github.com/imaegoo/twikoo

@@ -83,6 +83,10 @@ hexo.extend.filter.register('before_generate', () => {
       cdn: 'https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js',
       local: '/js/lib/twikoo/twikoo.all.min.js'
     },
+    discuss: {
+      cdn: 'https://cdn.jsdelivr.net/npm/discuss/dist/Discuss.js',
+      local: '/js/lib/discuss/Discuss.js'
+    },
     waline: {
       cdn: 'https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js',
       local: '/js/lib/waline/Waline.min.js'
