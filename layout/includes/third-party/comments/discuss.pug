@@ -1,0 +1,26 @@
+- const { serverURLs, visitStat, option } = theme.discuss
+
+script.
+  function loadDiscuss () {
+    function initDiscuss () {
+      const discuss = new Discuss.init(Object.assign({
+        el: '#Discuss-Comments',
+        serverURLs: '!{serverURLs}',
+        path: location.pathname,
+        visitStat: !{visitStat},
+        dark: 'html[data-theme="dark"]'
+      }, !{JSON.stringify(option)}))
+    }
+
+    if (typeof Discuss === 'function') initDiscuss()
+    else getScript('!{url_for(theme.asset.discuss)}').then(initDiscuss)
+  }
+
+  if ('!{theme.comments.use[0]}' === 'Discuss' || !!{theme.comments.lazyload}) {
+    if (!{theme.comments.lazyload}) btf.loadComment(document.getElementById('Discuss-Comments'),loadDiscuss)
+    else setTimeout(loadDiscuss, 0)
+  } else {
+    function loadOtherComment () {
+      loadDiscuss()
+    }
+  }
