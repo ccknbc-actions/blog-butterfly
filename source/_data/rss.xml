@@ -24,7 +24,7 @@
     <pubDate>{% if posts.first().updated %}{{ posts.first().updated.toDate().toUTCString() }}{% else %}{{ posts.first().date.toDate().toUTCString() }}{% endif %}</pubDate>
     <lastBuildDate>{% if posts.first().updated %}{{ posts.first().updated.toDate().toUTCString() }}{% else %}{{ posts.first().date.toDate().toUTCString() }}{% endif %}</lastBuildDate>
     <generator>{{ config.title }}</generator>
-    <copyright>2020 - 2021 {{ config.author }} All rights reserved.</copyright>
+    <copyright>Copyright © 2020-present {{ config.author }} All rights reserved.</copyright>
     {% for post in posts.toArray() %}
     <item>
       <title>{{ post.title }}</title>

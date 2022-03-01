@@ -1,7 +1,7 @@
 ---
 title: 短文
 top_img: false
-comments: true
+comments: false
 date: 2021-03-14 20:00:00
 updated: 2021-09-11 20:00:00
 translate_title: essay
@@ -17,13 +17,13 @@ description: CC的部落格 即刻短文页面
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/css/newbber.min.css">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/js/newbber.min.js" ></script> -->
 
-<div id='speak'></speak>
+<!-- <div id='speak'></speak> -->
 <!-- 使用markdown渲染 -->
 <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber-md.min.js" charset="utf-8" ></script> -->
 <!-- 不使用markdown渲染 -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber.min.js" charset="utf-8" ></script>
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber.min.js" charset="utf-8" ></script> -->
 <!-- 解析微信表情（参考：https://github.com/buddys/qq-wechat-emotion-parser） -->
-<script src="https://cdn.jsdelivr.net/gh/buddys/qq-wechat-emotion-parser@master/dist/qq-wechat-emotion-parser.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/buddys/qq-wechat-emotion-parser@master/dist/qq-wechat-emotion-parser.min.js"></script>
 <script>
 ispeakBber
     .init({
@@ -41,6 +41,57 @@ ispeakBber
       // 哔哔加载完成后的回调函数，你可以写你自己的功能
       console.log('哔哔 加载完成')
     })
+</script> -->
+
+<div id="tip" style="text-align:center;">ipseak加载中</div>
+<div id="ispeak"></div>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/highlight.js/10.6.0/styles/atom-one-dark.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/ispeak@4.2.0/style.css"
+/>
+
+<style>
+  #article-container .D-avatar {
+    margin: 0 10px 0 0;
+  }
+  .D-footer {
+    display: none;
+  }
+</style>
+<script src="https://cdn.staticfile.org/highlight.js/10.6.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/marked/2.0.0/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/discuss/dist/Discuss.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ispeak@4.2.0/ispeak.umd.js"></script>
+<script>
+  var head = document.getElementsByTagName('head')[0]
+  var meta = document.createElement('meta')
+  meta.name = 'referrer'
+  meta.content = 'no-referrer'
+  head.appendChild(meta)
+  if (ispeak) {
+    ispeak
+      .init({
+        el: '#ispeak',
+        api: 'https://kkapi.ccknbc.vercel.app/',
+        author: '621cd42048c49d6f96787626',
+        pageSize: 10,
+        loading_img: 'https://7.dusays.com/2021/03/04/d2d5e983e2961.gif',
+        initCommentName: 'Discuss',
+        initCommentOptions: {
+          serverURLs: 'https://discuss.ccknbc.vercel.app/'
+        }
+      })
+      .then(function () {
+        console.log('ispeak 加载完成')
+        document.getElementById('tip').style.display = 'none'
+      })
+  } else {
+    document.getElementById('tip').innerHTML = 'ipseak依赖加载失败！'
+  }
 </script>
 
 

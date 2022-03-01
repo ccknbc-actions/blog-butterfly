@@ -15,7 +15,7 @@
   </author>
   {% endif %}
   <generator uri="{{ url }}">{{ config.title }}</generator>
-  <copyright>2020 - 2021 {{ config.author }} All rights reserved.</copyright>
+  <copyright>Copyright © 2020-present {{ config.author }} All rights reserved.</copyright>
   {% for post in posts.toArray() %}
   <entry>
     <title>{{ post.title }}</title>

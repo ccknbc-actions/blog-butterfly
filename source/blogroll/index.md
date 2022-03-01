@@ -42,29 +42,16 @@ xkFriend.init({
 
 <!-- tab 朋友圈@fa-solid fa-blog -->
 
-<!-- 友链朋友圈样式 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Rock-Candy-Tea/hexo-friendcircle-demo@main/css/butterfly.css">
-
-<!-- 挂载友链朋友圈的容器 -->
-<div id="fcircleContainer"></div>
-
-<!-- 全局引入友链朋友圈配置项 -->
-<script>
-  // 全局变量声明区域
-  var fdata = {
-    apiurl: 'https://moments.ccknbc.vercel.app/api',
-    initnumber: 20, //【可选】页面初始化展示文章数量
-    stepnumber: 10,//【可选】每次加载增加的篇数
-    error_img: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-28.gif' //【可选】头像加载失败时默认显示的头像
+<div class="post-content">
+<div id="cf-container">与主机通讯中……</div>
+</div>
+<script type="text/javascript">
+  var fdataUser = {
+    apiurl: 'https://moments.ccknbc.vercel.app/'
   }
-  //存入本地存储
-  localStorage.setItem("fdatalist",JSON.stringify(fdata))
 </script>
-
-<!-- 全局引入抓取方法 -->
-<!-- <script defer src="https://cdn.jsdelivr.net/gh/Rock-Candy-Tea/hexo-friendcircle-demo@main/js/fetch.js"></script> -->
-<!-- 局部引入页面元素生成方法 -->
-<script async src="https://cdn.jsdelivr.net/gh/Rock-Candy-Tea/hexo-friendcircle-demo@main/js/fcircle.js" charset="utf-8"></script>    <!-- js -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.js"><script>
 
 <!-- endtab -->
 
