@@ -9,14 +9,14 @@ bottom:
     id_name: 
     name: 微博热搜
     icon: fa-brands fa-weibo
-    order: 3
+    order: 4
     html: '<div id="weibo-container" style="width: 100%; height: 160px;font-size: 95%;"></div><script defer src="https://cdn.jsdelivr.net/gh/Eurkon/CDN/hexo/js/card_weibo.js"></script>'
   - class_name: moyuban
     id_name: moyuban
     name: 摸鱼办友情提示
     icon: fa-solid fa-fish
-    order: 4
-    html: '<img data-fancybox="gallery" src="https://api.vvhan.com/api/ip" width=100%><img data-fancybox="gallery" src="https://api.vvhan.com/api/moyu" width=100%>'
+    order: 5
+    html: '<img data-fancybox="gallery" src="https://api.vvhan.com/api/ip" width=100%><div id="moyu"></div><script defer src="https://vps.gamehook.top/api/face/my?type=script&element=moyu"></script><img data-fancybox="gallery" src="https://api.vvhan.com/api/moyu" width=100%>'
 # top:
 #   - class_name: weibo-container
 #     id_name: 

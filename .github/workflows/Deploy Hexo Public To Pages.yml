@@ -72,7 +72,7 @@ jobs:
 
     - name: Sync RSS
       run: |
-        curl 'https://kkapi.vercel.app/api/github?type=dispatch&owner=ccknbc-actions&repo=home&token=${{ secrets.GH_TOKEN }}&runit_text=RSS'
+        curl 'https://kkapi.ccknbc.vercel.app/api/open/github/dispatch&owner=ccknbc-actions&repo=home&token=${{ secrets.GH_TOKEN }}&runit_text=RSS'
         curl -X POST -F token=${{ secrets.GITLAB_TRIGGER_TOKEN }} -F ref=master https://gitlab.com/api/v4/projects/22130436/trigger/pipeline
 
     - name: Delete Workflow Runs
