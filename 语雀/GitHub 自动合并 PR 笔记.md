@@ -15,7 +15,6 @@ id: 21
 
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/21)
 自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/github-automatically-merges-pull-requests-notes)
-**​**
 
 # automerge-action
 

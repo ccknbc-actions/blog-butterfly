@@ -182,16 +182,12 @@ types: # This configuration does not affect the page_build event above
 
 ````
 
-
 详细文档请参考: 触发事件
-
 
 
 ## jobs
 
-
 `jobs`可以包含一个或多个 `job` ，如:
-
 
 ```yaml
 jobs:

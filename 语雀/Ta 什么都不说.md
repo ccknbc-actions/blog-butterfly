@@ -18,7 +18,6 @@ _<!-- more -->_
 
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/27)
 自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/ta-said-nothing)
-**​**
 
 ## Ta，什么都不说
 
@@ -48,12 +47,8 @@ _<!-- more -->_
 - Ta 终于说了，原来 Ta 也想说
 - Ta 说 Ta 说 Ta ，但 Ta 想 Ta Ta Ta 说
 
-​
-
 Ta 只与 Ta 说，Ta 只与 Ta 说，但 Ta 不知道 Ta 与 Ta 说
-​
 
 Ta 与 Ta 说，Ta 不知道 Ta 说了什么，事实上 Ta 也不知道 Ta 说了什么
-​
 
 Ta 终于还是自己和自己说，加油！

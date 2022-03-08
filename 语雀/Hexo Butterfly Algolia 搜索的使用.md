@@ -18,7 +18,6 @@ id: 24
 自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/hexo-butterfly-algolia)
 
 ~~因为蝴蝶还在使用 V2，而官方已进入 V4 ，所以这里以 V2 做一下展开，虽然功能不是那么全，但对于静态博客来说搜索体验是达到了的，可以点击右上角的 🔍 体验一下。~~
-~~​~~
 
 截止文章更新的前几天，主题已经在测试版升级到 V4，配置项也做了对应的修改，我也做了对应的修改，请自行查看或[**引用**](https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/search/algolia.js)
 
