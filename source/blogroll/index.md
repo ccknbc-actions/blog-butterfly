@@ -4,6 +4,7 @@ description: CC的部落格 友情链接页面
 type: link
 aside: false
 top_img: false
+comments: false
 translate_title: blogroll
 subtitle: Blogroll
 date: 2020-06-04 22:17:49
@@ -24,6 +25,8 @@ updated: 2021-07-18 19:38:19
   })
 </script> -->
 
+<!-- tab 友链@fa-solid fa-link -->
+
 <script src='https://cdn.jsdelivr.net/npm/butterfly-friend@latest/butterfly-friend.umd.js'></script>
 <link rel="stylesheet" href='https://cdn.jsdelivr.net/npm/butterfly-friend@latest/style.css'>
 <script>
@@ -38,30 +41,13 @@ xkFriend.init({
 })
 </script>
 
-{% tabs links%}
-
-<!-- tab 朋友圈@fa-solid fa-blog -->
-
-<div class="post-content">
-<div id="cf-container">与主机通讯中……</div>
-</div>
-<script type="text/javascript">
-  var fdataUser = {
-    apiurl: 'https://moments.ccknbc.vercel.app/'
-  }
-</script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.js"><script>
-
 <!-- endtab -->
+
+{% tabs links%}
 
 <!-- tab 申请友链@fa-solid fa-check-circle -->
 
-~~快速申请友链请前往 GitHub 按照提示和 {% emp Issue 模板 %}提交 Issue 即可，会自动打标签通过并截图，尽量不要在评论区留言，处理速度比较慢。另外因平时工作时间无法及时处理友链，虽然方便了我，但还是和您说声抱歉，因为添加友链这一操作似乎变成了您的单方面动作，我甚至免审核，但好处是您可以自行更新相关信息，当然如果您在评论区留言的我会帮您填写至 GitHub Issue，因为这本该是我的工作，感谢理解！~~
-
-{% note success flat %}快速申请友链请前往{% btn 'https://github.com/ccknbc-forked/my-friend',GitHub(推荐),fa-brands fa-github,outline green larger %} 按照提示提交 PR 即可！ {% endnote %}
-
-{% note warning flat %}~~之前使用 Gitee 申请的，仍可以前往修改，如果您访问 GitHub 有困难，也可使用 Gitee 申请等待人工审核~~ {% endnote %}
+{% note success flat %}快速申请友链请前往{% btn 'https://github.com/ccknbc-forked/my-friend',GitHub(推荐),fa-brands fa-github,outline green larger %} 按照提示提交 PR 即可！如需修改可<button class="btn-beautify outline green small" id="chat_btn" type="button" title="给 CC 留言"><i class="fa-solid fa-sms"></i><span>给 CC 留言</span></button>或再次 PR  {% endnote %}
 
 <!-- {% link 顺便看看友链截图列表，您可复制使用啦, https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/, https://cdn.jsdelivr.net/www.jsdelivr.com/c903573129ce0afdbc8b006baf86dba514615495/img/logo-horizontal.svg %} -->
 
@@ -111,6 +97,21 @@ img_animation: auto_rotate_right 2s linear infinite
 card_style: item
 screenshot: https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
 ```
+
+<!-- endtab -->
+
+<!-- tab 朋友圈@fa-solid fa-blog -->
+
+<div class="blogroll">
+<div id="cf-container">朋友圈加载中……</div>
+</div>
+<script type="text/javascript">
+  var fdataUser = {
+    apiurl: 'https://moments.ccknbc.vercel.app/'
+  }
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.js"><script>
 
 <!-- endtab -->
 
