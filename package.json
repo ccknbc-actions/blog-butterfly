@@ -35,7 +35,7 @@
     "gulp-html-minifier-terser": "6.0.1",
     "gulp-htmlclean": "2.7.22",
     "gulp-terser": "2.1.0",
-    "hexo": "6.0.0",
+    "hexo": "6.1.0",
     "hexo-algoliasearch": "1.0.0",
     "hexo-butterfly-tag-plugins-plus": "1.0.13",
     "hexo-butterfly-wowjs": "1.0.5",
