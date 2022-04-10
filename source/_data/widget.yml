@@ -16,7 +16,7 @@ bottom:
     name: 摸鱼办友情提示
     icon: fa-solid fa-fish
     order: 5
-    html: '<img data-fancybox="gallery" src="https://api.vvhan.com/api/ip" width=100%><div id="moyu"></div><script defer src="https://vps.gamehook.top/api/face/my?type=script&element=moyu"></script><img data-fancybox="gallery" src="https://api.vvhan.com/api/moyu" width=100%>'
+    html: '<img data-fancybox="gallery" src="https://api.vvhan.com/api/ip" width=100%><img data-fancybox="gallery" src="https://api.vvhan.com/api/moyu" width=100%>'
 # top:
 #   - class_name: weibo-container
 #     id_name: 

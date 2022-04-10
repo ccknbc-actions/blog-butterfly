@@ -5,12 +5,6 @@
   <channel>
     <title>{{ config.title }}</title>
     <link>{{ url }}</link>
-    {% if config.author %}
-    <author>
-      <name>{{ config.author }}</name>
-      {% if config.email %}<email>{{ config.email }}</email>{% endif %}
-    </author>
-    {% endif %}
     {% if icon %}
     <image>
       <url>{{ icon }}</url>
@@ -20,17 +14,16 @@
     {% endif %}
     <atom:link href="{{ feed_url | uriencode }}" rel="self" type="application/rss+xml"/>
     {% if config.feed.hub %}<atom:link href="{{ config.feed.hub | uriencode }}" rel="hub"/>{% endif %}
-    <description>{{ config.description }}</description>
+    {% if config.description %}<description>{{ config.description }}</description>{% endif %}
+    {% if config.subtitle %}<subtitle>{{ config.subtitle }}</subtitle>{% endif %}
     <pubDate>{% if posts.first().updated %}{{ posts.first().updated.toDate().toUTCString() }}{% else %}{{ posts.first().date.toDate().toUTCString() }}{% endif %}</pubDate>
-    <lastBuildDate>{% if posts.first().updated %}{{ posts.first().updated.toDate().toUTCString() }}{% else %}{{ posts.first().date.toDate().toUTCString() }}{% endif %}</lastBuildDate>
-    <generator>{{ config.title }}</generator>
-    <copyright>Copyright © 2020-present {{ config.author }} All rights reserved.</copyright>
+    <generator>http://hexo.io/</generator>
     {% for post in posts.toArray() %}
     <item>
       <title>{{ post.title }}</title>
       <link>{{ post.permalink | uriencode }}</link>
       <guid>{{ post.permalink | uriencode }}</guid>
-      <pubDate>{{ post.updated.toDate().toUTCString() }}</pubDate>
+      <pubDate>{{ post.date.toDate().toUTCString() }}</pubDate>
       {% if post.description %}
       <description>{{ post.description }}</description>
       {% elif post.intro %}
@@ -63,7 +56,7 @@
       <category domain="{{ url + tag.path | uriencode }}">{{ tag.name }}</category>
       {% endfor %}
       {% if post.comments %}
-      <comments>{{ post.permalink | uriencode }}#post-comment</comments>
+      <comments>{{ post.permalink | uriencode }}#disqus_thread</comments>
       {% endif %}
     </item>
     {% endfor %}
