@@ -3,7 +3,7 @@ title: Hexo Butterfly Algolia 搜索的使用
 translate_title: hexo-butterfly-algolia
 subtitle: Hexo Butterfly Algolia
 date: 2021-05-11 11:00:00
-updated: 2021-12-01 20:09:00
+updated: 2022-04-13 20:47:00
 tags: [工具, Algolia]
 keywords: [Hexo, Butterfly, Algolia]
 categories: 工具
@@ -238,8 +238,7 @@ hexo algolia --no-clear
 
 ### 主题 4.0.0 以上版本
 
-已经升级到 V4 版本，那么一些特性就可以使用了，修改内容其实差不多，只是建议还是
-对于第 87 行的页数限制，主要是为了手机上排版美观，不会转到下一行，但是这样会有一个问题，如果结果超过 5 页，那么将无法显示，最后一页代表第 5 页，所以我个人会选择删掉这个参数限制，同时合并删除了部分代码，以及使用 widget 的 powerby 组件而不是官方的 svg 代码解决方案
+已经升级到 V4 版本，那么一些特性就可以使用了，修改内容其实差不多，只是建议对于第 87 行的页数限制，主要是为了手机上排版美观，不会转到下一行，但是这样会有一个问题，如果结果超过 5 页，那么将无法显示，最后一页代表第 5 页，所以我个人会选择删掉这个参数限制，同时合并删除了部分代码，以及使用 widget 的 powerby 组件而不是官方的 svg 代码解决方案。另外因为新版官方的每次访问网站都会有一次全局请求，这在消耗免费额度的同时，也影响网站加载的速度，所以修改默认行为为按下回车后再请求
 同样的部分参数发生了改变（L55-59），可以自行比对或查看[**官方文档**](https://www.algolia.com/doc/guides/building-search-ui/getting-started/js/)，也可以直接[**引用我的**](https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/search/algolia.js)
 
 ```yaml
@@ -313,6 +312,11 @@ window.addEventListener("load", () => {
   const search = instantsearch({
     indexName: algolia.indexName,
     searchClient,
+    searchFunction(helper) {
+      if (helper.state.query) {
+        helper.search();
+      }
+    },
   });
 
   search.addWidgets([
@@ -342,7 +346,7 @@ window.addEventListener("load", () => {
               data._highlightResult.contentStrip.matchedWords
             }</mark></em> | 匹配等级: <em><mark>${
             data._highlightResult.contentStrip.matchLevel
-          }</emmark></em>
+          }</mark></em>
             </a>`;
         },
         empty: function (data) {
@@ -359,12 +363,11 @@ window.addEventListener("load", () => {
     }),
     instantsearch.widgets.pagination({
       container: "#algolia-pagination",
-      totalPages: 5,
       templates: {
-        first: '<i class="fas fa-angle-double-left" title="第一页"></i>',
-        last: '<i class="fas fa-angle-double-right" title="最后一页"></i>',
-        previous: '<i class="fas fa-angle-left" title="上一页"></i>',
-        next: '<i class="fas fa-angle-right" title="下一页"></i>',
+        first: '<i class="fa-solid fa-angle-double-left" title="第一页"></i>',
+        last: '<i class="fa-solid fa-angle-double-right" title="最后一页"></i>',
+        previous: '<i class="fa-solid fa-angle-left" title="上一页"></i>',
+        next: '<i class="fa-solid fa-angle-right" title="下一页"></i>',
       },
     }),
     instantsearch.widgets.stats({
