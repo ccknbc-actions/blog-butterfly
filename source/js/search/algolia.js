@@ -44,10 +44,15 @@ window.addEventListener('load', () => {
   }
 
   const searchClient = window.algoliasearch(algolia.appId, algolia.apiKey)
-  const search = instantsearch({
-    indexName: algolia.indexName,
-    searchClient
-  })
+	const search = instantsearch({
+		indexName: algolia.indexName,
+		searchClient,
+		searchFunction(helper) {
+			if (helper.state.query) {
+				helper.search();
+			}
+		}
+	})
 
   search.addWidgets([
     instantsearch.widgets.searchBox({
@@ -70,7 +75,7 @@ window.addEventListener('load', () => {
             <a href="${link}" class="algolia-hit-item-link">
             <b>${data._highlightResult.title.value || 'no-title'}</b>
             <br>${data._snippetResult.contentStrip.value}</br>
-            匹配字词: <em><mark>${data._highlightResult.contentStrip.matchedWords}</mark></em> | 匹配等级: <em><mark>${data._highlightResult.contentStrip.matchLevel}</emmark></em>
+            匹配字词: <em><mark>${data._highlightResult.contentStrip.matchedWords}</mark></em> | 匹配等级: <em><mark>${data._highlightResult.contentStrip.matchLevel}</mark></em>
             </a>`
         },
         empty: function (data) {
