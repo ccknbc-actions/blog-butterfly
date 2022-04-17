@@ -43,16 +43,13 @@ window.addEventListener('load', () => {
     return console.error('Algolia setting is invalid!')
   }
 
-  const searchClient = window.algoliasearch(algolia.appId, algolia.apiKey)
-	const search = instantsearch({
-		indexName: algolia.indexName,
-		searchClient,
-		searchFunction(helper) {
-			if (helper.state.query) {
-				helper.search();
-			}
-		}
-	})
+  const search = instantsearch({
+    indexName: algolia.indexName,
+    searchClient: algoliasearch(algolia.appId, algolia.apiKey),
+    searchFunction(helper) {
+      helper.state.query && helper.search()
+    },
+  })
 
   search.addWidgets([
     instantsearch.widgets.searchBox({
