@@ -1,16 +1,18 @@
 #algolia-search
   .search-dialog
     nav.search-nav
+      span.search-dialog-title= _p('search.title')
       button.search-close-button
-        i.fa-solid.fa-times
+        i.fas.fa-times
 
     .search-wrap
       #algolia-search-input
+      hr
       #algolia-search-results
         #algolia-hits
         #algolia-pagination
-        hr
-        #algolia-stats
-        #algolia-powered-by(title='由 Algolia 提供搜索服务')
-
+        #algolia-info
+          .algolia-stats
+          .algolia-poweredBy
+  
   #search-mask

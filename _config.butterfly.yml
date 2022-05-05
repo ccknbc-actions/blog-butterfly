@@ -68,8 +68,9 @@ social:
 # Algolia search
 algolia_search:
   enable: true
-  hits:
-    per_page: 3
+  # searchAsYouType: false
+  per_page: 5
+  # totalPages: 5
 
 # Local search
 local_search:
@@ -311,7 +312,7 @@ giscus:
 waline:
   serverURL: https://waline.ccknbc.vercel.app # Waline server address url
   bg:  # waline background
-  visitor: false
+  pageview: false
   option:
     pageSize: 10
     requiredMeta: ['nick', 'mail']
@@ -503,7 +504,7 @@ baidu_analytics: c3cb6c264d6a5f79a5172ee062c36d44
 
 # Google Analytics
 # https://analytics.google.com/analytics/web/
-google_analytics: UA-170656478-1
+google_analytics: 251583177
 
 # CNZZ Analytics
 # https://www.umeng.com/
@@ -522,8 +523,8 @@ microsoft_clarity:
 
 # Google Adsense (谷歌廣告)
 google_adsense:
-  enable: true
-  auto_ads: true
+  enable: false
+  auto_ads: false
   js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
   client: ca-pub-4962482948943075
   enable_page_level_ads: false
@@ -1042,7 +1043,8 @@ CDN:
     # disqusjs:
     # disqusjs_css:
     # twikoo:
-    # waline:
+    # waline_js:
+    # waline_css:
     # sharejs:
     # sharejs_css:
     # mathjax:
