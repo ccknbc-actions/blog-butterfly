@@ -25,7 +25,7 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@main
       with:
-        node-version: "16.x"
+        node-version: "18.x"
         check-latest: true
         cache: 'npm'
         cache-dependency-path: '**/package-lock.json'

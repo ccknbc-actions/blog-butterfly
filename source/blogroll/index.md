@@ -4,29 +4,12 @@ description: CC的部落格 友情链接页面
 type: link
 aside: false
 top_img: false
-comments: false
+comments: true
 translate_title: blogroll
 subtitle: Blogroll
 date: 2020-06-04 22:17:49
 updated: 2021-07-18 19:38:19
 ---
-<!-- <script src="https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@main/blogroll.js" data-pjax></script> -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/butterfly-friend/dist/friend.min.js"></script> -->
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@main//style.css">
-<script>
-  document.querySelector(".flink").insertAdjacentHTML("afterbegin",
-    "<div id='friend1'></div>"), xkFriend.init({
-    el: "#friend1",
-    url: "https://api.ccknbc.vercel.app/api/github?repo=%27blogroll%27&user=%27ccknbc-actions%27&branch=%27blogroll%27&path=%27blogroll.json%27",
-    labelDesc: {
-    },
-    loading_img: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif",
-    fail_img: "https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-28.gif"
-  })
-</script> -->
-
-<!-- tab 友链@fa-solid fa-link -->
-
 <script src='https://cdn.jsdelivr.net/npm/butterfly-friend@latest/butterfly-friend.umd.js'></script>
 <link rel="stylesheet" href='https://cdn.jsdelivr.net/npm/butterfly-friend@latest/style.css'>
 <script>
@@ -37,11 +20,9 @@ xkFriend.init({
     'https://blogroll.ccknbc.vercel.app/blogroll.json'
   ], // 你的json链接列表，可以是多个。
   loading_img: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif', // 加载中的图片
-  fail_img: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-28.gif' // // 加载失败的图片
+  fail_img: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif' // // 加载失败的图片
 })
 </script>
-
-<!-- endtab -->
 
 {% tabs links%}
 
@@ -97,21 +78,6 @@ img_animation: auto_rotate_right 2s linear infinite
 card_style: item
 screenshot: https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
 ```
-
-<!-- endtab -->
-
-<!-- tab 朋友圈@fa-solid fa-blog -->
-
-<div class="blogroll">
-<div id="cf-container">朋友圈加载中……</div>
-</div>
-<script type="text/javascript">
-  var fdataUser = {
-    apiurl: 'https://moments.ccknbc.vercel.app/'
-  }
-</script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.js"><script>
 
 <!-- endtab -->
 

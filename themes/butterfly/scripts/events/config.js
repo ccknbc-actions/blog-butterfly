@@ -48,6 +48,7 @@ hexo.extend.filter.register('before_generate', () => {
     twikoo: 'https://cdn.jsdelivr.net/npm/twikoo@1/dist/twikoo.all.min.js',
     waline_js: 'https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.js',
     waline_css: 'https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.css',
+    discuss: 'https://cdn.jsdelivr.net/npm/discuss/dist/Discuss.js',
     sharejs: 'https://cdn.jsdelivr.net/gh/overtrue/share.js@master/dist/js/social-share.min.js',
     sharejs_css: 'https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css',
     mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
@@ -104,7 +105,7 @@ hexo.extend.filter.register('before_generate', () => {
           const data = path.join(hexo.plugin_dir,'hexo-butterfly-extjs/plugins.yml')
           result = hexo.render.renderSync({ path: data, engine: 'yaml'})
           Object.keys(result).map(key => {
-            result[key] = 'pluginsSrc/' + result[key]
+            result[key] = '/pluginsSrc/' + result[key]
           })
         } catch (e) {}
         return result

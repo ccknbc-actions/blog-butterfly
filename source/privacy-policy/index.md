@@ -15,7 +15,21 @@ description: CC的部落格 隐私政策
 
 在您访问时，仅会处于以下目的，使用您的个人信息：
 
-[百度](https://tongji.baidu.com/web/help/article?id=330&type=0)/[谷歌](https://policies.google.com/privacy?hl=zh-CN)/[AddThis](https://www.addthis.com/privacy/privacy-policy)/[Tidio](https://www.tidio.com/privacy-policy/) 统计工具会收集您的访问信息，用于网站的优化与文章分类、恶意访问识别（被动，存储，系统定期清理）
+- **51la统计工具** 会收集你的访问信息
+- **灵雀应用监控平台** 会收集你的访问操作过程和资源加载情况
+- **阿里cdn（iconfont）** 会收集你的访问信息
+
+在访问时，本人仅会处于以下目的，使用你的个人信息：
+
+- 用于网站的优化与文章分类，用户优化文章
+- 恶意访问识别，用于维护网站
+- 恶意攻击排查，用于维护网站
+- 网站点击情况监测，用于优化网站页面
+- 网站加载情况监测，用于优化网站性能
+- 用于网站搜索结果优化
+- 浏览数据的展示
+
+[51.LA](https://www.51.la/about/privacy)/[AddThis](https://www.addthis.com/privacy/privacy-policy)/[Tidio](https://www.tidio.com/privacy-policy/) 统计工具会收集您的访问信息，用于网站的优化与文章分类、恶意访问识别（被动，存储，系统定期清理）
 
 您应该知道在您访问的时候以下信息会被统计功能使用：
 
@@ -80,15 +94,16 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 *   改善网站功能；
 *   监督我的版权协议和隐私政策的遵守情况。
 
-|                         第三方服务商                         |                      用途                      |
-| :----------------------------------------------------------: | :--------------------------------------------: |
-|      ~~[Instatus](https://instatus.com/policies/privacy)~~       |              ~~用于展示网站运行状态~~              |
-| [Disqus&DisqusJS](https://help.disqus.com/en/articles/1717103-disqus-privacy-policy) |   用于网站评论，存取您的验证信息及可访问状态   |
-|        [Tidio](https://www.tidio.com/privacy-policy/)        |        用于与我联络，邮件订阅，访问统计        |
-|      [MailChimp](https://mailchimp.com/legal/privacy/)       |    订阅页嵌入或与其他服务集成以完成邮件订阅    |
-|  [AddThis](https://www.addthis.com/privacy/privacy-policy)   | 用于文章页面分享，访问统计，弹窗公告，邮件订阅 |
-|            [百度统计](https://tongji.baidu.com/)             |  用于国内用户统计站内访问情况，进行针对性优化  |
-|   [谷歌分析](https://policies.google.com/privacy?hl=zh-CN)   |     用于国外用户统计站内访问情况，行为特征     |
+|                         第三方服务商                         |                       用途                       |
+| :----------------------------------------------------------: | :----------------------------------------------: |
+|      [Instatus](https://instatus.com/policies/privacy)       |               用于展示网站运行状态               |
+| ~~[Disqus&DisqusJS](https://help.disqus.com/en/articles/1717103-disqus-privacy-policy)~~ |  ~~用于网站评论，存取您的验证信息及可访问状态~~  |
+|        [Tidio](https://www.tidio.com/privacy-policy/)        |         用于与我联络，邮件订阅，访问统计         |
+|      [MailChimp](https://mailchimp.com/legal/privacy/)       |     订阅页嵌入或与其他服务集成以完成邮件订阅     |
+|  [AddThis](https://www.addthis.com/privacy/privacy-policy)   |  用于文章页面分享，访问统计，弹窗公告，邮件订阅  |
+|          ~~[百度统计](https://tongji.baidu.com/)~~           | ~~用于国内用户统计站内访问情况，进行针对性优化~~ |
+| ~~[谷歌分析](https://policies.google.com/privacy?hl=zh-CN)~~ |    ~~用于国外用户统计站内访问情况，行为特征~~    |
+|           [51.LA](https://www.51.la/about/privacy)           |        用于统计站内访问情况，进行针对性优        |
 
 如何管理 Cookies ？
 --------------------------------------------
@@ -108,6 +123,6 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 
 ## 对此 Cookies 政策的更改
 
-我可能对此 Cookies 政策所做的任何更改都将发布在此页面上。如果更改很重要，我会在我的主页或应用上明确指出该政策已更新。
+我可能对此 Cookies 政策所做的任何更改都将发布在此页面上。如果更改很重要，我会在博客首页明确指出该政策已更新。
 
-{% btn '',最后修订时间：2021 年 10 月 5 日 20:33,fa-solid fa-history,block right green smaller %}
+{% btn '',最后修订时间：2022 年 5 月 10 日 23:27,fa-solid fa-history,block right green smaller %}

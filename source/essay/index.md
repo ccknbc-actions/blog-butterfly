@@ -79,7 +79,7 @@ ispeakBber
         api: 'https://kkapi.ccknbc.vercel.app/',
         author: '621cd42048c49d6f96787626',
         pageSize: 10,
-        loading_img: 'https://7.dusays.com/2021/03/04/d2d5e983e2961.gif',
+        loading_img: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif',
         initCommentName: 'Discuss',
         initCommentOptions: {
           serverURLs: 'https://discuss.ccknbc.vercel.app/'
