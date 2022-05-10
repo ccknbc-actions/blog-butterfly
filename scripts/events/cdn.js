@@ -24,6 +24,7 @@ hexo.extend.filter.register('before_generate', () => {
     utterances: 'https://utteranc.es/client.js',
     twikoo: 'https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js',
     waline: 'https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js',
+    discuss: 'https://cdn.jsdelivr.net/npm/discuss/dist/Discuss.js',
 
     // share
     addtoany: 'https://static.addtoany.com/menu/page.js',

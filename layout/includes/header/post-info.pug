@@ -73,6 +73,10 @@
             if theme.twikoo.visitor
               +pvBlock('','','')
                 span#twikoo_visitors
+          when 'Twikoo'
+            if theme.discuss.visitor
+              +pvBlock('','','')
+                span#Discuss-Visitors
       else if theme.busuanzi.page_pv
         +pvBlock('','post-meta-pv-cv','')
           span#busuanzi_value_page_pv
@@ -114,3 +118,7 @@
             +countBlock
               a(href=url_for(page.path) + '#post-comment')
                 span.fb-comments-count(data-href=urlNoIndex())
+          when 'Discuss'
+            +countBlock
+              a(href=url_for(page.path) + '#post-comment')
+                span#discuss-count

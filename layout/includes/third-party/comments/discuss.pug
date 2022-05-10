@@ -1,26 +1,43 @@
-- const { serverURLs, visitStat, option } = theme.discuss
+- const { serverURLs, options } = theme.discuss
+- const { use, lazyload, count } = theme.comments
 
 script.
-  function loadDiscuss () {
-    function initDiscuss () {
-      const discuss = new Discuss.init(Object.assign({
-        el: '#Discuss-Comments',
-        serverURLs: '!{serverURLs}',
-        path: location.pathname,
-        visitStat: !{visitStat},
-        dark: 'html[data-theme="dark"]'
-      }, !{JSON.stringify(option)}))
+  (()=>{
+    const init = () => {
+      Discuss.init(Object.assign({
+        el: '#discuss-wrap',
+        serverURLs: '!{serverURLs}'
+      }, !{JSON.stringify(options)}))
     }
 
-    if (typeof Discuss === 'function') initDiscuss()
-    else getScript('!{url_for(theme.asset.discuss)}').then(initDiscuss)
-  }
-
-  if ('!{theme.comments.use[0]}' === 'Discuss' || !!{theme.comments.lazyload}) {
-    if (!{theme.comments.lazyload}) btf.loadComment(document.getElementById('Discuss-Comments'),loadDiscuss)
-    else setTimeout(loadDiscuss, 0)
-  } else {
-    function loadOtherComment () {
-      loadDiscuss()
+    const getCount = () => {
+      Discuss.CommentCount('!{serverURLs}', [window.location.pathname], false)
+        .then(function (res) {
+          document.getElementById('discuss-count').innerText = res[0].count
+        }).catch(function (err) {
+          console.error(err);
+        });
     }
-  }
+
+    const runFn = () => {
+      init()
+      !{count ? 'GLOBAL_CONFIG_SITE.isPost && getCount()' : ''}
+    }
+
+    const loadDisucss = () => {
+      if (typeof Discuss === 'object') {
+        setTimeout(runFn,0)
+        return
+      }
+      getScript('!{theme.asset.discuss}').then(runFn)
+    }
+
+    if ('!{use[0]}' === 'Discuss' || !!{lazyload}) {
+      if (!{lazyload}) btf.loadComment(document.getElementById('discuss-wrap'), loadDisucss)
+      else loadDisucss()
+    } else {
+      window.loadOtherComment = () => {
+        loadDisucss()
+      }
+    }
+  })()

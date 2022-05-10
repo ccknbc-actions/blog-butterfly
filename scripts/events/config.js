@@ -48,6 +48,7 @@ hexo.extend.filter.register('before_generate', () => {
     twikoo: 'https://cdn.jsdelivr.net/npm/twikoo@1/dist/twikoo.all.min.js',
     waline_js: 'https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.js',
     waline_css: 'https://cdn.jsdelivr.net/npm/@waline/client/dist/waline.css',
+    discuss: 'https://cdn.jsdelivr.net/npm/discuss/dist/Discuss.js',
     sharejs: 'https://cdn.jsdelivr.net/gh/overtrue/share.js@master/dist/js/social-share.min.js',
     sharejs_css: 'https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css',
     mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
