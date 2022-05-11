@@ -472,7 +472,7 @@ footer:
   owner:
     enable: false
     since: 2020
-  custom_text: #'<a href="https://webify.cloudbase.net/" target="_blank" rel="noopener noreferrer">CloudBase Webify</a> 提供网站托管服务'
+  custom_text: false #<script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/JgUfbwUA5BsLeAIc/quote.js?theme=#FFFFFF,#333333,#999999,#333333,#FFFFFF,#1690FF,14&f=14"></script>
   copyright: false # Copyright of theme and framework
   ICP: # Chinese ICP License
     enable: true
@@ -748,7 +748,7 @@ aside:
       link: https://cc.instatus.com
   card_announcement:
     enable: false
-    content: 
+    content: <script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/JgUfbwUA5BsLeAIc/quote.js?theme=#FFFFFF,#333333,#999999,#333333,#FFFFFF,#1690FF,14&col=true&f=14"></script>
     # '<center><iframe src="https://cc.instatus.com/embed-status/light-sm" loading="lazy" width="158" height="43" frameBorder="0" scrolling="no" style="border: none;" ></iframe><div id="he-plugin-standard"></div><script>WIDGET = {  "CONFIG": {    "layout": "2",    "width": "230",    "height": "290",    "background": "1",    "dataColor": "FFFFFF",    "borderRadius": "5",    "key": "dac79a62255345c9b4a31b585c3434a4"  }}</script><script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
     # <center>
     # <a target="_blank" href="https://hexo.io"><img src="https://img.shields.io/badge/Frame-Hexo 5.3.0-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><br>
@@ -785,6 +785,7 @@ aside:
   card_webinfo:
     enable: true
     post_count: true
+    LA-DATA-WIDGET: true
     last_push_date: true
     sort_order: 0 # Don't modify the setting unless you know how it works
 
@@ -1005,10 +1006,10 @@ inject:
   bottom:
     # - <div class="aplayer no-destroy" data-id="12838890" data-server="netease" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div>
     - '<div class="app-refresh" id="app-refresh"> <div class="app-refresh-wrap"> <label>✨ 网站已更新 👉</label> <a href="javascript:void(0)" onclick="location.reload()">✔ <b>点击刷新</b> 💫</a> </div></div><script>function showNotification(){if(GLOBAL_CONFIG.Snackbar){let t="light"===document.documentElement.getAttribute("data-theme")?GLOBAL_CONFIG.Snackbar.bgLight:GLOBAL_CONFIG.Snackbar.bgDark,e=GLOBAL_CONFIG.Snackbar.position;Snackbar.show({text:"✨ 部落格已更新 👉",backgroundColor:t,duration:1e4,pos:e,actionText:"✔ 点击刷新 💫",textColor:"#8FBC8F",actionTextColor:"#4CAF50",onActionClick:function(t){location.reload()}})}else{let o=`top: 0; background: ${"light"===document.documentElement.getAttribute("data-theme")?"#49b1f5":"#1f1f1f"};`;document.getElementById("app-refresh").style.cssText=o}}"serviceWorker"in navigator&&(navigator.serviceWorker.controller&&navigator.serviceWorker.addEventListener("controllerchange",function(){showNotification()}),window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js")}));</script>'
-    - <script defer src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/js/announcement.js"></script>
+    # - <script defer src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/js/announcement.js"></script>
     - <script defer src="https://cc.instatus.com/widget/script.js"></script>
     - <script>!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"JgUfbwUA5BsLeAIc",ck:"JgUfbwUA5BsLeAIc",autoTrack:true});</script>	
-    - <script>  !(function(c,i,e,b){  var h=i.createElement("script");  var f=i.getElementsByTagName("script")[0];  h.type="text/javascript";  h.crossorigin=true;  h.onload=function(){new c[b]["Monitor"]().init({id:"JgUg7s8ImDkwb2V7"});};  f.parentNode.insertBefore(h,f);h.src=e;})(window,document,"https://sdk.51.la/perf/js-sdk-perf.min.js","LingQue");</script>
+    - <script>!(function(c,i,e,b){var h=i.createElement("script");var f=i.getElementsByTagName("script")[0];h.type="text/javascript";h.crossorigin=true;h.onload=function(){new c[b]["Monitor"]().init({id:"JgUg7s8ImDkwb2V7",sendSuspicious:true});};f.parentNode.insertBefore(h,f);h.src=e;})(window,document,"https://sdk.51.la/perf/js-sdk-perf.min.js","LingQue");</script>
     # - <script defer src='https://api.vvhan.com/api/snow'></script>
     # - <script defer src="https://api.vvhan.com/api/denglong"></script>
     # - <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
