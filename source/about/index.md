@@ -14,3 +14,5 @@ updated: 2021-10-18 19:38:19
 ## 站点源码
 
 {% note success flat %} 可前往以下地址查看源码</br>  **[GitHub](https://github.com/ccknbc-actions/blog-butterfly) | [GitLab](https://gitlab.com/CCKNBC/ccknbc.gitlab.io) | [Bitbucket](https://bitbucket.org/ccknbc/blog) | [Coding](https://ccknbc.coding.net/public/blog/blog-butterfly/git/files) | [Gitee](https://gitee.com/ccknbc/blog-butterfly)** {% endnote %}
+
+<script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/JgUfbwUA5BsLeAIc/quote.js?theme=2&col=true&f=14&badge=icon_0&icon=center"></script>

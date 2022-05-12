@@ -472,7 +472,7 @@ footer:
   owner:
     enable: false
     since: 2020
-  custom_text: false #<script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/JgUfbwUA5BsLeAIc/quote.js?theme=#FFFFFF,#333333,#999999,#333333,#FFFFFF,#1690FF,14&f=14"></script>
+  custom_text: <script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/JgUfbwUA5BsLeAIc/quote.js?theme=#EEEEEE,,#EEEEEE,#EEEEEE,,#EEEEEE,14&f=14&display=0,1,1,1,1,1,1,1"></script>
   copyright: false # Copyright of theme and framework
   ICP: # Chinese ICP License
     enable: true
@@ -748,7 +748,7 @@ aside:
       link: https://cc.instatus.com
   card_announcement:
     enable: false
-    content: <script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/JgUfbwUA5BsLeAIc/quote.js?theme=#FFFFFF,#333333,#999999,#333333,#FFFFFF,#1690FF,14&col=true&f=14"></script>
+    content: 
     # '<center><iframe src="https://cc.instatus.com/embed-status/light-sm" loading="lazy" width="158" height="43" frameBorder="0" scrolling="no" style="border: none;" ></iframe><div id="he-plugin-standard"></div><script>WIDGET = {  "CONFIG": {    "layout": "2",    "width": "230",    "height": "290",    "background": "1",    "dataColor": "FFFFFF",    "borderRadius": "5",    "key": "dac79a62255345c9b4a31b585c3434a4"  }}</script><script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
     # <center>
     # <a target="_blank" href="https://hexo.io"><img src="https://img.shields.io/badge/Frame-Hexo 5.3.0-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><br>
@@ -785,7 +785,6 @@ aside:
   card_webinfo:
     enable: true
     post_count: true
-    LA-DATA-WIDGET: true
     last_push_date: true
     sort_order: 0 # Don't modify the setting unless you know how it works
 
