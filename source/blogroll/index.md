@@ -28,7 +28,9 @@ xkFriend.init({
 
 <!-- tab 申请友链@fa-solid fa-check-circle -->
 
-{% note success flat %}快速申请友链请前往{% btn 'https://github.com/ccknbc-forked/my-friend',GitHub(推荐),fa-brands fa-github,outline green larger %} 按照提示提交 PR 即可！如需修改可<button class="btn-beautify outline green small" id="chat_btn" type="button" title="给 CC 留言"><i class="fa-solid fa-sms"></i><span>给 CC 留言</span></button>或再次 PR  {% endnote %}
+{% note success flat %}快速申请友链请前往{% btn 'https://github.com/ccknbc-forked/my-friend',GitHub(推荐),fa-brands fa-github,outline green larger %} 按照提示提交 PR 即可！如需修改可
+{% btn '#post-comment',给 CC 留言,fa-solid fa-comments,outline green smaller %}
+或再次 PR  {% endnote %}
 
 <!-- {% link 顺便看看友链截图列表，您可复制使用啦, https://test1.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/, https://cdn.jsdelivr.net/www.jsdelivr.com/c903573129ce0afdbc8b006baf86dba514615495/img/logo-horizontal.svg %} -->
 
