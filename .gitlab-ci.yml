@@ -12,6 +12,7 @@ pages:
   cache:
     paths:
       - node_modules
+      - yuque
     key: project
   only:
     - master

@@ -13,8 +13,9 @@
     "gitlab": "npm run build && gulp"
   },
   "yuqueConfig": {
-    "postPath": "source/_posts/语雀",
-    "cachePath": "yuque.json",
+    "postPath": "/source/_posts/语雀",
+    "cachePath": "/yuque/yuque.json",
+    "lastGeneratePath": "/yuque/lastGeneratePath.log",
     "mdNameFormat": "title",
     "adapter": "markdown",
     "concurrency": "5",
@@ -45,12 +46,11 @@
     "hexo-generator-category": "1.0.0",
     "hexo-generator-feed": "3.0.0",
     "hexo-generator-indexed": "1.2.1",
-    "hexo-generator-search": "2.4.3",
     "hexo-generator-sitemap": "3.0.1",
     "hexo-generator-tag": "1.0.0",
     "hexo-renderer-markdown-it": "6.0.1",
     "hexo-renderer-pug": "3.0.0",
-    "hexo-renderer-stylus": "2.0.1",
+    "hexo-renderer-stylus": "2.1.0",
     "hexo-server": "3.0.0",
     "hexo-tag-chart": "1.0.8",
     "hexo-tag-mmedia": "1.1.7",
@@ -58,7 +58,7 @@
     "hexo-wordcount": "6.0.1",
     "markdown-it-task-lists": "2.1.1",
     "workbox-build": "6.5.3",
-    "yuque-hexo": "1.9.1",
+    "yuque-hexo": "^1.9.1",
     "yuque-hexo-lyrics": "1.0.0"
   }
 }

@@ -44,7 +44,7 @@ xkFriend.init({
 ```yaml
 name: CC康纳百川
 link: https://blog.ccknbc.cc
-avatar: https://test1.jsdelivr.net/gh/ccknbc-backup/cdn/logo/ccknbc.png
+avatar: https://test1.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/ccknbc.png
 descr: CC康纳百川的小窝
 ```
 选填信息
@@ -67,7 +67,7 @@ screenshot: https://test1.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.cckn
 ```yaml
 name: CC的部落格
 link: https://blog.ccknbc.cc
-avatar: https://test1.jsdelivr.net/gh/ccknbc-backup/cdn/logo/ccknbc.png
+avatar: https://test1.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/ccknbc.png
 descr: CC康纳百川
 --primary-color: linear-gradient(0deg,#ffdee9 0,#b5fffc 100%)
 --namecolor: #8fbc8f

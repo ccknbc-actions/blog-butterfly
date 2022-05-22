@@ -170,7 +170,7 @@ feed:
   content_limit: false
   content_limit_delim: ' '
   order_by: -updated
-  icon: https://test1.jsdelivr.net/gh/ccknbc-backup/CDN/logo/logo.png
+  icon: https://test1.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/logo.png
   autodiscovery: true
   template:
     - ./source/_data/atom.xml
@@ -286,7 +286,7 @@ tag_plugins:
   priority: 5 #过滤器优先权
   issues: false #issues标签开关
   link:
-    placeholder: https://test1.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png #link_card标签默认的图标图片
+    placeholder: https://test1.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/logo.png #link_card标签默认的图标图片
   CDN:
     anima: https://test1.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
     # jquery: https://test1.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #issues标签依赖

@@ -10,12 +10,12 @@ description: CC的部落格 即刻短文页面
 ---
 
 <!-- <div id="daodao"></div>
-<link rel="stylesheet" href="https://test1.jsdelivr.net/gh/ccknbc-backup/cdn/css/daodao.min.css">
-<script type="text/javascript" src="https://test1.jsdelivr.net/gh/ccknbc-backup/cdn/js/daodao.min.js" ></script> -->
+<link rel="stylesheet" href="https://test1.jsdelivr.net/gh/ccknbc-backup/cdn@latest/css/daodao.min.css">
+<script type="text/javascript" src="https://test1.jsdelivr.net/gh/ccknbc-backup/cdn@latest/js/daodao.min.js" ></script> -->
 
 <!-- <div id="bber"></div>
-<link rel="stylesheet" href="https://test1.jsdelivr.net/gh/ccknbc-backup/cdn/css/newbber.min.css">
-<script type="text/javascript" src="https://test1.jsdelivr.net/gh/ccknbc-backup/cdn/js/newbber.min.js" ></script> -->
+<link rel="stylesheet" href="https://test1.jsdelivr.net/gh/ccknbc-backup/cdn@latest/css/newbber.min.css">
+<script type="text/javascript" src="https://test1.jsdelivr.net/gh/ccknbc-backup/cdn@latest/js/newbber.min.js" ></script> -->
 
 <!-- <div id='speak'></speak> -->
 <!-- 使用markdown渲染 -->
@@ -32,7 +32,7 @@ ispeakBber
       envId: 'ccknbc-154167', // 环境id
       region: 'ap-shanghai', // 腾讯云地址，默认为上海
       limit: 10, // 每次加载的条数，默认为5
-      avatar: 'https://test1.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png',
+      avatar: 'https://test1.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/logo.png',
       fromColor:'rgb(245, 150, 170)', // 下方标签背景颜色 默认 rgb(245, 150, 170)
       loadingImg: 'https://test1.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif', // 自定义loading的图片，示例值为默认值
       dbName:'talks' // 数据的名称，默认talks，避免有人的命名不是这个，所以加入此配置字段。
@@ -65,7 +65,7 @@ ispeakBber
 <script src="https://cdn.staticfile.org/highlight.js/10.6.0/highlight.min.js"></script>
 <script src="https://cdn.staticfile.org/marked/2.0.0/marked.min.js"></script>
 <script src="https://test1.jsdelivr.net/npm/discuss/dist/Discuss.js"></script>
-<script src="https://test1.jsdelivr.net/npm/ispeak@4.2.0/ispeak.umd.js"></script>
+<script src="https://test1.jsdelivr.net/npm/ispeak/ispeak.umd.js"></script>
 <script>
   var head = document.getElementsByTagName('head')[0]
   var meta = document.createElement('meta')
@@ -98,7 +98,7 @@ ispeakBber
 <!-- ## 哔哔 CloudBase 版本(林木木) -->
 
 <!-- <div id="bber"></div>
-<link rel="stylesheet" href="https://test1.jsdelivr.net/gh/ccknbc-backup/cdn/css/bber.min.css">
+<link rel="stylesheet" href="https://test1.jsdelivr.net/gh/ccknbc-backup/cdn@latest/css/bber.min.css">
 <script type="text/javascript" src="https://test1.jsdelivr.net/npm/jquery/dist/jquery.min.js" ></script>
 <script src="https://test1.jsdelivr.net/npm/vue/dist/vue.min.js" ></script>
 <script type="text/javascript" src="https://test1.jsdelivr.net/gh/TencentCloudBase/tcb-js-sdk@master/tcbjs/1.10.10/tcb.min.js" >
@@ -109,13 +109,13 @@ const app = tcb.init({
   env: 'ccknbc-154167'
   })
 </script>
-<script type="text/javascript" src="https://test1.jsdelivr.net/gh/ccknbc-backup/cdn/js/bber.min.js" ></script> -->
+<script type="text/javascript" src="https://test1.jsdelivr.net/gh/ccknbc-backup/cdn@latest/js/bber.min.js" ></script> -->
 
 <!-- ## 哔哔 CloudBase 版本(Heo) -->
 
 <!-- <div id="bber"></div>
-<link rel="stylesheet" href="https://test1.jsdelivr.net/gh/ccknbc-backup/cdn/css/newbber.min.css">
-<script type="text/javascript" src="https://test1.jsdelivr.net/gh/ccknbc-backup/cdn/js/newbber.min.js" ></script> -->
+<link rel="stylesheet" href="https://test1.jsdelivr.net/gh/ccknbc-backup/cdn@latest/css/newbber.min.css">
+<script type="text/javascript" src="https://test1.jsdelivr.net/gh/ccknbc-backup/cdn@latest/js/newbber.min.js" ></script> -->
 
 <!-- ## 说说(Artitalk) -->
 

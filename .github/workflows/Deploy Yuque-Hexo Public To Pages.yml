@@ -25,17 +25,24 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@main
       with:
-        node-version: "18.x"
+        node-version: "latest"
         check-latest: true
         cache: 'npm'
         cache-dependency-path: '**/package-lock.json'
 
-    - name: Catch
+    - name: Catch Dependencies
       uses: actions/cache@main
       id: cache-dependencies
       with:
         path: node_modules
         key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
+
+    - name: Catch Yuque
+      uses: actions/cache@main
+      id: cache-yuque
+      with:
+        path: yuque
+        key: ${{runner.OS}}-${{hashFiles('**/yuque/lastGeneratePath.log')}}
 
     - name: Install Dependencies
       if: steps.cache-dependencies.outputs.cache-hit != 'true'
@@ -81,7 +88,7 @@ jobs:
 
     - name: Sync RSS
       run: |
-        curl 'https://kkapi.ccknbc.vercel.app/api/open/github/dispatch&owner=ccknbc-actions&repo=home&token=${{ secrets.GH_TOKEN }}&runit_text=RSS'
+        curl 'https://kkapi.ccknbc.vercel.app/api/open/github/dispatch&owner=ccknbc-actions&repo=home&token=${{ secrets.GH_TOKEN }}&text=RSS'
         curl -X POST -F token=${{ secrets.GITLAB_TRIGGER_TOKEN }} -F ref=master https://gitlab.com/api/v4/projects/22130436/trigger/pipeline
 
     - name: Delete Workflow Runs
