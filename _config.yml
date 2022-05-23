@@ -170,7 +170,7 @@ feed:
   content_limit: false
   content_limit_delim: ' '
   order_by: -updated
-  icon: https://test1.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/logo.png
+  icon: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/logo.png
   autodiscovery: true
   template:
     - ./source/_data/atom.xml
@@ -267,17 +267,17 @@ douban:
 
 mmedia:
   aplayer:
-    js: https://test1.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
-    css: https://test1.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
+    js: https://gcore.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
+    css: https://gcore.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
   meting:
-    js: https://test1.jsdelivr.net/npm/meting/dist/Meting.min.js
+    js: https://gcore.jsdelivr.net/npm/meting/dist/Meting.min.js
   dplayer:
-    js: https://test1.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js
-    hls_js: https://test1.jsdelivr.net/npm/hls.js/dist/hls.min.js
-    dash_js: https://test1.jsdelivr.net/npm/dashjs/dist/dash.all.min.js
-    shaka_dash_js: https://test1.jsdelivr.net/npm/shaka-player/dist/shaka-player.compiled.js
-    flv_js: https://test1.jsdelivr.net/npm/flv.js/dist/flv.min.js
-    webtorrent_js: https://test1.jsdelivr.net/npm/webtorrent/webtorrent.min.js
+    js: https://gcore.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js
+    hls_js: https://gcore.jsdelivr.net/npm/hls.js/dist/hls.min.js
+    dash_js: https://gcore.jsdelivr.net/npm/dashjs/dist/dash.all.min.js
+    shaka_dash_js: https://gcore.jsdelivr.net/npm/shaka-player/dist/shaka-player.compiled.js
+    flv_js: https://gcore.jsdelivr.net/npm/flv.js/dist/flv.min.js
+    webtorrent_js: https://gcore.jsdelivr.net/npm/webtorrent/webtorrent.min.js
 
 # tag-plugins-plus
 # see https://akilar.top/posts/615e2dec/
@@ -286,14 +286,14 @@ tag_plugins:
   priority: 5 #过滤器优先权
   issues: false #issues标签开关
   link:
-    placeholder: https://test1.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/logo.png #link_card标签默认的图标图片
+    placeholder: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/logo.png #link_card标签默认的图标图片
   CDN:
-    anima: https://test1.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
-    # jquery: https://test1.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #issues标签依赖
-    # issues: https://test1.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js #issues标签依赖
+    anima: https://gcore.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
+    # jquery: https://gcore.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #issues标签依赖
+    # issues: https://gcore.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js #issues标签依赖
     iconfont: false #参看https://akilar.top/posts/d2ebecef/
-    carousel: false #https://test1.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js
-    tag_plugins_css: https://test1.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css
+    carousel: false #https://gcore.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js
+    tag_plugins_css: https://gcore.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css
 
 
 wowjs:
