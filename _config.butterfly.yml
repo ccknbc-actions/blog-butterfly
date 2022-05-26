@@ -947,9 +947,9 @@ pjax:
   enable: true
   exclude:
     - /music/
-    - /blogroll/
-    - /moments/
-    - /essay/
+    # - /blogroll/
+    # - /moments/
+    # - /essay/
     # - /about/
 
 # Inject the css and script (aplayer/meting)
@@ -1026,16 +1026,16 @@ inject:
     # - <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
     # - <div id="music" key="6208da041a763" api="https://music.mx142.ltd"></div><script id="xplayer" src="https://music.mx142.ltd/Static/player4/js/player.js" ></script>
 
+# CDN
 # Don't modify the following settings unless you know how they work
 # 非必要請不要修改
-
 CDN:
   # The CDN provider of internal scripts (主題內部 js 的 cdn 配置)
-  # option: local/jsdelivr
-  # Dev version cannot choose jsdelivr (dev版的主題不能設置為 jsdelivr)
+  # option: local/jsdelivr/unpkg
+  # Dev version cannot choose jsdelivr/unpkg (dev版的主題不能設置為 jsdelivr/unpkg)
   internal_provider: local
   # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
-  # option: local/jsdelivr
+  # option: local/jsdelivr/unpkg
   # when set it to local, you need to install hexo-butterfly-extjs
   third_party_provider: jsdelivr
   option:
@@ -1045,6 +1045,7 @@ CDN:
     # translate:
     # local_search:
     # algolia_js:
+    
     # algolia_search_v4:
     # instantsearch_v4:
     # pjax:
@@ -1089,6 +1090,7 @@ CDN:
     # prismjs_js:
     # prismjs_lineNumber_js:
     # prismjs_autoloader:
+  
   # other
   statuspage: https://ccknbc.statuspage.io/embed/script.js
   pace: https://gcore.jsdelivr.net/gh/CodeByZach/pace/pace.min.js
