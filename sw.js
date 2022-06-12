@@ -1,4 +1,4 @@
-importScripts('https://npm.elemecdn.com/workbox-sw/build/workbox-sw.js');
+importScripts('https://gcore.jsdelivr.net/npm/workbox-sw/build/workbox-sw.js');
 
 if (workbox) {
     console.log('workbox加载成功🎉');
@@ -32,6 +32,8 @@ workbox.precaching.precacheAndRoute(self.__WB_MANIFEST, {
     directoryIndex: null
 });
 
+workbox.precaching.cleanupOutdatedCaches();
+
 // Images
 // workbox.routing.registerRoute(
 //     /\.(?:png|jpg|jpeg|gif|bmp|webp|svg|ico)$/,
@@ -50,21 +52,21 @@ workbox.precaching.precacheAndRoute(self.__WB_MANIFEST, {
 // );
 
 // CDN
-workbox.routing.registerRoute(
-    /\.(?:js|css|json)$/,
-    new workbox.strategies.StaleWhileRevalidate({
-        cacheName: 'assets',
-        plugins: [
-            new workbox.expiration.ExpirationPlugin({
-                maxEntries: 1000,
-                maxAgeSeconds: 60 * 60 * 24 * 30
-            }),
-            new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200]
-            })
-        ]
-    })
-);
+// workbox.routing.registerRoute(
+//     /\.(?:js|css|json)$/,
+//     new workbox.strategies.CacheFirst({
+//         cacheName: 'assets',
+//         plugins: [
+//             new workbox.expiration.ExpirationPlugin({
+//                 maxEntries: 1000,
+//                 maxAgeSeconds: 60 * 60 * 24 * 30
+//             }),
+//             new workbox.cacheableResponse.CacheableResponsePlugin({
+//                 statuses: [0, 200]
+//             })
+//         ]
+//     })
+// );
 
 // Cache CSS, JS, and Web Worker requests with a Stale While Revalidate strategy
 workbox.routing.registerRoute(
@@ -78,6 +80,10 @@ workbox.routing.registerRoute(
         // Put all cached files in a cache named 'assets'
         cacheName: 'assets',
         plugins: [
+            new workbox.expiration.ExpirationPlugin({
+                maxEntries: 1000,
+                maxAgeSeconds: 60 * 60 * 24 * 30
+            }),
             // Ensure that only requests that result in a 200 status are cached
             new workbox.cacheableResponse.CacheableResponsePlugin({
                 statuses: [0, 200],
@@ -86,9 +92,8 @@ workbox.routing.registerRoute(
     }),
 );
 
-// Catch routing errors, like if the user is offline
+// 如果用户处于离线状态，则返回缓存的离线页面的内容，而不是生成一个浏览器错误。
 workbox.routing.setCatchHandler(async ({ event }) => {
-    // Return the precached offline page if a document is being requested
     if (event.request.destination === 'document') {
         return matchPrecache('/404.html');
     }
@@ -152,8 +157,6 @@ workbox.routing.registerRoute(
 //     })
 // );
 
-workbox.precaching.cleanupOutdatedCaches();
-
 // workbox.googleAnalytics.initialize();
 
 const cdn = {
@@ -162,16 +165,14 @@ const cdn = {
         fastly: 'https://fastly.jsdelivr.net/gh',
         gcore: 'https://gcore.jsdelivr.net/gh',
         testingcf: 'https://testingcf.jsdelivr.net/gh',
-        test1: 'https://test1.jsdelivr.net/gh',
-        tianli: 'https://cdn1.tianli0.top/gh'
+        test1: 'https://test1.jsdelivr.net/gh'
     },
     combine: {
         jsdelivr: 'https://cdn.jsdelivr.net/combine',
         fastly: 'https://fastly.jsdelivr.net/combine',
         gcore: 'https://gcore.jsdelivr.net/combine',
         testingcf: 'https://testingcf.jsdelivr.net/combine',
-        test1: 'https://test1.jsdelivr.net/combine',
-        tianli: 'https://cdn1.tianli0.top/combine'
+        test1: 'https://test1.jsdelivr.net/combine'
     },
     npm: {
         jsdelivr: 'https://cdn.jsdelivr.net/npm',
@@ -180,18 +181,17 @@ const cdn = {
         testingcf: 'https://testingcf.jsdelivr.net/npm',
         test1: 'https://test1.jsdelivr.net/npm',
         eleme: 'https://npm.elemecdn.com',
-        unpkg: 'https://unpkg.com',
-        tianli: 'https://cdn1.tianli0.top/npm'
+        unpkg: 'https://unpkg.com'
     }
 }
 
-// self.addEventListener('install', async () => {
-//     await self.skipWaiting()
-// })
+self.addEventListener('install', async () => {
+    await self.skipWaiting()
+})
 
-// self.addEventListener('activate', async () => {
-//     await self.clients.claim()
-// })
+self.addEventListener('activate', async () => {
+    await self.clients.claim()
+})
 
 self.addEventListener('fetch', async (event) => {
     try {

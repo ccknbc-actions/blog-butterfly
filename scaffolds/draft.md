@@ -5,7 +5,6 @@ subtitle:
 date: {{ date }}
 updated: {{ date }}
 tags: []
-keywords: 
 categories: 
 description: 
 cover: 

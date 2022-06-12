@@ -205,9 +205,9 @@ algolia:
   chunkSize: 5000
   indexName: "ccknbc-blog"
   fields:
-    - path
     - title
     - content:strip
+    - path
 
 nofollow:
   enable: true
@@ -309,3 +309,12 @@ wowjs:
       iteration: 2 #选填项，动画重复的次数
     - class: card-widget
       style: animate__zoomIn
+
+# SW-Racing
+# https://github.com/Lete114/SW-Racing
+SWRacing:
+  enable: true              # 是否使用sw
+  register: true            # true: 注册sw | false: 注销
+  file: sw.js               # sw的文件名
+  location: head_begin      # 插入页面的位置 https://hexo.io/zh-cn/api/injector#entry-lt-string-gt
+  page: default             # 插入到哪些页面 https://hexo.io/zh-cn/api/injector#to-lt-string-gt

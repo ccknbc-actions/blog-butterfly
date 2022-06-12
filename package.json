@@ -52,6 +52,7 @@
     "hexo-renderer-pug": "3.0.0",
     "hexo-renderer-stylus": "2.1.0",
     "hexo-server": "3.0.0",
+    "hexo-sw-racing": "1.0.0-beta.3",
     "hexo-tag-chart": "1.0.8",
     "hexo-tag-mmedia": "1.1.7",
     "hexo-translate-title-vss": "1.0.14",

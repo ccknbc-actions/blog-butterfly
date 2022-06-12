@@ -1,6 +1,6 @@
 ---
 title: 音乐
-description: CC的部落格 音乐界面
+description: CC的部落格 音乐页面
 top_img: false
 aside: false
 translate_title: music

@@ -12,7 +12,7 @@ const path = require('path')
 hexo.extend.filter.register('before_generate', () => {
   const themeConfig = hexo.theme.config
   const { CDN, comments } = themeConfig
-  const jsdelivr = 'https://gcore.jsdelivr.net/npm/'
+  const jsdelivr = 'https://cdn.jsdelivr.net/npm/'
   const unpkg = 'https://unpkg.com/'
 
   /**
@@ -53,6 +53,7 @@ hexo.extend.filter.register('before_generate', () => {
       twikoo: `${pre}twikoo@1/dist/twikoo.all.min.js`,
       waline_js: `${pre}@waline/client/dist/waline.js`,
       waline_css: `${pre}@waline/client/dist/waline.css`,
+      discuss: `${pre}discuss/dist/Discuss.js`,
       sharejs: `${pre}butterfly-extsrc@1/ShareJS/dist/js/social-share.min.js`,
       sharejs_css: `${pre}butterfly-extsrc@1/ShareJS/dist/css/share.min.css`,
       mathjax: `${pre}mathjax@3/es5/tex-mml-chtml.js`,
