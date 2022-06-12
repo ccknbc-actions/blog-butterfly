@@ -12,7 +12,7 @@
 ![hexo version](https://img.shields.io/badge/hexo-5.3.0+-0e83c)
 ![license](https://img.shields.io/github/license/jerryc127/hexo-theme-butterfly?color=FF5531)
 
-![](https://test1.jsdelivr.net/gh/jerryc127/CDN@m2/img/theme-butterfly-readme.png)
+![](https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/theme-butterfly-readme.png)
 
 預覽: 👍 [Butterfly](https://butterfly.js.org/)  ||  🤞 [CrazyWong](https://crazywong.com/)
 
@@ -79,7 +79,7 @@ theme: butterfly
 - [x] 顯示相關文章
 - [x] 過期文章提醒
 - [x] 多種分享系統（AddThis/Sharejs/Addtoany）
-- [X] 多種評論系統（Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus）
+- [X] 多種評論系統（Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42）
 - [x] 支持雙評論部署
 - [x] 多種在線聊天（Chatra/Tidio/Daovoice/Gitter/Crisp）
 - [x] 多種分析系統
@@ -105,9 +105,9 @@ theme: butterfly
 
 ## 📷 截圖
 
-![](https://test1.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-1.jpg)
-![](https://test1.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-2.jpg)
-![](https://test1.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-3.jpg)
-![](https://test1.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-4.jpg)
-![](https://test1.jsdelivr.net/gh/jerryc127/CDN/img/theme-butterfly-readme-homepage-1.png)
-![](https://test1.jsdelivr.net/gh/jerryc127/CDN/img/theme-butterfly-readme-homepage-2.png)
+![](https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-1.jpg)
+![](https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-2.jpg)
+![](https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-3.jpg)
+![](https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-4.jpg)
+![](https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/theme-butterfly-readme-homepage-1.png)
+![](https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/theme-butterfly-readme-homepage-2.png)

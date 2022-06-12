@@ -259,7 +259,7 @@ addtoany:
 
 comments:
   # Up to two comments system, the first will be shown as default
-  # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus
+  # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42
   use: # Valine,Disqus
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
@@ -352,6 +352,13 @@ giscus:
   theme:
     light: light
     dark: dark
+  option:
+
+# Remark42
+# https://remark42.com/docs/configuration/frontend/
+remark42:
+  host: # Your Host URL
+  siteId: # Your Site ID
   option:
 
 # Chat Services
@@ -836,11 +843,11 @@ inject:
 # 非必要請不要修改
 CDN:
   # The CDN provider of internal scripts (主題內部 js 的 cdn 配置)
-  # option: local/jsdelivr
-  # Dev version cannot choose jsdelivr (dev版的主題不能設置為 jsdelivr)
+  # option: local/jsdelivr/unpkg
+  # Dev version cannot choose jsdelivr/unpkg (dev版的主題不能設置為 jsdelivr/unpkg)
   internal_provider: local
   # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
-  # option: local/jsdelivr
+  # option: local/jsdelivr/unpkg
   # when set it to local, you need to install hexo-butterfly-extjs
   third_party_provider: jsdelivr
   option:
