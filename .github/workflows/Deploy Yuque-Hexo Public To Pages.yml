@@ -79,10 +79,10 @@ jobs:
           gitee-password: ${{ secrets.GITEE_PASSWORD }}
           gitee-repo: ccknbc/ccknbc
 
-    - name: Sync RSS
-      run: |
-        curl 'https://kkapi.ccknbc.vercel.app/api/open/github/dispatch&owner=ccknbc-actions&repo=home&token=${{ secrets.GH_TOKEN }}&text=RSS'
-        curl -X POST -F token=${{ secrets.GITLAB_TRIGGER_TOKEN }} -F ref=master https://gitlab.com/api/v4/projects/22130436/trigger/pipeline
+    # - name: Sync RSS
+    #   run: |
+    #     curl 'https://kkapi.ccknbc.vercel.app/api/open/github/dispatch&owner=ccknbc-actions&repo=home&token=${{ secrets.GH_TOKEN }}&text=RSS'
+    #     curl -X POST -F token=${{ secrets.GITLAB_TRIGGER_TOKEN }} -F ref=master https://gitlab.com/api/v4/projects/22130436/trigger/pipeline
 
     - name: Delete Workflow Runs
       uses: Mattraks/delete-workflow-runs@main
@@ -90,11 +90,8 @@ jobs:
         retain_days: 1
         keep_minimum_runs: 1
 
-    - name: Telegram Notification
-      if: cancelled() == false
-      uses: xinthink/action-telegram@v1.1
-      with:
-        botToken: ${{ secrets.TG_BOT_TOKEN }}
-        chatId: ${{ secrets.TG_CHAT_ID }}
-        jobStatus: ${{ job.status }}
-        skipSuccess: false
+    - name: Send message to Telegram
+      uses: Lukasss93/telegram-action@v2
+      env:
+        TELEGRAM_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+        TELEGRAM_CHAT: ${{ secrets.TG_CHAT_ID }}
