@@ -66,5 +66,4 @@ gulp.task('generate-service-worker', () => {
 });
 
 // 执行 gulp 命令时执行的任务
-// gulp.task("default",gulp.series("generate-service-worker",gulp.parallel('compress','minify-css', 'minify-html')));
-gulp.task("default",gulp.series(gulp.parallel('compress','minify-css', 'minify-html')));
+gulp.task("default",gulp.series("generate-service-worker",gulp.parallel('compress','minify-css', 'minify-html')));

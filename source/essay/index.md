@@ -10,20 +10,20 @@ description: CC的部落格 即刻短文页面
 ---
 
 <!-- <div id="daodao"></div>
-<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/css/daodao.min.css">
-<script type="text/javascript" src="https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/js/daodao.min.js" ></script> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/css/daodao.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/js/daodao.min.js" ></script> -->
 
 <!-- <div id="bber"></div>
-<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/css/newbber.min.css">
-<script type="text/javascript" src="https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/js/newbber.min.js" ></script> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/css/newbber.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/js/newbber.min.js" ></script> -->
 
 <!-- <div id='speak'></speak> -->
 <!-- 使用markdown渲染 -->
-<!-- <script type="text/javascript" src="https://gcore.jsdelivr.net/npm/ispeak-bber/ispeak-bber-md.min.js" charset="utf-8" ></script> -->
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber-md.min.js" charset="utf-8" ></script> -->
 <!-- 不使用markdown渲染 -->
-<!-- <script type="text/javascript" src="https://gcore.jsdelivr.net/npm/ispeak-bber/ispeak-bber.min.js" charset="utf-8" ></script> -->
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ispeak-bber/ispeak-bber.min.js" charset="utf-8" ></script> -->
 <!-- 解析微信表情（参考：https://github.com/buddys/qq-wechat-emotion-parser） -->
-<!-- <script src="https://gcore.jsdelivr.net/gh/buddys/qq-wechat-emotion-parser@master/dist/qq-wechat-emotion-parser.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/gh/buddys/qq-wechat-emotion-parser@master/dist/qq-wechat-emotion-parser.min.js"></script>
 <script>
 ispeakBber
     .init({
@@ -32,9 +32,9 @@ ispeakBber
       envId: 'ccknbc-154167', // 环境id
       region: 'ap-shanghai', // 腾讯云地址，默认为上海
       limit: 10, // 每次加载的条数，默认为5
-      avatar: 'https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/logo.png',
+      avatar: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/logo.png',
       fromColor:'rgb(245, 150, 170)', // 下方标签背景颜色 默认 rgb(245, 150, 170)
-      loadingImg: 'https://gcore.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif', // 自定义loading的图片，示例值为默认值
+      loadingImg: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif', // 自定义loading的图片，示例值为默认值
       dbName:'talks' // 数据的名称，默认talks，避免有人的命名不是这个，所以加入此配置字段。
     })
     .then(function() {
@@ -51,7 +51,7 @@ ispeakBber
 />
 <link
   rel="stylesheet"
-  href="https://gcore.jsdelivr.net/npm/ispeak/style.css"
+  href="https://cdn.jsdelivr.net/npm/ispeak/style.css"
 />
 
 <style>
@@ -64,8 +64,8 @@ ispeakBber
 </style>
 <script src="https://cdn.staticfile.org/highlight.js/10.6.0/highlight.min.js"></script>
 <script src="https://cdn.staticfile.org/marked/2.0.0/marked.min.js"></script>
-<script src="https://gcore.jsdelivr.net/npm/discuss/dist/Discuss.js"></script>
-<script src="https://gcore.jsdelivr.net/npm/ispeak/ispeak.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/discuss/dist/Discuss.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/ispeak/ispeak.umd.js"></script>
 <script>
   var head = document.getElementsByTagName('head')[0]
   var meta = document.createElement('meta')
@@ -79,7 +79,7 @@ ispeakBber
         api: 'https://kkapi.ccknbc.vercel.app/',
         author: '621cd42048c49d6f96787626',
         pageSize: 10,
-        loading_img: 'https://gcore.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif',
+        loading_img: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif',
         initCommentName: 'Discuss',
         initCommentOptions: {
           serverURLs: 'https://discuss.ccknbc.vercel.app/'
@@ -98,29 +98,29 @@ ispeakBber
 <!-- ## 哔哔 CloudBase 版本(林木木) -->
 
 <!-- <div id="bber"></div>
-<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/css/bber.min.css">
-<script type="text/javascript" src="https://gcore.jsdelivr.net/npm/jquery/dist/jquery.min.js" ></script>
-<script src="https://gcore.jsdelivr.net/npm/vue/dist/vue.min.js" ></script>
-<script type="text/javascript" src="https://gcore.jsdelivr.net/gh/TencentCloudBase/tcb-js-sdk@master/tcbjs/1.10.10/tcb.min.js" >
-</script><script src="https://gcore.jsdelivr.net/gh/buddys/qq-wechat-emotion-parser@master/dist/qq-wechat-emotion-parser.min.js" 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/css/bber.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js" ></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/TencentCloudBase/tcb-js-sdk@master/tcbjs/1.10.10/tcb.min.js" >
+</script><script src="https://cdn.jsdelivr.net/gh/buddys/qq-wechat-emotion-parser@master/dist/qq-wechat-emotion-parser.min.js" 
 ></script>
 <script>
 const app = tcb.init({
   env: 'ccknbc-154167'
   })
 </script>
-<script type="text/javascript" src="https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/js/bber.min.js" ></script> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/js/bber.min.js" ></script> -->
 
 <!-- ## 哔哔 CloudBase 版本(Heo) -->
 
 <!-- <div id="bber"></div>
-<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/css/newbber.min.css">
-<script type="text/javascript" src="https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/js/newbber.min.js" ></script> -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/css/newbber.min.css">
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/js/newbber.min.js" ></script> -->
 
 <!-- ## 说说(Artitalk) -->
 
 <!-- <div id="artitalk_main"></div>
-<script type="text/javascript" src="https://gcore.jsdelivr.net/npm/artitalk"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/artitalk"></script>
 <script>
 new Artitalk({
   appId: 'pvExDcJ4o0gsrOI1G1eGO01H-MdYXbMMI',
@@ -132,22 +132,22 @@ new Artitalk({
 <!-- ## hpptalk(CYFan) -->
 
 <!-- <div id="hpp_talk"></div>
-<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/HexoPlusPlus/HexoPlusPlus/talk.css" /> 
-<script src="https://gcore.jsdelivr.net/gh/HexoPlusPlus/HexoPlusPlus/talk_user.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/HexoPlusPlus/HexoPlusPlus/talk.css" /> 
+<script src="https://cdn.jsdelivr.net/gh/HexoPlusPlus/HexoPlusPlus/talk_user.js"></script>
 <script>
 new hpp_talk({
 id:"hpp_talk",
 domain: "blog.ccknbc.workers.dev",
 limit: 10,
 start: 0,
-themecss: "https://gcore.jsdelivr.net/gh/HexoPlusPlus/cdn/plugin/theme/hpp_user_talk/bfonion.css" 
+themecss: "https://cdn.jsdelivr.net/gh/HexoPlusPlus/cdn/plugin/theme/hpp_user_talk/bfonion.css" 
 });
 </script> -->
 
 <!-- ## 哔哔 LeanCloud 版本(黑石) -->
 
 <!-- <div id="bbtalk"></div>
-<script src="https://gcore.jsdelivr.net/npm/bbtalk@0.1.5/dist/bbtalk.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bbtalk@0.1.5/dist/bbtalk.min.js"></script>
 <script>
 bbtalk.init({
   appId: "MH2fWakWlJvGxqbMLX6itMJL-MdYXbMMI",

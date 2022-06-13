@@ -1,4 +1,4 @@
-importScripts('https://gcore.jsdelivr.net/npm/workbox-sw/build/workbox-sw.js');
+importScripts('https://cdn.jsdelivr.net/npm/workbox-sw/build/workbox-sw.js');
 
 if (workbox) {
     console.log('workbox加载成功🎉');
@@ -81,8 +81,9 @@ workbox.routing.registerRoute(
         cacheName: 'assets',
         plugins: [
             new workbox.expiration.ExpirationPlugin({
-                maxEntries: 1000,
-                maxAgeSeconds: 60 * 60 * 24 * 30
+                maxEntries: 50,
+                maxAgeSeconds: 60 * 60 * 24,
+                purgeOnQuotaError: true
             }),
             // Ensure that only requests that result in a 200 status are cached
             new workbox.cacheableResponse.CacheableResponsePlugin({
@@ -130,8 +131,9 @@ workbox.routing.registerRoute(
         cacheName: 'google-fonts-webfonts',
         plugins: [
             new workbox.expiration.ExpirationPlugin({
-                maxEntries: 1000,
-                maxAgeSeconds: 60 * 60 * 24 * 30
+                maxEntries: 10,
+                maxAgeSeconds: 60 * 60 * 24 * 30,
+                purgeOnQuotaError: true
             }),
             new workbox.cacheableResponse.CacheableResponsePlugin({
                 statuses: [0, 200]
@@ -180,18 +182,17 @@ const cdn = {
         gcore: 'https://gcore.jsdelivr.net/npm',
         testingcf: 'https://testingcf.jsdelivr.net/npm',
         test1: 'https://test1.jsdelivr.net/npm',
-        eleme: 'https://npm.elemecdn.com',
         unpkg: 'https://unpkg.com'
     }
 }
 
-self.addEventListener('install', async () => {
-    await self.skipWaiting()
-})
+// self.addEventListener('install', async () => {
+//     await self.skipWaiting()
+// })
 
-self.addEventListener('activate', async () => {
-    await self.clients.claim()
-})
+// self.addEventListener('activate', async () => {
+//     await self.clients.claim()
+// })
 
 self.addEventListener('fetch', async (event) => {
     try {

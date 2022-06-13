@@ -10,8 +10,8 @@ subtitle: Blogroll
 date: 2020-06-04 22:17:49
 updated: 2021-07-18 19:38:19
 ---
-<script src='https://gcore.jsdelivr.net/npm/butterfly-friend@latest/butterfly-friend.umd.js'></script>
-<link rel="stylesheet" href='https://gcore.jsdelivr.net/npm/butterfly-friend@latest/style.css'>
+<script src='https://cdn.jsdelivr.net/npm/butterfly-friend@latest/butterfly-friend.umd.js'></script>
+<link rel="stylesheet" href='https://cdn.jsdelivr.net/npm/butterfly-friend@latest/style.css'>
 <script>
 document.querySelector('.flink').insertAdjacentHTML('afterbegin',"<div id='friend1'></div>")
 xkFriend.init({
@@ -19,8 +19,8 @@ xkFriend.init({
   api: [
     'https://blogroll.ccknbc.vercel.app/blogroll.json'
   ], // 你的json链接列表，可以是多个。
-  loading_img: 'https://gcore.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif', // 加载中的图片
-  fail_img: 'https://gcore.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif' // // 加载失败的图片
+  loading_img: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif', // 加载中的图片
+  fail_img: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif' // // 加载失败的图片
 })
 </script>
 
@@ -32,7 +32,7 @@ xkFriend.init({
 {% btn '#post-comment',给 CC 留言,fa-solid fa-comments,outline green smaller %}
 或再次 PR  {% endnote %}
 
-<!-- {% link 顺便看看友链截图列表，您可复制使用啦, https://gcore.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/, https://cdn.jsdelivr.net/www.jsdelivr.com/c903573129ce0afdbc8b006baf86dba514615495/img/logo-horizontal.svg %} -->
+<!-- {% link 顺便看看友链截图列表，您可复制使用啦, https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/, https://cdn.jsdelivr.net/www.jsdelivr.com/c903573129ce0afdbc8b006baf86dba514615495/img/logo-horizontal.svg %} -->
 
 <!-- {% ghcard ccknbc-actions/blogroll, theme=vue %}  -->
 
@@ -44,7 +44,7 @@ xkFriend.init({
 ```yaml
 name: CC康纳百川
 link: https://blog.ccknbc.cc
-avatar: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/ccknbc.png
+avatar: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/ccknbc.png
 descr: CC康纳百川的小窝
 ```
 选填信息
@@ -58,7 +58,7 @@ border-style: solid
 animation: link_custom1 2s infinite alternate
 img_animation: auto_rotate_right 2s linear infinite
 card_style: card/item
-screenshot: https://gcore.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
+screenshot: https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
 # screenshot: https://s0.wordpress.com/mshots/v1/https://blog.ccknbc.cc?w=1280&h=960
 # screenshot: https://image.thum.io/get/width/1024/crop/768/https://blog.ccknbc.cc
 # 帮我选一个适合您站点的截图呗，默认的jsd每天更新
@@ -67,7 +67,7 @@ screenshot: https://gcore.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.cckn
 ```yaml
 name: CC的部落格
 link: https://blog.ccknbc.cc
-avatar: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/ccknbc.png
+avatar: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/ccknbc.png
 descr: CC康纳百川
 --primary-color: linear-gradient(0deg,#ffdee9 0,#b5fffc 100%)
 --namecolor: #8fbc8f
@@ -78,7 +78,7 @@ border-style: solid
 animation: link_custom1 2s infinite alternate
 img_animation: auto_rotate_right 2s linear infinite
 card_style: item
-screenshot: https://gcore.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
+screenshot: https://cdn.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
 ```
 
 <!-- endtab -->
