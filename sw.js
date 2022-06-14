@@ -16,11 +16,11 @@ if (workbox) {
 
 //设置缓存cachestorage的名称
 workbox.core.setCacheNameDetails({
-    prefix: 'CC的部落格'
+    prefix: 'CC的部落格',
     // suffix: 'v1',
-    // precache: 'custom-precache-name',
-    // runtime: 'custom-runtime-name',
-    // googleAnalytics: 'custom-google-analytics-name'
+    precache: '预缓存',
+    runtime: '运行时间',
+    googleAnalytics: '谷歌分析'
 });
 
 //直接激活跳过等待阶段
@@ -78,10 +78,10 @@ workbox.routing.registerRoute(
     // Use a Stale While Revalidate caching strategy
     new workbox.strategies.StaleWhileRevalidate({
         // Put all cached files in a cache named 'assets'
-        cacheName: 'assets',
+        cacheName: '静态资源',
         plugins: [
             new workbox.expiration.ExpirationPlugin({
-                maxEntries: 50,
+                maxEntries: 100,
                 maxAgeSeconds: 60 * 60 * 24,
                 purgeOnQuotaError: true
             }),
@@ -122,13 +122,13 @@ workbox.routing.setCatchHandler(async ({ event }) => {
 workbox.routing.registerRoute(
     /^https:\/\/fonts\.googleapis\.com/,
     new workbox.strategies.StaleWhileRevalidate({
-        cacheName: "google-fonts-stylesheets"
+        cacheName: "谷歌字体样式"
     })
 );
 workbox.routing.registerRoute(
     /^https:\/\/fonts\.gstatic\.com/,
     new workbox.strategies.CacheFirst({
-        cacheName: 'google-fonts-webfonts',
+        cacheName: '谷歌字体',
         plugins: [
             new workbox.expiration.ExpirationPlugin({
                 maxEntries: 10,

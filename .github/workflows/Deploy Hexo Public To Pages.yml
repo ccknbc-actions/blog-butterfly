@@ -1,8 +1,6 @@
 name: Deploy Hexo Public To Pages
 
 on:
-  repository_dispatch:
-  workflow_dispatch:
   push:
     branches: posts
 
@@ -44,7 +42,7 @@ jobs:
 
     - name: Generate
       run: |
-        git clone -b posts git@gitlab.com:CCKNBC/ccknbc.gitlab.io.git source/_posts
+        git clone -b posts git@github.com:ccknbc-actions/blog-butterfly.git source/_posts
         npm run github
 
     - name: Deploy Hexo Public To Pages
@@ -57,7 +55,7 @@ jobs:
         git init
         git add -A
         git branch -m master
-        git commit -m "${{ github.event.head_commit.message }} $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By Github Actions"
+        git commit -m "${{ github.event.head_commit.message }} $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By GitHub Actions"
         git push --force --quiet "https://ccknbc:${{ secrets.GH_TOKEN }}@github.com/CCKNBC/ccknbc.github.io.git" master:master
         git push --force --quiet "https://ccknbc:${{ secrets.BB_TOKEN }}@bitbucket.org/ccknbc/ccknbc.bitbucket.io.git" master:master
         git push --force --quiet "https://${{ secrets.CD_USER }}:${{ secrets.CD_TOKEN }}@e.coding.net/ccknbc/blog/butterfly.git" master:master
@@ -80,9 +78,3 @@ jobs:
       with:
         retain_days: 1
         keep_minimum_runs: 1
-
-    - name: Send message to Telegram
-      uses: Lukasss93/telegram-action@v2
-      env:
-        TELEGRAM_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
-        TELEGRAM_CHAT: ${{ secrets.TG_CHAT_ID }}
