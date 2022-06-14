@@ -9,7 +9,6 @@ keywords: 工作
 categories: 工作
 description: 打破无趣，好好生活
 cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/1235934c1edf46e7ce7b43f17e89d568_w1920_h1080_s70.jpg
-top_img: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/e89cdf72b6dd6f8912382776f830128f_w1920_h1080_s1123.png
 id: 34
 ---
 
@@ -63,7 +62,9 @@ SFA 和 PFA 似乎有着斩不断的联系，于是 2022 年初，新官上任�
 
 ### 薪资涨幅 OK，但仍归汉心切
 
-##
+---
+
+毕业前有多想要逃离武汉，现在就有多想回到武汉
 
 ## 疫情总是打破原有计划
 
@@ -89,6 +90,6 @@ SFA 和 PFA 似乎有着斩不断的联系，于是 2022 年初，新官上任�
 
 ## 打破无趣，好好生活
 
-###
+---
 
-##
+至少要留下来过的痕迹，所以关于失效分析或许会整理成工作笔记吧
