@@ -4,7 +4,7 @@ translate_title: ccs-work-diary-part1
 subtitle: CC's Work Diary Part1
 date: 2021-08-28 21:00:00
 updated: 2021-08-28 21:00:00
-tags: [生活, 工作]
+tags: 工作
 keywords: 工作
 categories: 工作
 description: 一个半月的实习期过去了，我的生活发生了怎样的改变呢？

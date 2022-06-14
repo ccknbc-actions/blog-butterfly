@@ -1,6 +1,6 @@
 ---
 title: 博客图片的 WebP 之路
-tags: [WebP, 图床, 博客]
+tags: 博客
 comments: true
 keywords: [WebP, 图床, 博客]
 categories: 博客

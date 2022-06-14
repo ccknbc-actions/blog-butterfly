@@ -1,9 +1,9 @@
 ---
 title: HEXO 折腾
-tags: HEXO
+tags: 博客
 categories: 博客
 description: 本篇文章简单介绍了 HEXO 博客的搭建，部署更新等过程
-keywords: HEXO
+keywords: 博客
 cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/45d888bd81b86777b3364e4a16ff72c6_w2240_h1260_s476.jpg
 id: -3
 translate_title: hexo-toss
@@ -50,7 +50,7 @@ Linux 用户右上角关闭本标签页。
 
 你可以考虑切换为 `taobao` 镜像源。
 
-```sh
+```shell
 npm config set registry https://registry.npm.taobao.org
 ```
 
@@ -124,7 +124,7 @@ macOS 用户可以下载官网的安装包进行安装，也可以直接安装 A
 
 在终端中输入以下命令：
 
-```sh
+```shell
 npm install hexo-cli -g
 # 如果安装失败，可能是没有权限，可以尝试头部加上 sudo 重新执行
 # sudo npm install hexo-cli -g
@@ -143,7 +143,7 @@ npm install hexo-cli -g
 
 > 注意：这里是你自定义的目录，请不要复制粘贴
 
-```sh
+```shell
 # '#' 字符后的文字代表注释，不需要输入
 # Windows
 cd C:\Users\CCKNBC\Documents\GitHub\
@@ -154,14 +154,14 @@ cd C:\Users\CCKNBC\Documents\GitHub\
 
 接下来输入：
 
-```sh
+```shell
 hexo init 你的名字.github.io
 ```
 
 > `hexo` 正是因为我们之前安装了 `hexo-cli` 这一个包，所以我们可以在终端中使用 `hexo` 这一命令。
 > `init` 初始化博客的模版文件。后面跟的是你要新建的文件夹，最好和你此前新建的仓库名一致。
 
-```sh
+```shell
 # 进入你的博客文件夹
 cd 你的名字.github.io
 # 默认安装所有 `package.json` 文件中提到的包
@@ -232,7 +232,7 @@ npm install hexo-renderer-pug hexo-renderer-stylus --save
 
 所以我们需要使用以下命令先来生成站点的静态文件。
 
-```sh
+```shell
 # 如果进行多次生成，为了避免受错误缓存影响，最好使用 hexo clean 先清除一遍。
 hexo generate
 # 缩写为 hexo g
@@ -244,7 +244,7 @@ hexo generate
 
 接下来我们将本地的仓库与此前在 GitHub 上建立的仓库建立关联。
 
-```sh
+```shell
 git init # 初始化 Git 仓库，只需要执行一次即可
 ```
 
@@ -256,7 +256,7 @@ git init # 初始化 Git 仓库，只需要执行一次即可
 `你的名字.github.io` 部署后，GitHub Pages 将默认使用你的 master 分支作为静态文件部署。
 所以我们最好新建一个 hexo 分支（命名无所谓）用来存储 Hexo 地源代码，master 分支则用来存储部署后的静态文件。
 
-```sh
+```shell
 git checkout -b hexo
 ```
 
@@ -272,7 +272,7 @@ git checkout -b hexo
 
 老规矩，安装。
 
-```sh
+```shell
 npm install hexo-deployer-git
 ```
 
@@ -291,7 +291,7 @@ deploy:
 > 第一次可能需要你输入用户名与密码。
 > 密码输入的时候不会出现 \*\*\*，不要害怕，已经输入进去了。
 
-```sh
+```shell
 hexo deploy
 ```
 
@@ -307,14 +307,14 @@ hexo deploy
 
 为了以防万一，我们应该将网站的源代码文件也推送到 GitHub 仓库备份。
 
-```sh
+```shell
 # 与远程 Git 仓库建立连接，只此一次即可
 git remote add origin https://github.com/你的用户名/你的名字.github.io
 ```
 
 接下来准备提交，这几句命令将是你以后每次备份所需要输入。
 
-```sh
+```shell
 # 添加到缓存区
 git add -A
 git commit -m "这次做了什么更改，简单描述下即可"
@@ -329,7 +329,7 @@ git push
 
 譬如，在根目录下新建 `update.sh`。
 
-```sh
+```shell
 # 如果没有消息后缀，默认提交信息为 `:pencil: update content`
 info=$1
 if ["$info" = ""];
@@ -376,7 +376,7 @@ git push origin hexo
 
 输入以下命令即可新建 `xxx.md` 文件。
 
-```sh
+```shell
 hexo new post xxx
 ```
 
@@ -389,7 +389,7 @@ hexo new post xxx
 
 譬如本文就是通过 Markdown 编写。
 
-```md
+```markdown
 # 一级标题
 
 ## 二级标题
@@ -411,7 +411,7 @@ hexo new post xxx
 
 也可以通过以下命令来新建页面。（当然还是 Markdown，不过也是可以在 Markdown 里写 HTML 的，也会被渲染出来。）
 
-```md
+```markdown
 hexo new page xxx
 ```
 
@@ -576,7 +576,7 @@ git push origin -u
 
 以下是我的`.git/config`一览,设置好后你可以更换你的第一个 url，也就是 fetch 仓库，根据个人喜好来（或者说网络原因），下面使用的是 github 的，那么 git pull 等操作就会按照这个仓库来和本地做比较，选择一个连接比较快的就好
 
-```config
+```
 [core]
 	repositoryformatversion = 0
 	filemode = false

@@ -1,6 +1,6 @@
 ---
 title: CC的部落格 外挂标签笔记
-tags: [博客, HEXO]
+tags: 博客
 categories: 博客
 description: CC的部落格 外挂标签笔记
 translate_title: introduction-of-plugin-tags-based-on-butterfly
@@ -138,7 +138,7 @@ hide: false
 
 修改主题配置文件
 
-```yml
+```yaml
 note:
   # Note tag style values:
   #  - simple    bs-callout old alert style. Default.
@@ -864,7 +864,7 @@ api=https://api.github.com/repos/xaoxuu/friends/issues?sort=updated&state=open&p
 group(分组)
 `sites`类型的`issues`默认不分组，如果需要分组，可指定分组依据`「keywords」`，和分组白名单`「value1」`、`「value2」`等，例如：
 
-```yml
+```yaml
 group=version:v4,v3,v2
 # 此处的version就是上文中的「keywords」
 ```

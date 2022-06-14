@@ -1,9 +1,6 @@
 ---
 title: Github Actions 为什么这么香
-tags:
-  - 工具
-  - GitHub Actions
-
+tags: 工具
 id: -9
 categories: 工具
 description: 本篇文章简单介绍了 Github Actions 的用法，以及一些变量的解释
@@ -134,13 +131,13 @@ jobs:
 7. 可以使用上下文参数`on` 声明了何时触发 `workflow`  ，它可以是：
    1. 一个或多个`GitHub` 事件，比如 `push` 了一个 `commit` 、创建了一个`issue` ，产生了一次`pull request` 等等，示例：
 
-```yml
+```yaml
 on:[push,pull_request]
 ```
 
 1.  预定的时间，示例（每天零点零分触发，不过因为时差关系，是北京时间上午 8 点）：
 
-```yml
+```yaml
 on:
   schedule: -cron:'0 0 * * *'
 ```

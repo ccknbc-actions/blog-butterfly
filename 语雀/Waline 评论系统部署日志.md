@@ -4,7 +4,7 @@ translate_title: waline-commens-system-deployment-logs
 subtitle: Waline Commens System Deployment Logs
 date: 2021-01-17 00:00:00
 updated: 2021-05-03 17:00:00
-tags: [工具, 评论, Waline]
+tags: 工具
 categories: 工具
 keywords: [工具, 评论, Waline]
 description: Waline 评论系统部署日志，希望你也能用上这款评论系统
@@ -244,9 +244,24 @@ module.exports.main = async (event, context) => {
 #### 自动升级
 
 其实原理还是一样的，因为 Vercel 会监控仓库文件的变化来帮我们自动部署，那么我们要做的就是自动更改版本号，这里你可以用 `Github Actions`  实现，定时每隔半小时自动更新并 push，但这样似乎有点浪费资源，所以不怎么推荐，而我们这个仓库通常都是公开的（私有也没关系）
-首先你需要安装一个应用[Renovate](https://github.com/marketplace/renovate),选择免费版计划即可，他会帮我们监控所用依赖的版本更新变化，并为提交一个 `PR` ，我们要做的只是合并 PR 而已，但手动合并之前也讲过，多少有点不方便，自动合并我们知道有打标签自动合并，GitHub Actions 工具人自动合并，这些大家搜以下关键词就好，但这个应用它本身实际上支持自动合并，查看[官方文档](https://docs.renovatebot.com/configuration-options/#automerge)发现在 `renovate.json`  中配置即可，注意依赖版本是测试版还是正式版哦，目前我们用到的是 `dependencies`  而不是 devDependencies 所以不要只顾复制粘贴
+首先你需要安装一个应用[Renovate](https://github.com/marketplace/renovate),选择免费版计划即可，他会帮我们监控所用依赖的版本更新变化，并为提交一个 `PR` ，我们要做的只是合并 PR 而已，但手动合并之前也讲过，多少有点不方便，自动合并我们知道有打标签自动合并，GitHub Actions 工具人自动合并，这些大家搜以下关键词就好，但这个应用它本身实际上支持自动合并，查看[官方文档](https://docs.renovatebot.com/configuration-options/#automerge)发现在 `renovate.json`  中配置即可，示例代码如下，其中代理人是为了通知更新的作用，与 PR 同理，但也可删除此段配置，同样的 PR 也可关闭通知静默自动更新。
 
-如果你是公开仓库，还可以使用[Mergify](https://github.com/marketplace/mergify)，安装完成后他能它免费帮我们自动合并公开仓库的 PR，我们设定一个条件，比如 PR 提交作者为 renovate，就自动帮我们点击合并，并删除多余分支，当然这些都需要配置，这里具体会在另一篇文档中讲到
+```json
+{
+  "extends": ["config:base"],
+  "assignees": ["CCKNBC"],
+  "separateMinorPatch": true,
+  "packageRules": [
+    {
+      "updateTypes": ["minor", "patch"],
+      "automerge": true,
+      "automergeType": "branch"
+    }
+  ]
+}
+```
+
+我目前还是用的默认的提交 PR 自动合并的方式，如果你是公开仓库，还可以使用[Mergify](https://github.com/marketplace/mergify)，安装完成后他能它免费帮我们自动合并公开仓库的 PR，我们设定一个条件，比如 PR 提交作者为 renovate，就自动帮我们点击合并，并删除多余分支，当然这些都需要配置，这里具体会在另一篇文档中讲到
 {% note info simple %}以上两个应用你可以选择安装到全部仓库，或者只安装到选择的仓库{% endnote %}
 
 如果你想懒的话可以先删除你现有的名为 Waine 的仓库，再 fork [我的仓库](https://github.com/ccknbc-actions/waline)，然后去你的 Vercel 解绑之前的仓库，再绑定你 fork 的仓库，最后点一下重新部署即可

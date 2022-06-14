@@ -1,10 +1,7 @@
 ---
 title: Uptime 免费网站存活监控
 comments: false
-tags:
-  - 工具
-  - 网站存活监控
-
+tags: 工具
 categories: 工具
 description: 本篇文章简单介绍了利用 Uptime 实现免费网站存活监控
 keywords: 网站存活监控,Uptime

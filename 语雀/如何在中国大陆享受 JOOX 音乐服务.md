@@ -1,9 +1,6 @@
 ---
 title: 如何在中国大陆享受 JOOX 音乐服务
-tags:
-  - 音乐
-  - JOOX
-
+tags: 音乐
 id: 10
 categories: 音乐
 description: 本篇文章主要说明如何绕过版权地区限制，在中国大陆享受 JOOX 音乐服务

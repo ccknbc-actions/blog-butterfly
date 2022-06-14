@@ -1,9 +1,6 @@
 ---
 title: 为你的 Hexo 博客添加邮件订阅
-tags:
-  - 工具
-  - 订阅
-
+tags: 工具
 id: 11
 categories: 工具
 description: 本篇文章简单介绍了利用mailchimp为你的Hexo博客添加邮件订阅功能

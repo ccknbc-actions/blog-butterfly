@@ -4,7 +4,7 @@ translate_title: google-adsense-configuration-manual
 subtitle: Google Adsense Configuration Manual
 date: 2021-10-24 20:25:00
 updated: 2021-11-08 19:20:00
-tags: google adsense
+tags: 博客
 keywords: google adsense
 categories: 博客
 description: 本文根据 CC 个人使用经验来介绍 Google Adsense 的食用方法

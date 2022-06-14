@@ -1,9 +1,6 @@
 ---
 title: 我为什么选择了 Tidio 做聊天系统
-tags:
-  - 工具
-  - 聊天
-
+tags: 工具
 id: -8
 categories: 工具
 description: 本篇文章简单介绍了我使用不同聊天系统的体会

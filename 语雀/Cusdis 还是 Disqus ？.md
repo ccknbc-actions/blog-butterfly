@@ -4,7 +4,7 @@ translate_title: cusdis-or-disqus
 subtitle: Cusdis or Disqus
 date: 2021-05-11 18:00:00
 updated: 2021-05-12 12:00:00
-tags: [工具, 评论]
+tags: 工具
 keywords: [Hexo, Cusdis, Disqus]
 categories: 工具
 description: 在中国大陆，如果追求用户的隐私保护，是否有更好的评论解决方案？

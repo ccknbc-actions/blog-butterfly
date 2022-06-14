@@ -4,7 +4,7 @@ translate_title: github-automatically-merges-pull-requests-notes
 subtitle: GitHub Automatically Merges Pull Requests Notes
 date: 2021-01-18 00:00:00
 updated: 2021-01-18 00:00:00
-tags: [工具, GitHub]
+tags: 工具
 categories: 工具
 keywords: [工具, GitHub]
 description: GitHub 自动合并 PR 笔记
@@ -1020,7 +1020,7 @@ rules:
 
 ### Setup
 
-```sh
+```shell
 # Install dependencies
 npm install
 
@@ -1030,13 +1030,13 @@ npm run build
 
 ### Testing
 
-```sh
+```shell
 npm run test
 ```
 
 or during development:
 
-```sh
+```shell
 npm run test:watch
 ```
 
@@ -1044,7 +1044,7 @@ npm run test:watch
 
 See [https://probot.github.io/docs/development/#configuring-a-github-app](https://probot.github.io/docs/development/#configuring-a-github-app)
 
-```sh
+```shell
 npm run build && npm run dev
 ```
 
@@ -1052,19 +1052,19 @@ npm run build && npm run dev
 
 This will build and run the app on a container called `probot-auto-merge`:
 
-```sh
+```shell
 npm run docker
 ```
 
 To just build the container image:
 
-```sh
+```shell
 npm run docker:build
 ```
 
 To run the built image:
 
-```sh
+```shell
 npm run docker:run
 ```
 
@@ -1072,7 +1072,7 @@ npm run docker:run
 
 This will run the linter, pointing out the infractions, but it won't fix them automatically.
 
-```sh
+```shell
 npm run lint
 ```
 

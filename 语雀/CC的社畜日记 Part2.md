@@ -4,7 +4,7 @@ translate_title: ccs-work-diary-part2
 subtitle: CC's Work Diary Part2
 date: 2021-12-01 00:00:00
 updated: 2021-12-02 23:50:00
-tags: [生活, 工作]
+tags: 工作
 keywords: 工作
 categories: 工作
 description: 选择一个人做好自己的本职工作，还是说去为了跳槽随便跳个坑？

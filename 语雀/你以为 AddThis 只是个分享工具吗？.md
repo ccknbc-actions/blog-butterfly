@@ -4,7 +4,7 @@ translate_title: the-real-addthis
 subtitle: The Real Addthis
 date: 2021-05-15 21:00:00
 updated: 2021-05-18 12:00:00
-tags: [工具, AddThis]
+tags: 工具
 keywords: [工具, AddThis]
 categories: 工具
 description: 本文介绍了 AddThis 的使用
