@@ -7,7 +7,9 @@ if (workbox) {
 }
 
 // Force development builds
-// workbox.setConfig({ debug: true });
+workbox.setConfig({
+    debug: true,
+});
 
 // Force production builds 关闭控制台中的输出
 // workbox.setConfig({ debug: false });
@@ -31,6 +33,24 @@ workbox.core.clientsClaim();
 workbox.precaching.precacheAndRoute(self.__WB_MANIFEST, {
     directoryIndex: null
 });
+
+// Enable navigation preload.
+workbox.navigationPreload.enable();
+
+// The network-only callback should match navigation requests, and
+// the handler for the route should use the network-only strategy, but
+// fall back to a precached offline page in case the user is offline.
+const Offline = new workbox.routing.Route(({ request }) => {
+    return request.mode === 'navigate';
+}, new workbox.strategies.NetworkOnly({
+    plugins: [
+        new workbox.precaching.PrecacheFallbackPlugin({
+            fallbackURL: '/offline/index.html'
+        })
+    ]
+}));
+
+workbox.routing.registerRoute(Offline);
 
 workbox.precaching.cleanupOutdatedCaches();
 
@@ -93,14 +113,6 @@ workbox.routing.registerRoute(
     }),
 );
 
-// 如果用户处于离线状态，则返回缓存的离线页面的内容，而不是生成一个浏览器错误。
-workbox.routing.setCatchHandler(async ({ event }) => {
-    if (event.request.destination === 'document') {
-        return matchPrecache('/404.html');
-    }
-    return Response.error();
-});
-
 // Fonts
 // workbox.routing.registerRoute(
 //     /\.(?:eot|ttf|woff|woff2)$/,
@@ -122,7 +134,7 @@ workbox.routing.setCatchHandler(async ({ event }) => {
 workbox.routing.registerRoute(
     /^https:\/\/fonts\.googleapis\.com/,
     new workbox.strategies.StaleWhileRevalidate({
-        cacheName: "谷歌字体样式"
+        cacheName: "谷歌字体"
     })
 );
 workbox.routing.registerRoute(

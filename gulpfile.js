@@ -54,7 +54,7 @@ gulp.task('generate-service-worker', () => {
     swSrc: './sw.js',
     swDest: './public/sw.js',
     globDirectory: './public',
-    globPatterns: ['{index,404}.html'],
+    globPatterns: ['offline/index.html'],
     modifyURLPrefix: {
         '': './'
     }

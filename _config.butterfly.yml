@@ -157,7 +157,7 @@ error_img:
 # A simple 404 page
 error_404:
   enable: true
-  subtitle: Oops! 页面离线了哦~
+  subtitle: Oops! 页面已删除~
   background: https://gejiba.com/view.php/3c3845c98419b590d7f6b6c8ec6add1c.gif
 
 post_meta:
