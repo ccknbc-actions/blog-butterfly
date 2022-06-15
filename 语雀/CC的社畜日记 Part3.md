@@ -12,7 +12,7 @@ cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/1
 id: 34
 ---
 
-查看本文[**语雀**](https://www.yuque.com/ccknbc/blog/34)版本【首发】，自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/)！
+查看本文[**语雀**](https://www.yuque.com/ccknbc/blog/34)版本【首发】，自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/ccs-work-diary-part3)！
 
 好久不见，距离上次更新已经过去半年了呢，但我毕业参加工作也快满一年了呢。23 岁生日仍然还是自己一个人过，但还是和往年一样，献血，骑行，看电影，吃饭然后回家，结束无聊的一天。
 
