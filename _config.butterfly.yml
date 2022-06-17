@@ -603,7 +603,7 @@ index_top_img_height:
 # The user interface setting of category and tag page (category和tag頁的UI設置)
 # index - same as Homepage UI (index 值代表 UI將與首頁的UI一樣)
 # default - same as archives UI 默認跟archives頁面UI一樣
-category_ui: index # 留空或 index
+category_ui:  # 留空或 index
 tag_ui: index # 留空或 index
 
 # Website Background (設置網站背景)
@@ -746,7 +746,10 @@ aside:
   button: true
   mobile: true # display on mobile
   position: right # left or right
-  archives: false
+  display:
+    archive: false
+    tag: false
+    category: false
   card_author:
     enable: true
     description: ''
@@ -854,8 +857,8 @@ darkmode:
 # Don't repeat 不要重複
 rightside_item_order:
   enable: true
-  hide: hideAside,chat
-  show: toc,translate,readmode,darkmode,comment
+  hide: hideAside,readmode,translate,darkmode,chat
+  show: toc,comment
 
 # Lightbox (圖片大圖查看模式)
 # --------------------------------------

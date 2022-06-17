@@ -20,7 +20,7 @@ xkFriend.init({
     'https://blogroll.ccknbc.vercel.app/blogroll.json'
   ], // 你的json链接列表，可以是多个。
   loading_img: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif', // 加载中的图片
-  fail_img: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif' // // 加载失败的图片
+  fail_img: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif' // 加载失败的图片
 })
 </script>
 
