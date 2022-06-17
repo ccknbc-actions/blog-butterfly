@@ -12,7 +12,7 @@ const path = require('path')
 hexo.extend.filter.register('before_generate', () => {
   const themeConfig = hexo.theme.config
   const { CDN, comments } = themeConfig
-  const jsdelivr = 'https://gcore.jsdelivr.net/npm/'
+  const jsdelivr = 'https://cdn.jsdelivr.net/npm/'
   const unpkg = 'https://unpkg.com/'
 
   /**
