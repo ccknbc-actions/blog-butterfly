@@ -776,29 +776,29 @@ aside:
     enable: true
     limit: 3 # if set 0 will show all
     sort: updated # date or updated
-    sort_order: 1 # Don't modify the setting unless you know how it works
+    sort_order: 2 # Don't modify the setting unless you know how it works
   card_categories:
-    enable: false
+    enable: true
     limit: 8 # if set 0 will show all
     expand: true # none/true/false
-    sort_order: # Don't modify the setting unless you know how it works
+    sort_order: 4 # Don't modify the setting unless you know how it works
   card_tags:
     enable: false
     limit: 40 # if set 0 will show all
-    color: true
-    sort_order: # Don't modify the setting unless you know how it works
+    color: false
+    sort_order: 3 # Don't modify the setting unless you know how it works
   card_archives:
     enable: false
     type: monthly # yearly or monthly
     format: MMMM YYYY # eg: YYYY年MM月
     order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
     limit: 8 # if set 0 will show all
-    sort_order: # Don't modify the setting unless you know how it works
+    sort_order: 5 # Don't modify the setting unless you know how it works
   card_webinfo:
     enable: true
     post_count: true
     last_push_date: true
-    sort_order: 0 # Don't modify the setting unless you know how it works
+    sort_order: 1 # Don't modify the setting unless you know how it works
 
 # busuanzi count for PV / UV in site
 # 訪問人數
@@ -819,7 +819,7 @@ newest_comments:
   limit: 3
   storage: 10
   avatar: false
-  sort_order: 2 # Don't modify the setting unless you know how it works
+  sort_order: 6 # Don't modify the setting unless you know how it works
 
 # Bottom right button (右下角按鈕)
 # --------------------------------------
@@ -901,9 +901,6 @@ note:
 # other
 # --------------------------------------
 
-statuspage:
-  enable: false
-
 # Artitalk
 # see https://artitalk.js.org/
 artitalk:
@@ -948,7 +945,7 @@ hpptalk:
 # It may contain bugs and unstable, give feedback when you find the bugs.
 # https://github.com/MoOx/pjax
 pjax:
-  enable: true
+  enable: false
   exclude:
     - /music/
     # - /blogroll/
@@ -1024,7 +1021,8 @@ inject:
     # - <script defer src="https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/js/announcement.js"></script>
     - <script>!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"JgUfbwUA5BsLeAIc",ck:"JgUfbwUA5BsLeAIc",autoTrack:true});</script>
     - <script>!(function(c,i,e,b){var h=i.createElement("script");var f=i.getElementsByTagName("script")[0];h.type="text/javascript";h.crossorigin=true;h.onload=function(){new c[b]["Monitor"]().init({id:"JgUg7s8ImDkwb2V7",sendSuspicious:true});};f.parentNode.insertBefore(h,f);h.src=e;})(window,document,"https://sdk.51.la/perf/js-sdk-perf.min.js","LingQue");</script>
-    - <script defer src="https://cc.instatus.com/widget/script.js"></script>
+    - <script type="text/javascript">var addthis_config = {"data_track_addressbar":false};</script>
+    # - <script defer src="https://cc.instatus.com/widget/script.js"></script>
     # - <script defer src='https://api.vvhan.com/api/snow'></script>
     # - <script defer src="https://api.vvhan.com/api/denglong"></script>
     # - <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
@@ -1102,7 +1100,6 @@ CDN:
     # prismjs_autoloader:
 
   # other
-  statuspage: https://ccknbc.statuspage.io/embed/script.js
   pace: https://cdn.jsdelivr.net/gh/CodeByZach/pace/pace.min.js
   ccknbc: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/js/ccknbc.js
   discuss: https://cdn.jsdelivr.net/npm/discuss/dist/Discuss.js
