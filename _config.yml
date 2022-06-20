@@ -153,6 +153,7 @@ pagination_dir: page
 include:
 exclude:
 ignore:
+  # - "**/offline"
 
 theme: butterfly
 

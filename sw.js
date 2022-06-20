@@ -27,9 +27,11 @@ self.skipWaiting();
 workbox.core.clientsClaim();
 // self.clients.claim();
 
-// 预缓存
+// 通常当用户拜访 / 时，对应的拜访的页面 HTML 文件是 /index.html，默认状况下，precache 路由机制会在任何 URL 的结尾的 / 后加上 index.html，这就认为着你预缓存的任何 index.html 都能够通过 /index.html 或者 / 拜访到。当然，你也能够通过 directoryIndex 参数禁用掉这个默认行为
+
 workbox.precaching.precacheAndRoute(self.__WB_MANIFEST, {
-    directoryIndex: null
+    ignoreUrlParametersMatching: [/.*/],
+    directoryIndex: null,
 });
 
 workbox.precaching.cleanupOutdatedCaches();
@@ -47,7 +49,7 @@ const Offline = new workbox.routing.Route(({ request }) => {
 }, new workbox.strategies.NetworkOnly({
     plugins: [
         new workbox.precaching.PrecacheFallbackPlugin({
-            fallbackURL: '/offline/index.html'
+            fallbackURL: 'offline/index.html'
         })
     ]
 }));
@@ -75,7 +77,7 @@ workbox.routing.registerRoute(Offline);
 // network response, fall back to the cached offline HTML.
 
 // const Timeout = new workbox.strategies.NetworkOnly({
-// //     networkTimeoutSeconds: 5,
+//     networkTimeoutSeconds: 5,
 //     plugins: [
 //         {
 //             handlerDidError: async () => {
@@ -96,8 +98,17 @@ workbox.routing.registerRoute(Offline);
 // 其他缓存选项默认配置可参考 https://developer.chrome.com/docs/workbox/modules/workbox-recipes 可极大节省配置时间
 // 只需准备一个名为 offline.html 的离线 HTML 页面，并将其放置在网站根目录下。
 
-// workbox.routing.setDefaultHandler(new workbox.strategies.NetworkOnly());
+// workbox.routing.setDefaultHandler(new workbox.strategies.NetworkFirst());
 // workbox.recipes.offlineFallback();
+
+// 离线页面缓存
+// workbox.recipes.offlineFallback();
+// URL navigation 缓存
+// workbox.recipes.pageCache();
+
+// html 的缓存
+// HTML，如果你想让页面离线能够拜访，应用 NetworkFirst，如果不须要离线拜访，应用 NetworkOnly，其余策略均不倡议对 HTML 应用。
+workbox.routing.registerRoute(new RegExp(/.*\.html/), new workbox.strategies.NetworkFirst());
 
 // 一些缓存小策略
 // workbox.recipes.pageCache();
@@ -121,7 +132,7 @@ workbox.routing.registerRoute(Offline);
 //         cacheName: "images",
 //         plugins: [
 //             new workbox.expiration.ExpirationPlugin({
-//                 maxEntries: 1000,
+//                 maxEntries: 50,
 //                 maxAgeSeconds: 60 * 60 * 24 * 30
 //             }),
 //             new workbox.cacheableResponse.CacheableResponsePlugin({
@@ -132,46 +143,43 @@ workbox.routing.registerRoute(Offline);
 // );
 
 // CDN
-// workbox.routing.registerRoute(
-//     /\.(?:js|css|json)$/,
-//     new workbox.strategies.CacheFirst({
-//         cacheName: 'assets',
-//         plugins: [
-//             new workbox.expiration.ExpirationPlugin({
-//                 maxEntries: 1000,
-//                 maxAgeSeconds: 60 * 60 * 24 * 30
-//             }),
-//             new workbox.cacheableResponse.CacheableResponsePlugin({
-//                 statuses: [0, 200]
-//             })
-//         ]
-//     })
-// );
-
-// Cache CSS, JS, and Web Worker requests with a Stale While Revalidate strategy
 workbox.routing.registerRoute(
-    // Check to see if the request's destination is style for stylesheets, script for JavaScript, or worker for web worker
-    ({ request }) =>
-        request.destination === 'style' ||
-        request.destination === 'script' ||
-        request.destination === 'worker',
-    // Use a Stale While Revalidate caching strategy
-    new workbox.strategies.StaleWhileRevalidate({
-        // Put all cached files in a cache named 'assets'
+    /\.(?:js|css)$/,
+    new workbox.strategies.CacheFirst({
         cacheName: '静态资源',
         plugins: [
             new workbox.expiration.ExpirationPlugin({
-                maxEntries: 100,
-                maxAgeSeconds: 60 * 60 * 24,
-                purgeOnQuotaError: true
+                maxEntries: 50,
+                maxAgeSeconds: 60 * 60 * 24 * 30
             }),
-            // Ensure that only requests that result in a 200 status are cached
             new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200],
-            }),
-        ],
-    }),
+                statuses: [0, 200]
+            })
+        ]
+    })
 );
+
+// Cache CSS, JS, and Web Worker requests with a Stale While Revalidate strategy
+
+// workbox.routing.registerRoute(
+//     ({ request }) =>
+//         request.destination === 'style' ||
+//         request.destination === 'script' ||
+//         request.destination === 'worker',
+//     new workbox.strategies.StaleWhileRevalidate({
+//         cacheName: '静态资源',
+//         plugins: [
+//             new workbox.expiration.ExpirationPlugin({
+//                 maxEntries: 50,
+//                 maxAgeSeconds: 60 * 60 * 24,
+//                 purgeOnQuotaError: true
+//             }),
+//             new workbox.cacheableResponse.CacheableResponsePlugin({
+//                 statuses: [0, 200],
+//             }),
+//         ],
+//     }),
+// );
 
 // Fonts
 // workbox.routing.registerRoute(
@@ -180,7 +188,7 @@ workbox.routing.registerRoute(
 //         cacheName: "fonts",
 //         plugins: [
 //             new workbox.expiration.ExpirationPlugin({
-//                 maxEntries: 1000,
+//                 maxEntries: 50,
 //                 maxAgeSeconds: 60 * 60 * 24 * 30
 //             }),
 //             new workbox.cacheableResponse.CacheableResponsePlugin({
@@ -203,7 +211,7 @@ workbox.routing.registerRoute(
         cacheName: '谷歌字体',
         plugins: [
             new workbox.expiration.ExpirationPlugin({
-                maxEntries: 10,
+                maxEntries: 3,
                 maxAgeSeconds: 60 * 60 * 24 * 30,
                 purgeOnQuotaError: true
             }),
@@ -221,7 +229,7 @@ workbox.routing.registerRoute(
 //         cacheName: "static-libs",
 //         plugins: [
 //             new workbox.expiration.ExpirationPlugin({
-//                 maxEntries: 1000,
+//                 maxEntries: 50,
 //                 maxAgeSeconds: 60 * 60 * 24 * 30
 //             }),
 //             new workbox.cacheableResponse.CacheableResponsePlugin({
