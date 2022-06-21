@@ -4,7 +4,7 @@ top_img: false
 translate_title: privacy-policy
 subtitle: Privacy Policy
 date: 2021-05-14 17:12:24
-updated: 2021-07-18 19:38:19
+updated: 2022-06-21 21:28:19
 description: CC的部落格 隐私政策
 ---
 本站非常重视用户的隐私和个人信息保护。您在使用网站时，可能会收集和使用您的相关信息。通过《隐私政策》向您说明在您访问 {% label blog.ccknbc.cc green %} 网站时，如何收集、使用、保存、共享和转让这些信息。
@@ -103,7 +103,7 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 |  [AddThis](https://www.addthis.com/privacy/privacy-policy)   |  用于文章页面分享，访问统计，弹窗公告，邮件订阅  |
 |          ~~[百度统计](https://tongji.baidu.com/)~~           | ~~用于国内用户统计站内访问情况，进行针对性优化~~ |
 | ~~[谷歌分析](https://policies.google.com/privacy?hl=zh-CN)~~ |    ~~用于国外用户统计站内访问情况，行为特征~~    |
-|           [51.LA](https://www.51.la/about/privacy)           |        用于统计站内访问情况，进行针对性优        |
+|           [51.LA](https://www.51.la/about/privacy)           |       用于统计站内访问情况，进行针对性优化       |
 
 如何管理 Cookies ？
 --------------------------------------------
@@ -125,4 +125,4 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 
 我可能对此 Cookies 政策所做的任何更改都将发布在此页面上。如果更改很重要，我会在博客首页明确指出该政策已更新。
 
-{% btn '',最后修订时间：2022 年 5 月 10 日 23:27,fa-solid fa-history,block right green smaller %}
+{% btn '',最后修订时间：2022 年 6 月 21 日 21:28,fa-solid fa-history,block right green smaller %}

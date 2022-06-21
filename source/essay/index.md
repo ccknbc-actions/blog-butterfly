@@ -8,8 +8,8 @@ translate_title: essay
 aside: false
 description: CC的部落格 即刻短文页面
 ---
-<div id="tip" style="text-align:center;">ipseak加载中</div>
-<div id="ispeak"></div>
+<div class="js-pjax" id="tip" style="text-align:center;">ipseak加载中</div>
+<div class="js-pjax" id="ispeak"></div>
 <link
   rel="stylesheet"
   href="https://cdn.staticfile.org/highlight.js/10.6.0/styles/atom-one-dark.min.css"

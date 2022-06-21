@@ -10,6 +10,7 @@ subtitle: Blogroll
 date: 2020-06-04 22:17:49
 updated: 2021-07-18 19:38:19
 ---
+<div class='js-pjax' id='blogroll'>
 <script src='https://cdn.jsdelivr.net/npm/butterfly-friend/butterfly-friend.umd.js'></script>
 <link rel="stylesheet" href='https://cdn.jsdelivr.net/npm/butterfly-friend/style.css'>
 <script>
@@ -23,6 +24,7 @@ xkFriend.init({
   fail_img: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif' // 加载失败的图片
 })
 </script>
+</div>
 
 {% tabs links%}
 

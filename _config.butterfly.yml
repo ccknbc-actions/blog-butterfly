@@ -945,9 +945,9 @@ hpptalk:
 # It may contain bugs and unstable, give feedback when you find the bugs.
 # https://github.com/MoOx/pjax
 pjax:
-  enable: false
+  enable: true
   exclude:
-    - /music/
+    # - /music/
     # - /blogroll/
     # - /moments/
     # - /essay/
