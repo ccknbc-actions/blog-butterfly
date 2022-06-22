@@ -548,10 +548,12 @@ google_adsense:
 # --------------------------------------
 
 site_verification:
-  # - name: google_site_verification
-  #   content: xxxxxx
-  # - name: baidu_site_verification
-  #   content: xxxxxxx
+  - name: google-site-verification
+    content: tUkgeN6Ih2ArWtjw47oNSSl4Af2_MWjiKLrzZptUCdM
+  - name: msvalidate.01
+    content: 71ADBCC80D679CEA8080BAFDCD54E368
+  # - name: baidu-site-verification
+  #   content:
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
@@ -604,7 +606,7 @@ index_top_img_height:
 # index - same as Homepage UI (index 值代表 UI將與首頁的UI一樣)
 # default - same as archives UI 默認跟archives頁面UI一樣
 category_ui:  # 留空或 index
-tag_ui: index # 留空或 index
+tag_ui:  # 留空或 index
 
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
