@@ -13,7 +13,7 @@ menu:
   社交 || fa-solid fa-cubes:
     友链: /blogroll || fa-solid fa-link
     朋友圈: /moments || fa-solid fa-blog
-    # 音乐: /music || fa-solid fa-music
+    音乐: /music || fa-solid fa-music
     短文: /essay || fa-solid fa-comment-alt
     # 统计: /charts || fa-solid fa-chart-bar
   关于 || fa-solid fa-desktop:
@@ -458,7 +458,7 @@ tidio:
   public_key: rmnlrpff1oci9pui1djmeuvx1mftupfq
 
 # daovoice
-# http://daovoice.io/
+# https://daovoice.io/
 daovoice:
   enable: false
   app_id: 25a36e78
@@ -490,7 +490,7 @@ footer:
     # icon: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/icp.png
   gongan: # Chinese Gongan License
     enable: true
-    url: http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42088102000092
+    url: https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42088102000092
     text: 鄂公网安备 42088102000092 号
     # icon: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/gongan.png
   upyun: # Chinese Gongan License
@@ -565,7 +565,7 @@ site_verification:
 # See: https://ziyuan.baidu.com/site/
 
 # 360 Webmaster tools verification setting
-# see http://zhanzhang.so.com/
+# see https://zhanzhang.so.com/
 
 # Yandex Webmaster tools verification setting
 # see https://webmaster.yandex.com/
@@ -610,7 +610,7 @@ tag_ui:  # 留空或 index
 
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
-# The formal of image: url(http://xxxxxx.com/xxx.jpg)
+# The formal of image: url(https://xxxxxx.com/xxx.jpg)
 background: 'linear-gradient(#fff1eb,#ace0f9)'
 
 # Footer Background
@@ -724,7 +724,7 @@ subtitle:
   # source: false 關閉調用
   # source: 1  調用搏天api的隨機語錄（簡體） https://api.btstu.cn/
   # source: 2  調用一言網的一句話（簡體） https://hitokoto.cn/
-  # source: 3  調用一句網（簡體） http://yijuzhan.com/
+  # source: 3  調用一句網（簡體） https://yijuzhan.com/
   # source: 4  調用今日詩詞（簡體） https://www.jinrishici.com/
   # subtitle 會先顯示 source , 再顯示 sub 的內容
   source: false
@@ -771,7 +771,7 @@ aside:
     # <a target="_blank" href="https://vercel.com"><img src="https://img.shields.io/badge/Hosted-Vervel-brightgreen?style=flat&logo=Vercel" title="本站采用双线部署，境外线路托管于Vercel"></a><br>
     # <a target="_blank" href="https://vercel.com"><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&logo=Codio" title="本站采用双线部署，境内线路托管于Coding"></a><br>
     # <a target="_blank" href="https://github.com/features/actions" rel="external nofollow noreferrer"><img title="本站项目由Gtihub Action持续部署" class="entered loading"src="https://img.shields.io/badge/Deploy-Github%20Action-d021d6?style=flat&amp;logo=Github Actions" data-ll-status="loading"></a><br>
-    # <a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=C" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></br>
+    # <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=C" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></br>
     # </center>'
     # alternate
   card_recent_post:
@@ -871,7 +871,7 @@ rightside_item_order:
 medium_zoom: false
 
 # fancybox
-# http://fancyapps.com/fancybox/3/
+# https://fancyapps.com/fancybox/3/
 fancybox: true
 
 # Tag Plugins settings (標籤外掛)

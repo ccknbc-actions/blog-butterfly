@@ -3,7 +3,7 @@ div
   script(src=url_for(theme.asset.main))
 
   if theme.addThis.enable
-    script(src=`https://s7.addthis.com/js/300/addthis_widget.js#pubid=${theme.addThis.pubid}` async)
+    script(src=`https://s7.addthis.com/js/300/addthis_widget.js#pubid=${theme.addThis.pubid}` defer)
 
   if !(is_post()) && theme.snow.enable
     script(defer src=`https://api.vvhan.com/api/snow`)

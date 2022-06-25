@@ -319,3 +319,25 @@ SWRacing:
   file: sw.js               # sw的文件名
   location: head_begin      # 插入页面的位置 https://hexo.io/zh-cn/api/injector#entry-lt-string-gt
   page: default             # 插入到哪些页面 https://hexo.io/zh-cn/api/injector#to-lt-string-gt
+
+readmore:
+  # 是否启用
+  enable: false
+  # 已申请的博客 ID
+  blogId: '44867-6625009790877-036'
+  # 已申请的微信公众号名称
+  name: 'CC康纳百川'
+  # 已申请的微信公众号回复关键词
+  keyword: 'blog'
+  # 已申请的微信公众号二维码链接
+  qrcode: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/wechat.svg'
+  # 自定义的 JS 资源链接，可用于 CDN 加速
+  libUrl: 'https://qiniu.techgrow.cn/readmore/dist/readmore.js'
+  # 自定义的 CSS 资源链接，可用于适配不同风格的博客
+  cssUrl: 'https://qiniu.techgrow.cn/readmore/dist/hexo.css'
+  # 文章解锁后凭证的有效天数
+  expires: 365
+  # 定时校验凭证有效性的时间间隔（秒）
+  interval: 60
+  # 每篇文章随机添加微信公众号引流工具的概率，有效范围在 0.1 ~ 1 之间，1 则表示所有文章默认都自动添加引流工具
+  random: 1
