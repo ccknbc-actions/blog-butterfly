@@ -64,7 +64,7 @@ SFA 和 PFA 似乎有着斩不断的联系，于是 2022 年初，新官上任�
 
 ---
 
-毕业前有多想要逃离武汉，现在就有多想回到武汉
+毕业前有多想要逃离武汉，现在就有多想回到武汉，以及最近不是有部电影《人生大事》吗，真的就是电影院没人认识，所以可以卸下防备肆无忌惮地哭，灯亮后回归成年人的生活。即使是这次薪资调整相较于其他人还行，但照这个架势下去，也不是个长久之地。
 
 ## 疫情总是打破原有计划
 
@@ -89,6 +89,40 @@ SFA 和 PFA 似乎有着斩不断的联系，于是 2022 年初，新官上任�
 ### 我的青春，败给了湖南卫视
 
 ## 打破无趣，好好生活
+
+{% mmedias "artplayer"  %}
+{
+style: 'width:100%;height:500px;max-width:1200px;center',
+url: "https://video-direct-link.vercel.app/bili.mp4?aid=812521076&bvid=BV1434y157j6&cid=750446553",
+poster: "https://prod-material.ptsplus.tv/series/2-2022143/artworks/posters/web/WebListPage_LILP19201080.jpg",
+title: "出櫃",
+theme: "#8FBC8F",
+volume: 1,
+isLive: false,
+muted: false,
+autoplay: false,
+pip: true,
+autoSize: true,
+autoMini: true,
+screenshot: false,
+setting: true,
+loop: true,
+flip: true,
+rotate: true,
+playbackRate: true,
+aspectRatio: true,
+fullscreen: true,
+fullscreenWeb: true,
+subtitleOffset: true,
+miniProgressBar: true,
+localVideo: true,
+localSubtitle: true,
+networkMonitor: true,
+mutex: true,
+light: true,
+backdrop: true
+}
+{% endmmedias %}
 
 ---
 
