@@ -32,7 +32,7 @@ titlecase: false
 external_link:
   enable: true
   field: site
-  exclude: ''
+  exclude: ""
 filename_case: 0
 render_drafts: false
 post_asset_folder: false
@@ -43,7 +43,7 @@ highlight:
   enable: true
   auto_detect: false
   line_number: false
-  tab_replace: ''
+  tab_replace: ""
   wrap: true
   hljs: false
 
@@ -51,7 +51,7 @@ prismjs:
   enable: false
   preprocess: true
   line_number: true
-  tab_replace: ''
+  tab_replace: ""
 
 marked:
   gfm: true
@@ -59,7 +59,7 @@ marked:
   breaks: true
   smartLists: true
   smartypants: true
-  quotes: '“”‘’'
+  quotes: "“”‘’"
   modifyAnchors: 0
   anchorAlias: true
   autolink: true
@@ -79,25 +79,25 @@ marked:
 
 markdown:
   preset: "default" # 渲染器默认预设 # "commonmark": 使用严格 CommandMark 规定. # "": 默认配置, 类似于 GFM # "zero": 禁用所有预设.
-# 以下为 render 选项
+  # 以下为 render 选项
   render:
     html: true # 是否解析 HTML 内容, 如果为 true 则表示解析, false 表示将 HTML 转意为文本.
     xhtmlOut: false # 将 HTML 内容渲染为 XHTML 的形式 (XHTML 语法非常严格, 比如原 HTML 中的 <br> 标签必须要使用 <br/> 这样的形式进行 "自闭和") 可能会出现兼容性问题.
-    langPrefix: 'language-' # 只适用 Hexo 默认的两个高亮插件禁用时 # 为围栏代码块中语法定义选项渲染后自动添加 class 名前缀, 如 ---html 渲染为 <class="language-html">
+    langPrefix: "language-" # 只适用 Hexo 默认的两个高亮插件禁用时 # 为围栏代码块中语法定义选项渲染后自动添加 class 名前缀, 如 ---html 渲染为 <class="language-html">
     breaks: false # true 则将所有换行渲染为 <br> 标签 # 这种行为不属于 CommandMark 和 GFM.
     linkify: true # true 则自动解析链接并添加为 <a> 标签, false 则将链接渲染为文本.
     typographer: true # 默认 true # 自动转义各种排版用字符, 如 ©
-    quotes: '“”‘’' # 当 typographer 定义为 true 时的自动转换引号的行为, quotes: '“”‘’' 则表示将 "123" '123'转换为 “123” ‘123’
-# render 选项到此结束
+    quotes: "“”‘’" # 当 typographer 定义为 true 时的自动转换引号的行为, quotes: '“”‘’' 则表示将 "123" '123'转换为 “123” ‘123’
+  # render 选项到此结束
   enable_rules:
   disable_rules:
-# 当 preset 定义时的渲染规则 # "zero" 表示禁用所有规则而能单独启用规则 # "default" 表示启用所有规则, 所以只能禁用特定规则. # "commandmark" 将严格遵循 CommandMark 因此不能额外定义规则的启闭.
-# 使用单条规则
-# disable_rules: 'link'
-# 使用多条规则
-# disable_rules:
-#    - 'link'
-#    - 'image'
+  # 当 preset 定义时的渲染规则 # "zero" 表示禁用所有规则而能单独启用规则 # "default" 表示启用所有规则, 所以只能禁用特定规则. # "commandmark" 将严格遵循 CommandMark 因此不能额外定义规则的启闭.
+  # 使用单条规则
+  # disable_rules: 'link'
+  # 使用多条规则
+  # disable_rules:
+  #    - 'link'
+  #    - 'image'
   plugins: # 插件选项
     - markdown-it-abbr # https://github.com/markdown-it/markdown-it-abbr
     - markdown-it-cjk-breaks # https://github.com/markdown-it/markdown-it-cjk-breaks
@@ -109,31 +109,31 @@ markdown:
     - markdown-it-mark # https://github.com/markdown-it/markdown-it-mark
     - markdown-it-sub # https://github.com/markdown-it/markdown-it-sub
     - markdown-it-sup # https://github.com/markdown-it/markdown-it-sup
-#以下为额外安装插件
+    #以下为额外安装插件
     - markdown-it-task-lists # https://github.com/revin/markdown-it-task-lists
   anchors: # 锚点的配置
     level: 1 # 开始创建锚点的等级 # 如 "2" 则表示从 H2 开始创建一直到 H6(最后).
-    collisionSuffix: '' # 如果遇到重复的锚点 ID 为其添加数字编号时在这个数字后添加的后缀.
+    collisionSuffix: "" # 如果遇到重复的锚点 ID 为其添加数字编号时在这个数字后添加的后缀.
     # 以下为标题锚点配置
     permalink: true # false # 如果为 true 则创建一个除标题外带有固定地址的的锚点标签.
-    permalinkClass: 'fa-solid fa-hashtag faa-pulse animated' # 定义固定锚点的 class 名.
-    permalinkSide: 'right' # 设定为 right 则会在标题后添加固定链接.
-    permalinkSymbol: '' # 定义固定链接使用的符号
+    permalinkClass: "fa-solid fa-hashtag faa-pulse animated" # 定义固定锚点的 class 名.
+    permalinkSide: "right" # 设定为 right 则会在标题后添加固定链接.
+    permalinkSymbol: "" # 定义固定链接使用的符号
     # 标题固定锚点到此结束
     case: 0 # 转换锚点 ID 中的字母为大写或小写 # "0" 不转换, "1" 为小写, "2" 为大写.
-    separator: '-' # 用于替换空格的符号. # 默认为 "-"
+    separator: "-" # 用于替换空格的符号. # 默认为 "-"
 
 stylus:
   compress: true
   sourcemaps:
     comment: true
     inline: true
-    sourceRoot: ''
+    sourceRoot: ""
     basePath: .
-  plugins: 'nib'
+  plugins: "nib"
 
 index_generator:
-  path: ''
+  path: ""
   per_page: 10
   order_by: -date
 
@@ -145,7 +145,7 @@ meta_generator: true
 
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
-updated_option: 'mtime'
+updated_option: "mtime"
 
 per_page: 0
 pagination_dir: page
@@ -169,7 +169,7 @@ feed:
   hub:
   content: true
   content_limit: false
-  content_limit_delim: ' '
+  content_limit_delim: " "
   order_by: -updated
   icon: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/logo.png
   autodiscovery: true
@@ -185,13 +185,13 @@ sitemap:
   categories: false
 
 translate_title:
-  translate_way:  false
-  youdao_api_key: ''
+  translate_way: false
+  youdao_api_key: ""
   youdao_keyfrom: xxxx-blog
   is_need_proxy: false
   proxy_url: http://localhost:8080
-  baidu_appid: ''
-  baidu_appkey: ''
+  baidu_appid: ""
+  baidu_appkey: ""
   rewrite: false
 
 search:
@@ -214,8 +214,8 @@ nofollow:
   enable: true
   field: site
   exclude:
-    - 'ccknbc.cc'
-    - 'www.ccknbc.cc'
+    - "ccknbc.cc"
+    - "www.ccknbc.cc"
 
 archive_generator:
   enabled: true
@@ -241,16 +241,16 @@ douban:
   user: CCKNBC
   builtin: true
   book:
-    title: 'This is my book title'
-    quote: 'This is my book quote'
+    title: "This is my book title"
+    quote: "This is my book quote"
     meta: true
     comments: true
     top_img: false
     aside: false
     path: books
   movie:
-    title: '我看过的影视'
-    quote: '我看过的影视'
+    title: "我看过的影视"
+    quote: "我看过的影视"
     meta: true
     comments: true
     top_img: false
@@ -267,11 +267,22 @@ douban:
   timeout: 10000
 
 mmedia:
+  audio:
+    default:
+      controls: true
+  video:
+    default:
+      controls: true
   aplayer:
     js: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
     css: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
+    default:
+      contents:
+        lrcType: 3
   meting:
     js: https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js
+    api:
+    default:
   dplayer:
     js: https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js
     hls_js: https://cdn.jsdelivr.net/npm/hls.js/dist/hls.min.js
@@ -279,6 +290,68 @@ mmedia:
     shaka_dash_js: https://cdn.jsdelivr.net/npm/shaka-player/dist/shaka-player.compiled.js
     flv_js: https://cdn.jsdelivr.net/npm/flv.js/dist/flv.min.js
     webtorrent_js: https://cdn.jsdelivr.net/npm/webtorrent/webtorrent.min.js
+    default:
+      contents:
+  artplayer:
+    js: https://cdn.jsdelivr.net/npm/artplayer/dist/artplayer.js
+    hls_js: https://cdn.jsdelivr.net/npm/hls.js/dist/hls.min.js
+    dash_js: https://cdn.jsdelivr.net/npm/dashjs/dist/dash.all.min.js
+    shaka_dash_js: https://cdn.jsdelivr.net/npm/shaka-player/dist/shaka-player.compiled.js
+    flv_js: https://cdn.jsdelivr.net/npm/flv.js/dist/flv.min.js
+    webtorrent_js: https://cdn.jsdelivr.net/npm/webtorrent/webtorrent.min.js
+    default:
+      style: width:360px;height:210px
+      contents:
+        theme: "#8FBC8F"
+        lang: zh-cn
+        volume: 1
+        isLive: false
+        muted: false
+        autoplay: false
+        pip: true
+        autoSize: true
+        autoMini: false
+        screenshot: false
+        setting: true
+        loop: false
+        flip: true
+        rotate: true
+        playbackRate: true
+        aspectRatio: true
+        fullscreen: true
+        fullscreenWeb: true
+        subtitleOffset: true
+        miniProgressBar: true
+        localVideo: true
+        localSubtitle: true
+        networkMonitor: true
+        mutex: true
+        light: true
+        backdrop: true
+        playsInline: true
+        autoPlayback: false
+        whitelist: ['*']
+        lock: true
+        fastForward: false
+        autoOrientation: true
+  bilibili:
+    default:
+      page: 1
+      danmaku: true
+      allowfullscreen: allowfullscreen
+      sandbox: allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups
+      width: 100%
+      max_width: 850px
+      margin: auto
+  xigua:
+    default:
+      autoplay: false
+      startTime: 0
+      allowfullscreen: allowfullscreen
+      sandbox: allow-top-navigation allow-same-origin allow-forms allow-scripts allow-popups
+      width: 100%
+      max_width: 850px
+      margin: auto
 
 # tag-plugins-plus
 # see https://akilar.top/posts/615e2dec/
@@ -295,7 +368,6 @@ tag_plugins:
     iconfont: false #参看https://akilar.top/posts/d2ebecef/
     carousel: false #https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js
     tag_plugins_css: https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css
-
 
 wowjs:
   enable: false #控制动画开关。true是打开，false是关闭
@@ -314,27 +386,27 @@ wowjs:
 # SW-Racing
 # https://github.com/Lete114/SW-Racing
 SWRacing:
-  enable: false              # 是否使用sw
-  register: true            # true: 注册sw | false: 注销
-  file: sw.js               # sw的文件名
-  location: head_begin      # 插入页面的位置 https://hexo.io/zh-cn/api/injector#entry-lt-string-gt
-  page: default             # 插入到哪些页面 https://hexo.io/zh-cn/api/injector#to-lt-string-gt
+  enable: false # 是否使用sw
+  register: true # true: 注册sw | false: 注销
+  file: sw.js # sw的文件名
+  location: head_begin # 插入页面的位置 https://hexo.io/zh-cn/api/injector#entry-lt-string-gt
+  page: default # 插入到哪些页面 https://hexo.io/zh-cn/api/injector#to-lt-string-gt
 
 readmore:
   # 是否启用
   enable: false
   # 已申请的博客 ID
-  blogId: '44867-6625009790877-036'
+  blogId: "44867-6625009790877-036"
   # 已申请的微信公众号名称
-  name: 'CC康纳百川'
+  name: "CC康纳百川"
   # 已申请的微信公众号回复关键词
-  keyword: 'blog'
+  keyword: "blog"
   # 已申请的微信公众号二维码链接
-  qrcode: 'https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/wechat.svg'
+  qrcode: "https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/wechat.svg"
   # 自定义的 JS 资源链接，可用于 CDN 加速
-  libUrl: 'https://qiniu.techgrow.cn/readmore/dist/readmore.js'
+  libUrl: "https://qiniu.techgrow.cn/readmore/dist/readmore.js"
   # 自定义的 CSS 资源链接，可用于适配不同风格的博客
-  cssUrl: 'https://qiniu.techgrow.cn/readmore/dist/hexo.css'
+  cssUrl: "https://qiniu.techgrow.cn/readmore/dist/hexo.css"
   # 文章解锁后凭证的有效天数
   expires: 365
   # 定时校验凭证有效性的时间间隔（秒）

@@ -13,16 +13,16 @@ menu:
   社交 || fa-solid fa-cubes:
     友链: /blogroll || fa-solid fa-link
     朋友圈: /moments || fa-solid fa-blog
-    音乐: /music || fa-solid fa-music
+    # 音乐: /music || fa-solid fa-music
     短文: /essay || fa-solid fa-comment-alt
-    # 统计: /charts || fa-solid fa-chart-bar
   关于 || fa-solid fa-desktop:
     订阅: /sub || fa-solid fa-rss
     本站: /about || fa-solid fa-list-check
     隐私: /privacy-policy || fa-solid fa-user-secret
-  #   自己: /me/ || far fa-user
-  #   状态: https://cc.instatus.com || fa-solid fa-server
-  #   证书: https://ssl.ccknbc.cc || fa-brands fa-expeditedssl
+    状态: https://cc.instatus.com || fa-solid fa-server
+    遗嘱: /will || fa-solid fa-solid fa-file-pen
+    # 自己: /me/ || far fa-user
+    # 证书: https://ssl.ccknbc.cc || fa-brands fa-expeditedssl
 
 # Hide the child menu items in mobile sidebar
 hide_sidebar_menu_child: false
@@ -147,8 +147,6 @@ cover:
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
   default_cover: https://gejiba.com/view.php/546d8de5d57bf690777957ed068234e4.webp
 
-
-
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
   flink: https://cdn.jsdelivr.net/gh/ccknbc-backup/photos@master/blog/2021-03-08~15-13-28.gif
@@ -232,7 +230,6 @@ edit:
   cloud_studio: https://ccknbc.cloudstudio.net/ws/zknrue
   # hexoplusplus: https://hpp.ccknbc.workers.dev/hpp/admin/dash/edit
 
-
 # Related Articles
 related_post:
   enable: true
@@ -305,18 +302,18 @@ giscus:
     light: light
     dark: dark
   option:
-    data-lang: 'zh-CN'
+    data-lang: "zh-CN"
     data-category: Comments
 
 # waline - A simple comment system with backend support fork from Valine
 # https://waline.js.org/
 waline:
   serverURL: https://waline.ccknbc.vercel.app # Waline server address url
-  bg:  # waline background
+  bg: # waline background
   pageview: false
   option:
     pageSize: 10
-    requiredMeta: ['nick', 'mail']
+    requiredMeta: ["nick", "mail"]
     login: enable
     copyright: true
     imageUploader: false
@@ -324,20 +321,21 @@ waline:
       admin: 博主兼管理员
       sofa: 这里冷冷清清的，快来留下脚印吧！
       placeholder: 感谢各位的批评指正，期待与您交流！
-    emoji: [
-      'https://cdn.jsdelivr.net/npm/sticker-heo@latest/Sticker-100/',
-      'https://cdn.jsdelivr.net/npm/@waline/emojis@latest/tw-emoji/'
-    ]
+    emoji:
+      [
+        "https://cdn.jsdelivr.net/npm/sticker-heo@latest/Sticker-100/",
+        "https://cdn.jsdelivr.net/npm/@waline/emojis@latest/tw-emoji/",
+      ]
 
 discuss:
   serverURLs: https://discuss.ccknbc.vercel.app # Discuss server address url
   options:
-    master: '博主兼管理员'  # 博主标签占位符，默认: 博主
-    ph: '感谢各位的批评指正，期待与您交流！' # 评论框占位符，默认: 评论你的想法~
-    lang: 'zh_CN' # 评论语言，默认: zh_CN ，可选: [zh_CN , en_US]
+    master: "博主兼管理员" # 博主标签占位符，默认: 博主
+    ph: "感谢各位的批评指正，期待与您交流！" # 评论框占位符，默认: 评论你的想法~
+    lang: "zh_CN" # 评论语言，默认: zh_CN ，可选: [zh_CN , en_US]
     # imgLoading:  # 评论图片懒加载，加载动画，默认为1像素白色base64图
     visitStat: false # 是否开启访问统计，默认: false
-    color: '#8fbc8f'
+    color: "#8fbc8f"
 
 # Twikoo
 # https://github.com/imaegoo/twikoo
@@ -500,8 +498,8 @@ footer:
     # icon: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/upyun-white.svg
   live: #页脚运行时间
     enable: true
-    prefix: '本站已运行'
-    suffix: 'CCKNBC All Rights Reserved.'
+    prefix: "本站已运行"
+    suffix: "CCKNBC All Rights Reserved."
     start: "2020-06-04T00:00:00"
 
 # Analysis
@@ -605,16 +603,16 @@ index_top_img_height:
 # The user interface setting of category and tag page (category和tag頁的UI設置)
 # index - same as Homepage UI (index 值代表 UI將與首頁的UI一樣)
 # default - same as archives UI 默認跟archives頁面UI一樣
-category_ui:  # 留空或 index
-tag_ui:  # 留空或 index
+category_ui: # 留空或 index
+tag_ui: # 留空或 index
 
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(https://xxxxxx.com/xxx.jpg)
-background: 'linear-gradient(#fff1eb,#ace0f9)'
+background: "linear-gradient(#fff1eb,#ace0f9)"
 
 # Footer Background
-footer_bg: 'linear-gradient(135deg,#ace0f9,#a1c4fd)'
+footer_bg: "linear-gradient(135deg,#ace0f9,#a1c4fd)"
 
 # the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
 rightside-bottom:
@@ -644,7 +642,7 @@ canvas_fluttering_ribbon:
 # https://github.com/hustcc/canvas-nest.js
 canvas_nest:
   enable: false
-  color: '0,0,255' #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
+  color: "0,0,255" #color of lines, default: '0,0,0'; RGB values: (R,G,B).(note: use ',' to separate.)
   opacity: 0.7 # the opacity of line (0~1), default: 0.5.
   zIndex: -1 # z-index property of the background, default: -1.
   count: 99 # the number of lines, default: 99.
@@ -689,7 +687,7 @@ beautify:
   enable: true
   field: site # site/post
   title-prefix-icon: '\f13d'
-  title-prefix-icon-color: '#2FCC66'
+  title-prefix-icon-color: "#2FCC66"
 
 # Global font settings
 # Don't modify the following settings unless you know how they work (非必要不要修改)
@@ -710,8 +708,8 @@ blog_title_font:
 # The setting of divider icon (水平分隔線圖標設置)
 hr_icon:
   enable: false
-  icon: '' # the unicode value of Font Awesome icon
-  icon-top: ''
+  icon: "" # the unicode value of Font Awesome icon
+  icon-top: ""
 
 # the subtitle on homepage (主頁subtitle)
 subtitle:
@@ -754,7 +752,7 @@ aside:
     category: false
   card_author:
     enable: true
-    description: ''
+    description: ""
     button:
       enable: true
       icon: fa-solid fa-circle faa-burst animated
@@ -762,7 +760,7 @@ aside:
       link: https://cc.instatus.com
   card_announcement:
     enable: false
-    content: 
+    content:
     # '<center><iframe src="https://cc.instatus.com/embed-status/light-sm" loading="lazy" width="158" height="43" frameBorder="0" scrolling="no" style="border: none;" ></iframe><div id="he-plugin-standard"></div><script>WIDGET = {  "CONFIG": {    "layout": "2",    "width": "230",    "height": "290",    "background": "1",    "dataColor": "FFFFFF",    "borderRadius": "5",    "key": "dac79a62255345c9b4a31b585c3434a4"  }}</script><script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
     # <center>
     # <a target="_blank" href="https://hexo.io"><img src="https://img.shields.io/badge/Frame-Hexo 5.3.0-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><br>
@@ -836,9 +834,9 @@ translate:
   # Time delay
   translateDelay: 0
   # The text of the button when the language is Simplified Chinese
-  msgToTraditionalChinese: '繁'
+  msgToTraditionalChinese: "繁"
   # The text of the button when the language is Traditional Chinese
-  msgToSimplifiedChinese: '简'
+  msgToSimplifiedChinese: "简"
 
 # Read Mode (閲讀模式)
 readmode: true
@@ -967,8 +965,8 @@ aplayerInject:
 snackbar:
   enable: true
   position: top-center
-  bg_light: '#696969' # The background color of Toast Notification in light mode
-  bg_dark: '#696969' # The background color of Toast Notification in dark mode
+  bg_light: "#696969" # The background color of Toast Notification in light mode
+  bg_dark: "#696969" # The background color of Toast Notification in dark mode
 
 # https://instant.page/
 # prefetch (預加載)

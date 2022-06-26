@@ -16,76 +16,76 @@ jobs:
       YUQUE_TOKEN: ${{ secrets.YUQUE_TOKEN }}
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@main
-      with:
-        ref: master
-        fetch-depth: 0
+      - name: Checkout
+        uses: actions/checkout@main
+        with:
+          ref: master
+          fetch-depth: 0
 
-    - name: Setup Node
-      uses: actions/setup-node@main
-      with:
-        node-version: "latest"
-        check-latest: true
-        cache: 'npm'
-        cache-dependency-path: '**/package-lock.json'
+      - name: Setup Node
+        uses: actions/setup-node@main
+        with:
+          node-version: "latest"
+          check-latest: true
+          cache: "npm"
+          cache-dependency-path: "**/package-lock.json"
 
-    - name: Catch Dependencies
-      uses: actions/cache@main
-      id: cache-dependencies
-      with:
-        path: node_modules
-        key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
+      - name: Catch Dependencies
+        uses: actions/cache@main
+        id: cache-dependencies
+        with:
+          path: node_modules
+          key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
 
-    - name: Install Dependencies
-      if: steps.cache-dependencies.outputs.cache-hit != 'true'
-      run: |
-        npm install
+      - name: Install Dependencies
+        if: steps.cache-dependencies.outputs.cache-hit != 'true'
+        run: |
+          npm install
 
-    - name: Generate
-      run: |
-        npm run github-yuque
+      - name: Generate
+        run: |
+          npm run github-yuque
 
-    - name: Deploy Markdown Posts To Branch Posts
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: posts
-        publish_dir: ./source/_posts
-        user_name: 'github-actions[bot]'
-        user_email: 'github-actions[bot]@users.noreply.github.com'
-        full_commit_message: ${{ github.event.head_commit.message }}
+      - name: Deploy Markdown Posts To Branch Posts
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: posts
+          publish_dir: ./source/_posts
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
+          full_commit_message: ${{ github.event.head_commit.message }}
 
-    - name: Deploy Hexo Public To Pages
-      run: |
-        cd ./public
-        git config --global init.defaultBranch master
-        git config --global http.postBuffer 524288000
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git init
-        git add -A
-        git branch -m master
-        git commit -m "${{ github.event.head_commit.message }} $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By GitHub Actions"
-        git push --force --quiet "https://ccknbc:${{ secrets.GH_TOKEN }}@github.com/CCKNBC/ccknbc.github.io.git" master:master
-        git push --force --quiet "https://ccknbc:${{ secrets.BB_TOKEN }}@bitbucket.org/ccknbc/ccknbc.bitbucket.io.git" master:master
-        git push --force --quiet "https://${{ secrets.CD_USER }}:${{ secrets.CD_TOKEN }}@e.coding.net/ccknbc/blog/butterfly.git" master:master
-        git push --force --quiet "https://ccknbc:${{ secrets.GT_TOKEN }}@gitee.com/ccknbc/ccknbc.git" master:master
+      - name: Deploy Hexo Public To Pages
+        run: |
+          cd ./public
+          git config --global init.defaultBranch master
+          git config --global http.postBuffer 524288000
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git init
+          git add -A
+          git branch -m master
+          git commit -m "${{ github.event.head_commit.message }} $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By GitHub Actions"
+          git push --force --quiet "https://ccknbc:${{ secrets.GH_TOKEN }}@github.com/CCKNBC/ccknbc.github.io.git" master:master
+          git push --force --quiet "https://ccknbc:${{ secrets.BB_TOKEN }}@bitbucket.org/ccknbc/ccknbc.bitbucket.io.git" master:master
+          git push --force --quiet "https://${{ secrets.CD_USER }}:${{ secrets.CD_TOKEN }}@e.coding.net/ccknbc/blog/butterfly.git" master:master
+          git push --force --quiet "https://ccknbc:${{ secrets.GT_TOKEN }}@gitee.com/ccknbc/ccknbc.git" master:master
 
-    - name: Update Gitee Pages
-      uses: yanglbme/gitee-pages-action@main
-      with:
+      - name: Update Gitee Pages
+        uses: yanglbme/gitee-pages-action@main
+        with:
           gitee-username: ccknbc
           gitee-password: ${{ secrets.GITEE_PASSWORD }}
           gitee-repo: ccknbc/ccknbc
 
-    # - name: Sync RSS
-    #   run: |
-    #     curl 'https://kkapi.ccknbc.vercel.app/api/open/github/dispatch&owner=ccknbc-actions&repo=home&token=${{ secrets.GH_TOKEN }}&text=RSS'
-    #     curl -X POST -F token=${{ secrets.GITLAB_TRIGGER_TOKEN }} -F ref=master https://gitlab.com/api/v4/projects/22130436/trigger/pipeline
+      # - name: Sync RSS
+      #   run: |
+      #     curl 'https://kkapi.ccknbc.vercel.app/api/open/github/dispatch&owner=ccknbc-actions&repo=home&token=${{ secrets.GH_TOKEN }}&text=RSS'
+      #     curl -X POST -F token=${{ secrets.GITLAB_TRIGGER_TOKEN }} -F ref=master https://gitlab.com/api/v4/projects/22130436/trigger/pipeline
 
-    - name: Delete Workflow Runs
-      uses: Mattraks/delete-workflow-runs@main
-      with:
-        retain_days: 1
-        keep_minimum_runs: 1
+      - name: Delete Workflow Runs
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          retain_days: 1
+          keep_minimum_runs: 1
