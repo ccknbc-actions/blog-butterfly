@@ -92,37 +92,13 @@ SFA 和 PFA 似乎有着斩不断的联系，于是 2022 年初，新官上任�
 
 {% mmedias "artplayer"  %}
 {
-style: 'width:100%;height:500px;max-width:1200px;center',
 url: "https://video-direct-link.vercel.app/bili.mp4?aid=812521076&bvid=BV1434y157j6&cid=750446553",
 poster: "https://prod-material.ptsplus.tv/series/2-2022143/artworks/posters/web/WebListPage_LILP19201080.jpg",
-title: "出櫃",
-theme: "#8FBC8F",
-volume: 1,
-isLive: false,
-muted: false,
-autoplay: false,
-pip: true,
-autoSize: true,
-autoMini: true,
-screenshot: false,
-setting: true,
-loop: true,
-flip: true,
-rotate: true,
-playbackRate: true,
-aspectRatio: true,
-fullscreen: true,
-fullscreenWeb: true,
-subtitleOffset: true,
-miniProgressBar: true,
-localVideo: true,
-localSubtitle: true,
-networkMonitor: true,
-mutex: true,
-light: true,
-backdrop: true
+title: "出櫃"
 }
 {% endmmedias %}
+
+<div style="position: relative; padding: 30% 45%;margin-top: 10px;margin-bottom: 10px"><iframe style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;" src="//player.bilibili.com/player.html?aid=595560919&bvid=BV1Nq4y1Y7nS&cid=572747744&page=1&danmaku=0&high_quality=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></div>
 
 ---
 
