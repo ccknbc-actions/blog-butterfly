@@ -384,7 +384,7 @@ tidio:
   public_key:
 
 # daovoice
-# https://daovoice.io/
+# http://daovoice.io/
 daovoice:
   enable: false
   app_id:
@@ -498,7 +498,7 @@ tag_ui: # 留空或 index
 
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
-# The formal of image: url(https://xxxxxx.com/xxx.jpg)
+# The formal of image: url(http://xxxxxx.com/xxx.jpg)
 background:
 
 # Footer Background
@@ -609,7 +609,7 @@ subtitle:
   # source 調用第三方服務
   # source: false 關閉調用
   # source: 1  調用一言網的一句話（簡體） https://hitokoto.cn/
-  # source: 2  調用一句網（簡體） https://yijuzhan.com/
+  # source: 2  調用一句網（簡體） http://yijuzhan.com/
   # source: 3  調用今日詩詞（簡體） https://www.jinrishici.com/
   # subtitle 會先顯示 source , 再顯示 sub 的內容
   source: false
@@ -740,7 +740,7 @@ rightside_item_order:
 medium_zoom: false
 
 # fancybox
-# https://fancyapps.com/fancybox/3/
+# http://fancyapps.com/fancybox/3/
 fancybox: true
 
 # Tag Plugins settings (標籤外掛)
