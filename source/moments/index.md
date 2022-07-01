@@ -20,5 +20,5 @@ description: CC的部落格 朋友圈页面
     apiurl: 'https://moments.ccknbc.vercel.app/'
   }
 </script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.css">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.js"></script>
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.css">
+<script type="text/javascript" src="https://gcore.jsdelivr.net/gh/lmm214/immmmm/themes/hello-friend/static/fcircle-beta.js"></script>

@@ -59,7 +59,7 @@ marked:
   breaks: true
   smartLists: true
   smartypants: true
-  quotes: "“”‘’"
+  quotes: '“”‘’'
   modifyAnchors: 0
   anchorAlias: true
   autolink: true
@@ -87,7 +87,7 @@ markdown:
     breaks: false # true 则将所有换行渲染为 <br> 标签 # 这种行为不属于 CommandMark 和 GFM.
     linkify: true # true 则自动解析链接并添加为 <a> 标签, false 则将链接渲染为文本.
     typographer: true # 默认 true # 自动转义各种排版用字符, 如 ©
-    quotes: "“”‘’" # 当 typographer 定义为 true 时的自动转换引号的行为, quotes: '“”‘’' 则表示将 "123" '123'转换为 “123” ‘123’
+    quotes: '“”‘’' # 当 typographer 定义为 true 时的自动转换引号的行为, quotes: '“”‘’' 则表示将 "123" '123'转换为 “123” ‘123’
   # render 选项到此结束
   enable_rules:
   disable_rules:
@@ -171,7 +171,7 @@ feed:
   content_limit: false
   content_limit_delim: " "
   order_by: -updated
-  icon: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/logo.png
+  icon: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/logo.png
   autodiscovery: true
   template:
     - ./source/_data/atom.xml
@@ -274,33 +274,33 @@ mmedia:
     default:
       controls: true
   aplayer:
-    js: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
-    css: https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
+    js: https://gcore.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
+    css: https://gcore.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
     default:
       contents:
         lrcType: 3
   meting:
-    js: https://cdn.jsdelivr.net/npm/meting/dist/Meting.min.js
+    js: https://gcore.jsdelivr.net/npm/meting/dist/Meting.min.js
     api:
     default:
   dplayer:
-    js: https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js
-    hls_js: https://cdn.jsdelivr.net/npm/hls.js/dist/hls.min.js
-    dash_js: https://cdn.jsdelivr.net/npm/dashjs/dist/dash.all.min.js
-    shaka_dash_js: https://cdn.jsdelivr.net/npm/shaka-player/dist/shaka-player.compiled.js
-    flv_js: https://cdn.jsdelivr.net/npm/flv.js/dist/flv.min.js
-    webtorrent_js: https://cdn.jsdelivr.net/npm/webtorrent/webtorrent.min.js
+    js: https://gcore.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js
+    hls_js: https://gcore.jsdelivr.net/npm/hls.js/dist/hls.min.js
+    dash_js: https://gcore.jsdelivr.net/npm/dashjs/dist/dash.all.min.js
+    shaka_dash_js: https://gcore.jsdelivr.net/npm/shaka-player/dist/shaka-player.compiled.js
+    flv_js: https://gcore.jsdelivr.net/npm/flv.js/dist/flv.min.js
+    webtorrent_js: https://gcore.jsdelivr.net/npm/webtorrent/webtorrent.min.js
     default:
       contents:
   artplayer:
-    js: https://cdn.jsdelivr.net/npm/artplayer/dist/artplayer.js
-    hls_js: https://cdn.jsdelivr.net/npm/hls.js/dist/hls.min.js
-    dash_js: https://cdn.jsdelivr.net/npm/dashjs/dist/dash.all.min.js
-    shaka_dash_js: https://cdn.jsdelivr.net/npm/shaka-player/dist/shaka-player.compiled.js
-    flv_js: https://cdn.jsdelivr.net/npm/flv.js/dist/flv.min.js
-    webtorrent_js: https://cdn.jsdelivr.net/npm/webtorrent/webtorrent.min.js
+    js: https://gcore.jsdelivr.net/npm/artplayer/dist/artplayer.js
+    hls_js: https://gcore.jsdelivr.net/npm/hls.js/dist/hls.min.js
+    dash_js: https://gcore.jsdelivr.net/npm/dashjs/dist/dash.all.min.js
+    shaka_dash_js: https://gcore.jsdelivr.net/npm/shaka-player/dist/shaka-player.compiled.js
+    flv_js: https://gcore.jsdelivr.net/npm/flv.js/dist/flv.min.js
+    webtorrent_js: https://gcore.jsdelivr.net/npm/webtorrent/webtorrent.min.js
     default:
-      style: width:360px;height:210px
+      style: width:344px;height:193.5px
       contents:
         theme: "#8FBC8F"
         lang: zh-cn
@@ -360,14 +360,14 @@ tag_plugins:
   priority: 5 #过滤器优先权
   issues: false #issues标签开关
   link:
-    placeholder: https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/logo.png #link_card标签默认的图标图片
+    placeholder: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/logo.png #link_card标签默认的图标图片
   CDN:
-    anima: https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
-    # jquery: https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #issues标签依赖
-    # issues: https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js #issues标签依赖
+    anima: https://gcore.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
+    # jquery: https://gcore.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #issues标签依赖
+    # issues: https://gcore.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js #issues标签依赖
     iconfont: false #参看https://akilar.top/posts/d2ebecef/
-    carousel: false #https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js
-    tag_plugins_css: https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css
+    carousel: false #https://gcore.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js
+    tag_plugins_css: https://gcore.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css
 
 wowjs:
   enable: false #控制动画开关。true是打开，false是关闭
@@ -402,7 +402,7 @@ readmore:
   # 已申请的微信公众号回复关键词
   keyword: "blog"
   # 已申请的微信公众号二维码链接
-  qrcode: "https://cdn.jsdelivr.net/gh/ccknbc-backup/cdn/logo/wechat.svg"
+  qrcode: "https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/logo/wechat.svg"
   # 自定义的 JS 资源链接，可用于 CDN 加速
   libUrl: "https://qiniu.techgrow.cn/readmore/dist/readmore.js"
   # 自定义的 CSS 资源链接，可用于适配不同风格的博客
