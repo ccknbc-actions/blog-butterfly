@@ -1,4 +1,4 @@
-importScripts('https://cdn.jsdelivr.net/npm/workbox-sw/build/workbox-sw.js');
+importScripts('https://gcore.jsdelivr.net/npm/workbox-sw/build/workbox-sw.js');
 
 if (workbox) {
     console.log('workbox加载成功🎉');
@@ -133,7 +133,7 @@ workbox.routing.registerRoute(new RegExp(/.*\.html/), new workbox.strategies.Net
 //         plugins: [
 //             new workbox.expiration.ExpirationPlugin({
 //                 maxEntries: 50,
-//                 maxAgeSeconds: 60 * 60 * 24 * 30
+//                 maxAgeSeconds: 60 * 60 * 24 * 365
 //             }),
 //             new workbox.cacheableResponse.CacheableResponsePlugin({
 //                 statuses: [0, 200]
@@ -143,43 +143,44 @@ workbox.routing.registerRoute(new RegExp(/.*\.html/), new workbox.strategies.Net
 // );
 
 // CDN
-workbox.routing.registerRoute(
-    /\.(?:js|css)$/,
-    new workbox.strategies.CacheFirst({
-        cacheName: '静态资源',
-        plugins: [
-            new workbox.expiration.ExpirationPlugin({
-                maxEntries: 50,
-                maxAgeSeconds: 60 * 60 * 24 * 30
-            }),
-            new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200]
-            })
-        ]
-    })
-);
-
-// Cache CSS, JS, and Web Worker requests with a Stale While Revalidate strategy
-
 // workbox.routing.registerRoute(
-//     ({ request }) =>
-//         request.destination === 'style' ||
-//         request.destination === 'script' ||
-//         request.destination === 'worker',
+//     /\.(?:js|css)$/,
 //     new workbox.strategies.StaleWhileRevalidate({
 //         cacheName: '静态资源',
 //         plugins: [
 //             new workbox.expiration.ExpirationPlugin({
 //                 maxEntries: 50,
-//                 maxAgeSeconds: 60 * 60 * 24,
-//                 purgeOnQuotaError: true
+//                 maxAgeSeconds: 60 * 60 * 24 * 7
 //             }),
 //             new workbox.cacheableResponse.CacheableResponsePlugin({
-//                 statuses: [0, 200],
-//             }),
-//         ],
-//     }),
+//                 statuses: [0, 200]
+//             })
+//         ]
+//     })
 // );
+
+// Cache CSS, JS, and Web Worker requests with a Stale While Revalidate strategy
+
+workbox.routing.registerRoute(
+    ({ request }) =>
+        request.destination === 'style' ||
+        request.destination === 'script',
+        // ||
+        // request.destination === 'worker',
+    new workbox.strategies.StaleWhileRevalidate({
+        cacheName: '静态资源',
+        plugins: [
+            new workbox.expiration.ExpirationPlugin({
+                maxEntries: 50,
+                maxAgeSeconds: 60 * 60 * 24 * 7,
+                purgeOnQuotaError: true
+            }),
+            new workbox.cacheableResponse.CacheableResponsePlugin({
+                statuses: [0, 200],
+            }),
+        ],
+    }),
+);
 
 // Fonts
 // workbox.routing.registerRoute(
@@ -243,23 +244,31 @@ workbox.routing.registerRoute(
 
 const cdn = {
     gh: {
-        jsdelivr: 'https://cdn.jsdelivr.net/gh',
-        fastly: 'https://fastly.jsdelivr.net/gh',
+        // jsdelivr: 'https://cdn.jsdelivr.net/gh',
+        // fastly: 'https://fastly.jsdelivr.net/gh',
         gcore: 'https://gcore.jsdelivr.net/gh',
+        bilicdn: 'https://cdn.bilicdn.tk/gh',
+        onmicrosoft: 'https://jsd.onmicrosoft.cn/gh',
+        babiejiu: 'https://jsd.8b9.cn/gh',
+        tianli: 'https://cdn1.tianli0.top/gh',
         testingcf: 'https://testingcf.jsdelivr.net/gh',
         test1: 'https://test1.jsdelivr.net/gh'
     },
     combine: {
         jsdelivr: 'https://cdn.jsdelivr.net/combine',
-        fastly: 'https://fastly.jsdelivr.net/combine',
+        // fastly: 'https://fastly.jsdelivr.net/combine',
         gcore: 'https://gcore.jsdelivr.net/combine',
         testingcf: 'https://testingcf.jsdelivr.net/combine',
         test1: 'https://test1.jsdelivr.net/combine'
     },
     npm: {
         jsdelivr: 'https://cdn.jsdelivr.net/npm',
-        fastly: 'https://fastly.jsdelivr.net/npm',
+        // fastly: 'https://fastly.jsdelivr.net/npm',
         gcore: 'https://gcore.jsdelivr.net/npm',
+        bilicdn: 'https://cdn.bilicdn.tk/npm',
+        onmicrosoft: 'https://jsd.onmicrosoft.cn/npm',
+        babiejiu: 'https://jsd.8b9.cn/npm',
+        tianli: 'https://cdn1.tianli0.top/npm',
         testingcf: 'https://testingcf.jsdelivr.net/npm',
         test1: 'https://test1.jsdelivr.net/npm',
         unpkg: 'https://unpkg.com'

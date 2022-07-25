@@ -1,4 +1,6 @@
-- const { host, siteId } = theme.remark42
+- const { server, option } = theme.artalk
+- const avatarCdn = option !== null && option.gravatar ? option.gravatar.mirror : 'https://sdn.geekzu.org/avatar/'
+- const avatarDefault = option !== null && option.gravatar ? option.gravatar.default : 'mp'
 
 script.
   window.addEventListener('load', () => {
@@ -44,20 +46,20 @@ script.
     }
 
     const getComment = () => {
-      fetch('!{host}/api/v1/last/!{theme.newest_comments.limit}?site=!{siteId}')
+      fetch('!{server}/api/stat?type=latest_comments&limit=!{theme.newest_comments.limit}',{method: "POST"})
         .then(response => response.json())
-        .then(data => {
-          const remark42 = data.map(function (e) {
+        .then(d => {
+          const artalk = d.data.map(function (e) {
             return {
-              'avatar': e.user.picture,
-              'content': changeContent(e.text),
-              'nick': e.user.name,
-              'url': e.locator.url,
-              'date': e.time,
+              'avatar': '!{avatarCdn}' + e.email_encrypted + '?d=!{avatarDefault}',
+              'content': changeContent(e.content_marked),
+              'nick': e.nick,
+              'url': e.page_url,
+              'date': e.date,
             }
           })
-          saveToLocal.set('remark42-newest-comments', JSON.stringify(remark42), !{theme.newest_comments.storage}/(60*24))
-          generateHtml(remark42)
+          saveToLocal.set('artalk-newest-comments', JSON.stringify(artalk), !{theme.newest_comments.storage}/(60*24))
+          generateHtml(artalk)
         }).catch(e => {
           const $dom = document.querySelector('#card-newest-comments .aside-list')
           $dom.innerHTML= "!{_p('aside.card_newest_comments.error')}"
@@ -66,7 +68,7 @@ script.
 
     const newestCommentInit = () => {
       if (document.querySelector('#card-newest-comments .aside-list')) {
-        const data = saveToLocal.get('remark42-newest-comments')
+        const data = saveToLocal.get('artalk-newest-comments')
         if (data) {
           generateHtml(JSON.parse(data))
         } else {

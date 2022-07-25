@@ -59,7 +59,7 @@
             block
 
       - const commentUse = comments.use
-      if commentUse && !comments.lazyload
+      if page.comments !== false && commentUse && !comments.lazyload
         if commentUse[0] === 'Valine' && theme.valine.visitor
           +pvBlock(url_for(page.path),'leancloud_visitors',page.title)
             span.leancloud-visitors-count
@@ -75,6 +75,9 @@
         else if commentUse[0] === 'Discuss' && theme.discuss.visitor
           +pvBlock('','','')
             span#Discuss-Visitors
+        else if commentUse[0] === 'Artalk' && theme.artalk.visitor
+          +pvBlock('','','')
+            span#ArtalkPV
               i.fa-solid.fa-spinner.fa-spin
         else if theme.busuanzi.page_pv
           +pvBlock('','post-meta-pv-cv','')
@@ -141,4 +144,9 @@
             +countBlock
               a(href=url_for(page.path) + '#post-comment')
                 span.remark42__counter(data-url=urlNoIndex())
+                  i.fa-solid.fa-spinner.fa-spin
+          when 'Artalk'
+            +countBlock
+              a(href=url_for(page.path) + '#post-comment')
+                span.artalk-count
                   i.fa-solid.fa-spinner.fa-spin

@@ -48,7 +48,7 @@
     "hexo-generator-indexed": "1.2.1",
     "hexo-generator-sitemap": "3.0.1",
     "hexo-generator-tag": "1.0.0",
-    "hexo-readmore": "0.1.13",
+    "hexo-readmore": "0.1.14",
     "hexo-renderer-markdown-it": "6.0.1",
     "hexo-renderer-pug": "3.0.0",
     "hexo-renderer-stylus": "2.1.0",
@@ -60,6 +60,6 @@
     "markdown-it-task-lists": "2.1.1",
     "workbox-build": "6.5.3",
     "yuque-hexo": "1.9.1",
-    "yuque-hexo-lyrics": "1.0.0"
+    "yuque-hexo-lyrics": "1.0.2"
   }
 }
