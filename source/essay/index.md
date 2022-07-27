@@ -29,7 +29,7 @@ description: CC的部落格 即刻短文页面
 </style>
 <script src="https://cdn.staticfile.org/highlight.js/10.6.0/highlight.min.js"></script>
 <script src="https://cdn.staticfile.org/marked/2.0.0/marked.min.js"></script>
-<script src="https://gcore.jsdelivr.net/npm/discuss/dist/Discuss.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/discuss/dist/discuss.js"></script>
 <script src="https://gcore.jsdelivr.net/npm/ispeak/ispeak.umd.js"></script>
 <script>
   var head = document.getElementsByTagName('head')[0]
@@ -47,7 +47,7 @@ description: CC的部落格 即刻短文页面
         loading_img: 'https://gcore.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif',
         speakPage: '/essay',
         githubClientId: 'Iv1.f333c02f5f6676e8',
-        initCommentName: 'Discuss',
+        initCommentName: 'discuss',
         initCommentOptions: {
           serverURLs: 'https://discuss.ccknbc.vercel.app/'
         }

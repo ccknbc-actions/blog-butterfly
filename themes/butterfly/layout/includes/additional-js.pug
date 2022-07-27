@@ -5,6 +5,9 @@ div
   if theme.addThis.enable
     script(src=`https://s7.addthis.com/js/300/addthis_widget.js#pubid=${theme.addThis.pubid}` defer)
 
+  if theme.instatus.enable && is_current('/404' || '/offline')
+    script(defer src=`https://cc.instatus.com/widget/script.js`)
+
   if !(is_post()) && theme.snow.enable
     script(defer src=`https://api.vvhan.com/api/snow`)
 

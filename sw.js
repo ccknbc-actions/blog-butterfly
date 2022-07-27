@@ -245,7 +245,7 @@ workbox.routing.registerRoute(
 const cdn = {
     gh: {
         // jsdelivr: 'https://cdn.jsdelivr.net/gh',
-        // fastly: 'https://fastly.jsdelivr.net/gh',
+        fastly: 'https://fastly.jsdelivr.net/gh',
         gcore: 'https://gcore.jsdelivr.net/gh',
         bilicdn: 'https://cdn.bilicdn.tk/gh',
         onmicrosoft: 'https://jsd.onmicrosoft.cn/gh',
@@ -255,15 +255,15 @@ const cdn = {
         test1: 'https://test1.jsdelivr.net/gh'
     },
     combine: {
-        jsdelivr: 'https://cdn.jsdelivr.net/combine',
-        // fastly: 'https://fastly.jsdelivr.net/combine',
+        // jsdelivr: 'https://cdn.jsdelivr.net/combine',
+        fastly: 'https://fastly.jsdelivr.net/combine',
         gcore: 'https://gcore.jsdelivr.net/combine',
         testingcf: 'https://testingcf.jsdelivr.net/combine',
         test1: 'https://test1.jsdelivr.net/combine'
     },
     npm: {
-        jsdelivr: 'https://cdn.jsdelivr.net/npm',
-        // fastly: 'https://fastly.jsdelivr.net/npm',
+        // jsdelivr: 'https://cdn.jsdelivr.net/npm',
+        fastly: 'https://fastly.jsdelivr.net/npm',
         gcore: 'https://gcore.jsdelivr.net/npm',
         bilicdn: 'https://cdn.bilicdn.tk/npm',
         onmicrosoft: 'https://jsd.onmicrosoft.cn/npm',

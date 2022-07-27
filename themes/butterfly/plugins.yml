@@ -50,7 +50,7 @@ waline_css:
   version: 2.6.1
 discuss:
   name: discuss
-  file: dist/Discuss.js
+  file: dist/discuss.js
   version: 1.0.1
 sharejs:
   name: butterfly-extsrc

@@ -992,6 +992,9 @@ pace:
 snow:
   enable: false
 
+instatus:
+  enable: true
+
 # PWA
 # See https://github.com/JLHwung/hexo-offline
 # ---------------
@@ -1102,4 +1105,4 @@ CDN:
   # other
   pace: https://gcore.jsdelivr.net/gh/CodeByZach/pace/pace.min.js
   ccknbc: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/js/ccknbc.js
-  discuss: https://gcore.jsdelivr.net/npm/discuss/dist/Discuss.js
+  discuss: https://gcore.jsdelivr.net/npm/discuss/dist/discuss.js
