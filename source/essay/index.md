@@ -49,7 +49,13 @@ description: CC的部落格 即刻短文页面
         githubClientId: 'Iv1.f333c02f5f6676e8',
         initCommentName: 'discuss',
         initCommentOptions: {
-          serverURLs: 'https://discuss.ccknbc.vercel.app/'
+          el: '#discuss',
+          serverURLs: 'https://discuss.ccknbc.vercel.app',
+          color: '#8fbc8f',
+          ph: '如您对我的叨叨有任何想法，欢迎发表您的意见',
+          master: 'CC',
+          visitStat: 'false',
+          emotCDN: 'https://gcore.jsdelivr.net/npm/discuss'
         }
       })
       .then(function () {

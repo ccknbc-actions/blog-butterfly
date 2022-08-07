@@ -99,11 +99,11 @@ katex:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/logo.png
+favicon: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png
 
 # Avatar (頭像)
 avatar:
-  img: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/logo.png
+  img: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png
   effect: false
 
 disable_top_img: false
@@ -210,10 +210,10 @@ post_copyright:
 reward:
   enable: true
   QR_code:
-    - img: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/qr.png
+    - img: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/logo/qr.png
       link: https://www.rocschool.com/tool/qr/qr/id/51.html
       text: 三合一
-    - img: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/afdian.png
+    - img: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/logo/afdian.png
       link: https://afdian.net/@ccknbc
       text: 爱发电
 
@@ -323,8 +323,8 @@ waline:
       placeholder: 感谢各位的批评指正，期待与您交流！
     emoji:
       [
-        "https://gcore.jsdelivr.net/npm/sticker-heo@latest/Sticker-100/",
-        "https://gcore.jsdelivr.net/npm/@waline/emojis@latest/tw-emoji/",
+        "https://gcore.jsdelivr.net/npm/sticker-heo/Sticker-100/",
+        "https://gcore.jsdelivr.net/npm/@waline/emojis/tw-emoji/",
       ]
 
 discuss:
@@ -336,6 +336,7 @@ discuss:
     # imgLoading:  # 评论图片懒加载，加载动画，默认为1像素白色base64图
     visitStat: false # 是否开启访问统计，默认: false
     color: "#8fbc8f"
+    emotCDN: "https://gcore.jsdelivr.net/npm/discuss"
 
 # Twikoo
 # https://github.com/imaegoo/twikoo
@@ -398,7 +399,7 @@ valine:
   appKey:
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
   serverURLs: https://5J2LIPyE.api.lncldglobal.com # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
-  bg: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/image/comments/bg.jpg
+  bg: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/image/comments/bg.jpg
   visitor: false
   option:
     pageSize: 10 # comment list page size
@@ -485,17 +486,17 @@ footer:
     enable: true
     url: https://beian.miit.gov.cn
     text: 鄂 ICP 备 2020019764 号
-    # icon: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/icp.png
+    # icon: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/logo/icp.png
   gongan: # Chinese Gongan License
     enable: true
     url: https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42088102000092
     text: 鄂公网安备 42088102000092 号
-    # icon: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/gongan.png
+    # icon: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/logo/gongan.png
   upyun: # Chinese Gongan License
     enable: false
     url: https://www.upyun.com
     text: 又拍云提供 CDN 加速服务
-    # icon: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/upyun-white.svg
+    # icon: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/logo/upyun-white.svg
   live: #页脚运行时间
     enable: true
     prefix: "本站已运行"
@@ -511,7 +512,7 @@ footer:
 
 # Google Analytics
 # https://analytics.google.com/analytics/web/
-# google_analytics: 251583177
+google_analytics: G-QB09N5MVV8
 
 # CNZZ Analytics
 # https://www.umeng.com/
@@ -609,10 +610,10 @@ tag_ui: # 留空或 index
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(https://xxxxxx.com/xxx.jpg)
-background: "linear-gradient(#fff1eb,#ace0f9)"
+background: "linear-gradient(45deg,#fff1eb,#ace0f9)"
 
 # Footer Background
-footer_bg: "linear-gradient(135deg,#ace0f9,#a1c4fd)"
+footer_bg: "linear-gradient(135deg,#fff1eb,#ace0f9)"
 
 # the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
 rightside-bottom:
@@ -803,14 +804,14 @@ aside:
 # busuanzi count for PV / UV in site
 # 訪問人數
 busuanzi:
-  site_uv: false
-  site_pv: false
-  page_pv: false
+  site_uv: true
+  site_pv: true
+  page_pv: true
 
 # Time difference between publish date and now (網頁運行時間)
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
-  enable: false
+  enable: true
   publish_date: 6/4/2020 00:00:00
 
 # Aside widget - Newest Comments
@@ -1002,8 +1003,8 @@ pwa:
   enable: false
   manifest: /manifest.json
   theme_color: "#ffffff"
-  apple_touch_icon: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/image/pwa/apple-touch-icon.png
-  mask_icon: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/image/pwa/safari-pinned-tab.svg
+  apple_touch_icon: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/image/pwa/apple-touch-icon.png
+  mask_icon: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/image/pwa/safari-pinned-tab.svg
 
 # Open graph meta tags
 # https://developers.facebook.com/docs/sharing/webmasters/
@@ -1022,13 +1023,13 @@ inject:
   bottom:
     # - <div class="aplayer no-destroy" data-id="12838890" data-server="netease" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div>
     - '<div class="app-refresh" id="app-refresh"> <div class="app-refresh-wrap"> <label>✨ 网站已更新 👉</label> <a href="javascript:void(0)" onclick="location.reload()">✔ <b>点击刷新</b> 💫</a> </div></div><script>function showNotification(){if(GLOBAL_CONFIG.Snackbar){let t="light"===document.documentElement.getAttribute("data-theme")?GLOBAL_CONFIG.Snackbar.bgLight:GLOBAL_CONFIG.Snackbar.bgDark,e=GLOBAL_CONFIG.Snackbar.position;Snackbar.show({text:"✨ 部落格已更新 👉",backgroundColor:t,duration:1e4,pos:e,actionText:"✔ 点击刷新 💫",textColor:"#8FBC8F",actionTextColor:"#4CAF50",onActionClick:function(t){location.reload()}})}else{let o=`top: 0; background: ${"light"===document.documentElement.getAttribute("data-theme")?"#49b1f5":"#1f1f1f"};`;document.getElementById("app-refresh").style.cssText=o}}"serviceWorker"in navigator&&(navigator.serviceWorker.controller&&navigator.serviceWorker.addEventListener("controllerchange",function(){showNotification()}),window.addEventListener("load",function(){navigator.serviceWorker.register("/sw.js")}));</script>'
-    # - <script defer src="https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/js/announcement.js"></script>
+    # - <script defer src="https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/js/announcement.js"></script>
     - <script>!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"JgUfbwUA5BsLeAIc",ck:"JgUfbwUA5BsLeAIc",autoTrack:true});</script>
     - <script>!(function(c,i,e,b){var h=i.createElement("script");var f=i.getElementsByTagName("script")[0];h.type="text/javascript";h.crossorigin=true;h.onload=function(){new c[b]["Monitor"]().init({id:"JgUg7s8ImDkwb2V7",sendSuspicious:true});};f.parentNode.insertBefore(h,f);h.src=e;})(window,document,"https://sdk.51.la/perf/js-sdk-perf.min.js","LingQue");</script>
     # - <script defer src="https://cc.instatus.com/widget/script.js"></script>
     # - <script defer src='https://api.vvhan.com/api/snow'></script>
     # - <script defer src="https://api.vvhan.com/api/denglong"></script>
-    # - <script src="https://cdn.staticfile.org/jquery/3.5.1/jquery.min.js"></script>
+    # - <script src="https://gcore.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     # - <div id="music" key="6208da041a763" api="https://music.mx142.ltd"></div><script id="xplayer" src="https://music.mx142.ltd/Static/player4/js/player.js" ></script>
 
 # CDN
@@ -1104,5 +1105,5 @@ CDN:
 
   # other
   pace: https://gcore.jsdelivr.net/gh/CodeByZach/pace/pace.min.js
-  ccknbc: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/js/ccknbc.js
+  ccknbc: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/js/ccknbc.js
   discuss: https://gcore.jsdelivr.net/npm/discuss/dist/discuss.js

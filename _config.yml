@@ -112,11 +112,11 @@ markdown:
     #以下为额外安装插件
     - markdown-it-task-lists # https://github.com/revin/markdown-it-task-lists
   anchors: # 锚点的配置
-    level: 1 # 开始创建锚点的等级 # 如 "2" 则表示从 H2 开始创建一直到 H6(最后).
+    level: 2 # 开始创建锚点的等级 # 如 "2" 则表示从 H2 开始创建一直到 H6(最后).
     collisionSuffix: "" # 如果遇到重复的锚点 ID 为其添加数字编号时在这个数字后添加的后缀.
     # 以下为标题锚点配置
     permalink: true # false # 如果为 true 则创建一个除标题外带有固定地址的的锚点标签.
-    permalinkClass: "fa-solid fa-hashtag faa-pulse animated" # 定义固定锚点的 class 名.
+    permalinkClass: "fa-solid fa-hashtag" # 定义固定锚点的 class 名.
     permalinkSide: "right" # 设定为 right 则会在标题后添加固定链接.
     permalinkSymbol: "" # 定义固定链接使用的符号
     # 标题固定锚点到此结束
@@ -171,7 +171,7 @@ feed:
   content_limit: false
   content_limit_delim: " "
   order_by: -updated
-  icon: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/logo.png
+  icon: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png
   autodiscovery: true
   template:
     - ./source/_data/atom.xml
@@ -360,14 +360,14 @@ tag_plugins:
   priority: 5 #过滤器优先权
   issues: false #issues标签开关
   link:
-    placeholder: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/logo.png #link_card标签默认的图标图片
+    placeholder: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png #link_card标签默认的图标图片
   CDN:
-    anima: https://gcore.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
-    # jquery: https://gcore.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js #issues标签依赖
-    # issues: https://gcore.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js #issues标签依赖
+    anima: https://gcore.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
+    # jquery: https://gcore.jsdelivr.net/npm/jquery/dist/jquery.min.js #issues标签依赖
+    # issues: https://gcore.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/assets/issues.js #issues标签依赖
     iconfont: false #参看https://akilar.top/posts/d2ebecef/
-    carousel: false #https://gcore.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js
-    tag_plugins_css: https://gcore.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css
+    carousel: false #https://gcore.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/assets/carousel-touch.js
+    tag_plugins_css: https://gcore.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/tag_plugins.css
 
 wowjs:
   enable: false #控制动画开关。true是打开，false是关闭

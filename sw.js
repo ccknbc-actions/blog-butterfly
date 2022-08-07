@@ -19,7 +19,7 @@ workbox.core.setCacheNameDetails({
     suffix: '缓存',
     precache: '离线后备',
     runtime: '运行时',
-    // googleAnalytics: '谷歌分析'
+    googleAnalytics: '谷歌分析'
 });
 
 //直接激活跳过等待阶段
@@ -240,7 +240,7 @@ workbox.routing.registerRoute(
 //     })
 // );
 
-// workbox.googleAnalytics.initialize();
+workbox.googleAnalytics.initialize();
 
 const cdn = {
     gh: {
@@ -248,7 +248,6 @@ const cdn = {
         fastly: 'https://fastly.jsdelivr.net/gh',
         gcore: 'https://gcore.jsdelivr.net/gh',
         bilicdn: 'https://cdn.bilicdn.tk/gh',
-        onmicrosoft: 'https://jsd.onmicrosoft.cn/gh',
         babiejiu: 'https://jsd.8b9.cn/gh',
         tianli: 'https://cdn1.tianli0.top/gh',
         testingcf: 'https://testingcf.jsdelivr.net/gh',
@@ -258,6 +257,10 @@ const cdn = {
         // jsdelivr: 'https://cdn.jsdelivr.net/combine',
         fastly: 'https://fastly.jsdelivr.net/combine',
         gcore: 'https://gcore.jsdelivr.net/combine',
+        bilicdn: 'https://cdn.bilicdn.tk/combine',
+        babiejiu: 'https://jsd.8b9.cn/combine',
+        arcitcgn: 'https://npm.arcitcgn.cn',
+        tianli: 'https://cdn1.tianli0.top/combine',
         testingcf: 'https://testingcf.jsdelivr.net/combine',
         test1: 'https://test1.jsdelivr.net/combine'
     },
@@ -266,8 +269,8 @@ const cdn = {
         fastly: 'https://fastly.jsdelivr.net/npm',
         gcore: 'https://gcore.jsdelivr.net/npm',
         bilicdn: 'https://cdn.bilicdn.tk/npm',
-        onmicrosoft: 'https://jsd.onmicrosoft.cn/npm',
         babiejiu: 'https://jsd.8b9.cn/npm',
+        arcitcgn: 'https://npm.arcitcgn.cn',
         tianli: 'https://cdn1.tianli0.top/npm',
         testingcf: 'https://testingcf.jsdelivr.net/npm',
         test1: 'https://test1.jsdelivr.net/npm',

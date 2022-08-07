@@ -10,11 +10,11 @@ subtitle: Blogroll
 date: 2020-06-04 22:17:49
 updated: 2021-07-18 19:38:19
 ---
-<div class='js-pjax' id='blogroll'>
+<div id='blogroll'>
 <script src='https://gcore.jsdelivr.net/npm/butterfly-friend/butterfly-friend.umd.js'></script>
 <link rel="stylesheet" href='https://gcore.jsdelivr.net/npm/butterfly-friend/style.css'>
 <script>
-document.querySelector('.flink').insertAdjacentHTML('afterbegin',"<div id='friend1'></div>")
+document.querySelector('.flink').insertAdjacentHTML('afterbegin',"<div id='friend1' class='js-pjax'></div>")
 xkFriend.init({
   el: '#friend1', // 挂载容器
   api: [
