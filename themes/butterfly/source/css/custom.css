@@ -30,40 +30,25 @@
         transform: rotate(-1turn)
     }
 }
-/* #content-inner.layout h1::before {
-    margin-left: -1.55rem;
-    margin-top: -0.23rem;
+/* #article-container.post-content  h1::before {
     content:'H₁'
 } */
-#content-inner.layout h2::before {
-    margin-left: -1.55rem;
-    margin-top: -0.12rem;
+#article-container.post-content  h2::before {
     content:'H₂'
 }
-#content-inner.layout h3::before {
-    margin-left: -1.22rem;
-    margin-top: -0.09rem;
+#article-container.post-content  h3::before {
     content:'H₃'
 }
-#content-inner.layout h4::before {
-    margin-left: -1.05rem;
-    margin-top: -0.09rem;
+#article-container.post-content  h4::before {
     content:'H₄'
 }
-#content-inner.layout h5::before {
-    margin-left: -0.9rem;
-    margin-top: 0.0rem;
+#article-container.post-content  h5::before {
     content:'H₅'
 }
-#content-inner.layout h6::before {
-    margin-left: -0.9rem;
-    margin-top: 0.0rem;
+#article-container.post-content  h6::before {
     content:'H₆'
 }
-#article-container .fa-solid.fa-hashtag {
-    float: right;
-}
 
-#article-container .fa-solid.fa-hashtag :hover{
-    color: #2fcc66 ;
+#article-container .fa-solid.fa-hashtag {
+    float: right
 }

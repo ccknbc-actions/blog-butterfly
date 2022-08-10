@@ -19,8 +19,8 @@ menu:
     订阅: /sub || fa-solid fa-rss
     本站: /about || fa-solid fa-list-check
     隐私: /privacy-policy || fa-solid fa-user-secret
-    状态: https://cc.instatus.com || fa-solid fa-server
-    遗嘱: /will || fa-solid fa-solid fa-file-pen
+    # 状态: https://cc.instatus.com || fa-solid fa-server
+    # 遗嘱: /will || fa-solid fa-solid fa-file-pen
     # 自己: /me/ || far fa-user
     # 证书: https://ssl.ccknbc.cc || fa-brands fa-expeditedssl
 
@@ -69,9 +69,7 @@ social:
 # Algolia search
 algolia_search:
   enable: true
-  # searchAsYouType: false
-  per_page: 5
-  # totalPages: 5
+  searchAsYouType: false
 
 # Local search
 local_search:
@@ -859,7 +857,7 @@ darkmode:
 rightside_item_order:
   enable: true
   hide: hideAside,readmode,translate,darkmode,chat
-  show: toc,comment
+  show: toc,comment,share
 
 # Lightbox (圖片大圖查看模式)
 # --------------------------------------
@@ -996,6 +994,10 @@ snow:
 instatus:
   enable: true
 
+mourn:
+  enable: true
+  days: [4-4, 5-12, 12-13]
+
 # PWA
 # See https://github.com/JLHwung/hexo-offline
 # ---------------
@@ -1026,6 +1028,8 @@ inject:
     # - <script defer src="https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/js/announcement.js"></script>
     - <script>!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"JgUfbwUA5BsLeAIc",ck:"JgUfbwUA5BsLeAIc",autoTrack:true});</script>
     - <script>!(function(c,i,e,b){var h=i.createElement("script");var f=i.getElementsByTagName("script")[0];h.type="text/javascript";h.crossorigin=true;h.onload=function(){new c[b]["Monitor"]().init({id:"JgUg7s8ImDkwb2V7",sendSuspicious:true});};f.parentNode.insertBefore(h,f);h.src=e;})(window,document,"https://sdk.51.la/perf/js-sdk-perf.min.js","LingQue");</script>
+    # - <script defer src="https://gcore.jsdelivr.net/gh/Gahotx/cdn@master/js/clipboard.min.js"></script>
+    - <script defer src="https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/js/share.min.js"></script>
     # - <script defer src="https://cc.instatus.com/widget/script.js"></script>
     # - <script defer src='https://api.vvhan.com/api/snow'></script>
     # - <script defer src="https://api.vvhan.com/api/denglong"></script>

@@ -178,7 +178,9 @@ feed:
     - ./source/_data/rss.xml
 
 sitemap:
-  path: sitemap.xml
+  path: 
+    - sitemap.xml
+    - sitemap.txt
   template:
   rel: true
   tags: false
@@ -203,6 +205,8 @@ algolia:
   appId: "947RX7HP3E"
   applicationID: "947RX7HP3E"
   apiKey: "9114b3fa2a3307b2cc8eec7e3ae5a8ea"
+  totalPages: "1"
+  per_page: "100"
   chunkSize: 5000
   indexName: "ccknbc-blog"
   fields:

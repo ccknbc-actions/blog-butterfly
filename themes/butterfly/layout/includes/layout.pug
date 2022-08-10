@@ -4,6 +4,8 @@
 - var pageType = is_post() ? 'post' : 'page'
 
 doctype html
+if theme.mourn.enable
+  include ./mourn.pug
 html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside)
   head
     include ./head.pug

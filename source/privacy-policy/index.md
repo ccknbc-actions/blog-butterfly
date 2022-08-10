@@ -16,9 +16,9 @@ description: CC的部落格 隐私政策
 在您访问时，仅会处于以下目的，使用您的个人信息：
 
 - **[51.LA](https://www.51.la/about/privacy)** 会收集你的访问信息
-- **[灵雀应用监控平台](https://perf.51.la)**会收集你的访问操作过程和资源加载情况
+- **[灵雀应用监控平台](https://perf.51.la)** 会收集你的访问操作过程和资源加载情况
 - **[AddThis](https://www.addthis.com/privacy/privacy-policy)** 会收集你的访问信息
-- **[Tidio](https://www.tidio.com/privacy-policy/) ** 会收集你的访问信息
+- **[Tidio](https://www.tidio.com/privacy-policy/)** 会收集你的访问信息
 
 在访问时，本人仅会处于以下目的，使用你的个人信息：
 
