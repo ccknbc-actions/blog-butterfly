@@ -5,6 +5,9 @@ div
   if theme.addThis.enable
     script(src=`https://s7.addthis.com/js/300/addthis_widget.js#pubid=${theme.addThis.pubid}` defer)
 
+  if theme.instatus.enable && is_current('/404' || '/offline')
+    script(defer src=`https://cc.instatus.com/widget/script.js`)
+
   if !(is_post()) && theme.snow.enable
     script(defer src=`https://api.vvhan.com/api/snow`)
 
@@ -29,7 +32,7 @@ div
     != partial("includes/third-party/pangu.pug", {}, { cache: true })
 
   if theme.pace.enable
-    script(src=url_for(theme.CDN.pace))
+    script(data-pace-options='{ "restartOnRequestAfter":false,"eventLag":false}', src=url_for(theme.CDN.pace))
 
   //- search
   if theme.algolia_search.enable
@@ -78,4 +81,4 @@ div
     != partial("includes/third-party/pjax", {}, { cache: true })
 
   if theme.busuanzi.site_uv || theme.busuanzi.site_pv || theme.busuanzi.page_pv
-    script(async data-pjax src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js')
+    script(async data-pjax src='https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js')

@@ -101,7 +101,7 @@ window.addEventListener('load', () => {
                         ? cutContent(result.content.value)
                         : ''
         return `
-          <a href="${link}" class="algolia-hit-item-link">
+        <a href="${link}#:~:text=${content.substring(content.indexOf('<mark>')-3,content.indexOf('<mark>'))}-,${content.substring(content.indexOf('<mark>')+6,content.indexOf('</mark>'))},-${content.substring(content.indexOf('</mark>')+7,content.indexOf('</mark>')+10)}" class="algolia-hit-item-link">
           ${result.title.value || 'no-title'}
           <p class="algolia-hit-item-content">${content}</p></a>`
       },
