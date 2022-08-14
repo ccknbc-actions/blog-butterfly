@@ -6,13 +6,14 @@ menu:
   # 首页: / || fa-solid fa-house-chimney
   # 订阅: /sub/ || fa-solid fa-rss
   # 友链: /blogroll/ || fa-solid fa-user-friends
+  浏览: javascript:randomPost(); || fa-solid fa-shuffle
   文章 || fa-solid fa-book-reader:
     归档: /archives || fa-solid fa-box-archive
     标签: /tags || fa-solid fa-tags
     分类: /categories || fa-solid fa-folder-open
   社交 || fa-solid fa-cubes:
     友链: /blogroll || fa-solid fa-link
-    朋友圈: /moments || fa-solid fa-blog
+    友圈: /moments || fa-solid fa-blog
     # 音乐: /music || fa-solid fa-music
     短文: /essay || fa-solid fa-comment-alt
   关于 || fa-solid fa-desktop:
@@ -153,7 +154,7 @@ error_img:
 # A simple 404 page
 error_404:
   enable: true
-  subtitle: Oops! 页面已删除~
+  subtitle: Oops! 页面不存在~
   background: https://gejiba.com/view.php/3c3845c98419b590d7f6b6c8ec6add1c.gif
 
 post_meta:
@@ -221,11 +222,12 @@ edit:
   yuque: https://www.yuque.com/ccknbc/blog/
   # gitlab: false
   # gitlab_ide: false
-  # cloud_studio: false
+  cloud_studio: false
   hexoplusplus: false
+  github: https://github.com/ccknbc-actions/blog-butterfly/edit/
   gitlab: https://gitlab.com/CCKNBC/ccknbc.gitlab.io/-/edit/
   gitlab_ide: https://gitlab.com/-/ide/project/CCKNBC/ccknbc.gitlab.io/edit/
-  cloud_studio: https://ccknbc.cloudstudio.net/ws/zknrue
+  # cloud_studio: https://ccknbc.cloudstudio.net/ws/zknrue
   # hexoplusplus: https://hpp.ccknbc.workers.dev/hpp/admin/dash/edit
 
 # Related Articles
@@ -716,6 +718,10 @@ subtitle:
   # Typewriter Effect (打字效果)
   effect: true
   # loop (循環打字)
+  # Effect Speed Options (打字效果速度參數)
+  startDelay: 300 # time before typing starts in milliseconds
+  typeSpeed: 150 # type speed in milliseconds
+  backSpeed: 50 # backspacing speed in milliseconds
   loop: true
   # source調用第三方服務
   # source: false 關閉調用
@@ -900,46 +906,6 @@ note:
 # other
 # --------------------------------------
 
-# Artitalk
-# see https://artitalk.js.org/
-artitalk:
-  enable: false
-  appId: pvExDcJ4o0gsrOI1G1eGO01H-MdYXbMMI
-  appKey: D4V4sTiVUkTmOqyVyBN79iDB
-  path: say
-  js:
-  option:
-  front_matter:
-    title: 说说
-    description: CC的部落格 说说
-    comments: false
-    aside: false
-    top_img: false
-    translate_title: say
-    date: 2021-02-11 22:38:59
-    updated: 2021-02-11 22:38:59
-
-# HexoPlusPlus Talk
-# see https://hexoplusplus.js.org
-hpptalk:
-  enable: false
-  domain: blog.ccknbc.workers.dev
-  path: talk
-  limit:
-  start:
-  js:
-  css:
-  option:
-  front_matter:
-    title: 叨叨
-    top_img: false
-    comments: false
-    aside: false
-    translate_title: talk
-    date: 2021-02-11 22:38:59
-    updated: 2021-02-11 22:38:59
-    description: CC的部落格 叨叨
-
 # Pjax [Beta]
 # It may contain bugs and unstable, give feedback when you find the bugs.
 # https://github.com/MoOx/pjax
@@ -996,7 +962,7 @@ instatus:
 
 mourn:
   enable: true
-  days: [4-4, 5-12, 12-13]
+  days: [4-4, 4-5, 5-12, 7-7, 8-14, 9-9, 9-18, 9-30, 12-13]
 
 # PWA
 # See https://github.com/JLHwung/hexo-offline
@@ -1029,7 +995,7 @@ inject:
     - <script>!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"JgUfbwUA5BsLeAIc",ck:"JgUfbwUA5BsLeAIc",autoTrack:true});</script>
     - <script>!(function(c,i,e,b){var h=i.createElement("script");var f=i.getElementsByTagName("script")[0];h.type="text/javascript";h.crossorigin=true;h.onload=function(){new c[b]["Monitor"]().init({id:"JgUg7s8ImDkwb2V7",sendSuspicious:true});};f.parentNode.insertBefore(h,f);h.src=e;})(window,document,"https://sdk.51.la/perf/js-sdk-perf.min.js","LingQue");</script>
     # - <script defer src="https://gcore.jsdelivr.net/gh/Gahotx/cdn@master/js/clipboard.min.js"></script>
-    - <script defer src="https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/js/share.min.js"></script>
+    - <script defer src="/js/custom.js"></script>
     # - <script defer src="https://cc.instatus.com/widget/script.js"></script>
     # - <script defer src='https://api.vvhan.com/api/snow'></script>
     # - <script defer src="https://api.vvhan.com/api/denglong"></script>
@@ -1110,4 +1076,3 @@ CDN:
   # other
   pace: https://gcore.jsdelivr.net/gh/CodeByZach/pace/pace.min.js
   ccknbc: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/js/ccknbc.js
-  discuss: https://gcore.jsdelivr.net/npm/discuss/dist/discuss.js

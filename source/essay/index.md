@@ -8,6 +8,11 @@ translate_title: essay
 aside: false
 description: CC的部落格 即刻短文页面
 ---
+<div class="btn-center">
+{% btn 'https://ispeak-biubiu.vercel.app',发表短文,fa-regular fa-message,outline green larger %}
+{% btn 'https://kkadmin.ccknbc.vercel.app/#/ispeak/list',管理短文,fa-solid fa-user-pen,green larger %}
+</div>
+
 <div class="js-pjax" id="tip" style="text-align:center;">ipseak加载中</div>
 <div class="js-pjax" id="ispeak"></div>
 <link

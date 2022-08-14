@@ -247,9 +247,6 @@ const cdn = {
         // jsdelivr: 'https://cdn.jsdelivr.net/gh',
         fastly: 'https://fastly.jsdelivr.net/gh',
         gcore: 'https://gcore.jsdelivr.net/gh',
-        bilicdn: 'https://cdn.bilicdn.tk/gh',
-        babiejiu: 'https://jsd.8b9.cn/gh',
-        tianli: 'https://cdn1.tianli0.top/gh',
         testingcf: 'https://testingcf.jsdelivr.net/gh',
         test1: 'https://test1.jsdelivr.net/gh'
     },
@@ -257,10 +254,6 @@ const cdn = {
         // jsdelivr: 'https://cdn.jsdelivr.net/combine',
         fastly: 'https://fastly.jsdelivr.net/combine',
         gcore: 'https://gcore.jsdelivr.net/combine',
-        bilicdn: 'https://cdn.bilicdn.tk/combine',
-        babiejiu: 'https://jsd.8b9.cn/combine',
-        arcitcgn: 'https://npm.arcitcgn.cn',
-        tianli: 'https://cdn1.tianli0.top/combine',
         testingcf: 'https://testingcf.jsdelivr.net/combine',
         test1: 'https://test1.jsdelivr.net/combine'
     },
@@ -268,10 +261,6 @@ const cdn = {
         // jsdelivr: 'https://cdn.jsdelivr.net/npm',
         fastly: 'https://fastly.jsdelivr.net/npm',
         gcore: 'https://gcore.jsdelivr.net/npm',
-        bilicdn: 'https://cdn.bilicdn.tk/npm',
-        babiejiu: 'https://jsd.8b9.cn/npm',
-        arcitcgn: 'https://npm.arcitcgn.cn',
-        tianli: 'https://cdn1.tianli0.top/npm',
         testingcf: 'https://testingcf.jsdelivr.net/npm',
         test1: 'https://test1.jsdelivr.net/npm',
         unpkg: 'https://unpkg.com'

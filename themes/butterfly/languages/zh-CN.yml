@@ -37,8 +37,7 @@ post:
 
 edit:
   yuque: 在语雀上以富文本格式编辑/预览
-  yuque_markdown: 在语雀上以 MarkDown 格式编辑
-  yuque_html: 在语雀上以 Html 格式编辑
+  github: 在 GitHub 上编辑/预览
   gitlab: 在 GitLab 上编辑/预览
   gitlab_ide: 在 GitLab IDE 上编辑/预览
   github1s: 在 GitHub1s 上编辑

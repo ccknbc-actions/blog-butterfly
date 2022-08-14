@@ -137,6 +137,22 @@ index_generator:
   per_page: 10
   order_by: -date
 
+archive_generator:
+  enabled: true
+  per_page: 0
+  yearly: false
+  monthly: false
+  daily: false
+  order_by: -date
+
+category_generator:
+  per_page: 0
+  order_by: -date
+
+tag_generator:
+  per_page: 0
+  order_by: -date
+
 default_category:
 category_map:
 tag_map:
@@ -178,7 +194,7 @@ feed:
     - ./source/_data/rss.xml
 
 sitemap:
-  path: 
+  path:
     - sitemap.xml
     - sitemap.txt
   template:
@@ -220,55 +236,6 @@ nofollow:
   exclude:
     - "ccknbc.cc"
     - "www.ccknbc.cc"
-
-archive_generator:
-  enabled: true
-  per_page: 0
-  yearly: false
-  monthly: false
-  daily: false
-  order_by: -date
-
-category_generator:
-  per_page: 0
-  order_by: -date
-
-tag_generator:
-  per_page: 0
-  order_by: -date
-
-memorial_day:
-  enable: false
-  day: 2021-12-13
-
-douban:
-  user: CCKNBC
-  builtin: true
-  book:
-    title: "This is my book title"
-    quote: "This is my book quote"
-    meta: true
-    comments: true
-    top_img: false
-    aside: false
-    path: books
-  movie:
-    title: "我看过的影视"
-    quote: "我看过的影视"
-    meta: true
-    comments: true
-    top_img: false
-    aside: false
-    path: movies
-  # game:
-  #   title: 'This is my game title'
-  #   quote: 'This is my game quote'
-  #   meta: true
-  #   comments: true
-  #   top_img: false
-  #   aside: false
-  #   path: games
-  timeout: 10000
 
 mmedia:
   audio:
@@ -386,15 +353,6 @@ wowjs:
       iteration: 2 #选填项，动画重复的次数
     - class: card-widget
       style: animate__zoomIn
-
-# SW-Racing
-# https://github.com/Lete114/SW-Racing
-SWRacing:
-  enable: false # 是否使用sw
-  register: true # true: 注册sw | false: 注销
-  file: sw.js # sw的文件名
-  location: head_begin # 插入页面的位置 https://hexo.io/zh-cn/api/injector#entry-lt-string-gt
-  page: default # 插入到哪些页面 https://hexo.io/zh-cn/api/injector#to-lt-string-gt
 
 readmore:
   # 是否启用

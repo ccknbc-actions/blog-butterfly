@@ -4,8 +4,6 @@
 - var pageType = is_post() ? 'post' : 'page'
 
 doctype html
-if theme.mourn.enable
-  include ./mourn.pug
 html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside)
   head
     include ./head.pug
@@ -13,9 +11,12 @@ html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside
     if theme.preloader
       !=partial('includes/loading/loading', {}, {cache: true})
 
+    if theme.mourn.enable
+      include ./mourn.pug
+
     if theme.background
       #web_bg
-      
+
     !=partial('includes/sidebar', {}, {cache: true})
 
     if page.type !== '404'
