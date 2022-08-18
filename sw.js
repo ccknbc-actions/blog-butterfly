@@ -172,12 +172,12 @@ workbox.routing.registerRoute(
         plugins: [
             new workbox.expiration.ExpirationPlugin({
                 maxEntries: 50,
-                maxAgeSeconds: 60 * 60 * 24 * 7,
+                maxAgeSeconds: 60 * 60 * 24,
                 purgeOnQuotaError: true
             }),
-            new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200],
-            }),
+            // new workbox.cacheableResponse.CacheableResponsePlugin({
+            //     statuses: [0, 200],
+            // })
         ],
     }),
 );
@@ -208,7 +208,7 @@ workbox.routing.registerRoute(
 );
 workbox.routing.registerRoute(
     /^https:\/\/fonts\.gstatic\.com/,
-    new workbox.strategies.CacheFirst({
+    new workbox.strategies.StaleWhileRevalidate({
         cacheName: '谷歌字体',
         plugins: [
             new workbox.expiration.ExpirationPlugin({
@@ -216,9 +216,9 @@ workbox.routing.registerRoute(
                 maxAgeSeconds: 60 * 60 * 24 * 30,
                 purgeOnQuotaError: true
             }),
-            new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200]
-            })
+            // new workbox.cacheableResponse.CacheableResponsePlugin({
+            //     statuses: [0, 200]
+            // })
         ]
     })
 );
@@ -245,22 +245,22 @@ workbox.googleAnalytics.initialize();
 const cdn = {
     gh: {
         // jsdelivr: 'https://cdn.jsdelivr.net/gh',
-        fastly: 'https://fastly.jsdelivr.net/gh',
         gcore: 'https://gcore.jsdelivr.net/gh',
+        fastly: 'https://fastly.jsdelivr.net/gh',
         testingcf: 'https://testingcf.jsdelivr.net/gh',
         test1: 'https://test1.jsdelivr.net/gh'
     },
     combine: {
         // jsdelivr: 'https://cdn.jsdelivr.net/combine',
-        fastly: 'https://fastly.jsdelivr.net/combine',
         gcore: 'https://gcore.jsdelivr.net/combine',
+        fastly: 'https://fastly.jsdelivr.net/combine',
         testingcf: 'https://testingcf.jsdelivr.net/combine',
         test1: 'https://test1.jsdelivr.net/combine'
     },
     npm: {
         // jsdelivr: 'https://cdn.jsdelivr.net/npm',
-        fastly: 'https://fastly.jsdelivr.net/npm',
         gcore: 'https://gcore.jsdelivr.net/npm',
+        fastly: 'https://fastly.jsdelivr.net/npm',
         testingcf: 'https://testingcf.jsdelivr.net/npm',
         test1: 'https://test1.jsdelivr.net/npm',
         unpkg: 'https://unpkg.com'

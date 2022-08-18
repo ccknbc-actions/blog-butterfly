@@ -301,10 +301,10 @@
         margin-top: 8px
         padding: 0
         width: max-content
+        border-radius: 5px
         background-color: var(--sidebar-bg)
         box-shadow: 0 5px 20px -4px rgba($dark-black, .5)
         animation: sub_menus .3s .1s ease both
-        border-radius: 5px
 
         &:before
           position: absolute
@@ -323,9 +323,11 @@
           &:first-child
             border-top-left-radius: 5px
             border-top-right-radius: 5px
+
           &:last-child
-            border-bottom-left-radius: 5px
             border-bottom-right-radius: 5px
+            border-bottom-left-radius: 5px
+
           a
             display: inline-block
             padding: 8px 16px
