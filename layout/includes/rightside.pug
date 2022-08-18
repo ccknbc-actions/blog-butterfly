@@ -38,7 +38,6 @@ mixin rightsideItem(array)
   - const hideArray = enable ? hide && hide.split(',') : ['readmode','translate','darkmode','hideAside']
   - const showArray = enable ? show && show.split(',') : ['toc','chat','comment', 'share']
 
-  
   #rightside-config-hide
     if theme.edit.enable && page.edit !== false
       if is_post()
@@ -54,6 +53,9 @@ mixin rightsideItem(array)
         if theme.edit.hexoplusplus !== false
           a.edit-hexoplusplus(href=theme.edit.hexoplusplus title=_p('edit.hexoplusplus'))
             i.fa-solid.fa-pencil-alt
+        if theme.edit.gitlhub !== false
+          a.edit-github(href=theme.edit.github + 'posts/语雀/' + page.title + '.md' title=_p('edit.github') + ' - ' + page.title)
+            i.fa-brands.fa-github
         if theme.edit.yuque !== false
           a.edit-yuque(href=theme.edit.yuque + page.id + '/edit' title=_p('edit.yuque') + ' - ' + page.title)
             i.fa-solid.fa-crow
@@ -67,6 +69,9 @@ mixin rightsideItem(array)
         if theme.edit.gitlab !== false
           a.edit-gitlab(href=theme.edit.gitlab + 'master/source/' + page.source title=_p('edit.gitlab') + ' - ' + page.title)
             i.fa-brands.fa-gitlab
+        if theme.edit.github !== false
+          a.edit-github(href=theme.edit.github + 'master/source/' + page.source title=_p('edit.github') + ' - ' + page.title)
+            i.fa-brands.fa-github
       else if is_home()
         if theme.edit.cloud_studio !== false
           a.edit-cloud-studio(href=theme.edit.cloud_studio title=_p('edit.cloud_studio'))
