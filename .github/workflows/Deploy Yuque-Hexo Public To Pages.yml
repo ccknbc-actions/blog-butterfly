@@ -79,10 +79,9 @@ jobs:
           gitee-password: ${{ secrets.GITEE_PASSWORD }}
           gitee-repo: ccknbc/ccknbc
 
-      # - name: Sync RSS
-      #   run: |
-      #     curl 'https://kkapi.ccknbc.vercel.app/api/open/github/dispatch&owner=ccknbc-actions&repo=home&token=${{ secrets.GH_TOKEN }}&text=RSS'
-      #     curl -X POST -F token=${{ secrets.GITLAB_TRIGGER_TOKEN }} -F ref=master https://gitlab.com/api/v4/projects/22130436/trigger/pipeline
+      - name: Update GitLab Pages
+        run: |
+          curl -X POST --fail -F token=${{ secrets.GITLAB_TRIGGER_TOKEN }} -F ref=master https://gitlab.com/api/v4/projects/20691160/trigger/pipeline
 
       - name: Delete Workflow Runs
         uses: Mattraks/delete-workflow-runs@main

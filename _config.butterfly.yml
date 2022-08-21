@@ -6,7 +6,7 @@ menu:
   # 首页: / || fa-solid fa-house-chimney
   # 订阅: /sub/ || fa-solid fa-rss
   # 友链: /blogroll/ || fa-solid fa-user-friends
-  浏览: javascript:randomPost(); || fa-solid fa-shuffle
+  浏览: javascript:toRandomPost(); || fa-solid fa-shuffle
   文章 || fa-solid fa-book-reader:
     归档: /archives || fa-solid fa-box-archive
     标签: /tags || fa-solid fa-tags
@@ -222,13 +222,9 @@ edit:
   yuque: https://www.yuque.com/ccknbc/blog/
   # gitlab: false
   # gitlab_ide: false
-  cloud_studio: false
-  hexoplusplus: false
   github: https://github.com/ccknbc-actions/blog-butterfly/edit/
   gitlab: https://gitlab.com/CCKNBC/ccknbc.gitlab.io/-/edit/
   gitlab_ide: https://gitlab.com/-/ide/project/CCKNBC/ccknbc.gitlab.io/edit/
-  # cloud_studio: https://ccknbc.cloudstudio.net/ws/zknrue
-  # hexoplusplus: https://hpp.ccknbc.workers.dev/hpp/admin/dash/edit
 
 # Related Articles
 related_post:

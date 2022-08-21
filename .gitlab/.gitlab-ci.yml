@@ -1,0 +1,10 @@
+image: node:latest
+pages:
+  stage: deploy
+  script:
+    - git clone https://github.com/CCKNBC/ccknbc.github.io.git public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master

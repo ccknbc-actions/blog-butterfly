@@ -9,7 +9,7 @@ updated: 2021-10-18 19:38:19
 ---
 ## 镜像站点
 
-{% note success flat %} 以下排名不分先后，请选择适合自己访问较快的即可</br> **[GitHub](https://ccknbc.github.io) | [Gitee](https://ccknbc.gitee.io) | [Bitbucket](https://ccknbc.bitbucket.io) | [Vercel](https://ccknbc.vercel.app) | [Netlify](https://ccknbc.netlify.app) | [CloudFlare](https://ccknbc.pages.dev)** {% endnote %}
+{% note success flat %} 以下排名不分先后，请选择适合自己访问较快的即可</br> **[GitHub](https://ccknbc.github.io) | [GitLab](https://ccknbc.gitlab.io) | [Gitee](https://ccknbc.gitee.io) | [Bitbucket](https://ccknbc.bitbucket.io) | [Vercel](https://ccknbc.vercel.app) | [Netlify](https://ccknbc.netlify.app) | [CloudFlare](https://ccknbc.pages.dev)** {% endnote %}
 
 ## 站点源码
 

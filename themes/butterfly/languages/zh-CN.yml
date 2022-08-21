@@ -40,9 +40,6 @@ edit:
   github: 在 GitHub 上编辑/预览
   gitlab: 在 GitLab 上编辑/预览
   gitlab_ide: 在 GitLab IDE 上编辑/预览
-  github1s: 在 GitHub1s 上编辑
-  cloud_studio: 在 Cloud Studio 上编辑/预览
-  hexoplusplus: 在 HexoPlusPlus 上编辑/预览
 
 search:
   title: 搜索

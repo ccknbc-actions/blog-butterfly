@@ -7,8 +7,7 @@ email: blog@ccknbc.cc
 language: zh-CN
 timezone: Asia/Shanghai
 
-url: https://blog.ccknbc.cc
-root: /
+url: https://blog.ccknbc.cc/
 permalink: posts/:translate_title/
 permalink_defaults:
 pretty_urls:

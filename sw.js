@@ -108,7 +108,7 @@ workbox.routing.registerRoute(Offline);
 
 // html 的缓存
 // HTML，如果你想让页面离线能够拜访，应用 NetworkFirst，如果不须要离线拜访，应用 NetworkOnly，其余策略均不倡议对 HTML 应用。
-workbox.routing.registerRoute(new RegExp(/.*\.html/), new workbox.strategies.NetworkFirst());
+workbox.routing.registerRoute(new RegExp(/.*\.html/), new workbox.strategies.NetworkOnly());
 
 // 一些缓存小策略
 // workbox.recipes.pageCache();
@@ -175,9 +175,9 @@ workbox.routing.registerRoute(
                 maxAgeSeconds: 60 * 60 * 24,
                 purgeOnQuotaError: true
             }),
-            // new workbox.cacheableResponse.CacheableResponsePlugin({
-            //     statuses: [0, 200],
-            // })
+            new workbox.cacheableResponse.CacheableResponsePlugin({
+                statuses: [0, 200],
+            })
         ],
     }),
 );
@@ -216,9 +216,9 @@ workbox.routing.registerRoute(
                 maxAgeSeconds: 60 * 60 * 24 * 30,
                 purgeOnQuotaError: true
             }),
-            // new workbox.cacheableResponse.CacheableResponsePlugin({
-            //     statuses: [0, 200]
-            // })
+            new workbox.cacheableResponse.CacheableResponsePlugin({
+                statuses: [0, 200]
+            })
         ]
     })
 );
