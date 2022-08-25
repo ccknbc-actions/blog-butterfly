@@ -41,18 +41,12 @@ mixin rightsideItem(array)
   #rightside-config-hide
     if theme.edit.enable && page.edit !== false
       if is_post()
-        if theme.edit.cloud_studio !== false
-          a.edit-cloud-studio(href=theme.edit.cloud_studio title=_p('edit.cloud_studio'))
-            i.fa-solid.fa-laptop-code
         if theme.edit.gitlab_ide !== false
           a.edit-gitlab-ide(href=theme.edit.gitlab_ide + 'posts/-/语雀/' + page.title + '.md' title=_p('edit.gitlab_ide') + ' - ' + page.title)
             i.fa-solid.fa-code
         if theme.edit.gitlab !== false
           a.edit-gitlab(href=theme.edit.gitlab + 'posts/语雀/' + page.title + '.md' title=_p('edit.gitlab') + ' - ' + page.title)
             i.fa-brands.fa-gitlab
-        if theme.edit.hexoplusplus !== false
-          a.edit-hexoplusplus(href=theme.edit.hexoplusplus title=_p('edit.hexoplusplus'))
-            i.fa-solid.fa-pencil-alt
         if theme.edit.gitlhub !== false
           a.edit-github(href=theme.edit.github + 'posts/语雀/' + page.title + '.md' title=_p('edit.github') + ' - ' + page.title)
             i.fa-brands.fa-github
@@ -60,9 +54,6 @@ mixin rightsideItem(array)
           a.edit-yuque(href=theme.edit.yuque + page.id + '/edit' title=_p('edit.yuque') + ' - ' + page.title)
             i.fa-solid.fa-crow
       else if is_page() || is_category() || is_tag()
-        if theme.edit.cloud_studio !== false
-          a.edit-cloud-studio(href=theme.edit.cloud_studio title=_p('edit.cloud_studio'))
-            i.fa-solid.fa-laptop-code
         if theme.edit.gitlab_ide  !== false
           a.edit-gitlab-ide(href=theme.edit.gitlab_ide + 'master/-/source/' + page.source title=_p('edit.gitlab_ide') + ' - ' + page.title)
             i.fa-solid.fa-code
@@ -73,9 +64,6 @@ mixin rightsideItem(array)
           a.edit-github(href=theme.edit.github + 'master/source/' + page.source title=_p('edit.github') + ' - ' + page.title)
             i.fa-brands.fa-github
       else if is_home()
-        if theme.edit.cloud_studio !== false
-          a.edit-cloud-studio(href=theme.edit.cloud_studio title=_p('edit.cloud_studio'))
-            i.fa-solid.fa-laptop-code
         if theme.edit.gitlab_ide !== false
           a.edit-gitlab-ide(href=theme.edit.gitlab_ide title=_p('edit.gitlab_ide'))
             i.fa-solid.fa-code
