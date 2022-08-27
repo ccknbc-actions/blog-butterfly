@@ -244,31 +244,31 @@ mmedia:
     default:
       controls: true
   aplayer:
-    js: https://gcore.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
-    css: https://gcore.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
+    js: https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.js
+    css: https://fastly.jsdelivr.net/npm/aplayer/dist/APlayer.min.css
     default:
       contents:
         lrcType: 3
   meting:
-    js: https://gcore.jsdelivr.net/npm/meting/dist/Meting.min.js
+    js: https://fastly.jsdelivr.net/npm/meting/dist/Meting.min.js
     api:
     default:
   dplayer:
-    js: https://gcore.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js
-    hls_js: https://gcore.jsdelivr.net/npm/hls.js/dist/hls.min.js
-    dash_js: https://gcore.jsdelivr.net/npm/dashjs/dist/dash.all.min.js
-    shaka_dash_js: https://gcore.jsdelivr.net/npm/shaka-player/dist/shaka-player.compiled.js
-    flv_js: https://gcore.jsdelivr.net/npm/flv.js/dist/flv.min.js
-    webtorrent_js: https://gcore.jsdelivr.net/npm/webtorrent/webtorrent.min.js
+    js: https://fastly.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js
+    hls_js: https://fastly.jsdelivr.net/npm/hls.js/dist/hls.min.js
+    dash_js: https://fastly.jsdelivr.net/npm/dashjs/dist/dash.all.min.js
+    shaka_dash_js: https://fastly.jsdelivr.net/npm/shaka-player/dist/shaka-player.compiled.js
+    flv_js: https://fastly.jsdelivr.net/npm/flv.js/dist/flv.min.js
+    webtorrent_js: https://fastly.jsdelivr.net/npm/webtorrent/webtorrent.min.js
     default:
       contents:
   artplayer:
-    js: https://gcore.jsdelivr.net/npm/artplayer/dist/artplayer.js
-    hls_js: https://gcore.jsdelivr.net/npm/hls.js/dist/hls.min.js
-    dash_js: https://gcore.jsdelivr.net/npm/dashjs/dist/dash.all.min.js
-    shaka_dash_js: https://gcore.jsdelivr.net/npm/shaka-player/dist/shaka-player.compiled.js
-    flv_js: https://gcore.jsdelivr.net/npm/flv.js/dist/flv.min.js
-    webtorrent_js: https://gcore.jsdelivr.net/npm/webtorrent/webtorrent.min.js
+    js: https://fastly.jsdelivr.net/npm/artplayer/dist/artplayer.js
+    hls_js: https://fastly.jsdelivr.net/npm/hls.js/dist/hls.min.js
+    dash_js: https://fastly.jsdelivr.net/npm/dashjs/dist/dash.all.min.js
+    shaka_dash_js: https://fastly.jsdelivr.net/npm/shaka-player/dist/shaka-player.compiled.js
+    flv_js: https://fastly.jsdelivr.net/npm/flv.js/dist/flv.min.js
+    webtorrent_js: https://fastly.jsdelivr.net/npm/webtorrent/webtorrent.min.js
     default:
       style: width:344px;height:193.5px
       contents:
@@ -332,12 +332,12 @@ tag_plugins:
   link:
     placeholder: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/logo/logo.png #link_card标签默认的图标图片
   CDN:
-    anima: https://gcore.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
-    # jquery: https://gcore.jsdelivr.net/npm/jquery/dist/jquery.min.js #issues标签依赖
-    # issues: https://gcore.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/assets/issues.js #issues标签依赖
+    anima: https://fastly.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
+    # jquery: https://fastly.jsdelivr.net/npm/jquery/dist/jquery.min.js #issues标签依赖
+    # issues: https://fastly.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/assets/issues.js #issues标签依赖
     iconfont: false #参看https://akilar.top/posts/d2ebecef/
-    carousel: false #https://gcore.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/assets/carousel-touch.js
-    tag_plugins_css: https://gcore.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/tag_plugins.css
+    carousel: false #https://fastly.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/assets/carousel-touch.js
+    tag_plugins_css: https://fastly.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus/lib/tag_plugins.css
 
 wowjs:
   enable: false #控制动画开关。true是打开，false是关闭

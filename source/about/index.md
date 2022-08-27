@@ -5,11 +5,11 @@ top_img: false
 translate_title: about
 subtitle: About
 date: 2020-08-08 14:55:19
-updated: 2021-10-18 19:38:19
+updated: 2022-08-27 12:00:00
 ---
 ## 镜像站点
 
-{% note success flat %} 以下排名不分先后，请选择适合自己访问较快的即可</br> **[GitHub](https://ccknbc.github.io) | [GitLab](https://ccknbc.gitlab.io) | [Gitee](https://ccknbc.gitee.io) | [Bitbucket](https://ccknbc.bitbucket.io) | [Vercel](https://ccknbc.vercel.app) | [Netlify](https://ccknbc.netlify.app) | [CloudFlare](https://ccknbc.pages.dev)** {% endnote %}
+{% note success flat %} 以下排名不分先后，请选择适合自己访问较快的即可</br> **[GitHub](https://github.blog.ccknbc.cc) | [GitLab](https://gitlab.blog.ccknbc.cc) | [Gitee](https://ccknbc.gitee.io) | [Bitbucket](https://ccknbc.bitbucket.io) | [Vercel](https://vercel.blog.ccknbc.cc) | [Netlify](https://netlify.blog.ccknbc.cc) | [CloudFlare](https://cloudflare.blog.ccknbc.cc)** {% endnote %}
 
 ## 站点源码
 

@@ -1,4 +1,4 @@
-importScripts('https://gcore.jsdelivr.net/npm/workbox-sw/build/workbox-sw.js');
+importScripts('https://fastly.jsdelivr.net/npm/workbox-sw/build/workbox-sw.js');
 
 if (workbox) {
     console.log('workbox加载成功🎉');
@@ -240,7 +240,7 @@ workbox.routing.registerRoute(
 //     })
 // );
 
-workbox.googleAnalytics.initialize();
+// workbox.googleAnalytics.initialize();
 
 const cdn = {
     gh: {

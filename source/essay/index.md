@@ -3,14 +3,14 @@ title: 短文
 top_img: false
 comments: false
 date: 2021-03-14 20:00:00
-updated: 2021-09-11 20:00:00
+updated: 2022-08-27 12:00:00
 translate_title: essay
 aside: false
 description: CC的部落格 即刻短文页面
 ---
 <div class="btn-center">
-{% btn 'https://ispeak-biubiu.vercel.app',发表短文,fa-regular fa-message,outline green larger %}
-{% btn 'https://kkadmin.ccknbc.vercel.app/#/ispeak/list',管理短文,fa-solid fa-user-pen,green larger %}
+{% btn 'https://ispeak-biubiu.ccknbc.cc',发表短文,fa-regular fa-message,outline green larger %}
+{% btn 'https://kkadmin.ccknbc.cc/#/ispeak/list',管理短文,fa-solid fa-user-pen,green larger %}
 </div>
 
 <div class="js-pjax" id="tip" style="text-align:center;">ipseak加载中</div>
@@ -21,7 +21,7 @@ description: CC的部落格 即刻短文页面
 />
 <link
   rel="stylesheet"
-  href="https://gcore.jsdelivr.net/npm/ispeak/style.css"
+  href="https://fastly.jsdelivr.net/npm/ispeak/style.css"
 />
 
 <style>
@@ -34,8 +34,8 @@ description: CC的部落格 即刻短文页面
 </style>
 <script src="https://cdn.staticfile.org/highlight.js/10.6.0/highlight.min.js"></script>
 <script src="https://cdn.staticfile.org/marked/2.0.0/marked.min.js"></script>
-<script src="https://gcore.jsdelivr.net/npm/discuss/dist/discuss.js"></script>
-<script src="https://gcore.jsdelivr.net/npm/ispeak/ispeak.umd.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/discuss/dist/discuss.js"></script>
+<script src="https://fastly.jsdelivr.net/npm/ispeak/ispeak.umd.js"></script>
 <script>
   var head = document.getElementsByTagName('head')[0]
   var meta = document.createElement('meta')
@@ -46,7 +46,7 @@ description: CC的部落格 即刻短文页面
     ispeak
       .init({
         el: '#ispeak',
-        api: 'https://kkapi.ccknbc.vercel.app/',
+        api: 'https://kkapi.ccknbc.cc/',
         author: '621cd42048c49d6f96787626',
         pageSize: 10,
         loading_img: 'https://gcore.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif',
@@ -55,12 +55,12 @@ description: CC的部落格 即刻短文页面
         initCommentName: 'discuss',
         initCommentOptions: {
           el: '#discuss',
-          serverURLs: 'https://discuss.ccknbc.vercel.app',
+          serverURLs: 'https://discuss.ccknbc.cc',
           color: '#8fbc8f',
           ph: '如您对我的叨叨有任何想法，欢迎发表您的意见',
           master: 'CC',
           visitStat: 'false',
-          emotCDN: 'https://gcore.jsdelivr.net/npm/discuss'
+          emotCDN: 'https://fastly.jsdelivr.net/npm/discuss'
         }
       })
       .then(function () {
