@@ -5,37 +5,36 @@ comments: false
 date: 2021-03-14 20:00:00
 updated: 2022-08-27 12:00:00
 translate_title: essay
+subtitle: Essay
 aside: false
 description: CC的部落格 即刻短文页面
 ---
 <div class="btn-center">
 {% btn 'https://ispeak-biubiu.ccknbc.cc',发表短文,fa-regular fa-message,outline green larger %}
-{% btn 'https://kkadmin.ccknbc.cc/#/ispeak/list',管理短文,fa-solid fa-user-pen,green larger %}
+{% btn 'https://kkadmin.ccknbc.cc/#/ispeak/list',管理短文,fa-solid fa-user-pen,outline green larger %}
 </div>
 
-<div class="js-pjax" id="tip" style="text-align:center;">ipseak加载中</div>
-<div class="js-pjax" id="ispeak"></div>
+<div id="tip" style="text-align:center;">ipseak加载中</div>
+<div id="ispeak"></div>
 <link
   rel="stylesheet"
-  href="https://cdn.staticfile.org/highlight.js/10.6.0/styles/atom-one-dark.min.css"
+  href="https://gcore.jsdelivr.net/npm/highlight.js/styles/atom-one-dark.min.css"
 />
 <link
   rel="stylesheet"
-  href="https://fastly.jsdelivr.net/npm/ispeak/style.css"
+  href="https://gcore.jsdelivr.net/npm/ispeak/style.css"
 />
 
-<style>
-  #article-container .D-avatar {
-    margin: 0 10px 0 0;
-  }
-  .D-footer {
-    display: none;
-  }
-</style>
-<script src="https://cdn.staticfile.org/highlight.js/10.6.0/highlight.min.js"></script>
-<script src="https://cdn.staticfile.org/marked/2.0.0/marked.min.js"></script>
-<script src="https://fastly.jsdelivr.net/npm/discuss/dist/discuss.js"></script>
-<script src="https://fastly.jsdelivr.net/npm/ispeak/ispeak.umd.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/highlight.js/highlight.min.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/marked@v3/marked.min.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/ispeak/ispeak.umd.js"></script>
+<!-- CSS -->
+<link
+  rel="stylesheet"
+  href="https://gcore.jsdelivr.net/npm/@waline/client/dist/waline.css"
+/>
+<!-- JS -->
+<script src="https://gcore.jsdelivr.net/npm/@waline/client/dist/waline.js"></script>
 <script>
   var head = document.getElementsByTagName('head')[0]
   var meta = document.createElement('meta')
@@ -49,18 +48,38 @@ description: CC的部落格 即刻短文页面
         api: 'https://kkapi.ccknbc.cc/',
         author: '621cd42048c49d6f96787626',
         pageSize: 10,
-        loading_img: 'https://gcore.jsdelivr.net/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif',
+        loading_img: 'https://bu.dusays.com/2022/05/01/626e88f349943.gif',
         speakPage: '/essay',
         githubClientId: 'Iv1.f333c02f5f6676e8',
-        initCommentName: 'discuss',
-        initCommentOptions: {
-          el: '#discuss',
-          serverURLs: 'https://discuss.ccknbc.cc',
-          color: '#8fbc8f',
-          ph: '如您对我的叨叨有任何想法，欢迎发表您的意见',
-          master: 'CC',
-          visitStat: 'false',
-          emotCDN: 'https://fastly.jsdelivr.net/npm/discuss'
+        comment: function (speak) {
+          // 4.4.0 之后在此回调函数中初始化评论
+          const { _id, title, content } = speak
+          const contentSub = content.substring(0, 30)
+          Waline.init({
+            el: '.ispeak-comment', // 默认情况下 ipseak 生成class为 ispeak-comment 的div
+            path: '/essay/speak?q=' + _id, // 手动传入当前speak的唯一id
+            title: title || contentSub, // 手动传入当前speak的标题(由于content可能过长，因此截取前30个字符)
+            serverURL: 'https://waline.ccknbc.cc',
+            pageview: false,
+            pageSize: 10,
+            requiredMeta: ["nick", "mail"],
+            login: 'enable',
+            dark: 'html[data-theme="dark"]',
+            copyright: false,
+            imageUploader: false,
+            locale:
+              [
+                "admin: 博主兼管理员",
+                "sofa: 这里冷冷清清的，快来留下脚印吧！",
+                "placeholder: 感谢各位的批评指正，期待与您交流！"
+              ],
+            emoji:
+              [
+                "https://gcore.jsdelivr.net/npm/sticker-heo/Sticker-100/",
+                "https://gcore.jsdelivr.net/npm/telegram-gif/Telegram-Gif/",
+                "https://gcore.jsdelivr.net/npm/@waline/emojis/tw-emoji/"
+              ]
+          })
         }
       })
       .then(function () {
@@ -71,3 +90,4 @@ description: CC的部落格 即刻短文页面
     document.getElementById('tip').innerHTML = 'ipseak依赖加载失败！'
   }
 </script>
+

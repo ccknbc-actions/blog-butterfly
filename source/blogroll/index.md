@@ -11,8 +11,8 @@ date: 2020-06-04 22:17:49
 updated: 2022-08-27 12:00:00
 ---
 <div id='blogroll'>
-<script src='https://fastly.jsdelivr.net/npm/butterfly-friend/butterfly-friend.umd.js'></script>
-<link rel="stylesheet" href='https://fastly.jsdelivr.net/npm/butterfly-friend/style.css'>
+<script src='https://gcore.jsdelivr.net/npm/butterfly-friend/butterfly-friend.umd.js'></script>
+<link rel="stylesheet" href='https://gcore.jsdelivr.net/npm/butterfly-friend/style.css'>
 <script>
 document.querySelector('.flink').insertAdjacentHTML('afterbegin',"<div id='friend1' class='js-pjax'></div>")
 xkFriend.init({
@@ -46,7 +46,7 @@ xkFriend.init({
 ```yaml
 name: CC康纳百川
 link: https://blog.ccknbc.cc
-avatar: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/ccknbc.png
+avatar: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/logo/ccknbc.png
 descr: CC康纳百川的小窝
 ```
 选填信息
@@ -69,7 +69,7 @@ screenshot: https://gcore.jsdelivr.net/gh/ccknbc-actions/blogroll@webp/blog.cckn
 ```yaml
 name: CC的部落格
 link: https://blog.ccknbc.cc
-avatar: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn@latest/logo/ccknbc.png
+avatar: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/logo/ccknbc.png
 descr: CC康纳百川
 --primary-color: linear-gradient(0deg,#ffdee9 0,#b5fffc 100%)
 --namecolor: #8fbc8f

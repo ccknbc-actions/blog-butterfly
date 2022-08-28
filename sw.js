@@ -1,4 +1,4 @@
-importScripts('https://fastly.jsdelivr.net/npm/workbox-sw/build/workbox-sw.js');
+importScripts('https://gcore.jsdelivr.net/npm/workbox-sw/build/workbox-sw.js');
 
 if (workbox) {
     console.log('workbox加载成功🎉');
@@ -171,12 +171,12 @@ workbox.routing.registerRoute(
         cacheName: '静态资源',
         plugins: [
             new workbox.expiration.ExpirationPlugin({
-                maxEntries: 50,
+                maxEntries: 100,
                 maxAgeSeconds: 60 * 60 * 24,
                 purgeOnQuotaError: true
             }),
             new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200],
+                statuses: [200],
             })
         ],
     }),
@@ -217,7 +217,7 @@ workbox.routing.registerRoute(
                 purgeOnQuotaError: true
             }),
             new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200]
+                statuses: [200]
             })
         ]
     })
