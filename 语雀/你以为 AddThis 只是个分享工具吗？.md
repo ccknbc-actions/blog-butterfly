@@ -10,18 +10,13 @@ categories: 工具
 description: 本文介绍了 AddThis 的使用
 cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/bbf0970587cfd0f4a654efda9c375844_w1920_h1080_s216.jpg
 id: 26
-aside: false
 ---
 
-本文介绍了 AddThis 的使用
+本文首发在**语雀**，自动同步更新至**CC 的部落格**
 
-<!-- more -->
+## Butterfly 如何使用
 
 打开 [**AddThis**](https://www.addthis.com/) 官网，标语是 Turn your visitors into engaged customers. 听起来是个营销工具，但[主题集成](https://butterfly.js.org/posts/ceeb73f/#分享)的时候选择了它，并且没有做特别说明，只是让我们找到 `pub-id` ，并没有说如何配置
-
-本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/24)
-
-自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/the-real-addthis)
 
 实际上要想和 AddToAny 或者 sharejs 一样使用文章内分享，我们得在控制台添加 Tools，就像下图所示
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1621142780727-b0ba0833-f60e-4a95-bb23-2875dd54c3c2.png#crop=0&crop=0&crop=1&crop=1&height=719&id=ue75333d4&margin=%5Bobject%20Object%5D&name=image.png&originHeight=719&originWidth=1036&originalType=binary&ratio=1&rotation=0&showTitle=false&size=69605&status=done&style=none&title=&width=1036)
@@ -30,6 +25,9 @@ aside: false
 后面样式部分就根据自己喜好和需求按钮多少，在哪些页面显示等来自行配置啦。比如我还同时选择了，自动展开分享按钮。而且他能很好的自适应，并且后台修改之后我们博客无需任何操作即可更新。
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1621143046263-9f6aafa6-32f0-4ff6-85e4-be1b7e375617.png#crop=0&crop=0&crop=1&crop=1&height=56&id=uc42770eb&margin=%5Bobject%20Object%5D&name=image.png&originHeight=56&originWidth=1020&originalType=binary&ratio=1&rotation=0&showTitle=false&size=9002&status=done&style=none&title=&width=1020)
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1621143097471-85b42c6c-3561-4348-a164-f312328a598c.png#crop=0&crop=0&crop=1&crop=1&height=60&id=u37bce032&margin=%5Bobject%20Object%5D&name=image.png&originHeight=60&originWidth=457&originalType=binary&ratio=1&rotation=0&showTitle=false&size=5342&status=done&style=none&title=&width=457)
+
+## 其他工具
+
 但还有其他工具也很好用，比如你点进文章来之前，应该有弹窗提示你要阅读隐私政策，实际上这是链接推广工具的活用。再比如放在顶栏作为临时公告，并且都有很好的自适应人性化选择，你下滑就会收起来，上滑再弹出。同样如果你是文章页或者订阅页面，因为我配置了仅在这些页面显示，会弹出一个订阅文章更新弹窗，这里收集邮件工具派上了用场，并且与 Mailchimp 配合完成了这项工作，至于配置邮件订阅，可以查看之前的文章 [**为你的 Hexo 博客添加邮件订阅**](/posts/add-email-subscription-to-your-hexo-blog/) 。
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1621144135285-b67842b1-b8c9-47a5-bf51-5bbe3e4953d5.png#crop=0&crop=0&crop=1&crop=1&height=780&id=u06f3186e&margin=%5Bobject%20Object%5D&name=image.png&originHeight=780&originWidth=422&originalType=binary&ratio=1&rotation=0&showTitle=false&size=36857&status=done&style=none&title=&width=422)
 不过为了邮件订阅，我同样整合到了 [Tidio](https://www.tidio.com/)，详情见[**订阅页面**](/sub)。当然如果你也在乎其他平台的关注数量，可以使用关注按钮来实现推广效果，文章推荐和打赏这里还是建议使用主题自带的就好。此外它还配有统计分析工具（这里强烈推荐您阅读 [**隐私政策**](/privacy-policy)），以帮助你实现更好的内容转化。
