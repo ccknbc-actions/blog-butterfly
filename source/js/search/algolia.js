@@ -33,33 +33,6 @@ window.addEventListener('load', () => {
     document.querySelector('#algolia-search .search-close-button').addEventListener('click', closeSearch)
   }
 
-  const cutContent = content => {
-    if (content === '') return ''
-
-    const firstOccur = content.indexOf('<mark>')
-
-    let start = firstOccur - 30
-    let end = firstOccur + 120
-    let pre = ''
-    let post = ''
-
-    if (start <= 0) {
-      start = 0
-      end = 140
-    } else {
-      pre = '...'
-    }
-
-    if (end > content.length) {
-      end = content.length
-    } else {
-      post = '...'
-    }
-
-    let matchContent = pre + content.substring(start, end) + post
-    return matchContent
-  }
-
   const algolia = GLOBAL_CONFIG.algolia
   const isAlgoliaValid = algolia.appId && algolia.apiKey && algolia.indexName
   if (!isAlgoliaValid) {
@@ -92,18 +65,17 @@ window.addEventListener('load', () => {
     templates: {
       item(data) {
         const link = data.permalink ? data.permalink : (GLOBAL_CONFIG.root + data.path)
-        const result = data._highlightResult
-        const content = result.contentStripTruncate
-                        ? cutContent(result.contentStripTruncate.value)
-                        : result.contentStrip
-                        ? cutContent(result.contentStrip.value)
-                        : result.content
-                        ? cutContent(result.content.value)
-                        : ''
+        const content = data._snippetResult.contentStrip.value
         return `
-        <a href="${link}#:~:text=${content.substring(content.indexOf('<mark>')-3,content.indexOf('<mark>'))}-,${content.substring(content.indexOf('<mark>')+6,content.indexOf('</mark>'))},-${content.substring(content.indexOf('</mark>')+7,content.indexOf('</mark>')+10)}" class="algolia-hit-item-link">
-          ${result.title.value || 'no-title'}
-          <p class="algolia-hit-item-content">${content}</p></a>`
+          <a href="${link}#:~:text=${content.substring(content.indexOf('<mark>')-3,content.indexOf('<mark>'))}-,${content.substring(content.indexOf('<mark>')+6,content.indexOf('</mark>'))},-${content.substring(content.indexOf('</mark>')+7,content.indexOf('</mark>')+10)}" class="algolia-hit-item-link">
+          <b>${data._highlightResult.title.value || "no-title"}</b>
+          <br>${content}</br>
+          匹配字词: <em><mark>${
+          data._highlightResult.contentStrip.matchedWords
+          }</mark></em> | 匹配等级: <em><mark>${
+          data._highlightResult.contentStrip.matchLevel
+          }</mark></em>
+          </a>`;
       },
       empty: function (data) {
         return (
@@ -138,9 +110,9 @@ window.addEventListener('load', () => {
     totalPages: algolia.totalPages,
     templates: {
       first: '<i class="fa-solid fa-angle-double-left" title="第一页"></i>',
-        last: '<i class="fa-solid fa-angle-double-right" title="最后一页"></i>',
-        previous: '<i class="fa-solid fa-angle-left" title="上一页"></i>',
-        next: '<i class="fa-solid fa-angle-right" title="下一页"></i>'
+      last: '<i class="fa-solid fa-angle-double-right" title="最后一页"></i>',
+      previous: '<i class="fa-solid fa-angle-left" title="上一页"></i>',
+      next: '<i class="fa-solid fa-angle-right" title="下一页"></i>'
     }
   })
 

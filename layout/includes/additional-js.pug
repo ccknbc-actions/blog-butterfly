@@ -2,14 +2,9 @@ div
   script(src=url_for(theme.asset.utils))
   script(src=url_for(theme.asset.main))
 
-  if theme.addThis.enable
-    script(src=`https://s7.addthis.com/js/300/addthis_widget.js#pubid=${theme.addThis.pubid}` defer)
-
-  if theme.instatus.enable && is_current('/404' || '/offline')
+  if theme.instatus.enable
     script(defer src=`https://cc.instatus.com/widget/script.js`)
 
-  if !(is_post()) && theme.snow.enable
-    script(defer src=`https://api.vvhan.com/api/snow`)
 
   if theme.translate.enable
     script(src=url_for(theme.asset.translate))
@@ -56,6 +51,15 @@ div
 
     if commentsJsLoad
       include ./third-party/comments/js.pug
+
+    if !(is_post()) && theme.snow.enable
+      script(defer src=`https://api.vvhan.com/api/snow`)
+
+    //- if theme.instatus.enable
+    //-   script(defer src=`https://cc.instatus.com/widget/script.js`)
+
+    if theme.addThis.enable && is_post()
+      script(src=`https://s7.addthis.com/js/300/addthis_widget.js#pubid=${theme.addThis.pubid}` defer)
 
   != partial("includes/third-party/prismjs", {}, { cache: true })
 
