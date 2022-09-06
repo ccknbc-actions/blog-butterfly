@@ -185,6 +185,14 @@ index_post_content:
   method: 2
   length: 100 # if you set method to 2 or 3, the length need to config
 
+# anchor
+anchor:
+  button:
+    enable: true
+    always_show: false
+    icon: # the unicode value of Font Awesome icon, such as '\3423'
+  auto_update: false # when you scroll in post, the URL will update according to header id.
+
 # Post
 # --------------------------------------
 
@@ -239,10 +247,6 @@ photofigcaption: false
 # 2: The 'next post' will link to new post
 # false: disable pagination
 post_pagination: true
-
-# anchor
-# when you scroll in post, the URL will update according to header id.
-anchor: false
 
 # Displays outdated notice for a post (文章過期提醒)
 noticeOutdate:
@@ -317,9 +321,9 @@ waline:
       placeholder: 感谢各位的批评指正，期待与您交流！
     emoji:
       [
-        "https://gcore.jsdelivr.net/npm/sticker-heo/Sticker-100/",
-        "https://gcore.jsdelivr.net/npm/telegram-gif/Telegram-Gif/",
-        "https://gcore.jsdelivr.net/npm/@waline/emojis/tw-emoji/",
+        "https://npm.elemecdn.com/sticker-heo/Sticker-100/",
+        "https://npm.elemecdn.com/telegram-gif/Telegram-Gif/",
+        "https://npm.elemecdn.com/@waline/emojis/tw-emoji/",
       ]
 
 discuss:
@@ -331,7 +335,7 @@ discuss:
     # imgLoading:  # 评论图片懒加载，加载动画，默认为1像素白色base64图
     visitStat: false # 是否开启访问统计，默认: false
     color: "#8fbc8f"
-    emotCDN: "https://gcore.jsdelivr.net/npm/discuss"
+    emotCDN: "https://npm.elemecdn.com/discuss"
 
 # Twikoo
 # https://github.com/imaegoo/twikoo
@@ -526,7 +530,7 @@ microsoft_clarity:
 
 # Google Adsense (谷歌廣告)
 google_adsense:
-  enable: true
+  enable: false
   auto_ads: false
   js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
   client: ca-pub-4962482948943075
@@ -536,7 +540,7 @@ google_adsense:
 ad:
   # index: <ins class="adsbygoogle"     style="display:block"     data-ad-format="fluid"     data-ad-layout-key="-6t+ed+2i-1n-4w"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="4937963308"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
   # aside: <ins class="adsbygoogle"     style="display:block"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="4550249483"     data-ad-format="auto"     data-full-width-responsive="true"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
-  post: <ins class="adsbygoogle"     style="display:block; text-align:center;"     data-ad-layout="in-article"     data-ad-format="fluid"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="1143882169"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
+  # post: <ins class="adsbygoogle"     style="display:block; text-align:center;"     data-ad-layout="in-article"     data-ad-format="fluid"     data-ad-client="ca-pub-4962482948943075"     data-ad-slot="1143882169"></ins><script>     (adsbygoogle = window.adsbygoogle || []).push({});</script>
 
 # Verification (站長驗證)
 # --------------------------------------
@@ -857,8 +861,8 @@ darkmode:
 # Don't repeat 不要重複
 rightside_item_order:
   enable: true
-  hide: hideAside,readmode,translate,darkmode,chat
-  show: toc,comment,share
+  hide: hideAside,readmode,translate,darkmode,share
+  show: toc,comment,chat
 
 # Lightbox (圖片大圖查看模式)
 # --------------------------------------
@@ -869,7 +873,7 @@ rightside_item_order:
 medium_zoom: false
 
 # fancybox
-# https://fancyapps.com/fancybox/3/
+# https://fancyapps.com/fancybox/4/
 fancybox: true
 
 # Tag Plugins settings (標籤外掛)

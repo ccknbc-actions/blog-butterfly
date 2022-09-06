@@ -38,6 +38,7 @@ workbox.precaching.cleanupOutdatedCaches();
 
 // 离线后备方式 1 需同步配置并开启预缓存且导航预加载并非所有浏览器支持 https://caniuse.com/mdn-api_navigationpreloadmanager_enable
 // Enable navigation preload.
+
 workbox.navigationPreload.enable();
 
 // The network-only callback should match navigation requests, and
@@ -143,14 +144,37 @@ workbox.routing.registerRoute(new RegExp(/.*\.html/), new workbox.strategies.Net
 // );
 
 // CDN
+workbox.routing.registerRoute(
+    /.*\.(?:js|css|woff2)$/,
+    new workbox.strategies.StaleWhileRevalidate({
+        cacheName: '静态资源',
+        plugins: [
+            new workbox.expiration.ExpirationPlugin({
+                maxEntries: 50,
+                maxAgeSeconds: 60 * 60 * 24
+            }),
+            new workbox.cacheableResponse.CacheableResponsePlugin({
+                statuses: [0, 200]
+            })
+        ]
+    })
+);
+
+// Cache CSS, JS, and Web Worker requests with a Stale While Revalidate strategy
+
 // workbox.routing.registerRoute(
-//     /\.(?:js|css)$/,
+//     ({ request }) =>
+//         request.destination === 'style' ||
+//         request.destination === 'script',
+//         // ||
+//         // request.destination === 'worker',
 //     new workbox.strategies.StaleWhileRevalidate({
 //         cacheName: '静态资源',
 //         plugins: [
 //             new workbox.expiration.ExpirationPlugin({
-//                 maxEntries: 50,
-//                 maxAgeSeconds: 60 * 60 * 24 * 7
+//                 maxEntries: 100,
+//                 maxAgeSeconds: 60 * 60 * 24,
+//                 purgeOnQuotaError: true
 //             }),
 //             new workbox.cacheableResponse.CacheableResponsePlugin({
 //                 statuses: [0, 200]
@@ -161,26 +185,26 @@ workbox.routing.registerRoute(new RegExp(/.*\.html/), new workbox.strategies.Net
 
 // Cache CSS, JS, and Web Worker requests with a Stale While Revalidate strategy
 
-workbox.routing.registerRoute(
-    ({ request }) =>
-        request.destination === 'style' ||
-        request.destination === 'script',
-        // ||
-        // request.destination === 'worker',
-    new workbox.strategies.StaleWhileRevalidate({
-        cacheName: '静态资源',
-        plugins: [
-            new workbox.expiration.ExpirationPlugin({
-                maxEntries: 100,
-                maxAgeSeconds: 60 * 60 * 24,
-                purgeOnQuotaError: true
-            }),
-            new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [200],
-            })
-        ],
-    }),
-);
+// workbox.routing.registerRoute(
+//     ({ request }) =>
+//         request.destination === 'style' ||
+//         request.destination === 'script',
+//         // ||
+//         // request.destination === 'worker',
+//     new workbox.strategies.StaleWhileRevalidate({
+//         cacheName: '静态资源',
+//         plugins: [
+//             new workbox.expiration.ExpirationPlugin({
+//                 maxEntries: 100,
+//                 maxAgeSeconds: 60 * 60 * 24,
+//                 purgeOnQuotaError: true
+//             }),
+//             new workbox.cacheableResponse.CacheableResponsePlugin({
+//                 statuses: [0, 200]
+//             })
+//         ],
+//     }),
+// );
 
 // Fonts
 // workbox.routing.registerRoute(
@@ -200,28 +224,28 @@ workbox.routing.registerRoute(
 // );
 
 // Google Fonts
-workbox.routing.registerRoute(
-    /^https:\/\/fonts\.googleapis\.com/,
-    new workbox.strategies.StaleWhileRevalidate({
-        cacheName: "谷歌字体"
-    })
-);
-workbox.routing.registerRoute(
-    /^https:\/\/fonts\.gstatic\.com/,
-    new workbox.strategies.StaleWhileRevalidate({
-        cacheName: '谷歌字体',
-        plugins: [
-            new workbox.expiration.ExpirationPlugin({
-                maxEntries: 3,
-                maxAgeSeconds: 60 * 60 * 24 * 30,
-                purgeOnQuotaError: true
-            }),
-            new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [200]
-            })
-        ]
-    })
-);
+// workbox.routing.registerRoute(
+//     /^https:\/\/fonts\.googleapis\.com/,
+//     new workbox.strategies.StaleWhileRevalidate({
+//         cacheName: "谷歌字体"
+//     })
+// );
+// workbox.routing.registerRoute(
+//     /^https:\/\/fonts\.gstatic\.com/,
+//     new workbox.strategies.StaleWhileRevalidate({
+//         cacheName: '谷歌字体',
+//         plugins: [
+//             new workbox.expiration.ExpirationPlugin({
+//                 maxEntries: 3,
+//                 maxAgeSeconds: 60 * 60 * 24 * 30,
+//                 purgeOnQuotaError: true
+//             }),
+//             new workbox.cacheableResponse.CacheableResponsePlugin({
+//                 statuses: [0, 200]
+//             })
+//         ]
+//     })
+// );
 
 // Static Libraries
 // workbox.routing.registerRoute(
@@ -259,11 +283,12 @@ const cdn = {
     },
     npm: {
         // jsdelivr: 'https://cdn.jsdelivr.net/npm',
+        eleme: 'https://npm.elemecdn.com',
         gcore: 'https://gcore.jsdelivr.net/npm',
         fastly: 'https://fastly.jsdelivr.net/npm',
+        unpkg: 'https://unpkg.com',
         testingcf: 'https://testingcf.jsdelivr.net/npm',
-        test1: 'https://test1.jsdelivr.net/npm',
-        unpkg: 'https://unpkg.com'
+        test1: 'https://test1.jsdelivr.net/npm'
     }
 }
 

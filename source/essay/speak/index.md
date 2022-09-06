@@ -74,24 +74,16 @@ description: CC的部落格 即刻短文页面
         site: 'CC的部落格 即刻短文',
         useBackendConf: true,
         serverURL: 'https://waline.ccknbc.cc',
-        pageview: false,
         pageSize: 10,
         requiredMeta: ["nick", "mail"],
         login: 'enable',
         dark: 'html[data-theme="dark"]',
-        copyright: false,
         imageUploader: false,
-        locale:
-          [
-            "admin: 博主兼管理员",
-            "sofa: 这里冷冷清清的，快来留下脚印吧！",
-            "placeholder: 感谢各位的批评指正，期待与您交流！"
-          ],
         emoji:
           [
-            "https://gcore.jsdelivr.net/npm/sticker-heo/Sticker-100/",
-            "https://gcore.jsdelivr.net/npm/telegram-gif/Telegram-Gif/",
-            "https://gcore.jsdelivr.net/npm/@waline/emojis/tw-emoji/"
+            "https://npm.elemecdn.com//sticker-heo@latest/Sticker-100/",
+            "https://npm.elemecdn.com//telegram-gif/Telegram-Gif/",
+            "https://npm.elemecdn.com//@waline/emojis/tw-emoji/"
           ]
       })
     }

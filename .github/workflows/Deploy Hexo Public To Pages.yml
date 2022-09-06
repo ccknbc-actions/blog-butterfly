@@ -23,10 +23,9 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@main
         with:
-          node-version: "16.x"
+          node-version: "latest"
           check-latest: true
           cache: "npm"
-          cache-dependency-path: "**/package-lock.json"
 
       - name: Catch
         uses: actions/cache@main
@@ -38,7 +37,7 @@ jobs:
       - name: Install Dependencies
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
         run: |
-          npm install
+          npm ci
 
       - name: Generate
         run: |
