@@ -14,6 +14,9 @@ nav#nav
     span#blog_name
       a#site-name(href=url_for('/') data-title=pagedescr) #[=subtitle]
   #menus
+    a.site-page#wzayd.wzayd(title='盲人朋友在线浏览按住Alt+g键，体验无障碍阅读' href='javascript:;' accesskey='g')
+      i.fa-solid.fa-wheelchair
+      span=' '+_p('无障碍')
     if (theme.algolia_search.enable || theme.local_search.enable)
       #search-button
         a.site-page.social-icon.search

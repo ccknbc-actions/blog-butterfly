@@ -21,12 +21,12 @@ bottom:
 #html: <script id="LA-DATA-WIDGET" crossorigin="anonymous" charset="UTF-8" src="https://v6-widget.51.la/v6/JgUfbwUA5BsLeAIc/quote.js?theme=#FFFFFF,#333333,#858585,#4C4948,#FFFFFF,,14&col=true&f=14&display=0,1,1,1,1,1,1,1"></script>
 
 top:
-  - class_name: moyuban
-    id_name: moyuban
-    name: 摸鱼办友情提示
-    icon: fa-solid fa-fish
-    order: 0
-    html: '<img data-fancybox="gallery" src="https://api.vvhan.com/api/ip" width=100%><img data-fancybox="gallery" src="https://api.vvhan.com/api/moyu" width=100%>'
+  # - class_name: moyuban
+  #   id_name: moyuban
+  #   name: 摸鱼办友情提示
+  #   icon: fa-solid fa-fish
+  #   order: 0
+  #   html: '<img data-fancybox="gallery" src="https://api.vvhan.com/api/ip" width=100%><img data-fancybox="gallery" src="https://api.vvhan.com/api/moyu" width=100%>'
   # - class_name: qweather
   #   id_name: qweather
   #   name: 和风天气

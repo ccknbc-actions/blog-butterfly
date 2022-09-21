@@ -739,7 +739,14 @@ subtitle:
     - 期待与您的再次重逢
 
 # Loading Animation (加載動畫)
-preloader: false
+preloader:
+  enable: true
+  # source
+  # 1. fullpage-loading
+  # 2. pace (progress bar)
+  source: 2
+  # pace theme (see https://codebyzach.github.io/pace/)
+  pace_css_url: https://gcore.jsdelivr.net/gh/CodeByZach/pace/themes/green/pace-theme-flash.css
 
 # aside (側邊欄)
 # --------------------------------------
@@ -950,9 +957,6 @@ lazyload:
   placeholder:
   blur: true
 
-pace:
-  enable: true
-
 snow:
   enable: false
 
@@ -995,10 +999,11 @@ inject:
     - <script>!(function(c,i,e,b){var h=i.createElement("script");var f=i.getElementsByTagName("script")[0];h.type="text/javascript";h.crossorigin=true;h.onload=function(){new c[b]["Monitor"]().init({id:"JgUg7s8ImDkwb2V7",sendSuspicious:true});};f.parentNode.insertBefore(h,f);h.src=e;})(window,document,"https://sdk.51.la/perf/js-sdk-perf.min.js","LingQue");</script>
     # - <script defer src="https://gcore.jsdelivr.net/gh/Gahotx/cdn@master/js/clipboard.min.js"></script>
     - <script defer src="/js/custom.js"></script>
+    - <script defer id="rrbayJs" src="//wza.rrbay.com/js/wza.min.js?632b13cdb6508a0f50711f74" type="text/javascript"></script>
     # - <script defer src="https://cc.instatus.com/widget/script.js"></script>
     # - <script defer src='https://api.vvhan.com/api/snow'></script>
     # - <script defer src="https://api.vvhan.com/api/denglong"></script>
-    # - <script src="https://gcore.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    - <script defer src="https://gcore.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     # - <div id="music" key="6208da041a763" api="https://music.mx142.ltd"></div><script id="xplayer" src="https://music.mx142.ltd/Static/player4/js/player.js" ></script>
 
 # CDN
@@ -1073,5 +1078,4 @@ CDN:
     # prismjs_autoloader:
 
   # other
-  pace: https://gcore.jsdelivr.net/gh/CodeByZach/pace/pace.min.js
   ccknbc: https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/js/ccknbc.js
