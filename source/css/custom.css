@@ -49,7 +49,7 @@
 #article-container.post-content  h6::before {
     content:'H₆'
 }
-
+/* 
 #article-container .fa-solid.fa-hashtag {
     float: right
-}
+} */
