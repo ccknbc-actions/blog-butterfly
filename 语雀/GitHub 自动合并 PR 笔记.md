@@ -39,9 +39,9 @@ A pull request is considered ready when:
 
 1. the required number of review approvals has been given (if enabled in the
    branch protection rules) and
-1. the required checks have passed (if enabled in the branch protection rules)
+2. the required checks have passed (if enabled in the branch protection rules)
    and
-1. the pull request is up to date (if enabled in the branch protection rules)
+3. the pull request is up to date (if enabled in the branch protection rules)
 
 After the pull request has been merged successfully, the branch will _not_ be
 deleted. To delete branches after they are merged,
@@ -493,10 +493,10 @@ branch is updated _after_ updates are enabled for the pull request. For
 example:
 
 1. User A opens a pull request targetting `develop`
-1. User B pushes a commit to `develop`
-1. User A adds the `update me` label to the first pull request
-1. User C pushes a commit to `develop`
-1. Bulldozer updates the pull request with the commits from Users B and C
+2. User B pushes a commit to `develop`
+3. User A adds the `update me` label to the first pull request
+4. User C pushes a commit to `develop`
+5. Bulldozer updates the pull request with the commits from Users B and C
 
 Note that the update does _not_ happen when the `update me` label is added,
 even though there is a new commit on `develop` that is not part of the pull
@@ -513,7 +513,7 @@ around this:
    implement _approval_ restrictions as required status checks instead of using
    push restrictions. This effectively limits who can push to a branch by
    requiring changes to go through the pull request process and be approved.
-1. Configure Bulldozer to use a personal access token for a regular user to
+2. Configure Bulldozer to use a personal access token for a regular user to
    perform merges in this case. The token must have the `repo` scope and the
    user must be allowed to push to the branch. In the server configuration
    file, set:
@@ -652,8 +652,8 @@ A GitHub App built with [Probot](https://github.com/probot/probot) that automati
 ## Usage
 
 1. [Configure the GitHub App](https://github.com/apps/probot-auto-merge)
-1. Create `.github/auto-merge.yml` in your repository.
-1. Customize configuration to your needs. See below.
+2. Create `.github/auto-merge.yml` in your repository.
+3. Customize configuration to your needs. See below.
 
 ## Configuration
 

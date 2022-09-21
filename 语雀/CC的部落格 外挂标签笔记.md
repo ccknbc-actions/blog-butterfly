@@ -67,8 +67,8 @@ hide: false
 ```
 
 1. 圆角样式：rounded, circle
-1. 增加文字样式：可以在容器内增加 `<b>标题</b>`和`<p>描述文字</p>`
-1. 布局方式：
+2. 增加文字样式：可以在容器内增加 `<b>标题</b>`和`<p>描述文字</p>`
+3. 布局方式：
    默认为自动宽度，适合视野内只有一两个的情况。
    | 参数 | 含义 |
    | --- | --- |
@@ -101,9 +101,9 @@ hide: false
 ```
 
 1. 字体: logo, code
-1. 颜色: {% span red, red %},{% span yellow, yellow %},{% span green, green %},{% span cyan, cyan %},{% span blue, blue %},{% span gray, gray %}
-1. 大小: small, h4, h3, h2, h1, large, huge, ultra
-1. 对齐方向: left, center, right
+2. 颜色: {% span red, red %},{% span yellow, yellow %},{% span green, green %},{% span cyan, cyan %},{% span blue, blue %},{% span gray, gray %}
+3. 大小: small, h4, h3, h2, h1, large, huge, ultra
+4. 对齐方向: left, center, right
 
 ```markdown
 - 彩色文字
@@ -121,9 +121,9 @@ hide: false
 ```
 
 1. 字体: logo, code
-1. 颜色: {% span red, red %},{% span yellow, yellow %},{% span green, green %},{% span cyan, cyan %},{% span blue, blue %},{% span gray, gray %}
-1. 大小: small, h4, h3, h2, h1, large, huge, ultra
-1. 对齐方向: left, center, right
+2. 颜色: {% span red, red %},{% span yellow, yellow %},{% span green, green %},{% span cyan, cyan %},{% span blue, blue %},{% span gray, gray %}
+3. 大小: small, h4, h3, h2, h1, large, huge, ultra
+4. 对齐方向: left, center, right
 
 ```markdown
 - 彩色文字
@@ -386,7 +386,7 @@ Any content (support inline tags too.io).
 ```
 
 1. 样式: success,error,warning,bolt,ban,home,sync,cogs,key,bell
-1. 自定义图标: 支持 fontawesome。
+2. 自定义图标: 支持 fontawesome。
 
 ```markdown
 {% tip %}默认情况{% endtip %}
@@ -412,9 +412,9 @@ Any content (support inline tags too.io).
 更多详情请参看[font-awesome-animation 文档](http://l-lin.github.io/font-awesome-animation/)
 
 1. 将所需的 CSS 类添加到图标（或 DOM 中的任何元素）。
-1. 对于父级悬停样式，需要给目标元素添加指定 CSS 类，同时还要给目标元素的父级元素添加 CSS 类`faa-parent animated-hover`。（详情见示例及示例源码）
+2. 对于父级悬停样式，需要给目标元素添加指定 CSS 类，同时还要给目标元素的父级元素添加 CSS 类`faa-parent animated-hover`。（详情见示例及示例源码）
    You can regulate the speed of the animation by adding the CSS class or . faa-fastfaa-slow
-1. 可以通过给目标元素添加 CSS 类`faa-fast`或`faa-slow`来控制动画快慢。
+3. 可以通过给目标元素添加 CSS 类`faa-fast`或`faa-slow`来控制动画快慢。
 
 |                                     On DOM load<br>当页面加载时<br>显示动画                                      |                                             On hover<br>当鼠标悬停时<br>显示动画                                             |                                    On parent hover<br>当鼠标悬停<br>在父级元素时<br>显示动画                                     |
 | :--------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------------------: |
@@ -470,7 +470,7 @@ Any content (support inline tags too.io).
 ```
 
 1. 颜色: {% span red, red %},{% span yellow, yellow %},{% span green, green %},{% span cyan, cyan %},{% span blue, blue %},{% span gray, gray %}
-1. 选中状态: checked
+2. 选中状态: checked
 
 ```markdown
 {% radio 纯文本测试 %}
@@ -489,8 +489,8 @@ Any content (support inline tags too.io).
 ```
 
 1. 样式: plus, minus, times
-1. 颜色: {% span red, red %},{% span yellow, yellow %},{% span green, green %},{% span cyan, cyan %},{% span blue, blue %},{% span gray, gray %}
-1. 选中状态: checked
+2. 颜色: {% span red, red %},{% span yellow, yellow %},{% span green, green %},{% span cyan, cyan %},{% span blue, blue %},{% span gray, gray %}
+3. 选中状态: checked
 
 ```markdown
 {% checkbox 纯文本测试 %}
@@ -578,12 +578,12 @@ ghcard 使用了`github-readme-stats`的 API，支持直接使用 markdown 语�
 ```
 
 1. `left`：徽标左边的信息，必选参数。
-1. `right`: 徽标右边的信息，必选参数，
-1. `logo`：徽标图标，图标名称详见[simpleicons](https://simpleicons.org/)，可选参数。
-1. `color`：徽标右边的颜色，可选参数。
-1. `link`：指向的链接，可选参数。
-1. `title`：徽标的额外信息，可选参数。主要用于优化 SEO，但`object`标签不会像`a`标签一样在鼠标悬停显示`title`信息。
-1. `option`：自定义参数，支持[shields.io](https://shields.io/)的全部 API 参数支持，具体参数可以参看上文中的拓展写法示例。形式为`name1=value2&name2=value2`。
+2. `right`: 徽标右边的信息，必选参数，
+3. `logo`：徽标图标，图标名称详见[simpleicons](https://simpleicons.org/)，可选参数。
+4. `color`：徽标右边的颜色，可选参数。
+5. `link`：指向的链接，可选参数。
+6. `title`：徽标的额外信息，可选参数。主要用于优化 SEO，但`object`标签不会像`a`标签一样在鼠标悬停显示`title`信息。
+7. `option`：自定义参数，支持[shields.io](https://shields.io/)的全部 API 参数支持，具体参数可以参看上文中的拓展写法示例。形式为`name1=value2&name2=value2`。
 
 {% note info modern %}
 本外挂标签的参数分为三组，用`||`分割。
@@ -636,8 +636,8 @@ ghcard 使用了`github-readme-stats`的 API，支持直接使用 markdown 语�
 ```
 
 1. 图片宽度高度：width=300px, height=32px
-1. 图片描述：alt=图片描述（butterfly 需要在主题配置文件中开启图片描述）
-1. 占位背景色：bg=#f2f2f2
+2. 图片描述：alt=图片描述（butterfly 需要在主题配置文件中开启图片描述）
+3. 占位背景色：bg=#f2f2f2
 
 ## 音频 audio
 
@@ -652,8 +652,8 @@ ghcard 使用了`github-readme-stats`的 API，支持直接使用 markdown 语�
 ```
 
 1.  对其方向：left, center, right
-1.  列数：逗号后面直接写列数，支持 1 ～ 4 列。
-1.  100%宽度
+2.  列数：逗号后面直接写列数，支持 1 ～ 4 列。
+3.  100%宽度
 
 ```markdown
 {% video https://file.nmb.show/down.php/86c301fbc6183f50fb0487e13e5a1f64.mp4 %}
@@ -751,7 +751,7 @@ markdown 圖片格式
 ```
 
 1. 颜色：blue, cyan, green, yellow, red
-1. 状态：状态填写 open 代表默认打开。
+2. 状态：状态填写 open 代表默认打开。
 
 ## 分栏 tab
 
@@ -814,7 +814,7 @@ type(类型)
 根据需求不同，会将 issues 内容解析成不同的 HTML 标签，目前支持的类型有：
 
 1.  时间轴`timeline`: 解析成`timeline`标签，`issue`的标题对应`timeline`的时间，`issue`的内容对应`timeline`的内容。
-1.  网站卡片`sites`: 解析成`sites`标签，需要有`JSON`代码块,各参数对应`sites`标签参数:
+2.  网站卡片`sites`: 解析成`sites`标签，需要有`JSON`代码块,各参数对应`sites`标签参数:
 
 ```json
 {
@@ -926,8 +926,8 @@ group=version:v4,v3,v2
 ```
 
 1. `width`: 0 到 100 的阿拉伯数字
-1. `color`: 颜色，取值有{% span red, red %},{% span yellow, yellow %},{% span green, green %},{% span cyan, cyan %},{% span blue, blue %},{% span gray, gray %}
-1. `text`:进度条上的文字内容
+2. `color`: 颜色，取值有{% span red, red %},{% span yellow, yellow %},{% span green, green %},{% span cyan, cyan %},{% span blue, blue %},{% span gray, gray %}
+3. `text`:进度条上的文字内容
 
 ## mermaid
 

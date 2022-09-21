@@ -154,12 +154,12 @@ cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/a
 - 备份在哪，将来统一更换链接方便，有没有满足以下条件的图床
 
 1. 稳定，这是首要条件
-1. 免费，或者说够我这小型博客免费试用的量
-1. 支持批量上传下载，并且上传后文件名保持不变
-1. 支持`API`上传，以配合`PicGo`实现流畅的写作体验
-1. 相册功能要有，批量多种场景不同格式链接以适应不同需求
-1. 友好地支持 WebP 格式（包括动态）
-1. 访问速度还不错
+2. 免费，或者说够我这小型博客免费试用的量
+3. 支持批量上传下载，并且上传后文件名保持不变
+4. 支持`API`上传，以配合`PicGo`实现流畅的写作体验
+5. 相册功能要有，批量多种场景不同格式链接以适应不同需求
+6. 友好地支持 WebP 格式（包括动态）
+7. 访问速度还不错
    ......
 
 当然啦，这么显得我是不是过于贪心了，但真的没有一种比较好的解决方案，对我这种不是优秀博主的人也可以很好的使用免费资源为博客图片加速呢？
@@ -174,9 +174,9 @@ cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/a
 1. [PicGo 官网](https://molunerfinn.com/PicGo/)
    因为版本过多原因，这里不放加速下载链接，如果您访问过慢，不如试试加速脚本或者加速插件
    这里提供我个人搭建的加速站，您可以[访问按照教程和说明下载](https://gh.ccknbc.workers.dev/)
-1. 关于配置如果要写的话肯定要截图，这里放上别人的文章链接咯，大家自行比对
+2. 关于配置如果要写的话肯定要截图，这里放上别人的文章链接咯，大家自行比对
    [PicGo+GitHub 快速实现 markdown 图床](https://blog.juanertu.com/archives/adff04af.html)
-1. 自动压缩
+3. 自动压缩
    1. 使用`GitHub APP`，也就是上面提到的
       - 图片上传完毕一会儿会由`Imgbot`压缩提交`PR`
    2. [ImgBot](https://github.com/marketplace/imgbot) optimizes your images and saves you time.
@@ -195,8 +195,8 @@ cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/a
 How to use PR Valet
 
 1. Step 1: Install [PR Valet](https://github.com/marketplace/pr-valet).
-1. Step 2: Add the `valet:merge` label to your pull request.
-1. Step 3: Work on your other tasks while PR Valet takes care of merging your pull request.
+2. Step 2: Add the `valet:merge` label to your pull request.
+3. Step 3: Work on your other tasks while PR Valet takes care of merging your pull request.
 
 也就是在仓库启用后，去编辑一下 label 标签，添加一个名为`valet:merge`的标签，而机器人提交了 PR 后，我们打上这个标签，便会自动执行合并操作，之后 imgbot 将删除由`imgbot`创建的分支 imgbot，方便下次在进行自动压缩，提交 PR
 
