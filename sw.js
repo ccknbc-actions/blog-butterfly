@@ -160,6 +160,22 @@ workbox.routing.registerRoute(
     })
 );
 
+workbox.routing.registerRoute(
+    /.*\.(?:woff2)$/,
+    new workbox.strategies.StaleWhileRevalidate({
+        cacheName: '静态资源',
+        plugins: [
+            new workbox.expiration.ExpirationPlugin({
+                maxEntries: 5,
+                maxAgeSeconds: 60 * 60 * 24 * 7
+            }),
+            new workbox.cacheableResponse.CacheableResponsePlugin({
+                statuses: [0, 200]
+            })
+        ]
+    })
+);
+
 // Cache CSS, JS, and Web Worker requests with a Stale While Revalidate strategy
 
 // workbox.routing.registerRoute(

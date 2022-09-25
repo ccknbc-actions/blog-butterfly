@@ -3,8 +3,8 @@
 # --------------------------------------
 
 menu:
-  首页: / || fa-solid fa-house-chimney
-  浏览: javascript:toRandomPost(); || fa-solid fa-shuffle
+  # 首页: / || fa-solid fa-house-chimney
+  # 浏览: javascript:toRandomPost(); || fa-solid fa-shuffle
   文章 || fa-solid fa-book-reader:
     归档: /archives/ || fa-solid fa-box-archive
     标签: /tags/ || fa-solid fa-tags
@@ -324,6 +324,15 @@ waline:
         "https://npm.elemecdn.com/sticker-heo/Sticker-100/",
         "https://npm.elemecdn.com/telegram-gif/Telegram-Gif/",
         "https://npm.elemecdn.com/@waline/emojis/tw-emoji/",
+      ]
+    reaction:
+      [
+        "https://npm.elemecdn.com/@waline/emojis/tieba/tieba_agree.png",
+        "https://npm.elemecdn.com/@waline/emojis/tieba/tieba_look_down.png",
+        "https://npm.elemecdn.com/@waline/emojis/tieba/tieba_sunglasses.png",
+        "https://npm.elemecdn.com/@waline/emojis/tieba/tieba_pick_nose.png",
+        "https://npm.elemecdn.com/@waline/emojis/tieba/tieba_awkward.png",
+        "https://npm.elemecdn.com/@waline/emojis/tieba/tieba_sleep.png",
       ]
 
 discuss:
@@ -999,11 +1008,11 @@ inject:
     - <script>!(function(c,i,e,b){var h=i.createElement("script");var f=i.getElementsByTagName("script")[0];h.type="text/javascript";h.crossorigin=true;h.onload=function(){new c[b]["Monitor"]().init({id:"JgUg7s8ImDkwb2V7",sendSuspicious:true});};f.parentNode.insertBefore(h,f);h.src=e;})(window,document,"https://sdk.51.la/perf/js-sdk-perf.min.js","LingQue");</script>
     # - <script defer src="https://gcore.jsdelivr.net/gh/Gahotx/cdn@master/js/clipboard.min.js"></script>
     - <script defer src="/js/custom.js"></script>
-    - <script defer id="rrbayJs" src="//wza.rrbay.com/js/wza.min.js?632b13cdb6508a0f50711f74" type="text/javascript"></script>
+    # - <script defer id="rrbayJs" src="//wza.rrbay.com/js/wza.min.js?632b13cdb6508a0f50711f74" type="text/javascript"></script>
     # - <script defer src="https://cc.instatus.com/widget/script.js"></script>
     # - <script defer src='https://api.vvhan.com/api/snow'></script>
     # - <script defer src="https://api.vvhan.com/api/denglong"></script>
-    - <script defer src="https://gcore.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    # - <script defer src="https://gcore.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     # - <div id="music" key="6208da041a763" api="https://music.mx142.ltd"></div><script id="xplayer" src="https://music.mx142.ltd/Static/player4/js/player.js" ></script>
 
 # CDN
