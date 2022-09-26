@@ -315,10 +315,17 @@ waline:
     login: enable
     copyright: true
     imageUploader: false
+    recaptchaV3Key: 6Lf8S9MaAAAAAFMx9WOCWRkIX2AZ6Nl9dreuw8p-
     locale:
       admin: 博主兼管理员
       sofa: 这里冷冷清清的，快来留下脚印吧！
       placeholder: 感谢各位的批评指正，期待与您交流！
+      reaction0: 赞一个
+      reaction1: 踩一下
+      reaction2: 有点酷
+      reaction3: 看不懂
+      reaction4: 啥玩意
+      reaction5: 想睡觉
     emoji:
       [
         "https://npm.elemecdn.com/sticker-heo/Sticker-100/",
@@ -327,12 +334,12 @@ waline:
       ]
     reaction:
       [
-        "https://npm.elemecdn.com/@waline/emojis/tieba/tieba_agree.png",
-        "https://npm.elemecdn.com/@waline/emojis/tieba/tieba_look_down.png",
-        "https://npm.elemecdn.com/@waline/emojis/tieba/tieba_sunglasses.png",
-        "https://npm.elemecdn.com/@waline/emojis/tieba/tieba_pick_nose.png",
-        "https://npm.elemecdn.com/@waline/emojis/tieba/tieba_awkward.png",
-        "https://npm.elemecdn.com/@waline/emojis/tieba/tieba_sleep.png",
+        "https://npm.elemecdn.com/sticker-heo/Sticker-100/我看好你.png",
+        "https://npm.elemecdn.com/sticker-heo/Sticker-100/眩晕.png",
+        "https://npm.elemecdn.com/sticker-heo/Sticker-100/耍酷.png",
+        "https://npm.elemecdn.com/sticker-heo/Sticker-100/思考.png",
+        "https://npm.elemecdn.com/sticker-heo/Sticker-100/擦汗.png",
+        "https://npm.elemecdn.com/sticker-heo/Sticker-100/睡觉.png",
       ]
 
 discuss:

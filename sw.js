@@ -145,12 +145,12 @@ workbox.routing.registerRoute(new RegExp(/.*\.html/), new workbox.strategies.Net
 
 // CDN
 workbox.routing.registerRoute(
-    /.*\.(?:js|css|woff2)$/,
+    /.*\.(?:js|css)$/,
     new workbox.strategies.StaleWhileRevalidate({
         cacheName: '静态资源',
         plugins: [
             new workbox.expiration.ExpirationPlugin({
-                maxEntries: 50,
+                maxEntries: 60,
                 maxAgeSeconds: 60 * 60 * 24
             }),
             new workbox.cacheableResponse.CacheableResponsePlugin({
@@ -163,7 +163,7 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
     /.*\.(?:woff2)$/,
     new workbox.strategies.StaleWhileRevalidate({
-        cacheName: '静态资源',
+        cacheName: '字体缓存',
         plugins: [
             new workbox.expiration.ExpirationPlugin({
                 maxEntries: 5,
