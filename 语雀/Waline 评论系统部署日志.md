@@ -1,9 +1,9 @@
 ---
 title: Waline 评论系统部署日志
-translate_title: waline-commens-system-deployment-logs
-subtitle: Waline Commens System Deployment Logs
+translate_title: waline-comments-system-deployment-logs
+subtitle: Waline Comments System Deployment Logs
 date: 2021-01-17 00:00:00
-updated: 2021-05-03 17:00:00
+updated: 2021-09-28 21:50:00
 tags: 工具
 categories: 工具
 keywords: [工具, 评论, Waline]
