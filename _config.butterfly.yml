@@ -282,7 +282,7 @@ addtoany:
 # --------------------------------------
 
 comments:
-  use: Waline,Discuss
+  use: Waline #,Discuss
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -320,26 +320,33 @@ waline:
       admin: 博主兼管理员
       sofa: 这里冷冷清清的，快来留下脚印吧！
       placeholder: 感谢各位的批评指正，期待与您交流！
-      reaction0: 赞一个
-      reaction1: 踩一下
-      reaction2: 有点酷
-      reaction3: 看不懂
-      reaction4: 啥玩意
-      reaction5: 想睡觉
+      reactionTitle: 就现在，表明你的态度！
+      reaction0: 鼓掌
+      reaction1: 菜狗
+      reaction2: 正确
+      reaction3: 错误
+      reaction4: 思考
+      reaction5: 睡觉
+      level0: 1条
+      level1: 2条
+      level2: 3条
+      level3: 4条
+      level4: 5条
+      level5: 6条以上
     emoji:
       [
-        "https://npm.elemecdn.com/sticker-heo/Sticker-100/",
-        "https://npm.elemecdn.com/telegram-gif/Telegram-Gif/",
-        "https://npm.elemecdn.com/@waline/emojis/tw-emoji/",
+        "https://gcore.jsdelivr.net/npm/sticker-heo/Sticker-100/",
+        # "https://gcore.jsdelivr.net/npm/telegram-gif/Telegram-Gif/",
+        # "https://gcore.jsdelivr.net/npm/@waline/emojis/tw-emoji/",
       ]
     reaction:
       [
-        "https://npm.elemecdn.com/sticker-heo/Sticker-100/我看好你.png",
-        "https://npm.elemecdn.com/sticker-heo/Sticker-100/眩晕.png",
-        "https://npm.elemecdn.com/sticker-heo/Sticker-100/耍酷.png",
-        "https://npm.elemecdn.com/sticker-heo/Sticker-100/思考.png",
-        "https://npm.elemecdn.com/sticker-heo/Sticker-100/擦汗.png",
-        "https://npm.elemecdn.com/sticker-heo/Sticker-100/睡觉.png",
+        "https://gcore.jsdelivr.net/npm/sticker-heo/Sticker-100/鼓掌.png",
+        "https://gcore.jsdelivr.net/npm/sticker-heo/Sticker-100/菜狗.png",
+        "https://gcore.jsdelivr.net/npm/sticker-heo/Sticker-100/正确.png",
+        "https://gcore.jsdelivr.net/npm/sticker-heo/Sticker-100/错误.png",
+        "https://gcore.jsdelivr.net/npm/sticker-heo/Sticker-100/思考.png",
+        "https://gcore.jsdelivr.net/npm/sticker-heo/Sticker-100/睡觉.png",
       ]
 
 discuss:
@@ -351,7 +358,7 @@ discuss:
     # imgLoading:  # 评论图片懒加载，加载动画，默认为1像素白色base64图
     visitStat: false # 是否开启访问统计，默认: false
     color: "#8fbc8f"
-    emotCDN: "https://npm.elemecdn.com/discuss"
+    emotCDN: "https://gcore.jsdelivr.net/npm/discuss"
 
 # Twikoo
 # https://github.com/imaegoo/twikoo
@@ -711,9 +718,9 @@ font:
   global-font-size: # The unit must be 'px', default is 14px
   code-font-size:
   # font-family: Quicksand
-  font-family: -apple-system, 'Quicksand', 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
+  font-family: -apple-system, Quicksand, Nimbus Roman No9 L, PingFang SC, Hiragino Sans GB, Noto Serif SC, Microsoft Yahei, WenQuanYi Micro Hei, ST Heiti, sans-serif
   # font-family: Quicksand, 'Georgia, -apple-system', 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif
-  code-font-family: Source Code Pro
+  code-font-family: consolas, Menlo, Noto Sans Mono, monospace
   # code-font-family: consolas, Menlo, "PingFang SC", 'Source Code Pro', "Microsoft JhengHei", "Microsoft YaHei", monospace
 # Font settings for the site title and site subtitle
 # 左上角網站名字 主頁居中網站名字
