@@ -31,10 +31,10 @@ description: CC的部落格 即刻短文页面
 <!-- CSS -->
 <link
   rel="stylesheet"
-  href="https://gcore.jsdelivr.net/npm/@waline/client/dist/waline.css"
+  href="https://gcore.jsdelivr.net/npm/@waline/client/dist/waline.min.css"
 />
 <!-- JS -->
-<script src="https://gcore.jsdelivr.net/npm/@waline/client/dist/waline.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/@waline/client/dist/waline.min.js"></script>
 <script>
   var head = document.getElementsByTagName('head')[0]
   var meta = document.createElement('meta')
@@ -67,9 +67,9 @@ description: CC的部落格 即刻短文页面
             imageUploader: false,
             emoji:
               [
-                "https://npm.elemecdn.com//sticker-heo/Sticker-100/",
-                "https://npm.elemecdn.com//telegram-gif/Telegram-Gif/",
-                "https://npm.elemecdn.com//@waline/emojis/tw-emoji/"
+                "https://gcore.jsdelivr.net/npm/sticker-heo/Sticker-100/",
+                // "https://gcore.jsdelivr.net/npm/telegram-gif/Telegram-Gif/",
+                // "https://gcore.jsdelivr.net/npm/@waline/emojis/tw-emoji/"
               ]
           })
         }

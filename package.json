@@ -2,20 +2,19 @@
   "name": "ccknbc-blog",
   "version": "latest",
   "private": false,
+  "type": "module",
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "github-yuque": "yuque-hexo sync && npm run build && hexo algolia && gulp",
-    "gitlab-yuque": "yuque-hexo sync && npm run build && gulp",
-    "github": "npm run build && hexo algolia && gulp",
-    "gitlab": "npm run build && gulp"
+    "github-yuque": "yuque-hexo sync && npm run build && hexo algolia && npm run deploy",
+    "github": "npm run build && hexo algolia && npm run deploy"
   },
   "yuqueConfig": {
     "postPath": "/source/_posts/语雀",
-    "cachePath": "yuque.json",
-    "lastGeneratePath": "lastGeneratePath.log",
+    "cachePath": "/yuque/cache.json",
+    "lastGeneratePath": "/yuque/lastGeneratePath.log",
     "mdNameFormat": "title",
     "adapter": "markdown",
     "concurrency": "5",
@@ -30,12 +29,6 @@
     "version": "6.3.0"
   },
   "dependencies": {
-    "gulp": "4.0.2",
-    "gulp-clean-css": "4.3.0",
-    "gulp-cli": "2.3.0",
-    "gulp-html-minifier-terser": "6.0.1",
-    "gulp-htmlclean": "2.7.22",
-    "gulp-terser": "2.1.0",
     "hexo": "6.3.0",
     "hexo-algoliasearch": "1.0.0",
     "hexo-butterfly-tag-plugins-plus": "1.0.17",
@@ -55,9 +48,10 @@
     "hexo-server": "3.0.0",
     "hexo-tag-chart": "1.0.8",
     "hexo-tag-mmedia": "1.1.7",
-    "hexo-translate-title-vss": "1.0.14",
     "hexo-wordcount": "6.0.1",
+    "hexo-yam": "7.0.0",
     "markdown-it-task-lists": "2.1.1",
+    "node-fetch": "^3.2.10",
     "workbox-build": "6.5.4",
     "yuque-hexo": "1.9.1",
     "yuque-hexo-lyrics": "1.0.2"

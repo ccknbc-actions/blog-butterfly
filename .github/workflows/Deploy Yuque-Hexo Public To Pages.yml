@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    name: Deploy Hexo Public To Pages
+    name: Deploy Yuque-Hexo Public To Pages
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Shanghai
@@ -24,6 +24,7 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@main
+        id: setup-node
         with:
           node-version: "latest"
           check-latest: true
@@ -41,9 +42,24 @@ jobs:
         run: |
           npm ci
 
+      - name: Download Yuque-Cache
+        id: download-artifact
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          name: Yuque-Cache
+          path: yuque
+
       - name: Generate
         run: |
           npm run github-yuque
+
+      - name: Upload Yuque-Cache
+        uses: actions/upload-artifact@v3
+        with:
+          name: Yuque-Cache
+          path: yuque
+          retention-days: 90
 
       - name: Deploy Markdown Posts To Branch Posts
         uses: peaceiris/actions-gh-pages@v3
@@ -85,5 +101,5 @@ jobs:
       - name: Delete Workflow Runs
         uses: Mattraks/delete-workflow-runs@main
         with:
-          retain_days: 1
-          keep_minimum_runs: 1
+          retain_days: 30
+          keep_minimum_runs: 6
