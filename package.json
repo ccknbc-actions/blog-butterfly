@@ -51,7 +51,7 @@
     "hexo-wordcount": "6.0.1",
     "hexo-yam": "7.0.0",
     "markdown-it-task-lists": "2.1.1",
-    "node-fetch": "^3.2.10",
+    "node-fetch": "3.2.10",
     "workbox-build": "6.5.4",
     "yuque-hexo": "1.9.1",
     "yuque-hexo-lyrics": "1.0.2"
