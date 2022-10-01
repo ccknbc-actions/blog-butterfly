@@ -10,6 +10,13 @@ script.
       document.head.appendChild(link)
     }
 
+    function metaCSS () {
+      const link = document.createElement("link")
+      link.rel = "stylesheet"
+      link.href = "!{url_for(theme.asset.waline_meta_css)}"
+      document.head.appendChild(link)
+    }
+
     function initWaline () {
       const waline = Waline.init(Object.assign({
         el: '#waline-wrap',
@@ -24,6 +31,7 @@ script.
     if (typeof Waline === 'function') initWaline()
     else {
       insertCSS()
+      metaCSS()
       getScript('!{url_for(theme.asset.waline_js)}').then(initWaline)
     }
   }

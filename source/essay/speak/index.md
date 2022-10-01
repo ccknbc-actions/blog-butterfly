@@ -10,7 +10,7 @@ aside: false
 description: CC的部落格 即刻短文页面
 ---
 <!-- CSS -->
-<link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/@waline/client/dist/waline.css"/>
+<link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/@waline/client/dist/waline.min.css"/>
 <link rel="stylesheet" href="https://gcore.jsdelivr.net/npm/highlight.js/styles/atom-one-dark.min.css" />
 <div class='content'>
   <img src='https://bu.dusays.com/2022/05/01/626e88f349943.gif'>
@@ -19,7 +19,7 @@ description: CC的部落格 即刻短文页面
 <hr />
 <div class='ispeak-comment'></div>
 <!-- JS -->
-<script src="https://gcore.jsdelivr.net/npm/@waline/client/dist/waline.js"></script>
+<script src="https://gcore.jsdelivr.net/npm/@waline/client/dist/waline.min.js"></script>
 <script src="https://gcore.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="https://gcore.jsdelivr.net/npm/highlight.js/highlight.min.js"></script>
 <script>
@@ -81,9 +81,9 @@ description: CC的部落格 即刻短文页面
         imageUploader: false,
         emoji:
           [
-            "https://npm.elemecdn.com//sticker-heo@latest/Sticker-100/",
-            "https://npm.elemecdn.com//telegram-gif/Telegram-Gif/",
-            "https://npm.elemecdn.com//@waline/emojis/tw-emoji/"
+            "https://gcore.jsdelivr.net/npm/sticker-heo/Sticker-100/",
+            // "https://gcore.jsdelivr.net/npm/telegram-gif/Telegram-Gif/",
+            // "https://gcore.jsdelivr.net/npm/@waline/emojis/tw-emoji/"
           ]
       })
     }
