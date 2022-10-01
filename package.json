@@ -29,7 +29,6 @@
     "version": "6.3.0"
   },
   "dependencies": {
-    "@types/node": "18.7.23",
     "hexo": "6.3.0",
     "hexo-algoliasearch": "1.0.0",
     "hexo-butterfly-tag-plugins-plus": "1.0.17",
@@ -53,6 +52,6 @@
     "hexo-yam": "7.0.0",
     "markdown-it-task-lists": "2.1.1",
     "node-fetch": "3.2.10",
-    "request": "2.88.2"
+    "request": "^2.88.2"
   }
 }
