@@ -8,8 +8,8 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "github-yuque": "yuque-hexo sync && npm run build && hexo algolia && npm run deploy",
-    "github": "npm run build && hexo algolia && npm run deploy"
+    "github-yuque": "yuque-hexo sync && hexo g && hexo algolia && hexo d",
+    "github": "hexo g && hexo algolia && hexo d"
   },
   "yuqueConfig": {
     "postPath": "/source/_posts/语雀",
@@ -29,6 +29,7 @@
     "version": "6.3.0"
   },
   "dependencies": {
+    "@types/node": "^18.7.23",
     "hexo": "6.3.0",
     "hexo-algoliasearch": "1.0.0",
     "hexo-butterfly-tag-plugins-plus": "1.0.17",
@@ -51,7 +52,6 @@
     "hexo-wordcount": "6.0.1",
     "hexo-yam": "7.0.0",
     "markdown-it-task-lists": "2.1.1",
-    "node-fetch": "3.2.10",
     "request": "^2.88.2"
   }
 }

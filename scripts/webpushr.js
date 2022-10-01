@@ -2,9 +2,11 @@
 /* eslint no-param-reassign:0, strict:0 */
 "use strict";
 
+const util = require('hexo-util');
 const fs = require('hexo-fs');
+const url = require("url")
 var request = require('request');
-const url = require("url");
+var moment = require('moment');
 
 // triggered after hexo generate.
 // this output the newPost.json into public/.
