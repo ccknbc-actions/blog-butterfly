@@ -374,3 +374,35 @@ readmore:
   interval: 60
   # 每篇文章随机添加微信公众号引流工具的概率，有效范围在 0.1 ~ 1 之间，1 则表示所有文章默认都自动添加引流工具
   random: 1
+
+minify:
+  enable: true
+  html:
+  css:
+  js:
+  svg:
+  gzip:
+    enable: false
+  brotli:
+    enable: false
+  xml:
+  json:
+
+webpushr:
+  Key: "19e7fc04388c7dd68a5926d7326f3bea"
+  AuthToken: "16778"
+  trackingCode: "BB9Y-w9p3u0CKA7UP9nupB6I-_NqE2MuODmKJjyC4W2YflX06Ff_hEhrNJfonrut5l6gCa28gC83q2OII7Qv-oA"
+  icon: "https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/image/pwa/192.png" # 必须为192*192 png图片
+  # auto_hide: "0" # 默认为 1，代表true，即自动隐藏
+  # sort: "date" # 默认为updated，即只要最新文章更改了更新时间即推送新文章，改为date即发布时间
+  # delay: "30" # 默认定时为在 hexo d十分钟后推送，单位为分钟
+  # image: # 默认为文章封面，Front-matter 属性为'cover'(butterfly主题友好选项)，如果您没有定义默认封面或此属性，请在这里设置默认image
+  action_buttons: # ，默认第一个按钮为前往查看文章，您可也替换第二个按钮相关属性，因参数需求限制（本人太菜）否则将显示两个前往查看按钮
+    [
+      {
+        "title": "状态页面",
+        "url": "https://cc.instatus.com"
+      }
+    ]
+  categories: [工作, 博客, 工具, 生活, 音乐, 学习]
+  segment: ["484223", "484224", "484225", "484226", "484227", "484229"]
