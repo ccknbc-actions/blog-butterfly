@@ -19,7 +19,7 @@ function postTabs (args, content) {
   let tabNav = ''
   let tabContent = ''
 
-  !tabName && hexo.log.warn('Tabs block must have unique name!')
+  !tabName && logger.warn('Tabs block must have unique name!')
 
   while ((match = tabBlock.exec(content)) !== null) {
     matches.push(match[1])

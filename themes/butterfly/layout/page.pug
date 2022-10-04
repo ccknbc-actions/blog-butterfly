@@ -16,8 +16,8 @@ block content
         include includes/page/default-page.pug
 
     //- ad
-    if theme.ad && theme.ad.post
-      .ads-wrap!=theme.ad.post
+    //- if theme.ad && theme.ad.post
+    //-   .ads-wrap!=theme.ad.post
 
     if page.comments !== false && theme.comments && theme.comments.use
       - var commentsJsLoad = true

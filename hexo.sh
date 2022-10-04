@@ -8,7 +8,7 @@ echo "[1] 初始化安装 Hexo（仅在第一次安装时使用）"
 echo "[2] 从云端恢复 Hexo（需要在脚本中配置仓库 URL）"
 echo "=============以下功能需要在 Hexo 文件夹内使用================"
 echo "[3] 开启本地预览"
-echo "[4] GULP 后开启本地预览"
+echo "[4] Hexo 三连"
 echo "[5] 开启5000端口本地预览"
 echo "[6] 部署页面到博客网站"
 echo "[7] 从远程仓库拉取最新版本"
@@ -83,10 +83,10 @@ hexo clean
 # hexo bangumi -u #bilibili追番插件，未配置无需开启
 printf "\033[32mINFO \033[0m 正在重新编译静态页面...\n"
 hexo generate
-printf "\033[32mINFO \033[0m 正在压缩静态资源...\n"
-gulp #gulp插件，未配置无需开启
-printf "\033[32mINFO \033[0m 正在开启本地预览，可以按Ctrl+C退出\n"
-hexo server
+# printf "\033[32mINFO \033[0m 正在压缩静态资源...\n"
+# gulp #gulp插件，未配置无需开启
+printf "\033[32mINFO \033[0m 正在推送文章更新\n"
+hexo deploy
 exec ${HexoPath}/hexo.sh
 else
 if [ "$answer" = "5" ] || [ "$answer" = "" ]; then

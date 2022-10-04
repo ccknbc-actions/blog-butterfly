@@ -22,23 +22,23 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@main
+        id: setup-node
         with:
-          node-version: "16.x"
+          node-version: "latest"
           check-latest: true
           cache: "npm"
-          cache-dependency-path: "**/package-lock.json"
 
-      - name: Catch
-        uses: actions/cache@main
-        id: cache-dependencies
-        with:
-          path: node_modules
-          key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
+      # - name: Catch Dependencies
+      #   uses: actions/cache@main
+      #   id: cache-dependencies
+      #   with:
+      #     path: node_modules
+      #     key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
 
       - name: Install Dependencies
-        if: steps.cache-dependencies.outputs.cache-hit != 'true'
+        if: steps.setup-node.outputs.cache-hit != 'true'
         run: |
-          npm install
+          npm ci
 
       - name: Generate
         run: |
@@ -75,5 +75,5 @@ jobs:
       - name: Delete Workflow Runs
         uses: Mattraks/delete-workflow-runs@main
         with:
-          retain_days: 1
-          keep_minimum_runs: 1
+          retain_days: 30
+          keep_minimum_runs: 6

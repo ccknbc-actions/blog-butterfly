@@ -8,12 +8,14 @@ on:
 
 jobs:
   deploy:
-    name: Deploy Hexo Public To Pages
+    name: Deploy Yuque-Hexo Public To Pages
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Shanghai
       ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
       YUQUE_TOKEN: ${{ secrets.YUQUE_TOKEN }}
+      webpushrKey: ${{ secrets.WEBPUSHR_KEY }}
+      webpushrAuthToken: ${{ secrets.WEBPUSHR_AUTH_TOKEN }}
 
     steps:
       - name: Checkout
@@ -24,11 +26,11 @@ jobs:
 
       - name: Setup Node
         uses: actions/setup-node@main
+        id: setup-node
         with:
-          node-version: "16.x"
+          node-version: "latest"
           check-latest: true
           cache: "npm"
-          cache-dependency-path: "**/package-lock.json"
 
       - name: Catch Dependencies
         uses: actions/cache@main
@@ -40,11 +42,43 @@ jobs:
       - name: Install Dependencies
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
         run: |
-          npm install
+          npm ci
+
+      - name: Download Yuque Posts
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          name: 'Yuque Posts'
+          path: 'source/_posts'
+
+      - name: Download Yuque Cache
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          name: 'Yuque Cache'
+          path: 'yuque'
 
       - name: Generate
         run: |
-          npm run github-yuque
+          npm i -g hexo-cli yuque-hexo
+          npm run yuque
+        # npm i -g hexo-cli yuque-hexo
+        # mkdir yuque
+        # yuque-hexo sync
+
+      - name: Upload Yuque Cache
+        uses: actions/upload-artifact@v3
+        with:
+          name: 'Yuque Cache'
+          path: yuque
+          retention-days: 90
+
+      - name: Upload Yuque Posts
+        uses: actions/upload-artifact@v3
+        with:
+          name: 'Yuque Posts'
+          path: 'source/_posts'
+          retention-days: 90
 
       - name: Deploy Markdown Posts To Branch Posts
         uses: peaceiris/actions-gh-pages@v3
@@ -86,5 +120,5 @@ jobs:
       - name: Delete Workflow Runs
         uses: Mattraks/delete-workflow-runs@main
         with:
-          retain_days: 1
-          keep_minimum_runs: 1
+          retain_days: 30
+          keep_minimum_runs: 6
