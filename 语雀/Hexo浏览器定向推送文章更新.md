@@ -3,15 +3,14 @@ title: Hexo浏览器定向推送文章更新
 translate_title: hexo-webpushr-notification
 subtitle: Hexo Webpushr Notification
 date: 2022-10-05 00:00:00
-updated: 2022-10-05 00:00:00
+updated: 2022-10-05 14:50:00
 expire: 30d
 tags: [博客, 工具]
 keywords: [博客, 工具, hexo, web push, webpushr]
-categories: [博客, 工具]
+categories: 博客
 description: 这一次，CC的部落格可以根据读者订阅主题定向推送了，并且实现了NPM插件化
 cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/d2a947d48815ed24936a919873b97841_w1366_h768_s31.png
 id: 37
-sticky: 1
 ---
 
 查看本文[**语雀**](https://www.yuque.com/ccknbc/blog/37)版本【首发】，自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/hexo-webpushr-notification)！
@@ -158,3 +157,39 @@ INFO  无文章更新 或 为首次推送更新
 这是正常现象，因为此时你的网站还没有`newPost.json`这个文件，后续有更新时将正常推送
 
 当然如果您在使用过程中有什么问题或遇到了 Bug 也欢迎随时在评论区或[issues](https://github.com/Rock-Candy-Tea/hexo-webpushr-notification/issues)反馈
+
+## 推送效果
+
+因为我是通知自动隐藏后才截图，所以大致效果如下所示
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/8391407/1664951686275-f37cb76d-34f6-40ed-94c6-9bed130d0605.png#clientId=ub7fa2e19-f596-4&crop=0&crop=0&crop=1&crop=1&errorMessage=unknown%20error&from=paste&height=402&id=u898a4c3c&margin=%5Bobject%20Object%5D&name=image.png&originHeight=502&originWidth=412&originalType=binary&ratio=1&rotation=0&showTitle=false&size=165943&status=error&style=none&taskId=u3d6496ee-c850-4052-978a-8c49a9055ca&title=&width=329.6)
+
+## 后续计划
+
+- [ ] 兼容`Workbox`的功能，因为`webpushr-sw.js`的原因，只能有一个注册，这方面可能 webpushr 自身也要考虑，现在的状况是如果启用了缓存通知会以`json`形式展示
+
+```javascript
+self.addEventListener('push', function (e) {
+  var msg;
+  if (e.data) {
+    var msg = JSON.parse(e.data.text());
+  } else {
+    body = { t: "Aegir Alert", m: "" };
+  }
+
+  var options = {
+    body: msg.m,
+    title: msg.t,
+    icon: "/img/icons/favicon-32x32.png",
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArrival: Date.now()
+    },
+    ]
+  };
+  e.waitUntil(
+    self.registration.showNotification(msg.t, options)
+  );
+});
+```
+
+- [ ] 支持参数更多的可自定义，启用或关闭。例如不延时，立即发送；不显示`icon`, `image`, `按钮`（因为默认就是跳转到文章）等

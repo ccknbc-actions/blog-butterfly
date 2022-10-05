@@ -4,7 +4,7 @@ translate_title: yuque-to-hexo
 subtitle: Yuque to Hexo
 date: 2022-10-04 16:00:00
 updated: 2022-10-04 16:00:00
-tags: 博客
+tags: [博客, 工具]
 keywords: [语雀, 博客, Hexo, Actions]
 categories: 博客
 description: 这篇文章主要讲一下如何用 GitHub Actions 来部署同步语雀上文章到我们的 Hexo 博客
