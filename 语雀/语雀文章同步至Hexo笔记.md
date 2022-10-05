@@ -131,13 +131,13 @@ jobs:
 
 ## 下载或删除构件
 
-在工作流运行期间，可以使用 `[download-artifact](https://github.com/actions/download-artifact)` 操作下载以前在同一工作流运行中上传的工件。
+在工作流运行期间，可以使用 [actions/download-artifact](https://github.com/actions/download-artifact)操作下载以前在同一工作流运行中上传的工件。
 
 工作流程运行完成后，您可以在 GitHub 上或使用 REST API 下载或删除构件。 有关详细信息，请参阅“[下载工作流工件](https://docs.github.com/cn/actions/managing-workflow-runs/downloading-workflow-artifacts)”、“[删除工作流工件](https://docs.github.com/cn/actions/managing-workflow-runs/removing-workflow-artifacts)”和“[工件 REST API](https://docs.github.com/cn/rest/reference/actions#artifacts)”。
 
 ### 在工作流程运行期间下载构件
 
-`[actions/download-artifact](https://github.com/actions/download-artifact)` 操作可用于在工作流运行期间下载以前上传的工件。
+[ actions/download-artifact](https://github.com/actions/download-artifact)操作可用于在工作流运行期间下载以前上传的工件。
 
 > 注意：只能下载在同一工作流运行期间上传的工作流中的工件。
 

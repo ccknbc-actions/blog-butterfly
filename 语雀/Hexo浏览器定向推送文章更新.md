@@ -64,7 +64,7 @@ webpushr:
 ```
 
 1. 前往 webpushr 控制台获取如下参数，注册的时候可能会遇到一点困难，中国大陆用户需要科学上网来加载验证服务）
-2. 关于一些具体内容，可以看之前的文章 简单浏览器更新推送的实现
+2. 关于注册及一些具体内容，可以看之前的文章 [简单浏览器更新推送的实现](https://blog.ccknbc.cc/posts/implementation-of-simple-browser-update-push/)
 3. 依次点击 `Integration` > `REST API Keys`，即可看到你的`webpushrKey` 及 `webpushrAuthToken`
 4. 依次点击 `Setup` > `TrackingCode`，可以看到如下代码
 
