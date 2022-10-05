@@ -57,61 +57,66 @@ hexo.on("deployAfter", async function () {
     var newPostLocal = await fs.readFileSync("public/newPost.json");
     // Get newPost.json from local
     newPostLocal = await JSON.parse(newPostLocal);
-    // console.table({
-    //     "From online site": newPostOnlineSite,
-    //     "From Local": newPostLocal
-    // });
+    console.table({
+        "在线版本": newPostOnlineSite,
+        "本地版本": newPostLocal
+    });
 
     var topic = new Array(newPostLocal.categories.length)
     for (var i = 0; i < topic.length; i++) {
         topic[i] = hexo.config.webpushr.categories.indexOf(newPostLocal.categories[i])
         topic[i] = hexo.config.webpushr.segment[topic[i]];
     }
-    if(topic[0] == null) hexo.log.info('未发现指定分类，跳过本次推送');
-    else{
-        //determine whether to push web notification
-        if (newPostOnlineSite.updated !== (newPostLocal.updated && undefined)) {
-            // push new Post notification
-            var payload = {
-                title: newPostLocal.title,
-                message: newPostLocal.message,
-                target_url: newPostLocal.target_url,
-                image: newPostLocal.image,
-                icon: hexo.config.webpushr.icon,
-                auto_hide: newPostLocal.auto_hide,
-                send_at: moment(newPostLocal.schedule).format(),
-                expire_push: newPostLocal.expire,
-                segment: topic,
-                action_buttons: [{"title": "前往查看", "url": newPostLocal.target_url},hexo.config.webpushr.action_buttons[0] || {"title": "前往查看", "url": newPostLocal.target_url}]
-            };
-            console.log(payload);
-            var headers = {
-                webpushrKey: hexo.config.webpushr.webpushrKey || process.env.webpushrKey,
-                webpushrAuthToken: hexo.config.webpushr.webpushrAuthToken || process.env.webpushrAuthToken,
-                "Content-Type": "application/json"
-            };
-            // console.log(headers);
-            var options = {
-                url: 'https://api.webpushr.com/v1/notification/send/segment',
-                method: 'POST',
-                headers: headers,
-                body: JSON.stringify(payload)
-            };
-            function callback(error, response, body) {
-                if (!error && response.statusCode == 200) {
-                    hexo.log.info("《"+newPostLocal.title+"》 推送更新成功");
-                    hexo.log.info(body);
-                }
-                else {
-                    hexo.log.error("《"+newPostLocal.title+"》 推送更新失败");
-                    hexo.log.error(body);
-                }
+    //determine whether to push web notification
+    if(topic[0] == (null || undefined)){
+        hexo.log.info('未发现指定分类，跳过本次推送');
+    }
+    else if(newPostOnlineSite[1] !== newPostLocal[1]){
+        // push new Post notification
+        var payload = {
+            title: newPostLocal.title,
+            message: newPostLocal.message,
+            target_url: newPostLocal.target_url,
+            image: newPostLocal.image,
+            icon: hexo.config.webpushr.icon,
+            auto_hide: newPostLocal.auto_hide,
+            send_at: moment(newPostLocal.schedule).format(),
+            expire_push: newPostLocal.expire,
+            segment: topic,
+            action_buttons: [{"title": "前往查看", "url": newPostLocal.target_url},hexo.config.webpushr.action_buttons[0] || {"title": "前往查看", "url": newPostLocal.target_url}]
+        };
+        console.log(payload);
+        var headers = {
+            webpushrKey: hexo.config.webpushr.webpushrKey || process.env.webpushrKey,
+            webpushrAuthToken: hexo.config.webpushr.webpushrAuthToken || process.env.webpushrAuthToken,
+            "Content-Type": "application/json"
+        };
+        // console.log(headers);
+        var options = {
+            url: 'https://api.webpushr.com/v1/notification/send/segment',
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify(payload)
+        };
+        function callback(error, response, body) {
+            if (!error && response.statusCode == 200) {
+                hexo.log.info("《"+newPostLocal.title+"》 推送更新成功");
+                hexo.log.info(body);
             }
-            request(options, callback);
-        } else {
-            hexo.log.info("无文章更新 或 为首次推送更新");
+            else {
+                hexo.log.error("《"+newPostLocal.title+"》 推送更新失败");
+                hexo.log.error(body);
+            }
         }
-    }});
+        request(options, callback);
+    }
+    else if(newPostOnlineSite[1] == newPostLocal[1]){
+        hexo.log.info("无文章更新");
+    }
+    else if(newPostOnlineSite[0] == (null || undefined)){
+        hexo.log.info('为首次推送更新');
+    }
+});
 
 //insert webpushr tracking code
 hexo.extend.filter.register('after_render:html', data => {

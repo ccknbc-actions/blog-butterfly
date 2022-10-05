@@ -15,7 +15,7 @@ menu:
     音乐: /music/ || fa-solid fa-music
     短文: /essay/ || fa-solid fa-comment-alt
   关于 || fa-solid fa-desktop:
-    订阅: /sub/ || fa-solid fa-rss
+    订阅: /sub/ || fa-solid fa-bell
     本站: /about/ || fa-solid fa-list-check
     隐私: /privacy-policy/ || fa-solid fa-user-secret
     # 状态: https://cc.instatus.com || fa-solid fa-server
@@ -789,9 +789,9 @@ aside:
     description: ""
     button:
       enable: true
-      icon: fa-solid fa-circle faa-burst animated
-      text: CC的状态监控
-      link: https://cc.instatus.com
+      icon: fa-solid fa-bell faa-ring animated
+      text: 多种订阅更新方式
+      link: /sub
   card_announcement:
     enable: false
     content: <div id="webpushr-subscription-button" data-size="medium" data-button-text="订阅 CC的部落格 更新" data-subscriber-count-text="位用户已订阅浏览器推送通知" data-background-color="#8fbc8f"></div>

@@ -386,7 +386,9 @@ minify:
   brotli:
     enable: false
   xml:
+    enable: false
   json:
+    enable: false
 
 webpushr:
   # webpushrKey: "webpushrKey" # 出于安全考虑，建议添加至系统环境变量，并注释掉此处配置
