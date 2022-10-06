@@ -35,7 +35,7 @@ description: CC的部落格 隐私政策
 您应该知道在您访问的时候以下信息会被统计功能使用：
 
 
-<script src="https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/js/privacy.js"></script>
+<script src="https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/js/privacy.js"></script>
 | 类型<div style="width:100px"></div>          | 信息                                  |
 |:-----------:|:-----------------------------------:|
 | IP 地址       | <div id="userAgentIp"></div>                  |

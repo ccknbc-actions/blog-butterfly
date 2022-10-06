@@ -52,7 +52,7 @@ div
     //- if theme.instatus.enable
     //-   script(defer src=`https://cc.instatus.com/widget/script.js`)
 
-    if theme.addThis.enable && is_post()
+    if theme.addThis.enable
       script(src=`https://s7.addthis.com/js/300/addthis_widget.js#pubid=${theme.addThis.pubid}` defer)
 
   != partial("includes/third-party/prismjs", {}, { cache: true })

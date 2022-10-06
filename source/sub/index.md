@@ -20,8 +20,8 @@ updated: 2022-10-05 03:20:19
     - 直接在下表输入您的相关信息点击订阅后，按照收到的邮件提示点击确认即可
 
 <!-- Begin Mailchimp Signup Form -->
-<script defer src="https://gcore.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
-<link href="https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/css/mailchimp.css" rel="stylesheet" type="text/css">
+<script defer src="https://jsd.cdn.zzko.cn/npm/jquery/dist/jquery.min.js"></script>
+<link href="https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/css/mailchimp.css" rel="stylesheet" type="text/css">
 <div id="mc_embed_signup">
 <form action="https://ccknbc.us2.list-manage.com/subscribe/post?u=a0aadd04e3d48349de29068f8&amp;id=7518e18fcd" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
@@ -54,5 +54,5 @@ updated: 2022-10-05 03:20:19
     </div>
 </form>
 </div>
-<script type='text/javascript' src='https://gcore.jsdelivr.net/gh/ccknbc-backup/cdn/js/mailchimp.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday'; }(jQuery));var $mcj = jQuery.noConflict(true);</script>
+<script type='text/javascript' src='https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/js/mailchimp.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday'; }(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <!--End mc_embed_signup-->

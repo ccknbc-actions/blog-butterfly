@@ -1,4 +1,4 @@
-importScripts('https://gcore.jsdelivr.net/npm/workbox-sw/build/workbox-sw.js');
+importScripts('https://jsd.cdn.zzko.cn/npm/workbox-sw/build/workbox-sw.js');
 
 if (workbox) {
     console.log('workbox加载成功🎉');
