@@ -1,14 +1,6 @@
 /* 阿里字体 */
 /* @import "https://at.alicdn.com/t/font_3144543_hc4quxkseoh.css";
 
-.cc {
-    font-family: "cc" !important;
-    font-size: 24.5px;
-    font-style: normal;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    } */
-
 /* 文章页H2-H6图标 显示H2~H6 */
 
 @-webkit-keyframes ccc {
@@ -49,7 +41,8 @@
 #article-container.post-content  h6::before {
     content:'H₆'
 }
-/* 
-#article-container .fa-solid.fa-hashtag {
-    float: right
-} */
+
+[data-theme=dark]
+.webpushr-subscribed prompticon3._Bell.Bottom.Right_bell{
+    background: var(--btn-bg);
+}

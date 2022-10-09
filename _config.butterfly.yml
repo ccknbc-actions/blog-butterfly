@@ -791,7 +791,7 @@ aside:
       enable: true
       icon: fa-solid fa-bell faa-ring animated
       text: 多种订阅更新方式
-      link: /sub
+      link: /sub/
   card_announcement:
     enable: false
     content: <div id="webpushr-subscription-button" data-size="medium" data-button-text="订阅 CC的部落格 更新" data-subscriber-count-text="位用户已订阅浏览器推送通知" data-background-color="#8fbc8f"></div>
@@ -1044,7 +1044,7 @@ CDN:
   # Custom format
   # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
   #              https://cdn.jsdelivr.net/npm/${name}${verType}/${min_file}
-  custom_format: https://jsd.cdn.zzko.cn/npm/${name}/${min_file}
+  custom_format: https://jsd.cdn.zzko.cn/npm/${name}/${file}
   # Add version number to CDN, true or false
   version: false
   option:
