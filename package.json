@@ -37,7 +37,7 @@
     "hexo-fs": "4.0.0",
     "hexo-generator-archive": "1.0.0",
     "hexo-generator-baidu-sitemap": "0.1.9",
-    "hexo-generator-category": "1.0.0",
+    "hexo-generator-category": "2.0.0",
     "hexo-generator-feed": "3.0.0",
     "hexo-generator-indexed": "1.2.1",
     "hexo-generator-sitemap": "3.0.1",
