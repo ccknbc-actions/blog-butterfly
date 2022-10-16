@@ -35,7 +35,7 @@
     "hexo-butterfly-wowjs": "1.0.5",
     "hexo-filter-nofollow": "2.0.2",
     "hexo-fs": "4.0.0",
-    "hexo-generator-archive": "1.0.0",
+    "hexo-generator-archive": "2.0.0",
     "hexo-generator-baidu-sitemap": "0.1.9",
     "hexo-generator-category": "2.0.0",
     "hexo-generator-feed": "3.0.0",
