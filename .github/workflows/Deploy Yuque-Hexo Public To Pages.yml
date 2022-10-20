@@ -62,8 +62,7 @@ jobs:
         run: |
           npm i -g hexo-cli yuque-hexo
           npm run yuque
-        # npm i -g hexo-cli yuque-hexo
-        # mkdir yuque
+        # mkdir -p yuque
         # yuque-hexo sync
 
       - name: Upload Yuque Cache
