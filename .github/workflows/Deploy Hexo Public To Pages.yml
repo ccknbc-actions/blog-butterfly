@@ -28,20 +28,21 @@ jobs:
           check-latest: true
           cache: "npm"
 
-      # - name: Catch Dependencies
-      #   uses: actions/cache@main
-      #   id: cache-dependencies
-      #   with:
-      #     path: node_modules
-      #     key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
+      - name: Catch Dependencies
+        uses: actions/cache@main
+        id: cache-dependencies
+        with:
+          path: node_modules
+          key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
 
       - name: Install Dependencies
-        if: steps.setup-node.outputs.cache-hit != 'true'
+        if: steps.cache-dependencies.outputs.cache-hit != 'true'
         run: |
           npm ci
 
       - name: Generate
         run: |
+          npm i -g hexo-cli yuque-hexo
           git clone -b posts git@github.com:ccknbc-actions/blog-butterfly.git source/_posts
           npm run github
 

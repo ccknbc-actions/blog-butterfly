@@ -37,11 +37,11 @@ jobs:
           retain_days: 30
           keep_minimum_runs: 6
 
-      - name: Telegram Notification
-        if: cancelled() == false
-        uses: xinthink/action-telegram@v1.1
-        with:
-          botToken: ${{ secrets.TG_BOT_TOKEN }} #use bot @BotFather
-          chatId: ${{ secrets.TG_CHAT_ID }} #use bot @userinfobot
-          jobStatus: ${{ job.status }}
-          skipSuccess: true
+      # - name: Telegram Notification
+      #   if: cancelled() == false
+      #   uses: xinthink/action-telegram@v1.1
+      #   with:
+      #     botToken: ${{ secrets.TG_BOT_TOKEN }} #use bot @BotFather
+      #     chatId: ${{ secrets.TG_CHAT_ID }} #use bot @userinfobot
+      #     jobStatus: ${{ job.status }}
+      #     skipSuccess: true

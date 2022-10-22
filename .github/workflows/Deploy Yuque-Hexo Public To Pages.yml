@@ -62,6 +62,7 @@ jobs:
         run: |
           npm i -g hexo-cli yuque-hexo
           npm run yuque
+        # npm i -g hexo-cli yuque-hexo
         # mkdir -p yuque
         # yuque-hexo sync
 
@@ -80,14 +81,13 @@ jobs:
           retention-days: 90
 
       - name: Deploy Markdown Posts To Branch Posts
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: posts
-          publish_dir: ./source/_posts
-          user_name: "github-actions[bot]"
-          user_email: "github-actions[bot]@users.noreply.github.com"
-          full_commit_message: ${{ github.event.head_commit.message }}
+          branch: posts
+          folder: ./source/_posts/语雀/
+          git-config-name: "github-actions[bot]"
+          git-config-email: "github-actions[bot]@users.noreply.github.com"
+          commit-message: ${{ github.event.head_commit.message }}
 
       - name: Deploy Hexo Public To Pages
         run: |
