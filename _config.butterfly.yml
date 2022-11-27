@@ -893,7 +893,7 @@ rightside_scroll_percent: true
 # Don't repeat 不要重複
 rightside_item_order:
   enable: true
-  hide: hideAside,readmode,translate,darkmode,share
+  hide: hideAside,readmode,translate,darkmode
   show: share,toc,comment,chat
 
 # Lightbox (圖片大圖查看模式)
