@@ -3,7 +3,7 @@ title: Hexo Butterfly Algolia 搜索的使用
 translate_title: hexo-butterfly-algolia
 subtitle: Hexo Butterfly Algolia
 date: 2021-05-11 11:00:00
-updated: 2022-04-13 20:47:00
+updated: 2022-11-27 19:52:00
 tags: 工具
 keywords: [Hexo, Butterfly, Algolia]
 categories: 工具
@@ -24,10 +24,10 @@ id: 24
 ## 注册账号
 
 前往 [Algolia](https://www.algolia.com/users/sign_up) 官网注册一个账号，新建 应用和 index
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620791672826-3bac29b1-3f60-4be8-bdc5-7b615e72f78a.png#crop=0&crop=0&crop=1&crop=1&height=721&id=u2756c9ea&margin=%5Bobject%20Object%5D&name=image.png&originHeight=721&originWidth=1469&originalType=binary&ratio=1&rotation=0&showTitle=false&size=115021&status=done&style=none&title=&width=1469)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620791672826-3bac29b1-3f60-4be8-bdc5-7b615e72f78a.png#averageHue=%23e2f9f1&crop=0&crop=0&crop=1&crop=1&height=721&id=u2756c9ea&margin=%5Bobject%20Object%5D&name=image.png&originHeight=721&originWidth=1469&originalType=binary&ratio=1&rotation=0&showTitle=false&size=115021&status=done&style=none&title=&width=1469)
 数据中心建议选择新加坡或香港，当然根据你自己情况而定
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620791714386-d2a2ac19-edfd-4c8b-ab02-9de7b770ff21.png#crop=0&crop=0&crop=1&crop=1&height=771&id=uce195a9b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=771&originWidth=1204&originalType=binary&ratio=1&rotation=0&showTitle=false&size=116921&status=done&style=none&title=&width=1204)
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620791516501-3f36941d-cf13-49aa-bdb4-e956f632283a.png#crop=0&crop=0&crop=1&crop=1&height=447&id=u8c5cd22c&margin=%5Bobject%20Object%5D&name=image.png&originHeight=447&originWidth=799&originalType=binary&ratio=1&rotation=0&showTitle=false&size=23823&status=done&style=none&title=&width=799)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620791714386-d2a2ac19-edfd-4c8b-ab02-9de7b770ff21.png#averageHue=%23f5f5fa&crop=0&crop=0&crop=1&crop=1&height=771&id=uce195a9b&margin=%5Bobject%20Object%5D&name=image.png&originHeight=771&originWidth=1204&originalType=binary&ratio=1&rotation=0&showTitle=false&size=116921&status=done&style=none&title=&width=1204)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620791516501-3f36941d-cf13-49aa-bdb4-e956f632283a.png#averageHue=%23e8e9f6&crop=0&crop=0&crop=1&crop=1&height=447&id=u8c5cd22c&margin=%5Bobject%20Object%5D&name=image.png&originHeight=447&originWidth=799&originalType=binary&ratio=1&rotation=0&showTitle=false&size=23823&status=done&style=none&title=&width=799)
 
 ## 安装插件
 
@@ -89,10 +89,10 @@ local_search:
 
 然后来看以下具体的参数配置获取方式
 `appId`，`apiKey`，`adminApiKey`可在 API Keys 页面获取，注意保管好你的 Admin Key，不要让其他人知道，不建议直接写在配置中
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620789827112-9247b7ae-f3c9-4807-93cd-46c2b8dbb2bc.png#crop=0&crop=0&crop=1&crop=1&height=707&id=u63248bc0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=707&originWidth=1900&originalType=binary&ratio=1&rotation=0&showTitle=false&size=115433&status=done&style=none&title=&width=1900)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620789827112-9247b7ae-f3c9-4807-93cd-46c2b8dbb2bc.png#averageHue=%23bdceb8&crop=0&crop=0&crop=1&crop=1&height=707&id=u63248bc0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=707&originWidth=1900&originalType=binary&ratio=1&rotation=0&showTitle=false&size=115433&status=done&style=none&title=&width=1900)
 ![](https://cdn.jsdelivr.net/gh/oncletom/hexo-algolia@main/algolia-write-key.png#crop=0&crop=0&crop=1&crop=1&id=E3NUV&originHeight=1172&originWidth=1176&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 对于 Windows 系统，如果你不想每次都进行设定变量操作，可以添加`ALGOLIA_ADMIN_API_KEY`到系统的环境变量中
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620789745876-cbf0d411-f694-45c7-bcbd-c0987f71f718.png#crop=0&crop=0&crop=1&crop=1&height=217&id=ub7f3b987&name=image.png&originHeight=217&originWidth=839&originalType=binary&ratio=1&rotation=0&showTitle=false&size=13413&status=done&style=none&title=&width=839)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620789745876-cbf0d411-f694-45c7-bcbd-c0987f71f718.png#averageHue=%23efeeee&crop=0&crop=0&crop=1&crop=1&height=217&id=ub7f3b987&name=image.png&originHeight=217&originWidth=839&originalType=binary&ratio=1&rotation=0&showTitle=false&size=13413&status=done&style=none&title=&width=839)
 而 hexo-algolia 插件环境变量名称为 `HEXO_ALGOLIA_INDEXING_KEY` 注意根据对应的文档更改，当然也可以使用命令行工具
 
 ```bash
@@ -131,7 +131,7 @@ export HEXO_ALGOLIA_INDEXING_KEY=…
 ```
 
 `indexName` 即你开始新建的索引名称
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620790208902-1a6311bf-bd58-4889-9261-f2b6dd4d779e.png#crop=0&crop=0&crop=1&crop=1&height=64&id=u57f4c82d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=64&originWidth=379&originalType=binary&ratio=1&rotation=0&showTitle=false&size=5668&status=done&style=none&title=&width=379)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620790208902-1a6311bf-bd58-4889-9261-f2b6dd4d779e.png#averageHue=%23eaebef&crop=0&crop=0&crop=1&crop=1&height=64&id=u57f4c82d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=64&originWidth=379&originalType=binary&ratio=1&rotation=0&showTitle=false&size=5668&status=done&style=none&title=&width=379)
 其他内容保持默认即可，但对于`fields`
 
 ### 配置示例
@@ -188,20 +188,20 @@ hexo algolia --no-clear
 ```
 
 注意查看命令行输出信息，然后去官网检查索引是否生成
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792250950-8c6c2e31-a5f4-41d3-8526-c101b88ca2f0.png#crop=0&crop=0&crop=1&crop=1&height=676&id=u0aaf2648&margin=%5Bobject%20Object%5D&name=image.png&originHeight=676&originWidth=1865&originalType=binary&ratio=1&rotation=0&showTitle=false&size=125864&status=done&style=none&title=&width=1865)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792250950-8c6c2e31-a5f4-41d3-8526-c101b88ca2f0.png#averageHue=%23bad8e7&crop=0&crop=0&crop=1&crop=1&height=676&id=u0aaf2648&margin=%5Bobject%20Object%5D&name=image.png&originHeight=676&originWidth=1865&originalType=binary&ratio=1&rotation=0&showTitle=false&size=125864&status=done&style=none&title=&width=1865)
 事实上到这里已经可以获得下图所示的搜索效果（这是冰老师博客的效果，它使用的是 hexo-algolia，毕竟有关于我界面）
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1623297781030-708a3fa6-a56d-4fe0-bb45-5c3bb9081eba.png#clientId=uc24fb27d-4fc5-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=udc02fc71&margin=%5Bobject%20Object%5D&name=image.png&originHeight=508&originWidth=751&originalType=binary&ratio=2&rotation=0&showTitle=false&size=35158&status=done&style=none&taskId=u0178d8fc-c514-4ab9-9efb-12d94a7bcc6&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1623297781030-708a3fa6-a56d-4fe0-bb45-5c3bb9081eba.png#averageHue=%23f3f6f9&clientId=uc24fb27d-4fc5-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=udc02fc71&margin=%5Bobject%20Object%5D&name=image.png&originHeight=508&originWidth=751&originalType=binary&ratio=2&rotation=0&showTitle=false&size=35158&status=done&style=none&taskId=u0178d8fc-c514-4ab9-9efb-12d94a7bcc6&title=)
 
 ## Algolia 配置
 
 这里不细节讲，你可以查阅[官方文档](https://community.algolia.com/instantsearch.js/v2/getting-started.html)，虽然有些过时的参数，但结合 [Upgrade from v2 to v3](https://www.algolia.com/doc/guides/building-search-ui/upgrade-guides/js/#upgrade-from-v2-to-v3) 还是勉强能用，蝴蝶已经做好了高亮标题，虽然会查询文章内容，但并不会高亮文章内容节选，我们要做的就是修改部分 js 内容，并对应的设置好 Algolia，以便按照我们要求的优先顺序展示搜索结果，而不是默认的很奇怪的排序，毕竟针对中文分词他是一个一个分不能按照英语那样，针对英文我们可以开启分词查询，驼峰查找而不是盲目的匹配整个单词，并且允许拼错字母或汉字的情况存在，这些都是一个搜索系统要考虑的问题。然后针对搜索速度，我们可以对文章内容进行切片或者属性的刻画，但 V2 所支持的功能实在太少，派的上用场的大概就是 匹配的字词内容，匹配度，匹配内容的摘录（默认 10 个字词），还有高级搜索用法的启用。
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792329244-9538543c-aafa-4a2a-a13b-a856839d99b4.png#crop=0&crop=0&crop=1&crop=1&height=490&id=u96dacffc&margin=%5Bobject%20Object%5D&name=image.png&originHeight=490&originWidth=1526&originalType=binary&ratio=1&rotation=0&showTitle=false&size=53168&status=done&style=none&title=&width=1526)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792329244-9538543c-aafa-4a2a-a13b-a856839d99b4.png#averageHue=%23fafafc&crop=0&crop=0&crop=1&crop=1&height=490&id=u96dacffc&margin=%5Bobject%20Object%5D&name=image.png&originHeight=490&originWidth=1526&originalType=binary&ratio=1&rotation=0&showTitle=false&size=53168&status=done&style=none&title=&width=1526)
 
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792359705-aca4db80-07ec-41b5-ba89-3e398e4832c3.png#crop=0&crop=0&crop=1&crop=1&height=286&id=u1d01bcee&margin=%5Bobject%20Object%5D&name=image.png&originHeight=572&originWidth=1520&originalType=binary&ratio=1&rotation=0&showTitle=false&size=75266&status=done&style=none&title=&width=760)
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792403427-919eeaf3-beee-43b8-ba15-33d179fb7483.png#crop=0&crop=0&crop=1&crop=1&height=390&id=ua294bd74&margin=%5Bobject%20Object%5D&name=image.png&originHeight=780&originWidth=1510&originalType=binary&ratio=1&rotation=0&showTitle=false&size=98311&status=done&style=none&title=&width=755)
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792429374-c10f685c-42df-4b2f-8112-b63b811686f5.png#crop=0&crop=0&crop=1&crop=1&height=815&id=u8c98eecf&margin=%5Bobject%20Object%5D&name=image.png&originHeight=815&originWidth=1524&originalType=binary&ratio=1&rotation=0&showTitle=false&size=88864&status=done&style=none&title=&width=1524)
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792467160-7192cedf-ad20-4fd0-bcb2-4f7557fc904d.png#crop=0&crop=0&crop=1&crop=1&height=567&id=u6ca53735&margin=%5Bobject%20Object%5D&name=image.png&originHeight=567&originWidth=1515&originalType=binary&ratio=1&rotation=0&showTitle=false&size=65520&status=done&style=none&title=&width=1515)
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792523507-460b449b-cd80-4efc-897b-898aa544d09a.png#crop=0&crop=0&crop=1&crop=1&height=592&id=u28791a5d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1183&originWidth=1537&originalType=binary&ratio=1&rotation=0&showTitle=false&size=130557&status=done&style=none&title=&width=768.5)![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792559182-d559fb1a-94e4-49ad-a13a-f9848fa7f784.png#crop=0&crop=0&crop=1&crop=1&height=363&id=u5d9546e2&margin=%5Bobject%20Object%5D&name=image.png&originHeight=725&originWidth=1511&originalType=binary&ratio=1&rotation=0&showTitle=false&size=75980&status=done&style=none&title=&width=755.5)![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792603109-0c127f51-0fd2-4f86-9290-1f25cf7b4deb.png#crop=0&crop=0&crop=1&crop=1&height=358&id=u1977ad48&margin=%5Bobject%20Object%5D&name=image.png&originHeight=358&originWidth=999&originalType=binary&ratio=1&rotation=0&showTitle=false&size=26859&status=done&style=none&title=&width=999)![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792626661-af14bf9c-6dfb-4306-beaf-d4153095ffbf.png#crop=0&crop=0&crop=1&crop=1&height=444&id=uf6f4182f&margin=%5Bobject%20Object%5D&name=image.png&originHeight=444&originWidth=997&originalType=binary&ratio=1&rotation=0&showTitle=false&size=27018&status=done&style=none&title=&width=997)![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792659190-7a5767d3-64f9-4f57-a247-1bbe65f45da5.png#crop=0&crop=0&crop=1&crop=1&height=196&id=u51baa85f&margin=%5Bobject%20Object%5D&name=image.png&originHeight=196&originWidth=976&originalType=binary&ratio=1&rotation=0&showTitle=false&size=17315&status=done&style=none&title=&width=976)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792359705-aca4db80-07ec-41b5-ba89-3e398e4832c3.png#averageHue=%23fefefe&crop=0&crop=0&crop=1&crop=1&height=286&id=u1d01bcee&margin=%5Bobject%20Object%5D&name=image.png&originHeight=572&originWidth=1520&originalType=binary&ratio=1&rotation=0&showTitle=false&size=75266&status=done&style=none&title=&width=760)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792403427-919eeaf3-beee-43b8-ba15-33d179fb7483.png#averageHue=%23fefefe&crop=0&crop=0&crop=1&crop=1&height=390&id=ua294bd74&margin=%5Bobject%20Object%5D&name=image.png&originHeight=780&originWidth=1510&originalType=binary&ratio=1&rotation=0&showTitle=false&size=98311&status=done&style=none&title=&width=755)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792429374-c10f685c-42df-4b2f-8112-b63b811686f5.png#averageHue=%23fefefe&crop=0&crop=0&crop=1&crop=1&height=815&id=u8c98eecf&margin=%5Bobject%20Object%5D&name=image.png&originHeight=815&originWidth=1524&originalType=binary&ratio=1&rotation=0&showTitle=false&size=88864&status=done&style=none&title=&width=1524)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792467160-7192cedf-ad20-4fd0-bcb2-4f7557fc904d.png#averageHue=%23fefefe&crop=0&crop=0&crop=1&crop=1&height=567&id=u6ca53735&margin=%5Bobject%20Object%5D&name=image.png&originHeight=567&originWidth=1515&originalType=binary&ratio=1&rotation=0&showTitle=false&size=65520&status=done&style=none&title=&width=1515)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792523507-460b449b-cd80-4efc-897b-898aa544d09a.png#averageHue=%23fefefe&crop=0&crop=0&crop=1&crop=1&height=592&id=u28791a5d&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1183&originWidth=1537&originalType=binary&ratio=1&rotation=0&showTitle=false&size=130557&status=done&style=none&title=&width=768.5)![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792559182-d559fb1a-94e4-49ad-a13a-f9848fa7f784.png#averageHue=%23fefefe&crop=0&crop=0&crop=1&crop=1&height=363&id=u5d9546e2&margin=%5Bobject%20Object%5D&name=image.png&originHeight=725&originWidth=1511&originalType=binary&ratio=1&rotation=0&showTitle=false&size=75980&status=done&style=none&title=&width=755.5)![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792603109-0c127f51-0fd2-4f86-9290-1f25cf7b4deb.png#averageHue=%23fefefe&crop=0&crop=0&crop=1&crop=1&height=358&id=u1977ad48&margin=%5Bobject%20Object%5D&name=image.png&originHeight=358&originWidth=999&originalType=binary&ratio=1&rotation=0&showTitle=false&size=26859&status=done&style=none&title=&width=999)![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792626661-af14bf9c-6dfb-4306-beaf-d4153095ffbf.png#averageHue=%23fefefe&crop=0&crop=0&crop=1&crop=1&height=444&id=uf6f4182f&margin=%5Bobject%20Object%5D&name=image.png&originHeight=444&originWidth=997&originalType=binary&ratio=1&rotation=0&showTitle=false&size=27018&status=done&style=none&title=&width=997)![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1620792659190-7a5767d3-64f9-4f57-a247-1bbe65f45da5.png#averageHue=%23fefefe&crop=0&crop=0&crop=1&crop=1&height=196&id=u51baa85f&margin=%5Bobject%20Object%5D&name=image.png&originHeight=196&originWidth=976&originalType=binary&ratio=1&rotation=0&showTitle=false&size=17315&status=done&style=none&title=&width=976)
 
 ## JS 修改
 
@@ -240,6 +240,16 @@ hexo algolia --no-clear
 
 已经升级到 V4 版本，那么一些特性就可以使用了，修改内容其实差不多，只是建议对于第 87 行的页数限制，主要是为了手机上排版美观，不会转到下一行，但是这样会有一个问题，如果结果超过 5 页，那么将无法显示，最后一页代表第 5 页，所以我个人会选择删掉这个参数限制，同时合并删除了部分代码，以及使用 widget 的 powerby 组件而不是官方的 svg 代码解决方案。另外因为新版官方的每次访问网站都会有一次全局请求，这在消耗免费额度的同时，也影响网站加载的速度，所以修改默认行为为按下回车后再请求
 同样的部分参数发生了改变（L55-59），可以自行比对或查看[**官方文档**](https://www.algolia.com/doc/guides/building-search-ui/getting-started/js/)，也可以直接[**引用我的**](https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/search/algolia.js)
+
+**特别提一嘴**
+**官方切片方式对我来说 140 个字太长了，所以如果可以接受就用官方的，不用做其他更改，但想要和我的显示方式一样，就注意配置好切片，默认是 10 个词符，毕竟有现成的切片高亮处理可以用，就没必要再来一次了**
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/8391407/1669548282470-47f14d26-cf31-4b01-8890-5946f68c699e.png#averageHue=%23fefefe&clientId=ued74b2b9-3a9c-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=1202&id=u32ebaced&margin=%5Bobject%20Object%5D&name=image.png&originHeight=1502&originWidth=1918&originalType=binary&ratio=1&rotation=0&showTitle=false&size=143892&status=done&style=none&taskId=u8901c9ce-eae5-4860-bc2a-9aefe3102df&title=&width=1534.4)
+另外，新版浏览器支持搜索并定位高亮处理，所以对跳转链接也做了处理，算是弥补了一点不能精准定位的缺陷，比如点击如下链接它会跳转到搜索结果对应的位置，至于前后匹配多少字符你们自行修改，但也是处于不太好用的状态，毕竟是分片还是有点奇怪，对英文来说应该是单词识别，只是中文恰巧是另一标准，单字变成了词
+
+[#:~:text=勿滥用-,表情,-符号和](/posts/how-to-ask-questions-the-smart-way/#:~:text=勿滥用-,表情,-符号和)
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/8391407/1669550104799-99697278-0900-4dca-aa04-65a5a2536c1d.png#averageHue=%23242322&clientId=ud07bf8a0-f34e-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=718&id=uee396e9f&margin=%5Bobject%20Object%5D&name=image.png&originHeight=898&originWidth=1348&originalType=binary&ratio=1&rotation=0&showTitle=false&size=149894&status=done&style=none&taskId=ua07a641e-1673-4136-8536-b373abc53e2&title=&width=1078.4)
 
 ```yaml
 CDN:
@@ -286,6 +296,9 @@ window.addEventListener("load", () => {
     document
       .querySelector("#search-button > .search")
       .addEventListener("click", openSearch);
+  };
+
+  const searchClickFnOnce = () => {
     document
       .getElementById("search-mask")
       .addEventListener("click", closeSearch);
@@ -294,98 +307,113 @@ window.addEventListener("load", () => {
       .addEventListener("click", closeSearch);
   };
 
-  searchClickFn();
-
-  window.addEventListener("pjax:complete", function () {
-    getComputedStyle(document.querySelector("#algolia-search .search-dialog"))
-      .display === "block" && closeSearch();
-    searchClickFn();
-  });
-
   const algolia = GLOBAL_CONFIG.algolia;
   const isAlgoliaValid = algolia.appId && algolia.apiKey && algolia.indexName;
   if (!isAlgoliaValid) {
     return console.error("Algolia setting is invalid!");
   }
 
-  const searchClient = window.algoliasearch(algolia.appId, algolia.apiKey);
   const search = instantsearch({
     indexName: algolia.indexName,
-    searchClient,
+    searchClient: algoliasearch(algolia.appId, algolia.apiKey),
     searchFunction(helper) {
-      if (helper.state.query) {
-        helper.search();
-      }
+      helper.state.query && helper.search();
     },
   });
 
-  search.addWidgets([
-    instantsearch.widgets.searchBox({
-      container: "#algolia-search-input",
-      showReset: false,
-      showSubmit: false,
-      placeholder: GLOBAL_CONFIG.algolia.languages.input_placeholder,
-      searchAsYouType: false,
-      showLoadingIndicator: true,
-    }),
-    instantsearch.widgets.configure({
-      hitsPerPage: algolia.hits.per_page || 5,
-    }),
-    instantsearch.widgets.hits({
-      container: "#algolia-hits",
-      templates: {
-        item: function (data) {
-          const link = data.permalink
-            ? data.permalink
-            : GLOBAL_CONFIG.root + data.path;
-          return `
-            <a href="${link}" class="algolia-hit-item-link">
-            <b>${data._highlightResult.title.value || "no-title"}</b>
-            <br>${data._snippetResult.contentStrip.value}</br>
-            匹配字词: <em><mark>${
-              data._highlightResult.contentStrip.matchedWords
-            }</mark></em> | 匹配等级: <em><mark>${
-            data._highlightResult.contentStrip.matchLevel
-          }</mark></em>
-            </a>`;
-        },
-        empty: function (data) {
-          return (
-            '<div id="algolia-hits-empty">' +
-            GLOBAL_CONFIG.algolia.languages.hits_empty.replace(
-              /\$\{query}/,
-              data.query
-            ) +
-            "</div>"
-          );
-        },
+  const configure = instantsearch.widgets.configure({
+    hitsPerPage: algolia.per_page || 5,
+  });
+
+  const searchBox = instantsearch.widgets.searchBox({
+    container: "#algolia-search-input",
+    showReset: false,
+    showSubmit: false,
+    searchAsYouType: false,
+    placeholder: GLOBAL_CONFIG.algolia.languages.input_placeholder,
+    showLoadingIndicator: true,
+  });
+
+  const hits = instantsearch.widgets.hits({
+    container: "#algolia-hits",
+    templates: {
+      item(data) {
+        const link = data.permalink
+          ? data.permalink
+          : GLOBAL_CONFIG.root + data.path;
+        const content = data._snippetResult.contentStrip.value;
+        return `
+          <a href="${link}#:~:text=${content.substring(
+          content.indexOf("<mark>") - 3,
+          content.indexOf("<mark>")
+        )}-,${content.substring(
+          content.indexOf("<mark>") + 6,
+          content.indexOf("</mark>")
+        )},-${content.substring(
+          content.indexOf("</mark>") + 7,
+          content.indexOf("</mark>") + 10
+        )}" class="algolia-hit-item-link">
+          <b>${data._highlightResult.title.value || "no-title"}</b>
+          <br>${content}</br>
+          匹配字词: <em><mark>${
+            data._highlightResult.contentStrip.matchedWords
+          }</mark></em> | 匹配等级: <em><mark>${
+          data._highlightResult.contentStrip.matchLevel
+        }</mark></em>
+          </a>`;
       },
-    }),
-    instantsearch.widgets.pagination({
-      container: "#algolia-pagination",
-      templates: {
-        first: '<i class="fa-solid fa-angle-double-left" title="第一页"></i>',
-        last: '<i class="fa-solid fa-angle-double-right" title="最后一页"></i>',
-        previous: '<i class="fa-solid fa-angle-left" title="上一页"></i>',
-        next: '<i class="fa-solid fa-angle-right" title="下一页"></i>',
+      empty: function (data) {
+        return (
+          '<div id="algolia-hits-empty">' +
+          GLOBAL_CONFIG.algolia.languages.hits_empty.replace(
+            /\$\{query}/,
+            data.query
+          ) +
+          "</div>"
+        );
       },
-    }),
-    instantsearch.widgets.stats({
-      container: "#algolia-stats",
-      templates: {
-        text: function (data) {
-          const stats = GLOBAL_CONFIG.algolia.languages.hits_stats
-            .replace(/\$\{hits}/, data.nbHits)
-            .replace(/\$\{time}/, data.processingTimeMS);
-          return `${stats}`;
-        },
+    },
+  });
+
+  const stats = instantsearch.widgets.stats({
+    container: "#algolia-info > .algolia-stats",
+    templates: {
+      text: function (data) {
+        const stats = GLOBAL_CONFIG.algolia.languages.hits_stats
+          .replace(/\$\{hits}/, data.nbHits)
+          .replace(/\$\{time}/, data.processingTimeMS);
+        return `<hr>${stats}`;
       },
-    }),
-    instantsearch.widgets.poweredBy({
-      container: "#algolia-powered-by",
-    }),
-  ]);
+    },
+  });
+
+  const powerBy = instantsearch.widgets.poweredBy({
+    container: "#algolia-info > .algolia-poweredBy",
+  });
+
+  const pagination = instantsearch.widgets.pagination({
+    container: "#algolia-pagination",
+    totalPages: algolia.totalPages,
+    templates: {
+      first: '<i class="fa-solid fa-angle-double-left" title="第一页"></i>',
+      last: '<i class="fa-solid fa-angle-double-right" title="最后一页"></i>',
+      previous: '<i class="fa-solid fa-angle-left" title="上一页"></i>',
+      next: '<i class="fa-solid fa-angle-right" title="下一页"></i>',
+    },
+  });
+
+  search.addWidgets([configure, searchBox, hits, stats, powerBy, pagination]); // add the widgets to the instantsearch instance
+
   search.start();
+
+  searchClickFn();
+  searchClickFnOnce();
+
+  window.addEventListener("pjax:complete", () => {
+    getComputedStyle(document.querySelector("#algolia-search .search-dialog"))
+      .display === "block" && closeSearch();
+    searchClickFn();
+  });
 
   window.pjax &&
     search.on("render", () => {
@@ -398,13 +426,13 @@ window.addEventListener("load", () => {
 
 ### 主题 4.0.0 以下版本
 
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1623297948979-16f7476e-0978-49ee-a667-2dc060896c88.png#clientId=uc24fb27d-4fc5-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=ud3ca95b0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=413&originWidth=753&originalType=binary&ratio=2&rotation=0&showTitle=false&size=40542&status=done&style=none&taskId=u9d85e4b7-062e-432f-b6d8-854d2e5d2eb&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1623297948979-16f7476e-0978-49ee-a667-2dc060896c88.png#averageHue=%23f2f5f8&clientId=uc24fb27d-4fc5-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=ud3ca95b0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=413&originWidth=753&originalType=binary&ratio=2&rotation=0&showTitle=false&size=40542&status=done&style=none&taskId=u9d85e4b7-062e-432f-b6d8-854d2e5d2eb&title=)
 （这个是因为我修改了源码，实际上也能通过修改 JS 实现，但大多数人不会关心这些搜索小贴士）
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1623298049726-3cded22e-2e40-44b3-a445-d542b3bc3c80.png#clientId=uc24fb27d-4fc5-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u13b48f0e&margin=%5Bobject%20Object%5D&name=image.png&originHeight=601&originWidth=750&originalType=binary&ratio=2&rotation=0&showTitle=false&size=61545&status=done&style=none&taskId=ua59892ff-66db-45b5-a905-ac97bcb7b4d&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1623298049726-3cded22e-2e40-44b3-a445-d542b3bc3c80.png#averageHue=%23f2f5f9&clientId=uc24fb27d-4fc5-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u13b48f0e&margin=%5Bobject%20Object%5D&name=image.png&originHeight=601&originWidth=750&originalType=binary&ratio=2&rotation=0&showTitle=false&size=61545&status=done&style=none&taskId=ua59892ff-66db-45b5-a905-ac97bcb7b4d&title=)
 对于中文它当作单字匹配
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1623298062241-b4dd37f7-aa87-485f-a394-950943e0c211.png#clientId=uc24fb27d-4fc5-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u8d3029fa&margin=%5Bobject%20Object%5D&name=image.png&originHeight=498&originWidth=752&originalType=binary&ratio=2&rotation=0&showTitle=false&size=40466&status=done&style=none&taskId=uca3eae79-9718-4088-8c72-c34e98f6782&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1623298062241-b4dd37f7-aa87-485f-a394-950943e0c211.png#averageHue=%23f3f6f9&clientId=uc24fb27d-4fc5-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=u8d3029fa&margin=%5Bobject%20Object%5D&name=image.png&originHeight=498&originWidth=752&originalType=binary&ratio=2&rotation=0&showTitle=false&size=40466&status=done&style=none&taskId=uca3eae79-9718-4088-8c72-c34e98f6782&title=)
 允许拼写错误
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1623298137784-eb2713f9-377f-4f5d-824d-a7a7b7a881c4.png#clientId=uc24fb27d-4fc5-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=uc7968f09&margin=%5Bobject%20Object%5D&name=image.png&originHeight=598&originWidth=750&originalType=binary&ratio=2&rotation=0&showTitle=false&size=61697&status=done&style=none&taskId=u9c8b459e-8141-46ef-9d7e-11bd8cc917f&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1623298137784-eb2713f9-377f-4f5d-824d-a7a7b7a881c4.png#averageHue=%23f3f6f9&clientId=uc24fb27d-4fc5-4&crop=0&crop=0&crop=1&crop=1&from=paste&id=uc7968f09&margin=%5Bobject%20Object%5D&name=image.png&originHeight=598&originWidth=750&originalType=binary&ratio=2&rotation=0&showTitle=false&size=61697&status=done&style=none&taskId=u9c8b459e-8141-46ef-9d7e-11bd8cc917f&title=)
 
 ### 主题 4.0.0 以上版本
 

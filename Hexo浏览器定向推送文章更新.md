@@ -31,13 +31,13 @@ npm i hexo-webpushr-notification
 
 ## 使用
 
-在你的 Hexo 根目录配置文件 `_config.yml`中添加如下内容
+在你的 Hexo 根目录配置文件 `_config.yml`中添加如下内容，可按需配置
 
 ```yaml
 webpushr:
   # webpushrKey: "webpushrKey" # 出于安全考虑，建议添加至系统环境变量，并注释掉此处配置
   # webpushrAuthToken: "webpushrAuthToken" # 出于安全考虑，建议添加至系统环境变量，并注释掉此处配置
-  trackingCode: "BB9Y-w9p3u0CKA7UP9nupB6I-_NqE2MuODmKJjyC4W2YflX06Ff_hEhrNJfonrut5l6gCa28gC83q2OII7Qv-oA"
+  trackingCode: "BKOlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLvbjpdw8x2GmFmi1ZcLTz0ni6OnX5MAwoM58"
   icon: "https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/image/pwa/192.png" # 必须为192*192 png图片
   # auto_hide: "0" # 默认为 1，代表true，即自动隐藏
   # sort: "date" # 默认为updated，即只要最新文章更改了更新时间即推送新文章，改为date即文章第一次发布时间
@@ -74,7 +74,7 @@ webpushr('setup',{'key':'BKOlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLvbj
 <!-- end webpushr tracking code -->
 ```
 
-最后一行`AEGlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLVbjpCw8x2GmFmi1ZcLTz0ni6OnX5MAwoM88` 就是你的 `trackingCode`
+最后一行`BKOlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLvbjpdw8x2GmFmi1ZcLTz0ni6OnX5MAwoM58` 就是你的 `trackingCode`
 
 **注意**：因权限问题，本地测试时(`hexo s`)可能不会显示弹窗，但如果你配置了小铃铛，小铃铛会显示
 
@@ -82,7 +82,7 @@ webpushr('setup',{'key':'BKOlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLvbj
 
 个人建议将控制台右上角小铃铛 🔔 里全部配置一遍以获得更好的效果
 
-你需要自定义一些参数才可以使用根据不同主题，按照订阅者订阅话题推送功能（目前根据个人需求是这个设置，默认行为为当未匹配到对应分类时不推送文章，而不是向所有用户推送文章，后续可能会提供配置）
+你需要自定义一些参数才可以使用根据不同主题，按照订阅者订阅话题推送功能（目前根据个人需求是这个设置，默认行为为当未匹配到对应分类时不推送文章，而不是向所有用户推送文章，当然你也可以配置目标为所有用户）
 
 在控制台，点击`Setup`>`Opt-In Prompt` ，向下滑动打开`Enable Topics`（小铃铛样式无此选项，因此推荐您使用前两种样式），并新增几个主题，对应你想推送的文章分类即可
 
@@ -154,7 +154,7 @@ INFO  无文章更新 或 为首次推送更新
 
 这是正常现象，因为此时你的网站还没有`newPost.json`这个文件，后续有更新时将正常推送
 
-当然如果您在使用过程中有什么问题或遇到了 Bug 也欢迎随时在评论区或[issues](https://github.com/Rock-Candy-Tea/hexo-webpushr-notification/issues)反馈
+当然如果您在使用过程中有什么问题或遇到了 Bug 也欢迎随时在评论区或[issues](https://github.com/Rock-Candy-Tea/hexo-webpushr-notification/issues)反馈，当然因为本人是菜鸡，所以有大佬 PR 最好了
 
 ## 推送效果
 
