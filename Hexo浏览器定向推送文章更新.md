@@ -4,7 +4,6 @@ translate_title: hexo-webpushr-notification
 subtitle: Hexo Webpushr Notification
 date: 2022-10-05 00:00:00
 updated: 2022-11-27 16:35:00
-expire: 30d
 tags: [博客, 工具]
 keywords: [博客, 工具, hexo, web push, webpushr]
 categories: 博客
@@ -35,9 +34,18 @@ npm i hexo-webpushr-notification
 
 ```yaml
 webpushr:
-  # webpushrKey: "webpushrKey" # 出于安全考虑，建议添加至系统环境变量，并注释掉此处配置
-  # webpushrAuthToken: "webpushrAuthToken" # 出于安全考虑，建议添加至系统环境变量，并注释掉此处配置
-  trackingCode: "BKOlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLvbjpdw8x2GmFmi1ZcLTz0ni6OnX5MAwoM58"
+  webpushrKey: "webpushrKey"
+  webpushrAuthToken: "webpushrAuthToken"
+
+  # 出于安全考虑，建议将上述两个重要参数添加至系统全局环境变量，并删除或注释掉此处配置
+  # 否则可在网页端向访问者或订阅用户发送推送 https://www.webpushr.com/api-playground
+  # 例如GitHub Actions环境变量配置，参数名不变，密钥名自定义，可参考如下
+  # env:
+  #     webpushrKey: ${{ secrets.WEBPUSHR_KEY }}
+  #     webpushrAuthToken: ${{ secrets.WEBPUSHR_AUTH_TOKEN }}
+  # 如果您的仓库私有，则无需担心此问题
+
+  trackingCode: "BB9Y-w9p3u0CKA7UP9nupB6I-_NqE2MuODmKJjyC4W2YflX06Ff_hEhrNJfonrut5l6gCa28gC83q2OII7Qv-oA"
   icon: "https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/image/pwa/192.png" # 必须为192*192 png图片
   # auto_hide: "0" # 默认为 1，代表true，即自动隐藏
   # sort: "date" # 默认为updated，即只要最新文章更改了更新时间即推送新文章，改为date即文章第一次发布时间
