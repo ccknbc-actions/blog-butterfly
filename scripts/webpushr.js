@@ -88,8 +88,8 @@ hexo.on("deployAfter", async function () {
         };
         console.log(payload);
         var headers = {
-            webpushrKey: hexo.config.webpushr.webpushrKey || process.env.webpushrKey,
-            webpushrAuthToken: hexo.config.webpushr.webpushrAuthToken || process.env.webpushrAuthToken,
+            webpushrKey: process.env.webpushrKey || hexo.config.webpushr.webpushrKey,
+            webpushrAuthToken: process.env.webpushrAuthToken || hexo.config.webpushr.webpushrAuthToken,
             "Content-Type": "application/json"
         };
         // console.log(headers);
