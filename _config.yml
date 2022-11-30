@@ -423,7 +423,7 @@ webpushr:
   # 默认为 segment，即根据不同主题推送细分，同时配置上述选项
   # 官方文档参数见 https://docs.webpushr.com/introduction-to-rest-api
   # 例如 all，即推送至所有用户；针对测试，可只推送给单个用户即自己，同时设置 sid 选项
-  sid: "49380720" # 单个用户ID 可在控制台查看 https://app.webpushr.com/subscribers
+  sid: "119810055" # 单个用户ID 可在控制台查看 https://app.webpushr.com/subscribers
 
   # 此外，在文章 Frontmatter 处
   # 可覆盖auto_hide和expire配置，针对特别提醒文章可以设置不自动隐藏及过期时间延长等操作

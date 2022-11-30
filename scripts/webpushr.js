@@ -50,6 +50,7 @@ hexo.on('generateAfter', async function () {
 //it compare the newPost.json from your site and local to decide whether push the notification.
 hexo.on("deployAfter", async function () {
     // Get newPost.json from your site.
+    hexo.log.info("正在获取 本地 与 在线 文章信息");
     var newPostOnlineSite = await fetch(url.resolve(hexo.config.url, "newPost.json"));
     var newPostOnlineSite = await newPostOnlineSite.json();
     newPostOnlineSite = await JSON.parse(JSON.stringify(newPostOnlineSite));
@@ -57,19 +58,32 @@ hexo.on("deployAfter", async function () {
     var newPostLocal = await fs.readFileSync("public/newPost.json");
     // Get newPost.json from local
     newPostLocal = await JSON.parse(newPostLocal);
-    console.table({
-        "在线版本": newPostOnlineSite,
-        "本地版本": newPostLocal
-    });
+    // console.table({
+    //     "在线版本": newPostOnlineSite,
+    //     "本地版本": newPostLocal
+    // });
 
-    var topic = new Array(newPostLocal.categories.length)
-    for (var i = 0; i < topic.length; i++) {
-        topic[i] = hexo.config.webpushr.categories.indexOf(newPostLocal.categories[i])
-        topic[i] = hexo.config.webpushr.segment[topic[i]];
+    if ((hexo.config.webpushr.endpoint == 'segment' && (hexo.config.webpushr.categories && hexo.config.webpushr.segment) !== (null || undefined))){
+        hexo.log.info("正在比较文章分类是否满足分类条件");
+        var topic = new Array(newPostLocal.categories.length)
+        for (var i = 0; i < topic.length; i++) {
+            topic[i] = hexo.config.webpushr.categories.indexOf(newPostLocal.categories[i])
+            topic[i] = hexo.config.webpushr.segment[topic[i]];
+        }
     }
+    else if((hexo.config.webpushr.endpoint == 'segment' && (hexo.config.webpushr.categories && hexo.config.webpushr.segment) == (null || undefined))){
+        hexo.log.info('请配置categories及segment');
+    }
+
     //determine whether to push web notification
-    if(topic[0] == (null || undefined) && hexo.config.webpushr.endpoint == 'segment'){
-        hexo.log.info('未发现指定分类，跳过本次推送');
+    if(newPostOnlineSite == (null || undefined)){
+        hexo.log.info('未发现站点包含"newPost.json"，为首次推送更新,已跳过本次推送');
+    }
+    else if(topic == (null || undefined) && hexo.config.webpushr.endpoint == 'segment'){
+        hexo.log.info('未发现指定分类，已跳过本次推送');
+    }
+    else if(newPostOnlineSite[1] == newPostLocal[1]){
+        hexo.log.info("最新文章更新时间无更改,已跳过本次推送");
     }
     else if(newPostOnlineSite[1] !== newPostLocal[1]){
         // push new Post notification
@@ -86,7 +100,7 @@ hexo.on("deployAfter", async function () {
             sid: hexo.config.webpushr.sid,
             action_buttons: [{"title": "前往查看", "url": newPostLocal.target_url},hexo.config.webpushr.action_buttons[0] || {"title": "前往查看", "url": newPostLocal.target_url}]
         };
-        console.log(payload);
+        hexo.log.info("正在推送文章更新，请稍等", "\n", "以下是推送内容", payload);
         var headers = {
             webpushrKey: process.env.webpushrKey || hexo.config.webpushr.webpushrKey,
             webpushrAuthToken: process.env.webpushrAuthToken || hexo.config.webpushr.webpushrAuthToken,
@@ -94,7 +108,7 @@ hexo.on("deployAfter", async function () {
         };
         // console.log(headers);
         var options = {
-            url: 'https://api.webpushr.com/v1/notification/send/' + hexo.config.webpushr.endpoint,
+            url: 'https://api.webpushr.com/v1/notification/send/' + hexo.config.webpushr.endpoint || 'segment',
             method: 'POST',
             headers: headers,
             body: JSON.stringify(payload)
@@ -102,21 +116,13 @@ hexo.on("deployAfter", async function () {
         // console.log(options);
         function callback(error, response, body) {
             if (!error && response.statusCode == 200) {
-                hexo.log.info("《"+newPostLocal.title+"》 推送更新成功");
-                hexo.log.info(body);
+                hexo.log.info("《"+newPostLocal.title+"》 推送更新成功", "\n", "以下是接口返回信息", "\n", body);
             }
             else {
-                hexo.log.error("《"+newPostLocal.title+"》 推送更新失败");
-                hexo.log.error(body);
+                hexo.log.error("《"+newPostLocal.title+"》 推送更新失败", "\n", "以下是接口返回信息", "\n", body);
             }
         }
         request(options, callback);
-    }
-    else if(newPostOnlineSite[1] == newPostLocal[1]){
-        hexo.log.info("无文章更新");
-    }
-    else if(newPostOnlineSite[0] == (null || undefined)){
-        hexo.log.info('为首次推送更新');
     }
 });
 
