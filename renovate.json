@@ -1,5 +1,12 @@
 {
   "extends": [
     "config:base"
-  ]
+  ],
+  "prHourlyLimit": 3,
+  "force": {
+    "constraints": {
+      "node-fetch": "2.6.7"
+    }
+  },
+  "automergeType": "pr"
 }

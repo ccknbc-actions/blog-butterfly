@@ -74,6 +74,9 @@ algolia_search:
 local_search:
   enable: false
 
+doc_search:
+  enable: false
+
 # Math (數學)
 # --------------------------------------
 # About the per_page

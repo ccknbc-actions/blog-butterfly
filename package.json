@@ -2,7 +2,6 @@
   "name": "ccknbc-blog",
   "version": "latest",
   "private": false,
-  "type": "module",
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
@@ -42,7 +41,6 @@
     "hexo-generator-indexed": "1.2.1",
     "hexo-generator-sitemap": "3.0.1",
     "hexo-generator-tag": "2.0.0",
-    "hexo-readmore": "0.1.14",
     "hexo-renderer-markdown-it": "6.1.0",
     "hexo-renderer-pug": "3.0.0",
     "hexo-renderer-stylus": "2.1.0",
@@ -54,6 +52,8 @@
     "hexo-yam": "8.0.0",
     "markdown-it-task-lists": "2.1.1",
     "moment": "2.29.4",
-    "request": "2.88.2"
+    "node-fetch": "~2.6.7",
+    "request": "2.88.2",
+    "workbox-cli": "6.5.4"
   }
 }
