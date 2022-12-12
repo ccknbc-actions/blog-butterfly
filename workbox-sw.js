@@ -23,9 +23,17 @@ workbox.core.setCacheNameDetails({
 });
 
 //直接激活跳过等待阶段
-self.skipWaiting();
-workbox.core.clientsClaim();
+// self.skipWaiting();
+// workbox.core.clientsClaim();
 // self.clients.claim();
+
+self.addEventListener('install', async () => {
+    await self.skipWaiting()
+})
+
+self.addEventListener('activate', async () => {
+    await self.clients.claim()
+})
 
 // 通常当用户拜访 / 时，对应的拜访的页面 HTML 文件是 /index.html，默认状况下，precache 路由机制会在任何 URL 的结尾的 / 后加上 index.html，这就认为着你预缓存的任何 index.html 都能够通过 /index.html 或者 / 拜访到。当然，你也能够通过 directoryIndex 参数禁用掉这个默认行为
 
@@ -109,6 +117,8 @@ workbox.routing.registerRoute(Offline);
 
 // html 的缓存
 // HTML，如果你想让页面离线能够拜访，应用 NetworkFirst，如果不须要离线拜访，应用 NetworkOnly，其余策略均不倡议对 HTML 应用。
+workbox.routing.registerRoute(new RegExp( /^https:\/\/blog\.ccknbc\.cc/), new workbox.strategies.NetworkOnly());
+workbox.routing.registerRoute(new RegExp(/.*\.json/), new workbox.strategies.NetworkOnly());
 workbox.routing.registerRoute(new RegExp(/.*\.html/), new workbox.strategies.NetworkOnly());
 
 // 一些缓存小策略
@@ -118,30 +128,59 @@ workbox.routing.registerRoute(new RegExp(/.*\.html/), new workbox.strategies.Net
 // workbox.recipes.imageCache();
 // workbox.recipes.offlineFallback();
 
-// 暖策略缓存
+// 暖策略（运行时）缓存
 // This can be any strategy, CacheFirst used as an example.
 
 // const strategy = new workbox.strategies.StaleWhileRevalidate();
-// const urls = ['/offline/index.html'];
+// const urls = [
+//     'https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Noto+Sans+Mono:wght@500&display=swap'
+//     ];
 // workbox.recipes.warmStrategyCache({urls, strategy});
+
+workbox.routing.registerRoute(
+    /.*\.(?:woff2)$/,
+    new workbox.strategies.StaleWhileRevalidate({
+        cacheName: '字体缓存',
+        plugins: [
+            new workbox.expiration.ExpirationPlugin({
+                maxEntries: 10,
+                maxAgeSeconds: 60 * 60 * 24 * 30
+            }),
+            new workbox.cacheableResponse.CacheableResponsePlugin({
+                statuses: [0, 200]
+            })
+        ]
+    })
+);
+// Google Fonts
+workbox.routing.registerRoute(
+    /^https:\/\/fonts\.googleapis\.com/,
+    new workbox.strategies.StaleWhileRevalidate({
+        cacheName: "字体缓存"
+    })
+);
+workbox.routing.registerRoute(
+    /^https:\/\/fonts\.gstatic\.com/,
+    new workbox.strategies.StaleWhileRevalidate({
+        cacheName: '字体缓存',
+        plugins: [
+            new workbox.expiration.ExpirationPlugin({
+                maxEntries: 3,
+                maxAgeSeconds: 60 * 60 * 24 * 30,
+                purgeOnQuotaError: true
+            }),
+            new workbox.cacheableResponse.CacheableResponsePlugin({
+                statuses: [0, 200]
+            })
+        ]
+    })
+);
 
 
 // Images
-// workbox.routing.registerRoute(
-//     /\.(?:png|jpg|jpeg|gif|bmp|webp|svg|ico)$/,
-//     new workbox.strategies.CacheFirst({
-//         cacheName: "images",
-//         plugins: [
-//             new workbox.expiration.ExpirationPlugin({
-//                 maxEntries: 50,
-//                 maxAgeSeconds: 60 * 60 * 24 * 365
-//             }),
-//             new workbox.cacheableResponse.CacheableResponsePlugin({
-//                 statuses: [0, 200]
-//             })
-//         ]
-//     })
-// );
+workbox.routing.registerRoute(
+    /\.(?:png|jpg|jpeg|gif|bmp|webp|svg)$/,
+    new workbox.strategies.NetworkOnly());
 
 // CDN
 workbox.routing.registerRoute(
@@ -152,22 +191,6 @@ workbox.routing.registerRoute(
             new workbox.expiration.ExpirationPlugin({
                 maxEntries: 60,
                 maxAgeSeconds: 60 * 60 * 24
-            }),
-            new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200]
-            })
-        ]
-    })
-);
-
-workbox.routing.registerRoute(
-    /.*\.(?:woff2)$/,
-    new workbox.strategies.StaleWhileRevalidate({
-        cacheName: '字体缓存',
-        plugins: [
-            new workbox.expiration.ExpirationPlugin({
-                maxEntries: 10,
-                maxAgeSeconds: 60 * 60 * 24 * 7
             }),
             new workbox.cacheableResponse.CacheableResponsePlugin({
                 statuses: [0, 200]
@@ -231,30 +254,6 @@ workbox.routing.registerRoute(
 //             new workbox.expiration.ExpirationPlugin({
 //                 maxEntries: 50,
 //                 maxAgeSeconds: 60 * 60 * 24 * 30
-//             }),
-//             new workbox.cacheableResponse.CacheableResponsePlugin({
-//                 statuses: [0, 200]
-//             })
-//         ]
-//     })
-// );
-
-// Google Fonts
-// workbox.routing.registerRoute(
-//     /^https:\/\/fonts\.googleapis\.com/,
-//     new workbox.strategies.StaleWhileRevalidate({
-//         cacheName: "谷歌字体"
-//     })
-// );
-// workbox.routing.registerRoute(
-//     /^https:\/\/fonts\.gstatic\.com/,
-//     new workbox.strategies.StaleWhileRevalidate({
-//         cacheName: '谷歌字体',
-//         plugins: [
-//             new workbox.expiration.ExpirationPlugin({
-//                 maxEntries: 3,
-//                 maxAgeSeconds: 60 * 60 * 24 * 30,
-//                 purgeOnQuotaError: true
 //             }),
 //             new workbox.cacheableResponse.CacheableResponsePlugin({
 //                 statuses: [0, 200]

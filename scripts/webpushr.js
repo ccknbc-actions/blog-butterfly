@@ -2,9 +2,9 @@
 /* eslint no-param-reassign:0, strict:0 */
 'use strict';
 
-var util = require('hexo-util');
-var fs = require('hexo-fs');
-var url = require("url")
+const util = require('hexo-util');
+const fs = require('hexo-fs');
+const fetch = require("node-fetch");
 var request = require('request');
 var moment = require('moment');
 
@@ -13,8 +13,8 @@ var moment = require('moment');
 hexo.on('generateAfter', async function () {
     var posts = hexo.locals.get('posts').data
     if(hexo.config.webpushr.sort == 'date' ){
-        var dateSortedPosts = posts.sort(function (a, b) { return b.date - a.date }).map(function (v) { return v });
-        var newPost = dateSortedPosts[0];
+        var updatedSortedPosts = posts.sort(function (a, b) { return b.date - a.date }).map(function (v) { return v });
+        var newPost = updatedSortedPosts[0];
     }
     else{
         var updatedSortedPosts = posts.sort(function (a, b) { return b.updated - a.updated }).map(function (v) { return v });
@@ -46,13 +46,45 @@ hexo.on('generateAfter', async function () {
     hexo.log.info("已自动生成: newPost.json");
 });
 
+//insert webpushr-sw.js to web root dir
+hexo.on("generateAfter", async function () {
+    await fs.writeFile(
+        "public/webpushr-sw.js",
+        "importScripts('https://cdn.webpushr.com/sw-server.min.js');",
+    );
+    hexo.log.info("已自动生成: webpushr-sw.js");
+});
+
+//insert webpushr tracking code
+hexo.extend.filter.register('after_render:html', data => {
+    var payload = `(function (w, d, s, id) {
+        if (typeof (w.webpushr) !== 'undefined') return; w.webpushr = w.webpushr || function () { (w.webpushr.q = w.webpushr.q || []).push(arguments) }; var js, fjs = d.getElementsByTagName(s)[0]; js = d.createElement(s); js.id = id; js.async = 1; js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window, document, 'script', 'webpushr-jssdk'));webpushr('setup', { 'key': '${hexo.config.webpushr.trackingCode}','sw':'none' });`
+    // return data.replace(/<body>(?!<\/body>).+?<\/body>/s, str => str.replace('</body>', "<script>"+decodeURI(payload)+"</script></body>"));
+    return data.replace(/<body.+?>(?!<\/body>).+?<\/body>/s, str => str.replace('</body>', "<script>" + decodeURI(payload) + "</script></body>"));
+
+});
+
 //triggered before hexo deploy.
 //it compare the newPost.json from your site and local to decide whether push the notification.
-hexo.on("deployAfter", async function () {
+hexo.on("deployBefore", async function () {
     // Get newPost.json from your site.
     hexo.log.info("正在获取 本地 与 在线 文章信息");
-    var newPostOnlineSite = await fetch(url.resolve(hexo.config.url, "newPost.json"));
-    var newPostOnlineSite = await newPostOnlineSite.json();
+    var newPostOnlineSite = async () => {
+        try {
+            var result = await fetch(hexo.config.url + "/newPost.json")
+            if (result.status < 200 || result.status >= 400)
+                // noinspection ExceptionCaughtLocallyJS
+                throw `拉取时出现异常（${result.status}）`
+            return await result.json()
+        } catch (e) {
+            // noinspection SpellCheckingInspection
+            if (e.code === 'ENOTFOUND')
+                hexo.log.error(`拉取时出现 404，如果您是第一次构建请忽略这个错误`)
+            else throw e
+        }
+    }
+    // var newPostOnlineSite = await fetch(hexo.config.url + "/newPost.json");
+    newPostOnlineSite = await newPostOnlineSite();
     newPostOnlineSite = await JSON.parse(JSON.stringify(newPostOnlineSite));
     // Get newPost.json from your local.
     var newPostLocal = await fs.readFileSync("public/newPost.json");
@@ -63,7 +95,8 @@ hexo.on("deployAfter", async function () {
     //     "本地版本": newPostLocal
     // });
 
-    if ((hexo.config.webpushr.endpoint == 'segment' && (hexo.config.webpushr.categories && hexo.config.webpushr.segment) !== (null || undefined))){
+    var endpoint = hexo.config.webpushr.endpoint || 'segment'
+    if ((endpoint == 'segment' && (hexo.config.webpushr.categories && hexo.config.webpushr.segment) !== (null || undefined))){
         hexo.log.info("正在比较文章分类是否满足分类条件");
         var topic = new Array(newPostLocal.categories.length)
         for (var i = 0; i < topic.length; i++) {
@@ -71,21 +104,21 @@ hexo.on("deployAfter", async function () {
             topic[i] = hexo.config.webpushr.segment[topic[i]];
         }
     }
-    else if((hexo.config.webpushr.endpoint == 'segment' && (hexo.config.webpushr.categories && hexo.config.webpushr.segment) == (null || undefined))){
-        hexo.log.info('请配置categories及segment');
+    else if((endpoint == 'segment' && (hexo.config.webpushr.categories && hexo.config.webpushr.segment) == (null || undefined))){
+        hexo.log.error('默认为按主题推送，需配置categories及segment');
     }
 
     //determine whether to push web notification
     if(newPostOnlineSite == (null || undefined)){
         hexo.log.info('未发现站点包含"newPost.json"，为首次推送更新,已跳过本次推送');
     }
-    else if(topic == (null || undefined) && hexo.config.webpushr.endpoint == 'segment'){
+    else if(topic == (null || undefined) && endpoint == 'segment'){
         hexo.log.info('未发现指定分类，已跳过本次推送');
     }
-    else if(newPostOnlineSite[1] == newPostLocal[1]){
+    else if(newPostOnlineSite.updated == newPostLocal.updated){
         hexo.log.info("最新文章更新时间无更改,已跳过本次推送");
     }
-    else if(newPostOnlineSite[1] !== newPostLocal[1]){
+    else if(newPostOnlineSite.updated !== newPostLocal.updated){
         // push new Post notification
         var payload = {
             title: newPostLocal.title,
@@ -108,7 +141,7 @@ hexo.on("deployAfter", async function () {
         };
         // console.log(headers);
         var options = {
-            url: 'https://api.webpushr.com/v1/notification/send/' + hexo.config.webpushr.endpoint || 'segment',
+            url: 'https://api.webpushr.com/v1/notification/send/' + endpoint,
             method: 'POST',
             headers: headers,
             body: JSON.stringify(payload)
@@ -124,23 +157,4 @@ hexo.on("deployAfter", async function () {
         }
         request(options, callback);
     }
-});
-
-//insert webpushr tracking code
-hexo.extend.filter.register('after_render:html', data => {
-    var payload = `(function (w, d, s, id) {
-            if (typeof (w.webpushr) !== 'undefined') return; w.webpushr = w.webpushr || function () { (w.webpushr.q = w.webpushr.q || []).push(arguments) }; var js, fjs = d.getElementsByTagName(s)[0]; js = d.createElement(s); js.id = id; js.async = 1; js.src = "https://cdn.webpushr.com/app.min.js";fjs.parentNode.appendChild(js);}(window, document, 'script', 'webpushr-jssdk'));webpushr('setup', { 'key': '${hexo.config.webpushr.trackingCode}' });`
-
-    // return data.replace(/<body>(?!<\/body>).+?<\/body>/s, str => str.replace('</body>', "<script>"+decodeURI(payload)+"</script></body>"));
-    return data.replace(/<body.+?>(?!<\/body>).+?<\/body>/s, str => str.replace('</body>', "<script>" + decodeURI(payload) + "</script></body>"));
-
-});
-
-//insert webpushr-sw.js to web root dir
-hexo.on("generateAfter", async function (post) {
-    await fs.writeFile(
-        "public/webpushr-sw.js",
-        "importScripts('https://cdn.webpushr.com/sw-server.min.js');",
-    );
-    hexo.log.info("已自动生成: webpushr-sw.js");
 });

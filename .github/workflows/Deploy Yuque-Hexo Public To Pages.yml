@@ -60,7 +60,7 @@ jobs:
 
       - name: Generate
         run: |
-          npm i -g hexo-cli yuque-hexo
+          npm i -g yuque-hexo
           npm run yuque
         # npm i -g hexo-cli yuque-hexo
         # mkdir -p yuque
