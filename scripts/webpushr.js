@@ -47,14 +47,16 @@ hexo.on('generateAfter', async function () {
 });
 
 //insert webpushr-sw.js to web root dir
-if (hexo.config.webpushr.sw == (null || undefined)){
-    hexo.on("generateAfter", async function () {
-        await fs.writeFile(
-            "public/webpushr-sw.js",
-            "importScripts('https://cdn.webpushr.com/sw-server.min.js');",
-        );
-        hexo.log.info("已自动生成: webpushr-sw.js");
-    })};
+// if (hexo.config.webpushr.sw == (null || undefined))
+// {
+hexo.on("generateAfter", async function () {
+    await fs.writeFile(
+        "public/webpushr-sw.js",
+        "importScripts('https://cdn.webpushr.com/sw-server.min.js');",
+    );
+    hexo.log.info("已自动生成: webpushr-sw.js");
+});
+// };
 
 //insert webpushr tracking code
 hexo.extend.filter.register('after_render:html', data => {
