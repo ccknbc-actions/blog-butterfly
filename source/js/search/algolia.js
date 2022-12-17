@@ -56,8 +56,9 @@ window.addEventListener('load', () => {
     showReset: false,
     showSubmit: false,
     searchAsYouType: false,
-    placeholder: GLOBAL_CONFIG.algolia.languages.input_placeholder,
-    showLoadingIndicator: true
+    showLoadingIndicator: true,
+    autofocus: true,
+    placeholder: GLOBAL_CONFIG.algolia.languages.input_placeholder
   })
 
   const hits = instantsearch.widgets.hits({

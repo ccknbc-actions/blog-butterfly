@@ -1,0 +1,22 @@
+link(href="https://cdn.jsdelivr.net/npm/@docsearch/css/dist/style.css" rel="stylesheet")
+script(src="https://cdn.jsdelivr.net/npm/@docsearch/js/dist/umd/index.js")
+script(type="text/javascript")
+	docsearch({
+	appId: 97MUPN4DMC,
+	apiKey: a003a39f337f5186ec11f5f92bae62b3,
+	indexName: ccknbc,
+	container: '#algolia-search',
+	inputSelector: '#search-input',
+	debug: false
+	})
+#algolia-search
+	.search-dialog
+		nav.search-nav
+		span.search-dialog-title= _p('search.title')
+		button.search-close-button
+		.fa-solid.fa-times
+
+		.search-wrap
+			#algolia-search-input
+
+	#search-mask

@@ -11,7 +11,7 @@ html(lang=config.language data-theme=theme.display_mode class=htmlClassHideAside
     if theme.preloader.enable
       !=partial('includes/loading/index', {}, {cache: true})
 
-    if theme.mourn.enable
+    if (theme.mourn.enable && is_home_first_page())
       include ./mourn.pug
 
     if theme.background
