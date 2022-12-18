@@ -3,7 +3,7 @@ title: Hexo浏览器定向推送文章更新
 translate_title: hexo-webpushr-notification
 subtitle: Hexo Webpushr Notification
 date: 2022-10-05 00:00:00
-updated: 2022-11-27 16:35:00
+updated: 2022-12-18 18:00:00
 tags: [博客, 工具]
 keywords: [博客, 工具, hexo, web push, webpushr]
 categories: 博客
@@ -46,7 +46,7 @@ webpushr:
   # 如果您的仓库私有，则无需担心此问题
 
   trackingCode: "BB9Y-w9p3u0CKA7UP9nupB6I-_NqE2MuODmKJjyC4W2YflX06Ff_hEhrNJfonrut5l6gCa28gC83q2OII7Qv-oA"
-  icon: "https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/image/pwa/192.png" # 必须为192*192 png图片
+  icon: "https://.../192.png" # 必须为192*192 png图片
   # auto_hide: "0" # 默认为 1，代表true，即自动隐藏
   # sort: "date" # 默认为updated，即只要最新文章更改了更新时间即推送新文章，改为date即文章第一次发布时间
   # delay: "30" # 延时推送，考虑到CDN缓存更新，默认定时为在 hexo d 10分钟后推送，单位为分钟（最短时间为5min）
@@ -57,11 +57,11 @@ webpushr:
   # 以下配置为按订阅主题推送给不同订阅用户，请按照数组形式，一一对应，具体位置请看使用文档
   categories: [工作, 博客, 工具, 生活, 音乐, 学习]
   segment: ["484223", "484224", "484225", "484226", "484227", "484229"]
-  endpoint: segment # 可选配置 all / segment / sid
+  # endpoint: sid # 可选配置 all / segment / sid
   # 默认为 segment，即根据不同主题推送细分，同时配置上述选项
   # 官方文档参数见 https://docs.webpushr.com/introduction-to-rest-api
   # 例如 all，即推送至所有用户；针对测试，可只推送给单个用户即自己，同时设置 sid 选项
-  sid: "49380720" # 单个用户ID 可在控制台查看 https://app.webpushr.com/subscribers
+  sid: "119810055" # 单个用户ID 可在控制台查看 https://app.webpushr.com/subscribers
 
 
   # 此外，在文章 Frontmatter 处
@@ -85,6 +85,34 @@ webpushr('setup',{'key':'BKOlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLvbj
 最后一行`BKOlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLvbjpdw8x2GmFmi1ZcLTz0ni6OnX5MAwoM58` 就是你的 `trackingCode`
 
 **注意**：因权限问题，本地测试时(`hexo s`)可能不会显示弹窗，但如果你配置了小铃铛，小铃铛会显示
+
+## 额外配置
+
+因官方 sw 脚本注册后，我们无法注册自己的 sw 脚本，但官方提供了配置，方便我们使用 sw 的缓存，拦截请求等功能
+因兼容性未知，不确定是否有其他问题，但我个人目前没什么问题，主要是 sw 脚本编写问题
+
+首先在配置项中添加`sw: "none"`配置项
+
+```yaml
+webpushr:
+  sw: "none"
+```
+
+另外，你还需要在你的脚本文件（例如 sw.js）中引入
+
+```javascript
+importScripts("https://cdn.webpushr.com/sw-server.min.js");
+```
+
+如果你需要了解如何编写 service worker 脚本，可以参考以下文章或项目
+
+[hexo-swpp](https://kmar.top/posts/73014407/)
+
+[Service Worker](https://blog.cyfan.top/p/c0af86bb.html)
+
+[clientworker](https://clientworker.js.org/)
+
+[Workbox](https://github.com/GoogleChrome/workbox)
 
 ## 自定义
 
