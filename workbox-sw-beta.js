@@ -15,12 +15,12 @@ self.addEventListener('activate', async () => {
     await self.clients.claim()
 })
 
-self.__WB_DISABLE_DEV_LOGS = true;
+// self.__WB_DISABLE_DEV_LOGS = true;
 
 workbox.core.setCacheNameDetails({
-    prefix: 'CC的部落格',
-    suffix: '缓存',
-    precache: '离线后备',
+    prefix: 'CC',
+    // suffix: '缓存',
+    precache: '预缓存',
     runtime: '运行时',
     googleAnalytics: '谷歌分析'
 });
@@ -61,6 +61,29 @@ const Offline = new workbox.routing.Route(({ request }) => {
 }));
 workbox.routing.registerRoute(Offline);
 
+// const CACHE_NAME = '离线后备';
+// const FALLBACK_URL = '/offline/index.html';
+// self.addEventListener('install', async (event) => {
+//     event.waitUntil(
+//         caches.open(CACHE_NAME)
+//             .then((cache) => cache.add(FALLBACK_URL))
+//     );
+// });
+// const networkOnly = new workbox.strategies.NetworkOnly();
+// const navigationHandler = async (params) => {
+//     try {
+//         return await networkOnly.handle(params);
+//     } catch (error) {
+//         return caches.match(FALLBACK_URL, {
+//             cacheName: CACHE_NAME,
+//         });
+//     }
+// };
+// workbox.routing.registerRoute(
+//     new workbox.routing.NavigationRoute(navigationHandler)
+// );
+
+
 // 一些缓存小策略预设
 // workbox.recipes.pageCache();
 // workbox.recipes.googleFontsCache();
@@ -85,22 +108,25 @@ workbox.routing.registerRoute(
                 maxEntries: 10,
                 maxAgeSeconds: MONTH
             }),
+            new workbox.cacheableResponse.CacheableResponsePlugin({
+                statuses: [0, 200]
+            })
         ]
     })
 );
 
-// workbox.routing.registerRoute(
-//     new RegExp('^https://(?:fonts\\.googleapis\\.com|fonts\\.gstatic\\.com)'),
-//     new workbox.strategies.StaleWhileRevalidate({
-//         cacheName: '谷歌字体',
-//         plugins: [
-//             new workbox.expiration.ExpirationPlugin({
-//                 maxEntries: 10,
-//                 maxAgeSeconds: MONTH
-//             }),
-//         ],
-//     })
-// );
+workbox.routing.registerRoute(
+    new RegExp('^https://(?:fonts\\.googleapis\\.com|fonts\\.gstatic\\.com)'),
+    new workbox.strategies.StaleWhileRevalidate({
+        cacheName: '谷歌字体',
+        plugins: [
+            new workbox.expiration.ExpirationPlugin({
+                maxEntries: 10,
+                maxAgeSeconds: MONTH
+            }),
+        ],
+    })
+);
 
 // 图片/网页
 workbox.routing.registerRoute(
@@ -109,22 +135,25 @@ workbox.routing.registerRoute(
 );
 
 // json
-workbox.routing.registerRoute(
-    new RegExp('.*.(?:json)'),
-    new workbox.strategies.NetworkFirst({
-        cacheName: '网络资源',
-        plugins: [
-            new workbox.expiration.ExpirationPlugin({
-                maxEntries: 10,
-                maxAgeSeconds: DAY
-            }),
-        ]
-    })
-);
+// workbox.routing.registerRoute(
+//     new RegExp('.*.(?:json)'),
+//     new workbox.strategies.StaleWhileRevalidate({
+//         cacheName: '网络资源',
+//         plugins: [
+//             new workbox.expiration.ExpirationPlugin({
+//                 maxEntries: 10,
+//                 maxAgeSeconds: DAY
+//             }),
+//             new workbox.cacheableResponse.CacheableResponsePlugin({
+//                 statuses: [0, 200]
+//             })
+//         ]
+//     })
+// );
 
 // 静态资源
 workbox.routing.registerRoute(
-    new RegExp('.*.(?:css|js)'),
+    new RegExp('.*.(?:css|js|ico)'),
     new workbox.strategies.StaleWhileRevalidate({
         cacheName: '静态资源',
         plugins: [
@@ -132,6 +161,9 @@ workbox.routing.registerRoute(
                 maxEntries: 50,
                 maxAgeSeconds: WEEK
             }),
+            new workbox.cacheableResponse.CacheableResponsePlugin({
+                statuses: [0, 200]
+            })
         ]
     })
 );

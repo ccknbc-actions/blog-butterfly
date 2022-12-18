@@ -425,7 +425,7 @@ webpushr:
   # 例如 all，即推送至所有用户；针对测试，可只推送给单个用户即自己，同时设置 sid 选项
   sid: "119810055" # 单个用户ID 可在控制台查看 https://app.webpushr.com/subscribers
 
-  sw: "'sw': 'none'" #兼容service worker的其他功能选项（自行注册）
+  sw: "none" #兼容service worker的其他功能选项（自行注册）
   # 注释掉即使用wbepushr官方的注册sw脚本，普通用户建议注释掉此选项，并无需往下看，插件会为你搞定
   # 如果你想自行注册service worker，你需要在你的脚本（例如：sw.js）额外引入官方脚本:
   # importScripts('https://cdn.webpushr.com/sw-server.min.js');
@@ -441,15 +441,22 @@ webpushr:
 
 swpp:
   enable: true
-  # 是否使用自定义的 sw，为 true 时不自动生成 sw.js，但是仍然会插入注册 sw 的代码
-  # 注意：不支持自定义 sw.js 的路径及文件名，sw.js 必须放置在 source_dir 中
-  customJS: true
-  # 注册 sw 发生错误时触发的 js 代码，如果包含多个指令需使用花括号（{}）包裹
-  # 注意：SW 注册代码将直接内嵌在 HTML 首部，该代码执行时其它 JS 不一定完成了加载
-  onError: "document.addEventListener('DOMContentLoaded', () => kms.pushInfo('当前浏览器不支持SW，建议更换浏览器以获取最佳体验~'))"
-  # 注册 sw 成功后触发的 js 代码，如果包含多个指令需使用花括号（{}）包裹
-  # 注意：SW 注册代码将直接内嵌在 HTML 首部，该代码执行时其它 JS 不一定完成了加载
-  onSuccess: "location.reload()"
+  sw:
+    # 是否使用自定义的 sw，为 true 时不自动生成 sw.js，但是仍然会插入注册 sw 的代码
+    # 注意：不支持自定义 sw.js 的路径及文件名，sw.js 必须放置在 source_dir 中
+    custom: true
+    # 注册 sw 发生错误时触发的 js 代码，如果包含多个指令需使用花括号（{}）包裹
+    # 注意：SW 注册代码将直接内嵌在 HTML 首部，该代码执行时其它 JS 不一定完成了加载
+    onerror: "document.addEventListener('DOMContentLoaded', () => kms.pushInfo('当前浏览器不支持SW，建议更换浏览器以获取最佳体验~'))"
+    # 注册 sw 成功后触发的 js 代码，如果包含多个指令需使用花括号（{}）包裹
+    # 注意：SW 注册代码将直接内嵌在 HTML 首部，该代码执行时其它 JS 不一定完成了加载
+    onsuccess: "location.reload()"
+  dom:
+    # 是否使用自定义的 DOM 端 JS，为 true 时不会自动生成 sw-dom.js，且不会插入引入 JS 的代码
+    # 当值为 true 时本分类下其余设置项均无效
+    custom: false
+    # 当更新成功后触发，包含多个指令可以不适用花括号包裹
+    onsuccess: "console.log('更新成功')"
   # 最大 HTML 数量，超过这个数量后会直接清除所有 HTML 缓存
   maxHtml: 15
   # update.json 的最大字符数量
@@ -477,10 +484,3 @@ swpp:
   exclude:
     # 这里写正则表达式，格式如下：
     - sw\.js
-  # 在这里设置插件使用 axios 请求 cacheList 和 update.json 时的 headers
-  # 如果你的服务器设置了 referer 或 User-Agent 限制，可以在这里添加合法的请求头来躲避服务器拦截
-  # 同时本人实际测试的时候遇到了乱码问题，通过添加 accept-encoding: 'deflate' 解决了问题
-  # 我不清楚这是我个人原因还是所有人都有，当你遇到乱码问题后可以尝试添加该 headers，如果知道问题发生的原因可以在评论里面说一下
-  # headers:
-  #   referer: 'blog.ccknbc.cc'
-  #   accept-encoding: 'deflate'

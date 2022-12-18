@@ -2,7 +2,6 @@
   "name": "ccknbc-blog",
   "version": "latest",
   "private": false,
-  "type": "module",
   "scripts": {
     "build": "hexo generate",
     "clean": "hexo clean",
