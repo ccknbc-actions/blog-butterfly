@@ -1,11 +1,11 @@
 /*标题悬停显示文章描述*/
-#site-name
+.site-name
   &:hover
     &:before
       position: fixed
       width:fit-content
       margin:auto
-      left:0;
+      left:0
       right:0
       top:10%
       border-radius: 10px
@@ -18,13 +18,13 @@
       background-color: rgba($theme-color,0.9)
 /* 夜间模式适配 */
 [data-theme=dark]
-  a#site-name
+  a#blog-info
     &:hover
       &:before
         background-color: rgba(#121212,0.8)
 /*标题超过隐藏并显示省略号*/
 @media screen and (max-width: 768px)
-  a#site-name
+  a#blog-info
     -webkit-line-clamp 1
     word-break break-all
     display -webkit-box
