@@ -1,18 +1,25 @@
 nav#nav
   - var pagedescr = page.description ? page.description : "CC的部落格 欢迎您的光临"
   - var subtitle = page.subtitle ? page.subtitle : "CC's Blog"
+  //- if is_home_first_page()
+  //-   span#blog-info
+  //-     a(href=url_for('/') title=config.title)
+  //-       if theme.nav_info.logo
+  //-         img.site-icon(src=url_for(theme.nav_info.logo))
+  //-       if theme.nav_info.display_title
+  //-         span.site-name=config.title
   if is_home()
-    span#blog_name
-      a#site-name(onclick='btf.scrollToDest(0, 500)' data-title=pagedescr) #[=subtitle]
+    span#blog-info
+      a.site-name(onclick='btf.scrollToDest(0, 500)' data-title=pagedescr) #[=subtitle]
   else if is_archive()
-    span#blog_name
-      a#site-name(href=url_for('/') data-title='CC的部落格 文章归档页') #[='Archives']
+    span#blog-info
+      a.site-name(href=url_for('/') data-title='CC的部落格 文章归档页') #[='Archives']
   else if is_current('/404')
-    span#blog_name
-      a#site-name(href=url_for('/') data-title='CC的部落格 404页面') #[='404 Not Found']
+    span#blog-info
+      a.site-name(href=url_for('/') data-title='CC的部落格 404页面') #[='404 Not Found']
   else
-    span#blog_name
-      a#site-name(href=url_for('/') data-title=pagedescr) #[=subtitle]
+    span#blog-info
+      a.site-name(href=url_for('/') data-title=pagedescr) #[=subtitle]
   #menus
     //- a.site-page#wzayd.wzayd(title='盲人朋友在线浏览按住Alt+g键，体验无障碍阅读' href='javascript:;' accesskey='g')
     //-   i.fa-solid.fa-wheelchair
