@@ -26,6 +26,7 @@ menu:
 nav_info:
   logo: # image
   display_title: true # true or false
+  fixed: true # fixed navigation bar
 
 # Hide the child menu items in mobile sidebar
 hide_sidebar_menu_child: false
@@ -743,22 +744,17 @@ subtitle:
   enable: false
   # Typewriter Effect (打字效果)
   effect: true
-  # loop (循環打字)
-  # Effect Speed Options (打字效果速度參數)
-  startDelay: 300 # time before typing starts in milliseconds
-  typeSpeed: 150 # type speed in milliseconds
-  backSpeed: 50 # backspacing speed in milliseconds
-  loop: true
+  # Customize typed.js (配置typed.js)
+  # https://github.com/mattboldt/typed.js/#customization
+  typed_option:
   # source 調用第三方服務
   # source: false 關閉調用
   # source: 1  調用一言網的一句話（簡體） https://hitokoto.cn/
-  # source: 2  調用今日詩詞（簡體） https://www.jinrishici.com/
+  # source: 2  調用一句網（簡體） https://yijuzhan.com/
+  # source: 3  調用今日詩詞（簡體） https://www.jinrishici.com/
   # subtitle 會先顯示 source , 再顯示 sub 的內容
   source: false
-  # 如果有英文逗號' , ',請使用轉義字元 &#44;
-  # 如果有英文雙引號' " ',請使用轉義字元 &quot;
-  # 開頭不允許轉義字元，如需要，請把整個句子用雙引號包住
-  # 如果關閉打字效果，subtitle只會顯示sub的第一行文字
+  # 如果關閉打字效果，subtitle 只會顯示 sub 的第一行文字
   sub:
     - CC对您的造访不胜欣喜
     - 期待与您的再次重逢

@@ -22,7 +22,7 @@ workbox.core.setCacheNameDetails({
     suffix: '缓存',
     precache: '离线后备',
     runtime: '运行时',
-    googleAnalytics: '谷歌分析'
+    googleAnalytics: '离线谷歌分析'
 });
 
 workbox.precaching.precacheAndRoute(self.__WB_MANIFEST, {
@@ -39,13 +39,6 @@ const WEEK = DAY * 7;
 const MONTH = DAY * 30;
 const YEAR = DAY * 365;
 
-// workbox.recipes.googleFontsCache();
-// workbox.recipes.staticResourceCache();
-// workbox.recipes.imageCache();
-// workbox.recipes.offlineFallback();
-// workbox.recipes.pageCache();
-// workbox.googleAnalytics.initialize();
-
 // 导航预加载
 workbox.navigationPreload.enable();
 
@@ -56,24 +49,20 @@ const Offline = new workbox.routing.Route(({ request }) => {
     plugins: [
         new workbox.precaching.PrecacheFallbackPlugin({
             fallbackURL: '/offline/index.html'
+        }),
+        new workbox.cacheableResponse.CacheableResponsePlugin({
+            statuses: [0, 200, 304]
         })
     ]
 }));
 workbox.routing.registerRoute(Offline);
 
-// 一些缓存小策略预设
-// workbox.recipes.pageCache();
-// workbox.recipes.googleFontsCache();
-// workbox.recipes.staticResourceCache();
-// workbox.recipes.imageCache();
-// workbox.recipes.offlineFallback();
-
 // 暖策略（运行时）缓存
-// const strategy = new workbox.strategies.StaleWhileRevalidate();
-// const urls = [
-//     '/favicon.ico'
-// ];
-// workbox.recipes.warmStrategyCache({ urls, strategy });
+const strategy = new workbox.strategies.StaleWhileRevalidate();
+const urls = [
+    '/favicon.ico'
+];
+workbox.recipes.warmStrategyCache({ urls, strategy });
 
 // 字体
 workbox.routing.registerRoute(
@@ -85,22 +74,28 @@ workbox.routing.registerRoute(
                 maxEntries: 10,
                 maxAgeSeconds: MONTH
             }),
+            new workbox.cacheableResponse.CacheableResponsePlugin({
+                statuses: [0, 200, 304]
+            })
         ]
     })
 );
 
-// workbox.routing.registerRoute(
-//     new RegExp('^https://(?:fonts\\.googleapis\\.com|fonts\\.gstatic\\.com)'),
-//     new workbox.strategies.StaleWhileRevalidate({
-//         cacheName: '谷歌字体',
-//         plugins: [
-//             new workbox.expiration.ExpirationPlugin({
-//                 maxEntries: 10,
-//                 maxAgeSeconds: MONTH
-//             }),
-//         ],
-//     })
-// );
+workbox.routing.registerRoute(
+    new RegExp('^https://(?:fonts\\.googleapis\\.com|fonts\\.gstatic\\.com)'),
+    new workbox.strategies.StaleWhileRevalidate({
+        cacheName: '谷歌字体',
+        plugins: [
+            new workbox.expiration.ExpirationPlugin({
+                maxEntries: 10,
+                maxAgeSeconds: MONTH
+            }),
+            new workbox.cacheableResponse.CacheableResponsePlugin({
+                statuses: [0, 200, 304]
+            })
+        ],
+    })
+);
 
 // 图片/网页
 workbox.routing.registerRoute(
@@ -118,6 +113,9 @@ workbox.routing.registerRoute(
                 maxEntries: 10,
                 maxAgeSeconds: DAY
             }),
+            new workbox.cacheableResponse.CacheableResponsePlugin({
+                statuses: [0, 200, 304]
+            })
         ]
     })
 );
@@ -132,9 +130,12 @@ workbox.routing.registerRoute(
                 maxEntries: 50,
                 maxAgeSeconds: WEEK
             }),
+            new workbox.cacheableResponse.CacheableResponsePlugin({
+                statuses: [0, 200, 304]
+            })
         ]
     })
 );
 
 // 离线谷歌分析
-// workbox.googleAnalytics.initialize();
+workbox.googleAnalytics.initialize();

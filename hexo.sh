@@ -87,6 +87,8 @@ hexo generate
 # gulp #gulp插件，未配置无需开启
 printf "\033[32mINFO \033[0m 正在推送文章更新\n"
 hexo deploy
+printf "\033[32mINFO \033[0m 正在启动本地预览，可以按Ctrl+C退出\n"
+hexo server
 exec ${HexoPath}/hexo.sh
 else
 if [ "$answer" = "5" ] || [ "$answer" = "" ]; then

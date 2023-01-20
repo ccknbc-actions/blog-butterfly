@@ -391,9 +391,10 @@ minify:
     enable: false
 
 webpushr:
+  enable: true
+
   webpushrKey: "webpushrKey"
   webpushrAuthToken: "webpushrAuthToken"
-
   # 出于安全考虑，建议将上述两个重要参数添加至系统全局环境变量，并删除或注释掉此处配置
   # 否则可在网页端向访问者或订阅用户发送推送 https://www.webpushr.com/api-playground
   # 例如GitHub Actions环境变量配置，参数名不变，密钥名自定义，可参考如下
