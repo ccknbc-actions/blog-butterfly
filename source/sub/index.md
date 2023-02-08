@@ -6,7 +6,7 @@ top_img: false
 translate_title: subscribe-to-blog-article-updates
 subtitle: Sub
 date: 2020-10-14 22:17:35
-updated: 2022-10-09 15:23:19
+updated: 2023-02-09 00:19:31
 ---
 {% note success %} **以下方式均支持随时取消订阅，偏好可随时更改** {% endnote %}
 
@@ -17,9 +17,9 @@ updated: 2022-10-09 15:23:19
 3. 邮件订阅（全文输出）
     - 通过{% btn 'https://follow.it/ccknbc?pub',Follow.it,fa-solid fa-paper-plane,outline green %}订阅，注册用户支持自定义关键词、标签及多渠道（例如Telegram, Twitter，将来会支持微信）通知；未注册用户请使用下表订阅（可能需要人机验证）
         <div><form data-v-2bdb5506="" action="https://api.follow.it/subscription-form/YXJvK1pRMXFIbG1QZXEvUHRyUGR1L0xMYTN5V0FHSnhFY3pVeGRpUjV1bUNBbzRLd1hRbDcwTVk0bGlMQlAvOEtXaGU5RWxrTEtTOXBSSlBXWDNyeDZ5Uk1zU2JoRlpmNDh5em9FeG41SCt0WmtQWi9oTm5VZURNbTVOMENSc3h8a1hHYUtHTHV0QmhQZHAvZ3hkOW9zWnl4aE43SjBONDlUdG45YXRJM3JxQT0=/8" method="post"><div data-v-2bdb5506="" class="form-preview"><div data-v-2bdb5506="" class="preview-input-field"><input data-v-2bdb5506="" type="email" name="email" required="required" placeholder="输入您的电子邮件地址" spellcheck="false" mstplaceholder="39225030"></div> <div data-v-2bdb5506="" class="preview-submit-button"><button data-v-2bdb5506="" type="submit" >订阅</button></div></div></form></div>
-    - 前往CC的部落格订阅页面{% btn 'https://rss.ccknbc.cc',订阅页面,fa-solid fa-link,outline green %}订阅(MailChimp)
-    - 点击右下角按钮给 CC 留言，任意发送一条消息后，出现介绍自己页面时勾选订阅点击发送即可完成订阅(MailChimp & Tidio)
-    - 直接在下表输入您的相关信息点击订阅后，按照收到的邮件提示点击确认即可(MailChimp)
+    - 前往CC的部落格订阅页面{% btn 'https://rss.ccknbc.cc',订阅页面,fa-solid fa-link,outline green %}订阅(不再推荐MailChimp)
+    - 点击右下角按钮给 CC 留言，任意发送一条消息后，出现介绍自己页面时勾选订阅点击发送即可完成订阅(不再推荐MailChimp & Tidio)
+    - 直接在下表输入您的相关信息点击订阅后，按照收到的邮件提示点击确认即可(不再推荐MailChimp)
     <script defer src="https://jsd.cdn.zzko.cn/npm/jquery/dist/jquery.min.js"></script>
     <!-- <link href="https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn@latest/css/mailchimp.css" rel="stylesheet" type="text/css"> -->
     <div id="mc_embed_signup">

@@ -46,3 +46,44 @@
 .webpushr-subscribed prompticon3._Bell.Bottom.Right_bell{
     background: var(--btn-bg);
 }
+
+#docsearch{
+    display: inline-block;
+    padding: 0 0 0 14px;
+}
+
+/* .fa-solid.fa-shuffle{
+    position: relative;
+    display: inline-block;
+    padding: 0 0 0 14px;
+} */
+
+/* DocSearch */
+
+:root {
+    --docsearch-primary-color: #8fbc8f!important;
+    /* --docsearch-logo-color: #8fbc8f!important; */
+    --docsearch-searchbox-background: none!important;
+}
+
+html[data-theme=dark] {
+    --docsearch-primary-color: #5468ff!important;
+    /* --docsearch-logo-color: #5468ff!important; */
+    --docsearch-searchbox-background: none!important;
+}
+
+/* .DocSearch-Button-Keys,
+.DocSearch-Button-Placeholder {
+    display: none!important
+} */
+
+/* .DocSearch-Search-Icon {
+    stroke-width: 1.6!important
+} */
+
+/* .DocSearch-Logo svg, svg.cls-1, .cls-2 {
+    fill: var(--docsearch-logo-color)!important;
+    color: var(--docsearch-logo-color)!important;
+} */
+
+/* 其他 */

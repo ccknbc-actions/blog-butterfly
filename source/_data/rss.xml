@@ -17,7 +17,7 @@
     {% if config.description %}<description>{{ config.description }}</description>{% endif %}
     {% if config.subtitle %}<subtitle>{{ config.subtitle }}</subtitle>{% endif %}
     <pubDate>{% if posts.first().updated %}{{ posts.first().updated.toDate().toUTCString() }}{% else %}{{ posts.first().date.toDate().toUTCString() }}{% endif %}</pubDate>
-    <generator>https://hexo.io/</generator>
+    <generator>https://blog.ccknbc.cc/</generator>
     {% for post in posts.toArray() %}
     <item>
       <title>{{ post.title }}</title>

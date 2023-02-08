@@ -72,15 +72,15 @@ social:
 
 # Algolia search
 algolia_search:
-  enable: true
+  enable: false
   searchAsYouType: false
 
 # Local search
 local_search:
   enable: false
 
-doc_search:
-  enable: false
+docsearch:
+  enable: true
 
 # Math (數學)
 # --------------------------------------
@@ -323,25 +323,26 @@ waline:
     requiredMeta: ["nick", "mail"]
     login: enable
     copyright: true
-    imageUploader: false
+    imageUploader: true
     recaptchaV3Key: 6Lf8S9MaAAAAAFMx9WOCWRkIX2AZ6Nl9dreuw8p-
     locale:
-      admin: 博主兼管理员
+      admin: 博主
       sofa: 这里冷冷清清的，快来留下脚印吧！
       placeholder: 感谢各位的批评指正，期待与您交流！
       reactionTitle: 就现在，表明你的态度！
-      reaction0: 鼓掌
+      reaction0: 鼓励
       reaction1: 菜狗
       reaction2: 正确
       reaction3: 错误
       reaction4: 思考
-      reaction5: 睡觉
-      level0: 1条
-      level1: 2条
-      level2: 3条
-      level3: 4条
-      level4: 5条
-      level5: 6条以上
+      reaction5: 无聊
+      level0: 买菜
+      level1: 切菜
+      level2: 炒菜
+      level3: 煲汤
+      level4: 煮面
+      level5: 上桌
+      level6: 开吃
     emoji:
       [
         "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/",
