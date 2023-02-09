@@ -6,7 +6,7 @@
   "background_color": "#ffcc33",
   "display": "minimal-ui",
   "scope": "/",
-  "start_url": "/",
+  "start_url": ".",
   "icons": [
     {
       "src": "https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/image/pwa/36.png",

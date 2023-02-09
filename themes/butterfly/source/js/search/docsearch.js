@@ -34,8 +34,8 @@ docsearch({
         navigateText: '切换',
         navigateUpKeyAriaLabel: '方向键上',
         navigateDownKeyAriaLabel: '方向键下',
-        closeText: '关闭',
-        closeKeyAriaLabel: 'ESC退出键',
+        closeText: '退出',
+        closeKeyAriaLabel: '退出键',
         searchByText: '基于 DocSearch by',
       },
       noResultsScreen: {
