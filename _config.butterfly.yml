@@ -601,8 +601,8 @@ microsoft_clarity: an4gdfm6a9
 
 # Google Adsense (谷歌廣告)
 google_adsense:
-  enable: true
-  auto_ads: true
+  enable: false
+  auto_ads: false
   js: https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js
   client: ca-pub-4962482948943075
   enable_page_level_ads: false
@@ -835,7 +835,7 @@ aside:
       link: /sub/
   card_announcement:
     enable: false
-    content: <div id="webpushr-subscription-button" data-size="medium" data-button-text="订阅 CC的部落格 更新" data-subscriber-count-text="位用户已订阅浏览器推送通知" data-background-color="#8fbc8f"></div>
+    content:
     # '<center><iframe src="https://cc.instatus.com/embed-status/light-sm" loading="lazy" width="158" height="43" frameBorder="0" scrolling="no" style="border: none;" ></iframe><div id="he-plugin-standard"></div><script>WIDGET = {  "CONFIG": {    "layout": "2",    "width": "230",    "height": "290",    "background": "1",    "dataColor": "FFFFFF",    "borderRadius": "5",    "key": "dac79a62255345c9b4a31b585c3434a4"  }}</script><script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
     # <center>
     # <a target="_blank" href="https://hexo.io"><img src="https://img.shields.io/badge/Frame-Hexo 5.3.0-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><br>

@@ -71,4 +71,86 @@ html[data-theme=dark] {
     color: var(--docsearch-logo-color) !important;
 }
 
-/* 其他 */
+/* 侧边栏二维码 */
+
+#card-tuijian#card-tuijian#card-tuijian#card-tuijian {
+    background: linear-gradient(90deg, #57bd6adb, #8fbc8fb3);
+    padding: 15px 0;
+    height: 118px;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
+}
+
+html[data-theme=dark] #card-tuijian#card-tuijian#card-tuijian#card-tuijian {
+    background: linear-gradient(180deg, #57bd6aaa, #8fbc8faa) !important;
+}
+
+#card-tuijian #tj-box {
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: cubic-bezier(0, 0, 0, 1.29) 0.4s;
+}
+
+#card-tuijian #tj-box2 {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+}
+
+#card-tuijian #tj-box1,
+#card-tuijian #tj-box2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+#card-tuijian #tj-img-box {
+    border-radius: 12px;
+    margin-left: 10px;
+    height: 85px;
+}
+
+#card-tuijian #tj-img-box img {
+    height: 85px;
+    border-radius: 12px;
+    filter: brightness(0.95) !important;
+    -webkit-filter: brightness(0.95) !important;
+}
+
+html[data-theme=dark] #card-tuijian #tj-img-box img {
+    filter: brightness(0.6) !important;
+    -webkit-filter: brightness(0.6) !important;
+}
+
+#card-tuijian #tj-left {
+    color: #FFFFFFaa;
+    height: 85px;
+}
+
+html[data-theme=dark] #card-tuijian #tj-left {
+    color: #FFFFFF40;
+}
+
+#card-tuijian #tj-left p {
+    margin: 10px 0 0;
+    font-size: 32px;
+    line-height: normal;
+    font-weight: 800;
+}
+
+#card-tuijian #tj-left span {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+#card-tuijian:hover #tj-box {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
