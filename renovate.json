@@ -2,11 +2,20 @@
   "extends": [
     "config:base"
   ],
+  "gitAuthor": "CCKNBC <ccknbc@qq.com>",
   "prHourlyLimit": 3,
   "force": {
     "constraints": {
       "node-fetch": "2.6.7"
     }
   },
-  "automergeType": "pr"
+  "automerge": true,
+  "automergeType": "branch",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true,
+    "automergeType": "branch",
+    "platformAutomerge": true
+  },
+  "pruneBranchAfterAutomerge": true
 }

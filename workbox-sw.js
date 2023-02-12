@@ -58,11 +58,11 @@ const Offline = new workbox.routing.Route(({ request }) => {
 workbox.routing.registerRoute(Offline);
 
 // 暖策略（运行时）缓存
-const strategy = new workbox.strategies.StaleWhileRevalidate();
-const urls = [
-    '/favicon.ico'
-];
-workbox.recipes.warmStrategyCache({ urls, strategy });
+// const strategy = new workbox.strategies.StaleWhileRevalidate();
+// const urls = [
+//     '/favicon.ico'
+// ];
+// workbox.recipes.warmStrategyCache({ urls, strategy });
 
 // 字体
 workbox.routing.registerRoute(
