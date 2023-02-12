@@ -12,7 +12,7 @@ cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/9
 id: 33
 ---
 
-查看本文[**语雀**](https://www.yuque.com/ccknbc/blog/33)版本【首发】，自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/ccs-work-diary-part2)！
+查看本文[**语雀**](https://www.yuque.com/ccknbc/blog/33/)版本【首发】，自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/ccs-work-diary-part2/)！
 
 ## 一些流水账
 

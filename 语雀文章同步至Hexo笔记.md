@@ -12,14 +12,14 @@ cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/7
 id: 36
 ---
 
-查看本文[**语雀**](https://www.yuque.com/ccknbc/blog/36)版本【首发】，自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/yuque-to-hexo)！
+查看本文[**语雀**](https://www.yuque.com/ccknbc/blog/36/)版本【首发】，自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/yuque-to-hexo/)！
 
 因为 CC 已经使用语雀有一段时间了，但是因为使用的是 `GitHub Actions` 的原因，一直没有做什么更新，但是目前`json`已经 10M 了，是时候给缓存找一个地方存档以便后续增量更新了
 其实最开始的时候是直接推送到仓库的，后来有想过推送到`npm`的想法，但因为更新不怎么频繁也就一直耽搁了，但是因为不在使用条款范围内，有一定的风险，所以还是放弃了。在国庆前我就有想法传到`One Drive`这样的网盘，但是还是不是很方便，最好有现成的脚本可以使用。
 于是我想到了`Artifacts`构建产物这个东西，我只要先预先生成一次产物，然后下次就能把之前的产物下载下来使用，
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/8391407/1664898122389-f0faa9c8-3c46-4e71-b22b-5d8f20fd33b1.png#clientId=u9c173c7f-fbcf-4&crop=0&crop=0&crop=1&crop=1&errorMessage=unknown%20error&from=paste&height=367&id=u393e0845&margin=%5Bobject%20Object%5D&name=image.png&originHeight=459&originWidth=1557&originalType=binary&ratio=1&rotation=0&showTitle=false&size=73818&status=error&style=none&taskId=ud01054b4-54f0-444b-a2d8-44b04cd20fc&title=&width=1245.6)
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/8391407/1664898167865-16dcd66c-6e28-4ce6-a425-794de377cf67.png#clientId=u9c173c7f-fbcf-4&crop=0&crop=0&crop=1&crop=1&errorMessage=unknown%20error&from=paste&height=242&id=uc1d7e66c&margin=%5Bobject%20Object%5D&name=image.png&originHeight=303&originWidth=582&originalType=binary&ratio=1&rotation=0&showTitle=false&size=12922&status=error&style=none&taskId=u1721969d-132c-4dcb-90b2-f441c3140ae&title=&width=465.6)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/8391407/1664898122389-f0faa9c8-3c46-4e71-b22b-5d8f20fd33b1.png#averageHue=%2311161d&clientId=u9c173c7f-fbcf-4&errorMessage=unknown%20error&from=paste&height=367&id=u393e0845&name=image.png&originHeight=459&originWidth=1557&originalType=binary&ratio=1&rotation=0&showTitle=false&size=73818&status=error&style=none&taskId=ud01054b4-54f0-444b-a2d8-44b04cd20fc&title=&width=1245.6)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/8391407/1664898167865-16dcd66c-6e28-4ce6-a425-794de377cf67.png#averageHue=%230f131a&clientId=u9c173c7f-fbcf-4&errorMessage=unknown%20error&from=paste&height=242&id=uc1d7e66c&name=image.png&originHeight=303&originWidth=582&originalType=binary&ratio=1&rotation=0&showTitle=false&size=12922&status=error&style=none&taskId=u1721969d-132c-4dcb-90b2-f441c3140ae&title=&width=465.6)
 
 ## 关于工作流程构件
 

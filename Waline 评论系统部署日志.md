@@ -13,8 +13,8 @@ id: 20
 ---
 
 {% note danger simple %}本文大部分内容已作废，请直接查看[**官方文档**](https://waline.js.org/){% endnote %}
-本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/20)
-自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/waline-commens-system-deployment-logs)
+本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/20/)
+自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/waline-commens-system-deployment-logs/)
 **本文仅作为官方文档的补充，若有错误，还望指正**
 
 ---
@@ -143,7 +143,7 @@ waline:
 ### 一键部署
 
 一键脚本部署可以查看[官方文档](https://waline.js.org/server/cloudbase.html)，我删了之后就没成功过
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612362992018-14b2a225-27d6-4996-948b-e746d26bb2e0.png#crop=0&crop=0&crop=1&crop=1&height=322&id=FOuRW&margin=%5Bobject%20Object%5D&name=image.png&originHeight=644&originWidth=1011&originalType=binary&ratio=1&rotation=0&showTitle=false&size=48650&status=done&style=none&title=&width=505.5)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612362992018-14b2a225-27d6-4996-948b-e746d26bb2e0.png#averageHue=%23605f5f&height=322&id=FOuRW&name=image.png&originHeight=644&originWidth=1011&originalType=binary&ratio=1&rotation=0&showTitle=false&size=48650&status=done&style=none&title=&width=505.5)
 截至文档最新更新日期，这个已被修复（不过 tcb-starter 那个链接还没改所以还是失败），不过我只能说作者非常不细心，毕竟能一天发十几个版本，详见 [commit](https://github.com/lizheming/waline/commit/d87d3092a34fd6b2b7f0b1c72bd95ad784a086e7)，他还是把链接协议头多打了一个 h ,所以请[点击这里](https://console.cloud.tencent.com/tcb/env/index?action=CreateAndDeployCloudBaseProject&appUrl=https%3A%2F%2Fgithub.com%2Fwalinejs%2Ftcb-starter&branch=master&appName=waline)一键部署
 嗯，后来修复了，期待接下来的开发
 
@@ -153,10 +153,10 @@ waline:
 {% note warning simple %}
 一键部署虽然方便，但是仅支持按量计费环境——也就是说，**一键部署的环境，当免费资源用尽后，将会产生费用**。且按量计费环境无法切换为包年包月环境。免费额度数据库读操作数只有 500 次 / 天，**无法支撑 Twikoo 的运行需求**。Twikoo 建议您[手动部署](#手动部署)以节约成本。
 {% endnote %}
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610953378969-db93161e-24d3-4a48-8934-5566774b94d2.png#crop=0&crop=0&crop=1&crop=1&height=204&id=BbUHK&margin=%5Bobject%20Object%5D&name=image.png&originHeight=204&originWidth=423&originalType=binary&ratio=1&rotation=0&showTitle=false&size=11059&status=done&style=none&title=&width=423)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610953378969-db93161e-24d3-4a48-8934-5566774b94d2.png#averageHue=%23ebcf90&height=204&id=BbUHK&name=image.png&originHeight=204&originWidth=423&originalType=binary&ratio=1&rotation=0&showTitle=false&size=11059&status=done&style=none&title=&width=423)
 对于新用户或者说没有创建过按量计费环境的用户会显示如下内容，记得勾选开启免费资源
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610873567827-825cde85-7c99-4c5a-95e0-44c0966784cb.png#crop=0&crop=0&crop=1&crop=1&height=632&id=v1Ort&margin=%5Bobject%20Object%5D&name=image.png&originHeight=632&originWidth=1006&originalType=binary&ratio=1&rotation=0&showTitle=false&size=46404&status=done&style=none&title=&width=1006)
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612859364523-006d98ba-bd5c-4868-878f-9c9ac158d836.png#crop=0&crop=0&crop=1&crop=1&height=237&id=EOKkv&margin=%5Bobject%20Object%5D&name=image.png&originHeight=473&originWidth=999&originalType=binary&ratio=1&rotation=0&showTitle=false&size=25755&status=done&style=none&title=&width=499.5)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610873567827-825cde85-7c99-4c5a-95e0-44c0966784cb.png#averageHue=%23fbfbfb&height=632&id=v1Ort&name=image.png&originHeight=632&originWidth=1006&originalType=binary&ratio=1&rotation=0&showTitle=false&size=46404&status=done&style=none&title=&width=1006)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612859364523-006d98ba-bd5c-4868-878f-9c9ac158d836.png#averageHue=%23fdfdfd&height=237&id=EOKkv&name=image.png&originHeight=473&originWidth=999&originalType=binary&ratio=1&rotation=0&showTitle=false&size=25755&status=done&style=none&title=&width=499.5)
 
 为了日后升级的方便，不管您是否使用了 Vercel 部署，您都可以 fork [我的仓库](https://github.com/ccknbc-actions/waline) ，稍加配置即可完成自动部署更新
 
@@ -167,14 +167,14 @@ waline:
 ---
 
 没错，这个环境不错吧
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610870670315-08e65148-3819-48fb-878e-03fdb0c9ab64.png#crop=0&crop=0&crop=1&crop=1&height=536&id=DWotB&margin=%5Bobject%20Object%5D&name=image.png&originHeight=536&originWidth=1493&originalType=binary&ratio=1&rotation=0&showTitle=false&size=52310&status=done&style=none&title=&width=1493)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610870670315-08e65148-3819-48fb-878e-03fdb0c9ab64.png#averageHue=%23e4c69f&height=536&id=DWotB&name=image.png&originHeight=536&originWidth=1493&originalType=binary&ratio=1&rotation=0&showTitle=false&size=52310&status=done&style=none&title=&width=1493)
 按照提示购买后稍等几分钟，[在这个界面可查看您所购买的环境](https://console.cloud.tencent.com/tcb/env/index)
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610870083481-8e4cad1a-c70a-4cad-9192-11be8003241c.png#crop=0&crop=0&crop=1&crop=1&height=233&id=Q9Z3p&margin=%5Bobject%20Object%5D&name=image.png&originHeight=233&originWidth=523&originalType=binary&ratio=1&rotation=0&showTitle=false&size=10168&status=done&style=none&title=&width=523)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1610870083481-8e4cad1a-c70a-4cad-9192-11be8003241c.png#averageHue=%23fcfbfb&height=233&id=Q9Z3p&name=image.png&originHeight=233&originWidth=523&originalType=binary&ratio=1&rotation=0&showTitle=false&size=10168&status=done&style=none&title=&width=523)
 有能力的其实可以看一下 Vercel [自动升级](#自动升级)和 TCB[自动升级](#自动升级-1)部分，间接实现一键部署，自动更新
 [点击云函数](https://console.cloud.tencent.com/tcb/scf/index)，新建云函数，函数内存选择 128M，名称随意，例如 Waline，其他默认,单击进入下一步
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612359288449-66b53150-2146-4ec9-aa08-910b99aebd1b.png#crop=0&crop=0&crop=1&crop=1&height=448&id=gqDSy&margin=%5Bobject%20Object%5D&name=image.png&originHeight=895&originWidth=1917&originalType=binary&ratio=1&rotation=0&showTitle=false&size=127338&status=done&style=none&title=&width=958.5)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612359288449-66b53150-2146-4ec9-aa08-910b99aebd1b.png#averageHue=%2328231a&height=448&id=gqDSy&name=image.png&originHeight=895&originWidth=1917&originalType=binary&ratio=1&rotation=0&showTitle=false&size=127338&status=done&style=none&title=&width=958.5)
 下图中的函数代码部分填入以下代码
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612359460424-4b8cf9b4-2ef4-4758-92f6-09ae040a91ea.png#crop=0&crop=0&crop=1&crop=1&height=396&id=QsO9K&margin=%5Bobject%20Object%5D&name=image.png&originHeight=791&originWidth=688&originalType=binary&ratio=1&rotation=0&showTitle=false&size=43150&status=done&style=none&title=&width=344)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612359460424-4b8cf9b4-2ef4-4758-92f6-09ae040a91ea.png#averageHue=%23fcfcfb&height=396&id=QsO9K&name=image.png&originHeight=791&originWidth=688&originalType=binary&ratio=1&rotation=0&showTitle=false&size=43150&status=done&style=none&title=&width=344)
 
 ```javascript
 /**
@@ -224,13 +224,13 @@ module.exports.main = async (event, context) => {
 ```
 
 点击对应的云函数，进入在线编辑页面，按照[模板仓库](https://github.com/walinejs/tcb-starter)里的文件，新建对应的文件，并复制粘贴对应的内容即可
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612360652232-9eb2ad2b-bebe-4964-bb5f-75e2f9946d25.png#crop=0&crop=0&crop=1&crop=1&height=283&id=t6ZUG&margin=%5Bobject%20Object%5D&name=image.png&originHeight=566&originWidth=1171&originalType=binary&ratio=1&rotation=0&showTitle=false&size=59625&status=done&style=none&title=&width=585.5)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612360652232-9eb2ad2b-bebe-4964-bb5f-75e2f9946d25.png#averageHue=%23f6f6f6&height=283&id=t6ZUG&name=image.png&originHeight=566&originWidth=1171&originalType=binary&ratio=1&rotation=0&showTitle=false&size=59625&status=done&style=none&title=&width=585.5)
 注意点击**保存并安装依赖**，可能会没有反应一会儿，然后等待转圈圈部署完毕即可
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612360855940-241970ec-5c18-4bc8-9168-9fd945deb761.png#crop=0&crop=0&crop=1&crop=1&height=71&id=PlC1K&margin=%5Bobject%20Object%5D&name=image.png&originHeight=142&originWidth=264&originalType=binary&ratio=1&rotation=0&showTitle=false&size=4012&status=done&style=none&title=&width=132)![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612361085479-f39b6b2b-2293-4685-882e-9e20aa611dea.png#crop=0&crop=0&crop=1&crop=1&height=32&id=qWtmj&margin=%5Bobject%20Object%5D&name=image.png&originHeight=64&originWidth=251&originalType=binary&ratio=1&rotation=0&showTitle=false&size=3262&status=done&style=none&title=&width=125.5)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612360855940-241970ec-5c18-4bc8-9168-9fd945deb761.png#averageHue=%23f5e7e7&height=71&id=PlC1K&name=image.png&originHeight=142&originWidth=264&originalType=binary&ratio=1&rotation=0&showTitle=false&size=4012&status=done&style=none&title=&width=132)![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612361085479-f39b6b2b-2293-4685-882e-9e20aa611dea.png#averageHue=%23ccf1dd&height=32&id=qWtmj&name=image.png&originHeight=64&originWidth=251&originalType=binary&ratio=1&rotation=0&showTitle=false&size=3262&status=done&style=none&title=&width=125.5)
 当然还没有结束，我们需要点击 `环境 --> HTTP 访问服务` （[点击直达](https://console.cloud.tencent.com/tcb/env/access))，如果你想绑定自定义域名可以照图中绑定，记得先申请一下证书，如果你想要 HTTPS（这个可能花的时间有点长）
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612361294908-3ef584b5-5cbc-43e5-b744-cda357057ec0.png#crop=0&crop=0&crop=1&crop=1&height=336&id=Y8wtR&margin=%5Bobject%20Object%5D&name=image.png&originHeight=671&originWidth=1596&originalType=binary&ratio=1&rotation=0&showTitle=false&size=62417&status=done&style=none&title=&width=798)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612361294908-3ef584b5-5cbc-43e5-b744-cda357057ec0.png#averageHue=%23fdfdfd&height=336&id=Y8wtR&name=image.png&originHeight=671&originWidth=1596&originalType=binary&ratio=1&rotation=0&showTitle=false&size=62417&status=done&style=none&title=&width=798)
 点击新建，新建触发路径，点击保存即可，注意路径最后没有 / ，等待构建完成后你就可通过对应的链接访问 demo 页面了，这个链接就是上面提到的 `serverURL` ，例如我的 [https://tcb.ccknbc.cc/waline](https://tcb.ccknbc.cc/waline)
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612361631129-fecd45a5-f694-4154-8707-9976eb10adb5.png#crop=0&crop=0&crop=1&crop=1&height=268&id=EJKha&margin=%5Bobject%20Object%5D&name=image.png&originHeight=535&originWidth=753&originalType=binary&ratio=1&rotation=0&showTitle=false&size=29976&status=done&style=none&title=&width=376.5)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612361631129-fecd45a5-f694-4154-8707-9976eb10adb5.png#averageHue=%23fcfcfc&height=268&id=EJKha&name=image.png&originHeight=535&originWidth=753&originalType=binary&ratio=1&rotation=0&showTitle=false&size=29976&status=done&style=none&title=&width=376.5)
 然后我们需要设置[ WEB 安全域名](https://console.cloud.tencent.com/tcb/env/safety)，把你的域名放入白名单即可（本地测试的话端口也要对应上哦）
 
 ## 如何升级
@@ -239,7 +239,7 @@ module.exports.main = async (event, context) => {
 
 #### 手动升级
 
-找到 Vercel 帮你在创建的仓库，叫 `waline`  啦，编辑 `package.json`  中依赖版本号即可完成升级，版本号以 `npm` ![](https://img.shields.io/npm/v/@waline/vercel?color=critical&logo=npm&style=flat-square#crop=0&crop=0&crop=1&crop=1&height=20&id=ZBPqj&originHeight=20&originWidth=105&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=105)  为准，因为 GitHub 由于考虑到电报机器人自动推送消息过于频繁影响到群友，会延迟推送
+找到 Vercel 帮你在创建的仓库，叫 `waline`  啦，编辑 `package.json`  中依赖版本号即可完成升级，版本号以 `npm` ![](https://img.shields.io/npm/v/@waline/vercel?color=critical&logo=npm&style=flat-square#height=20&id=ZBPqj&originHeight=20&originWidth=105&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=105)  为准，因为 GitHub 由于考虑到电报机器人自动推送消息过于频繁影响到群友，会延迟推送
 
 #### 自动升级
 
@@ -274,7 +274,7 @@ module.exports.main = async (event, context) => {
 #### 一键部署
 
 就是点击[我的应用](https://console.cloud.tencent.com/tcb/apps/index)找到 Waline 点击部署即可
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612711217029-250d0b1a-75d1-4a7c-9f4c-8a9413ab51fa.png#crop=0&crop=0&crop=1&crop=1&height=409&id=jhuJB&margin=%5Bobject%20Object%5D&name=image.png&originHeight=818&originWidth=1814&originalType=binary&ratio=1&rotation=0&showTitle=false&size=86907&status=done&style=none&title=&width=907)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1612711217029-250d0b1a-75d1-4a7c-9f4c-8a9413ab51fa.png#averageHue=%2389cec5&height=409&id=jhuJB&name=image.png&originHeight=818&originWidth=1814&originalType=binary&ratio=1&rotation=0&showTitle=false&size=86907&status=done&style=none&title=&width=907)
 
 #### 手动部署
 

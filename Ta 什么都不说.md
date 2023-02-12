@@ -16,8 +16,8 @@ Ta 所认为的理所当然，原来根本就不存在
 
 _<!-- more -->_
 
-本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/27)
-自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/ta-said-nothing)
+本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/27/)
+自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/ta-said-nothing/)
 
 ## Ta，什么都不说
 

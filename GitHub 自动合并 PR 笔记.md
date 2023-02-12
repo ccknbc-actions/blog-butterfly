@@ -13,14 +13,14 @@ comments: true
 id: 21
 ---
 
-本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/21)
-自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/github-automatically-merges-pull-requests-notes)
+本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/21/)
+自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/github-automatically-merges-pull-requests-notes/)
 
 # automerge-action
 
 GitHub action to automatically merge pull requests when they are ready.
 
-![](https://cdn.nlark.com/yuque/0/2021/svg/8391407/1610874798961-ae345ffc-d1e6-425f-900a-8f69e4ee5a53.svg#crop=0&crop=0&crop=1&crop=1&height=45&id=oSNvE&originHeight=256&originWidth=564&originalType=binary&ratio=1&rotation=0&showTitle=false&size=0&status=done&style=none&title=&width=100)
+![](https://cdn.nlark.com/yuque/0/2021/svg/8391407/1610874798961-ae345ffc-d1e6-425f-900a-8f69e4ee5a53.svg#height=45&id=oSNvE&originHeight=256&originWidth=564&originalType=binary&ratio=1&rotation=0&showTitle=false&size=0&status=done&style=none&title=&width=100)
 
 When added, this action will run the following tasks on pull requests with the
 `automerge` label:
@@ -262,7 +262,7 @@ Install dependencies with `yarn`, and finally run `yarn it` (or `npm run it`).
 
 # bulldozer
 
-![](https://cdn.nlark.com/yuque/0/2021/svg/8391407/1610874951039-f74d3099-f28f-4856-ade7-6c677ce4869d.svg#crop=0&crop=0&crop=1&crop=1&height=20&id=oob8t&originHeight=20&originWidth=110&originalType=binary&ratio=1&rotation=0&showTitle=false&size=0&status=done&style=none&title=&width=110) ![](https://img.shields.io/docker/pulls/palantirtechnologies/bulldozer.svg#crop=0&crop=0&crop=1&crop=1&height=19&id=FEtmj&originHeight=20&originWidth=114&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=108)
+![](https://cdn.nlark.com/yuque/0/2021/svg/8391407/1610874951039-f74d3099-f28f-4856-ade7-6c677ce4869d.svg#height=20&id=oob8t&originHeight=20&originWidth=110&originalType=binary&ratio=1&rotation=0&showTitle=false&size=0&status=done&style=none&title=&width=110) ![](https://img.shields.io/docker/pulls/palantirtechnologies/bulldozer.svg#height=19&id=FEtmj&originHeight=20&originWidth=114&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=108)
 
 `bulldozer` is a [GitHub App](https://developer.github.com/apps/) that
 automatically merges pull requests (PRs) when (and only when) all required
@@ -642,8 +642,8 @@ This application is made available under the [Apache 2.0 License](http://www.apa
 
 # probot-auto-merge
 
-![](https://travis-ci.org/bobvanderlinden/probot-auto-merge.svg?branch=master#crop=0&crop=0&crop=1&crop=1&height=20&id=aSSyK&originHeight=20&originWidth=90&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=90)
-![](https://img.shields.io/coveralls/github/bobvanderlinden/probot-auto-merge.svg#crop=0&crop=0&crop=1&crop=1&height=20&id=LDRWo&originHeight=20&originWidth=96&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=96)
+![](https://travis-ci.org/bobvanderlinden/probot-auto-merge.svg?branch=master#height=20&id=aSSyK&originHeight=20&originWidth=90&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=90)
+![](https://img.shields.io/coveralls/github/bobvanderlinden/probot-auto-merge.svg#height=20&id=LDRWo&originHeight=20&originWidth=96&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=96)
 
 A GitHub App built with [Probot](https://github.com/probot/probot) that automatically merges PRs
 
@@ -1121,7 +1121,7 @@ For more, check out the [Contributing Guide](CONTRIBUTING.md).
 
 This action checks all open Pull Requests for merge conflicts and marks them with a Github label.
 
-![](./demo.png#crop=0&crop=0&crop=1&crop=1&id=IgY1W&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
+![](./demo.png#id=IgY1W&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=)
 
 Once a conflict is resolved the label is automatically removed.
 

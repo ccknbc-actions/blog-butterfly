@@ -11,7 +11,7 @@ cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/a
 id: 30
 ---
 
-本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/30)，自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/how-to-hide-hexo-articles-gracefully)
+本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/30/)，自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/how-to-hide-hexo-articles-gracefully/)
 
 ## 延迟发布
 
@@ -117,7 +117,7 @@ $ hexo n draft <title>
 ```
 
 当然我们还要知道默认的 layout 模板文件存在`根目录/scaffolds`下（我们可以自行新建或修改模板，这里不做展开），草稿存在`根目录/source/_drafts`下，文章存在`根目录/source/_posts`下
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1634995673577-e2dcbc1a-09aa-4e23-9e85-e9fb14569860.png#clientId=uf9f3006a-c368-4&crop=0&crop=0&crop=1&crop=1&errorMessage=unknown%20error&from=paste&id=u628c29ef&margin=%5Bobject%20Object%5D&name=image.png&originHeight=225&originWidth=773&originalType=binary&ratio=1&rotation=0&showTitle=false&size=19625&status=error&style=none&taskId=udd042d08-4723-4ea0-a066-d5e770f53ab&title=)
+![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1634995673577-e2dcbc1a-09aa-4e23-9e85-e9fb14569860.png#averageHue=%23fcf5f4&clientId=uf9f3006a-c368-4&errorMessage=unknown%20error&from=paste&id=u628c29ef&name=image.png&originHeight=225&originWidth=773&originalType=binary&ratio=1&rotation=0&showTitle=false&size=19625&status=error&style=none&taskId=udd042d08-4723-4ea0-a066-d5e770f53ab&title=)
 刚刚提到了 `Hexo` 的一种特殊布局：`draft`，这种布局在建立时会被保存到 `source/_drafts`文件夹，您可通过`publish` 命令将草稿移动到 `source/_posts` 文件夹，该命令的使用方式与 `new` 十分类似，您也可在命令中指定 layout 来指定布局。
 
 ```bash

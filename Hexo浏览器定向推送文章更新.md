@@ -12,7 +12,7 @@ cover: https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/d
 id: 37
 ---
 
-查看本文[**语雀**](https://www.yuque.com/ccknbc/blog/37)版本【首发】，自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/hexo-webpushr-notification)！
+查看本文[**语雀**](https://www.yuque.com/ccknbc/blog/37/)版本【首发】，自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/hexo-webpushr-notification/)！
 
 两年前，我刚开始使用`Hexo`的时候，写了一篇文章[简单浏览器更新推送的实现](https://blog.ccknbc.cc/posts/implementation-of-simple-browser-update-push/)，最近登录[webpushr](https://www.webpushr.com/)控制台，发现其支持按话题`topic`指定推送了，而原来的插件一直没有更新，且对个人的写作习惯不是很友好，所以对原插件进行了修改，并发布到了`NPM`
 
@@ -195,7 +195,7 @@ INFO  无文章更新 或 为首次推送更新
 ## 推送效果
 
 因为我是通知自动隐藏后才截图，所以大致效果如下所示
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/8391407/1664951686275-f37cb76d-34f6-40ed-94c6-9bed130d0605.png#averageHue=%23bec0b3&clientId=ub7fa2e19-f596-4&crop=0&crop=0&crop=1&crop=1&errorMessage=unknown%20error&from=paste&height=402&id=u898a4c3c&margin=%5Bobject%20Object%5D&name=image.png&originHeight=502&originWidth=412&originalType=binary&ratio=1&rotation=0&showTitle=false&size=165943&status=error&style=none&taskId=u3d6496ee-c850-4052-978a-8c49a9055ca&title=&width=329.6)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/8391407/1664951686275-f37cb76d-34f6-40ed-94c6-9bed130d0605.png#averageHue=%23bec0b3&clientId=ub7fa2e19-f596-4&errorMessage=unknown%20error&from=paste&height=402&id=u898a4c3c&name=image.png&originHeight=502&originWidth=412&originalType=binary&ratio=1&rotation=0&showTitle=false&size=165943&status=error&style=none&taskId=u3d6496ee-c850-4052-978a-8c49a9055ca&title=&width=329.6)
 
 ## 后续计划
 

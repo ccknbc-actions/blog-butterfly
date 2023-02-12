@@ -16,8 +16,8 @@ id: 25
 
 <!-- more -->
 
-本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/25)
-自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/cusdis-or-disqus)
+本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/25/)
+自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/cusdis-or-disqus/)
 
 开源，免费，开箱即用，或零成本自托管，未来，有更多可能……
 
