@@ -54,67 +54,21 @@
     background: var(--btn-bg);
 }
 
-#docsearch {
-    display: inline-block;
-    justify-content: space-between;
-}
-
-/* .fa-solid.fa-shuffle{
-    position: relative;
-    display: inline-block;
-    padding: 0 0 0 14px;
-} */
-
 /* DocSearch */
 
 :root {
     --docsearch-primary-color: #8fbc8f !important;
-    --docsearch-logo-color: #8fbc8f!important;
-    --docsearch-searchbox-background: #EEEEEE !important;
+    --docsearch-logo-color: #8fbc8f !important;
 }
 
 html[data-theme=dark] {
     --docsearch-primary-color: #5468ff !important;
-    --docsearch-logo-color: #5468ff!important;
-    --docsearch-searchbox-background: #111111 !important;
+    --docsearch-logo-color: #5468ff !important;
 }
 
-/* .DocSearch-Button-Placeholder,
-.DocSearch-Button-Keys {
-    display: none!important;
-} */
-
-/* .DocSearch-Search-Icon，
-.DocSearch-Button-Placeholder,
-.DocSearch-Button-Keys */
-
-.DocSearch-Logo .cls-1, .cls-2 {
-    fill: var(--docsearch-logo-color)!important;
-    color: var(--docsearch-logo-color)!important;
-}
-
-.DocSearch-Button {
-    display: flex !important;
-    justify-content: center !important;
-    height: 36px !important;
-}
-
-.DocSearch-Button-Container {
-    align-items: center !important;
-    display: flex !important;
-}
-
-.DocSearch-Button-Placeholder {
-    /* display: flex !important; */
-    font-size: 14px !important;
-    padding: 4px 4px 4px 4px !important;
-
-}
-
-.DocSearch-Search-Icon {
-    /* display: flex !important; */
-    height: 16px !important;
-    width: 16px !important;
+.DocSearch-Logo .cls-1, .DocSearch-Logo .cls-2 {
+    fill: var(--docsearch-logo-color) !important;
+    color: var(--docsearch-logo-color) !important;
 }
 
 /* 其他 */

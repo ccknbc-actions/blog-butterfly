@@ -139,7 +139,7 @@ index_generator:
 archive_generator:
   enabled: true
   per_page: 0
-  yearly: false
+  yearly: true
   monthly: false
   daily: false
   order_by: -date
