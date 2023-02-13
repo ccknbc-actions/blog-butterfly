@@ -1,4 +1,4 @@
-.card-widget#card-tuijian
+.card-widget#card-qrcode
     #tj-box
         #tj-box1
             #tj-left
@@ -6,10 +6,7 @@
                 <span>快速打开移动端➤</span>
             #tj-right
                 #tj-img-box
-                    if is_home()
-                        img(src=qrcode(full_url_for(page.current_url),{margin:4}))
-                    else
-                        img(src=qrcode(full_url_for(page.path),{margin:4}))
+                    img(src=qrcode(full_url_for(path),{margin:4}))
 
         #tj-box2
             #tj-left

@@ -6,7 +6,7 @@
     if showToc && tocStyleVal
       .sticky_layout
         include ./card_post_toc.pug
-        !=partial('includes/widget/card_tuijian', {}, {cache: false})
+        !=partial('includes/widget/card_qrcode', {}, {cache: false})
     else
       !=partial('includes/widget/card_author', {}, {cache: true})
       !=partial('includes/widget/card_announcement', {}, {cache: true})
@@ -14,7 +14,7 @@
       .sticky_layout
         if showToc
           include ./card_post_toc.pug
-        !=partial('includes/widget/card_tuijian', {}, {cache: false})
+        !=partial('includes/widget/card_qrcode', {}, {cache: false})
         !=partial('includes/widget/card_recent_post', {}, {cache: true})
         !=partial('includes/widget/card_ad', {}, {cache: true})
   else
@@ -26,7 +26,7 @@
     .sticky_layout
       if showToc
         include ./card_post_toc.pug
-      !=partial('includes/widget/card_tuijian', {}, {cache: false})
+      !=partial('includes/widget/card_qrcode', {}, {cache: false})
       !=partial('includes/widget/card_recent_post', {}, {cache: true})
       !=partial('includes/widget/card_ad', {}, {cache: true})
       !=partial('includes/widget/card_newest_comment', {}, {cache: true})

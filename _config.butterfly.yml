@@ -86,8 +86,8 @@ docsearch:
   appId: 97MUPN4DMC
   apiKey: a003a39f337f5186ec11f5f92bae62b3
   indexName: ccknbc
-  debug: false
   option:
+    debug: false
     placeholder: 'CC的部落格 站内搜索'
     translations:
       button:
