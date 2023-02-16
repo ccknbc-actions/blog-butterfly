@@ -55,6 +55,6 @@
     "moment": "2.29.4",
     "node-fetch": "^2.6.7",
     "request": "2.88.2",
-    "workbox-cli": "6.5.4"
+    "workbox-build": "6.5.4"
   }
 }

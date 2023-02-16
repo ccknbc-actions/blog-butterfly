@@ -6,5 +6,5 @@ pages:
   artifacts:
     paths:
       - public
-  only:
-    - master
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "trigger"
