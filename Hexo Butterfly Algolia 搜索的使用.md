@@ -3,7 +3,7 @@ title: Hexo Butterfly Algolia 搜索的使用
 translate_title: hexo-butterfly-algolia
 subtitle: Hexo Butterfly Algolia
 date: 2021-05-11 11:00:00
-updated: 2023-02-07 21:49:00
+updated: 2023-02-16 19:11:40
 tags: 工具
 keywords: [Hexo, Butterfly, Algolia]
 categories: 工具
@@ -16,10 +16,6 @@ id: 24
 
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/24/)
 自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/posts/hexo-butterfly-algolia/)
-
-~~因为蝴蝶还在使用 V2，而官方已进入 V4 ，所以这里以 V2 做一下展开，虽然功能不是那么全，但对于静态博客来说搜索体验是达到了的，可以点击右上角的 🔍 体验一下。~~
-
-截止文章更新的前几天，主题已经在测试版升级到 V4，配置项也做了对应的修改，我也做了对应的修改，请自行查看或[**引用**](https://cdn.jsdelivr.net/gh/CCKNBC/ccknbc.github.io/js/search/algolia.js)
 
 ## 注册账号
 
@@ -41,7 +37,7 @@ npm install hexo-algoliasearch --save
 > Index your hexo website content to Algolia Search.  
 > 🔎 A plugin to index posts of your Hexo blog on Algolia
 
-也就很明显了，如果你想要全站搜索可选择前者，如果你只想搜索文章两者兼可。但前者不能将文章内容作为索引上传，后者可全文上传。
+也就很明显了，如果你想要全站搜索可选择前者，如果你只想搜索文章两者兼可。但前者不能将文章内容作为索引上传（其实老版本是支持的，但因为索引大小限制，在新版本取消索引了文章内容），后者目前仍可全文上传。
 然后就是 HEXO 配置文件中添加以下内容，下文基本以 `hexo-algoliasearch` 为例，因为我个人认为访客只会搜文章吧（事实上是搜索根本没人用，毕竟也根本没人访问），hexo-algolia 可查看官方文档，注意配置和命令的区别
 
 > \_config.yml :
@@ -432,7 +428,7 @@ window.addEventListener("load", () => {
 允许拼写错误
 ![image.png](https://cdn.nlark.com/yuque/0/2021/png/8391407/1623298137784-eb2713f9-377f-4f5d-824d-a7a7b7a881c4.png#averageHue=%23f3f6f9&clientId=uc24fb27d-4fc5-4&from=paste&id=uc7968f09&name=image.png&originHeight=598&originWidth=750&originalType=binary&ratio=2&rotation=0&showTitle=false&size=61697&status=done&style=none&taskId=u9c8b459e-8141-46ef-9d7e-11bd8cc917f&title=)
 
-### 特别说明
+## 特别说明
 
-~~本博客目前使用效果点击搜索按钮即可查看~~
-因两个月前已申请通过，本博客已切换至不限搜索次数更好用的的[**DocSearch**](https://docsearch.algolia.com/)**！**
+因两个月前已申请通过，本博客已切换至不限搜索次数的[**DocSearch**](https://docsearch.algolia.com/)！同时也加入了[**开源计划**](https://www.algolia.com/for-open-source/)，但因为 10DSN 太香了，虽然 instantsearch 可玩性更好，但我也只申请了 200k/月的额度（虽然可以增加），所以为了即时搜索我还是选择了白嫖，而且设定为每天自动爬取的话，省去了生成索引上传的这一步骤，节省了自动部署的时间。而且爬取到数据后，前端我并非一定要使用 docsearch 方案，用 instantsearch 配合其他插件也不是不可以。
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/8391407/1676545133728-0a8f5c54-05e9-422c-b427-21087c6b0372.png#averageHue=%23f6f6d9&clientId=udb920223-80c3-4&from=paste&height=214&id=u36c9a03d&name=image.png&originHeight=267&originWidth=1762&originalType=binary&ratio=1.25&rotation=0&showTitle=false&size=27690&status=done&style=none&taskId=uf09c1846-dc8c-444d-8cf5-a72ad68c85a&title=&width=1409.6)
