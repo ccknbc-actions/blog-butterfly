@@ -15,14 +15,14 @@ self.addEventListener('activate', async () => {
     await self.clients.claim()
 })
 
-self.__WB_DISABLE_DEV_LOGS = true;
+self.__WB_DISABLE_DEV_LOGS = false;
 
 workbox.core.setCacheNameDetails({
     prefix: 'CC的部落格',
     suffix: '缓存',
     precache: '离线后备',
     runtime: '运行时',
-    googleAnalytics: '离线谷歌分析'
+    // googleAnalytics: '离线谷歌分析'
 });
 
 workbox.precaching.precacheAndRoute(self.__WB_MANIFEST, {
@@ -138,4 +138,4 @@ workbox.routing.registerRoute(
 );
 
 // 离线谷歌分析
-workbox.googleAnalytics.initialize();
+// workbox.googleAnalytics.initialize();
