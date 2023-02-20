@@ -3,7 +3,7 @@ title: Hexo浏览器定向推送文章更新
 translate_title: hexo-webpushr-notification
 subtitle: Hexo Webpushr Notification
 date: 2022-10-05 00:00:00
-updated: 2022-12-18 18:00:00
+updated: 2023-02-20 13:59:00
 tags: [博客, 工具]
 keywords: [博客, 工具, hexo, web push, webpushr]
 categories: 博客
@@ -26,7 +26,7 @@ id: 37
 npm i hexo-webpushr-notification
 ```
 
-当然你也可以自定义修改[index.js](https://github.com/Rock-Candy-Tea/hexo-webpushr-notification/blob/main/index.js)文件后，再安装相关需要依赖，然后将文件放到`Hexo/scripts/`目录下即可正常运行，CC 本人亦是如此
+当然你也可以自定义修改[webpushr.js](https://github.com/Rock-Candy-Tea/hexo-webpushr-notification/blob/main/webpushr.js)文件后，再安装相关需要依赖，然后将文件放到`Hexo/scripts/`目录下即可正常运行，CC 本人亦是如此
 
 ## 使用
 
@@ -34,9 +34,10 @@ npm i hexo-webpushr-notification
 
 ```yaml
 webpushr:
+  enable: true # 是否启用推送插件
+
   webpushrKey: "webpushrKey"
   webpushrAuthToken: "webpushrAuthToken"
-
   # 出于安全考虑，建议将上述两个重要参数添加至系统全局环境变量，并删除或注释掉此处配置
   # 否则可在网页端向访问者或订阅用户发送推送 https://www.webpushr.com/api-playground
   # 例如GitHub Actions环境变量配置，参数名不变，密钥名自定义，可参考如下
@@ -46,7 +47,7 @@ webpushr:
   # 如果您的仓库私有，则无需担心此问题
 
   trackingCode: "BB9Y-w9p3u0CKA7UP9nupB6I-_NqE2MuODmKJjyC4W2YflX06Ff_hEhrNJfonrut5l6gCa28gC83q2OII7Qv-oA"
-  icon: "https://.../192.png" # 必须为192*192 png图片
+  icon: "https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/image/pwa/192.png" # 必须为192*192 png图片
   # auto_hide: "0" # 默认为 1，代表true，即自动隐藏
   # sort: "date" # 默认为updated，即只要最新文章更改了更新时间即推送新文章，改为date即文章第一次发布时间
   # delay: "30" # 延时推送，考虑到CDN缓存更新，默认定时为在 hexo d 10分钟后推送，单位为分钟（最短时间为5min）
@@ -57,10 +58,11 @@ webpushr:
   # 以下配置为按订阅主题推送给不同订阅用户，请按照数组形式，一一对应，具体位置请看使用文档
   categories: [工作, 博客, 工具, 生活, 音乐, 学习]
   segment: ["484223", "484224", "484225", "484226", "484227", "484229"]
-  # endpoint: sid # 可选配置 all / segment / sid
+  endpoint: segment # 可选配置 all / segment / sid
   # 默认为 segment，即根据不同主题推送细分，同时配置上述选项
   # 官方文档参数见 https://docs.webpushr.com/introduction-to-rest-api
   # 例如 all，即推送至所有用户；针对测试，可只推送给单个用户即自己，同时设置 sid 选项
+  # 您也可以将segment 设置为 all-users 对应的ID，同样也可以实现推送至所有用户
   sid: "119810055" # 单个用户ID 可在控制台查看 https://app.webpushr.com/subscribers
 
 
@@ -88,30 +90,25 @@ webpushr('setup',{'key':'BKOlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLvbj
 
 ## 额外配置
 
-因官方 sw 脚本注册后，我们无法注册自己的 sw 脚本，但官方提供了配置，方便我们使用 sw 的缓存，拦截请求等功能
-因兼容性未知，不确定是否有其他问题，但我个人目前没什么问题，主要是 sw 脚本编写问题
+因官方 sw 脚本注册后，我们无法注册自己的 sw 脚本，但官方提供了配置，方便我们使用 sw 的缓存，拦截请求等功能，目前的 BUG 不影响使用，主要是会在非根目录页面请求不存在的 `/path/sw.js`文件，或者我该去问问 webpushr 官方怎么办，不修改官方 js 的情况下
 
-首先在配置项中添加`sw: "none"`配置项
+首先在配置项中添加 `sw_self: true `配置，开启自行注册 sw（默认用户不用添加或者设为 `false`）
 
 ```yaml
 webpushr:
-  sw: "none"
+  sw_self: true
 ```
 
-另外，你还需要在你的脚本文件（例如 sw.js）中引入
+另外，你还需要在你的脚本文件（例如`sw.js`）中引入
 
-```javascript
-importScripts("https://cdn.webpushr.com/sw-server.min.js");
+```yaml
+importScripts('https://cdn.webpushr.com/sw-server.min.js');
 ```
 
-如果你需要了解如何编写 service worker 脚本，可以参考以下文章或项目
-
-[hexo-swpp](https://kmar.top/posts/73014407/)
-
-[Service Worker](https://blog.cyfan.top/p/c0af86bb.html)
-
-[clientworker](https://clientworker.js.org/)
-
+完成这些你就可以自行注册你的`sw`脚本了，如果你需要了解如何编写或注册`service worker`脚本，可以参考以下文章或项目
+[hexo-swpp](https://kmar.top/posts/73014407/)  
+[Service Worker](https://blog.cyfan.top/p/c0af86bb.html)  
+[clientworker](https://clientworker.js.org/)  
 [Workbox](https://github.com/GoogleChrome/workbox)
 
 ## 自定义
@@ -122,25 +119,30 @@ importScripts("https://cdn.webpushr.com/sw-server.min.js");
 
 在控制台，点击`Setup`>`Opt-In Prompt` ，向下滑动打开`Enable Topics`（小铃铛样式无此选项，因此推荐您使用前两种样式），并新增几个主题，对应你想推送的文章分类即可
 
-然后点击`Users`>`Segments` ，即可获取对应的 segment 关系，依次填入配置项即可
+然后点击`Users`>`Segments` ，即可获取对应的`segment`关系，依次填入配置项即可
 
 ## 工作原理
 
-当你运行`hexo generate`插件会在`public` 目录生成 `newPost.json` 这样一个文件. `newPost.json` 包含了一些你想推送的新文章相关信息，格式如下
+当你运行`hexo generate`插件会在`public` 目录生成 `newPost.json` 这样一个文件. `newPost.json` 包含了一些你想推送的新文章相关信息，示例格式如下
 
 ```json
 {
-  "title": "如何优雅隐藏 Hexo 文章",
-  "updated": "09/18/2022",
-  "message": "本文介绍三种方法来优雅隐藏 Hexo 文章",
-  "path": "posts/how-to-hide-hexo-articles-gracefully/",
-  "target_url": "https://blog.ccknbc.cc/posts/how-to-hide-hexo-articles-gracefully/",
-  "image": "https://***.jpg",
-  "tags": ["博客"],
-  "categories": ["博客"],
-  "schedule": "2022-10-04T06:58:04.459Z",
-  "expire": "7d",
-  "auto_hide": "1"
+    "title": "如何优雅隐藏 Hexo 文章",
+    "updated": "09/18/2022",
+    "message": "本文介绍三种方法来优雅隐藏 Hexo 文章",
+    "path": "posts/how-to-hide-hexo-articles-gracefully/",
+    "target_url": "https://blog.ccknbc.cc/posts/how-to-hide-hexo-articles-gracefully/",
+    "image": "https://***.jpg",
+    "tags": [
+        "博客"
+    ],
+    "categories": [
+        "博客"
+    ],
+    "schedule": "2022-10-04T06:58:04.459Z",
+    "expire": "7d",
+    "auto_hide": "1"
+  	...
 }
 ```
 
@@ -157,7 +159,7 @@ description: 对应配置项中message，即文章描述
 cover: 对应配置项中image，默认选取文章封面
 ```
 
-如果你的主题不是采用默认的`data` `updated` 参数，记得补充，因为这是判断最新文章的依据
+如果你的主题不是采用默认的`date` `updated` 参数，记得补充，因为这是判断最新文章的依据
 
 如果你习惯了使用截断的方式，也无需配置`description`继续使用，示例如下，注意`<!-- more -->`
 
@@ -188,7 +190,7 @@ Web Push Notification 是怎么工作的？个人博客为什么要使用它？�
 INFO  无文章更新 或 为首次推送更新
 ```
 
-这是正常现象，因为此时你的网站还没有`newPost.json`这个文件，后续有更新时将正常推送
+这是正常现象，因为此时你的网站还没有`newPost.json`这个文件，后续有更新时将正常推送，你可以先推送一次，再修改更新时间测试一次，当然建议测试目标选择自己，即 sid 选项配置
 
 当然如果您在使用过程中有什么问题或遇到了 Bug 也欢迎随时在评论区或[issues](https://github.com/Rock-Candy-Tea/hexo-webpushr-notification/issues)反馈，当然因为本人是菜鸡，所以有大佬 PR 最好了
 
@@ -199,31 +201,6 @@ INFO  无文章更新 或 为首次推送更新
 
 ## 后续计划
 
-- [ ] 兼容`Workbox`的功能，因为`webpushr-sw.js`的原因，只能有一个注册，这方面可能 webpushr 自身也要考虑，现在的状况是如果启用了缓存通知会以`json`形式展示
-
-```javascript
-self.addEventListener('push', function (e) {
-  var msg;
-  if (e.data) {
-    var msg = JSON.parse(e.data.text());
-  } else {
-    body = { t: "Aegir Alert", m: "" };
-  }
-
-  var options = {
-    body: msg.m,
-    title: msg.t,
-    icon: "/img/icons/favicon-32x32.png",
-    vibrate: [100, 50, 100],
-    data: {
-      dateOfArrival: Date.now()
-    },
-    ]
-  };
-  e.waitUntil(
-    self.registration.showNotification(msg.t, options)
-  );
-});
-```
-
+- [x] 兼容`Workbox`的功能，因为`webpushr-sw.js`的原因，只能有一个 `sw`注册。
 - [ ] 支持参数更多的可自定义，启用或关闭。例如不延时，立即发送；不显示`icon`, `image`, `按钮`（因为默认就是跳转到文章）等
+- [ ] 目前的判断逻辑，虽然可以根据更新时间来判断，但如果很久之前的文章翻新，只要更新时间最新，也会触发推送
