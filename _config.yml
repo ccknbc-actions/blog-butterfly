@@ -170,7 +170,7 @@ exclude:
   # - "offline.html"
 ignore:
 
-theme: butterfly
+theme: butterfly # Acrylic
 
 feed:
   enable: false
@@ -355,7 +355,7 @@ wowjs:
 
 readmore:
   # 是否启用
-  enable: true
+  enable: false
   # 已申请的博客 ID
   blogId: "44867-6625009790877-036"
   # 已申请的微信公众号名称
@@ -486,3 +486,11 @@ swpp:
   exclude:
     # 这里写正则表达式，格式如下：
     - sw\.js
+
+text_autospace_filter:
+  enable: true
+  inject_css: true
+  tag_name: 'hanla'
+  entry: '#article-container' # tag
+  # entry: '#post' # id
+  # entry: '.content' # class

@@ -69,7 +69,6 @@
 .DocSearch-Logo .cls-1,
 .DocSearch-Logo .cls-2 {
     fill: var(--docsearch-logo-color) !important;
-    color: var(--docsearch-logo-color) !important;
 }
 
 /* 侧边栏二维码 */

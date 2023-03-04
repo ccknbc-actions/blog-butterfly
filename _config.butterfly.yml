@@ -357,7 +357,7 @@ giscus:
 # waline - A simple comment system with backend support fork from Valine
 # https://waline.js.org/
 waline:
-  serverURL: https://waline.ccknbc.cc # Waline server address url
+  serverURL: https://waline.ccknbc.cc/ # Waline server address url
   bg: # waline background
   pageview: false
   option:
@@ -535,12 +535,6 @@ tidio:
 daovoice:
   enable: false
   app_id: 25a36e78
-
-# gitter
-# https://gitter.im/
-gitter:
-  enable: false
-  room: CCKNBC/blog
 
 # crisp
 # https://crisp.chat/en/
