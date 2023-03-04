@@ -54,68 +54,114 @@
     background: var(--btn-bg);
 }
 
-/* #docsearch {
-    display: inline-flex;
-} */
-
-/* .fa-solid.fa-shuffle{
-    position: relative;
-    display: inline-block;
-    padding: 0 0 0 14px;
-} */
-
 /* DocSearch */
 
 :root {
     --docsearch-primary-color: #8fbc8f !important;
     --docsearch-logo-color: #8fbc8f !important;
-    --docsearch-searchbox-background: #EEEEEE !important;
 }
 
-html[data-theme=dark] {
+[data-theme=dark] {
     --docsearch-primary-color: #5468ff !important;
     --docsearch-logo-color: #5468ff !important;
-    --docsearch-searchbox-background: #111111 !important;
 }
-
-/* .DocSearch-Button-Placeholder,
-.DocSearch-Button-Keys {
-    display: none!important;
-} */
-
-/* .DocSearch-Search-Icon，
-.DocSearch-Button-Placeholder,
-.DocSearch-Button-Keys */
 
 .DocSearch-Logo .cls-1,
-.cls-2 {
+.DocSearch-Logo .cls-2 {
     fill: var(--docsearch-logo-color) !important;
-    color: var(--docsearch-logo-color) !important;
 }
 
-.DocSearch-Button {
-    display: flex !important;
-    justify-content: center !important;
-    height: 36px !important;
+/* 侧边栏二维码 */
+
+@media (max-width:768px) {
+    #card-qrcode {
+        display: none
+    }
 }
 
-.DocSearch-Button-Container {
-    align-items: center !important;
-    display: flex !important;
+#card-qrcode {
+    background: var(--card-bg)!important;
+    padding: 15px 0;
+    height: 118px;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none;
 }
 
-.DocSearch-Button-Placeholder {
-    /* display: flex !important; */
-    font-size: 14px !important;
-    padding: 4px 4px 4px 4px !important;
-
+#card-qrcode #tj-box {
+    width: 100%;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: cubic-bezier(0, 0, 0, 1.29) 0.4s;
 }
 
-.DocSearch-Search-Icon {
-    /* display: flex !important; */
-    height: 16px !important;
-    width: 16px !important;
+#card-qrcode #tj-box2 {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
-/* 其他 */
+#card-qrcode #tj-box1,
+#card-qrcode #tj-box2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+#card-qrcode #tj-img-box {
+    border-radius: 12px;
+    margin-left: 10px;
+    height: 85px;
+}
+
+#card-qrcode #tj-img-box img {
+    height: 85px;
+    border-radius: 12px;
+    filter: brightness(0.95);
+}
+
+[data-theme=dark] #card-qrcode #tj-img-box img {
+    filter: brightness(0.6);
+}
+
+#card-qrcode #tj-left {
+    color: var(--toc-link-color);
+    filter: brightness(0.95);
+    height: 85px;
+}
+
+[data-theme=dark] #card-qrcode #tj-left {
+    filter: brightness(0.6);
+}
+
+#card-qrcode #tj-left p {
+    margin: 10px 0 0;
+    font-size: 32px;
+    line-height: normal;
+    font-weight: 800;
+}
+
+#card-qrcode #tj-left span {
+    font-size: 15px;
+    font-weight: 800;
+}
+
+#card-qrcode:hover #tj-box {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+
+/* 圆角 */
+
+#card-info-btn, #rightside>div>button, #to_comment, .edit-gitlab-ide, .edit-gitlab, .edit-github, .edit-yuque {
+    border-radius: 40px !important;
+}
+
+/* 高亮 */
 

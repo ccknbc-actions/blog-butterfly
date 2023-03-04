@@ -207,3 +207,13 @@ discuss:
   name: discuss
   file: dist/discuss.js
   version: latest
+docsearch_js:
+  name: '@docsearch/js'
+  other_name: docsearch-js
+  file: dist/umd/index.js
+  version: 3.3.2
+docsearch_css:
+  name: '@docsearch/css'
+  other_name: docsearch-css
+  file: dist/style.css
+  version: 3.3.2

@@ -10,12 +10,6 @@ script.
       document.head.appendChild(link)
     }
 
-    function metaCSS () {
-      const link = document.createElement("link")
-      link.rel = "stylesheet"
-      link.href = "!{url_for(theme.asset.waline_meta_css)}"
-      document.head.appendChild(link)
-    }
 
     function initWaline () {
       const waline = Waline.init(Object.assign({
@@ -28,11 +22,17 @@ script.
       }, !{JSON.stringify(option)}))
     }
 
-    if (typeof Waline === 'function') initWaline()
+    const walineCSSLoad = document.getElementById('waline-css')
+
+    if (typeof Waline === 'object') {
+      walineCSSLoad ? initWaline() : getCSS('!{url_for(theme.asset.waline_css)}','waline-css').then(initWaline)
+    }
     else {
-      insertCSS()
-      metaCSS()
-      getScript('!{url_for(theme.asset.waline_js)}').then(initWaline)
+      getCSS('!{url_for(theme.asset.waline_css)}','waline-css').then(() => {
+        getScript('!{url_for(theme.asset.waline_js)}').then(initWaline)
+      })
+      getCSS('!{url_for(theme.asset.waline_meta_css)}')
+
     }
   }
 
