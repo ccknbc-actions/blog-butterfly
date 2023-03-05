@@ -23,7 +23,7 @@ menu:
     # 自己: /me/ || far fa-user
     # 证书: https://ssl.ccknbc.cc || fa-brands fa-expeditedssl
 
-nav_info:
+nav:
   logo: # image
   display_title: true # true or false
   fixed: true # fixed navigation bar
@@ -88,7 +88,7 @@ docsearch:
   indexName: ccknbc
   option:
     debug: false
-    placeholder: 'CC的部落格 站内搜索'
+    placeholder: 'Ctrl/⌘ + K 快速启用/关闭站内搜索'
     translations:
       button:
         buttonText: '搜索'
@@ -115,9 +115,9 @@ docsearch:
           navigateText: '切换'
           navigateUpKeyAriaLabel: '方向键上'
           navigateDownKeyAriaLabel: '方向键下'
-          closeText: '退出'
+          closeText: '关闭'
           closeKeyAriaLabel: '退出键'
-          searchByText: '基于 DocSearch by'
+          searchByText: '搜索服务提供: DocSearch by'
         noResultsScreen:
           noResultsText: '未搜索到相关内容'
           suggestedQueryText: '您可尝试搜索'
@@ -321,7 +321,7 @@ addThis:
 # https://github.com/overtrue/share.js
 sharejs:
   enable: false
-  sites: facebook,twitter,wechat,weibo,qq,qzone,linkedin
+  sites: facebook,twitter,wechat,weibo,qq
 
 # AddToAny
 # https://www.addtoany.com/
@@ -535,12 +535,6 @@ tidio:
 daovoice:
   enable: false
   app_id: 25a36e78
-
-# gitter
-# https://gitter.im/
-gitter:
-  enable: false
-  room: CCKNBC/blog
 
 # crisp
 # https://crisp.chat/en/
@@ -1068,11 +1062,11 @@ inject:
     # - <script>!(function(c,i,e,b){var h=i.createElement("script");var f=i.getElementsByTagName("script")[0];h.type="text/javascript";h.crossorigin=true;h.onload=function(){new c[b]["Monitor"]().init({id:"JgUg7s8ImDkwb2V7",sendSuspicious:true});};f.parentNode.insertBefore(h,f);h.src=e;})(window,document,"https://sdk.51.la/perf/js-sdk-perf.min.js","LingQue");</script>
     # - <script defer src="https://jsd.cdn.zzko.cn/gh/Gahotx/cdn@master/js/clipboard.min.js"></script>
     - <script defer src="/js/custom.js"></script>
-    # - <script defer id="rrbayJs" src="//wza.rrbay.com/js/wza.min.js?632b13cdb6508a0f50711f74" type="text/javascript"></script>
     # - <script defer src="https://cc.instatus.com/widget/script.js"></script>
     # - <script defer src='https://api.vvhan.com/api/snow'></script>
     # - <script defer src="https://api.vvhan.com/api/denglong"></script>
     # - <script defer src="https://jsd.cdn.zzko.cn/npm/jquery/dist/jquery.min.js"></script>
+    # - <script defer id="rrbayJs" src="//wza.rrbay.com/js/wza.min.js?bw" type="text/javascript"></script>
     # - <div id="music" key="6208da041a763" api="https://music.mx142.ltd"></div><script id="xplayer" src="https://music.mx142.ltd/Static/player4/js/player.js" ></script>
 
 # CDN

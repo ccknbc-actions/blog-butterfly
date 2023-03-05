@@ -8,5 +8,6 @@ node_modules
 .deploy*
 .nojekyll
 themes/butterfly/.git
+themes/Acrylic
 source/_posts
 yuque

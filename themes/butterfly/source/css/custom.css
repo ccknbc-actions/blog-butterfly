@@ -69,14 +69,13 @@
 .DocSearch-Logo .cls-1,
 .DocSearch-Logo .cls-2 {
     fill: var(--docsearch-logo-color) !important;
-    color: var(--docsearch-logo-color) !important;
 }
 
 /* 侧边栏二维码 */
 
 @media (max-width:768px) {
     #card-qrcode {
-        display: none
+        display: none;
     }
 }
 
@@ -164,5 +163,10 @@
     border-radius: 40px !important;
 }
 
-/* 高亮 */
+/* 无障碍 */
+/* @media (max-width:768px) {
+    .wza-Tool {
+        display: none;
+    }
+} */
 
