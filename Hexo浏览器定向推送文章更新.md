@@ -127,22 +127,17 @@ importScripts('https://cdn.webpushr.com/sw-server.min.js');
 
 ```json
 {
-    "title": "如何优雅隐藏 Hexo 文章",
-    "updated": "09/18/2022",
-    "message": "本文介绍三种方法来优雅隐藏 Hexo 文章",
-    "path": "posts/how-to-hide-hexo-articles-gracefully/",
-    "target_url": "https://blog.ccknbc.cc/posts/how-to-hide-hexo-articles-gracefully/",
-    "image": "https://***.jpg",
-    "tags": [
-        "博客"
-    ],
-    "categories": [
-        "博客"
-    ],
-    "schedule": "2022-10-04T06:58:04.459Z",
-    "expire": "7d",
-    "auto_hide": "1"
-  	...
+  "title": "Hexo浏览器定向推送文章更新",
+  "updated": "2023-02-20T13:59:00+08:00",
+  "message": "这一次，CC的部落格可以根据读者订阅主题定向推送了，并且实现了NPM插件化",
+  "path": "posts/hexo-webpushr-notification/",
+  "target_url": "https://blog.ccknbc.cc/posts/hexo-webpushr-notification/",
+  "image": "***.png",
+  "tags": ["博客", "工具"],
+  "categories": ["博客"],
+  "schedule": "2023-03-05T11:23:23.340Z",
+  "expire": "7d",
+  "auto_hide": "1"
 }
 ```
 
