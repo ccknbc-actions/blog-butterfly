@@ -187,7 +187,7 @@ feed:
   content_limit: false
   content_limit_delim: " "
   order_by: -updated
-  icon: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/logo/logo.png
+  icon: https://cdn.jsdelivr.ren/gh/ccknbc-backup/cdn/logo/logo.png
   autodiscovery: true
   template:
     - ./source/_data/atom.xml
@@ -245,31 +245,31 @@ mmedia:
     default:
       controls: true
   aplayer:
-    js: https://jsd.cdn.zzko.cn/npm/aplayer/dist/APlayer.min.js
-    css: https://jsd.cdn.zzko.cn/npm/aplayer/dist/APlayer.min.css
+    js: https://cdn.jsdelivr.ren/npm/aplayer/dist/APlayer.min.js
+    css: https://cdn.jsdelivr.ren/npm/aplayer/dist/APlayer.min.css
     default:
       contents:
         lrcType: 3
   meting:
-    js: https://jsd.cdn.zzko.cn/npm/meting/dist/Meting.min.js
+    js: https://cdn.jsdelivr.ren/npm/meting/dist/Meting.min.js
     api:
     default:
   dplayer:
-    js: https://jsd.cdn.zzko.cn/npm/dplayer/dist/DPlayer.min.js
-    hls_js: https://jsd.cdn.zzko.cn/npm/hls.js/dist/hls.min.js
-    dash_js: https://jsd.cdn.zzko.cn/npm/dashjs/dist/dash.all.min.js
-    shaka_dash_js: https://jsd.cdn.zzko.cn/npm/shaka-player/dist/shaka-player.compiled.js
-    flv_js: https://jsd.cdn.zzko.cn/npm/flv.js/dist/flv.min.js
-    webtorrent_js: https://jsd.cdn.zzko.cn/npm/webtorrent/webtorrent.min.js
+    js: https://cdn.jsdelivr.ren/npm/dplayer/dist/DPlayer.min.js
+    hls_js: https://cdn.jsdelivr.ren/npm/hls.js/dist/hls.min.js
+    dash_js: https://cdn.jsdelivr.ren/npm/dashjs/dist/dash.all.min.js
+    shaka_dash_js: https://cdn.jsdelivr.ren/npm/shaka-player/dist/shaka-player.compiled.js
+    flv_js: https://cdn.jsdelivr.ren/npm/flv.js/dist/flv.min.js
+    webtorrent_js: https://cdn.jsdelivr.ren/npm/webtorrent/webtorrent.min.js
     default:
       contents:
   artplayer:
-    js: https://jsd.cdn.zzko.cn/npm/artplayer/dist/artplayer.js
-    hls_js: https://jsd.cdn.zzko.cn/npm/hls.js/dist/hls.min.js
-    dash_js: https://jsd.cdn.zzko.cn/npm/dashjs/dist/dash.all.min.js
-    shaka_dash_js: https://jsd.cdn.zzko.cn/npm/shaka-player/dist/shaka-player.compiled.js
-    flv_js: https://jsd.cdn.zzko.cn/npm/flv.js/dist/flv.min.js
-    webtorrent_js: https://jsd.cdn.zzko.cn/npm/webtorrent/webtorrent.min.js
+    js: https://cdn.jsdelivr.ren/npm/artplayer/dist/artplayer.js
+    hls_js: https://cdn.jsdelivr.ren/npm/hls.js/dist/hls.min.js
+    dash_js: https://cdn.jsdelivr.ren/npm/dashjs/dist/dash.all.min.js
+    shaka_dash_js: https://cdn.jsdelivr.ren/npm/shaka-player/dist/shaka-player.compiled.js
+    flv_js: https://cdn.jsdelivr.ren/npm/flv.js/dist/flv.min.js
+    webtorrent_js: https://cdn.jsdelivr.ren/npm/webtorrent/webtorrent.min.js
     default:
       style: width:344px;height:193.5px
       contents:
@@ -331,14 +331,14 @@ tag_plugins:
   priority: 5 #过滤器优先权
   issues: false #issues标签开关
   link:
-    placeholder: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/logo/logo.png #link_card标签默认的图标图片
+    placeholder: https://cdn.jsdelivr.ren/gh/ccknbc-backup/cdn/logo/logo.png #link_card标签默认的图标图片
   CDN:
-    anima: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-tag-plugins-plus/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
-    # jquery: https://jsd.cdn.zzko.cn/npm/jquery/dist/jquery.min.js #issues标签依赖
-    # issues: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-tag-plugins-plus/lib/assets/issues.js #issues标签依赖
+    anima: https://cdn.jsdelivr.ren/npm/hexo-butterfly-tag-plugins-plus/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
+    # jquery: https://cdn.jsdelivr.ren/npm/jquery/dist/jquery.min.js #issues标签依赖
+    # issues: https://cdn.jsdelivr.ren/npm/hexo-butterfly-tag-plugins-plus/lib/assets/issues.js #issues标签依赖
     iconfont: false #参看https://akilar.top/posts/d2ebecef/
-    carousel: false #https://jsd.cdn.zzko.cn/npm/hexo-butterfly-tag-plugins-plus/lib/assets/carousel-touch.js
-    tag_plugins_css: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-tag-plugins-plus/lib/tag_plugins.css
+    carousel: false #https://cdn.jsdelivr.ren/npm/hexo-butterfly-tag-plugins-plus/lib/assets/carousel-touch.js
+    tag_plugins_css: https://cdn.jsdelivr.ren/npm/hexo-butterfly-tag-plugins-plus/lib/tag_plugins.css
 
 wowjs:
   enable: false #控制动画开关。true是打开，false是关闭
@@ -364,7 +364,7 @@ readmore:
   # 已申请的微信公众号回复关键词
   keyword: "blog"
   # 已申请的微信公众号二维码链接
-  qrcode: "https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/logo/wechat.svg"
+  qrcode: "https://cdn.jsdelivr.ren/gh/ccknbc-backup/cdn/logo/wechat.svg"
   # 自定义的 JS 资源链接，可用于 CDN 加速
   libUrl: "https://qiniu.techgrow.cn/readmore/dist/readmore.js"
   # 自定义的 CSS 资源链接，可用于适配不同风格的博客
@@ -405,7 +405,7 @@ webpushr:
   # 如果您的仓库私有，则无需担心此问题
 
   trackingCode: "BB9Y-w9p3u0CKA7UP9nupB6I-_NqE2MuODmKJjyC4W2YflX06Ff_hEhrNJfonrut5l6gCa28gC83q2OII7Qv-oA"
-  icon: "https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/image/pwa/192.png" # 必须为192*192 png图片
+  icon: "https://cdn.jsdelivr.ren/gh/ccknbc-backup/cdn/image/pwa/192.png" # 必须为192*192 png图片
   # auto_hide: "0" # 默认为 1，代表true，即自动隐藏
   # sort: "date" # 默认为updated，即只要最新文章更改了更新时间即推送新文章，改为date即文章第一次发布时间
   # delay: "30" # 延时推送，考虑到CDN缓存更新，默认定时为在 hexo d 10分钟后推送，单位为分钟（最短时间为5min）

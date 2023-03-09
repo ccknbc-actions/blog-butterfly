@@ -18,23 +18,23 @@ description: CC的部落格 即刻短文页面
 <div id="ispeak"></div>
 <link
   rel="stylesheet"
-  href="https://jsd.cdn.zzko.cn/npm/highlight.js/styles/atom-one-dark.min.css"
+  href="https://cdn.jsdelivr.ren/npm/highlight.js/styles/atom-one-dark.min.css"
 />
 <link
   rel="stylesheet"
-  href="https://jsd.cdn.zzko.cn/npm/ispeak/style.css"
+  href="https://cdn.jsdelivr.ren/npm/ispeak/style.css"
 />
 
-<script src="https://jsd.cdn.zzko.cn/npm/highlight.js/highlight.min.js"></script>
-<script src="https://jsd.cdn.zzko.cn/npm/marked@v3/marked.min.js"></script>
-<script src="https://jsd.cdn.zzko.cn/npm/ispeak/ispeak.umd.js"></script>
+<script src="https://cdn.jsdelivr.ren/npm/highlight.js/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.ren/npm/marked@v3/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.ren/npm/ispeak/ispeak.umd.js"></script>
 <!-- CSS -->
 <link
   rel="stylesheet"
-  href="https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline.min.css"
+  href="https://cdn.jsdelivr.ren/npm/@waline/client/dist/waline.min.css"
 />
 <!-- JS -->
-<script src="https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline.min.js"></script>
+<script src="https://cdn.jsdelivr.ren/npm/@waline/client/dist/waline.min.js"></script>
 <script>
   var head = document.getElementsByTagName('head')[0]
   var meta = document.createElement('meta')
@@ -67,9 +67,9 @@ description: CC的部落格 即刻短文页面
             imageUploader: false,
             emoji:
               [
-                "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/",
-                // "https://jsd.cdn.zzko.cn/npm/telegram-gif/Telegram-Gif/",
-                // "https://jsd.cdn.zzko.cn/npm/@waline/emojis/tw-emoji/"
+                "https://cdn.jsdelivr.ren/npm/sticker-heo/Sticker-100/",
+                // "https://cdn.jsdelivr.ren/npm/telegram-gif/Telegram-Gif/",
+                // "https://cdn.jsdelivr.ren/npm/@waline/emojis/tw-emoji/"
               ]
           })
         }

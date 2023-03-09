@@ -1,4 +1,4 @@
-importScripts('https://jsd.cdn.zzko.cn/npm/workbox-sw/build/workbox-sw.js');
+importScripts('https://cdn.jsdelivr.ren/npm/workbox-sw/build/workbox-sw.js');
 importScripts('https://cdn.webpushr.com/sw-server.min.js');
 
 if (workbox) {

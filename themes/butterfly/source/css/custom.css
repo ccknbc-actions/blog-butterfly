@@ -50,9 +50,20 @@
     content: 'H₆'
 }
 
-[data-theme=dark] .webpushr-subscribed prompticon3._Bell.Bottom.Right_bell {
+[data-theme=dark] .webpushr-bell-theme-dark prompticon3 {
     background: var(--btn-bg);
 }
+
+.webpushr-bell-theme-dark prompticon3 {
+    z-index: auto;
+    opacity: 0.8;
+    background: var(--btn-bg);
+}
+
+[data-theme=dark] promptglowingcircle {
+    border: #FFFFFFB3 1px solid;
+}
+
 
 /* DocSearch */
 

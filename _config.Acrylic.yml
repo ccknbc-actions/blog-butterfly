@@ -315,10 +315,10 @@ ptool:
 reward:
   enable: true
   QR_code:
-    - img: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/logo/qr.png
+    - img: https://cdn.jsdelivr.ren/gh/ccknbc-backup/cdn/logo/qr.png
       link: https://www.rocschool.com/tool/qr/qr/id/51.html
       text: 三合一
-    - img: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/logo/afdian.png
+    - img: https://cdn.jsdelivr.ren/gh/ccknbc-backup/cdn/logo/afdian.png
       link: https://afdian.net/@ccknbc
       text: 爱发电
 
@@ -371,18 +371,18 @@ waline:
       level6: 开吃
     emoji:
       [
-        "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/",
-        # "https://jsd.cdn.zzko.cn/npm/telegram-gif/Telegram-Gif/",
-        # "https://jsd.cdn.zzko.cn/npm/@waline/emojis/tw-emoji/",
+        "https://cdn.jsdelivr.ren/npm/sticker-heo/Sticker-100/",
+        # "https://cdn.jsdelivr.ren/npm/telegram-gif/Telegram-Gif/",
+        # "https://cdn.jsdelivr.ren/npm/@waline/emojis/tw-emoji/",
       ]
     reaction:
       [
-        "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/鼓掌.png",
-        "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/菜狗.png",
-        "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/正确.png",
-        "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/错误.png",
-        "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/思考.png",
-        "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/睡觉.png",
+        "https://cdn.jsdelivr.ren/npm/sticker-heo/Sticker-100/鼓掌.png",
+        "https://cdn.jsdelivr.ren/npm/sticker-heo/Sticker-100/菜狗.png",
+        "https://cdn.jsdelivr.ren/npm/sticker-heo/Sticker-100/正确.png",
+        "https://cdn.jsdelivr.ren/npm/sticker-heo/Sticker-100/错误.png",
+        "https://cdn.jsdelivr.ren/npm/sticker-heo/Sticker-100/思考.png",
+        "https://cdn.jsdelivr.ren/npm/sticker-heo/Sticker-100/睡觉.png",
       ]
 
 
@@ -977,7 +977,7 @@ CDN:
 
   # Custom format
   # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
-  custom_format: https://jsd.cdn.zzko.cn/npm/${name}/${file}
+  custom_format: https://cdn.jsdelivr.ren/npm/${name}/${file}
 
   option:
     # main_css:
