@@ -24,23 +24,23 @@ JOOX 是一个起源于香港的正版音乐流媒体服务，提供包括三大
 
 安装后打开你的搜索引擎，搜索你想使用地区 IP，比如香港或者泰国，马来西亚等，填入 IP 即可，就像图中所示
 
-![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-07~12_56_23.webp#crop=0&crop=0&crop=1&crop=1&height=486&id=cmpPM&originHeight=486&originWidth=812&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=812)
+![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-07~12_56_23.webp#height=486&id=cmpPM&originHeight=486&originWidth=812&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=812)
 
 然后打开[JOOX 官网](https://www.joox.com/)，就会根据你的 IP 自动识别区域，不同地区曲库不同所以根据个人需要来哦，接下来注册账号，不过如果是不使用中文的地区，可以在侧栏点击`lang`切换语言为英语哦（不过网页翻译也行），以下以泰国作为示例
 
-![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-07~12_59_56.webp#crop=0&crop=0&crop=1&crop=1&height=829&id=Dnb2r&originHeight=829&originWidth=272&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=272)
+![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-07~12_59_56.webp#height=829&id=Dnb2r&originHeight=829&originWidth=272&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=272)
 
 点击右上角 Sign Up 注册账号，根据相应要求填写信息，注册即可
 
-![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-07~13_04_38.webp#crop=0&crop=0&crop=1&crop=1&height=80&id=tYhED&originHeight=80&originWidth=635&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=635)
+![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-07~13_04_38.webp#height=80&id=tYhED&originHeight=80&originWidth=635&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=635)
 
-![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-07~13_04_57.webp#crop=0&crop=0&crop=1&crop=1&height=717&id=H6WfK&originHeight=717&originWidth=421&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=421)
+![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-07~13_04_57.webp#height=717&id=H6WfK&originHeight=717&originWidth=421&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=421)
 
 你可以使用邮箱注册，手机号绑定绑定大陆手机号也是可以的，当然作为腾讯家的东西，你可以绑定微信，是不是很方便呢，这些你以后可以在 APP 中操作，这里不再赘述，登陆后你就可以尽情享受 JOOX 提供的音乐服务了，并且如果你以后使用`JOOX APP`是可以**全球不受限制**听歌哦，下载了虽然会提示网络问题，但只要你登陆后就可以尽情享受音乐服务啦，但你第一次注册了就会锁定你的区域啦，因此你要使用其他地区曲库只能另外注册帐号了
 
 题外话：有很多软件或者项目支持下载 JOOX 音乐，不过说实话泰国搜索做的太差了，接口的话也不是那么可靠，好在没有服务端没有加密，所以抓包还是很好解决的，但还是提倡大家尊重版权和音乐创作者的辛苦，在线听吧，而且 JOOX 免费任务得到的 VIP 够你一直是 VIP 了，所以还是推荐大家使用`官方正版`渠道听歌的
 
-![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-07~13_08_01.webp#crop=0&crop=0&crop=1&crop=1&height=901&id=oNSgA&originHeight=901&originWidth=1919&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=1919)
+![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-07~13_08_01.webp#height=901&id=oNSgA&originHeight=901&originWidth=1919&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=1919)
 
 至于怎么下载 JOOX APP，安卓用户如果使用华为手机在应用市场切换区域为服务区域，搜索 JOOX 即可下载，或者在对于服务区 Google Play（IP）搜索下载即可（搜索不到说明不支持当前区域），当然直接下载安装包也是可以的，第三方市场比如 APKpure 还是值得信赖的；IOS 用户只能靠服务区域 ID 进去苹果商店下载了
 
@@ -50,7 +50,7 @@ JOOX 是一个起源于香港的正版音乐流媒体服务，提供包括三大
 
 安装后按照下图所示填入即可，和火狐差不多
 
-![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-07~13_11_20.webp#crop=0&crop=0&crop=1&crop=1&height=366&id=HfvvJ&originHeight=366&originWidth=1311&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=1311)
+![](https://cdn.jsdelivr.net/gh/ccknbc-backup/photos/blog/2020-10-07~13_11_20.webp#height=366&id=HfvvJ&originHeight=366&originWidth=1311&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=&width=1311)
 
 但记得做好分类，以便于切换，即`Description`，要切换时记得`Active`选中即可，不使用时记得关闭插件或取消勾选以免影响国内一些网站的访问
 

@@ -202,7 +202,7 @@ How to use PR Valet
 
 具体过程可通过下图查看（别问我为什么不重新截图）
 
-![](https://cdn.nlark.com/yuque/0/2020/png/8391407/1608792470422-d8276572-96b4-4b3b-9e7b-dfee414b9f5e.png#crop=0&crop=0&crop=1&crop=1&height=997&id=OFjp7&originHeight=997&originWidth=1156&originalType=binary&ratio=1&rotation=0&showTitle=false&size=0&status=done&style=none&title=&width=1156)
+![](https://cdn.nlark.com/yuque/0/2020/png/8391407/1608792470422-d8276572-96b4-4b3b-9e7b-dfee414b9f5e.png#height=997&id=OFjp7&originHeight=997&originWidth=1156&originalType=binary&ratio=1&rotation=0&showTitle=false&size=0&status=done&style=none&title=&width=1156)
 
 {% endnote %}
 
