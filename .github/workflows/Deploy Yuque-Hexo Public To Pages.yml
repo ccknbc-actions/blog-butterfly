@@ -62,7 +62,6 @@ jobs:
         run: |
           npm i -g yuque-hexo
           npm run yuque
-        # npm i -g hexo-cli yuque-hexo
         # mkdir -p yuque
         # yuque-hexo sync
 
