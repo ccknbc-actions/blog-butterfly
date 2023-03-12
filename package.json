@@ -22,7 +22,7 @@
     "login": "ccknbc",
     "repo": "blog",
     "onlyPublished": true,
-    "onlyPublic": true
+    "onlyPublic": false
   },
   "hexo": {
     "version": "6.3.0"
