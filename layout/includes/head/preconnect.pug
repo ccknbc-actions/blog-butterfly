@@ -1,5 +1,5 @@
 //- link(rel="preconnect" href="//npm.elemecdn.com")
-link(rel="preconnect" href="//jsd.cdn.zzko.cn")
+link(rel="preconnect" href="//cdn.jsdelivr.ren")
 
 if theme.google_analytics
   link(rel="preconnect" href="//www.google-analytics.com" crossorigin='')
@@ -20,4 +20,4 @@ if !theme.asset.busuanzi && (theme.busuanzi.site_uv || theme.busuanzi.site_pv ||
   link(rel="preconnect" href="//busuanzi.ibruce.info")
 
 if theme.docsearch.enable
-  link(crossorigin='' href=`https://'${theme.docsearch.appId}-dsn.algolia.net` rel="preconnect")
+  link(crossorigin='' href=`https://${theme.docsearch.appId}-dsn.algolia.net` rel="preconnect")
