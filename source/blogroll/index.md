@@ -30,7 +30,7 @@ xkFriend.init({
 
 <!-- tab 申请友链@fa-solid fa-check-circle -->
 
-{% note success flat %}快速申请友链请前往{% btn 'https://github.com/ccknbc-forked/my-friend',GitHub(推荐),fa-brands fa-github,outline green larger %} 按照提示提交 PR 即可！如需修改可
+{% note success flat %}快速申请友链请前往{% btn 'https://github.com/ccknbc-forked/blogroll/',GitHub(推荐),fa-brands fa-github,outline green larger %} 按照提示提交 PR 即可！如需修改可
 {% btn '#post-comment',给 CC 留言,fa-solid fa-comments,outline green smaller %}
 或再次 PR  {% endnote %}
 

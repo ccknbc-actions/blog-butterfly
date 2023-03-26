@@ -25,11 +25,10 @@
     "onlyPublic": false
   },
   "hexo": {
-    "version": "6.3.0"
+    "version": "7.0.0-rc1"
   },
   "dependencies": {
-    "hexo": "6.3.0",
-    "hexo-algoliasearch": "1.0.0",
+    "hexo": "7.0.0-rc1",
     "hexo-butterfly-tag-plugins-plus": "1.0.17",
     "hexo-butterfly-wowjs": "1.0.5",
     "hexo-filter-nofollow": "2.0.2",
