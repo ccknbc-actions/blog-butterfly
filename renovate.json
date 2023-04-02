@@ -2,8 +2,6 @@
   "extends": [
     "config:base"
   ],
-  "gitAuthor": "CCKNBC<ccknbc@qq.com>",
-  "prHourlyLimit": 3,
   "automerge": true,
   "automergeType": "branch",
   "pruneBranchAfterAutomerge": true

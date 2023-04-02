@@ -166,14 +166,14 @@ index_img: false
 # linear-gradient(135deg,#fff1eb,#ace0f9)
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: https://gejiba.com/view.php/30106ec3a76c920ea3d82885ffbcf711.webp
+default_top_img: false
 
 # The banner image of archive page
-archive_img: https://gejiba.com/view.php/30106ec3a76c920ea3d82885ffbcf711.webp
+archive_img: false
 
 # If the banner of tag page not setting, it will show the top_img
 # note: tag page, not tags page (子標籤頁面的 top_img)
-tag_img: https://gejiba.com/view.php/30106ec3a76c920ea3d82885ffbcf711.webp
+tag_img: false
 
 # The banner image of tag page
 # format:
@@ -182,7 +182,7 @@ tag_per_img:
 
 # If the banner of category page not setting, it will show the top_img
 # note: category page, not categories page (子分類頁面的 top_img)
-category_img: https://gejiba.com/view.php/30106ec3a76c920ea3d82885ffbcf711.webp
+category_img: false
 
 # The banner image of category page
 # format:
@@ -198,7 +198,7 @@ cover:
   # left/right/both
   position: left
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
-  default_cover: https://gejiba.com/view.php/546d8de5d57bf690777957ed068234e4.webp
+  default_cover: https://gejiba.com/view.php/3c3845c98419b590d7f6b6c8ec6add1c.gif
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
@@ -291,7 +291,7 @@ edit:
 
 # Related Articles
 related_post:
-  enable: true
+  enable: false
   limit: 6 # Number of posts displayed
   date_type: created # or created or updated 文章日期顯示創建日或者更新日
 
@@ -303,7 +303,7 @@ photofigcaption: false
 # 1: The 'next post' will link to old post
 # 2: The 'next post' will link to new post
 # false: disable pagination
-post_pagination: true
+post_pagination: 2
 
 # Displays outdated notice for a post (文章過期提醒)
 noticeOutdate:
@@ -320,14 +320,14 @@ noticeOutdate:
 # AddThis
 # https://www.addthis.com/
 addThis:
-  enable: true
+  enable: false
   pubid: ra-5f08fdef76bbcaeb
 
 # Share.js
 # https://github.com/overtrue/share.js
 sharejs:
-  enable: false
-  sites: facebook,twitter,wechat,weibo,qq
+  enable: true
+  sites: wechat,weibo,qq,facebook,twitter
 
 # AddToAny
 # https://www.addtoany.com/
@@ -343,8 +343,8 @@ comments:
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
-  lazyload: true
-  count: false # Display comment count in post's top_img
+  lazyload: false
+  count: true # Display comment count in post's top_img
   card_post_count: false # Display comment count in Home Page
 
 # Giscus
@@ -376,7 +376,7 @@ waline:
     locale:
       admin: 博主
       sofa: 这里冷冷清清的，快来留下脚印吧！
-      placeholder: 感谢各位的批评指正，期待与您交流！
+      placeholder: 社交登录现已支持【QQ Weibo GitHub Twitter Facebook】
       reactionTitle: 就现在，表明你的态度！
       reaction0: 鼓励
       reaction1: 菜狗

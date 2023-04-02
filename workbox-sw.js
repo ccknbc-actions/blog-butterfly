@@ -22,7 +22,7 @@ workbox.core.setCacheNameDetails({
     suffix: '缓存',
     precache: '离线后备',
     runtime: '运行时',
-    // googleAnalytics: '离线谷歌分析'
+    googleAnalytics: '离线谷歌分析'
 });
 
 workbox.precaching.precacheAndRoute(self.__WB_MANIFEST, {
@@ -138,4 +138,4 @@ workbox.routing.registerRoute(
 );
 
 // 离线谷歌分析
-// workbox.googleAnalytics.initialize();
+workbox.googleAnalytics.initialize();

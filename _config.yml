@@ -52,29 +52,29 @@ prismjs:
   line_number: true
   tab_replace: ""
 
-marked:
-  gfm: true
-  pedantic: false
-  breaks: true
-  smartLists: true
-  smartypants: true
-  quotes: '“”‘’'
-  modifyAnchors: 0
-  anchorAlias: true
-  autolink: true
-  mangle: true
-  sanitizeUrl: false
-  dompurify: false
-  headerIds: true
-  lazyload: true
-  prependRoot: false
-  postAsset: false
-  external_link:
-    enable: true
-    exclude: []
-    nofollow: true
-  disableNunjucks: false
-  descriptionLists: true
+# marked:
+#   gfm: true
+#   pedantic: false
+#   breaks: true
+#   smartLists: true
+#   smartypants: true
+#   quotes: '“”‘’'
+#   modifyAnchors: 0
+#   anchorAlias: true
+#   autolink: true
+#   mangle: true
+#   sanitizeUrl: false
+#   dompurify: false
+#   headerIds: true
+#   lazyload: true
+#   prependRoot: true
+#   postAsset: true
+#   external_link:
+#     enable: true
+#     exclude: []
+#     nofollow: true
+#   disableNunjucks: false
+#   descriptionLists: true
 
 markdown:
   preset: "default" # 渲染器默认预设 # "commonmark": 使用严格 CommandMark 规定. # "": 默认配置, 类似于 GFM # "zero": 禁用所有预设.
@@ -121,6 +121,10 @@ markdown:
     # 标题固定锚点到此结束
     case: 0 # 转换锚点 ID 中的字母为大写或小写 # "0" 不转换, "1" 为小写, "2" 为大写.
     separator: "-" # 用于替换空格的符号. # 默认为 "-"
+  images:
+    lazyload: true
+    prepend_root: true
+    post_asset: true
 
 stylus:
   compress: true
