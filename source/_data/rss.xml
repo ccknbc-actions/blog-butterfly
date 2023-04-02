@@ -56,7 +56,7 @@
       <category domain="{{ url + tag.path | uriencode }}">{{ tag.name }}</category>
       {% endfor %}
       {% if post.comments %}
-      <comments>{{ post.permalink | uriencode }}#disqus_thread</comments>
+      <comments>{{ post.permalink | uriencode }}#post-comment</comments>
       {% endif %}
     </item>
     {% endfor %}

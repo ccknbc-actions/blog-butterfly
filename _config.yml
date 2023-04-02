@@ -391,7 +391,7 @@ minify:
   brotli:
     enable: false
   xml:
-    enable: false
+    enable: true
   json:
     enable: false
 
