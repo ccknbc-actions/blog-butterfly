@@ -50,6 +50,8 @@
     content: 'H₆'
 }
 
+/* Webpushr */
+
 [data-theme=dark] .webpushr-bell-theme-dark prompticon3 {
     background: var(--btn-bg);
 }
@@ -63,7 +65,6 @@
 [data-theme=dark] promptglowingcircle {
     border: #FFFFFFB3 1px solid;
 }
-
 
 /* DocSearch */
 
@@ -171,13 +172,18 @@
 /* 圆角 */
 
 #card-info-btn, #rightside>div>button, #to_comment, .edit-gitlab-ide, .edit-gitlab, .edit-github, .edit-yuque {
-    border-radius: 40px !important;
+    border-radius: 90px !important;
 }
 
 /* 无障碍 */
-/* @media (max-width:768px) {
-    .wza-Tool {
+@media (max-width:768px) {
+    .wza-Tool, #wzayd {
         display: none;
     }
-} */
+}
 
+@media (max-width:768px) {
+    #bodyWZA {
+        display: inline;
+    }
+}

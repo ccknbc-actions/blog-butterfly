@@ -26,7 +26,7 @@ menu:
 nav:
   logo: # image
   display_title: true # true or false
-  fixed: true # fixed navigation bar
+  fixed: false # fixed navigation bar
 
 # Hide the child menu items in mobile sidebar
 hide_sidebar_menu_child: false
@@ -1071,8 +1071,8 @@ inject:
     # - <script defer src="https://cc.instatus.com/widget/script.js"></script>
     # - <script defer src='https://api.vvhan.com/api/snow'></script>
     # - <script defer src="https://api.vvhan.com/api/denglong"></script>
-    # - <script defer src="https://cdn.jsdelivr.ren/npm/jquery/dist/jquery.min.js"></script>
-    # - <script defer id="rrbayJs" src="//wza.rrbay.com/js/wza.min.js?bw" type="text/javascript"></script>
+    - <script defer src="https://cdn.jsdelivr.ren/npm/jquery/dist/jquery.min.js"></script>
+    - <script defer id="rrbayJs" src="https://wza.rrbay.com/js/wza.min.js?bw" type="text/javascript"></script>
     # - <div id="music" key="6208da041a763" api="https://music.mx142.ltd"></div><script id="xplayer" src="https://music.mx142.ltd/Static/player4/js/player.js" ></script>
 
 # CDN
