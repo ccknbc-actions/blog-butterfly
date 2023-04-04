@@ -191,7 +191,7 @@ feed:
   content_limit: false
   content_limit_delim: " "
   order_by: -updated
-  icon: https://cdn.jsdelivr.ren/gh/ccknbc-backup/cdn/logo/logo.png
+  icon: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/logo/logo.png
   autodiscovery: true
   template:
     - ./source/_data/atom.xml
@@ -249,31 +249,31 @@ mmedia:
     default:
       controls: true
   aplayer:
-    js: https://cdn.jsdelivr.ren/npm/aplayer/dist/APlayer.min.js
-    css: https://cdn.jsdelivr.ren/npm/aplayer/dist/APlayer.min.css
+    js: https://jsd.cdn.zzko.cn/npm/aplayer/dist/APlayer.min.js
+    css: https://jsd.cdn.zzko.cn/npm/aplayer/dist/APlayer.min.css
     default:
       contents:
         lrcType: 3
   meting:
-    js: https://cdn.jsdelivr.ren/npm/meting/dist/Meting.min.js
+    js: https://jsd.cdn.zzko.cn/npm/meting/dist/Meting.min.js
     api:
     default:
   dplayer:
-    js: https://cdn.jsdelivr.ren/npm/dplayer/dist/DPlayer.min.js
-    hls_js: https://cdn.jsdelivr.ren/npm/hls.js/dist/hls.min.js
-    dash_js: https://cdn.jsdelivr.ren/npm/dashjs/dist/dash.all.min.js
-    shaka_dash_js: https://cdn.jsdelivr.ren/npm/shaka-player/dist/shaka-player.compiled.js
-    flv_js: https://cdn.jsdelivr.ren/npm/flv.js/dist/flv.min.js
-    webtorrent_js: https://cdn.jsdelivr.ren/npm/webtorrent/webtorrent.min.js
+    js: https://jsd.cdn.zzko.cn/npm/dplayer/dist/DPlayer.min.js
+    hls_js: https://jsd.cdn.zzko.cn/npm/hls.js/dist/hls.min.js
+    dash_js: https://jsd.cdn.zzko.cn/npm/dashjs/dist/dash.all.min.js
+    shaka_dash_js: https://jsd.cdn.zzko.cn/npm/shaka-player/dist/shaka-player.compiled.js
+    flv_js: https://jsd.cdn.zzko.cn/npm/flv.js/dist/flv.min.js
+    webtorrent_js: https://jsd.cdn.zzko.cn/npm/webtorrent/webtorrent.min.js
     default:
       contents:
   artplayer:
-    js: https://cdn.jsdelivr.ren/npm/artplayer/dist/artplayer.js
-    hls_js: https://cdn.jsdelivr.ren/npm/hls.js/dist/hls.min.js
-    dash_js: https://cdn.jsdelivr.ren/npm/dashjs/dist/dash.all.min.js
-    shaka_dash_js: https://cdn.jsdelivr.ren/npm/shaka-player/dist/shaka-player.compiled.js
-    flv_js: https://cdn.jsdelivr.ren/npm/flv.js/dist/flv.min.js
-    webtorrent_js: https://cdn.jsdelivr.ren/npm/webtorrent/webtorrent.min.js
+    js: https://jsd.cdn.zzko.cn/npm/artplayer/dist/artplayer.js
+    hls_js: https://jsd.cdn.zzko.cn/npm/hls.js/dist/hls.min.js
+    dash_js: https://jsd.cdn.zzko.cn/npm/dashjs/dist/dash.all.min.js
+    shaka_dash_js: https://jsd.cdn.zzko.cn/npm/shaka-player/dist/shaka-player.compiled.js
+    flv_js: https://jsd.cdn.zzko.cn/npm/flv.js/dist/flv.min.js
+    webtorrent_js: https://jsd.cdn.zzko.cn/npm/webtorrent/webtorrent.min.js
     default:
       style: width:344px;height:193.5px
       contents:
@@ -335,14 +335,14 @@ tag_plugins:
   priority: 5 #过滤器优先权
   issues: false #issues标签开关
   link:
-    placeholder: https://cdn.jsdelivr.ren/gh/ccknbc-backup/cdn/logo/logo.png #link_card标签默认的图标图片
+    placeholder: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/logo/logo.png #link_card标签默认的图标图片
   CDN:
-    anima: https://cdn.jsdelivr.ren/npm/hexo-butterfly-tag-plugins-plus/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
-    # jquery: https://cdn.jsdelivr.ren/npm/jquery/dist/jquery.min.js #issues标签依赖
-    # issues: https://cdn.jsdelivr.ren/npm/hexo-butterfly-tag-plugins-plus/lib/assets/issues.js #issues标签依赖
+    anima: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-tag-plugins-plus/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
+    # jquery: https://jsd.cdn.zzko.cn/npm/jquery/dist/jquery.min.js #issues标签依赖
+    # issues: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-tag-plugins-plus/lib/assets/issues.js #issues标签依赖
     iconfont: false #参看https://akilar.top/posts/d2ebecef/
-    carousel: false #https://cdn.jsdelivr.ren/npm/hexo-butterfly-tag-plugins-plus/lib/assets/carousel-touch.js
-    tag_plugins_css: https://cdn.jsdelivr.ren/npm/hexo-butterfly-tag-plugins-plus/lib/tag_plugins.css
+    carousel: false #https://jsd.cdn.zzko.cn/npm/hexo-butterfly-tag-plugins-plus/lib/assets/carousel-touch.js
+    tag_plugins_css: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-tag-plugins-plus/lib/tag_plugins.css
 
 wowjs:
   enable: false #控制动画开关。true是打开，false是关闭
@@ -368,7 +368,7 @@ readmore:
   # 已申请的微信公众号回复关键词
   keyword: "blog"
   # 已申请的微信公众号二维码链接
-  qrcode: "https://cdn.jsdelivr.ren/gh/ccknbc-backup/cdn/logo/wechat.svg"
+  qrcode: "https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/logo/wechat.svg"
   # 自定义的 JS 资源链接，可用于 CDN 加速
   libUrl: "https://qiniu.techgrow.cn/readmore/dist/readmore.js"
   # 自定义的 CSS 资源链接，可用于适配不同风格的博客
@@ -409,7 +409,7 @@ webpushr:
   # 如果您的仓库私有，则无需担心此问题
 
   trackingCode: "BB9Y-w9p3u0CKA7UP9nupB6I-_NqE2MuODmKJjyC4W2YflX06Ff_hEhrNJfonrut5l6gCa28gC83q2OII7Qv-oA"
-  icon: "https://cdn.jsdelivr.ren/gh/ccknbc-backup/cdn/image/pwa/192.png" # 必须为192*192 png图片
+  icon: "https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/image/pwa/192.png" # 必须为192*192 png图片
   # auto_hide: "0" # 默认为 1，代表true，即自动隐藏
   # sort: "date" # 默认为updated，即只要最新文章更改了更新时间即推送新文章，改为date即文章第一次发布时间
   # delay: "30" # 延时推送，考虑到CDN缓存更新，默认定时为在 hexo d 10分钟后推送，单位为分钟（最短时间为5min）
@@ -447,55 +447,109 @@ webpushr:
   # 以及可指定schedule参数（例如：schedule: 2022-10-01 00:00:00），定时推送，而非延时发送
 
 swpp:
-  enable: true
+  enable: false
   sw:
     # 是否使用自定义的 sw，为 true 时不自动生成 sw.js，但是仍然会插入注册 sw 的代码
     # 注意：不支持自定义 sw.js 的路径及文件名，sw.js 必须放置在 source_dir 中
-    custom: true
+    custom: false
     # 注册 sw 发生错误时触发的 js 代码，如果包含多个指令需使用花括号（{}）包裹
     # 注意：SW 注册代码将直接内嵌在 HTML 首部，该代码执行时其它 JS 不一定完成了加载
-    onerror: "document.addEventListener('DOMContentLoaded', () => kms.pushInfo('当前浏览器不支持SW，建议更换浏览器以获取最佳体验~'))"
+    onerror: "{console.error('注册 sw 时发生错误，很可能是由于您的浏览器不支持 sw')}"
     # 注册 sw 成功后触发的 js 代码，如果包含多个指令需使用花括号（{}）包裹
     # 注意：SW 注册代码将直接内嵌在 HTML 首部，该代码执行时其它 JS 不一定完成了加载
     onsuccess: "location.reload()"
+    # 缓存库名称，缺省为 kmarBlogCache
+    # 发布网站后请勿修改该配置项，无特殊需求建议保持缺省
+    cacheName: 'CCsBlogCache'
+    # 逃生门，详情见：https://kmar.top/posts/73014407/#cdf686f0
+    escape: 0
+    # 是否启用 CDN 竞速，详情见：https://kmar.top/posts/73014407/#4acf3000
+    # 该项与 spareUrl 冲突，若两项同时开启，则该项生效
+    cdnRacing: false
+    # 是否启用备用 URL，详情见：https://kmar.top/posts/73014407/#62889c40
+    # 该项与 cdnRacing 冲突，若两项同时开启，则 cdnRacing 生效
+    spareUrl: false
+    # 是否启用调试，启用后会在 sw 中插入一些辅助调试的代码，不建议开启
+    debug: false
   dom:
     # 是否使用自定义的 DOM 端 JS，为 true 时不会自动生成 sw-dom.js，且不会插入引入 JS 的代码
     # 当值为 true 时本分类下其余设置项均无效
     custom: false
-    # 当更新成功后触发，包含多个指令可以不适用花括号包裹
+    # 当更新成功（更新完毕自动刷新页面）后触发，包含多个指令不需要用花括号包裹
     onsuccess: "console.log('更新成功')"
-  # 最大 HTML 数量，超过这个数量后会直接清除所有 HTML 缓存
-  maxHtml: 15
-  # update.json 的最大字符数量
-  # 超过后会移除旧的版本号，直到满足要求，如果只有全部清空才能满足就会直接刷新所有缓存
-  charLimit: 1024
-  # 文件缓存匹配采取精确模式
-  # 关闭时更新缓存时仅匹配文件名称，如 https://kmar.top/simple/a/index.html 仅匹配 /a/index.html
-  # 开启后更新缓存时将会匹配完整名称，如 https://kmar.top/simple/a/index.html 将匹配 /simple/a/index.html
-  # 两种方式各有优劣，开启后会增加 update.json 的空间占用，但会提升精确度
-  # 如果网站内没有多级目录结构，就可以放心大胆的关闭了
-  # key 值为文件拓展名，default 用于指代所有未列出的拓展名以及没有拓展名的文件
-  precisionMode:
-    default: false
-  # 是否合并指定项目
-  # 例如当 tags 为 true 时（假设标签目录为 https://kmar.top/tags/...）
-  # 如果标签页存在更新，则直接匹配 https://kmar.top/tags/ 目录下的所有文件
-  # 推荐将此项开启
-  merge:
-    tags: true
-    archives: true
-    categories: true
-    index: true
-  # 忽略哪些文件，正则表达式，不写两边的斜杠，不区分大小写
-  # 注：匹配的时候不附带域名，只有 pathname
-  exclude:
-    # 这里写正则表达式，格式如下：
-    - sw\.js
-
-text_autospace_filter:
-  enable: true
-  inject_css: true
-  tag_name: 'hanla'
-  entry: '#article-container' # tag
-  # entry: '#post' # id
-  # entry: '.content' # class
+  json:
+    # 最大 HTML 数量，超过这个数量后会直接清除所有 HTML 缓存
+    maxHtml: 15
+    # update.json 的最大字符数量
+    # 超过后会移除旧的版本号，直到满足要求，如果只有全部清空才能满足就会直接刷新所有缓存
+    charLimit: 1024
+    # 文件缓存匹配采取精确模式
+    # 关闭时更新缓存时仅匹配文件名称，如 https://kmar.top/simple/a/index.html 仅匹配 /a/index.html
+    # 开启后更新缓存时将会匹配完整名称，如 https://kmar.top/simple/a/index.html 将匹配 /simple/a/index.html
+    # 两种方式各有优劣，开启后会增加 update.json 的空间占用，但会提升精确度
+    # 如果网站内没有多级目录结构，就可以放心大胆的关闭了
+    # key 值为文件拓展名，default 用于指代所有未列出的拓展名以及没有拓展名的文件
+    precisionMode:
+      default: false
+    # 是否合并指定项目
+    # 例如当 tags 为 true 时（假设标签目录为 https://kmar.top/tags/...）
+    # 如果标签页存在更新，则直接匹配 https://kmar.top/tags/ 目录下的所有文件
+    # 推荐将此项开启
+    merge:
+      tags: true
+      archives: true
+      categories: true
+      index: true
+      # 自定义
+      custom:
+        # 这里填写目录名称列表（不带两边的斜杠）
+        # 如果按下面这样写，当 `//[domain]/bilibili/` 下的任意文件更新，都会合并为同一个更新项目
+        - 'bilibili'
+    # 忽略哪些文件，正则表达式，不写两边的斜杠，不区分大小写
+    # 注：匹配的时候不附带域名，只有 pathname
+    exclude:
+      # 这里写正则表达式，格式如下：
+      - sw\.js$
+  # 外部文件更新监听
+  # 开启后会捕获外部文件的更新，具体原理见：https://kmar.top/posts/73014407/#771b3e00
+  external:
+    enable: false
+    # 自定义拉取网络文件时的超时时间，缺省 1500
+    timeout: 1500
+    # 见 https://kmar.top/posts/73014407/#771b3e00
+    js:
+      - head: '这里写 head 内容'
+        tail: '这里写 tail 内容（必须有 tail）'
+    # 某些外链只要 URL 不变其内容就一定不会变
+    # 可以通过正则表达式排除这些外链的文件内容监控，加快构建速度
+    # 下面是几个常用的 CDN 的匹配
+    # 正则表达式不用写两边的斜杠，区分大小写
+    skip:
+      - ^(https?:\/\/|\/\/)(cdn|fastly)\.jsdelivr\.(net|ren)\/npm\/.*@\d+\.\d+\.\d+\/
+      - ^(https?:\/\/|\/\/)cdn\d\.tianli0\.top\/.*@\d+\.\d+\.\d+\/
+      - ^(https?:\/\/|\/\/)cdn\.staticfile\.org\/.*\/\d+\.\d+\.\d+\/
+      - ^(https?:\/\/|\/\/)lf\d+-cdn-tos\.bytecdntp\.com\/.*\/\d+\.\d+\.\d+\/
+      - ^(https?:\/\/|\/\/)npm\.elemecdn\.com\/.*@\d+\.\d+\.\d+\/
+    # 在构建过程中替换部分链接，该替换结果不会影响文件内容
+    # 该设置项是为了应对构建服务器在国外，但是网站内部分缓存资源无法在国外访问导致拉取时 timeout 的问题
+    # 填写格式和替换规则见 https://kmar.top/posts/73014407/#9dde3600
+    replace:
+      - source:
+          - 'rules0'
+          - 'rules1'
+        dist: 'url'
+  # 对 Hexo 中的变量进行排序
+  # 默认插件对 posts、tags、categories、pages 四个变量进行排序
+  # 排序规则为优先按照字符串长度排序，若长度一致按照字典序排序
+  sort:
+    # 格式为 `name: value`
+    # value 的可能值为：字符串、非负整数、false
+    # 假定 Array<obj> 为要被排序的数据
+    # 当 value 为字符串和非负整数时，插件会以 `obj[value]` 的格式读取关键字
+    # 当 value 为 false 时，插件会直接以 `obj` 为关键字
+    # 注意：关键字必须为含有 length 属性且支持 < 操作符的类型
+    # 插件内置的 posts 规则如果用上面的格式写应该为：
+    # posts: 'title'
+    # 插件支持使用配置项覆盖插件内置规则
+    # 下面是一个示例
+    keywords: false

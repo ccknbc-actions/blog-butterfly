@@ -10,8 +10,8 @@ aside: false
 description: CC的部落格 即刻短文页面
 ---
 <!-- CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.ren/npm/@waline/client/dist/waline.min.css"/>
-<link rel="stylesheet" href="https://cdn.jsdelivr.ren/npm/highlight.js/styles/atom-one-dark.min.css" />
+<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline.min.css"/>
+<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/highlight.js/styles/atom-one-dark.min.css" />
 <div class='content'>
   <img src='https://bu.dusays.com/2022/05/01/626e88f349943.gif'>
 </div>
@@ -19,9 +19,9 @@ description: CC的部落格 即刻短文页面
 <hr />
 <div class='ispeak-comment'></div>
 <!-- JS -->
-<script src="https://cdn.jsdelivr.ren/npm/@waline/client/dist/waline.min.js"></script>
-<script src="https://cdn.jsdelivr.ren/npm/marked/marked.min.js"></script>
-<script src="https://cdn.jsdelivr.ren/npm/highlight.js/highlight.min.js"></script>
+<script src="https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline.min.js"></script>
+<script src="https://jsd.cdn.zzko.cn/npm/marked/marked.min.js"></script>
+<script src="https://jsd.cdn.zzko.cn/npm/highlight.js/highlight.min.js"></script>
 <script>
   const searchParams = new URLSearchParams(window.location.search);
   const speakId = searchParams.get('q');
@@ -81,9 +81,9 @@ description: CC的部落格 即刻短文页面
         imageUploader: false,
         emoji:
           [
-            "https://cdn.jsdelivr.ren/npm/sticker-heo/Sticker-100/",
-            // "https://cdn.jsdelivr.ren/npm/telegram-gif/Telegram-Gif/",
-            // "https://cdn.jsdelivr.ren/npm/@waline/emojis/tw-emoji/"
+            "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/",
+            // "https://jsd.cdn.zzko.cn/npm/telegram-gif/Telegram-Gif/",
+            // "https://jsd.cdn.zzko.cn/npm/@waline/emojis/tw-emoji/"
           ]
       })
     }

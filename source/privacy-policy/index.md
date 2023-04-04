@@ -4,10 +4,10 @@ top_img: false
 translate_title: privacy-policy
 subtitle: Privacy Policy
 date: 2021-05-14 17:12:24
-updated: 2022-07-27 22:16:51
+updated: 2023-04-04 22:22:00
 description: CC的部落格 隐私政策
 ---
-本站非常重视用户的隐私和个人信息保护。您在使用网站时，可能会收集和使用您的相关信息。通过《隐私政策》向您说明在您访问 {% label blog.ccknbc.cc green %} 网站时，如何收集、使用、保存、共享和转让这些信息。
+本站非常重视用户的隐私和个人信息保护。您在使用网站时，可能会收集和使用您的相关信息。通过《隐私政策》向您说明在您访问 {% label blog.ccknbc.cc green %} 网站时，如何收集、使用、保存、共享和转让这些信息。由于本站性质为个人博客且为静态页面，暂未提供是否接受Cookies弹窗。即使我本人并不想搜集访客过多隐私信息，为了良好的浏览体验，默认启用全部功能，您可暂时使用隐私信息拦截插件去尽可能避免这种追踪。
 
 ## 如何收集和使用您的个人信息
 
@@ -15,10 +15,8 @@ description: CC的部落格 隐私政策
 
 在您访问时，仅会处于以下目的，使用您的个人信息：
 
-- **[51.LA](https://www.51.la/about/privacy)** 会收集你的访问信息
-- **[灵雀应用监控平台](https://perf.51.la)** 会收集你的访问操作过程和资源加载情况
-- **[AddThis](https://www.addthis.com/privacy/privacy-policy)** 会收集你的访问信息
-- **[Tidio](https://www.tidio.com/privacy-policy/)** 会收集你的访问信息
+- **[Microsoft CLARITY](https://privacy.microsoft.com/zh-cn/privacystatement)** 会收集你的访问操作过程和资源加载情况 *（甚至录制你的操作过程，但对隐私信息进行了打码保护，你仍可放心浏览）*，此外[Clarity Copilot](https://clarity.microsoft.com/copilot)会基于GPT进行数据分析
+- **[Google Analytics](https://policies.google.com/privacy?hl=zh-CN)** 会收集你的访问信息
 
 在访问时，本人仅会处于以下目的，使用你的个人信息：
 
@@ -30,12 +28,12 @@ description: CC的部落格 隐私政策
 - 用于网站搜索结果优化
 - 浏览数据的展示
 
-[51.LA](https://www.51.la/about/privacy)/[灵雀应用监控平台](https://perf.51.la)/[AddThis](https://www.addthis.com/privacy/privacy-policy)/[Tidio](https://www.tidio.com/privacy-policy/) 统计工具会收集您的访问信息，用于网站的优化与文章分类、恶意访问识别（被动，存储，系统定期清理）
+ 统计工具会收集您的访问信息，用于网站的优化与文章分类、恶意访问识别（被动，存储，系统定期清理）
 
 您应该知道在您访问的时候以下信息会被统计功能使用：
 
 
-<script src="https://cdn.jsdelivr.ren/gh/ccknbc-backup/cdn/js/privacy.js"></script>
+<script src="https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/js/privacy.js"></script>
 | 类型<div style="width:100px"></div>          | 信息                                  |
 |:-----------:|:-----------------------------------:|
 | IP 地址       | <div id="userAgentIp"></div>                  |
@@ -50,8 +48,6 @@ description: CC的部落格 隐私政策
 
 本站为实现简繁切换、深色模式切换等功能，会在您的浏览器中进行本地存储，您可以随时清除浏览器中保存的所有 Cookies 以及 LocalStorage。
 
-关于如何[在 Chrome 中清除、启用和管理 Cookies](https://support.google.com/chrome/answer/95647?co=GENIE.Platform=Desktop&hl=zh-Hans)
-
 ## 如何共享、转让您的个人信息
 
 不会与任何公司、组织和个人共享您的个人信息
@@ -62,8 +58,6 @@ description: CC的部落格 隐私政策
 我使用Cookies来保持我的网站和我开发的软件的可靠性，安全性和个性化。当您接受Cookies时，这有助于通过我识别您的身份、记住您的偏好、或提供个性化用户体验来帮助我改善网站。
 
 如果您对我使用您的个人信息或 Cookies 的方式有任何疑问，请通过 blog@ccknbc.cc 与我联系。
-
-如果您想管理您的 Cookies ，请按照下面“如何管理 Cookies ”部分中的说明进行操作。
 
 ### 什么是 Cookies ？
 
@@ -82,7 +76,6 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 |         授权         | 您登录我的网站时，我可通过 Cookie 提供正确信息，为您打造个性化的体验。例如： Cookies 会告知您通过搜索引擎搜索的具体内容来改善文章的标题优化关键词、或者创建更符合您搜索需求的文章内容。 |
 |       安全措施       | 我通过 Cookies 启用及支持安全功能，监控和防止可疑活动、欺诈性流量和违反版权协议的行为。 |
 |   偏好、功能和服务   | 我使用功能性 Cookies 来让我记住您的偏好，或保存您向我提供的有关您的喜好或其他信息。 |
-|    ~~个性化广告~~    |   ~~我使用 Cookies 提供个性化广告~~    |
 | 网站性能、分析和研究 | 我使用这些 Cookies 来监控网站性能。这使我能够通过快速识别和解决出现的任何问题来提供高质量的体验。 |
 
 ### 我的网站上的第三方 Cookies
@@ -95,36 +88,15 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 *   改善网站功能；
 *   监督我的版权协议和隐私政策的遵守情况。
 
-|                         第三方服务商                         |                       用途                       |
-| :----------------------------------------------------------: | :----------------------------------------------: |
-|      [Instatus](https://instatus.com/policies/privacy)       |  用于展示网站运行状态  |
-| ~~[Disqus&DisqusJS](https://help.disqus.com/en/articles/1717103-disqus-privacy-policy)~~ |  ~~用于网站评论，存取您的验证信息及可访问状态~~  |
-|        [Tidio](https://www.tidio.com/privacy-policy/)        |         用于与我联络，邮件订阅，访问统计         |
-|      [MailChimp](https://mailchimp.com/legal/privacy/)       |     订阅页嵌入或与其他服务集成以完成邮件订阅     |
-|  [AddThis](https://www.addthis.com/privacy/privacy-policy)   |  用于文章页面分享，访问统计，弹窗公告，邮件订阅  |
-|          ~~[百度统计](https://tongji.baidu.com/)~~           | ~~用于国内用户统计站内访问情况，进行针对性优化~~ |
-| ~~[谷歌分析](https://policies.google.com/privacy?hl=zh-CN)~~ |    ~~用于国外用户统计站内访问情况，行为特征~~    |
-|           [51.LA](https://www.51.la/about/privacy)           |       用于统计站内访问情况，进行针对性优化       |
-|            [灵雀应用监控平台](https://perf.51.la)            |       会收集你的访问操作过程和资源加载情况       |
+|                         第三方服务商                         |                            用途                             |
+| :----------------------------------------------------------: | :---------------------------------------------------------: |
+| [Algolia Docsearch](https://www.algolia.com/policies/privacy/) |         用于提供站内搜索服务，搜索记录将储存在本地          |
+|      [Instatus](https://instatus.com/policies/privacy)       | 用于[离线页面](/offline/)展示网站运行状态，提示用户网站状态 |
+| [Microsoft CLARITY](https://privacy.microsoft.com/zh-cn/privacystatement) |    用于国内用户统计站内访问情况，文章优化，恶意攻击排查     |
+| [Google Analytics](https://policies.google.com/privacy?hl=zh-CN) |    用于国外用户统计站内访问情况，文章优化，恶意攻击排查     |
 
-如何管理 Cookies ？
---------------------------------------------
-
-在将 Cookies 放置在您的计算机或设备上之前，系统会显示一个弹出窗口，要求您同意设置这些Cookie。通过同意放置 Cookies，您可以让我为您提供最佳的体验和服务。如果您不愿意，您可以通过浏览器设置关闭本站的  Cookies 来拒绝同意放置 Cookies；但是，我网站的部分功能可能无法完全或按预期运行。您有机会允许和/或拒绝使用 Cookies 。您可以通过访问浏览器设置随时返回到您的 Cookies 偏好设置以查看和/或删除它们。
-
-除了我提供的控件之外，您还可以选择在 Internet 浏览器中启用或禁用 Cookies 。大多数互联网浏览器还允许您选择是要禁用所有 Cookies 还是仅禁用第三方 Cookies 。默认情况下，大多数互联网浏览器都接受 Cookies ，但这可以更改。有关详细信息，请参阅Internet浏览器中的帮助菜单或设备随附的文档。
-
-以下链接提供了有关如何在所有主流浏览器中控制 Cookies 的说明：
-
-[Google Chrome](https://support.google.com/chrome/answer/95647?hl=en)、  [IE](https://support.microsoft.com/en-us/help/260971/description-of-cookies)、  [Safari（桌面版）](https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac) 、 [Safari（移动版）](https://support.apple.com/en-us/HT201265)、 [火狐浏览器](https://support.mozilla.org/en-US/kb/Cookies-information-websites-store-on-your-computer) 或 [Android浏览器](https://support.google.com/ics/nexus/bin/answer.py?hl=en&answer=2425067)
-
-如您使用其他浏览器，请参阅浏览器制造商提供的文档。
-有关 Cookies 以及如何管理 Cookies 的更多信息，请访问：
-
-[wikipedia.org](https://zh.wikipedia.org/wiki/Cookie) 、 [allaboutCookies.org](https://www.allaboutcookies.org/) 或 [aboutCookies.org](https://www.aboutcookies.org/)
-
-## 对此 Cookies 政策的更改
+## 对此 隐私政策的更改
 
 我可能对此 Cookies 政策所做的任何更改都将发布在此页面上。如果更改很重要，我会在博客首页明确指出该政策已更新。
 
-{% btn '',最后修订时间：2022 年 7 月 27 日 22:16,fa-solid fa-history,block right green smaller %}
+{% btn '',最后修订时间：2023 年 4 月 24 日 22:22,fa-solid fa-history,block right green smaller %}

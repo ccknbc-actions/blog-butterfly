@@ -15,32 +15,32 @@ document.addEventListener("DOMContentLoaded", () => {
         // noinspection JSUnresolvedVariable
         const noSupport = () => btf.snackbarShow(GLOBAL_CONFIG.copy.noSupport);
 
-        navigator.clipboard
-            .writeText(text)
-            .then(success)
-            .catch(() => {
+        const commandCopy = () => {
+            // noinspection JSDeprecatedSymbols
+            if (
+                document.queryCommandSupported &&
+                document.queryCommandSupported("copy")
+            ) {
+                const input = document.createElement("p");
+                if (navigator.userAgent.includes("Firefox")) input.textContent = text;
+                else input.innerText = text;
+                document.body.appendChild(input);
+                const selection = getSelection();
+                selection.removeAllRanges();
+                const range = document.createRange();
+                range.selectNodeContents(input);
+                selection.addRange(range);
                 // noinspection JSDeprecatedSymbols
-                if (
-                    document.queryCommandSupported &&
-                    document.queryCommandSupported("copy")
-                ) {
-                    const input = document.createElement("p");
-                    if (navigator.userAgent.indexOf("Firefox") < 0)
-                        input.innerText = text;
-                    else input.textContent = text;
-                    document.body.appendChild(input);
-                    const selection = getSelection();
-                    selection.removeAllRanges();
-                    const range = document.createRange();
-                    range.selectNodeContents(input);
-                    selection.addRange(range);
-                    // noinspection JSDeprecatedSymbols
-                    document.execCommand("copy");
-                    document.body.removeChild(input);
-                    selection.removeAllRanges();
-                    success();
-                } else noSupport();
-            });
+                document.execCommand("copy");
+                document.body.removeChild(input);
+                selection.removeAllRanges();
+                success();
+            } else noSupport();
+        };
+
+        const clipboard = navigator.clipboard;
+        if (clipboard) clipboard.writeText(text).then(success).catch(commandCopy);
+        else commandCopy();
     };
     /** 获取要复制的文本，想要修改复制文本的格式的话在这里修改 */
     const getText = () => {
@@ -48,7 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const url = location.protocol + "//" + location.host + location.pathname;
         return `${document.title}：\r\n${url}`;
     };
-    document.getElementById("share-link").onclick = () => copyText(getText());
+    document.getElementById("rightside").addEventListener("click", (event) => {
+        const element = event.target.id ? event.target : event.target.parentNode;
+        if (element?.id === "share-link") copyText(getText());
+    });
 });
 
 // Algolia搜索
@@ -65,3 +68,22 @@ document.addEventListener("DOMContentLoaded", () => {
 //         div.children[0].style.maxHeight = (document.documentElement.clientHeight - 210) + 'px'
 //     })
 // }
+
+// 设置cookie
+function setCookie(cname,cvalue,exdays){
+    var d = new Date();
+    d.setTime(d.getTime()+(exdays*24*60*60*1000));
+    var expires = "expires="+d.toGMTString();
+    document.cookie = cname+"="+cvalue+"; "+expires;
+}
+
+// 获取cookie
+function getCookie(cname){
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i].trim();
+        if (c.indexOf(name)==0) { return c.substring(name.length,c.length); }
+    }
+    return "";
+}

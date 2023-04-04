@@ -25,7 +25,7 @@ div
   //- 黑色模式粒子效果canvas
   if theme.universe.enable
     canvas(id="universe")
-    script(async src="https://cdn.jsdelivr.ren/npm/acrylic-static@1.0.0/dark/dark.js")
+    script(async src="https://jsd.cdn.zzko.cn/npm/acrylic-static@1.0.0/dark/dark.js")
 
   //- 控制台打印信息
   if theme.console.enable
@@ -68,10 +68,10 @@ div
     else if (!is_post() && page.aside !== false)
       != partial("includes/third-party/newest-comments/index", {}, { cache: true })
   //- jquery
-  script(src="https://cdn.jsdelivr.ren/npm/jquery@latest/dist/jquery.min.js")
+  script(src="https://jsd.cdn.zzko.cn/npm/jquery@latest/dist/jquery.min.js")
   //- 气泡效果
   if theme.bubble.enable
-    script(async data-pjax src="https://cdn.jsdelivr.ren/npm/acrylic-static@1.0.0/bubble/bubble.js")
+    script(async data-pjax src="https://jsd.cdn.zzko.cn/npm/acrylic-static@1.0.0/bubble/bubble.js")
   //- 自定义js
   script(data-pjax src="/js/anzhiyufunction.js")
   script(async src="/js/anzhiyuOnlyOne.js")

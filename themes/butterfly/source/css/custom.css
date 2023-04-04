@@ -176,7 +176,7 @@
 }
 
 /* 无障碍 */
-@media (max-width:768px) {
+/* @media (max-width:768px) {
     .wza-Tool, #wzayd {
         display: none;
     }
@@ -186,4 +186,4 @@
     #bodyWZA {
         display: inline;
     }
-}
+} */

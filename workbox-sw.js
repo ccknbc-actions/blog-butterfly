@@ -1,28 +1,28 @@
-importScripts('https://cdn.jsdelivr.ren/npm/workbox-sw/build/workbox-sw.js');
-importScripts('https://cdn.webpushr.com/sw-server.min.js');
+importScripts("https://jsd.cdn.zzko.cn/npm/workbox-sw/build/workbox-sw.js");
+importScripts("https://cdn.webpushr.com/sw-server.min.js");
 
 if (workbox) {
-    console.log('workbox loaded success🎉');
+    console.log("workbox loaded success🎉");
 } else {
-    console.log('workbox loaded fail😬');
+    console.log("workbox loaded fail😬");
 }
 
-self.addEventListener('install', async () => {
-    await self.skipWaiting()
-})
+self.addEventListener("install", async () => {
+    await self.skipWaiting();
+});
 
-self.addEventListener('activate', async () => {
-    await self.clients.claim()
-})
+self.addEventListener("activate", async () => {
+    await self.clients.claim();
+});
 
 self.__WB_DISABLE_DEV_LOGS = false;
 
 workbox.core.setCacheNameDetails({
-    prefix: 'CC的部落格',
-    suffix: '缓存',
-    precache: '离线后备',
-    runtime: '运行时',
-    googleAnalytics: '离线谷歌分析'
+    prefix: "CC的部落格",
+    suffix: "缓存",
+    precache: "离线后备",
+    runtime: "运行时",
+    googleAnalytics: "离线谷歌分析",
 });
 
 workbox.precaching.precacheAndRoute(self.__WB_MANIFEST, {
@@ -43,18 +43,21 @@ const YEAR = DAY * 365;
 workbox.navigationPreload.enable();
 
 // 离线后备
-const Offline = new workbox.routing.Route(({ request }) => {
-    return request.mode === 'navigate';
-}, new workbox.strategies.NetworkOnly({
-    plugins: [
-        new workbox.precaching.PrecacheFallbackPlugin({
-            fallbackURL: '/offline/index.html'
-        }),
-        new workbox.cacheableResponse.CacheableResponsePlugin({
-            statuses: [0, 200, 304]
-        })
-    ]
-}));
+const Offline = new workbox.routing.Route(
+    ({ request }) => {
+        return request.mode === "navigate";
+    },
+    new workbox.strategies.NetworkOnly({
+        plugins: [
+            new workbox.precaching.PrecacheFallbackPlugin({
+                fallbackURL: "/offline/index.html",
+            }),
+            new workbox.cacheableResponse.CacheableResponsePlugin({
+                statuses: [0, 200, 304],
+            }),
+        ],
+    })
+);
 workbox.routing.registerRoute(Offline);
 
 // 暖策略（运行时）缓存
@@ -66,76 +69,90 @@ workbox.routing.registerRoute(Offline);
 
 // 字体
 workbox.routing.registerRoute(
-    new RegExp('.*.(?:woff2)'),
+    new RegExp(".*.(?:woff2)"),
     new workbox.strategies.StaleWhileRevalidate({
         cacheName: "其他字体",
         plugins: [
             new workbox.expiration.ExpirationPlugin({
                 maxEntries: 10,
-                maxAgeSeconds: MONTH
+                maxAgeSeconds: MONTH,
             }),
             new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200, 304]
-            })
-        ]
+                statuses: [0, 200, 304],
+            }),
+        ],
     })
 );
 
 workbox.routing.registerRoute(
-    new RegExp('^https://(?:fonts\\.googleapis\\.com|fonts\\.gstatic\\.com)'),
+    new RegExp("^https://(?:fonts\\.googleapis\\.com|fonts\\.gstatic\\.com)"),
     new workbox.strategies.StaleWhileRevalidate({
-        cacheName: '谷歌字体',
+        cacheName: "谷歌字体",
         plugins: [
             new workbox.expiration.ExpirationPlugin({
                 maxEntries: 10,
-                maxAgeSeconds: MONTH
+                maxAgeSeconds: MONTH,
             }),
             new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200, 304]
-            })
+                statuses: [0, 200, 304],
+            }),
         ],
     })
 );
 
 // 图片/网页
 workbox.routing.registerRoute(
-    new RegExp('.*.(?:png|jpg|jpeg|svg|gif|webp)'),
+    new RegExp(".*.(?:png|jpg|jpeg|svg|gif|webp)"),
     new workbox.strategies.NetworkOnly()
 );
 
 // json
 workbox.routing.registerRoute(
-    new RegExp('.*.(?:json)'),
+    new RegExp(".*.(?:json)"),
     new workbox.strategies.NetworkFirst({
-        cacheName: '网络资源',
+        cacheName: "网络资源",
         plugins: [
             new workbox.expiration.ExpirationPlugin({
                 maxEntries: 10,
-                maxAgeSeconds: DAY
+                maxAgeSeconds: DAY,
             }),
             new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200, 304]
-            })
-        ]
+                statuses: [0, 200, 304],
+            }),
+        ],
     })
 );
 
 // 静态资源
 workbox.routing.registerRoute(
-    new RegExp('.*.(?:css|js)'),
+    new RegExp(".*.(?:css|js)"),
     new workbox.strategies.StaleWhileRevalidate({
-        cacheName: '静态资源',
+        cacheName: "静态资源",
         plugins: [
             new workbox.expiration.ExpirationPlugin({
                 maxEntries: 50,
-                maxAgeSeconds: WEEK
+                maxAgeSeconds: WEEK,
             }),
             new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200, 304]
-            })
-        ]
+                statuses: [0, 200, 304],
+            }),
+        ],
     })
 );
 
 // 离线谷歌分析
 workbox.googleAnalytics.initialize();
+
+// 拦截指定请求
+const blockUrlList = ["https://res.rrbay.com/canyou/js/wzatool-mp.js"];
+
+self.addEventListener("fetch", (event) => {
+    if (blockUrlList.some((item) => event.request.url.includes(item))) {
+        event
+            .respondWith
+            ({
+                status: 0,
+                statusText: "请求已拦截",
+            });
+    }
+});

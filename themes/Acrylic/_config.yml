@@ -181,7 +181,7 @@ error_img:
 error_404:
   enable: true
   subtitle: "Page Not Found"
-  background: https://cdn.jsdelivr.ren/npm/anzhiyu-blog@1.1.6/img/post/common/page-404.png
+  background: https://jsd.cdn.zzko.cn/npm/anzhiyu-blog@1.1.6/img/post/common/page-404.png
 
 post_meta:
   page: # Home Page
@@ -239,12 +239,12 @@ post_copyright:
 # Sponsor/reward
 reward:
   enable: true
-  coinAudio: https://cdn.jsdelivr.ren/npm/akilar-candyassets@1.0.36/audio/aowu.m4a
+  coinAudio: https://jsd.cdn.zzko.cn/npm/akilar-candyassets@1.0.36/audio/aowu.m4a
   QR_code:
-    - img: https://cdn.jsdelivr.ren/npm/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png
+    - img: https://jsd.cdn.zzko.cn/npm/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png
       link:
       text: wechat
-    - img: https://cdn.jsdelivr.ren/npm/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png
+    - img: https://jsd.cdn.zzko.cn/npm/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png
       link:
       text: alipay
 
@@ -419,24 +419,24 @@ footer:
   runtime:
     enable: true
     launch_time: 04/01/2021 00:00:00 # 网站上线时间
-    work_img: https://cdn.jsdelivr.ren/npm/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg
+    work_img: https://jsd.cdn.zzko.cn/npm/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg
     work_description: 距离月入25k也就还差一个大佬带我~
-    offduty_img: https://cdn.jsdelivr.ren/npm/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg
+    offduty_img: https://jsd.cdn.zzko.cn/npm/anzhiyu-blog@2.0.4/img/badge/安知鱼-下班啦.svg
     offduty_description: 下班了就该开开心心的玩耍，嘿嘿~
   # 徽标部分配置项 https://shields.io/
   # https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
   bdageitem:
     - link: https://hexo.io/ #徽标指向网站链接
-      shields: https://cdn.jsdelivr.ren/npm/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg #徽标API
+      shields: https://jsd.cdn.zzko.cn/npm/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg #徽标API
       message: 博客框架为Hexo_v5.4.0 #徽标提示语
     - link: https://www.dogecloud.com/
-      shields: https://cdn.jsdelivr.ren/npm/anzhiyu-blog@2.2.0/img/badge/CDN-多吉云-3693F3.svg
+      shields: https://jsd.cdn.zzko.cn/npm/anzhiyu-blog@2.2.0/img/badge/CDN-多吉云-3693F3.svg
       message: 本站使用多吉云为静态资源提供CDN加速
     - link: https://github.com/
-      shields: https://cdn.jsdelivr.ren/npm/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg
+      shields: https://jsd.cdn.zzko.cn/npm/anzhiyu-blog@2.1.5/img/badge/Source-Github.svg
       message: 本站项目由Github托管
     - link: http://creativecommons.org/licenses/by-nc-sa/4.0/
-      shields: https://cdn.jsdelivr.ren/npm/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg
+      shields: https://jsd.cdn.zzko.cn/npm/anzhiyu-blog@2.2.0/img/badge/Copyright-BY-NC-SA.svg
       message: 本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可
 
 # Analysis
@@ -889,10 +889,10 @@ css_prefix: true
 envelope_comment:
   enable: true #控制开关
   custom_pic:
-    cover: https://cdn.jsdelivr.ren/npm/hexo-butterfly-envelope/lib/violet.jpg #信笺头部图片
-    line: https://cdn.jsdelivr.ren/npm/hexo-butterfly-envelope/lib/line.png #信笺底部图片
-    beforeimg: https://cdn.jsdelivr.ren/npm/hexo-butterfly-envelope/lib/before.png # 信封前半部分
-    afterimg: https://cdn.jsdelivr.ren/npm/hexo-butterfly-envelope/lib/after.png # 信封后半部分
+    cover: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-envelope/lib/violet.jpg #信笺头部图片
+    line: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-envelope/lib/line.png #信笺底部图片
+    beforeimg: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-envelope/lib/before.png # 信封前半部分
+    afterimg: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-envelope/lib/after.png # 信封后半部分
   message: #信笺正文，多行文本，写法如下
     - 有什么想问的？
     - 有什么想说的？
@@ -914,14 +914,14 @@ tag_plugins:
   priority: 5 #过滤器优先权
   issues: false #issues标签开关
   link:
-    placeholder: https://cdn.jsdelivr.ren/npm/anzhiyu-blog@2.1.5/img/siteicon/64.png #link_card标签默认的图标图片
+    placeholder: https://jsd.cdn.zzko.cn/npm/anzhiyu-blog@2.1.5/img/siteicon/64.png #link_card标签默认的图标图片
   CDN:
-    anima: https://cdn.jsdelivr.ren/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
-    jquery: https://cdn.jsdelivr.ren/npm/jquery@latest/dist/jquery.min.js #issues标签依赖
-    issues: https://cdn.jsdelivr.ren/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js #issues标签依赖
-    iconfont: https://cdn.jsdelivr.ren/npm/acrylic-static@1.0.0/ali_font.js #参看https://akilar.top/posts/d2ebecef/
-    carousel: https://cdn.jsdelivr.ren/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js
-    tag_plugins_css: https://cdn.jsdelivr.ren/npm/acrylic-static@1.0.0/tag_plugins/tag_plugins.css
+    anima: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
+    jquery: https://jsd.cdn.zzko.cn/npm/jquery@latest/dist/jquery.min.js #issues标签依赖
+    issues: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js #issues标签依赖
+    iconfont: https://jsd.cdn.zzko.cn/npm/acrylic-static@1.0.0/ali_font.js #参看https://akilar.top/posts/d2ebecef/
+    carousel: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js
+    tag_plugins_css: https://jsd.cdn.zzko.cn/npm/acrylic-static@1.0.0/tag_plugins/tag_plugins.css
 
 # wowjs
 # see https://www.npmjs.com/package/hexo-butterfly-wowjs
@@ -957,9 +957,9 @@ wowjs:
     - class: site-card
       style: animate__flipInY
       duration: 1.5s
-  animate_css: https://cdn.jsdelivr.ren/npm/hexo-butterfly-wowjs/lib/animate.min.css
-  wow_js: https://cdn.jsdelivr.ren/npm/hexo-butterfly-wowjs/lib/wow.min.js
-  wow_init_js: https://cdn.jsdelivr.ren/npm/hexo-butterfly-wowjs/lib/wow_init.js
+  animate_css: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-wowjs/lib/animate.min.css
+  wow_js: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-wowjs/lib/wow.min.js
+  wow_init_js: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-wowjs/lib/wow_init.js
 
 home_top:
   enable: true # 开关
@@ -983,20 +983,20 @@ home_top:
   default_descr: 再怎么看我也不知道怎么描述它的啦！
   swiper:
     enable: false
-    swiper_css: https://cdn.jsdelivr.ren/npm/acrylic-static@1.0.0/swiper/swiper.min.css #swiper css依赖
-    swiper_js: https://cdn.jsdelivr.ren/npm/acrylic-static@1.0.0/swiper/swiper.min.js #swiper js依赖
-    swiper_init: https://cdn.jsdelivr.ren/npm/acrylic-static@1.0.0/swiper/swiper_init.js # swiper初始化方法
+    swiper_css: https://jsd.cdn.zzko.cn/npm/acrylic-static@1.0.0/swiper/swiper.min.css #swiper css依赖
+    swiper_js: https://jsd.cdn.zzko.cn/npm/acrylic-static@1.0.0/swiper/swiper.min.js #swiper js依赖
+    swiper_init: https://jsd.cdn.zzko.cn/npm/acrylic-static@1.0.0/swiper/swiper_init.js # swiper初始化方法
   banner:
     tips: 新品主题
     title: Acrylic-AnZHiYu
     image: https://img02.anzhiy.cn/adminuploads/1/2023/03/27/64215d46a1ca6.webp
     link: https://anzhiy.cn/posts/220c.html
-    top_group_banner_css: https://cdn.jsdelivr.ren/npm/acrylic-static@1.0.0/top_group_banner_css/top_group_banner_css.css
+    top_group_banner_css: https://jsd.cdn.zzko.cn/npm/acrylic-static@1.0.0/top_group_banner_css/top_group_banner_css.css
 
 # 朋友圈配置
 friends_vue:
   enable: false
-  vue_js: https://cdn.jsdelivr.ren/npm/anzhiyu-blog-static@1.0.0/js/friends_vue/index.js
+  vue_js: https://jsd.cdn.zzko.cn/npm/anzhiyu-blog-static@1.0.0/js/friends_vue/index.js
   apiurl: # twikoo地址
   top_background:
 
@@ -1082,7 +1082,7 @@ CDN:
 
   # Custom format
   # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
-  custom_format: https://cdn.jsdelivr.ren/npm/${name}@latest/${file}
+  custom_format: https://jsd.cdn.zzko.cn/npm/${name}@latest/${file}
 
   option:
     # main_css:
