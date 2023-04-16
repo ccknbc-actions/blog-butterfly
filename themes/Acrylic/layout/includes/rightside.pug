@@ -29,9 +29,10 @@ mixin rightsideItem(array)
         if commentsJsLoad
           a#to_comment(href="#post-comment" title=_p("rightside.scroll_to_comment"))
             i.fas.fa-comments
-          a#switch_commentBarrage(href="javascript:anzhiyu.switchCommentBarrage();" title="开关弹幕")
-            svg.icon(aria-hidden='true')
-              use(href='#icon-danmu')
+          if theme.comment_barrage_config.enable && theme.comments.use == 'Twikoo'
+            a#switch_commentBarrage(href="javascript:anzhiyu.switchCommentBarrage();" title="开关弹幕")
+              svg.icon(aria-hidden='true')
+                use(href='#icon-danmu')
 
 #rightside
   - const { enable, hide, show } = theme.rightside_item_order
@@ -40,6 +41,34 @@ mixin rightsideItem(array)
 
   
   #rightside-config-hide
+    if theme.edit.enable && page.edit !== false
+      if is_post()
+        if theme.edit.gitlab_ide !== false
+          a.edit-gitlab-ide(href=theme.edit.gitlab_ide + 'posts/-/语雀/' + page.title + '.md' title=_p('edit.gitlab_ide') + ' - ' + page.title)
+            i.fa-solid.fa-code
+        if theme.edit.gitlab !== false
+          a.edit-gitlab(href=theme.edit.gitlab + 'posts/语雀/' + page.title + '.md' title=_p('edit.gitlab') + ' - ' + page.title)
+            i.fa-brands.fa-gitlab
+        if theme.edit.github !== false
+          a.edit-github(href=theme.edit.github + 'posts/语雀/' + page.title + '.md' title=_p('edit.github') + ' - ' + page.title)
+            i.fa-brands.fa-github
+        if theme.edit.yuque !== false
+          a.edit-yuque(href=theme.edit.yuque + page.id + '/edit' title=_p('edit.yuque') + ' - ' + page.title)
+            i.fa-solid.fa-crow
+      else if is_page() || is_category() || is_tag()
+        if theme.edit.gitlab_ide  !== false
+          a.edit-gitlab-ide(href=theme.edit.gitlab_ide + 'master/-/source/' + page.source title=_p('edit.gitlab_ide') + ' - ' + page.title)
+            i.fa-solid.fa-code
+        if theme.edit.gitlab !== false
+          a.edit-gitlab(href=theme.edit.gitlab + 'master/source/' + page.source title=_p('edit.gitlab') + ' - ' + page.title)
+            i.fa-brands.fa-gitlab
+        if theme.edit.github !== false
+          a.edit-github(href=theme.edit.github + 'master/source/' + page.source title=_p('edit.github') + ' - ' + page.title)
+            i.fa-brands.fa-github
+      else if is_home()
+        if theme.edit.gitlab_ide !== false
+          a.edit-gitlab-ide(href=theme.edit.gitlab_ide title=_p('edit.gitlab_ide'))
+            i.fa-solid.fa-code
     if hideArray
       +rightsideItem(hideArray)
   #rightside-config-show

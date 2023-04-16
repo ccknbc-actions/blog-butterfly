@@ -23,15 +23,20 @@ twikoo:
   file: dist/twikoo.all.min.js
   version: 1.6.11
 waline_js:
-  name: "@waline/client"
+  name: '@waline/client'
   file: dist/waline.js
   other_name: waline
-  version: 2.10.0
+  version: 2.14.9
 waline_css:
-  name: "@waline/client"
+  name: '@waline/client'
   file: dist/waline.css
   other_name: waline
-  version: 2.10.0
+  version: 2.14.9
+waline_meta_css:
+  name: '@waline/client'
+  file: dist/waline-meta.css
+  other_name: waline
+  version: 2.14.9
 sharejs:
   name: butterfly-extsrc
   file: sharejs/dist/js/social-share.min.js
@@ -152,17 +157,17 @@ prismjs_js:
   name: prismjs
   file: prism.js
   other_name: prism
-  version: 1.28.0
+  version: 1.29.0
 prismjs_lineNumber_js:
   name: prismjs
   file: plugins/line-numbers/prism-line-numbers.min.js
   other_name: prism
-  version: 1.28.0
+  version: 1.29.0
 prismjs_autoloader:
   name: prismjs
   file: plugins/autoloader/prism-autoloader.min.js
   other_name: prism
-  version: 1.28.0
+  version: 1.29.0
 artalk_js:
   name: artalk
   file: dist/Artalk.js
@@ -195,10 +200,6 @@ countup_js:
 gsap_js:
   name: acrylic-static
   file: gsap/gsap.min.js
-  version: 1.0.0
-about_js:
-  name: acrylic-static
-  file: about/about.js
   version: 1.0.0
 rightmenu:
   name: acrylic-static

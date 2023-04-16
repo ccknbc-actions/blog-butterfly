@@ -51,13 +51,13 @@ copy:
 
 # social settings (社交圖標設置)
 # formal:
-#   icon: link || the description
+#   icon: link || the description || color
 social:
-  # fa-brands fa-github: https://github.com/CCKNBC || GitHub
-  # fa-solid fa-envelope: mailto:blog@ccknbc.cc || Email
-  fa-brands fa-bilibili: https://space.bilibili.com/1404413254 || 哔哩哔哩
+  fa-brands fa-github: https://github.com/CCKNBC || GitHub
+  fa-solid fa-envelope: mailto:blog@ccknbc.cc || Email
+  # fa-brands fa-bilibili: https://space.bilibili.com/1404413254 || 哔哩哔哩
   fa-brands fa-weibo: https://weibo.com/CommonCulture || 微博
-  fa-solid fa-crow: https://www.yuque.com/ccknbc || 语雀
+  # fa-solid fa-crow: https://www.yuque.com/ccknbc || 语雀
   fa-brands fa-telegram: https://t.me/ccknbcTG || 电报群组
   fa-brands fa-twitter: https://www.twitter.com/ccknbc || 推特
   # fa-solid fa-bell faa-ring animated: /sub || 多种订阅方式
@@ -369,14 +369,14 @@ waline:
   option:
     pageSize: 10
     requiredMeta: ["nick", "mail"]
-    login: force
+    login: enable
     copyright: true
     imageUploader: true
-    recaptchaV3Key: 6Lf8S9MaAAAAAFMx9WOCWRkIX2AZ6Nl9dreuw8p-
+    turnstileKey: 0x4AAAAAAAECBl27OB5SZrQT
     locale:
       admin: 博主
       sofa: 这里冷冷清清的，快来留下脚印吧！
-      placeholder: "根据《互联网跟帖评论服务管理规定》，评论现已开启强制注册登陆\n社交登录现已支持【QQ Weibo GitHub Twitter Facebook】等平台"
+      placeholder: "根据《互联网跟帖评论服务管理规定》，建议注册登陆后评论\n社交登录现已支持【QQ Weibo GitHub Twitter Facebook】等平台"
       reactionTitle: 就现在，表明你的态度！
       reaction0: 鼓励
       reaction1: 菜狗
@@ -1017,7 +1017,7 @@ snackbar:
 
 # https://instant.page/
 # prefetch (預加載)
-instantpage: false
+instantpage: true
 
 # https://github.com/vinta/pangu.js
 # Insert a space between Chinese character and English character (中英文之間添加空格)

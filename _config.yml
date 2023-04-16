@@ -14,6 +14,9 @@ pretty_urls:
   trailing_index: false
   trailing_html: false
 
+theme: butterfly
+# theme: Acrylic
+
 source_dir: source
 public_dir: public
 tag_dir: tags
@@ -171,11 +174,7 @@ pagination_dir: page
 
 include:
 exclude:
-  # - "offline.html"
 ignore:
-
-theme: butterfly
-# theme: Acrylic
 
 feed:
   enable: false

@@ -1,28 +1,30 @@
 menu:
-  文章:
-    隧道: /archives/ || fas fa-archive
-    分类: /categories/ || fas fa-shapes
-    标签: /tags/ || fas fa-tags
+  # 文章:
+  #   隧道: /archives/ || fas fa-archive
+  #   分类: /categories/ || fas fa-shapes
+  #   标签: /tags/ || fas fa-tags
 
-  友链:
-    友人帐: /blogroll/ || fas fa-link
-    朋友圈: /moments/ || fab fa-artstation
-    留言板: /comments/ || fas fa-envelope
+  # 友链:
+  #   友人帐: /blogroll/ || fas fa-link
+  #   朋友圈: /moments/ || fab fa-artstation
+  #   留言板: /comments/ || fas fa-envelope
 
-  我的:
-    音乐馆: /music/ || fas fa-music
-    追番页: /bangumis/ || icon-bilibili1
-    相册集: /album/ || fas fa-images
-    小空调: /air-conditioner/ || fa-regular fa-fan
+  # 我的:
+  #   音乐馆: /music/ || fas fa-music
+  #   追番页: /bangumis/ || icon-bilibili1
+  #   相册集: /album/ || fas fa-images
+  #   小空调: /air-conditioner/ || fa-regular fa-fan
 
-  关于:
-    关于本人: /about/ || icon-zhifeiji
-    闲言碎语: /essay/ || fas fa-lightbulb-on
-    随便逛逛: javascript:toRandomPost() || fas fa-shoe-prints
+  # 关于:
+  #   关于本人: /about/ || icon-zhifeiji
+  #   闲言碎语: /essay/ || fas fa-lightbulb-on
+  #   随便逛逛: javascript:toRandomPost() || fas fa-shoe-prints
 
-# nav左侧菜单
+# nav相关配置
 nav:
-  enable: true
+  enable: false
+  travelling: false
+  clock: true
   menu:
     - title: 网页
       item:
@@ -32,20 +34,8 @@ nav:
         - name: 博客
           link: https://anzhiy.cn/
           icon: https://img02.anzhiy.cn/adminuploads/1/2022/09/05/6315ec9737ac4.png
-        - name: 云盘主页
-          link: https://www.cloud.anzhiy.cn/
-          icon: https://img02.anzhiy.cn/adminuploads/1/2022/09/15/63232b7d91d22.jpg
-        - name: 安知鱼图床
-          link: https://image.anzhiy.cn/
-          icon: https://image.anzhiy.cn/favicon.ico
-        - name: alist文件管理
-          link: https://pan.anzhiy.cn/
-          icon: https://cloud.anzhiy.cn/static/img/c192.png
     - title: 项目
       item:
-        - name: 安知鱼云盘
-          link: https://cloud.anzhiy.cn/
-          icon: https://img02.anzhiy.cn/adminuploads/1/2022/04/27/6268e7d9de532.png
         - name: 德信官网
           link: http://blgou.net/#/main/home
           icon: https://img02.anzhiy.cn/adminuploads/1/2022/09/15/6322cd942dbd9.png
@@ -70,16 +60,16 @@ copy:
 
 # social settings (社交图标设置)
 # formal:
-#   icon: link || the description
+#   icon: link || the description || Animation
 social:
-  Github: https://github.com/anzhiyu-c || icon-gitHub || faa-tada
-  Email: https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=2268025923@qq.com || icon-youxiang || faa-tada
-  RSS: atom.xml || icon-rss || faa-tada
-  BiliBili: https://space.bilibili.com/372204786 || icon-bilibili || faa-tada
-  QQ: tencent://Message/?Uin=2268025923&amp;websiteName=local.edu.com:8888=&amp;Menu=yes || icon-QQ1 || faa-tada
+  # Github: https://github.com/anzhiyu-c || icon-gitHub || faa-tada
+  # Email: https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=2268025923@qq.com || icon-youxiang || faa-tada
+  # RSS: atom.xml || icon-rss || faa-tada
+  # BiliBili: https://space.bilibili.com/372204786 || icon-bilibili || faa-tada
+  # QQ: tencent://Message/?Uin=2268025923&amp;websiteName=local.edu.com:8888=&amp;Menu=yes || icon-QQ1 || faa-tada
 
 author_status:
-  enable: true
+  enable: false
   status: ✍️
   alias: writing_hand
   fallback_src: https://github.githubassets.com/images/icons/emoji/unicode/270d.png
@@ -167,7 +157,7 @@ katex:
 # --------------------------------------
 
 # Favicon（网站图标）
-favicon: /favicon.png
+favicon: /favicon.ico
 
 # Avatar (头像)
 avatar:
@@ -214,12 +204,12 @@ cover:
   position: both
   # When cover is not set, the default cover is displayed (当没有设置cover时，默认的封面显示)
   default_cover:
-    - https://gejiba.com/view.php/3c3845c98419b590d7f6b6c8ec6add1c.gif
+    - /img/default_cover.jpg
 
 # Replace Broken Images (替换无法显示的图片)
 error_img:
-  flink: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/photos@master/blog/2021-03-08~15-13-28.gif
-  post_page: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/photos@master/blog/2021-03-08~15-13-15.gif
+  flink: /img/friend_404.gif
+  post_page: /img/404.jpg
 
 # A simple 404 page
 error_404:
@@ -268,10 +258,10 @@ anchor: false
 # toc (目录)
 toc:
   post: true
-  page: false
+  page: true
   number: true
   expand: false
-  style_simple: false # for post
+  style_simple: true # for post
 
 post_copyright:
   enable: true
@@ -285,12 +275,12 @@ reward:
   enable: true
   coinAudio: https://jsd.cdn.zzko.cn/npm/akilar-candyassets@1.0.36/audio/aowu.m4a
   QR_code:
-    - img: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/logo/qr.png
-      link: https://www.rocschool.com/tool/qr/qr/id/51.html
-      text: 三合一
-    - img: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/logo/afdian.png
-      link: https://afdian.net/@ccknbc
-      text: 爱发电
+    - img: https://jsd.cdn.zzko.cn/npm/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png
+      link:
+      text: wechat
+    - img: https://jsd.cdn.zzko.cn/npm/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png
+      link:
+      text: alipay
 
 # Post edit
 # Easily browse and edit blog source code online.
@@ -370,10 +360,34 @@ comments:
   count: false # Display comment count in post's top_img
   card_post_count: false # Display comment count in Home Page
 
+# valine
+# https://valine.js.org
+valine:
+  appId: xxxxx # leancloud application app id
+  appKey: xxxxx # leancloud application app key
+  pageSize: 10 # comment list page size
+  avatar: mp # gravatar style https://valine.js.org/#/avatar
+  lang: zh-CN # i18n: zh-CN/zh-TW/en/ja
+  placeholder: 填写QQ邮箱就会使用QQ头像喔~. # valine comment input placeholder (like: Please leave your footprints)
+  guest_info: nick,mail,link # valine comment header info (nick/mail/link)
+  recordIP: false # Record reviewer IP
+  serverURLs: # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
+  bg: /img/comment_bg.png # valine background
+  emojiCDN: //i0.hdslb.com/bfs/emote/ # emoji CDN
+  enableQQ: true # enable the Nickname box to automatically get QQ Nickname and QQ Avatar
+  requiredFields: nick,mail # required fields (nick/mail)
+  visitor: false
+  master:
+    - xxxxx
+  friends:
+    - xxxxxx
+  tagMeta: "博主,小伙伴,访客"
+  option:
+
 # waline - A simple comment system with backend support fork from Valine
 # https://waline.js.org/
 waline:
-  serverURL: https://waline.ccknbc.cc # Waline server address url
+  serverURL: https://waline.ccknbc.cc/ # Waline server address url
   bg: # waline background
   pageview: false
   option:
@@ -382,11 +396,11 @@ waline:
     login: enable
     copyright: true
     imageUploader: true
-    recaptchaV3Key: 6Lf8S9MaAAAAAFMx9WOCWRkIX2AZ6Nl9dreuw8p-
+    turnstileKey: 0x4AAAAAAAECBl27OB5SZrQT
     locale:
       admin: 博主
       sofa: 这里冷冷清清的，快来留下脚印吧！
-      placeholder: 社交登录现已支持【QQ Weibo GitHub Twitter Facebook】
+      placeholder: "根据《互联网跟帖评论服务管理规定》，建议注册登陆后评论\n社交登录现已支持【QQ Weibo GitHub Twitter Facebook】等平台"
       reactionTitle: 就现在，表明你的态度！
       reaction0: 鼓励
       reaction1: 菜狗
@@ -443,11 +457,35 @@ chat_btn: false
 # The origin chat button is displayed when scrolling up, and the button is hidden when scrolling down
 chat_hide_show: false
 
+# chatra
+# https://chatra.io/
+chatra:
+  enable: false
+  id:
+
 # tidio
 # https://www.tidio.com/
 tidio:
   enable: false
   public_key:
+
+# daovoice
+# http://daovoice.io/
+daovoice:
+  enable: false
+  app_id:
+
+# gitter
+# https://gitter.im/
+gitter:
+  enable: false
+  room:
+
+# crisp
+# https://crisp.chat/en/
+crisp:
+  enable: false
+  website_id:
 
 # Footer Settings
 # --------------------------------------
@@ -487,17 +525,17 @@ footer:
 # https://tongji.baidu.com/web/welcome/login
 baidu_analytics:
 
-# CNZZ Analytics
-# https://www.umeng.com/
-cnzz_analytics:
-
 # Google Analytics
 # https://analytics.google.com/analytics/web/
 google_analytics: G-QB09N5MVV8
 
+# CNZZ Analytics
+# https://www.umeng.com/
+cnzz_analytics:
+
 # Cloudflare Analytics
-# https://www.cloudflare.com/web-analytics/
-# cloudflare_analytics: 35785b58f09f472ebfd7a2854973e6b8
+# https://www.cloudflare.com/zh-tw/web-analytics/
+cloudflare_analytics:
 
 # Microsoft Clarity
 # https://clarity.microsoft.com/
@@ -526,10 +564,10 @@ ad:
 site_verification:
   - name: google-site-verification
     content: tUkgeN6Ih2ArWtjw47oNSSl4Af2_MWjiKLrzZptUCdM
+  - name: baidu-site-verification
+    content: code-xxx
   - name: msvalidate.01
     content: 71ADBCC80D679CEA8080BAFDCD54E368
-  # - name: baidu-site-verification
-  #   content:
 
 # Beautify/Effect (美化/效果)
 # --------------------------------------
@@ -540,19 +578,18 @@ site_verification:
 theme_color:
   enable: true
   #   main: "#3b70fc"
-  main: "#8fbc8f"
-  paginator: "#8fbc8f"
+  paginator: "#3b70fc"
   #   button_hover: "#FF7242"
-  text_selection: "#8fbc8f"
+  text_selection: "#3b70fc"
   link_color: "var(--anzhiyu-fontcolor)"
   meta_color: "var(--anzhiyu-fontcolor)"
   #   hr_color: "#A4D8FA"
   code_foreground: "#fff"
   code_background: "var(--anzhiyu-code-stress)"
-  toc_color: "#8fbc8f"
-    # blockquote_padding_color: "#8fbc8f"
-    # blockquote_background_color: "#8fbc8f"
-  scrollbar_color: "#8fbc8f"
+  toc_color: "#3b70fc"
+  #   blockquote_padding_color: "#3b70fc"
+  #   blockquote_background_color: "#3b70fc"
+  scrollbar_color: "#3b70fc"
   meta_theme_color_light: "#f7f9fe"
   meta_theme_color_dark: "#18171d"
 
@@ -941,7 +978,7 @@ envelope_comment:
     - 有什么想吐槽的？
     - 哪怕是有什么想吃的，都可以告诉我哦~
   bottom: 自动书记人偶竭诚为您服务！ #仅支持单行文本
-  height: #1050px，信封划出的高度
+  height: #1024px，信封划出的高度
   path: #【可选】comments 的路径名称。默认为 comments，生成的页面为 comments/index.html
   front_matter: #【可选】comments页面的 front_matter 配置
     title: 留言板
@@ -949,76 +986,26 @@ envelope_comment:
     top_img: false
     type: envelope
 
-# tag-plugins-plus
-# see https://akilar.top/posts/615e2dec/
-tag_plugins:
-  enable: true # 开关
-  priority: 5 #过滤器优先权
-  issues: false #issues标签开关
-  link:
-    placeholder: https://jsd.cdn.zzko.cn/npm/anzhiyu-blog@2.1.5/img/siteicon/64.png #link_card标签默认的图标图片
-  CDN:
-    anima: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
-    jquery: https://jsd.cdn.zzko.cn/npm/jquery@latest/dist/jquery.min.js #issues标签依赖
-    issues: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js #issues标签依赖
-    iconfont: https://jsd.cdn.zzko.cn/npm/acrylic-static@1.0.0/ali_font.js #参看https://akilar.top/posts/d2ebecef/
-    carousel: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js
-    tag_plugins_css: https://jsd.cdn.zzko.cn/npm/acrylic-static@1.0.0/tag_plugins/tag_plugins.css
-
-# wowjs
-# see https://www.npmjs.com/package/hexo-butterfly-wowjs
-wowjs:
-  enable: false #控制动画开关。true是打开，false是关闭
-  priority: 10 #过滤器优先级
-  mobile: false #移动端是否启用，默认移动端禁用
-  animateitem:
-    - class: recent-post-item #必填项，需要添加动画的元素的class
-      style: animate__fadeIn #必填项，需要添加的动画
-      duration: 1.2s #选填项，动画持续时间，单位可以是ms也可以是s。例如3s，700ms。
-      delay: 200ms #选填项，动画开始的延迟时间，单位可以是ms也可以是s。例如3s，700ms。
-      offset: 20 #选填项，开始动画的距离（相对浏览器底部）
-      iteration: 1 #选填项，动画重复的次数
-    - class: card-widget
-      style: animate__fadeIn
-      delay: 0
-    - class: category-bar
-      style: animate__fadeIn
-      duration: .5s
-      delay: 0
-    - class: cf-article
-      style: animate__fadeIn
-      duration: 1.5s
-    # - class: flink-list-card
-    #   style: wowpanels
-    # - class: flink-list-card
-    #   style: animate__flipInY
-    #   duration: 1.5s
-    - class: article-sort-item
-      style: animate__fadeIn
-      duration: 1.5s
-    - class: site-card
-      style: animate__flipInY
-      duration: 1.5s
-  animate_css: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-wowjs/lib/animate.min.css
-  wow_js: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-wowjs/lib/wow.min.js
-  wow_init_js: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-wowjs/lib/wow_init.js
-
+# 首页顶部相关配置
 home_top:
   enable: false # 开关
   timemode: date #date/updated
+  title: 生活明朗
+  subTitle: 万物可爱。
+  siteText: ANZHIY.CN
   category:
-    - name: 博客
-      path: /categories/博客/
+    - name: 前端
+      path: /categories/前端开发/
       shadow: var(--anzhiyu-shadow-blue)
       class: blue
       icon: fas fa-dove
-    - name: 工具
-      path: /categories/工具/
+    - name: 大学
+      path: /categories/大学生涯/
       shadow: var(--anzhiyu-shadow-red)
       class: red
       icon: fas fa-burn
     - name: 生活
-      path: /categories/生活/
+      path: /categories/生活日常/
       shadow: var(--anzhiyu-shadow-green)
       class: green
       icon: fas fa-book
@@ -1068,7 +1055,7 @@ diytitle:
 
 # 留言弹幕配置
 comment_barrage_config:
-  enable: false
+  enable: true
   # 同时最多显示弹幕数
   maxBarrage: 1
   # 弹幕显示间隔时间ms
@@ -1082,6 +1069,7 @@ nav_music:
   console_widescreen_music: false # 宽屏状态控制台显示音乐而不是标签 enable为true 控制台依然会显示
   id: 8152976493
   server: netease
+  all_playlist: https://y.qq.com/n/ryqq/playlist/8802438608
 
 # 评论匿名邮箱
 visitorMail:
@@ -1124,7 +1112,7 @@ CDN:
 
   # Custom format
   # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
-  custom_format: https://jsd.cdn.zzko.cn/npm/${name}/${file}
+  custom_format: https://jsd.cdn.zzko.cn/npm/${name}@latest/${file}
 
   option:
     # main_css:
@@ -1180,7 +1168,6 @@ CDN:
     # coin_css:
     # countup_js:
     # gsap_js:
-    # about_js:
     # busuanzi:
     # rightmenu:
     # waterfall:

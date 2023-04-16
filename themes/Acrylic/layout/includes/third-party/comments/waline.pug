@@ -10,6 +10,13 @@ script.
       document.head.appendChild(link)
     }
 
+    function insertMetaCss () {
+      const link = document.createElement("link")
+      link.rel = "stylesheet"
+      link.href = "!{url_for(theme.asset.waline_meta_css)}"
+      document.head.appendChild(link)
+    }
+
     function initWaline () {
       const waline = Waline.init(Object.assign({
         el: '#waline-wrap',
@@ -24,12 +31,13 @@ script.
     if (typeof Waline === 'function') initWaline()
     else {
       insertCSS()
+      insertMetaCss ()
       getScript('!{url_for(theme.asset.waline_js)}').then(initWaline)
     }
   }
 
   if ('!{use[0]}' === 'Waline' || !!{lazyload}) {
-    if (!{lazyload}) btf.loadComment(document.getElementById('waline-wrap'),loadWaline)
+    if (!{lazyload}) anzhiyu.loadComment(document.getElementById('waline-wrap'),loadWaline)
     else setTimeout(loadWaline, 0)
   } else {
     function loadOtherComment () {

@@ -2,16 +2,18 @@ importScripts("https://jsd.cdn.zzko.cn/npm/workbox-sw/build/workbox-sw.js");
 importScripts("https://cdn.webpushr.com/sw-server.min.js");
 
 if (workbox) {
-    console.log("workbox loaded success🎉");
+    console.log("Workbox 加载成功🎉");
 } else {
-    console.log("workbox loaded fail😬");
+    console.log("Workbox 加载失败😬");
 }
 
 self.addEventListener("install", async () => {
+    console.log("Service Worker 开始安装");
     await self.skipWaiting();
 });
 
 self.addEventListener("activate", async () => {
+    console.log("Service Worker 安装完成，开始启动");
     await self.clients.claim();
 });
 
@@ -20,7 +22,7 @@ self.__WB_DISABLE_DEV_LOGS = false;
 workbox.core.setCacheNameDetails({
     prefix: "CC的部落格",
     suffix: "缓存",
-    precache: "离线后备",
+    precache: "预先",
     runtime: "运行时",
     googleAnalytics: "离线谷歌分析",
 });
@@ -53,7 +55,7 @@ const Offline = new workbox.routing.Route(
                 fallbackURL: "/offline/index.html",
             }),
             new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200, 304],
+                statuses: [0, 200],
             }),
         ],
     })
@@ -61,40 +63,24 @@ const Offline = new workbox.routing.Route(
 workbox.routing.registerRoute(Offline);
 
 // 暖策略（运行时）缓存
-// const strategy = new workbox.strategies.StaleWhileRevalidate();
-// const urls = [
-//     '/favicon.ico'
-// ];
-// workbox.recipes.warmStrategyCache({ urls, strategy });
+const strategy = new workbox.strategies.StaleWhileRevalidate();
+const urls = [
+    '/favicon.ico'
+];
+workbox.recipes.warmStrategyCache({ urls, strategy });
 
 // 字体
 workbox.routing.registerRoute(
-    new RegExp(".*.(?:woff2)"),
+    ({ event }) => event.request.destination === 'font',
     new workbox.strategies.StaleWhileRevalidate({
-        cacheName: "其他字体",
+        cacheName: "字体",
         plugins: [
             new workbox.expiration.ExpirationPlugin({
                 maxEntries: 10,
                 maxAgeSeconds: MONTH,
             }),
             new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200, 304],
-            }),
-        ],
-    })
-);
-
-workbox.routing.registerRoute(
-    new RegExp("^https://(?:fonts\\.googleapis\\.com|fonts\\.gstatic\\.com)"),
-    new workbox.strategies.StaleWhileRevalidate({
-        cacheName: "谷歌字体",
-        plugins: [
-            new workbox.expiration.ExpirationPlugin({
-                maxEntries: 10,
-                maxAgeSeconds: MONTH,
-            }),
-            new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200, 304],
+                statuses: [0, 200],
             }),
         ],
     })
@@ -102,7 +88,7 @@ workbox.routing.registerRoute(
 
 // 图片/网页
 workbox.routing.registerRoute(
-    new RegExp(".*.(?:png|jpg|jpeg|svg|gif|webp)"),
+    new RegExp(".*.(?:png|jpg|jpeg|svg|gif|webp|html)"),
     new workbox.strategies.NetworkOnly()
 );
 
@@ -117,7 +103,7 @@ workbox.routing.registerRoute(
                 maxAgeSeconds: DAY,
             }),
             new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200, 304],
+                statuses: [0, 200],
             }),
         ],
     })
@@ -134,25 +120,29 @@ workbox.routing.registerRoute(
                 maxAgeSeconds: WEEK,
             }),
             new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200, 304],
+                statuses: [0, 200],
             }),
         ],
     })
 );
 
 // 离线谷歌分析
-workbox.googleAnalytics.initialize();
+// workbox.googleAnalytics.initialize();
 
 // 拦截指定请求
-const blockUrlList = ["https://res.rrbay.com/canyou/js/wzatool-mp.js"];
-
-self.addEventListener("fetch", (event) => {
-    if (blockUrlList.some((item) => event.request.url.includes(item))) {
-        event
-            .respondWith
-            ({
-                status: 0,
-                statusText: "请求已拦截",
-            });
-    }
-});
+// self.addEventListener("fetch", async (event) => {
+//     console.log("运行中，拦截请求", event.request);
+//     const url = new URL(event.request.url);
+//     if (
+//         url.pathname == "/favicon.ico" &&
+//         url.searchParams.get("action") == "redirect"
+//     ) {
+//         // 拦截到后，处理业务再event.respondWith返回
+//         request = new Request(
+//             "https://jsd.cdn.zzko.cn/gh/CCKNBC/ccknbc.github.io@master/favicon.ico"
+//         );
+//         event.respondWith(fetch(request));
+//     } else {
+//         event.respondWith(fetch(event.request));
+//     }
+// });

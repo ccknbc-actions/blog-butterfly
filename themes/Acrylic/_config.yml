@@ -20,9 +20,11 @@ menu:
   #   闲言碎语: /essay/ || fas fa-lightbulb-on
   #   随便逛逛: javascript:toRandomPost() || fas fa-shoe-prints
 
-# nav左侧菜单
+# nav相关配置
 nav:
-  enable: true
+  enable: false
+  travelling: false
+  clock: true
   menu:
     - title: 网页
       item:
@@ -32,20 +34,8 @@ nav:
         - name: 博客
           link: https://anzhiy.cn/
           icon: https://img02.anzhiy.cn/adminuploads/1/2022/09/05/6315ec9737ac4.png
-        - name: 云盘主页
-          link: https://www.cloud.anzhiy.cn/
-          icon: https://img02.anzhiy.cn/adminuploads/1/2022/09/15/63232b7d91d22.jpg
-        - name: 安知鱼图床
-          link: https://image.anzhiy.cn/
-          icon: https://image.anzhiy.cn/favicon.ico
-        - name: alist文件管理
-          link: https://pan.anzhiy.cn/
-          icon: https://cloud.anzhiy.cn/static/img/c192.png
     - title: 项目
       item:
-        - name: 安知鱼云盘
-          link: https://cloud.anzhiy.cn/
-          icon: https://img02.anzhiy.cn/adminuploads/1/2022/04/27/6268e7d9de532.png
         - name: 德信官网
           link: http://blgou.net/#/main/home
           icon: https://img02.anzhiy.cn/adminuploads/1/2022/09/15/6322cd942dbd9.png
@@ -70,16 +60,16 @@ copy:
 
 # social settings (社交图标设置)
 # formal:
-#   icon: link || the description
+#   icon: link || the description || Animation
 social:
-  Github: https://github.com/anzhiyu-c || icon-gitHub || faa-tada
-  Email: https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=2268025923@qq.com || icon-youxiang || faa-tada
-  RSS: atom.xml || icon-rss || faa-tada
-  BiliBili: https://space.bilibili.com/372204786 || icon-bilibili || faa-tada
-  QQ: tencent://Message/?Uin=2268025923&amp;websiteName=local.edu.com:8888=&amp;Menu=yes || icon-QQ1 || faa-tada
+  # Github: https://github.com/anzhiyu-c || icon-gitHub || faa-tada
+  # Email: https://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=2268025923@qq.com || icon-youxiang || faa-tada
+  # RSS: atom.xml || icon-rss || faa-tada
+  # BiliBili: https://space.bilibili.com/372204786 || icon-bilibili || faa-tada
+  # QQ: tencent://Message/?Uin=2268025923&amp;websiteName=local.edu.com:8888=&amp;Menu=yes || icon-QQ1 || faa-tada
 
 author_status:
-  enable: true
+  enable: false
   status: ✍️
   alias: writing_hand
   fallback_src: https://github.githubassets.com/images/icons/emoji/unicode/270d.png
@@ -899,7 +889,7 @@ envelope_comment:
     - 有什么想吐槽的？
     - 哪怕是有什么想吃的，都可以告诉我哦~
   bottom: 自动书记人偶竭诚为您服务！ #仅支持单行文本
-  height: #1050px，信封划出的高度
+  height: #1024px，信封划出的高度
   path: #【可选】comments 的路径名称。默认为 comments，生成的页面为 comments/index.html
   front_matter: #【可选】comments页面的 front_matter 配置
     title: 留言板
@@ -907,63 +897,13 @@ envelope_comment:
     top_img: false
     type: envelope
 
-# tag-plugins-plus
-# see https://akilar.top/posts/615e2dec/
-tag_plugins:
-  enable: true # 开关
-  priority: 5 #过滤器优先权
-  issues: false #issues标签开关
-  link:
-    placeholder: https://jsd.cdn.zzko.cn/npm/anzhiyu-blog@2.1.5/img/siteicon/64.png #link_card标签默认的图标图片
-  CDN:
-    anima: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
-    jquery: https://jsd.cdn.zzko.cn/npm/jquery@latest/dist/jquery.min.js #issues标签依赖
-    issues: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/issues.js #issues标签依赖
-    iconfont: https://jsd.cdn.zzko.cn/npm/acrylic-static@1.0.0/ali_font.js #参看https://akilar.top/posts/d2ebecef/
-    carousel: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js
-    tag_plugins_css: https://jsd.cdn.zzko.cn/npm/acrylic-static@1.0.0/tag_plugins/tag_plugins.css
-
-# wowjs
-# see https://www.npmjs.com/package/hexo-butterfly-wowjs
-wowjs:
-  enable: false #控制动画开关。true是打开，false是关闭
-  priority: 10 #过滤器优先级
-  mobile: false #移动端是否启用，默认移动端禁用
-  animateitem:
-    - class: recent-post-item #必填项，需要添加动画的元素的class
-      style: animate__fadeIn #必填项，需要添加的动画
-      duration: 1.2s #选填项，动画持续时间，单位可以是ms也可以是s。例如3s，700ms。
-      delay: 200ms #选填项，动画开始的延迟时间，单位可以是ms也可以是s。例如3s，700ms。
-      offset: 20 #选填项，开始动画的距离（相对浏览器底部）
-      iteration: 1 #选填项，动画重复的次数
-    - class: card-widget
-      style: animate__fadeIn
-      delay: 0
-    - class: category-bar
-      style: animate__fadeIn
-      duration: .5s
-      delay: 0
-    - class: cf-article
-      style: animate__fadeIn
-      duration: 1.5s
-    # - class: flink-list-card
-    #   style: wowpanels
-    # - class: flink-list-card
-    #   style: animate__flipInY
-    #   duration: 1.5s
-    - class: article-sort-item
-      style: animate__fadeIn
-      duration: 1.5s
-    - class: site-card
-      style: animate__flipInY
-      duration: 1.5s
-  animate_css: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-wowjs/lib/animate.min.css
-  wow_js: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-wowjs/lib/wow.min.js
-  wow_init_js: https://jsd.cdn.zzko.cn/npm/hexo-butterfly-wowjs/lib/wow_init.js
-
+# 首页顶部相关配置
 home_top:
   enable: true # 开关
   timemode: date #date/updated
+  title: 生活明朗
+  subTitle: 万物可爱。
+  siteText: ANZHIY.CN
   category:
     - name: 前端
       path: /categories/前端开发/
@@ -1040,6 +980,7 @@ nav_music:
   console_widescreen_music: false # 宽屏状态控制台显示音乐而不是标签 enable为true 控制台依然会显示
   id: 8152976493
   server: netease
+  all_playlist: https://y.qq.com/n/ryqq/playlist/8802438608
 
 # 评论匿名邮箱
 visitorMail:
@@ -1138,7 +1079,6 @@ CDN:
     # coin_css:
     # countup_js:
     # gsap_js:
-    # about_js:
     # busuanzi:
     # rightmenu:
     # waterfall:

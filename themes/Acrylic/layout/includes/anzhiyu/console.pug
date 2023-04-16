@@ -18,7 +18,7 @@
           if nav_console_music_enable
             .author-content-item-tips 音乐
             span.author-content-item-title 灵魂的碰撞💥
-          else 
+          else
             .author-content-item-tips 兴趣点
             span.author-content-item-title 寻找你感兴趣的领域
             !=partial('includes/widget/card_tags', {}, {cache: true})
@@ -40,4 +40,40 @@
     .console-btn-item#consoleMusic(onclick='anzhiyu.musicToggle()', title='音乐开关')
       a.music-switch
         i.fas.fa-music
+    if theme.edit.enable && page.edit !== false
+      if is_post()
+        if theme.edit.gitlab_ide !== false
+          .console-btn-item
+            a.edit-gitlab-ide(href=theme.edit.gitlab_ide + 'posts/-/语雀/' + page.title + '.md' title=_p('edit.gitlab_ide') + ' - ' + page.title)
+              i.fa-solid.fa-code
+        if theme.edit.gitlab !== false
+          .console-btn-item
+            a.edit-gitlab(href=theme.edit.gitlab + 'posts/语雀/' + page.title + '.md' title=_p('edit.gitlab') + ' - ' + page.title)
+              i.fa-brands.fa-gitlab
+        if theme.edit.github !== false
+          .console-btn-item
+            a.edit-github(href=theme.edit.github + 'posts/语雀/' + page.title + '.md' title=_p('edit.github') + ' - ' + page.title)
+              i.fa-brands.fa-github
+        if theme.edit.yuque !== false
+          .console-btn-item
+            a.edit-yuque(href=theme.edit.yuque + page.id + '/edit' title=_p('edit.yuque') + ' - ' + page.title)
+              i.fa-solid.fa-crow
+      else if is_page() || is_category() || is_tag()
+        if theme.edit.gitlab_ide  !== false
+          .console-btn-item
+            a.edit-gitlab-ide(href=theme.edit.gitlab_ide + 'master/-/source/' + page.source title=_p('edit.gitlab_ide') + ' - ' + page.title)
+              i.fa-solid.fa-code
+        if theme.edit.gitlab !== false
+          .console-btn-item
+            a.edit-gitlab(href=theme.edit.gitlab + 'master/source/' + page.source title=_p('edit.gitlab') + ' - ' + page.title)
+              i.fa-brands.fa-gitlab
+        if theme.edit.github !== false
+          .console-btn-item
+            a.edit-github(href=theme.edit.github + 'master/source/' + page.source title=_p('edit.github') + ' - ' + page.title)
+              i.fa-brands.fa-github
+      else if is_home()
+        if theme.edit.gitlab_ide !== false
+          .console-btn-item
+            a.edit-gitlab-ide(href=theme.edit.gitlab_ide title=_p('edit.gitlab_ide'))
+              i.fa-solid.fa-code
   .console-mask(onclick='anzhiyu.hideConsole()', href='javascript:void(0);')
