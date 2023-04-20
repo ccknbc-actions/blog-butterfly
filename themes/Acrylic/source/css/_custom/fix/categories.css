@@ -1,4 +1,0 @@
-#page:has(#lib-cards):has(#libCategories) #post-comment .tk-comments-container > .tk-comment {
-  border: none;
-  box-shadow: none;
-}

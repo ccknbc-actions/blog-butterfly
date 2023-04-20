@@ -15,7 +15,7 @@ pretty_urls:
   trailing_html: false
 
 theme: butterfly
-# theme: Acrylic
+# theme: anzhiyu
 
 source_dir: source
 public_dir: public

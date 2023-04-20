@@ -198,18 +198,18 @@ cover:
   # left/right/both
   position: left
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
-  default_cover: https://gejiba.com/view.php/3c3845c98419b590d7f6b6c8ec6add1c.gif
+  default_cover: https://npm.elemecdn.com/hexo-theme-anzhiyu/source/img/default_cover.jpg
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
-  flink: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/photos@master/blog/2021-03-08~15-13-28.gif
-  post_page: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/photos@master/blog/2021-03-08~15-13-15.gif
+  flink: https://npm.elemecdn.com/hexo-theme-anzhiyu/source/img/404.jpg
+  post_page: https://npm.elemecdn.com/hexo-theme-anzhiyu/source/img/friend_404.gif
 
 # A simple 404 page
 error_404:
   enable: true
   subtitle: Oops! 页面不存在~
-  background: https://gejiba.com/view.php/3c3845c98419b590d7f6b6c8ec6add1c.gif
+  background: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/page-404.png
 
 post_meta:
   page: # Home Page
@@ -224,6 +224,18 @@ post_meta:
     categories: true # true or false 文章頁是否顯示分類
     tags: true # true or false 文章頁是否顯示標籤
     label: true # true or false 顯示描述性文字
+
+# 文章顶部ai摘要
+post_head_ai_description:
+  enable: true
+  gptName: CC
+  mode: local # 默认模式 可选值: tianli/local
+  switchBtn: true # 可以配置是否显示切换按钮 以切换tianli/local
+  btnLink: https://afdian.net/item/886a79d4db6711eda42a52540025c377
+  randomNum: 3 # 按钮最大的随机次数，也就是一篇文章最大随机出来几种
+  basicWordCount: 1000 # 最低获取字符数, 最小1000, 最大1999
+  key: VCtoijR43E2uiVWkrZiC
+  Referer: https://blog.ccknbc.cc/
 
 # wordcount (字數統計)
 wordcount:
@@ -291,7 +303,7 @@ edit:
 
 # Related Articles
 related_post:
-  enable: false
+  enable: true
   limit: 6 # Number of posts displayed
   date_type: created # or created or updated 文章日期顯示創建日或者更新日
 
