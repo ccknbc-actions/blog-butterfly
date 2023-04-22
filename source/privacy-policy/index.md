@@ -4,7 +4,7 @@ top_img: false
 translate_title: privacy-policy
 subtitle: Privacy Policy
 date: 2021-05-14 17:12:24
-updated: 2023-04-04 22:22:00
+updated: 2023-04-22 21:18:00
 description: CC的部落格 隐私政策
 ---
 本站非常重视用户的隐私和个人信息保护。您在使用网站时，可能会收集和使用您的相关信息。通过《隐私政策》向您说明在您访问 {% label blog.ccknbc.cc green %} 网站时，如何收集、使用、保存、共享和转让这些信息。由于本站性质为个人博客且为静态页面，暂未提供是否接受Cookies弹窗。即使我本人并不想搜集访客过多隐私信息，为了良好的浏览体验，默认启用全部功能，您可暂时使用隐私信息拦截插件去尽可能避免这种追踪。
@@ -34,14 +34,14 @@ description: CC的部落格 隐私政策
 
 
 <script src="https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/js/privacy.js"></script>
-| 类型<div style="width:100px"></div>          | 信息                                  |
-|:-----------:|:-----------------------------------:|
-| IP 地址       | <div id="userAgentIp"></div>                  |
-| 国家        | <div id="userAgentCountry"></div>                  |
-| 省份        | <div id="userAgentRegion"></div>                  |
-| 城市        | <div id="userAgentCity"></div>                  |
-| 运营商        | <div id="userAgentIsp"></div>                  |
-| 设备        | <div id="userAgentDevice"></div>                  |
+|  类型   |               信息                |
+| :-----: | :-------------------------------: |
+| IP 地址 |   <div id="userAgentIp"></div>    |
+|  国家   | <div id="userAgentCountry"></div> |
+|  省份   | <div id="userAgentRegion"></div>  |
+|  城市   |  <div id="userAgentCity"></div>   |
+| 运营商  |   <div id="userAgentIsp"></div>   |
+|  设备   | <div id="userAgentDevice"></div>  |
 <script type="text/javascript">getIpInfo()</script>
 
 ## 如何使用 Cookies 和本地 LocalStorage 存储
@@ -99,4 +99,13 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 
 我可能对此 Cookies 政策所做的任何更改都将发布在此页面上。如果更改很重要，我会在博客首页明确指出该政策已更新。
 
-{% btn '',最后修订时间：2023 年 4 月 24 日 22:22,fa-solid fa-history,block right green smaller %}
+{% btn '',最后修订时间：2023 年 4 月 22 日 21:22,fa-solid fa-history,block right green smaller %}
+
+
+
+
+
+
+
+
+

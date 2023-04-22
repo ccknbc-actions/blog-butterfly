@@ -8,16 +8,30 @@ if (workbox) {
 }
 
 self.addEventListener("install", async () => {
-    console.log("Service Worker 开始安装");
+    console.log("Service Worker 开始安装🎊");
     await self.skipWaiting();
 });
 
 self.addEventListener("activate", async () => {
-    console.log("Service Worker 安装完成，开始启动");
+    console.log("Service Worker 安装完成，开始启动✨");
     await self.clients.claim();
 });
 
-self.__WB_DISABLE_DEV_LOGS = false;
+self.__WB_DISABLE_DEV_LOGS = true;
+
+// 解决防盗链问题
+self.addEventListener('fetch', event => {
+    const url = new URL(event.request.url)
+    const domain = url.hostname
+    if (domain === 'cdn.nlark.com' || domain === 'pic1.afdiancdn.com' || domain === 'f.video.weibocdn.com' || domain === 'api.icodeq.com') {
+        event.respondWith(
+            fetch(event.request, {
+                referrerPolicy: 'no-referrer'
+
+            })
+        )
+    }
+})
 
 workbox.core.setCacheNameDetails({
     prefix: "CC的部落格",
@@ -126,23 +140,3 @@ workbox.routing.registerRoute(
     })
 );
 
-// 离线谷歌分析
-// workbox.googleAnalytics.initialize();
-
-// 拦截指定请求
-// self.addEventListener("fetch", async (event) => {
-//     console.log("运行中，拦截请求", event.request);
-//     const url = new URL(event.request.url);
-//     if (
-//         url.pathname == "/favicon.ico" &&
-//         url.searchParams.get("action") == "redirect"
-//     ) {
-//         // 拦截到后，处理业务再event.respondWith返回
-//         request = new Request(
-//             "https://jsd.cdn.zzko.cn/gh/CCKNBC/ccknbc.github.io@master/favicon.ico"
-//         );
-//         event.respondWith(fetch(request));
-//     } else {
-//         event.respondWith(fetch(event.request));
-//     }
-// });
