@@ -3,7 +3,7 @@ title: Hexo浏览器定向推送文章更新
 translate_title: hexo-webpushr-notification
 subtitle: Hexo Webpushr Notification
 date: 2022-10-05 00:00:00
-updated: 2023-02-20 13:59:00
+updated: 2023-04-22 20:25:00
 tags: [博客, 工具]
 keywords: [博客, 工具, hexo, web push, webpushr]
 categories: 博客
@@ -34,7 +34,7 @@ npm i hexo-webpushr-notification
 
 ```yaml
 webpushr:
-  enable: true # 是否启用推送插件
+  enable: true
 
   webpushrKey: "webpushrKey"
   webpushrAuthToken: "webpushrAuthToken"
@@ -50,25 +50,25 @@ webpushr:
   icon: "https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/image/pwa/192.png" # 必须为192*192 png图片
   # auto_hide: "0" # 默认为 1，代表true，即自动隐藏
   # sort: "date" # 默认为updated，即只要最新文章更改了更新时间即推送新文章，改为date即文章第一次发布时间
-  # delay: "30" # 延时推送，考虑到CDN缓存更新，默认定时为在 hexo d 10分钟后推送，单位为分钟（最短时间为5min）
+  # delay: "0" # 延时推送，考虑到CDN缓存更新，默认定时为在 hexo d 10分钟后推送，单位为分钟（最短延时为5分钟，设置 0 则会立即推送）
   # expire: "15d" # 推送过期时长，默认值为7天，格式如下：'5m'代表5分钟,'5h'代表5小时, '5d'代表5天.
   # image: # 默认为文章封面，Front-matter 属性为'cover'(butterfly主题友好选项)，如果您没有定义默认封面或此属性，请在这里设置默认image
-  action_buttons: #false # ，默认第一个按钮为前往查看文章，您可以关闭false后替换第二个按钮相关属性，因参数需求限制（本人太菜）否则将显示两个前往查看按钮
-    [{ "title": "订阅页面", "url": "https://blog.ccknbc.cc/sub" }]
+  action_buttons: # false # 默认两个按钮为 前往查看 ，您可在下方配置第二个按钮，或者设为 false 不显示按钮（因为隐藏按钮即为文章链接）
+    [{ "title": "订阅页面", "url": "https://blog.ccknbc.cc/sub/" }]
   # 以下配置为按订阅主题推送给不同订阅用户，请按照数组形式，一一对应，具体位置请看使用文档
   categories: [工作, 博客, 工具, 生活, 音乐, 学习]
   segment: ["484223", "484224", "484225", "484226", "484227", "484229"]
   endpoint: segment # 可选配置 all / segment / sid
   # 默认为 segment，即根据不同主题推送细分，同时配置上述选项
   # 官方文档参数见 https://docs.webpushr.com/introduction-to-rest-api
-  # 例如 all，即推送至所有用户；针对测试，可只推送给单个用户即自己，同时设置 sid 选项
-  # 您也可以将segment 设置为 all-users 对应的ID，同样也可以实现推送至所有用户
-  sid: "119810055" # 单个用户ID 可在控制台查看 https://app.webpushr.com/subscribers
+  # 例如 all，即推送至所有用户；针对测试，可只推送给单个用户即自己，同时配置下方的 sid 选项
+  # 您也可以将segment 设置为 all-users 对应的 segment，同样也可以实现推送至所有用户
+  sid: "119810055" # 单个用户ID 可在控制台查看 https://app.webpushr.com/subscribers，但建议您在测试完毕后注释此选项，以免打扰您
 
 
   # 此外，在文章 Frontmatter 处
   # 可覆盖auto_hide和expire配置，针对特别提醒文章可以设置不自动隐藏及过期时间延长等操作
-  # 以及可指定schedule参数（例如：schedule: 2022-10-01 00:00:00），定时推送，而非延时发送
+  # 以及可指定schedule参数（例如：schedule: 2022-10-01 00:00:00），定时推送
 ```
 
 1. 前往 webpushr 控制台获取如下参数，注册的时候可能会遇到一点困难，中国大陆用户需要科学上网来加载验证服务）
@@ -141,7 +141,7 @@ importScripts('https://cdn.webpushr.com/sw-server.min.js');
 }
 ```
 
-而他的来源就是我们在文章开头`FrontMatter`自定义的那些属性，而本插件针对`Butterfly`主题做了针对性修改，您也可以在您的模板文件目录下修改文章模板文件(`Hexo/scaffolds/post.md`)，主要针对性参数如下
+而他的来源就是我们在文章开头`Front-Matter`自定义的那些属性，而本插件针对`Butterfly`主题做了针对性修改，您也可以在您的模板文件目录下修改文章模板文件(`Hexo/scaffolds/post.md`)，主要针对性参数如下
 
 ```yaml
 date:
@@ -196,6 +196,6 @@ INFO  无文章更新 或 为首次推送更新
 
 ## 后续计划
 
-- [x] 兼容`Workbox`的功能，因为`webpushr-sw.js`的原因，只能有一个 `sw`注册。
-- [ ] 支持参数更多的可自定义，启用或关闭。例如不延时，立即发送；不显示`icon`, `image`, `按钮`（因为默认就是跳转到文章）等
-- [ ] 目前的判断逻辑，虽然可以根据更新时间来判断，但如果很久之前的文章翻新，只要更新时间最新，也会触发推送
+- [x] 兼容自定义`Service Work`的功能，因为`webpushr-sw.js`优先注册的原因，只能有一个 `sw`注册，无法注册自己编写脚本。
+- [x] 支持参数更多的可自定义，启用或关闭。例如不延时，立即发送；不显示按钮（因为默认就是跳转到文章）等
+- [ ] 目前的判断逻辑，虽然可以根据更新时间来判断，但如果很久之前的文章翻新，只要更新时间最新，也会触发推送，主要针对 updated 方式，还没想到好的解决办法，目前就是确认需要推送才更改更新时间咯
