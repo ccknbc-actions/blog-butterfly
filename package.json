@@ -8,7 +8,11 @@
     "deploy": "hexo deploy",
     "server": "hexo server",
     "yuque": "yuque-hexo sync && npm run build && npm run deploy",
-    "github": "npm run build && npm run deploy"
+    "github": "npm run build && npm run deploy",
+    "sync:yuque": "elog sync -a ./yuque/elog.cache.yuque.json",
+    "sync:notion": "elog sync -a ./notion/elog.cache.notion.json",
+    "clean:yuque": "elog clean -a ./yuque/elog.cache.yuque.json",
+    "clean:notion": "elog clean -a ./notion/elog.cache.notion.json"
   },
   "yuqueConfig": {
     "postPath": "/source/_posts/语雀",
@@ -47,7 +51,7 @@
     "hexo-server": "3.0.0",
     "hexo-tag-chart": "1.0.8",
     "hexo-tag-mmedia": "1.1.7",
-    "hexo-webpushr-notification": "0.1.2",
+    "hexo-webpushr-notification": "0.1.7",
     "hexo-wordcount": "6.0.1",
     "hexo-yam": "8.0.0",
     "markdown-it-task-lists": "2.1.1",

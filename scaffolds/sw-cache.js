@@ -31,6 +31,6 @@ module.exports.replaceList = {
     // 下面这个例子是把所有 jsd 的链接都重定向到甜莉的反代
     jsd: {
         source: ['//cdn.jsdelivr.net', '//test1.jsdelivr.net', '//gcore.jsdelivr.net'],
-        dist: '//jsd.cdn.zzko.cn'
+        dist: '//cdn1.tianli0.top'
     }
 }

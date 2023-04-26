@@ -3,6 +3,6 @@
     "config:base"
   ],
   "automerge": true,
-  "automergeType": "pr",
+  "automergeType": "branch",
   "pruneBranchAfterAutomerge": true
 }
