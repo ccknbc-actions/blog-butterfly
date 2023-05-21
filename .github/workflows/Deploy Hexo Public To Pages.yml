@@ -42,7 +42,6 @@ jobs:
 
       - name: Generate
         run: |
-          npm i -g hexo-cli yuque-hexo
           git clone -b posts git@github.com:ccknbc-actions/blog-butterfly.git source/_posts
           npm run github
 

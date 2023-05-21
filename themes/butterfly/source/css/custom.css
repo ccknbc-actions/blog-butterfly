@@ -78,8 +78,7 @@
     --docsearch-logo-color: #5468ff !important;
 }
 
-.DocSearch-Logo .cls-1,
-.DocSearch-Logo .cls-2 {
+.DocSearch-Logo .cls-1, .DocSearch-Logo .cls-2 {
     fill: var(--docsearch-logo-color) !important;
 }
 

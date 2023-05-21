@@ -54,7 +54,7 @@ copy:
 #   icon: link || the description || color
 social:
   fa-brands fa-github: https://github.com/CCKNBC || GitHub
-  fa-solid fa-envelope: mailto:blog@ccknbc.cc || Email
+  fa-solid fa-envelope: mailto:status@ccknbc.cc?contenttype=text/html&subject=CC的状态监控故障反馈&body=请告知CC服务异常详情&inquiry=yes || Email
   # fa-brands fa-bilibili: https://space.bilibili.com/1404413254 || 哔哩哔哩
   fa-brands fa-weibo: https://weibo.com/CommonCulture || 微博
   # fa-solid fa-crow: https://www.yuque.com/ccknbc || 语雀
@@ -1053,7 +1053,7 @@ instatus:
 
 mourn:
   enable: true
-  days: [4-5, 5-12, 7-7, 8-14, 9-9, 9-18, 9-30, 12-13]
+  days: [4-5, 5-12, 7-7, 9-18, 12-13]
 
 # PWA
 # See https://github.com/JLHwung/hexo-offline

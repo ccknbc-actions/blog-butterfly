@@ -212,7 +212,7 @@ exec ${HexoPath}/hexo.sh
 else
 if [ "$answer" = "14" ]; then
 printf "\033[32mINFO \033[0m 正在拉取语雀最新文章 ...\n"
-yuque-hexo sync
+npx yuque-hexo sync
 printf "\033[32mINFO \033[0m 语雀最新文章拉取完毕，您可以开始预览！\n"
 sleep 1s
 exec ${HexoPath}/hexo.sh
