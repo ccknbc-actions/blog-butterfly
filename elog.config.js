@@ -19,7 +19,7 @@ module.exports = {
   deploy: {
     platform: 'local',
     local: {
-      outputDir: './source/_posts/yuque/',
+      outputDir: './source/_posts/语雀/',
       filename: 'title',
       format: 'matter-markdown',
       catalog: true,

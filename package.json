@@ -32,6 +32,7 @@
     "version": "7.0.0-rc1"
   },
   "dependencies": {
+    "axios": "1.4.0",
     "hexo": "7.0.0-rc1",
     "hexo-butterfly-tag-plugins-plus": "1.0.17",
     "hexo-butterfly-wowjs": "1.0.5",
@@ -51,7 +52,6 @@
     "hexo-server": "3.0.0",
     "hexo-tag-chart": "1.0.8",
     "hexo-tag-mmedia": "1.1.7",
-    "hexo-webpushr-notification": "0.1.7",
     "hexo-wordcount": "6.0.1",
     "hexo-yam": "8.0.0",
     "markdown-it-task-lists": "2.1.1",
