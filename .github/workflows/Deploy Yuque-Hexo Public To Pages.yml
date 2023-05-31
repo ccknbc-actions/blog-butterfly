@@ -44,22 +44,22 @@ jobs:
         run: |
           npm ci
 
-      - name: Download Yuque Posts
+      - name: Download Elog Posts
         uses: dawidd6/action-download-artifact@v2
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
           branch: master
-          name: 'Yuque Posts'
+          name: 'Elog Posts'
           path: 'source/_posts'
           if_no_artifact_found: warn
 
-      - name: Download Yuque Cache
+      - name: Download Elog Cache
         uses: dawidd6/action-download-artifact@v2
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
           branch: master
-          name: 'Yuque Cache'
-          path: 'yuque'
+          name: 'Elog Cache'
+          path: 'elog'
           if_no_artifact_found: warn
 
       - name: Generate
@@ -68,17 +68,17 @@ jobs:
         # mkdir -p yuque
         # npx yuque-hexo sync
 
-      - name: Upload Yuque Cache
+      - name: Upload Elog Cache
         uses: actions/upload-artifact@v3
         with:
-          name: 'Yuque Cache'
-          path: yuque
+          name: 'Elog Cache'
+          path: elog
           retention-days: 90
 
-      - name: Upload Yuque Posts
+      - name: Upload Elog Posts
         uses: actions/upload-artifact@v3
         with:
-          name: 'Yuque Posts'
+          name: 'Elog Posts'
           path: 'source/_posts'
           retention-days: 90
 
@@ -86,7 +86,8 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: posts
-          folder: ./source/_posts/语雀/
+          folder: ./source/_posts/
+          force: false
           git-config-name: "github-actions[bot]"
           git-config-email: "github-actions[bot]@users.noreply.github.com"
           commit-message: ${{ github.event.head_commit.message }}

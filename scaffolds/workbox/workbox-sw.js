@@ -10,18 +10,17 @@ if (workbox) {
 workbox.precaching.cleanupOutdatedCaches();
 
 self.addEventListener("install", async () => {
-    console.log("Service Worker 开始安装🎊");
     await self.skipWaiting();
+    console.log("Service Worker 开始安装🎊");
 });
 
 self.addEventListener("activate", async () => {
-    console.log("Service Worker 安装完成，开始启动✨");
     await self.clients.claim();
+    console.log("Service Worker 安装完成，开始启动✨");
 });
 
 self.__WB_DISABLE_DEV_LOGS = true;
 
-// 解决防盗链问题
 self.addEventListener('fetch', event => {
     const url = new URL(event.request.url)
     const domain = url.hostname
@@ -32,7 +31,7 @@ self.addEventListener('fetch', event => {
             })
         )
     }
-})
+});
 
 workbox.core.setCacheNameDetails({
     prefix: "CC的部落格",

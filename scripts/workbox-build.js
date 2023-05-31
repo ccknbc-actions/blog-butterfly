@@ -3,7 +3,7 @@ const workboxBuild = require('workbox-build');
 hexo.on("deployBefore", async function () {
     const buildSW = () => {
         return workboxBuild.injectManifest({
-            swSrc: './workbox-sw.js',
+            swSrc: './scaffolds/workbox/workbox-sw.js',
             swDest: './public/sw.js',
             globDirectory: './public/',
             globPatterns: ['*/*.css', 'js/*.js', 'offline/index.html'],

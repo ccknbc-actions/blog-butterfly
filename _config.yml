@@ -430,7 +430,7 @@ webpushr:
   # 官方文档参数见 https://docs.webpushr.com/introduction-to-rest-api
   # 例如 all，即推送至所有用户；针对测试，可只推送给单个用户即自己，同时设置 sid 选项
   # 您也可以将segment 设置为 all-users 对应的ID，同样也可以实现推送至所有用户
-  # sid: "119810055" # 单个用户ID 可在控制台查看 https://app.webpushr.com/subscribers
+  # sid: "130391396" # 单个用户ID 可在控制台查看 https://app.webpushr.com/subscribers
 
   sw_self: true
 
