@@ -11,4 +11,6 @@ themes/butterfly/.git
 themes/anzhiyu/.git
 source/_posts
 yuque
-elog.cache.json
+elog/.elog.env
+elog/elog.cache.notion.json
+elog/elog.cache.yuque.json

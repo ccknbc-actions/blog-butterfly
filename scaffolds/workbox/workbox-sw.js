@@ -10,25 +10,33 @@ if (workbox) {
 workbox.precaching.cleanupOutdatedCaches();
 
 self.addEventListener("install", async () => {
-    console.log("Service Worker 开始安装🎊");
     await self.skipWaiting();
+    console.log("Service Worker 开始安装🎊");
 });
 
 self.addEventListener("activate", async () => {
-    console.log("Service Worker 安装完成，开始启动✨");
     await self.clients.claim();
+    console.log("Service Worker 安装完成，开始启动✨");
 });
 
 self.__WB_DISABLE_DEV_LOGS = true;
 
-// 解决防盗链问题
-self.addEventListener('fetch', event => {
+self.addEventListener('fetch', (event) => {
     const url = new URL(event.request.url)
     const domain = url.hostname
-    if (domain === 'cdn.nlark.com' || domain === 'pic1.afdiancdn.com' || domain === 'f.video.weibocdn.com' || domain === 'api.icodeq.com') {
+
+    if (domain === 'http://cdn.nlark.com' || domain === 'http://pic1.afdiancdn.com' || domain === 'http://f.video.weibocdn.com' || domain === 'http://api.icodeq.com') {
         event.respondWith(
             fetch(event.request, {
                 referrerPolicy: "no-referrer"
+            })
+        )
+    }
+
+    if (event.request.url.endsWith('/prompt/bell')) {
+        event.respondWith(
+            fetch('http://webpushr.com/prompt/bell', {
+                mode: 'no-cors'
             })
         )
     }

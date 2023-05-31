@@ -7,12 +7,14 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "yuque": "npx yuque-hexo sync && npm run build && npm run deploy",
+    "yuque": "npm run sync:yuque && npm run build && npm run deploy",
     "github": "npm run build && npm run deploy",
-    "sync:yuque": "elog sync -a ./yuque/elog.cache.yuque.json",
-    "sync:notion": "elog sync -a ./notion/elog.cache.notion.json",
-    "clean:yuque": "elog clean -a ./yuque/elog.cache.yuque.json",
-    "clean:notion": "elog clean -a ./notion/elog.cache.notion.json"
+    "local:yuque": "npx elog sync -c ./elog/elog.config.yuque.js -e ./elog/.elog.env -a ./elog/elog.cache.yuque.json",
+    "local:notion": "npx elog sync -c ./elog/elog.config.notion.js -e ./elog/.elog.env -a ./elog/elog.cache.notion.json",
+    "sync:yuque": "npx elog sync -c ./elog/elog.config.yuque.js -a ./elog/elog.cache.yuque.json",
+    "sync:notion": "npx elog sync -c ./elog/elog.config.notion.js' -a ./elog/elog.cache.notion.json",
+    "clean:yuque": "npx elog clean -c ./elog/elog.config.yuque.js' -a ./elog/elog.cache.yuque.json",
+    "clean:notion": "npx elog clean -c ./elog/elog.config.notion.js -a ./elog/elog.cache.notion.json"
   },
   "yuqueConfig": {
     "postPath": "/source/_posts/语雀",
@@ -32,6 +34,7 @@
     "version": "7.0.0-rc1"
   },
   "dependencies": {
+    "@elog/cli": "0.4.4-beta.1",
     "axios": "1.4.0",
     "hexo": "7.0.0-rc1",
     "hexo-butterfly-tag-plugins-plus": "1.0.17",
@@ -55,7 +58,6 @@
     "hexo-wordcount": "6.0.1",
     "hexo-yam": "8.0.0",
     "markdown-it-task-lists": "2.1.1",
-    "workbox-build": "6.5.4",
-    "yuque-hexo": "1.9.5"
+    "workbox-build": "6.6.1"
   }
 }

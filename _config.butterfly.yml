@@ -229,7 +229,7 @@ post_meta:
 post_head_ai_description:
   enable: true
   gptName: CC
-  mode: tianli # 默认模式 可选值: tianli/local
+  mode: local # 默认模式 可选值: tianli/local
   switchBtn: true # 可以配置是否显示切换按钮 以切换tianli/local
   btnLink: https://tianli-blog.club/tianligpt/
   randomNum: 3 # 按钮最大的随机次数，也就是一篇文章最大随机出来几种
@@ -846,8 +846,8 @@ aside:
       text: 多种订阅更新方式
       link: /sub/
   card_announcement:
-    enable: false
-    content:
+    enable: true
+    content: <div id="webpushr-subscription-button" data-background-color="#8fbc8f" data-size="small" data-button-text="订阅更新/通知" data-subscriber-count-text="位用户已订阅"></div> 点击按钮修改您的订阅配置 <span id="webpushr-subscription-toggle-button" data-size="1.5" data-text-when-denied="请点击按钮允许 CC的部落格 通知权限" data-color="#8fbc8f"></span>
     # '<center><iframe src="https://cc.instatus.com/embed-status/light-sm" loading="lazy" width="158" height="43" frameBorder="0" scrolling="no" style="border: none;" ></iframe><div id="he-plugin-standard"></div><script>WIDGET = {  "CONFIG": {    "layout": "2",    "width": "230",    "height": "290",    "background": "1",    "dataColor": "FFFFFF",    "borderRadius": "5",    "key": "dac79a62255345c9b4a31b585c3434a4"  }}</script><script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
     # <center>
     # <a target="_blank" href="https://hexo.io"><img src="https://img.shields.io/badge/Frame-Hexo 5.3.0-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><br>
