@@ -52,17 +52,16 @@
 
 /* Webpushr */
 
-[data-theme=dark] .webpushr-bell-theme-dark prompticon3 {
-    background: var(--btn-bg);
-}
-
-.webpushr-bell-theme-dark prompticon3 {
+.webpushr-bell-theme-dark prompticon3, .promptglowingcircle {
     z-index: auto;
-    opacity: 0.8;
     background: var(--btn-bg);
 }
 
-[data-theme=dark] promptglowingcircle {
+[data-theme=dark] .webpushr-bell-theme-dark prompticon3, .promptglowingcircle {
+    background: var(--btn-bg);
+}
+
+[data-theme=dark] .promptglowingcircle {
     border: #FFFFFFB3 1px solid;
 }
 
@@ -78,8 +77,7 @@
     --docsearch-logo-color: #5468ff !important;
 }
 
-.DocSearch-Logo .cls-1,
-.DocSearch-Logo .cls-2 {
+.DocSearch-Logo .cls-1, .DocSearch-Logo .cls-2 {
     fill: var(--docsearch-logo-color) !important;
 }
 
