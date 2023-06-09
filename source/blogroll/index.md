@@ -34,6 +34,77 @@ xkFriend.init({
 {% btn '#post-comment',给 CC 留言,fa-solid fa-comments,outline green smaller %}
 或再次 PR  {% endnote %}
 
+<p style="padding:0 0 0 .8rem">
+    请<strong>勾选</strong>你符合的条件，满足所有条件才可评论申请：
+</p>
+<div id="friendlink_checkboxs" style="padding:0 0 0 1.6rem">
+    <p>
+        <label class="checkbox">
+            <input type="checkbox" id="checkbox1" onclick="checkForm()">
+            我已添加  <b>CC的部落格</b>的友情链接
+        </label>
+    </p>
+    <p>
+        <label class="checkbox">
+            <input type="checkbox" id="checkbox2" onclick="checkForm()">
+            我的链接主体为<b>个人</b>，网站类型为<b>博客</b>
+        </label>
+    </p>
+    <p>
+        <label class="checkbox">
+            <input type="checkbox" id="checkbox3" onclick="checkForm()">我的网站现在可以在中国大陆区域正常访问
+        </label>
+    </p>
+    <p>
+        <label class="checkbox">
+            <input type="checkbox" id="checkbox4" onclick="checkForm()">网站内容符合中国大陆法律法规
+        </label>
+    </p>
+    <p>
+        <label class="checkbox">
+            <input type="checkbox" id="checkbox5" onclick="checkForm()">我的网站可以在1分钟内加载完成首屏
+        </label>
+    </p>
+</div>
+
+<script>
+    var walineSubmit = document.getElementsByClassName("wl-comment")[0];
+    if (walineSubmit) {
+        walineSubmit.style.opacity = "0";
+    }
+    function checkForm() {
+        var checkbox1 = document.getElementById("checkbox1");
+        var checkbox2 = document.getElementById("checkbox2");
+        var checkbox3 = document.getElementById("checkbox3");
+        var checkbox4 = document.getElementById("checkbox4");
+        var checkbox5 = document.getElementById("checkbox5");
+        var walineSubmit = document.getElementsByClassName("wl-comment")[0];
+        if (checkbox1.checked && checkbox2.checked && checkbox3.checked && checkbox4.checked && checkbox5.checked) {
+            walineSubmit.style.opacity = "1";
+            walineSubmit.style.height = "auto";
+            walineSubmit.style.overflow = "auto";
+            var input = document.getElementsByClassName("wl-editor")[0];
+            let evt = new Event('input');
+            input.dispatchEvent(evt);
+            input.value = '昵称: \n博客链接: \n头像链接: \n描述: \n';
+            input.setSelectionRange(-1, -1);
+        } else {
+            walineSubmit.style.opacity = "0";
+            walineSubmit.style.height = "0";
+            walineSubmit.style.overflow = "hidden";
+        }
+    }
+</script>
+
+<style>
+    .wl-comment {
+        opacity: 0;
+        height: 0;
+        transition: opacity .5s, height .5s;
+        overflow: hidden;
+    }
+</style>
+
 <!-- {% link 顺便看看友链截图列表，您可复制使用啦, https://cdn1.tianli0.top/gh/ccknbc-actions/blogroll@webp/, https://cdn1.tianli0.top/www.jsdelivr.com/c903573129ce0afdbc8b006baf86dba514615495/img/logo-horizontal.svg %} -->
 
 <!-- {% ghcard ccknbc-actions/blogroll, theme=vue %}  -->

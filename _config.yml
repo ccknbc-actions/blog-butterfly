@@ -255,8 +255,10 @@ mmedia:
         lrcType: 3
   meting:
     js: https://cdn1.tianli0.top/npm/meting/dist/Meting.min.js
-    api:
+    api: https://music.startly.cn/ # https://meting.ccknbc.cc/api （备用，支持 YouTube Spotify）
     default:
+      theme: '#8fbc8f'
+      list-folded: true
   dplayer:
     js: https://cdn1.tianli0.top/npm/dplayer/dist/DPlayer.min.js
     hls_js: https://cdn1.tianli0.top/npm/hls.js/dist/hls.min.js
