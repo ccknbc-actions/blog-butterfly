@@ -17,7 +17,18 @@ self.addEventListener("install", async () => {
 self.addEventListener("activate", async () => {
     await self.clients.claim();
     console.log("Service Worker 安装完成，开始启动✨");
+    self.clients.matchAll().then((clients) => {
+        clients.forEach((client) => client.postMessage({ type: "refresh" }));
+    });
 });
+
+self.addEventListener("message", (event) => {
+    if (event.data && event.data.type === "skipWaiting") {
+        console.log("收到跳过等待请求");
+        self.skipWaiting();
+    }
+});
+
 
 self.__WB_DISABLE_DEV_LOGS = true;
 

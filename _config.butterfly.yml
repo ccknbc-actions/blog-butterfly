@@ -572,12 +572,12 @@ footer:
     enable: true
     url: https://beian.miit.gov.cn
     text: 鄂 ICP 备 2020019764 号
-    # icon: https://cdn1.tianli0.top/gh/ccknbc-backup/cdn/logo/icp.png
+    icon: https://cdn1.tianli0.top/gh/ccknbc-backup/cdn/logo/icp.png
   gongan: # Chinese Gongan License
     enable: true
     url: https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42088102000092
     text: 鄂公网安备 42088102000092 号
-    # icon: https://cdn1.tianli0.top/gh/ccknbc-backup/cdn/logo/gongan.png
+    icon: https://cdn1.tianli0.top/gh/ccknbc-backup/cdn/logo/gongan.png
   upyun: # Chinese Gongan License
     enable: false
     url: https://www.upyun.com
@@ -851,7 +851,7 @@ aside:
       text: 多种订阅更新方式
       link: /sub/
   card_announcement:
-    enable: true
+    enable: false
     content: <div id="webpushr-subscription-button" data-background-color="#8fbc8f" data-size="small" data-button-text="订阅更新/通知" data-subscriber-count-text="位用户已订阅"></div> 点击按钮修改您的订阅配置 <span id="webpushr-subscription-toggle-button" data-size="1.5" data-text-when-denied="请点击按钮允许 CC的部落格 通知权限" data-color="#8fbc8f"></span>
     # '<center><iframe src="https://cc.instatus.com/embed-status/light-sm" loading="lazy" width="158" height="43" frameBorder="0" scrolling="no" style="border: none;" ></iframe><div id="he-plugin-standard"></div><script>WIDGET = {  "CONFIG": {    "layout": "2",    "width": "230",    "height": "290",    "background": "1",    "dataColor": "FFFFFF",    "borderRadius": "5",    "key": "dac79a62255345c9b4a31b585c3434a4"  }}</script><script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
     # <center>
@@ -1082,7 +1082,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    - <script>if('serviceWorker'in navigator)navigator.serviceWorker.register('/sw.js',{scope:'/'}).then(reg=>reg.oncontrollerchange=()=>location.reload());</script>
+    - <script>"serviceWorker"in navigator&&(navigator.serviceWorker.register("/sw.js",{scope:"/"}).then(e=>{e.onupdatefound=(()=>{const r=e.installing;r.onstatechange=(()=>{"installed"===r.state&&(navigator.serviceWorker.controller?(console.log("新的Service Worker已安装"),navigator.serviceWorker.controller.postMessage({type:"skipWaiting"})):console.log("第一次注册Service Worker"))})})}),navigator.serviceWorker.addEventListener("message",e=>{e.data&&"refresh"===e.data.type&&(console.log("收到刷新页面请求，开始刷新页面"),window.location.reload())}));</script>
     # - "<script>if(!!navigator.serviceWorker){navigator.serviceWorker.register('/cw.js?t='+new Date().getTime()).then(async(registration)=>{if(localStorage.getItem('cw_installed')!=='true'){const conf=()=>{console.log('[CW] Installing Success,Configuring...');fetch('/cw-cgi/api?type=config').then(res=>res.text()).then(text=>{if(text==='ok'){console.log('[CW] Installing Success,Configuring Success,Starting...');localStorage.setItem('cw_installed','true');fetch(window.location.href).then(res=>res.text()).then(text=>{document.open()document.write(text);document.close()})}else{console.log('[CW] Installing Success,Configuring Failed,Sleeping 200ms...');setTimeout(()=>{conf()},200)}}).catch(err=>{console.log('[CW] Installing Success,Configuring Error,Exiting...')})}setTimeout(()=>{conf()},50)}}).catch(err=>{console.error('[CW] Installing Failed,Error: '+err.message)})}else{console.error('[CW] Installing Failed,Error: Browser not support service worker')}</>"
     # - <style type="text/css">.app-refresh{position:fixed;top:-2.2rem;left:0;right:0;z-index:99999;padding:0 1rem;font-size:15px;height:2.2rem;transition:all .3s ease}.app-refresh-wrap{display:flex;color:#fff;height:100%;align-items:center;justify-content:center}.app-refresh-wrap a{color:#fff;text-decoration:underline;cursor:pointer}</style>
   bottom:
