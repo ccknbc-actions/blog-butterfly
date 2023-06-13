@@ -16,25 +16,11 @@
     "clean:yuque": "npx elog clean -c ./elog/elog.config.yuque.js' -a ./elog/elog.cache.yuque.json",
     "clean:notion": "npx elog clean -c ./elog/elog.config.notion.js -a ./elog/elog.cache.notion.json"
   },
-  "yuqueConfig": {
-    "postPath": "/source/_posts/语雀",
-    "cachePath": "/yuque/cache.json",
-    "lastGeneratePath": "/yuque/lastGeneratePath.log",
-    "mdNameFormat": "title",
-    "adapter": "markdown",
-    "concurrency": "5",
-    "timeout": "100s",
-    "baseUrl": "https://www.yuque.com/api/v2",
-    "login": "ccknbc",
-    "repo": "blog",
-    "onlyPublished": true,
-    "onlyPublic": false
-  },
   "hexo": {
     "version": "7.0.0-rc1"
   },
   "dependencies": {
-    "@elog/cli": "0.4.4-beta.1",
+    "@elog/cli": "0.4.4",
     "axios": "1.4.0",
     "hexo": "7.0.0-rc1",
     "hexo-butterfly-tag-plugins-plus": "1.0.17",

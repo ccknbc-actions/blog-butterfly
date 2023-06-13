@@ -22,14 +22,6 @@ self.addEventListener("activate", async () => {
     });
 });
 
-self.addEventListener("message", (event) => {
-    if (event.data && event.data.type === "skipWaiting") {
-        console.log("收到跳过等待请求");
-        self.skipWaiting();
-    }
-});
-
-
 self.__WB_DISABLE_DEV_LOGS = true;
 
 self.addEventListener('fetch', event => {

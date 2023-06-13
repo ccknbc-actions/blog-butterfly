@@ -10,7 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Shanghai
-      # ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
       YUQUE_TOKEN: ${{ secrets.YUQUE_TOKEN }}
       webpushrKey: ${{ secrets.WEBPUSHR_KEY }}
       webpushrAuthToken: ${{ secrets.WEBPUSHR_AUTH_TOKEN }}

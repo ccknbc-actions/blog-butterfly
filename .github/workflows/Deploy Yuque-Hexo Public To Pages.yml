@@ -12,7 +12,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Shanghai
-      # ALGOLIA_ADMIN_API_KEY: ${{ secrets.ALGOLIA_ADMIN_API_KEY }}
       YUQUE_TOKEN: ${{ secrets.YUQUE_TOKEN }}
       webpushrKey: ${{ secrets.WEBPUSHR_KEY }}
       webpushrAuthToken: ${{ secrets.WEBPUSHR_AUTH_TOKEN }}
@@ -65,8 +64,6 @@ jobs:
       - name: Generate
         run: |
           npm run yuque
-        # mkdir -p yuque
-        # npx yuque-hexo sync
 
       - name: Upload Elog Cache
         uses: actions/upload-artifact@v3

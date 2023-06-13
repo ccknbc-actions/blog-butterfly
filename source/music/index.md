@@ -21,7 +21,7 @@ https://meting.ccknbc.cc/api 支持 Netease, QQ, YouTube Music, Spotify -->
 
 {% folding green open, Three Man Down × Tilly Birds %}
 <!-- {% note green 'fa-solid fa-dice-three' simple %}Three Man Down × Tilly Birds{% endnote %} -->
-<meting-js server="netease" type="playlist" id="5457110860" list-folded="true" theme="#8fbc8f">
+<meting-js server="netease" type="playlist" id="5457110860" list-folded="true" theme="#8fbc8f"></meting-js>
 {% note info simple %}2022年8月22日 Ohm宣布因个人原因退出乐队，"TMD"因此也成为了缺少贝斯手的乐队{% endnote %}
 {% endfolding %}
 
@@ -30,9 +30,9 @@ https://meting.ccknbc.cc/api 支持 Netease, QQ, YouTube Music, Spotify -->
 {% endfolding %}
 
 {% folding blue, 王铮亮2023“还是爱着”全国巡演（网易云音乐） %}
-<meting-js server="netease" type="playlist" id="8448821577" list-folded="true" theme="#8fbc8f">
+<meting-js server="netease" type="playlist" id="8448821577" list-folded="true" theme="#8fbc8f"></meting-js>
 {% endfolding %}
 
 {% folding blue, 王铮亮2023“还是爱着”全国巡演（QQ音乐） %}
-<meting-js server="tencent" type="playlist" id="8913885866" list-folded="true" theme="#8fbc8f">
+<meting-js server="tencent" type="playlist" id="8913885866" list-folded="true" theme="#8fbc8f"></meting-js>
 {% endfolding %}
