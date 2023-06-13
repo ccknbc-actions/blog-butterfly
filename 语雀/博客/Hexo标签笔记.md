@@ -6,7 +6,7 @@ date: 2021-03-05T12:00:00.000Z
 updated: 2021-05-16T12:00:00.000Z
 tags: 博客
 categories: 博客
-description: CC的部落格 外挂标签笔记
+description: CC的部落格 Hexo标签笔记
 translate_title: introduction-of-plugin-tags-based-on-butterfly
 subtitle: Introduction Of Plugin Tags Based On Butterfly
 id: 22
@@ -14,7 +14,7 @@ cover: "https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/
 hide: false
 ---
 
-{% note green success modern %}CC 的部落格 外挂标签笔记 ，其中大部分完整转载至糖果屋店长原文，根据本站实际情况进行了增减，仅保留源码和参数说明部分，若要查看具体效果，可前往{% link 糖果屋教程贴, https://akilar.top/posts/615e2dec/, https://cdn.jsdelivr.net/gh/Akilarlxh/akilarlxh.github.io/img/siteicon/favicon.ico %}{% endnote %}
+{% note green success modern %}CC 的部落格 Hexo 标签笔记 ，其中大部分完整转载至糖果屋店长原文，根据本站实际情况进行了增减，仅保留源码和参数说明部分，若要查看具体效果，可前往{% link 糖果屋教程贴, https://akilar.top/posts/615e2dec/, https://cdn.jsdelivr.net/gh/Akilarlxh/akilarlxh.github.io/img/siteicon/favicon.ico %}{% endnote %}
 
 ## 按钮 Button
 
@@ -155,7 +155,7 @@ note:
   light_bg_offset: 0
 ```
 
-`Note`标签外挂有两种用法。`icons`和`light_bg_offset`只对方法一生效。
+`Note`标签有两种用法。`icons`和`light_bg_offset`只对方法一生效。
 
 方法一
 
@@ -588,7 +588,7 @@ ghcard 使用了`github-readme-stats`的 API，支持直接使用 markdown 语�
 7. `option`：自定义参数，支持[shields.io](https://shields.io/)的全部 API 参数支持，具体参数可以参看上文中的拓展写法示例。形式为`name1=value2&name2=value2`。
 
 {% note info modern %}
-本外挂标签的参数分为三组，用`||`分割。
+本标签的参数分为三组，用`||`分割。
 {% endnote %}
 
 1.  基本参数,定义徽标左右文字和图标
