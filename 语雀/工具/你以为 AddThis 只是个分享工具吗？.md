@@ -3,7 +3,7 @@ title: 你以为 AddThis 只是个分享工具吗？
 urlname: "26"
 author: CC康纳百川
 date: 2021-05-15T21:00:00.000Z
-updated: 2021-05-18T12:00:00.000Z
+updated: 2023-06-25T20:44:00.000Z
 translate_title: the-real-addthis
 subtitle: The Real Addthis
 tags: 工具
@@ -18,6 +18,32 @@ id: 26
 
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/26/)，
 自动同步更新至[**CC 的部落格**](https://blog.ccknbc.cc/the-real-addthis/)
+
+## 本文作废
+
+## Notice of Termination of AddThis Services.
+
+### **What’s Changing?**
+
+As part of a periodic product portfolio review, Oracle has made the business decision to terminate all AddThis services effective as of May 31, 2023.
+![](https://cdn.nlark.com/yuque/0/2023/svg/8391407/1687697102686-a8f7d67f-e0d7-4a91-8f75-7328ced3de35.svg#clientId=ue2da133d-1f48-4&from=paste&id=u9b6a40f1&originHeight=150&originWidth=200&originalType=url&ratio=1.25&rotation=0&showTitle=false&status=done&style=none&taskId=u56108136-5207-40b8-a18a-a242b3b1260&title=)
+
+### **Key Dates**
+
+Existing AddThis users can expect that after May 31, 2023:
+
+- the user must immediately cease its use of AddThis services, and promptly remove all AddThis related code and technology from its websites;
+- AddThis buttons may disappear from the user’s websites;
+- the AddThis dashboard associated with the user’s registration for AddThis, and all support for AddThis services, will no longer be available;
+- all features of AddThis configured to interoperate with user’s websites, any other Oracle services, or any third-party tools and plug-ins will no longer function.
+
+Oracle thanks you for your attention and understanding in this matter, and for the many years of allowing Oracle to provide this service to you.
+
+### **How Do I Uninstall the AddThis Button?**
+
+If you’ve copied and pasted the code into your website, go back into the code and look for <!-- ADDTHIS BUTTON BEGIN --> and <!-- ADDTHIS BUTTON END -->, then delete these lines and any code between them. If you’ve used another method to install AddThis on your page, please contact us and we’ll be happy to help you.
+
+总结：终止服务，主题已移除
 
 ## Butterfly 如何使用
 

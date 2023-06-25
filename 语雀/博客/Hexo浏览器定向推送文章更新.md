@@ -3,7 +3,7 @@ title: Hexo浏览器定向推送文章更新
 urlname: "37"
 author: CC康纳百川
 date: 2022-10-05T00:00:00.000Z
-updated: 2023-04-22T20:25:00.000Z
+updated: 2023-06-25T20:25:00.000Z
 translate_title: hexo-webpushr-notification
 subtitle: Hexo Webpushr Notification
 tags:
@@ -35,11 +35,18 @@ id: 37
 npm i hexo-webpushr-notification
 ```
 
+### 自定义修改
+
 当然你也可以自定义修改[webpushr.js](https://github.com/Rock-Candy-Tea/hexo-webpushr-notification/blob/main/webpushr.js)文件后，再安装相关需要依赖，然后将文件放到`Hexo/scripts/`目录下即可正常运行，CC 本人亦是如此
+对于 0.2.0 以上版本，您只需要在 Hexo 所在目录安装 axios 即可，这样测试相较于安装 GitHub 更方便（以及欢迎 PR ）
+
+```yaml
+npm i axios
+```
 
 ## 使用
 
-在你的 Hexo 根目录配置文件 `_config.yml`中添加如下内容，可按需配置
+在你的 Hexo 根目录配置文件 `_config.yml`中添加如下内容，可按需配置，建议前往 [README](https://github.com/Rock-Candy-Tea/hexo-webpushr-notification#readme) 查看最新配置
 
 ```yaml
 webpushr:
@@ -55,29 +62,35 @@ webpushr:
   #     webpushrAuthToken: ${{ secrets.WEBPUSHR_AUTH_TOKEN }}
   # 如果您的仓库私有，则无需担心此问题
 
-  trackingCode: "BB9Y-w9p3u0CKA7UP9nupB6I-_NqE2MuODmKJjyC4W2YflX06Ff_hEhrNJfonrut5l6gCa28gC83q2OII7Qv-oA"
-  icon: "https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/image/pwa/192.png" # 必须为192*192 png图片
-  # auto_hide: "0" # 默认为 1，代表true，即自动隐藏
+  trackingCode: "trackingCode"
+  icon: "https://.../192.png" # 必须为 HTTPS 以及 192*192 png图片
+  # auto_hide: false # 默认为 1，代表true，即自动隐藏
   # sort: "date" # 默认为updated，即只要最新文章更改了更新时间即推送新文章，改为date即文章第一次发布时间
   # delay: "0" # 延时推送，考虑到CDN缓存更新，默认定时为在 hexo d 10分钟后推送，单位为分钟（最短延时为5分钟，设置 0 则会立即推送）
   # expire: "15d" # 推送过期时长，默认值为7天，格式如下：'5m'代表5分钟,'5h'代表5小时, '5d'代表5天.
   # image: # 默认为文章封面，Front-matter 属性为'cover'(butterfly主题友好选项)，如果您没有定义默认封面或此属性，请在这里设置默认image
-  action_buttons: # false # 默认两个按钮为 前往查看 ，您可在下方配置第二个按钮，或者设为 false 不显示按钮（因为隐藏按钮即为文章链接）
-    [{ "title": "订阅页面", "url": "https://blog.ccknbc.cc/sub/" }]
+  action_buttons: # 如果你需要额外自定义按钮 可按照如下格式：
+    - title: 阅读全文 # 当 title 未配置时 默认值为 “前往查看”
+      # url:  # 当 url 未配置时 默认值为 最新文章链接
+    - title: 订阅页面
+      url: https://blog.ccknbc.cc/sub/
+    # 当 action_buttons 未定义时也默认保留了一个“前往查看”按钮，除非设置为 false
+    # action_buttons: false # 当设为 false 则不显示额外的按钮，因为隐藏按钮即为当前文章链接
+
   # 以下配置为按订阅主题推送给不同订阅用户，请按照数组形式，一一对应，具体位置请看使用文档
   categories: [工作, 博客, 工具, 生活, 音乐, 学习]
   segment: ["484223", "484224", "484225", "484226", "484227", "484229"]
   endpoint: segment # 可选配置 all / segment / sid
   # 默认为 segment，即根据不同主题推送细分，同时配置上述选项
-  # 官方文档参数见 https://docs.webpushr.com/introduction-to-rest-api
-  # 例如 all，即推送至所有用户；针对测试，可只推送给单个用户即自己，同时配置下方的 sid 选项
-  # 您也可以将segment 设置为 all-users 对应的 segment，同样也可以实现推送至所有用户
-  sid: "119810055" # 单个用户ID 可在控制台查看 https://app.webpushr.com/subscribers，但建议您在测试完毕后注释此选项，以免打扰您
+  # 例如 all，即推送至所有用户；针对本地测试，建议只推送给单个用户即自己，同时设置下方的 sid 值
+  # 您也可以将segment 设置为 all-users 对应的ID，同样也可以实现推送至所有用户
+  sid: "119810055" # 单个用户ID 可在控制台查看 https://app.webpushr.com/subscribers
 
 
-  # 此外，在文章 Frontmatter 处
-  # 可覆盖auto_hide和expire配置，针对特别提醒文章可以设置不自动隐藏及过期时间延长等操作
+  # 此外，在文章 Front-Matter 处
+  # 可覆盖 auto_hide 和 expire 配置，针对需要特别提醒文章可以设置不自动隐藏及过期时间延长等操作
   # 以及可指定schedule参数（例如：schedule: 2022-10-01 00:00:00），定时推送
+  # 当文章头设置 webpushr: false 时，可关闭本篇文章推送，此参数主要防止久远文章更改更新时间后自动推送
 ```
 
 1. 前往 webpushr 控制台获取如下参数，注册的时候可能会遇到一点困难，中国大陆用户需要科学上网来加载验证服务）
@@ -99,7 +112,7 @@ webpushr('setup',{'key':'BKOlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLvbj
 
 ## 额外配置
 
-因官方 sw 脚本注册后，我们无法注册自己的 sw 脚本，但官方提供了配置，方便我们使用 sw 的缓存，拦截请求等功能，目前的 BUG 不影响使用，主要是会在非根目录页面请求不存在的 `/path/sw.js`文件，或者我该去问问 webpushr 官方怎么办，不修改官方 js 的情况下
+因官方 sw 脚本注册后，我们无法注册自己的 sw 脚本，但官方提供了配置，方便我们使用 sw 的缓存，拦截请求等功能
 
 首先在配置项中添加 `sw_self: true `配置，开启自行注册 sw（默认用户不用添加或者设为 `false`）
 
@@ -137,14 +150,12 @@ importScripts('https://cdn.webpushr.com/sw-server.min.js');
 ```json
 {
   "title": "Hexo浏览器定向推送文章更新",
-  "updated": "2023-02-20T13:59:00+08:00",
+  "updated": "2023-04-22T20:25:00+08:00",
   "message": "这一次，CC的部落格可以根据读者订阅主题定向推送了，并且实现了NPM插件化",
-  "path": "posts/hexo-webpushr-notification/",
   "target_url": "https://blog.ccknbc.cc/posts/hexo-webpushr-notification/",
-  "image": "***.png",
-  "tags": ["博客", "工具"],
+  "image": "https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/d2a947d48815ed24936a919873b97841_w1366_h768_s31.png",
   "categories": ["博客"],
-  "schedule": "2023-03-05T11:23:23.340Z",
+  "schedule": "2023-06-13T15:16:41.187Z",
   "expire": "7d",
   "auto_hide": "1"
 }
@@ -207,4 +218,4 @@ INFO  无文章更新 或 为首次推送更新
 
 - [x] 兼容自定义`Service Work`的功能，因为`webpushr-sw.js`优先注册的原因，只能有一个 `sw`注册，无法注册自己编写脚本。
 - [x] 支持参数更多的可自定义，启用或关闭。例如不延时，立即发送；不显示按钮（因为默认就是跳转到文章）等
-- [ ] 目前的判断逻辑，虽然可以根据更新时间来判断，但如果很久之前的文章翻新，只要更新时间最新，也会触发推送，主要针对 updated 方式，还没想到好的解决办法，目前就是确认需要推送才更改更新时间咯
+- [x] 目前的判断逻辑，虽然可以根据更新时间来判断，但如果很久之前的文章翻新，只要更新时间最新，也会触发推送，主要针对 updated 方式，还没想到好的解决办法，目前就是确认需要推送才更改更新时间咯
