@@ -329,12 +329,6 @@ noticeOutdate:
 # Share System (分享功能)
 # --------------------------------------
 
-# AddThis
-# https://www.addthis.com/
-addThis:
-  enable: false
-  pubid: ra-5f08fdef76bbcaeb
-
 # Share.js
 # https://github.com/overtrue/share.js
 sharejs:
@@ -351,7 +345,7 @@ addtoany:
 # --------------------------------------
 
 comments:
-  use: Waline
+  use: Waline #,Twikoo
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -703,7 +697,7 @@ mask:
   footer: true
 
 # the position of bottom right button/default unit: px (右下角按鈕距離底部的距離/默認單位為px)
-rightside-bottom:
+rightside_bottom:
 
 # Enter transitions (開啓網頁進入效果)
 enter_transitions: false
@@ -893,6 +887,10 @@ aside:
     post_count: true
     last_push_date: true
     sort_order: 1 # Don't modify the setting unless you know how it works
+  card_post_series:
+    enable: true
+    orderBy: 'date' # Order by title or date
+    order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
 
 # busuanzi count for PV / UV in site
 # 訪問人數

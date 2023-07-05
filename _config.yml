@@ -131,7 +131,7 @@ markdown:
   inline: true
 
 stylus:
-  compress: true
+  compress: false
   sourcemaps:
     comment: true
     inline: true

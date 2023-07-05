@@ -1,4 +1,12 @@
 #footer-wrap
+  if theme.footer.owner.enable
+    - var now = new Date()
+    - var nowYear = now.getFullYear()
+    if theme.footer.owner.since != false
+      if theme.footer.owner.since != nowYear
+        .copyright!= `&copy;${theme.footer.owner.since} - ${nowYear} By ${config.author}`
+      else
+        .copyright!= `&copy;${nowYear} By ${config.author}`
   if theme.footer.copyright
     .framework-info
       span= _p('footer.framework') + ' '
@@ -51,12 +59,5 @@
           display_live.innerHTML =  ' ' + passYear + ' 年 ' + passDay + ' 天 ' + passHour + ' 小时 ' + passMinute + ' 分 ' + passSecond + ' 秒' + '<br>' + '&copy; 2020' + ' - ' + nowYear +' ' ;
         }
         blog_live();
-  if theme.footer.owner.enable
-    - var now = new Date()
-    - var nowYear = now.getFullYear()
-    if theme.footer.owner.since && theme.footer.owner.since != nowYear
-      .copyright!= `&copy; ${theme.footer.owner.since} - ${nowYear} ${config.author} All Rights Reserved.`
-    else
-      .copyright!= `&copy; ${nowYear} ${config.author} All Rights Reserved.`
   if theme.footer.custom_text
     .footer_custom_text!=`${theme.footer.custom_text}`

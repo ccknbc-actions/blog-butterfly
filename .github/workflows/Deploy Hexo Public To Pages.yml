@@ -20,6 +20,7 @@ jobs:
         with:
           ref: master
           fetch-depth: 0
+          submodules: false
 
       - name: Setup Node
         uses: actions/setup-node@main
