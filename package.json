@@ -17,12 +17,12 @@
     "clean:notion": "npx elog clean -c ./elog/elog.config.notion.js -a ./elog/elog.cache.notion.json"
   },
   "hexo": {
-    "version": "7.0.0-rc1"
+    "version": "7.0.0-rc2"
   },
   "dependencies": {
-    "@elog/cli": "0.4.4",
+    "@elog/cli": "0.4.5",
     "axios": "1.4.0",
-    "hexo": "7.0.0-rc1",
+    "hexo": "7.0.0-rc2",
     "hexo-butterfly-tag-plugins-plus": "1.0.17",
     "hexo-filter-nofollow": "2.0.2",
     "hexo-generator-archive": "2.0.0",
@@ -37,7 +37,7 @@
     "hexo-renderer-pug": "3.0.0",
     "hexo-renderer-stylus": "3.0.0",
     "hexo-server": "3.0.0",
-    "hexo-tag-mmedia": "1.1.7",
+    "hexo-tag-mmedia": "1.2.0",
     "hexo-wordcount": "6.0.1",
     "hexo-yam": "8.0.0",
     "markdown-it-task-lists": "2.1.1",
