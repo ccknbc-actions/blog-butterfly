@@ -7,14 +7,18 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "yuque": "npm run sync:yuque && npm run build && npm run deploy",
+    "elog": "npm run sync:yuque && npm run build && npm run deploy",
     "github": "npm run build && npm run deploy",
+    "elog:init": "npx elog init",
     "local:yuque": "npx elog sync -c ./elog/elog.config.yuque.js -e ./elog/.elog.env -a ./elog/elog.cache.yuque.json",
     "local:notion": "npx elog sync -c ./elog/elog.config.notion.js -e ./elog/.elog.env -a ./elog/elog.cache.notion.json",
+    "local:flowus": "npx elog sync -c ./elog/elog.config.flowus.js -e ./elog/.elog.env -a ./elog/elog.cache.flowus.json",
     "sync:yuque": "npx elog sync -c ./elog/elog.config.yuque.js -a ./elog/elog.cache.yuque.json",
-    "sync:notion": "npx elog sync -c ./elog/elog.config.notion.js' -a ./elog/elog.cache.notion.json",
-    "clean:yuque": "npx elog clean -c ./elog/elog.config.yuque.js' -a ./elog/elog.cache.yuque.json",
-    "clean:notion": "npx elog clean -c ./elog/elog.config.notion.js -a ./elog/elog.cache.notion.json"
+    "sync:notion": "npx elog sync -c ./elog/elog.config.notion.js -a ./elog/elog.cache.notion.json",
+    "sync:flowus": "npx elog sync -c ./elog/elog.config.flowus.js -a ./elog/elog.cache.flowus.json",
+    "clean:yuque": "npx elog clean -c ./elog/elog.config.yuque.js -a ./elog/elog.cache.yuque.json",
+    "clean:notion": "npx elog clean -c ./elog/elog.config.notion.js -a ./elog/elog.cache.notion.json",
+    "clean:flowus": "npx elog clean -c ./elog/elog.config.flowus.js -a ./elog/elog.cache.flowus.json"
   },
   "hexo": {
     "version": "7.0.0-rc2"

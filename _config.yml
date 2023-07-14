@@ -131,13 +131,13 @@ markdown:
   inline: true
 
 stylus:
-  compress: false
-  sourcemaps:
-    comment: true
-    inline: true
-    sourceRoot: ""
-    basePath: .
-  plugins: "nib"
+  compress: true
+  # sourcemaps:
+  #   comment: true
+  #   inline: true
+  #   sourceRoot: ""
+  #   basePath: .
+  # plugins: "nib"
 
 index_generator:
   path: ""

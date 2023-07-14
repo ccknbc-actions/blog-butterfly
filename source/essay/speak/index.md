@@ -78,7 +78,8 @@ description: CC的部落格 即刻短文页面
         requiredMeta: ["nick", "mail"],
         login: 'enable',
         dark: 'html[data-theme="dark"]',
-        imageUploader: false,
+        imageUploader: true,
+        turnstileKey: '0x4AAAAAAAECBl27OB5SZrQT',
         emoji:
           [
             "https://cdn1.tianli0.top/npm/sticker-heo/Sticker-100/",

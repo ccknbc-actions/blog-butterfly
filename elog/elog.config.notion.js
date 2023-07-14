@@ -1,14 +1,6 @@
 module.exports = {
   write: {
     platform: "notion",
-    yuque: {
-      token: process.env.YUQUE_TOKEN,
-      baseUrl: "",
-      login: process.env.YUQUE_LOGIN,
-      repo: process.env.YUQUE_REPO,
-      onlyPublic: false,
-      onlyPublished: true,
-    },
     notion: {
       token: process.env.NOTION_TOKEN,
       databaseId: process.env.NOTION_DATABASE_ID,
@@ -20,7 +12,7 @@ module.exports = {
   deploy: {
     platform: "local",
     local: {
-      outputDir: "./source/_posts/语雀/",
+      outputDir: "./source/_posts/Notion/",
       filename: "title",
       format: "matter-markdown",
       catalog: true,

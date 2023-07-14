@@ -1,4 +1,4 @@
-name: Deploy Yuque-Hexo Public To Pages
+name: Deploy Elog-Hexo Public To Pages
 
 on:
   repository_dispatch:
@@ -8,11 +8,16 @@ on:
 
 jobs:
   deploy:
-    name: Deploy Yuque-Hexo Public To Pages
+    name: Deploy Elog-Hexo Public To Pages
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Shanghai
       YUQUE_TOKEN: ${{ secrets.YUQUE_TOKEN }}
+      YUQUE_LOGIN: ${{ secrets.YUQUE_LOGIN }}
+      YUQUE_REPO: ${{ secrets.YUQUE_REPO }}
+      NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+      NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+      FLOWUS_TABLE_PAGE_ID: ${{ secrets.FLOWUS_TABLE_PAGE_ID }}
       webpushrKey: ${{ secrets.WEBPUSHR_KEY }}
       webpushrAuthToken: ${{ secrets.WEBPUSHR_AUTH_TOKEN }}
 
@@ -64,7 +69,7 @@ jobs:
 
       - name: Generate
         run: |
-          npm run yuque
+          npm run elog
 
       - name: Upload Elog Cache
         uses: actions/upload-artifact@v3
