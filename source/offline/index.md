@@ -1,15 +1,14 @@
 ---
-title: CC的部落格 离线页面
+title: 离线页面
 top_img: false
 comments: false
 aside: false
 date: 2022-06-15 22:24:35
-updated: 2023-05-29 22:24:35
+updated: 2023-07-20 22:24:35
 translate_title: offline
 subtitle: Ur Offline
 description: CC的部落格 离线页面
 ---
-<script src="https://cc.instatus.com/widget/script.js"></script>
 
 很抱歉，您暂时无法访问CC的部落格，因此跳转到离线页面
 

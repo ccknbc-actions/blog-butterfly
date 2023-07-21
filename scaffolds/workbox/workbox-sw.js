@@ -1,6 +1,7 @@
-importScripts("https://cdn1.tianli0.top/npm/workbox-sw/build/workbox-sw.js");
+importScripts("https://cdn2.chuqis.com/npm/workbox-sw/build/workbox-sw.js");
 importScripts("https://cdn.webpushr.com/sw-server.min.js");
 
+// 提示
 if (workbox) {
     console.log("Workbox 加载成功🎉");
 } else {
@@ -9,11 +10,13 @@ if (workbox) {
 
 workbox.precaching.cleanupOutdatedCaches();
 
+// 安装
 self.addEventListener("install", async () => {
     await self.skipWaiting();
     console.log("Service Worker 开始安装🎊");
 });
 
+// 激活
 self.addEventListener("activate", async () => {
     await self.clients.claim();
     console.log("Service Worker 安装完成，开始启动✨");
@@ -22,20 +25,73 @@ self.addEventListener("activate", async () => {
     });
 });
 
+// 控制台输出开关
 self.__WB_DISABLE_DEV_LOGS = true;
 
+const fallbackCdnUrls = [
+    'https://cdn2.chuqis.com',
+    'https://cdn.chuqis.com',
+    'https://jsd.cdn.zzko.cn',
+    'https://jsdelivr.goodboyboy.top'
+];
+
+// 函数用于判断是否为备用CDN URL
+function isFallbackCdnUrl(url) {
+    return fallbackCdnUrls.some(fallbackUrl => url.startsWith(fallbackUrl));
+}
+
+// 函数用于处理备用CDN请求
+function handleFallbackCdn(request) {
+    let failedUrls = [];
+
+    const fallbackRequest = fallbackCdnUrls.reduce((acc, fallbackUrl) => {
+        if (!failedUrls.includes(fallbackUrl)) {
+            const fallbackRequest = new Request(fallbackUrl + request.url.substring(request.url.indexOf('/', 8)));
+            acc = acc.catch(() => {
+                failedUrls.push(fallbackUrl);
+                return fetch(fallbackRequest, { cache: 'reload' });
+            });
+        }
+        return acc;
+    }, Promise.reject());
+
+    return fallbackRequest;
+}
+
+// 函数用于判断是否为需要空引用URL的域名
+function requiresEmptyReferrerDomain(domain) {
+    const referrerDomains = [
+        'cdn.nlark.com',
+        'pic1.afdiancdn.com',
+        'f.video.weibocdn.com',
+        'api.icodeq.com'
+    ];
+    return referrerDomains.includes(domain);
+}
+
+// 函数用于处理带有空引用的请求
+function handleEmptyReferrer(request) {
+    return fetch(request, { referrerPolicy: "no-referrer" });
+}
+
 self.addEventListener('fetch', event => {
-    const url = new URL(event.request.url)
-    const domain = url.hostname
-    if (domain === 'cdn.nlark.com' || domain === 'pic1.afdiancdn.com' || domain === 'f.video.weibocdn.com' || domain === 'api.icodeq.com') {
-        event.respondWith(
-            fetch(event.request, {
-                referrerPolicy: "no-referrer"
-            })
-        )
+    const request = event.request;
+    const url = new URL(request.url);
+    const domain = url.hostname;
+
+    if (isFallbackCdnUrl(url.href)) {
+        // 备用CDN逻辑
+        event.respondWith(handleFallbackCdn(request));
+    } else if (requiresEmptyReferrerDomain(domain)) {
+        // 空引用URL逻辑
+        event.respondWith(handleEmptyReferrer(request));
+    } else {
+        // 其他情况直接返回原始请求
+        event.respondWith(fetch(request));
     }
 });
 
+// 缓存名称
 workbox.core.setCacheNameDetails({
     prefix: "CC的部落格",
     suffix: "缓存",

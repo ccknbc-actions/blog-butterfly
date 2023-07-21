@@ -191,7 +191,7 @@ feed:
   content_limit: false
   content_limit_delim: " "
   order_by: -updated
-  icon: https://cdn1.tianli0.top/gh/ccknbc-backup/cdn/logo/logo.png
+  icon: https://cdn2.chuqis.com/gh/ccknbc-backup/cdn/logo/logo.png
   autodiscovery: true
   template:
     - ./source/_data/atom.xml
@@ -249,33 +249,33 @@ mmedia:
     default:
       controls: true
   aplayer:
-    js: https://cdn1.tianli0.top/npm/aplayer/dist/APlayer.min.js
-    css: https://cdn1.tianli0.top/npm/aplayer/dist/APlayer.min.css
+    js: https://cdn2.chuqis.com/npm/aplayer/dist/APlayer.min.js
+    css: https://cdn2.chuqis.com/npm/aplayer/dist/APlayer.min.css
     default:
       contents:
         lrcType: 3
   meting:
-    js: https://cdn1.tianli0.top/npm/meting/dist/Meting.min.js
+    js: https://cdn2.chuqis.com/npm/meting/dist/Meting.min.js
     api: https://music.startly.cn/ # https://meting.ccknbc.cc/api （备用，支持 YouTube Spotify）
     default:
       theme: '#8fbc8f'
       list-folded: true
   dplayer:
-    js: https://cdn1.tianli0.top/npm/dplayer/dist/DPlayer.min.js
-    hls_js: https://cdn1.tianli0.top/npm/hls.js/dist/hls.min.js
-    dash_js: https://cdn1.tianli0.top/npm/dashjs/dist/dash.all.min.js
-    shaka_dash_js: https://cdn1.tianli0.top/npm/shaka-player/dist/shaka-player.compiled.js
-    flv_js: https://cdn1.tianli0.top/npm/flv.js/dist/flv.min.js
-    webtorrent_js: https://cdn1.tianli0.top/npm/webtorrent/webtorrent.min.js
+    js: https://cdn2.chuqis.com/npm/dplayer/dist/DPlayer.min.js
+    hls_js: https://cdn2.chuqis.com/npm/hls.js/dist/hls.min.js
+    dash_js: https://cdn2.chuqis.com/npm/dashjs/dist/dash.all.min.js
+    shaka_dash_js: https://cdn2.chuqis.com/npm/shaka-player/dist/shaka-player.compiled.js
+    flv_js: https://cdn2.chuqis.com/npm/flv.js/dist/flv.min.js
+    webtorrent_js: https://cdn2.chuqis.com/npm/webtorrent/webtorrent.min.js
     default:
       contents:
   artplayer:
-    js: https://cdn1.tianli0.top/npm/artplayer/dist/artplayer.js
-    hls_js: https://cdn1.tianli0.top/npm/hls.js/dist/hls.min.js
-    dash_js: https://cdn1.tianli0.top/npm/dashjs/dist/dash.all.min.js
-    shaka_dash_js: https://cdn1.tianli0.top/npm/shaka-player/dist/shaka-player.compiled.js
-    flv_js: https://cdn1.tianli0.top/npm/flv.js/dist/flv.min.js
-    webtorrent_js: https://cdn1.tianli0.top/npm/webtorrent/webtorrent.min.js
+    js: https://cdn2.chuqis.com/npm/artplayer/dist/artplayer.js
+    hls_js: https://cdn2.chuqis.com/npm/hls.js/dist/hls.min.js
+    dash_js: https://cdn2.chuqis.com/npm/dashjs/dist/dash.all.min.js
+    shaka_dash_js: https://cdn2.chuqis.com/npm/shaka-player/dist/shaka-player.compiled.js
+    flv_js: https://cdn2.chuqis.com/npm/flv.js/dist/flv.min.js
+    webtorrent_js: https://cdn2.chuqis.com/npm/webtorrent/webtorrent.min.js
     default:
       style: width:344px;height:193.5px
       contents:
@@ -337,14 +337,14 @@ tag_plugins:
   priority: 5 #过滤器优先权
   issues: false #issues标签开关
   link:
-    placeholder: https://cdn1.tianli0.top/gh/ccknbc-backup/cdn/logo/logo.png #link_card标签默认的图标图片
+    placeholder: https://cdn2.chuqis.com/gh/ccknbc-backup/cdn/logo/logo.png #link_card标签默认的图标图片
   CDN:
-    anima: https://cdn1.tianli0.top/npm/hexo-butterfly-tag-plugins-plus/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
-    # jquery: https://cdn1.tianli0.top/npm/jquery/dist/jquery.min.js #issues标签依赖
-    # issues: https://cdn1.tianli0.top/npm/hexo-butterfly-tag-plugins-plus/lib/assets/issues.js #issues标签依赖
+    anima: https://cdn2.chuqis.com/npm/hexo-butterfly-tag-plugins-plus/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
+    # jquery: https://cdn2.chuqis.com/npm/jquery/dist/jquery.min.js #issues标签依赖
+    # issues: https://cdn2.chuqis.com/npm/hexo-butterfly-tag-plugins-plus/lib/assets/issues.js #issues标签依赖
     iconfont: false #参看https://akilar.top/posts/d2ebecef/
-    carousel: false #https://cdn1.tianli0.top/npm/hexo-butterfly-tag-plugins-plus/lib/assets/carousel-touch.js
-    tag_plugins_css: https://cdn1.tianli0.top/npm/hexo-butterfly-tag-plugins-plus/lib/tag_plugins.css
+    carousel: false #https://cdn2.chuqis.com/npm/hexo-butterfly-tag-plugins-plus/lib/assets/carousel-touch.js
+    tag_plugins_css: https://cdn2.chuqis.com/npm/hexo-butterfly-tag-plugins-plus/lib/tag_plugins.css
 
 wowjs:
   enable: false #控制动画开关。true是打开，false是关闭
@@ -359,28 +359,6 @@ wowjs:
       iteration: 2 #选填项，动画重复的次数
     - class: card-widget
       style: animate__zoomIn
-
-readmore:
-  # 是否启用
-  enable: false
-  # 已申请的博客 ID
-  blogId: "44867-6625009790877-036"
-  # 已申请的微信公众号名称
-  name: "CC康纳百川"
-  # 已申请的微信公众号回复关键词
-  keyword: "blog"
-  # 已申请的微信公众号二维码链接
-  qrcode: "https://cdn1.tianli0.top/gh/ccknbc-backup/cdn/logo/wechat.svg"
-  # 自定义的 JS 资源链接，可用于 CDN 加速
-  libUrl: "https://qiniu.techgrow.cn/readmore/dist/readmore.js"
-  # 自定义的 CSS 资源链接，可用于适配不同风格的博客
-  cssUrl: "https://qiniu.techgrow.cn/readmore/dist/hexo.css"
-  # 文章解锁后凭证的有效天数
-  expires: 365
-  # 定时校验凭证有效性的时间间隔（秒）
-  interval: 60
-  # 每篇文章随机添加微信公众号引流工具的概率，有效范围在 0.1 ~ 1 之间，1 则表示所有文章默认都自动添加引流工具
-  random: 1
 
 minify:
   enable: true
@@ -411,7 +389,7 @@ webpushr:
   # 如果您的仓库私有，则无需担心此问题
 
   trackingCode: "BB9Y-w9p3u0CKA7UP9nupB6I-_NqE2MuODmKJjyC4W2YflX06Ff_hEhrNJfonrut5l6gCa28gC83q2OII7Qv-oA"
-  icon: "https://cdn1.tianli0.top/gh/ccknbc-backup/cdn/image/pwa/192.png" # 必须为192*192 png图片
+  icon: "https://cdn2.chuqis.com/gh/ccknbc-backup/cdn/image/pwa/192.png" # 必须为192*192 png图片
   # auto_hide: "0" # 默认为 1，代表true，即自动隐藏
   # sort: "date" # 默认为updated，即只要最新文章更改了更新时间即推送新文章，改为date即文章第一次发布时间
   # delay: "30" # 延时推送，考虑到CDN缓存更新，默认定时为在 hexo d 10分钟后推送，单位为分钟（最短时间为5min）

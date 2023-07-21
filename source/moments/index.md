@@ -27,4 +27,4 @@ description: CC的部落格 朋友圈页面
         expire_days: 1,
     }
 </script>
-<script type="text/javascript" src="https://cdn1.tianli0.top/npm/fcircle-theme-yyyz/dist/fcircle.min.js"></script>
+<script type="text/javascript" src="https://cdn2.chuqis.com/npm/fcircle-theme-yyyz/dist/fcircle.min.js"></script>
