@@ -1,4 +1,4 @@
-importScripts("https://cdn2.chuqis.com/npm/workbox-sw/build/workbox-sw.js");
+importScripts("https://cdn.chuqis.com/npm/workbox-sw/build/workbox-sw.js");
 importScripts("https://cdn.webpushr.com/sw-server.min.js");
 
 // 提示
@@ -26,18 +26,31 @@ self.addEventListener("activate", async () => {
 });
 
 // 控制台输出开关
-self.__WB_DISABLE_DEV_LOGS = true;
+// self.__WB_DISABLE_DEV_LOGS = true;
 
 const fallbackCdnUrls = [
-    'https://cdn2.chuqis.com',
     'https://cdn.chuqis.com',
+    'https://cdn2.chuqis.com',
+    'https://cdn.yt-blog.top',
     'https://jsd.cdn.zzko.cn',
     'https://jsdelivr.goodboyboy.top'
+    // 在这里添加其他CDN镜像的URL
+];
+
+const invalidCdnUrls = [
+    'https://cdn.jsdelivr.ren',
+    'https://cdn1.tianli0.top'
+    // 在这里添加其他失效CDN镜像的URL
 ];
 
 // 函数用于判断是否为备用CDN URL
 function isFallbackCdnUrl(url) {
     return fallbackCdnUrls.some(fallbackUrl => url.startsWith(fallbackUrl));
+}
+
+// 函数用于判断是否为失效CDN镜像站 URL
+function isInvalidCdnUrl(url) {
+    return invalidCdnUrls.some(invalidUrl => url.startsWith(invalidUrl));
 }
 
 // 函数用于处理备用CDN请求
@@ -47,9 +60,19 @@ function handleFallbackCdn(request) {
     const fallbackRequest = fallbackCdnUrls.reduce((acc, fallbackUrl) => {
         if (!failedUrls.includes(fallbackUrl)) {
             const fallbackRequest = new Request(fallbackUrl + request.url.substring(request.url.indexOf('/', 8)));
-            acc = acc.catch(() => {
-                failedUrls.push(fallbackUrl);
-                return fetch(fallbackRequest, { cache: 'reload' });
+            acc = acc.catch(async () => {
+                try {
+                    const response = await fetch(fallbackRequest, { cache: 'reload' });
+                    if (response.ok) {
+                        return response;
+                    } else {
+                        failedUrls.push(fallbackUrl);
+                        throw new Error('请求资源失败');
+                    }
+                } catch (error) {
+                    failedUrls.push(fallbackUrl);
+                    throw new Error('所有备用 CDN 镜像请求失败');
+                }
             });
         }
         return acc;
@@ -79,7 +102,10 @@ self.addEventListener('fetch', event => {
     const url = new URL(request.url);
     const domain = url.hostname;
 
-    if (isFallbackCdnUrl(url.href)) {
+    if (isInvalidCdnUrl(url.href)) {
+        // 失效CDN镜像站逻辑，继续尝试备用CDN
+        event.respondWith(handleFallbackCdn(request));
+    } else if (isFallbackCdnUrl(url.href)) {
         // 备用CDN逻辑
         event.respondWith(handleFallbackCdn(request));
     } else if (requiresEmptyReferrerDomain(domain)) {
@@ -90,6 +116,13 @@ self.addEventListener('fetch', event => {
         event.respondWith(fetch(request));
     }
 });
+
+const MIN = 60;
+const HOUR = MIN * 60;
+const DAY = HOUR * 24;
+const WEEK = DAY * 7;
+const MONTH = DAY * 30;
+const YEAR = DAY * 365;
 
 // 缓存名称
 workbox.core.setCacheNameDetails({
@@ -105,12 +138,8 @@ workbox.precaching.precacheAndRoute(self.__WB_MANIFEST, {
     directoryIndex: null,
 });
 
-const MIN = 60;
-const HOUR = MIN * 60;
-const DAY = HOUR * 24;
-const WEEK = DAY * 7;
-const MONTH = DAY * 30;
-const YEAR = DAY * 365;
+// 默认策略
+workbox.routing.setDefaultHandler(new workbox.strategies.NetworkOnly());
 
 // 导航预加载
 workbox.navigationPreload.enable();
@@ -132,8 +161,6 @@ const Offline = new workbox.routing.Route(
     })
 );
 workbox.routing.registerRoute(Offline);
-
-workbox.routing.setDefaultHandler(new workbox.strategies.NetworkOnly());
 
 // 暖策略（运行时）缓存
 const strategy = new workbox.strategies.StaleWhileRevalidate();
@@ -199,3 +226,19 @@ workbox.routing.registerRoute(
     })
 );
 
+// 文章图片
+workbox.routing.registerRoute(
+    new RegExp("^https://pic1.afdiancdn.com/.*.(?:png|jpg|jpeg|gif|webp|svg)$"),
+    new workbox.strategies.CacheFirst({
+        cacheName: "文章图片",
+        plugins: [
+            new workbox.expiration.ExpirationPlugin({
+                maxEntries: 50,
+                maxAgeSeconds: MONTH,
+            }),
+            new workbox.cacheableResponse.CacheableResponsePlugin({
+                statuses: [0, 200],
+            }),
+        ],
+    })
+);

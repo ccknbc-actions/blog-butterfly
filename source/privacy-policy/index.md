@@ -36,7 +36,7 @@ description: CC的部落格 隐私政策
 您应该知道在您访问的时候以下信息会被统计功能使用：
 
 
-<script src="https://cdn2.chuqis.com/gh/ccknbc-backup/cdn/js/privacy.js"></script>
+<script src="https://cdn.chuqis.com/gh/ccknbc-backup/cdn/js/privacy.js"></script>
 |  类型   |               信息                |
 | :-----: | :-------------------------------: |
 | IP 地址 |   <div id="userAgentIp"></div>    |
