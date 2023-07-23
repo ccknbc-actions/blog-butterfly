@@ -9,7 +9,7 @@ hexo.on("deployBefore", async function () {
                 swSrc: './scaffolds/workbox/workbox-sw.js',
                 swDest: './public/sw.js',
                 globDirectory: './public/',
-                globPatterns: ['*/*.css', 'js/*.js', 'offline/index.html'],
+                globPatterns: ['*.ico', 'offline/index.html'],
                 modifyURLPrefix: {
                     '': './'
                 }

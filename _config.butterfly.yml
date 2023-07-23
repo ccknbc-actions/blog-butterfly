@@ -198,18 +198,18 @@ cover:
   # left/right/both
   position: left
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
-  default_cover: https://npm.elemecdn.com/hexo-theme-anzhiyu/source/img/default_cover.jpg
+  default_cover: https://cdn.chuqis.com/npm/hexo-theme-anzhiyu/source/img/default_cover.jpg
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
-  flink: https://npm.elemecdn.com/hexo-theme-anzhiyu/source/img/404.jpg
-  post_page: https://npm.elemecdn.com/hexo-theme-anzhiyu/source/img/friend_404.gif
+  flink: https://cdn.chuqis.com/npm/hexo-theme-anzhiyu/source/img/404.jpg
+  post_page: https://cdn.chuqis.com/npm/hexo-theme-anzhiyu/source/img/friend_404.gif
 
 # A simple 404 page
 error_404:
   enable: true
   subtitle: Oops! 页面不存在~
-  background: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/page-404.png
+  background: https://cdn.chuqis.com/npm/anzhiyu-blog@1.1.6/img/post/common/page-404.png
 
 post_meta:
   page: # Home Page

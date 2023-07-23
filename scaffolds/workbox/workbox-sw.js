@@ -8,8 +8,6 @@ if (workbox) {
     console.log("Workbox 加载失败😬");
 }
 
-workbox.precaching.cleanupOutdatedCaches();
-
 // 安装
 self.addEventListener("install", async () => {
     await self.skipWaiting();
@@ -43,6 +41,15 @@ const invalidCdnUrls = [
     // 在这里添加其他失效CDN镜像的URL
 ];
 
+const MIN = 60;
+const HOUR = MIN * 60;
+const DAY = HOUR * 24;
+const WEEK = DAY * 7;
+const MONTH = DAY * 30;
+const YEAR = DAY * 365;
+
+workbox.precaching.cleanupOutdatedCaches();
+
 // 函数用于判断是否为备用CDN URL
 function isFallbackCdnUrl(url) {
     return fallbackCdnUrls.some(fallbackUrl => url.startsWith(fallbackUrl));
@@ -52,6 +59,25 @@ function isFallbackCdnUrl(url) {
 function isInvalidCdnUrl(url) {
     return invalidCdnUrls.some(invalidUrl => url.startsWith(invalidUrl));
 }
+
+// 使用StaleWhileRevalidate策略缓存备用CDN中的js、css和woff2资源
+fallbackCdnUrls.forEach(fallbackUrl => {
+    workbox.routing.registerRoute(
+        new RegExp('^' + fallbackUrl + '.*\\.(?:js|css|woff|woff2)$'), // 匹配js、css、woff和woff2后缀的文件
+        new workbox.strategies.StaleWhileRevalidate({
+            cacheName: "备用CDN资源",
+            plugins: [
+                new workbox.expiration.ExpirationPlugin({
+                    maxEntries: 100,
+                    maxAgeSeconds: WEEK,
+                }),
+                new workbox.cacheableResponse.CacheableResponsePlugin({
+                    statuses: [0, 200],
+                }),
+            ],
+        })
+    );
+});
 
 // 函数用于处理备用CDN请求
 function handleFallbackCdn(request) {
@@ -97,6 +123,7 @@ function handleEmptyReferrer(request) {
     return fetch(request, { referrerPolicy: "no-referrer" });
 }
 
+// 在fetch事件中处理逻辑
 self.addEventListener('fetch', event => {
     const request = event.request;
     const url = new URL(request.url);
@@ -117,12 +144,6 @@ self.addEventListener('fetch', event => {
     }
 });
 
-const MIN = 60;
-const HOUR = MIN * 60;
-const DAY = HOUR * 24;
-const WEEK = DAY * 7;
-const MONTH = DAY * 30;
-const YEAR = DAY * 365;
 
 // 缓存名称
 workbox.core.setCacheNameDetails({
@@ -162,82 +183,24 @@ const Offline = new workbox.routing.Route(
 );
 workbox.routing.registerRoute(Offline);
 
-// 暖策略（运行时）缓存
-const strategy = new workbox.strategies.StaleWhileRevalidate();
-const urls = [
-    '/favicon.ico'
-];
-workbox.recipes.warmStrategyCache({ urls, strategy });
-
-// 字体
-workbox.routing.registerRoute(
-    ({ event }) => event.request.destination === 'font',
-    new workbox.strategies.StaleWhileRevalidate({
-        cacheName: "字体",
-        plugins: [
-            new workbox.expiration.ExpirationPlugin({
-                maxEntries: 10,
-                maxAgeSeconds: MONTH,
-            }),
-            new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200],
-            }),
-        ],
-    })
-);
-
-// json
-workbox.routing.registerRoute(
-    ({ request }) => request.url.endsWith('.json'),
-    new workbox.strategies.NetworkFirst({
-        cacheName: "网络资源",
-        plugins: [
-            new workbox.expiration.ExpirationPlugin({
-                maxEntries: 10,
-                maxAgeSeconds: DAY,
-            }),
-            new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200],
-            }),
-        ],
-    })
-);
-
 // busuanzi
 workbox.routing.registerRoute(
     ({ url }) => String(url).includes('busuanzi?') || String(url).includes('busuanzi='),
     new workbox.strategies.NetworkOnly()
 );
 
-// 静态资源
+// 缓存静态资源和离线文件
 workbox.routing.registerRoute(
-    new RegExp(".*.(?:css|js)"),
+    new RegExp(".*.(?:css|js)"), // 匹配CSS、JS文件和离线文件的URL
     new workbox.strategies.StaleWhileRevalidate({
-        cacheName: "静态资源",
+        cacheName: "静态资源", // 使用相同的缓存名称，可以与其他地方保持一致
         plugins: [
             new workbox.expiration.ExpirationPlugin({
-                maxEntries: 50,
-                maxAgeSeconds: WEEK,
+                maxEntries: 50, // 最大缓存条目数
+                maxAgeSeconds: WEEK, // 缓存时间
             }),
             new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200],
-            }),
-        ],
-    })
-);
-
-// 文章图片
-workbox.routing.registerRoute(
-    new RegExp("^https://pic1.afdiancdn.com/.*.(?:png|jpg|jpeg|gif|webp|svg)$"),
-    new workbox.strategies.CacheFirst({
-        cacheName: "文章图片",
-        plugins: [
-            new workbox.expiration.ExpirationPlugin({
-                maxEntries: 50,
-                maxAgeSeconds: MONTH,
-            }),
-            new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200],
+                statuses: [0, 200], // 缓存的HTTP状态码
             }),
         ],
     })
