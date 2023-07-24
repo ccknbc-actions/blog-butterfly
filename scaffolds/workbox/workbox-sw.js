@@ -68,8 +68,9 @@ fallbackCdnUrls.forEach(fallbackUrl => {
             cacheName: "备用CDN资源",
             plugins: [
                 new workbox.expiration.ExpirationPlugin({
-                    maxEntries: 100,
+                    maxEntries: 50,
                     maxAgeSeconds: WEEK,
+                    purgeOnQuotaError: true
                 }),
                 new workbox.cacheableResponse.CacheableResponsePlugin({
                     statuses: [0, 200],
@@ -144,7 +145,6 @@ self.addEventListener('fetch', event => {
     }
 });
 
-
 // 缓存名称
 workbox.core.setCacheNameDetails({
     prefix: "CC的部落格",
@@ -189,19 +189,24 @@ workbox.routing.registerRoute(
     new workbox.strategies.NetworkOnly()
 );
 
-// 缓存静态资源和离线文件
+// 缓存静态资源
 workbox.routing.registerRoute(
-    new RegExp(".*.(?:css|js)"), // 匹配CSS、JS文件和离线文件的URL
+    ({ request }) =>
+        request.destination === 'style' ||
+        request.destination === 'script' ||
+        request.destination === 'font' ||
+        request.destination === 'worker',
     new workbox.strategies.StaleWhileRevalidate({
-        cacheName: "静态资源", // 使用相同的缓存名称，可以与其他地方保持一致
+        cacheName: '静态资源', // 使用相同的缓存名称，可以与其他地方保持一致
         plugins: [
             new workbox.expiration.ExpirationPlugin({
-                maxEntries: 50, // 最大缓存条目数
+                maxEntries: 20, // 最大缓存条目数
                 maxAgeSeconds: WEEK, // 缓存时间
+                purgeOnQuotaError: true
             }),
             new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200], // 缓存的HTTP状态码
+                statuses: [0, 200],
             }),
         ],
-    })
+    }),
 );
