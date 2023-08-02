@@ -3,7 +3,6 @@ subtitle: CC康纳百川
 description: CC的部落格，CC康纳百川的小窝，与你分享二三事
 keywords: CC的部落格,CC康纳百川,ccknbc,blog
 author: CC康纳百川
-email: blog@ccknbc.cc
 language: zh-CN
 timezone: Asia/Shanghai
 
@@ -194,8 +193,8 @@ feed:
   icon: https://cdn.chuqis.com/gh/ccknbc-backup/cdn/logo/logo.png
   autodiscovery: true
   template:
-    - ./source/_data/atom.xml
-    - ./source/_data/rss.xml
+    - ./scaffolds/rss/atom.xml
+    - ./scaffolds/rss/rss.xml
 
 sitemap:
   path:
@@ -205,16 +204,6 @@ sitemap:
   rel: true
   tags: false
   categories: false
-
-translate_title:
-  translate_way: false
-  youdao_api_key: ""
-  youdao_keyfrom: xxxx-blog
-  is_need_proxy: false
-  proxy_url: http://localhost:8080
-  baidu_appid: ""
-  baidu_appkey: ""
-  rewrite: false
 
 search:
   path: search.json
@@ -422,108 +411,3 @@ webpushr:
 
 swpp:
   enable: false
-  sw:
-    # 是否使用自定义的 sw，为 true 时不自动生成 sw.js，但是仍然会插入注册 sw 的代码
-    # 注意：不支持自定义 sw.js 的路径及文件名，sw.js 必须放置在 source_dir 中
-    custom: false
-    # 注册 sw 发生错误时触发的 js 代码，如果包含多个指令需使用花括号（{}）包裹
-    # 注意：SW 注册代码将直接内嵌在 HTML 首部，该代码执行时其它 JS 不一定完成了加载
-    onerror: "{console.error('注册 sw 时发生错误，很可能是由于您的浏览器不支持 sw')}"
-    # 注册 sw 成功后触发的 js 代码，如果包含多个指令需使用花括号（{}）包裹
-    # 注意：SW 注册代码将直接内嵌在 HTML 首部，该代码执行时其它 JS 不一定完成了加载
-    onsuccess: "location.reload()"
-    # 缓存库名称，缺省为 kmarBlogCache
-    # 发布网站后请勿修改该配置项，无特殊需求建议保持缺省
-    cacheName: 'CCsBlogCache'
-    # 逃生门，详情见：https://kmar.top/posts/73014407/#cdf686f0
-    escape: 0
-    # 是否启用 CDN 竞速，详情见：https://kmar.top/posts/73014407/#4acf3000
-    # 该项与 spareUrl 冲突，若两项同时开启，则该项生效
-    cdnRacing: false
-    # 是否启用备用 URL，详情见：https://kmar.top/posts/73014407/#62889c40
-    # 该项与 cdnRacing 冲突，若两项同时开启，则 cdnRacing 生效
-    spareUrl: false
-    # 是否启用调试，启用后会在 sw 中插入一些辅助调试的代码，不建议开启
-    debug: false
-  dom:
-    # 是否使用自定义的 DOM 端 JS，为 true 时不会自动生成 sw-dom.js，且不会插入引入 JS 的代码
-    # 当值为 true 时本分类下其余设置项均无效
-    custom: false
-    # 当更新成功（更新完毕自动刷新页面）后触发，包含多个指令不需要用花括号包裹
-    onsuccess: "console.log('更新成功')"
-  json:
-    # 最大 HTML 数量，超过这个数量后会直接清除所有 HTML 缓存
-    maxHtml: 15
-    # update.json 的最大字符数量
-    # 超过后会移除旧的版本号，直到满足要求，如果只有全部清空才能满足就会直接刷新所有缓存
-    charLimit: 1024
-    # 文件缓存匹配采取精确模式
-    # 关闭时更新缓存时仅匹配文件名称，如 https://kmar.top/simple/a/index.html 仅匹配 /a/index.html
-    # 开启后更新缓存时将会匹配完整名称，如 https://kmar.top/simple/a/index.html 将匹配 /simple/a/index.html
-    # 两种方式各有优劣，开启后会增加 update.json 的空间占用，但会提升精确度
-    # 如果网站内没有多级目录结构，就可以放心大胆的关闭了
-    # key 值为文件拓展名，default 用于指代所有未列出的拓展名以及没有拓展名的文件
-    precisionMode:
-      default: false
-    # 是否合并指定项目
-    # 例如当 tags 为 true 时（假设标签目录为 https://kmar.top/tags/...）
-    # 如果标签页存在更新，则直接匹配 https://kmar.top/tags/ 目录下的所有文件
-    # 推荐将此项开启
-    merge:
-      tags: true
-      archives: true
-      categories: true
-      index: true
-      # 自定义
-      custom:
-        # 这里填写目录名称列表（不带两边的斜杠）
-        # 如果按下面这样写，当 `//[domain]/bilibili/` 下的任意文件更新，都会合并为同一个更新项目
-        - 'bilibili'
-    # 忽略哪些文件，正则表达式，不写两边的斜杠，不区分大小写
-    # 注：匹配的时候不附带域名，只有 pathname
-    exclude:
-      # 这里写正则表达式，格式如下：
-      - sw\.js$
-  # 外部文件更新监听
-  # 开启后会捕获外部文件的更新，具体原理见：https://kmar.top/posts/73014407/#771b3e00
-  external:
-    enable: false
-    # 自定义拉取网络文件时的超时时间，缺省 1500
-    timeout: 1500
-    # 见 https://kmar.top/posts/73014407/#771b3e00
-    js:
-      - head: '这里写 head 内容'
-        tail: '这里写 tail 内容（必须有 tail）'
-    # 某些外链只要 URL 不变其内容就一定不会变
-    # 可以通过正则表达式排除这些外链的文件内容监控，加快构建速度
-    # 下面是几个常用的 CDN 的匹配
-    # 正则表达式不用写两边的斜杠，区分大小写
-    skip:
-      - ^(https?:\/\/|\/\/)(cdn|fastly)\.jsdelivr\.(net|ren)\/npm\/.*@\d+\.\d+\.\d+\/
-      - ^(https?:\/\/|\/\/)cdn\d\.tianli0\.top\/.*@\d+\.\d+\.\d+\/
-      - ^(https?:\/\/|\/\/)cdn\.staticfile\.org\/.*\/\d+\.\d+\.\d+\/
-      - ^(https?:\/\/|\/\/)lf\d+-cdn-tos\.bytecdntp\.com\/.*\/\d+\.\d+\.\d+\/
-      - ^(https?:\/\/|\/\/)npm\.elemecdn\.com\/.*@\d+\.\d+\.\d+\/
-    # 在构建过程中替换部分链接，该替换结果不会影响文件内容
-    # 该设置项是为了应对构建服务器在国外，但是网站内部分缓存资源无法在国外访问导致拉取时 timeout 的问题
-    # 填写格式和替换规则见 https://kmar.top/posts/73014407/#9dde3600
-    replace:
-      - source:
-          - 'rules0'
-          - 'rules1'
-        dist: 'url'
-  # 对 Hexo 中的变量进行排序
-  # 默认插件对 posts、tags、categories、pages 四个变量进行排序
-  # 排序规则为优先按照字符串长度排序，若长度一致按照字典序排序
-  sort:
-    # 格式为 `name: value`
-    # value 的可能值为：字符串、非负整数、false
-    # 假定 Array<obj> 为要被排序的数据
-    # 当 value 为字符串和非负整数时，插件会以 `obj[value]` 的格式读取关键字
-    # 当 value 为 false 时，插件会直接以 `obj` 为关键字
-    # 注意：关键字必须为含有 length 属性且支持 < 操作符的类型
-    # 插件内置的 posts 规则如果用上面的格式写应该为：
-    # posts: 'title'
-    # 插件支持使用配置项覆盖插件内置规则
-    # 下面是一个示例
-    keywords: false

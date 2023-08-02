@@ -31,10 +31,11 @@ description: CC的部落格 即刻短文页面
 <!-- CSS -->
 <link
   rel="stylesheet"
-  href="https://cdn.chuqis.com/npm/@waline/client/dist/waline.min.css"
+  href="https://cdn.chuqis.com/npm/@waline/client/dist/waline.css"
 />
+<link rel="stylesheet" href="https://cdn.chuqis.com/npm/@waline/client/dist/waline-meta.css"/>
 <!-- JS -->
-<script src="https://cdn.chuqis.com/npm/@waline/client/dist/waline.min.js"></script>
+<script src="https://cdn.chuqis.com/npm/@waline/client/dist/waline.js"></script>
 <script>
   var head = document.getElementsByTagName('head')[0]
   var meta = document.createElement('meta')

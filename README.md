@@ -6,7 +6,7 @@
 
 以下排名不分先后，请选择适合自己访问较快的即可
 
-**[GitHub](https://github.blog.ccknbc.cc) | [GitLab](https://gitlab.blog.ccknbc.cc) | [Gitee](https://ccknbc.gitee.io) | [Bitbucket](https://ccknbc.bitbucket.io) | [Vercel](https://vercel.blog.ccknbc.cc) | [Netlify](https://netlify.blog.ccknbc.cc) | [CloudFlare](https://cloudflare.blog.ccknbc.cc) | [Zeabur](https://zeabur.blog.ccknbc.cc)**
+**[GitHub](https://github.blog.ccknbc.cc) | [GitLab](https://gitlab.blog.ccknbc.cc) | [Gitee](https://ccknbc.gitee.io) | [Bitbucket](https://ccknbc.bitbucket.io) | [Vercel](https://vercel.blog.ccknbc.cc) | [Netlify](https://netlify.blog.ccknbc.cc) | [CloudFlare](https://cloudflare.blog.ccknbc.cc)**
 
 ## 站点源码
 

@@ -42,6 +42,7 @@
     "hexo-renderer-stylus": "3.0.0",
     "hexo-server": "3.0.0",
     "hexo-tag-mmedia": "1.2.1",
+    "hexo-theme-anzhiyu": "github:anzhiyu-c/hexo-theme-anzhiyu#dev",
     "hexo-wordcount": "6.0.1",
     "hexo-yam": "8.0.0",
     "markdown-it-task-lists": "2.1.1",

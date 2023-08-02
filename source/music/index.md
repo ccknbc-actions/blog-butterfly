@@ -12,7 +12,7 @@ updated: 2023-06-09 23:13:42
 <link rel="stylesheet" href="https://cdn.chuqis.com/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.chuqis.com/npm/aplayer/dist/APlayer.min.js"></script>
 <script src="https://cdn.chuqis.com/npm/@xizeyoupan/meting/dist/Meting.min.js"></script>
-<script>var meting_api="https://music.startly.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r"</script>
+<script>var meting_api="https://meting.ccknbc.cc/api?server=:server&type=:type&id=:id&auth=:auth&r=:r"</script>
 
 <!-- https://music.startly.cn/ 不支持 artist
 https://meting.yany.ml/api 不支持 qq音乐 音频
@@ -21,18 +21,6 @@ https://meting.ccknbc.cc/api 支持 Netease, QQ, YouTube Music, Spotify -->
 
 {% folding green open, Three Man Down × Tilly Birds %}
 <!-- {% note green 'fa-solid fa-dice-three' simple %}Three Man Down × Tilly Birds{% endnote %} -->
-<meting-js server="netease" type="playlist" id="5457110860" list-folded="true" theme="#8fbc8f"></meting-js>
+<meting-js server="netease" type="artist" id="12838890" list-folded="true" theme="#8fbc8f"></meting-js>
 {% note info simple %}2022年8月22日 Ohm宣布因个人原因退出乐队，"TMD"因此也成为了缺少贝斯手的乐队{% endnote %}
-{% endfolding %}
-
-{% folding blue, 王铮亮 %}
-<meting-js server="netease" type="playlist" id="7681620447" list-folded="true" theme="#8fbc8f"></meting-js>
-{% endfolding %}
-
-{% folding blue, 王铮亮2023“还是爱着”全国巡演（网易云音乐） %}
-<meting-js server="netease" type="playlist" id="8448821577" list-folded="true" theme="#8fbc8f"></meting-js>
-{% endfolding %}
-
-{% folding blue, 王铮亮2023“还是爱着”全国巡演（QQ音乐） %}
-<meting-js server="tencent" type="playlist" id="8913885866" list-folded="true" theme="#8fbc8f"></meting-js>
 {% endfolding %}

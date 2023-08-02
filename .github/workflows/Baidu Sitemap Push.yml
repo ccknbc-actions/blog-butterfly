@@ -20,7 +20,7 @@ jobs:
       - name: Set Up Python
         uses: actions/setup-python@main
         with:
-          python-version: 3.9
+          python-version: '3.10'
 
       - name: Install Requests
         run: pip install requests
@@ -36,12 +36,3 @@ jobs:
         with:
           retain_days: 30
           keep_minimum_runs: 6
-
-      # - name: Telegram Notification
-      #   if: cancelled() == false
-      #   uses: xinthink/action-telegram@v1.1
-      #   with:
-      #     botToken: ${{ secrets.TG_BOT_TOKEN }} #use bot @BotFather
-      #     chatId: ${{ secrets.TG_CHAT_ID }} #use bot @userinfobot
-      #     jobStatus: ${{ job.status }}
-      #     skipSuccess: true

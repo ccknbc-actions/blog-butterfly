@@ -55,17 +55,16 @@ copy:
 social:
   fa-brands fa-github: https://github.com/CCKNBC || GitHub
   fa-solid fa-envelope: mailto:status@ccknbc.cc?contenttype=text/html&subject=CC的状态监控故障反馈&body=请告知CC服务异常详情&inquiry=yes || Email
-  # fa-brands fa-bilibili: https://space.bilibili.com/1404413254 || 哔哩哔哩
-  fa-brands fa-weibo: https://weibo.com/CommonCulture || 微博
-  # fa-solid fa-crow: https://www.yuque.com/ccknbc || 语雀
-  fa-brands fa-telegram: https://t.me/ccknbcTG || 电报群组
-  fa-brands fa-twitter: https://www.twitter.com/ccknbc || 推特
-  # fa-solid fa-bell faa-ring animated: /sub || 多种订阅方式
+  fa-brands fa-bilibili: https://space.bilibili.com/1404413254 || BiliBili
+  fa-brands fa-weibo: https://weibo.com/CommonCulture || Weibo
+  fa-brands fa-telegram: https://t.me/ccknbc || Telegram
+  # fa-brands fa-twitter: https://www.twitter.com/ccknbc || Twitter
+  # fa-solid fa-bell faa-ring animated: /sub/ || Sub
   # fa-brands fa-line: https://line.me/ti/p/1vqM_WDef1 || LINE
   # fa-brands fa-instagram: https://www.instagram.com/ccknbc || Instagram
   # fa-brands fa-facebook: https://www.facebook.com/ccknbc || Facebook
   # fa-brands fa-facebook-messenger: https://m.me/ccknbc || Messenger
-  # fa-brands fa-youtube: https://www.youtube.com/channel/UCpwvRmdjIYbhjEaoEl6hI8Q || YouTube
+  # fa-brands fa-youtube: https://www.youtube.com/@ccknbc || YouTube
 
 # search (搜索)
 # --------------------------------------
@@ -75,17 +74,6 @@ algolia_search:
   enable: false
   searchAsYouType: false
 
-# Local search
-local_search:
-  enable: false
-  # Preload the search data when the page loads.
-  preload: false
-  # Show top n results per article, show all results by setting to -1
-  top_n_per_article: 1
-  # Unescape html strings to the readable one.
-  unescape: false
-  CDN:
-
 # Docsearch
 docsearch:
   enable: true
@@ -93,8 +81,8 @@ docsearch:
   apiKey: a003a39f337f5186ec11f5f92bae62b3
   indexName: ccknbc
   option:
-    debug: false
     placeholder: 'Ctrl/⌘ + K 唤醒搜索服务'
+    maxResultsPerGroup: 7
     translations:
       button:
         buttonText: '搜索'
@@ -129,6 +117,17 @@ docsearch:
           suggestedQueryText: '您可尝试搜索'
           reportMissingResultsText: '确认搜索结果是正确的？'
           reportMissingResultsLinkText: '反馈给Algolia'
+
+# Local search
+local_search:
+  enable: false
+  # Preload the search data when the page loads.
+  preload: false
+  # Show top n results per article, show all results by setting to -1
+  top_n_per_article: 1
+  # Unescape html strings to the readable one.
+  unescape: false
+  CDN:
 
 # Math (數學)
 # --------------------------------------
@@ -256,9 +255,9 @@ index_post_content:
 # anchor
 anchor:
   button:
-    enable: true
-    always_show: false
-    icon: # the unicode value of Font Awesome icon, such as '\3423'
+    enable: false
+    always_show: true
+    icon: '\f0c1' # the unicode value of Font Awesome icon, such as '\3423'
   auto_update: false # when you scroll in post, the URL will update according to header id.
 
 # Post
@@ -349,7 +348,7 @@ comments:
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
-  lazyload: true
+  lazyload: false
   count: false # Display comment count in post's top_img
   card_post_count: false # Display comment count in Home Page
 
@@ -372,6 +371,7 @@ waline:
   serverURL: https://waline.ccknbc.cc # Waline server address url
   bg: # waline background
   pageview: false
+  meta: true
   option:
     pageSize: 10
     requiredMeta: ["nick", "mail"]
@@ -858,13 +858,15 @@ aside:
     # <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=C" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></br>
     # </center>'
     # alternate
+  card_qrcode:
+    enable: true
   card_recent_post:
     enable: true
     limit: 3 # if set 0 will show all
     sort: updated # date or updated
     sort_order: 2 # Don't modify the setting unless you know how it works
   card_categories:
-    enable: true
+    enable: false
     limit: 8 # if set 0 will show all
     expand: true # none/true/false
     sort_order: 4 # Don't modify the setting unless you know how it works
@@ -1080,7 +1082,7 @@ css_prefix: true
 # 插入代码到头部 </head> 之前 和 底部 </body> 之前
 inject:
   head:
-    - <script>"serviceWorker"in navigator&&(navigator.serviceWorker.register("/sw.js",{scope:"/"}).then(e=>{e.onupdatefound=(()=>{const r=e.installing;r.onstatechange=(()=>{"installed"===r.state&&(navigator.serviceWorker.controller?(console.log("新的Service Worker已安装"),navigator.serviceWorker.controller.postMessage({type:"skipWaiting"})):console.log("第一次注册Service Worker"))})})}),navigator.serviceWorker.addEventListener("message",e=>{e.data&&"refresh"===e.data.type&&(console.log("收到刷新页面请求，开始刷新页面"),window.location.reload())}));</script>
+    - <script>if('serviceWorker'in navigator){navigator.serviceWorker.register("/sw.js",{scope:"/"}).then(reg=>{reg.onupdatefound=()=>{const installingWorker=reg.installing;installingWorker.onstatechange=()=>{if(installingWorker.state==='installed'){if(navigator.serviceWorker.controller){const isSnackbar=GLOBAL_CONFIG.Snackbar!==undefined;isSnackbar&&btf.snackbarShow("已刷新缓存，更新为最新内容");navigator.serviceWorker.controller.postMessage({type:"skipWaiting"})}else{console.log("第一次注册Service Worker")}}}}});navigator.serviceWorker.addEventListener("message",event=>{if(event.data&&event.data.type==="refresh"){console.log("收到刷新页面请求，开始刷新页面");window.location.reload()}})}</script>
     # - "<script>if(!!navigator.serviceWorker){navigator.serviceWorker.register('/cw.js?t='+new Date().getTime()).then(async(registration)=>{if(localStorage.getItem('cw_installed')!=='true'){const conf=()=>{console.log('[CW] Installing Success,Configuring...');fetch('/cw-cgi/api?type=config').then(res=>res.text()).then(text=>{if(text==='ok'){console.log('[CW] Installing Success,Configuring Success,Starting...');localStorage.setItem('cw_installed','true');fetch(window.location.href).then(res=>res.text()).then(text=>{document.open()document.write(text);document.close()})}else{console.log('[CW] Installing Success,Configuring Failed,Sleeping 200ms...');setTimeout(()=>{conf()},200)}}).catch(err=>{console.log('[CW] Installing Success,Configuring Error,Exiting...')})}setTimeout(()=>{conf()},50)}}).catch(err=>{console.error('[CW] Installing Failed,Error: '+err.message)})}else{console.error('[CW] Installing Failed,Error: Browser not support service worker')}</>"
     # - <style type="text/css">.app-refresh{position:fixed;top:-2.2rem;left:0;right:0;z-index:99999;padding:0 1rem;font-size:15px;height:2.2rem;transition:all .3s ease}.app-refresh-wrap{display:flex;color:#fff;height:100%;align-items:center;justify-content:center}.app-refresh-wrap a{color:#fff;text-decoration:underline;cursor:pointer}</style>
   bottom:

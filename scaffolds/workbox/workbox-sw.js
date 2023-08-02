@@ -26,21 +26,30 @@ self.addEventListener("activate", async () => {
 // 控制台输出开关
 // self.__WB_DISABLE_DEV_LOGS = true;
 
+// 定义CDN镜像的URL列表
 const fallbackCdnUrls = [
     'https://cdn.chuqis.com',
     'https://cdn2.chuqis.com',
-    'https://cdn.yt-blog.top',
+    'https://jsd.onmicrosoft.cn',
     'https://jsd.cdn.zzko.cn',
     'https://jsdelivr.goodboyboy.top'
-    // 在这里添加其他CDN镜像的URL
 ];
 
+// 定义失效CDN镜像的URL列表
 const invalidCdnUrls = [
     'https://cdn.jsdelivr.ren',
-    'https://cdn1.tianli0.top'
-    // 在这里添加其他失效CDN镜像的URL
+    'https://cdn1.tianli0.top',
 ];
 
+// 定义空引用URL的域名列表
+const referrerDomains = [
+    'cdn.nlark.com',
+    'pic1.afdiancdn.com',
+    'f.video.weibocdn.com',
+    'api.icodeq.com'
+];
+
+// 定义缓存时间
 const MIN = 60;
 const HOUR = MIN * 60;
 const DAY = HOUR * 24;
@@ -73,7 +82,7 @@ fallbackCdnUrls.forEach(fallbackUrl => {
                     purgeOnQuotaError: true
                 }),
                 new workbox.cacheableResponse.CacheableResponsePlugin({
-                    statuses: [0, 200],
+                    statuses: [200],
                 }),
             ],
         })
@@ -110,12 +119,6 @@ function handleFallbackCdn(request) {
 
 // 函数用于判断是否为需要空引用URL的域名
 function requiresEmptyReferrerDomain(domain) {
-    const referrerDomains = [
-        'cdn.nlark.com',
-        'pic1.afdiancdn.com',
-        'f.video.weibocdn.com',
-        'api.icodeq.com'
-    ];
     return referrerDomains.includes(domain);
 }
 
@@ -124,26 +127,21 @@ function handleEmptyReferrer(request) {
     return fetch(request, { referrerPolicy: "no-referrer" });
 }
 
-// 在fetch事件中处理逻辑
 self.addEventListener('fetch', event => {
     const request = event.request;
     const url = new URL(request.url);
     const domain = url.hostname;
 
-    if (isInvalidCdnUrl(url.href)) {
+    if (isInvalidCdnUrl(url.href) || isFallbackCdnUrl(url.href)) {
         // 失效CDN镜像站逻辑，继续尝试备用CDN
         event.respondWith(handleFallbackCdn(request));
-    } else if (isFallbackCdnUrl(url.href)) {
-        // 备用CDN逻辑
-        event.respondWith(handleFallbackCdn(request));
-    } else if (requiresEmptyReferrerDomain(domain)) {
+    }
+    if (requiresEmptyReferrerDomain(domain)) {
         // 空引用URL逻辑
         event.respondWith(handleEmptyReferrer(request));
-    } else {
-        // 其他情况直接返回原始请求
-        event.respondWith(fetch(request));
     }
 });
+
 
 // 缓存名称
 workbox.core.setCacheNameDetails({
@@ -159,9 +157,6 @@ workbox.precaching.precacheAndRoute(self.__WB_MANIFEST, {
     directoryIndex: null,
 });
 
-// 默认策略
-workbox.routing.setDefaultHandler(new workbox.strategies.NetworkOnly());
-
 // 导航预加载
 workbox.navigationPreload.enable();
 
@@ -176,14 +171,14 @@ const Offline = new workbox.routing.Route(
                 fallbackURL: "/offline/index.html",
             }),
             new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200],
+                statuses: [200],
             }),
         ],
     })
 );
 workbox.routing.registerRoute(Offline);
 
-// busuanzi
+// busuanzi 请求走网络不缓存
 workbox.routing.registerRoute(
     ({ url }) => String(url).includes('busuanzi?') || String(url).includes('busuanzi='),
     new workbox.strategies.NetworkOnly()
@@ -195,9 +190,10 @@ workbox.routing.registerRoute(
         request.destination === 'style' ||
         request.destination === 'script' ||
         request.destination === 'font' ||
-        request.destination === 'worker',
+        request.destination === 'worker' ||
+        request.url.endsWith('/favicon.ico'),
     new workbox.strategies.StaleWhileRevalidate({
-        cacheName: '静态资源', // 使用相同的缓存名称，可以与其他地方保持一致
+        cacheName: '静态资源',
         plugins: [
             new workbox.expiration.ExpirationPlugin({
                 maxEntries: 20, // 最大缓存条目数
@@ -205,7 +201,7 @@ workbox.routing.registerRoute(
                 purgeOnQuotaError: true
             }),
             new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [0, 200],
+                statuses: [200],
             }),
         ],
     }),
