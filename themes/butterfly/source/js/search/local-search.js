@@ -250,7 +250,7 @@ window.addEventListener('load', () => {
   const inputEventFunction = () => {
     if (!localSearch.isfetched) return
     const searchText = input.value.trim().toLowerCase()
-    if (searchText !== '') $loadingStatus.innerHTML = '<i class="fas fa-spinner fa-pulse"></i>'
+    if (searchText !== '') $loadingStatus.innerHTML = '<i class="fa-solid fa-spinner fa-pulse"></i>'
     const keywords = searchText.split(/[-\s]+/)
     const container = document.getElementById('local-search-results')
     let resultItems = []
@@ -330,7 +330,7 @@ window.addEventListener('load', () => {
   }
 
   const searchClickFn = () => {
-    document.querySelector('#search-button > .search').addEventListener('click', openSearch)
+    btf.addEventListenerPjax(document.querySelector('#search-button > .search'), 'click', openSearch)
   }
 
   const searchFnOnce = () => {

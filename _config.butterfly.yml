@@ -255,7 +255,7 @@ index_post_content:
 # anchor
 anchor:
   button:
-    enable: false
+    enable: true
     always_show: true
     icon: '\f0c1' # the unicode value of Font Awesome icon, such as '\3423'
   auto_update: false # when you scroll in post, the URL will update according to header id.
@@ -1175,8 +1175,7 @@ CDN:
     # click_heart:
     # ClickShowText:
     # fontawesome:
-    # flickr_justified_gallery_js:
-    # flickr_justified_gallery_css:
+    # egjs_infinitegrid:
     # aplayer_css:
     # aplayer_js:
     # meting_js:
