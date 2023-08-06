@@ -51,7 +51,7 @@ mixin rightsideItem(array)
           a.edit-github(href=theme.edit.github + 'posts/语雀/' + page.title + '.md' title=_p('edit.github') + ' - ' + page.title)
             i.fa-brands.fa-github
         if theme.edit.yuque !== false
-          a.edit-yuque(href=theme.edit.yuque + page.id + '/edit' title=_p('edit.yuque') + ' - ' + page.title)
+          a.edit-yuque(href=theme.edit.yuque + page.id + '/edit/' title=_p('edit.yuque') + ' - ' + page.title)
             i.fa-solid.fa-crow
       else if is_page() || is_category() || is_tag()
         if theme.edit.gitlab_ide  !== false
