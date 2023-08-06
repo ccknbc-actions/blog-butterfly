@@ -63,9 +63,24 @@ description: CC的部落格 即刻短文页面
             serverURL: 'https://waline.ccknbc.cc',
             pageSize: 10,
             requiredMeta: ["nick", "mail"],
-            login: 'enable',
+            login: 'force',
             dark: 'html[data-theme="dark"]',
-            imageUploader: true,
+            imageUploader: function (file) {
+              let formData = new FormData();
+              let headers = new Headers();
+              formData.append("file", file);
+              formData.append("album_id", "10");
+              formData.append("permission", "0");
+              headers.append("Authorization", "Bearer 24|o8Crl5y0oK3luyUs17fBxDtAcevk1iiLHVFMNjpA");
+              headers.append("Accept", "application/json");
+              return fetch("https://www.wmimg.com/api/v1/upload", {
+                method: "POST",
+                headers: headers,
+                body: formData,
+              })
+                .then((resp) => resp.json())
+                .then((resp) => resp.data.links.url);
+              },
             turnstileKey: '0x4AAAAAAAECBl27OB5SZrQT',
             emoji:
               [

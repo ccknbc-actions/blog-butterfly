@@ -372,17 +372,34 @@ waline:
   bg: # waline background
   pageview: false
   meta: true
+  # imageUploader: true
+  imageUploader: >
+    function (file) {
+      let formData = new FormData();
+      let headers = new Headers();
+      formData.append("file", file);
+      formData.append("album_id", "10");
+      formData.append("permission", "0");
+      headers.append("Authorization", "Bearer 24|o8Crl5y0oK3luyUs17fBxDtAcevk1iiLHVFMNjpA");
+      headers.append("Accept", "application/json");
+      return fetch("https://www.wmimg.com/api/v1/upload", {
+        method: "POST",
+        headers: headers,
+        body: formData,
+      })
+        .then((resp) => resp.json())
+        .then((resp) => resp.data.links.url);
+    }
   option:
     pageSize: 10
     requiredMeta: ["nick", "mail"]
-    login: enable
+    login: force
     copyright: true
-    imageUploader: true
     turnstileKey: 0x4AAAAAAAECBl27OB5SZrQT
     locale:
       admin: 博主
       sofa: 这里冷冷清清的，快来留下脚印吧！
-      placeholder: "根据《互联网跟帖评论服务管理规定》，建议注册登陆后评论\n社交登录现已支持【QQ Weibo GitHub Twitter Facebook】等平台"
+      placeholder: "根据《互联网跟帖评论服务管理规定》，将展示您的归属地，并开启强制注册登录后才允许评论\n社交登录现已支持【QQ Weibo GitHub X Facebook】等平台\n在评论框粘贴图片，自动上传至图床，请不要将评论区作为您的图床"
       reactionTitle: 就现在，表明你的态度！
       reaction0: 鼓励
       reaction1: 菜狗
@@ -845,8 +862,8 @@ aside:
       text: 多种订阅更新方式
       link: /sub/
   card_announcement:
-    enable: false
-    content: <div id="webpushr-subscription-button" data-background-color="#8fbc8f" data-size="small" data-button-text="订阅更新/通知" data-subscriber-count-text="位用户已订阅"></div> 点击按钮修改您的订阅配置 <span id="webpushr-subscription-toggle-button" data-size="1.5" data-text-when-denied="请点击按钮允许 CC的部落格 通知权限" data-color="#8fbc8f"></span>
+    enable: true
+    content: '如果访问存在问题，请 <b>Ctrl + Shift + R</b> 强制刷新页面，如果可以的话<a href="https://wmimg.com/i/41/2023/08/64cf770f0a003.png" alt="手动注销本站 Service Worker" title="手动注销本站 Service Worker">手动注销本站 Service Worker</a> 应该可以解决大部分问题'
     # '<center><iframe src="https://cc.instatus.com/embed-status/light-sm" loading="lazy" width="158" height="43" frameBorder="0" scrolling="no" style="border: none;" ></iframe><div id="he-plugin-standard"></div><script>WIDGET = {  "CONFIG": {    "layout": "2",    "width": "230",    "height": "290",    "background": "1",    "dataColor": "FFFFFF",    "borderRadius": "5",    "key": "dac79a62255345c9b4a31b585c3434a4"  }}</script><script src="https://widget.qweather.net/standard/static/js/he-standard-common.js?v=2.0"></script>
     # <center>
     # <a target="_blank" href="https://hexo.io"><img src="https://img.shields.io/badge/Frame-Hexo 5.3.0-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a><br>
@@ -859,7 +876,7 @@ aside:
     # </center>'
     # alternate
   card_qrcode:
-    enable: true
+    enable: false
   card_recent_post:
     enable: true
     limit: 3 # if set 0 will show all

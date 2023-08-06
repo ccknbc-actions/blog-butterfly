@@ -1,4 +1,4 @@
-- const { serverURL, option, pageview, meta } = theme.waline
+- const { serverURL, option, pageview, meta, imageUploader } = theme.waline
 - const { lazyload, count, use } = theme.comments
 
 script.
@@ -11,7 +11,8 @@ script.
         dark: 'html[data-theme="dark"]',
         path: window.location.pathname,
         comment: !{lazyload ? false : count},
-      }, !{JSON.stringify(option)}))
+        imageUploader: !{imageUploader},
+      }, !{JSON.stringify(option)}),)
     }
 
     if (typeof Waline === 'object') initWaline()
