@@ -3,7 +3,7 @@
 
 /* 文章页H2-H6图标 显示H2~H6 */
 
-@-webkit-keyframes ccc {
+/* @-webkit-keyframes ccc {
     0% {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg)
@@ -27,9 +27,6 @@
     }
 }
 
-/* #article-container.post-content  h1::before {
-    content:'H₁'
-} */
 #article-container.post-content h2::before {
     content: 'H₂'
 }
@@ -48,7 +45,7 @@
 
 #article-container.post-content h6::before {
     content: 'H₆'
-}
+} */
 
 /* Webpushr */
 
@@ -83,7 +80,7 @@
 
 /* 侧边栏二维码 */
 
-@media (max-width:768px) {
+/* @media (max-width:768px) {
     #card-qrcode {
         display: none;
     }
@@ -164,7 +161,7 @@
 #card-qrcode:hover #tj-box {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
-}
+} */
 
 
 /* 圆角 */

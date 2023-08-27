@@ -21,7 +21,7 @@ mixin postUI(posts)
       .recent-post-info(class=no_cover)
         a.article-title(href=url_for(link) title=title)
           if (is_home() && (article.top || article.sticky > 0))
-            i.fas.fa-thumbtack.sticky
+            i.fa-solid.fa-thumbtack.sticky
           = title
         .article-meta-wrap
           if (theme.post_meta.page.date_type)
@@ -71,14 +71,10 @@ mixin postUI(posts)
           if theme.comments.card_post_count && theme.comments.use
             case theme.comments.use[0]
               when 'Disqus'
-                +countBlockInIndex
-                  a(href=full_url_for(link) + '#disqus_thread')
-                    i.fa-solid.fa-spinner.fa-spin
               when 'Disqusjs'
                 +countBlockInIndex
-                  a(href=full_url_for(link) + '#disqusjs')
-                    span.disqus-comment-count(data-disqus-url=full_url_for(link))
-                      i.fa-solid.fa-spinner.fa-spin
+                  a.disqus-count(href=full_url_for(link) + '#post-comment')
+                    i.fa-solid.fa-spinner.fa-spin
               when 'Valine'
                 +countBlockInIndex
                   a(href=url_for(link) + '#post-comment')

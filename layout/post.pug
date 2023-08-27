@@ -4,7 +4,7 @@ block content
   #post
     if top_img === false
       include includes/header/post-info.pug
-    if theme.post_head_ai_description
+    if (theme.post_head_ai_description && theme.post_head_ai_description.enable)
       include includes/header/ai-info.pug
     article#article-container.post-content!=page.content
     include includes/post/post-copyright.pug
