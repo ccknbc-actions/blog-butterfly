@@ -183,7 +183,7 @@ printf "\033[32mINFO \033[0m 提交一个 Commit！\n"
 git commit -m "Update Hexo Theme Butterfly DEV"
 printf "\033[32mINFO \033[0m 正在从远程拉取合并主题 dev 分支更新 ...\n"
 printf "\033[32mINFO \033[0m 若自动打开编辑器进度暂停，请关闭编辑器以继续...\n"
-git pull origin dev --allow-unrelated-histories
+git pull upstream dev --allow-unrelated-histories
 printf "\033[32mINFO \033[0m 升级完成，感谢您对 Butterfly 的支持！\n"
 sleep 1s
 printf "\033[32mINFO \033[0m 若自动合并失败，请手动合并含有冲突未合并的文件！\n"

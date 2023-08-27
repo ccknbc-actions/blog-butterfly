@@ -11,8 +11,8 @@ date: 2020-06-04 22:17:49
 updated: 2022-08-27 12:00:00
 ---
 <div id='blogroll'>
-<script src='https://cdn.chuqis.com/npm/butterfly-friend/butterfly-friend.umd.js'></script>
-<link rel="stylesheet" href='https://cdn.chuqis.com/npm/butterfly-friend/style.css'>
+<script src='https://jsd.cdn.zzko.cn/npm/butterfly-friend/butterfly-friend.umd.js'></script>
+<link rel="stylesheet" href='https://jsd.cdn.zzko.cn/npm/butterfly-friend/style.css'>
 <script>
 document.querySelector('.flink').insertAdjacentHTML('afterbegin',"<div id='friend1' class='js-pjax'></div>")
 xkFriend.init({
@@ -20,8 +20,8 @@ xkFriend.init({
   api: [
     'https://blogroll.ccknbc.cc/blogroll.json'
   ], // 你的json链接列表，可以是多个。
-  loading_img: 'https://cdn.chuqis.com/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif', // 加载中的图片
-  fail_img: 'https://cdn.chuqis.com/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif' // 加载失败的图片
+  loading_img: 'https://jsd.cdn.zzko.cn/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif', // 加载中的图片
+  fail_img: 'https://jsd.cdn.zzko.cn/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif' // 加载失败的图片
 })
 </script>
 </div>
@@ -34,7 +34,7 @@ xkFriend.init({
 {% btn '#post-comment',给 CC 留言,fa-solid fa-comments,outline green smaller %}
 或再次 PR  {% endnote %}
 
-<p style="padding:0 0 0 .8rem">
+<!-- <p style="padding:0 0 0 .8rem">
     请<strong>勾选</strong>你符合的条件，满足所有条件才可评论申请：
 </p>
 <div id="friendlink_checkboxs" style="padding:0 0 0 1.6rem">
@@ -103,9 +103,9 @@ xkFriend.init({
         transition: opacity .5s, height .5s;
         overflow: hidden;
     }
-</style>
+</style> -->
 
-<!-- {% link 顺便看看友链截图列表，您可复制使用啦, https://cdn.chuqis.com/gh/ccknbc-actions/blogroll@webp/, https://cdn.chuqis.com/www.jsdelivr.com/c903573129ce0afdbc8b006baf86dba514615495/img/logo-horizontal.svg %} -->
+<!-- {% link 顺便看看友链截图列表，您可复制使用啦, https://jsd.cdn.zzko.cn/gh/ccknbc-actions/blogroll@webp/, https://jsd.cdn.zzko.cn/www.jsdelivr.com/c903573129ce0afdbc8b006baf86dba514615495/img/logo-horizontal.svg %} -->
 
 <!-- {% ghcard ccknbc-actions/blogroll, theme=vue %}  -->
 
@@ -117,7 +117,7 @@ xkFriend.init({
 ```yaml
 name: CC康纳百川
 link: https://blog.ccknbc.cc
-avatar: https://cdn.chuqis.com/gh/ccknbc-backup/cdn/logo/ccknbc.png
+avatar: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/logo/ccknbc.png
 descr: CC康纳百川的小窝
 ```
 选填信息
@@ -131,7 +131,7 @@ border-style: solid
 animation: link_custom1 2s infinite alternate
 img_animation: auto_rotate_right 2s linear infinite
 card_style: card/item
-screenshot: https://cdn.chuqis.com/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
+screenshot: https://jsd.cdn.zzko.cn/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
 # screenshot: https://s0.wordpress.com/mshots/v1/https://blog.ccknbc.cc?w=1280&h=960
 # screenshot: https://image.thum.io/get/width/1024/crop/768/https://blog.ccknbc.cc
 # 帮我选一个适合您站点的截图呗，默认的jsd每天更新
@@ -140,7 +140,7 @@ screenshot: https://cdn.chuqis.com/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.c
 ```yaml
 name: CC的部落格
 link: https://blog.ccknbc.cc
-avatar: https://cdn.chuqis.com/gh/ccknbc-backup/cdn/logo/ccknbc.png
+avatar: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/logo/ccknbc.png
 descr: CC康纳百川
 --primary-color: linear-gradient(0deg,#ffdee9 0,#b5fffc 100%)
 --namecolor: #8fbc8f
@@ -151,7 +151,7 @@ border-style: solid
 animation: link_custom1 2s infinite alternate
 img_animation: auto_rotate_right 2s linear infinite
 card_style: item
-screenshot: https://cdn.chuqis.com/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
+screenshot: https://jsd.cdn.zzko.cn/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
 ```
 
 <!-- endtab -->

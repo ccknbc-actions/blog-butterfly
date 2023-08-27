@@ -25,8 +25,9 @@
   },
   "dependencies": {
     "@elog/cli": "0.7.1",
-    "axios": "1.4.0",
+    "axios": "1.5.0",
     "hexo": "7.0.0-rc2",
+    "hexo-butterfly-copymarkdown": "1.0.4",
     "hexo-butterfly-tag-plugins-plus": "1.0.17",
     "hexo-filter-nofollow": "2.0.2",
     "hexo-generator-archive": "2.0.0",

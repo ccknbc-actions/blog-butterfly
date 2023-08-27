@@ -51,6 +51,12 @@ nav:
           link: https://image.anheyu.com/
           icon: https://image.anheyu.com/favicon.ico
 
+# mourn （哀悼日，指定日期网站简单变灰，不包括滚动条）
+# 注意： 仅网站首页变灰，其他页面正常显示
+mourn:
+  enable: true
+  days: [4-5, 5-12, 7-7, 9-18, 12-13]
+
 # Code Blocks (代码相关)
 # --------------------------------------
 
@@ -59,10 +65,11 @@ highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
 highlight_height_limit: 330 # unit: px
-code_word_wrap: true
+code_word_wrap: false
 
 # copy settings
 # copyright: Add the copyright information after copied content (複制的内容后面加上版权信息)
+# copy: enable 复制后弹窗提示版权信息
 copy:
   enable: true
   copyright:
@@ -79,10 +86,8 @@ social:
 # 作者卡片 状态
 author_status:
   enable: false
-  status: ✍️
-  alias: writing_hand
-  fallback_src: https://github.githubassets.com/images/icons/emoji/unicode/270d.png
-  text: on Studying
+  # 可以是任何图片，建议放表情包或者emoji图片，效果都很好，[表情包速查](https://emotion.xiaokang.me/)
+  statusImg: "https://bu.dusays.com/2023/08/24/64e6ce9c507bb.png"
   skills:
     # - 🤖️ 数码科技爱好者
     # - 🔍 分享与热心帮助
@@ -94,7 +99,7 @@ author_status:
     # - 💢 壮汉人狠话不多
 
 # search (搜索)
-# see https://butterfly.js.org/posts/ceeb73f/#搜索系统
+# see https://blog.anheyu.com/posts/c27d.html#搜索系统
 # --------------------------------------
 
 # Algolia search
@@ -102,6 +107,9 @@ algolia_search:
   enable: false
   hits:
     per_page: 6
+  tags:
+    # - 前端
+    # - Hexo
 
 # Docsearch
 # Apply and Docs: see https://docsearch.algolia.com/
@@ -113,42 +121,42 @@ docsearch:
   apiKey: a003a39f337f5186ec11f5f92bae62b3
   indexName: ccknbc
   option:
-    placeholder: 'Ctrl/⌘ + K 唤醒搜索服务'
+    placeholder: "Ctrl/⌘ + K 唤醒搜索服务"
     maxResultsPerGroup: 7
     translations:
       button:
-        buttonText: '搜索'
-        buttonAriaLabel: '搜索'
+        buttonText: "搜索"
+        buttonAriaLabel: "搜索"
       modal:
         searchBox:
-          resetButtonTitle: '清空'
-          resetButtonAriaLabel: '清空'
-          cancelButtonText: '取消'
-          cancelButtonAriaLabel: '取消'
+          resetButtonTitle: "清空"
+          resetButtonAriaLabel: "清空"
+          cancelButtonText: "取消"
+          cancelButtonAriaLabel: "取消"
         startScreen:
-          recentSearchesTitle: '最近搜索历史'
-          noRecentSearchesText: '搜索历史为空'
-          saveRecentSearchButtonTitle: '保存搜索记录'
-          removeRecentSearchButtonTitle: '清除搜索记录'
-          favoriteSearchesTitle: '收藏夹'
-          removeFavoriteSearchButtonTitle: '移出收藏夹'
+          recentSearchesTitle: "最近搜索历史"
+          noRecentSearchesText: "搜索历史为空"
+          saveRecentSearchButtonTitle: "保存搜索记录"
+          removeRecentSearchButtonTitle: "清除搜索记录"
+          favoriteSearchesTitle: "收藏夹"
+          removeFavoriteSearchButtonTitle: "移出收藏夹"
         errorScreen:
-          titleText: '未能获取搜索结果'
-          helpText: '您可能需要检查您的网络连接'
+          titleText: "未能获取搜索结果"
+          helpText: "您可能需要检查您的网络连接"
         footer:
-          selectText: '选择'
-          selectKeyAriaLabel: '回车键'
-          navigateText: '切换'
-          navigateUpKeyAriaLabel: '方向键上'
-          navigateDownKeyAriaLabel: '方向键下'
-          closeText: '关闭'
-          closeKeyAriaLabel: '退出键'
-          searchByText: '搜索服务提供: DocSearch by'
+          selectText: "选择"
+          selectKeyAriaLabel: "回车键"
+          navigateText: "切换"
+          navigateUpKeyAriaLabel: "方向键上"
+          navigateDownKeyAriaLabel: "方向键下"
+          closeText: "关闭"
+          closeKeyAriaLabel: "退出键"
+          searchByText: "搜索服务提供: DocSearch by"
         noResultsScreen:
-          noResultsText: '未搜索到相关内容'
-          suggestedQueryText: '您可尝试搜索'
-          reportMissingResultsText: '确认搜索结果是正确的？'
-          reportMissingResultsLinkText: '反馈给Algolia'
+          noResultsText: "未搜索到相关内容"
+          suggestedQueryText: "您可尝试搜索"
+          reportMissingResultsText: "确认搜索结果是正确的？"
+          reportMissingResultsLinkText: "反馈给Algolia"
 
 # Local search
 local_search:
@@ -230,7 +238,7 @@ post_meta:
     categories: true # true or false 文章页是否显示分类
     tags: true # true or false 文章页是否显示标籤
     label: true # true or false 显示描述性文字
-    unread: false # true or false 文章未读功能
+    unread: true # true or false 文章未读功能
 
 # 主色调相关配置
 mainTone:
@@ -241,7 +249,7 @@ mainTone:
   cover_change: true # 整篇文章跟随cover修改主色调
 
 # wordcount (字数统计)
-# see https://butterfly.js.org/posts/ceeb73f/#字数统计
+# see https://blog.anheyu.com/posts/c27d.html#字数统计
 wordcount:
   enable: true
   post_wordcount: true
@@ -288,20 +296,25 @@ post_copyright:
 reward:
   enable: true
   QR_code:
-    - img: https://cdn.chuqis.com/gh/ccknbc-backup/cdn/logo/qr.png
-      link: https://www.rocschool.com/tool/qr/qr/id/51.html
-      text: 三合一
-    - img: https://cdn.chuqis.com/gh/ccknbc-backup/cdn/logo/afdian.png
-      link: https://afdian.net/@ccknbc
-      text: 爱发电
+    - img: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-weichat.png
+      link:
+      text: 微信
+    - img: https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/qrcode-alipay.png
+      link:
+      text: 支付宝
 
 # Post edit
 # Easily browse and edit blog source code online.
-post_edit:
-  enable: false
-  # url: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/
+post_edit: # 目前仅可选择一个平台在线编辑
+  enable: true
+  # github: https://github.com/user-name/repo-name/edit/branch-name/subdirectory-name/
   # For example: https://github.com/jerryc127/butterfly.js.org/edit/main/source/
-  url:
+  github: false
+
+  # yuque: https://www.yuque.com/user-name/repo-name/
+  # 示例: https://www.yuque.com/yuque/yuque/
+  # 你需要在语雀文章 Front Matter 添加参数 id 并确保其唯一性（例如 “id: yuque”, “id: 01”）
+  yuque: https://www.yuque.com/ccknbc/blog/
 
 # Related Articles
 related_post:
@@ -387,17 +400,35 @@ waline:
   serverURL: https://waline.ccknbc.cc # Waline server address url
   bg: # waline background
   pageview: false
+  meta: true
+  # imageUploader: true
+  imageUploader: >
+    function (file) {
+      let formData = new FormData();
+      let headers = new Headers();
+      formData.append("file", file);
+      formData.append("album_id", "10");
+      formData.append("permission", "0");
+      headers.append("Authorization", "Bearer 24|o8Crl5y0oK3luyUs17fBxDtAcevk1iiLHVFMNjpA");
+      headers.append("Accept", "application/json");
+      return fetch("https://www.wmimg.com/api/v1/upload", {
+        method: "POST",
+        headers: headers,
+        body: formData,
+      })
+        .then((resp) => resp.json())
+        .then((resp) => resp.data.links.url);
+    }
   option:
     pageSize: 10
     requiredMeta: ["nick", "mail"]
-    login: enable
+    login: force
     copyright: true
-    imageUploader: true
     turnstileKey: 0x4AAAAAAAECBl27OB5SZrQT
     locale:
       admin: 博主
       sofa: 这里冷冷清清的，快来留下脚印吧！
-      placeholder: "根据《互联网跟帖评论服务管理规定》，建议注册登陆后评论\n社交登录现已支持【QQ Weibo GitHub Twitter Facebook】等平台"
+      placeholder: "根据《互联网跟帖评论服务管理规定》，将展示您的归属地，并开启强制注册登录后才允许评论\n社交登录现已支持【QQ Weibo GitHub X Facebook】等平台\n在评论框粘贴图片，自动上传至图床，请不要将评论区作为您的图床"
       reactionTitle: 就现在，表明你的态度！
       reaction0: 鼓励
       reaction1: 菜狗
@@ -414,18 +445,18 @@ waline:
       level6: 开吃
     emoji:
       [
-        "https://cdn.chuqis.com/npm/sticker-heo/Sticker-100/",
-        # "https://cdn.chuqis.com/npm/telegram-gif/Telegram-Gif/",
-        # "https://cdn.chuqis.com/npm/@waline/emojis/tw-emoji/",
+        "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/",
+        # "https://jsd.cdn.zzko.cn/npm/telegram-gif/Telegram-Gif/",
+        # "https://jsd.cdn.zzko.cn/npm/@waline/emojis/tw-emoji/",
       ]
     reaction:
       [
-        "https://cdn.chuqis.com/npm/sticker-heo/Sticker-100/鼓掌.png",
-        "https://cdn.chuqis.com/npm/sticker-heo/Sticker-100/菜狗.png",
-        "https://cdn.chuqis.com/npm/sticker-heo/Sticker-100/正确.png",
-        "https://cdn.chuqis.com/npm/sticker-heo/Sticker-100/错误.png",
-        "https://cdn.chuqis.com/npm/sticker-heo/Sticker-100/思考.png",
-        "https://cdn.chuqis.com/npm/sticker-heo/Sticker-100/睡觉.png",
+        "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/鼓掌.png",
+        "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/菜狗.png",
+        "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/正确.png",
+        "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/错误.png",
+        "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/思考.png",
+        "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/睡觉.png",
       ]
 
 # Twikoo
@@ -486,7 +517,7 @@ footer:
     since: 2020
   custom_text:
   runtime:
-    enable: false
+    enable: true
     launch_time: 06/04/2020 00:00:00 # 网站上线时间
     work_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.4/img/badge/安知鱼-上班摸鱼中.svg
     work_description: 距离月入25k也就还差一个大佬带我~
@@ -609,7 +640,7 @@ footer:
       source: 1
       # 如果关闭打字效果，subtitle 只会显示 sub 的第一行文字
       sub:
-        - 生活明朗&#44; 万物可爱&#44; 人间值得&#44; 未来可期.
+        # - 生活明朗&#44; 万物可爱&#44; 人间值得&#44; 未来可期.
 
 # Analysis
 # --------------------------------------
@@ -670,7 +701,7 @@ theme_color:
   enable: true
   main: "#8fbc8f"
   dark_main: "#f2b94b"
-  paginator: "#3b70fc"
+  paginator: "#8fbc8f"
   #   button_hover: "#FF7242"
   text_selection: "#2128bd"
   link_color: "var(--anzhiyu-fontcolor)"
@@ -678,21 +709,32 @@ theme_color:
   hr_color: "#4259ef23"
   code_foreground: "#fff"
   code_background: "var(--anzhiyu-code-stress)"
-  toc_color: "#3b70fc"
-  #   blockquote_padding_color: "#3b70fc"
-  #   blockquote_background_color: "#3b70fc"
+  toc_color: "#8fbc8f"
+  #   blockquote_padding_color: "#8fbc8f"
+  #   blockquote_background_color: "#8fbc8f"
   scrollbar_color: "var(--anzhiyu-scrollbar)"
   meta_theme_color_light: "#f7f9fe"
   meta_theme_color_dark: "#18171d"
 
+# 移动端侧栏
+sidebar:
+  site_data:
+    archive: true
+    tag: true
+    category: true
+  menus_items: true
+  tags_cloud: true
+  display_mode: true
+  nav_menu_project: true
+
 # 文章h2添加分隔线
-h2Divider: true
+h2Divider: false
 
 # 表格隔行变色
 table_interlaced_discoloration: false
 
 # 首页双栏显示
-article_double_row: false
+article_double_row: true
 
 # The top_img settings of home page
 # default: top img - full screen, site info - middle (默认top_img全屏，site_info在中间)
@@ -853,7 +895,7 @@ aside:
     enable: false
     description: # <div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">这有关于<b style="color:#fff">产品、设计、开发</b>相关的问题和看法，还有<b style="color:#fff">文章翻译</b>和<b style="color:#fff">分享</b>。</div><div style="line-height:1.38;margin:0.6rem 0;text-align:justify;color:rgba(255, 255, 255, 0.8);">相信你可以在这里找到对你有用的<b style="color:#fff">知识</b>和<b style="color:#fff">教程</b>。</div> # 默认为站点描述
     name_link: /
-  
+
   card_announcement:
     enable: false
     content: 欢迎来看我的博客鸭~
@@ -864,7 +906,7 @@ aside:
   card_recent_post:
     enable: true
     limit: 3 # if set 0 will show all
-    sort: updated # date or updated
+    sort: date # date or updated
     sort_order: # Don't modify the setting unless you know how it works
   card_categories:
     enable: false
@@ -880,7 +922,7 @@ aside:
       # - Hexo
       # - 前端
   card_archives:
-    enable: false
+    enable: true
     type: monthly # yearly or monthly
     format: MMMM YYYY # eg: YYYY年MM月
     order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
@@ -905,13 +947,13 @@ runtimeshow:
   enable: true
   publish_date: 6/4/2020 00:00:00
 
-# Aside widget - Newest Comments
+# Console - Newest Comments
 newest_comments:
   enable: true
   sort_order: # Don't modify the setting unless you know how it works
   limit: 3
   storage: 10 # unit: mins, save data to localStorage
-  avatar: false
+  avatar: true
 
 # Bottom right button (右下角按钮)
 # --------------------------------------
@@ -1030,7 +1072,7 @@ aplayerInject:
 snackbar:
   enable: true
   position: top-center
-  bg_light: "#3b70fc" # The background color of Toast Notification in light mode
+  bg_light: "#8fbc8f" # The background color of Toast Notification in light mode
   bg_dark: "#1f1f1f" # The background color of Toast Notification in dark mode
 
 # https://instant.page/
@@ -1153,7 +1195,7 @@ comment_barrage_config:
 # 左下角音乐配置项
 # https://github.com/metowolf/MetingJS
 nav_music:
-  enable: true
+  enable: false
   console_widescreen_music: false # 宽屏状态控制台显示音乐而不是标签 enable为true 控制台依然会显示
   id: 8152976493
   server: netease
@@ -1175,34 +1217,33 @@ ptool:
 
 # 欢迎语配置
 greetingBox:
-  enable: true
+  enable: false
   default: 晚上好👋
   list:
-    - greeting: 晚安😴
-      startTime: 0
-      endTime: 5
-    - greeting: 早上好鸭👋, 祝你一天好心情！
-      startTime: 6
-      endTime: 9
-    - greeting: 上午好👋, 状态很好，鼓励一下～
-      startTime: 10
-      endTime: 10
-    - greeting: 11点多啦, 在坚持一下就吃饭啦～
-      startTime: 11
-      endTime: 11
-    - greeting: 午安👋, 宝贝
-      startTime: 12
-      endTime: 14
-    - greeting: 🌈充实的一天辛苦啦！
-      startTime: 14
-      endTime: 18
-    - greeting: 19点喽, 奖励一顿丰盛的大餐吧🍔。
-      startTime: 19
-      endTime: 19
-    - greeting: 晚上好👋, 在属于自己的时间好好放松😌~
-      startTime: 20
-      endTime: 24
-
+    # - greeting: 晚安😴
+    #   startTime: 0
+    #   endTime: 5
+    # - greeting: 早上好鸭👋, 祝你一天好心情！
+    #   startTime: 6
+    #   endTime: 9
+    # - greeting: 上午好👋, 状态很好，鼓励一下～
+    #   startTime: 10
+    #   endTime: 10
+    # - greeting: 11点多啦, 在坚持一下就吃饭啦～
+    #   startTime: 11
+    #   endTime: 11
+    # - greeting: 午安👋, 宝贝
+    #   startTime: 12
+    #   endTime: 14
+    # - greeting: 🌈充实的一天辛苦啦！
+    #   startTime: 14
+    #   endTime: 18
+    # - greeting: 19点喽, 奖励一顿丰盛的大餐吧🍔。
+    #   startTime: 19
+    #   endTime: 19
+    # - greeting: 晚上好👋, 在属于自己的时间好好放松😌~
+    #   startTime: 20
+    #   endTime: 24
 
 # 文章顶部ai摘要
 post_head_ai_description:
@@ -1230,9 +1271,20 @@ accesskey:
 linkPageTop:
   enable: false
   title: 与数百名博主无限进步
+  # 添加博主友链的评论自定义格式
+  addFriendPlaceholder: "昵称（请勿包含博客等字样）：\n网站地址（要求博客地址，请勿提交个人主页）：\n头像图片url（请提供尽可能清晰的图片，我会上传到我自己的图床）：\n描述：\n站点截图（可选）：\n"
 
 # 缩略图后缀 archive/tag/category 页面单独开启后缀
-pageThumbnailSuffix: ''
+pageThumbnailSuffix: ""
+
+# 隐私协议弹窗
+agreementPopup:
+  enable: true
+  url: /privacy-policy/
+
+# 右键菜单
+rightClickMenu:
+  enable: true
 
 # Inject
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
@@ -1240,12 +1292,10 @@ pageThumbnailSuffix: ''
 inject:
   head:
     # 自定义css
-    - <script>if('serviceWorker'in navigator){navigator.serviceWorker.register("/sw.js",{scope:"/"}).then(reg=>{reg.onupdatefound=()=>{const installingWorker=reg.installing;installingWorker.onstatechange=()=>{if(installingWorker.state==='installed'){if(navigator.serviceWorker.controller){const isSnackbar=GLOBAL_CONFIG.Snackbar!==undefined;isSnackbar&&anzhiyu.snackbarShow("已刷新缓存，更新为最新内容");navigator.serviceWorker.controller.postMessage({type:"skipWaiting"})}else{console.log("第一次注册Service Worker")}}}}});navigator.serviceWorker.addEventListener("message",event=>{if(event.data&&event.data.type==="refresh"){console.log("收到刷新页面请求，开始刷新页面");window.location.reload()}})}</script>
     # - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
 
   bottom:
     # 自定义js
-    - <script defer src="/js/custom.js"></script>
     # - <script src="/js/xxx"></script>
 
 # CDN
@@ -1259,24 +1309,30 @@ CDN:
 
   # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
   # option: elemecdn/jsdelivr/unpkg/cdnjs/onmicrosoft/cbd/custom
-  third_party_provider: custom
+  third_party_provider: cbd
 
   # Add version number to CDN, true or false
-  version: false
+  version: true
 
   # Custom format
   # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
-  custom_format: https://cdn.chuqis.com/npm/${name}/${file}
+  custom_format: # https://npm.elemecdn.com/${name}@latest/${file}
 
   option:
     # main_css:
     # main:
     # utils:
     # translate:
+    # random_friends_post_js:
+    # right_click_menu_js:
+    # comment_barrage_js:
+    # ai_abstract_js:
     # local_search:
     # algolia_js:
     # algolia_search:
-    # instantsearch_v4:
+    # instantsearch:
+    # docsearch_js:
+    # docsearch_css:
     # pjax:
     # blueimp_md5:
     # valine:

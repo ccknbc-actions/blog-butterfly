@@ -10,9 +10,9 @@ aside: false
 description: CC的部落格 即刻短文页面
 ---
 <!-- CSS -->
-<link rel="stylesheet" href="https://cdn.chuqis.com/npm/@waline/client/dist/waline.css"/>
-<link rel="stylesheet" href="https://cdn.chuqis.com/npm/@waline/client/dist/waline-meta.css"/>
-<link rel="stylesheet" href="https://cdn.chuqis.com/npm/highlight.js/styles/atom-one-dark.min.css" />
+<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline.css"/>
+<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline-meta.css"/>
+<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/highlight.js/styles/atom-one-dark.min.css" />
 <div class='content'>
   <img src='https://bu.dusays.com/2022/05/01/626e88f349943.gif'>
 </div>
@@ -20,9 +20,9 @@ description: CC的部落格 即刻短文页面
 <hr />
 <div class='ispeak-comment'></div>
 <!-- JS -->
-<script src="https://cdn.chuqis.com/npm/@waline/client/dist/waline.js"></script>
-<script src="https://cdn.chuqis.com/npm/marked/marked.min.js"></script>
-<script src="https://cdn.chuqis.com/npm/highlight.js/highlight.min.js"></script>
+<script src="https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline.js"></script>
+<script src="https://jsd.cdn.zzko.cn/npm/marked/marked.min.js"></script>
+<script src="https://jsd.cdn.zzko.cn/npm/highlight.js/highlight.min.js"></script>
 <script>
   const searchParams = new URLSearchParams(window.location.search);
   const speakId = searchParams.get('q');
@@ -98,9 +98,9 @@ description: CC的部落格 即刻短文页面
         turnstileKey: '0x4AAAAAAAECBl27OB5SZrQT',
         emoji:
           [
-            "https://cdn.chuqis.com/npm/sticker-heo/Sticker-100/",
-            // "https://cdn.chuqis.com/npm/telegram-gif/Telegram-Gif/",
-            // "https://cdn.chuqis.com/npm/@waline/emojis/tw-emoji/"
+            "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/",
+            // "https://jsd.cdn.zzko.cn/npm/telegram-gif/Telegram-Gif/",
+            // "https://jsd.cdn.zzko.cn/npm/@waline/emojis/tw-emoji/"
           ]
       })
     }

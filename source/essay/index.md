@@ -18,24 +18,24 @@ description: CC的部落格 即刻短文页面
 <div id="ispeak"></div>
 <link
   rel="stylesheet"
-  href="https://cdn.chuqis.com/npm/highlight.js/styles/atom-one-dark.min.css"
+  href="https://jsd.cdn.zzko.cn/npm/highlight.js/styles/atom-one-dark.min.css"
 />
 <link
   rel="stylesheet"
-  href="https://cdn.chuqis.com/npm/ispeak/style.css"
+  href="https://jsd.cdn.zzko.cn/npm/ispeak/style.css"
 />
 
-<script src="https://cdn.chuqis.com/npm/highlight.js/highlight.min.js"></script>
-<script src="https://cdn.chuqis.com/npm/marked@v3/marked.min.js"></script>
-<script src="https://cdn.chuqis.com/npm/ispeak/ispeak.umd.js"></script>
+<script src="https://jsd.cdn.zzko.cn/npm/highlight.js/highlight.min.js"></script>
+<script src="https://jsd.cdn.zzko.cn/npm/marked@v3/marked.min.js"></script>
+<script src="https://jsd.cdn.zzko.cn/npm/ispeak/ispeak.umd.js"></script>
 <!-- CSS -->
 <link
   rel="stylesheet"
-  href="https://cdn.chuqis.com/npm/@waline/client/dist/waline.css"
+  href="https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline.css"
 />
-<link rel="stylesheet" href="https://cdn.chuqis.com/npm/@waline/client/dist/waline-meta.css"/>
+<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline-meta.css"/>
 <!-- JS -->
-<script src="https://cdn.chuqis.com/npm/@waline/client/dist/waline.js"></script>
+<script src="https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline.js"></script>
 <script>
   var head = document.getElementsByTagName('head')[0]
   var meta = document.createElement('meta')
@@ -84,9 +84,9 @@ description: CC的部落格 即刻短文页面
             turnstileKey: '0x4AAAAAAAECBl27OB5SZrQT',
             emoji:
               [
-                "https://cdn.chuqis.com/npm/sticker-heo/Sticker-100/",
-                // "https://cdn.chuqis.com/npm/telegram-gif/Telegram-Gif/",
-                // "https://cdn.chuqis.com/npm/@waline/emojis/tw-emoji/"
+                "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/",
+                // "https://jsd.cdn.zzko.cn/npm/telegram-gif/Telegram-Gif/",
+                // "https://jsd.cdn.zzko.cn/npm/@waline/emojis/tw-emoji/"
               ]
           })
         }

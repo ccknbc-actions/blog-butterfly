@@ -1,4 +1,4 @@
-importScripts("https://cdn.chuqis.com/npm/workbox-sw/build/workbox-sw.js");
+importScripts("https://jsd.cdn.zzko.cn/npm/workbox-sw/build/workbox-sw.js");
 importScripts("https://cdn.webpushr.com/sw-server.min.js");
 
 // 提示
@@ -28,16 +28,17 @@ self.addEventListener("activate", async () => {
 
 // 定义CDN镜像的URL列表
 const fallbackCdnUrls = [
+    'https://jsd.cdn.zzko.cn',
+    'https://jsd.onmicrosoft.cn',
+    'https://cdn.jsdelivr.ren',
+    'https://jsdelivr.goodboyboy.top',
     'https://cdn.chuqis.com',
     'https://cdn2.chuqis.com',
-    'https://jsd.onmicrosoft.cn',
-    'https://jsd.cdn.zzko.cn',
-    'https://jsdelivr.goodboyboy.top'
 ];
 
 // 定义失效CDN镜像的URL列表
 const invalidCdnUrls = [
-    'https://cdn.jsdelivr.ren',
+    'https://cdn.jsdelivr.net',
     'https://cdn1.tianli0.top',
 ];
 
@@ -68,26 +69,6 @@ function isFallbackCdnUrl(url) {
 function isInvalidCdnUrl(url) {
     return invalidCdnUrls.some(invalidUrl => url.startsWith(invalidUrl));
 }
-
-// 使用StaleWhileRevalidate策略缓存备用CDN中的js、css和woff2资源
-fallbackCdnUrls.forEach(fallbackUrl => {
-    workbox.routing.registerRoute(
-        new RegExp('^' + fallbackUrl + '.*\\.(?:js|css|woff|woff2)$'), // 匹配js、css、woff和woff2后缀的文件
-        new workbox.strategies.StaleWhileRevalidate({
-            cacheName: "备用CDN资源",
-            plugins: [
-                new workbox.expiration.ExpirationPlugin({
-                    maxEntries: 50,
-                    maxAgeSeconds: WEEK,
-                    purgeOnQuotaError: true
-                }),
-                new workbox.cacheableResponse.CacheableResponsePlugin({
-                    statuses: [200],
-                }),
-            ],
-        })
-    );
-});
 
 // 函数用于处理备用CDN请求
 function handleFallbackCdn(request) {
@@ -196,7 +177,7 @@ workbox.routing.registerRoute(
         cacheName: '静态资源',
         plugins: [
             new workbox.expiration.ExpirationPlugin({
-                maxEntries: 20, // 最大缓存条目数
+                maxEntries: 100, // 最大缓存条目数
                 maxAgeSeconds: WEEK, // 缓存时间
                 purgeOnQuotaError: true
             }),
