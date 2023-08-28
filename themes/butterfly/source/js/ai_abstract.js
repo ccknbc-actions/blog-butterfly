@@ -10,7 +10,7 @@
     mode: initialMode,
   } = GLOBAL_CONFIG.postHeadAiDescription;
 
-  const { title, postAI, pageFillDescription } = GLOBAL_CONFIG_SITE;
+  const { title, pageFillDescription } = GLOBAL_CONFIG_SITE;
 
   let lastAiRandomIndex = -1;
   let animationRunning = true;
@@ -54,7 +54,7 @@
 
   async function readAloud() {
     if (!summaryID) {
-      anzhiyu.snackbarShow("摘要还没加载完呢，请稍后。。。");
+      btf.snackbarShow("摘要还没加载完呢，请稍后。。。");
       return;
     }
     aiReadAloudIcon = post_ai.querySelector(".fa-podcast");
@@ -282,7 +282,7 @@
   }
 
   function aiAbstractLocal() {
-    const strArr = postAI.split(",").map(item => item.trim());
+    const strArr = pageFillDescription.split(",").map(item => item.trim());
     if (strArr.length !== 1) {
       let randomIndex = Math.floor(Math.random() * strArr.length);
       while (randomIndex === lastAiRandomIndex) {

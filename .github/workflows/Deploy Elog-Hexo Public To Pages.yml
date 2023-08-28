@@ -15,6 +15,8 @@ jobs:
       YUQUE_TOKEN: ${{ secrets.YUQUE_TOKEN }}
       YUQUE_LOGIN: ${{ secrets.YUQUE_LOGIN }}
       YUQUE_REPO: ${{ secrets.YUQUE_REPO }}
+      YUQUE_USERNAME: ${{ secrets.YUQUE_USERNAME }}
+      YUQUE_PWD: ${{ secrets.YUQUE_PWD }}
       NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
       NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
       FLOWUS_TABLE_PAGE_ID: ${{ secrets.FLOWUS_TABLE_PAGE_ID }}

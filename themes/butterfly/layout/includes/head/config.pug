@@ -94,6 +94,7 @@
 
 script.
   const GLOBAL_CONFIG = {
+    postHeadAiDescription: !{postHeadAiDescription},
     root: '!{config.root}',
     algolia: !{algolia},
     localSearch: !{localSearch},
@@ -131,5 +132,5 @@ script.
       toc: !{theme.toc.scroll_percent},
       rightside: !{theme.rightside_scroll_percent},
     },
-    autoDarkmode: !{theme.darkmode.enable && theme.darkmode.autoChangeMode === 1}
+    autoDarkmode: !{theme.darkmode.enable && theme.darkmode.autoChangeMode === 1},
   }
