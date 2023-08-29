@@ -166,9 +166,13 @@
 
 /* 圆角 */
 
-#card-info-btn, #rightside>div>button, #to_comment, .edit-gitlab-ide, .edit-gitlab, .edit-github, .edit-yuque {
+/* #card-info-btn, #rightside>div>button, #to_comment, .edit-gitlab-ide, .edit-gitlab, .edit-github, .edit-yuque {
     border-radius: 90px !important;
-}
+    -webkit-border-radius: 90px !important;
+    -moz-border-radius: 90px !important;
+    -ms-border-radius: 90px !important;
+    -o-border-radius: 90px !important;
+} */
 
 /* 无障碍 */
 /* @media (max-width:768px) {
@@ -182,3 +186,20 @@
         display: inline;
     }
 } */
+
+/* MarkDown 复制按钮 */
+#reprintedButton {
+    display: flex;
+    height: 0;
+    flex-direction: row-reverse;
+}
+
+#reprintedButton i{
+    position: relative;
+    font-size: 25px;
+    top: -28px;
+    right: -8px;
+    color: var(--hl-color);;
+    cursor: pointer;
+    z-index: 1;
+}

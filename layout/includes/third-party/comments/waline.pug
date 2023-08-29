@@ -1,4 +1,4 @@
-- const { serverURL, option, pageview, meta, imageUploader } = theme.waline
+- const { serverURL, option, pageview, meta_css, imageUploader } = theme.waline
 - const { lazyload, count, use } = theme.comments
 
 script.
@@ -20,7 +20,7 @@ script.
       else {
         await getCSS('!{url_for(theme.asset.waline_css)}')
         await getScript('!{url_for(theme.asset.waline_js)}')
-        if (!{meta}) await getCSS('!{url_for(theme.asset.waline_meta_css)}')
+        if (!{meta_css}) await getCSS('!{url_for(theme.asset.waline_meta_css)}')
         initWaline()
       }
     }

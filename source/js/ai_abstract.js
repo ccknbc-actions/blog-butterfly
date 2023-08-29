@@ -54,7 +54,7 @@
 
   async function readAloud() {
     if (!summaryID) {
-      anzhiyu.snackbarShow("摘要还没加载完呢，请稍后。。。");
+      btf.snackbarShow("摘要还没加载完呢，请稍后。。。");
       return;
     }
     aiReadAloudIcon = post_ai.querySelector(".fa-podcast");
