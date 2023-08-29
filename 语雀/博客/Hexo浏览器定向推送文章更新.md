@@ -1,9 +1,9 @@
 ---
 title: Hexo浏览器定向推送文章更新
 urlname: "37"
-author: CC康纳百川
 date: 2022-10-05T00:00:00.000Z
-updated: 2023-06-25T20:25:00.000Z
+updated: 2023-08-29T13:05:00.000Z
+author: CC康纳百川
 translate_title: hexo-webpushr-notification
 subtitle: Hexo Webpushr Notification
 tags:
@@ -40,7 +40,7 @@ npm i hexo-webpushr-notification
 当然你也可以自定义修改[webpushr.js](https://github.com/Rock-Candy-Tea/hexo-webpushr-notification/blob/main/webpushr.js)文件后，再安装相关需要依赖，然后将文件放到`Hexo/scripts/`目录下即可正常运行，CC 本人亦是如此
 对于 0.2.0 以上版本，您只需要在 Hexo 所在目录安装 axios 即可，这样测试相较于安装 GitHub 更方便（以及欢迎 PR ）
 
-```yaml
+```bash
 npm i axios
 ```
 
@@ -100,10 +100,10 @@ webpushr:
 
 ```javascript
 <!-- start webpushr tracking code -->
-<script>(function(w,d, s, id) {if(typeof(w.webpushr)!=='undefined') return;w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.async=1;js.src = "https://cdn.webpushr.com/app.min.js";
-fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));
+  <script>(function(w,d, s, id) {if(typeof(w.webpushr)!=='undefined') return;w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.async=1;js.src = "https://cdn.webpushr.com/app.min.js";
+                                 fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));
 webpushr('setup',{'key':'BKOlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLvbjpdw8x2GmFmi1ZcLTz0ni6OnX5MAwoM58' });</script>
-<!-- end webpushr tracking code -->
+  <!-- end webpushr tracking code -->
 ```
 
 最后一行`BKOlpbdgvBCWXqXI6PtsUzobY7TLV9gwJU8bzMktrwfrSERg_xnLvbjpdw8x2GmFmi1ZcLTz0ni6OnX5MAwoM58` 就是你的 `trackingCode`
@@ -123,8 +123,8 @@ webpushr:
 
 另外，你还需要在你的脚本文件（例如`sw.js`）中引入
 
-```yaml
-importScripts('https://cdn.webpushr.com/sw-server.min.js');
+```javascript
+importScripts("https://cdn.webpushr.com/sw-server.min.js");
 ```
 
 完成这些你就可以自行注册你的`sw`脚本了，如果你需要了解如何编写或注册`service worker`脚本，可以参考以下文章或项目
@@ -219,3 +219,4 @@ INFO  无文章更新 或 为首次推送更新
 - [x] 兼容自定义`Service Work`的功能，因为`webpushr-sw.js`优先注册的原因，只能有一个 `sw`注册，无法注册自己编写脚本。
 - [x] 支持参数更多的可自定义，启用或关闭。例如不延时，立即发送；不显示按钮（因为默认就是跳转到文章）等
 - [x] 目前的判断逻辑，虽然可以根据更新时间来判断，但如果很久之前的文章翻新，只要更新时间最新，也会触发推送，主要针对 updated 方式，还没想到好的解决办法，目前就是确认需要推送才更改更新时间咯
+- [ ] 优化代码，减少代码量
