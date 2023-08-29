@@ -281,6 +281,22 @@ beautify()
     font-weight: 800;
     font-size: 20px;
     line-height: 20px;
+    height 20px
+  .fa-podcast
+    // margin-left: auto;
+    // margin-right: 4px;
+    // font-size: 14px;
+    // opacity: 0;
+    margin-left: 4px;
+    cursor pointer
+    &:active
+      transform: scale(0.97);
+  .fa-arrow-rotate-right
+    // font-size: 14px;
+    // margin-left: 4px;
+    margin-right: 8px;
+    margin-left: auto;
+    cursor pointer
 
   .ai-title-text
     font-weight: bold;
@@ -291,12 +307,11 @@ beautify()
   background-color: var(--btn-bg);
   color: var(--btn-color);
   border-radius: 4px;
-  margin-left: auto;
   line-height: 1;
   padding: 4px 5px;
   cursor pointer
-#ai-Toggle 
-  font-size: 12px;
+#ai-Toggle
+  // font-size: 12px;
   background: var(--btn-bg);
   color: var(--btn-color);
   padding: 4px;
@@ -306,8 +321,10 @@ beautify()
   cursor: pointer;
   transition: 0.3s;
   font-weight: bold;
+  // margin-left: auto;
   &:hover
     background: var(--btn-hover-color);
+    color: var(--card-bg);
 
 
 #go-tianli-blog
@@ -323,12 +340,15 @@ beautify()
 .ai-cursor
   display: inline-block;
   width: 7px;
-  background: var(--font-color);
+  background: #333;
   height: 16px;
   margin-bottom: -2px;
   opacity: 0.95;
   margin-left: 3px;
   transition: all 0.3s;
+
+[data-theme="dark"] .ai-cursor
+  background: rgb(255, 255, 255, 0.9);
 
 .ai-btn-box
   font-size: 15.5px;
@@ -342,7 +362,7 @@ beautify()
   margin: 10px 16px 0px 5px;
   width: fit-content;
   line-height: 1;
-  background: var(--btn-bg);
+  background: var(--btn-bg)
   color: var(--btn-color);
   border-radius: 6px;
   user-select: none;
@@ -359,15 +379,18 @@ beautify()
     width: calc(50% - 20px);
     margin: 10px;
     background: var(--hltools-bg);
-    a
-      color: var(--font-color);
     border-radius: 4px;
     padding: 10px;
     cursor pointer
     transition: .3s;
     animation: slide-in 0.6s 0.1s backwards;
+    span.index
+      padding: 4px
     &:hover
+      color: var(--font-color);
       background: var(--btn-hover-color);
+      a
+        color: var(--font-color);
 
 +maxWidth768()
   .ai-btn-box

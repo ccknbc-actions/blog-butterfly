@@ -21,7 +21,8 @@
 
 script#config-diff.
   var GLOBAL_CONFIG_SITE = {
-    pageFillDescription: '!{page.description}',
+    postAI: '!{page.description}',
+    pageFillDescription: '!{get_page_fill_description()}',
     title: '!{titleVal}',
     isPost: !{is_post()},
     isHome: !{is_home()},

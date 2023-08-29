@@ -197,9 +197,9 @@
 #reprintedButton i{
     position: relative;
     font-size: 25px;
-    top: -30px;
-    right: -10px;
-    color: #e5e5e5;
+    top: -28px;
+    right: -8px;
+    color: var(--hl-color);;
     cursor: pointer;
     z-index: 1;
 }
