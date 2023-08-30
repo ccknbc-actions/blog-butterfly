@@ -52,7 +52,8 @@ script.
             'content': changeContent(e.comment),
             'avatar': e.avatar,
             'nick': e.nick,
-            'url': e.url + '#' + e.objectId,
+            //- 'url': e.url + '#' + e.objectId,
+            'url': e.url + '#post-comment',
             'date': e.time || e.insertedAt
           }
         })

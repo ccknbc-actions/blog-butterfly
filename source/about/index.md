@@ -13,4 +13,4 @@ updated: 2023-07-05 12:00:00
 
 ## 站点源码
 
-{% note success flat %} 可前往以下地址查看源码</br>  **[GitHub](https://github.com/ccknbc-actions/blog-butterfly) | [GitLab](https://gitlab.com/CCKNBC/ccknbc.gitlab.io) | [JihuLab](https://jihulab.com/ccknbc-backup/blog-butterfly) | [Bitbucket](https://bitbucket.org/ccknbc/blog) | [Coding](https://ccknbc.coding.net/public/blog/blog-butterfly/git/files) | [Gitee](https://gitee.com/ccknbc/blog-butterfly)** {% endnote %}
+{% note success flat %} 本站所有内容完全公开，可前往以下地址查看源码</br>  **[GitHub](https://github.com/ccknbc-actions/blog-butterfly) | [GitLab](https://gitlab.com/CCKNBC/ccknbc.gitlab.io) | [JihuLab](https://jihulab.com/ccknbc-backup/blog-butterfly) | [Bitbucket](https://bitbucket.org/ccknbc/blog) | [Coding](https://ccknbc.coding.net/public/blog/blog-butterfly/git/files) | [Gitee](https://gitee.com/ccknbc/blog-butterfly)** {% endnote %}

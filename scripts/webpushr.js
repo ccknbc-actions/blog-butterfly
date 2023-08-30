@@ -5,16 +5,17 @@ const fs = require('hexo-fs');
 const moment = require('moment');
 const axios = require('axios');
 
-const endpoint = hexo.config.webpushr.endpoint || 'segment';
+const config = hexo.config.webpushr;
+const endpoint = config.endpoint || 'segment';
 let newPostOnlineSite;
 let topic = [];
 let actionButtons = [];
 
-if (hexo.config.webpushr.enable) {
+if (config.enable) {
     // 排序获得最新文章信息，并写入本地文件
     hexo.on('generateAfter', async () => {
         const posts = hexo.locals.get('posts').data;
-        const sortBy = hexo.config.webpushr.sort === 'date' ? 'date' : 'updated';
+        const sortBy = config.sort === 'date' ? 'date' : 'updated';
         const updatedSortedPosts = posts.sort((a, b) => b[sortBy] - a[sortBy]);
         const newPost = updatedSortedPosts[0];
         if (sortBy === 'date') newPost.updated = newPost.date;
@@ -24,18 +25,18 @@ if (hexo.config.webpushr.enable) {
             updated: newPost.updated.format(),
             message: newPost.description || util.stripHTML(newPost.excerpt),
             target_url: newPost.permalink,
-            image: newPost.cover || hexo.config.webpushr.image,
+            image: newPost.cover || config.image,
             categories: newPost.categories.data.map(v => v.name),
-            schedule: newPost.schedule || moment().add(hexo.config.webpushr.delay || 10, 'minutes'),
-            expire: newPost.expire || hexo.config.webpushr.expire || '7d',
-            auto_hide: newPost.auto_hide || hexo.config.webpushr.auto_hide || '1',
+            schedule: newPost.schedule || moment().add(config.delay || 10, 'minutes'),
+            expire: newPost.expire || config.expire || '7d',
+            auto_hide: newPost.auto_hide || config.auto_hide || '1',
             webpushr: newPost.webpushr
         };
         fs.writeFile('public/newPost.json', JSON.stringify(JSONFeed));
     });
 
     // 生成 sw-js 文件
-    if (!hexo.config.webpushr.sw_self) {
+    if (!config.sw_self) {
         hexo.on('generateAfter', async () => {
             await fs.writeFile('public/webpushr-sw.js', 'importScripts("https://cdn.webpushr.com/sw-server.min.js");');
         });
@@ -43,7 +44,7 @@ if (hexo.config.webpushr.enable) {
 
     // 生成 html 后插入代码
     hexo.extend.filter.register('after_render:html', data => {
-        var swOption = (hexo.config.webpushr.sw_self == true) ? "'none'" : "undefined";
+        var swOption = (config.sw_self == true) ? "'none'" : "undefined";
 
         var payload = `(function (w, d, s, id) {
         if (typeof (w.webpushr) !== 'undefined') return;
@@ -57,7 +58,7 @@ if (hexo.config.webpushr.enable) {
         }(window, document, 'script', 'webpushr-jssdk'));
 
         webpushr('setup', {
-        'key': '${hexo.config.webpushr.trackingCode}',
+        'key': '${config.trackingCode}',
         'sw': ${swOption}
         });
         `;
@@ -105,13 +106,13 @@ if (hexo.config.webpushr.enable) {
 
         // 判断文章分类是否属于主题
         function isValidPostCategory() {
-            if (endpoint == 'segment' && hexo.config.webpushr.categories && hexo.config.webpushr.segment) {
+            if (endpoint == 'segment' && config.categories && config.segment) {
                 for (var i = 0; i < newPostLocal.categories.length; i++) {
-                    topic[i] = hexo.config.webpushr.categories.indexOf(newPostLocal.categories[i]);
+                    topic[i] = config.categories.indexOf(newPostLocal.categories[i]);
                     if (topic[i] === -1) {
                         return false;
                     }
-                    topic[i] = hexo.config.webpushr.segment[topic[i]];
+                    topic[i] = config.segment[topic[i]];
                 }
             }
             return true;
@@ -128,12 +129,12 @@ if (hexo.config.webpushr.enable) {
                 return false;
             }
 
-            if (endpoint === 'sid' && !hexo.config.webpushr.sid) {
+            if (endpoint === 'sid' && !config.sid) {
                 hexo.log.error('未配置具体 sid');
                 return false;
             }
 
-            if (endpoint == 'segment' && !hexo.config.webpushr.categories && !hexo.config.webpushr.segment) {
+            if (endpoint == 'segment' && !config.categories && !config.segment) {
                 hexo.log.error('默认为按主题推送,需配置categories及segment');
                 return false;
             }
@@ -155,13 +156,13 @@ if (hexo.config.webpushr.enable) {
         // 满足条件，推送更新通知
         if (shouldPushNotification()) {
             const headers = {
-                webpushrKey: process.env.webpushrKey || hexo.config.webpushr.webpushrKey,
-                webpushrAuthToken: process.env.webpushrAuthToken || hexo.config.webpushr.webpushrAuthToken,
+                webpushrKey: process.env.webpushrKey || config.webpushrKey,
+                webpushrAuthToken: process.env.webpushrAuthToken || config.webpushrAuthToken,
                 "Content-Type": "application/json"
             };
 
-            if (hexo.config.webpushr.action_buttons && Array.isArray(hexo.config.webpushr.action_buttons)) {
-                hexo.config.webpushr.action_buttons.forEach(function (button) {
+            if (config.action_buttons && Array.isArray(config.action_buttons)) {
+                config.action_buttons.forEach(function (button) {
                     actionButtons.push({
                         title: button.title || '前往查看',
                         url: button.url || newPostLocal.target_url
@@ -186,13 +187,13 @@ if (hexo.config.webpushr.enable) {
                 message: newPostLocal.message,
                 target_url: newPostLocal.target_url,
                 image: newPostLocal.image,
-                icon: hexo.config.webpushr.icon,
+                icon: config.icon,
                 auto_hide: newPostLocal.auto_hide,
                 expire_push: newPostLocal.expire,
                 action_buttons: actionButtons,
             };
 
-            const delay = hexo.config.webpushr.delay;
+            const delay = config.delay;
 
             let payload = { ...payloadTemplate }
 
@@ -200,8 +201,8 @@ if (hexo.config.webpushr.enable) {
                 payload.segment = topic
             };
 
-            if (hexo.config.webpushr.sid) {
-                payload.sid = hexo.config.webpushr.sid
+            if (config.sid) {
+                payload.sid = config.sid
                 delete payload.image
             };
 
