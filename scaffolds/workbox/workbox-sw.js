@@ -46,8 +46,9 @@ const invalidCdnUrls = [
 const referrerDomains = [
     'cdn.nlark.com',
     'pic1.afdiancdn.com',
+    // 'api.mir6.com',
     'f.video.weibocdn.com',
-    'api.icodeq.com'
+    // 'api.icodeq.com'
 ];
 
 // 定义缓存时间

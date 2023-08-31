@@ -255,8 +255,8 @@ index_post_content:
 # anchor
 anchor:
   button:
-    enable: true
-    always_show: true
+    enable: false
+    always_show: false
     icon: '\f0c1' # the unicode value of Font Awesome icon, such as '\3423'
   auto_update: false # when you scroll in post, the URL will update according to header id.
 
@@ -344,7 +344,7 @@ addtoany:
 # --------------------------------------
 
 comments:
-  use: Disqusjs,Waline #,Twikoo
+  use: Waline #,Disqusjs #,Twikoo
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
@@ -401,9 +401,7 @@ waline:
     locale:
       admin: 博主
       sofa: 这里冷冷清清的，快来留下脚印吧！
-      placeholder: "根据《互联网跟帖评论服务管理规定》，将展示您的归属地，并开启强制注册登录后才允许评论\n
-      社交登录现已支持【QQ Weibo GitHub X Facebook】等平台，登录后可点击头像更改个人主页地址，方便CC串门\n
-      在评论框粘贴图片，自动上传至图床，请不要将评论区作为您的图床，更不要上传违法图片，谢谢合作"
+      placeholder: "根据《互联网跟帖评论服务管理规定》，将展示您的归属地，并开启强制注册登录后才允许评论\n社交登录现已支持【QQ Weibo GitHub X Facebook】等平台，登录后可点击头像更改个人主页地址，方便CC串门\n在评论框粘贴图片，自动上传至图床，请不要将评论区作为您的图床，更不要上传违法图片，谢谢合作"
       reactionTitle: 就现在，表明你的态度！
       reaction0: 鼓励
       reaction1: 菜狗

@@ -4,7 +4,7 @@ top_img: false
 translate_title: privacy-policy
 subtitle: Privacy Policy
 date: 2021-05-14 17:12:24
-updated: 2023-06-10 23:22:00
+updated: 2023-08-31 22:56:00
 description: CC的部落格 隐私政策
 ---
 本站非常重视用户的隐私和个人信息保护。您在使用网站时，可能会收集和使用您的相关信息。通过《隐私政策》向您说明在您访问 {% label blog.ccknbc.cc green %} 网站时，如何收集、使用、保存、共享和转让这些信息。由于本站性质为个人博客且为静态页面，暂未提供是否接受Cookies弹窗。即使我本人并不想搜集访客过多隐私信息，为了良好的浏览体验，默认启用全部功能，您可暂时使用隐私信息拦截插件去尽可能避免这种追踪。
@@ -34,38 +34,37 @@ description: CC的部落格 隐私政策
  统计工具会收集您的访问信息，用于网站的优化与文章分类、恶意访问识别（被动，存储，系统定期清理）
 
 您应该知道在您访问的时候以下信息会被统计功能使用：
-
-
 <!-- <script src="https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/js/privacy.js"></script> -->
 
 <script>
     function getIpInfo() {
-        fetch("https://api.vvhan.com/api/getIpInfo").then(function (e) {
+        fetch("https://api.mir6.com/api/ip_json").then(function (e) {
             return e.json()
         }).then(function (e) {
-            var n = e.info.country,
-                t = e.ip,
-                r = e.info.prov,
-                i = e.info.city,
-                o = e.info.lsp;
-            document.getElementById("userAgentIp").innerHTML = t, document.getElementById("userAgentCountry").innerHTML =
-                n, document.getElementById("userAgentRegion").innerHTML = r, document.getElementById(
-                    "userAgentCity").innerHTML = i, document.getElementById("userAgentIsp").innerHTML = o;
-            var u = navigator.userAgent;
-            document.getElementById("userAgentDevice").innerHTML = u
+            var l = e.data.location,
+                m = e.data.myip,
+                p = e.data.protocol,
+                i = e.data.isp;
+            document.getElementById("userAgentIp").innerHTML = m, document.getElementById("userAgentLocation").innerHTML =
+            l, document.getElementById("userAgentProtocol").innerHTML = p, document.getElementById("userAgentIsp").innerHTML = i;
+            var d = navigator.userAgent;
+            document.getElementById("userAgentDevice").innerHTML = d
         })
     }
     getIpInfo();
 </script>
 
-|  类型   |               信息                |
-| :-----: | :-------------------------------: |
-| IP 地址 |   <div id="userAgentIp"></div>    |
-|  国家   | <div id="userAgentCountry"></div> |
-|  省份   | <div id="userAgentRegion"></div>  |
-|  城市   |  <div id="userAgentCity"></div>   |
-| 运营商  |   <div id="userAgentIsp"></div>   |
-|  设备   | <div id="userAgentDevice"></div>  |
+| 类型    | IP信息                            |
+| :-----: | :--------------------------------: |
+| IP 地址 | <div id="userAgentIp"></div>       |
+| IP 类型 | <div id="userAgentProtocol"></div> |
+| 运营商  | <div id="userAgentIsp"></div>      |
+| 定位    | <div id="userAgentLocation"></div> |
+
+|             设备信息             |
+| :------------------------------: |
+| <div id="userAgentDevice"></div> |
+
 <script type="text/javascript">getIpInfo()</script>
 
 ## 如何使用 Cookies 和本地 LocalStorage 存储
@@ -126,4 +125,4 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 
 我可能对此 Cookies 政策所做的任何更改都将发布在此页面上。如果更改很重要，我会在博客首页明确指出该政策已更新。
 
-{% btn '',最后修订时间：2023 年 6 月 10 日 23:22,fa-solid fa-history,block right green smaller %}
+{% btn '',最后修订时间：2023 年 8 月 31 日 22:56,fa-solid fa-history,block right green smaller %}

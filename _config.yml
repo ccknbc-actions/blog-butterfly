@@ -127,7 +127,7 @@ markdown:
     lazyload: true
     prepend_root: true
     post_asset: true
-  inline: true
+  inline: false
 
 stylus:
   compress: true
