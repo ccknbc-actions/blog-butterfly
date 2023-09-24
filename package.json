@@ -27,7 +27,7 @@
     "version": "7.0.0-rc2"
   },
   "dependencies": {
-    "@elog/cli": "0.7.2",
+    "@elog/cli": "0.7.3",
     "axios": "1.5.0",
     "hexo": "7.0.0-rc2",
     "hexo-butterfly-tag-plugins-plus": "1.0.17",
