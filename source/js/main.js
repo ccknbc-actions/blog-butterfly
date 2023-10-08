@@ -72,8 +72,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const isPrismjs = plugin === 'prismjs'
     const highlightShrinkClass = isHighlightShrink === true ? 'closed' : ''
-    const highlightShrinkEle = isHighlightShrink !== undefined ? '<i class="fa-solid fa-angle-down expand"></i>' : ''
-    const highlightCopyEle = highlightCopy ? '<div class="copy-notice"></div><i class="fa-solid fa-paste copy-button"></i>' : ''
+    const highlightShrinkEle = isHighlightShrink !== undefined ? '<i class="fas fa-angle-down expand"></i>' : ''
+    const highlightCopyEle = highlightCopy ? '<div class="copy-notice"></div><i class="fas fa-paste copy-button"></i>' : ''
 
     const copy = (text, ctx) => {
       if (document.queryCommandSupported && document.queryCommandSupported('copy')) {
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (highlightHeightLimit && item.offsetHeight > highlightHeightLimit + 30) {
         const ele = document.createElement('div')
         ele.className = 'code-expand-btn'
-        ele.innerHTML = '<i class="fa-solid fa-angle-double-down"></i>'
+        ele.innerHTML = '<i class="fas fa-angle-double-down"></i>'
         btf.addEventListenerPjax(ele, 'click', expandCode)
         fragment.appendChild(ele)
       }
@@ -593,8 +593,15 @@ document.addEventListener('DOMContentLoaded', function () {
       saveToLocal.set('aside-status', saveStatus, 2)
       $htmlDom.toggle('hide-aside')
     },
-    'mobile-toc-button': () => { // Show mobile toc
-      document.getElementById('card-toc').classList.toggle('open')
+    'mobile-toc-button': item => { // Show mobile toc
+      const tocEle = document.getElementById('card-toc')
+      tocEle.style.transformOrigin = `right ${item.getBoundingClientRect().top + 17}px`
+      tocEle.style.transition = 'transform 0.3s ease-in-out'
+      tocEle.classList.toggle('open')
+      tocEle.addEventListener('transitionend', () => {
+        tocEle.style.transition = ''
+        tocEle.style.transformOrigin = ''
+      }, { once: true })
     },
     'chat-btn': () => { // Show chat
       window.chatBtnFn()

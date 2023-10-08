@@ -51,7 +51,7 @@ const postTabs = (args, content) => {
     tabContent += `<div class="tab-item-content${isActive}" id="${tabHref}">${postContent}</div>`
   }
 
-  const toTop = '<div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="fa-solid fa-arrow-up"></i></button></div>'
+  const toTop = '<div class="tab-to-top"><button type="button" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div>'
 
   tabNav = `<ul class="nav-tabs${noDefault ? ' no-default' : ''}">${tabNav}</ul>`
   tabContent = `<div class="tab-contents">${tabContent}</div>`
