@@ -15,7 +15,7 @@ script.
     }
 
     const getComment = () => {
-      fetch('https://disqus.com/api/3.0/forums/listPosts.json?forum=!{forum}&related=thread&limit=!{theme.newest_comments.limit}&api_key=!{apiKey}')
+      fetch('!{theme.disqusjs.option.api}3.0/forums/listPosts.json?forum=!{forum}&related=thread&limit=!{theme.newest_comments.limit}&api_key=!{apiKey}')
         .then(response => response.json())
         .then(data => {
           const disqusArray = data.response.map(item => {
@@ -47,7 +47,7 @@ script.
             const name = '!{theme.lazyload.enable ? "data-lazy-src" : "src"}'
             result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
           }
-          
+
           result += `<div class='content'>
           <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
           <div class='name'><span>${array[i].nick}</span><time> / ${btf.diffDate(array[i].date, true)}</time></div>
