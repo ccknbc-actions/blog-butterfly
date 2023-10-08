@@ -61,7 +61,7 @@ hexo.extend.helper.register('aside_categories', function (categories, options) {
 
           if (isExpand && isTopParent && child) {
             expandBtn = ' expandBtn'
-            result += `<i class="fa-solid fa-caret-left ${expandClass}"></i>`
+            result += `<i class="fas fa-caret-left ${expandClass}"></i>`
           }
 
           result += '</a>'
