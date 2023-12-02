@@ -280,6 +280,7 @@ post_copyright:
 # Sponsor/reward
 reward:
   enable: true
+  text: 赞赏
   QR_code:
     - img: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/logo/qr.png
       link: https://www.rocschool.com/tool/qr/qr/id/51.html
@@ -380,7 +381,7 @@ waline:
       formData.append("permission", "0");
       headers.append("Authorization", "Bearer 24|o8Crl5y0oK3luyUs17fBxDtAcevk1iiLHVFMNjpA");
       headers.append("Accept", "application/json");
-      return fetch("https://www.wmimg.com/api/v1/upload", {
+      return fetch("https://wmimg.com/api/v1/upload", {
         method: "POST",
         headers: headers,
         body: formData,
@@ -700,6 +701,9 @@ index_top_img_height:
 category_ui: # 留空或 index
 tag_ui: # 留空或 index
 
+# Stretches the lines so that each line has equal width（文字向兩側對齊，對最後一行無效）
+text_align_justify: true
+
 # Website Background (設置網站背景)
 # can set it to color or image (可設置圖片 或者 顔色)
 # The formal of image: url(https://xxxxxx.com/xxx.jpg)
@@ -767,7 +771,7 @@ click_heart:
   mobile: false
 
 # Mouse click effects: words (鼠標點擊效果: 文字)
-ClickShowText:
+clickShowText:
   enable: false
   text:
     # - I

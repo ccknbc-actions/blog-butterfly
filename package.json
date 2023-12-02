@@ -24,7 +24,7 @@
     "clean:flowus": "npx elog clean -c ./elog/elog.config.flowus.js -a ./elog/elog.cache.flowus.json"
   },
   "hexo": {
-    "version": "7.0.0-rc2"
+    "version": "7.0.0"
   },
   "dependencies": {
     "@elog/cli": "0.12.4",

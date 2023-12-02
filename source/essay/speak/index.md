@@ -87,7 +87,7 @@ description: CC的部落格 即刻短文页面
           formData.append("permission", "0");
           headers.append("Authorization", "Bearer 24|o8Crl5y0oK3luyUs17fBxDtAcevk1iiLHVFMNjpA");
           headers.append("Accept", "application/json");
-          return fetch("https://www.wmimg.com/api/v1/upload", {
+          return fetch("https://wmimg.com/api/v1/upload", {
             method: "POST",
             headers: headers,
             body: formData,
