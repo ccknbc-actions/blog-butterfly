@@ -74,14 +74,14 @@ jobs:
           npm run elog
 
       - name: Upload Elog Cache
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: 'Elog Cache'
           path: elog
           retention-days: 90
 
       - name: Upload Elog Posts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: 'Elog Posts'
           path: 'source/_posts'
