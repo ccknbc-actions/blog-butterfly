@@ -395,7 +395,7 @@ waline:
     requiredMeta: ["nick", "mail"]
     login: force
     copyright: true
-    search: false
+    search: true
     turnstileKey: 0x4AAAAAAAECBl27OB5SZrQT
     locale:
       admin: 博主

@@ -10,8 +10,8 @@ aside: false
 description: CC的部落格 即刻短文页面
 ---
 <!-- CSS -->
-<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline.css"/>
-<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline-meta.css"/>
+<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/@waline/client@v2/dist/waline.css"/>
+<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/@waline/client@v2/dist/waline-meta.css"/>
 <link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/highlight.js/styles/atom-one-dark.min.css" />
 <div class='content'>
   <img src='https://bu.dusays.com/2022/05/01/626e88f349943.gif'>
@@ -20,7 +20,7 @@ description: CC的部落格 即刻短文页面
 <hr />
 <div class='ispeak-comment'></div>
 <!-- JS -->
-<script src="https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline.js"></script>
+<script src="https://jsd.cdn.zzko.cn/npm/@waline/client@v2/dist/waline.js"></script>
 <script src="https://jsd.cdn.zzko.cn/npm/marked/marked.min.js"></script>
 <script src="https://jsd.cdn.zzko.cn/npm/highlight.js/highlight.min.js"></script>
 <script>

@@ -31,11 +31,11 @@ description: CC的部落格 即刻短文页面
 <!-- CSS -->
 <link
   rel="stylesheet"
-  href="https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline.css"
+  href="https://jsd.cdn.zzko.cn/npm/@waline/client@v2/dist/waline.css"
 />
-<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline-meta.css"/>
+<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/@waline/client@v2/dist/waline-meta.css"/>
 <!-- JS -->
-<script src="https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline.js"></script>
+<script src="https://jsd.cdn.zzko.cn/npm/@waline/client@v2/dist/waline.js"></script>
 <script>
   var head = document.getElementsByTagName('head')[0]
   var meta = document.createElement('meta')
