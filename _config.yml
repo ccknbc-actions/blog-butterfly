@@ -40,19 +40,21 @@ post_asset_folder: false
 relative_link: false
 future: true
 
+syntax_highlighter: highlight.js
 highlight:
-  enable: true
   auto_detect: false
-  line_number: false
-  tab_replace: ""
+  line_number: true
+  line_threshold: 0
+  tab_replace: ''
+  exclude_languages:
+    - example
   wrap: true
   hljs: false
-
 prismjs:
-  enable: false
   preprocess: true
   line_number: true
-  tab_replace: ""
+  line_threshold: 0
+  tab_replace: ''
 
 # marked:
 #   gfm: true
@@ -177,7 +179,7 @@ exclude:
 ignore:
 
 feed:
-  enable: false
+  enable: true
   type:
     - atom
     - rss2
