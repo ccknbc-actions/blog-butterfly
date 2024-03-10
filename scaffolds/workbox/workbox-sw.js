@@ -30,10 +30,7 @@ self.addEventListener("activate", async () => {
 const fallbackCdnUrls = [
     'https://jsd.cdn.zzko.cn',
     'https://jsd.onmicrosoft.cn',
-    'https://cdn.jsdelivr.ren',
     'https://jsdelivr.goodboyboy.top',
-    'https://cdn.chuqis.com',
-    'https://cdn2.chuqis.com',
 ];
 
 // 定义失效CDN镜像的URL列表

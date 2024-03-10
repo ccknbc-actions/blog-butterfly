@@ -112,7 +112,7 @@ algolia_search:
     # - Hexo
 
 # Docsearch
-# Apply and Docs: see https://docsearch.algolia.com/
+# Apply and Option Docs: see https://docsearch.algolia.com/
 # Crawler Admin Console: see https://crawler.algolia.com/
 # Settings: https://www.algolia.com/
 docsearch:
@@ -190,7 +190,7 @@ favicon: /favicon.ico
 
 # Avatar (头像)
 avatar:
-  img: https://cdn.chuqis.com/gh/ccknbc-backup/cdn/logo/logo.png
+  img: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/logo/logo.png
   effect: false
 
 # Disable all banner image
@@ -243,7 +243,7 @@ post_meta:
 # 主色调相关配置
 mainTone:
   enable: false # true or false 文章是否启用获取图片主色调
-  mode: api # cdn/api/both cdn模式为图片url+imageAve参数获取主色调，api模式为请求API获取主色调，both模式会先请求cdn参数，无法获取的情况下将请求API获取
+  mode: api # cdn/api/both cdn模式为图片url+imageAve参数获取主色调，api模式为请求API获取主色调，both模式会先请求cdn参数，无法获取的情况下将请求API获取，可以在文章内配置main_color: '#3e5658'，使用十六进制颜色，则不会请求both/cdn/api获取主色调，而是直接使用配置的颜色
   # 项目地址：https://github.com/anzhiyu-c/img2color-go
   api: https://img2color-go.vercel.app/api?img= # mode为api时可填写
   cover_change: true # 整篇文章跟随cover修改主色调
@@ -326,9 +326,11 @@ related_post:
 photofigcaption: false
 
 # post_pagination (分页)
-# value: 1 || 2 || false
+# value: 1 || 2 || 3 || 4 || false
 # 1: The 'next post' will link to old post
 # 2: The 'next post' will link to new post
+# 3: 只有下一篇，并且只在文章滚动到评论区时显示下一篇文章(旧文章)
+# 4: 只有下一篇，并且只在文章滚动到评论区时显示下一篇文章(旧文章) 显示图片cover
 # false: disable pagination
 post_pagination: 2
 
@@ -398,10 +400,9 @@ valine:
 # https://waline.js.org/
 waline:
   serverURL: https://waline.ccknbc.cc # Waline server address url
-  bg: # waline background
+  bg: # Waline background
   pageview: false
-  meta: true
-  # imageUploader: true
+  meta_css: true # 是否引入 waline-meta.css ,以便显示 meta图标
   imageUploader: >
     function (file) {
       let formData = new FormData();
@@ -612,8 +613,8 @@ footer:
     enable: true
     authorLink: /
     cc:
-      enable: true
-      link: /about/
+      enable: false
+      link: /copyright
     linkList:
       - link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
         text: 主题
@@ -688,8 +689,10 @@ ad:
 site_verification:
   - name: google-site-verification
     content: tUkgeN6Ih2ArWtjw47oNSSl4Af2_MWjiKLrzZptUCdM
+  - name: baidu-site-verification
+    content: code-xxx
   - name: msvalidate.01
-    content: 71ADBCC80D679CEA8080BAFDCD54E368
+    content: 71ADBCC80D679CEA8080BAFDCD54E368xxx
 
 # Beautify/Effect (美化/效果)
 # --------------------------------------
@@ -699,9 +702,9 @@ site_verification:
 
 theme_color:
   enable: true
-  main: "#8fbc8f"
+  main: "#425AEF"
   dark_main: "#f2b94b"
-  paginator: "#8fbc8f"
+  paginator: "#425AEF"
   #   button_hover: "#FF7242"
   text_selection: "#2128bd"
   link_color: "var(--anzhiyu-fontcolor)"
@@ -709,9 +712,9 @@ theme_color:
   hr_color: "#4259ef23"
   code_foreground: "#fff"
   code_background: "var(--anzhiyu-code-stress)"
-  toc_color: "#8fbc8f"
-  #   blockquote_padding_color: "#8fbc8f"
-  #   blockquote_background_color: "#8fbc8f"
+  toc_color: "#425AEF"
+  #   blockquote_padding_color: "#425AEF"
+  #   blockquote_background_color: "#425AEF"
   scrollbar_color: "var(--anzhiyu-scrollbar)"
   meta_theme_color_light: "#f7f9fe"
   meta_theme_color_dark: "#18171d"
@@ -868,15 +871,15 @@ subtitle:
 
 # Loading Animation (加载动画)
 preloader:
-  enable: false
+  enable: true
   # source
   # 1. fullpage-loading
   # 2. pace (progress bar)
   # else all
   source: 2
   # pace theme (see https://codebyzach.github.io/pace/)
-  pace_css_url: https://cdn.chuqis.com/gh/CodeByZach/pace/themes/green/pace-theme-flash.css
-  avatar: # 自定义头像
+  pace_css_url: https://jsd.cdn.zzko.cn/gh/CodeByZach/pace/themes/green/pace-theme-flash.css
+  avatar: https://npm.elemecdn.com/anzhiyu-blog-static@1.0.4/img/avatar.jpg # 自定加载动画义头像
 
 # aside (侧边栏)
 # --------------------------------------
@@ -982,7 +985,23 @@ translate:
 readmode: true
 
 # 中控台
-centerConsole: true
+centerConsole:
+  enable: true
+  card_tags:
+    enable: true
+    limit: 40 # if set 0 will show all
+    color: false
+    sort_order: # Don't modify the setting unless you know how it works
+    highlightTags:
+      # - Hexo
+      # - 前端
+  card_archives:
+    enable: true
+    type: monthly # yearly or monthly
+    format: MMMM YYYY # eg: YYYY年MM月
+    order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
+    limit: 8 # if set 0 will show all
+    sort_order: # Don't modify the setting unless you know how it works
 
 # dark mode
 darkmode:
@@ -1045,8 +1064,8 @@ note:
 
 icons:
   ali_iconfont_js: # 阿里图标symbol 引用链接，主题会进行加载 symbol 引用
-  fontawesome: true #是否启用fontawesome6图标
-  fontawesome_animation_css: https://cdn.chuqis.com/npm/hexo-butterfly-tag-plugins-plus/lib/assets/font-awesome-animation.min.css #fontawesome_animation 如果有就会加载，示例值：https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css
+  fontawesome: false #是否启用fontawesome6图标
+  fontawesome_animation_css: #fontawesome_animation 如果有就会加载，示例值：https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@1.0.17/lib/assets/font-awesome-animation.min.css
 
 # other
 # --------------------------------------
@@ -1062,8 +1081,8 @@ pjax:
 
 # Inject the css and script (aplayer/meting)
 aplayerInject:
-  enable: false
-  per_page: false
+  enable: true
+  per_page: true
 
 # Snackbar (Toast Notification 弹窗)
 # https://github.com/polonel/SnackBar
@@ -1072,7 +1091,7 @@ aplayerInject:
 snackbar:
   enable: true
   position: top-center
-  bg_light: "#8fbc8f" # The background color of Toast Notification in light mode
+  bg_light: "#425AEF" # The background color of Toast Notification in light mode
   bg_dark: "#1f1f1f" # The background color of Toast Notification in dark mode
 
 # https://instant.page/
@@ -1117,7 +1136,7 @@ css_prefix: true
 
 # 首页顶部相关配置
 home_top:
-  enable: false # 开关
+  enable: true # 开关
   timemode: date #date/updated
   title: 生活明朗
   subTitle: 万物可爱。
@@ -1154,11 +1173,12 @@ friends_vue:
   enable: false
   vue_js: https://npm.elemecdn.com/anzhiyu-theme-static@1.1.1/friends/index.4f887d95.js
   apiurl: # 朋友圈后端地址
+  top_tips: 使用 友链朋友圈 订阅友链最新文章
   top_background:
 
-# 黑色模式粒子效果canvas
+# 深色模式粒子效果canvas
 universe:
-  enable: false
+  enable: true
 
 # 页面卡片顶部气泡升起效果
 bubble:
@@ -1195,16 +1215,20 @@ comment_barrage_config:
 # 左下角音乐配置项
 # https://github.com/metowolf/MetingJS
 nav_music:
-  enable: false
+  enable: true
   console_widescreen_music: false # 宽屏状态控制台显示音乐而不是标签 enable为true 控制台依然会显示
   id: 8152976493
   server: netease
+  volume: 0.7 # 默认音量
   all_playlist: https://y.qq.com/n/ryqq/playlist/8802438608
+
+# 路径为 /music 的音乐页面默认加载的歌单 1. nav_music 2. custom
+music_page_default: nav_music
 
 # 评论匿名邮箱
 visitorMail:
   enable: true
-  mail: visitor@anheyu.com
+  mail: ""
 
 # ptool 文章底部工具
 ptool:
@@ -1217,7 +1241,7 @@ ptool:
 
 # 欢迎语配置
 greetingBox:
-  enable: false
+  enable: false #开启后必须配置下面的list对应的时间段，不然会出现小白条
   default: 晚上好👋
   list:
     # - greeting: 晚安😴
@@ -1248,18 +1272,18 @@ greetingBox:
 # 文章顶部ai摘要
 post_head_ai_description:
   enable: true
-  gptName: CC
+  gptName: AnZhiYu
   mode: local # 默认模式 可选值: tianli/local
-  switchBtn: true # 可以配置是否显示切换按钮 以切换tianli/local
+  switchBtn: false # 可以配置是否显示切换按钮 以切换tianli/local
   btnLink: https://afdian.net/item/886a79d4db6711eda42a52540025c377
   randomNum: 3 # 按钮最大的随机次数，也就是一篇文章最大随机出来几种
   basicWordCount: 1000 # 最低获取字符数, 最小1000, 最大1999
-  key: VCtoijR43E2uiVWkrZiC
-  Referer: https://blog.ccknbc.cc/
+  key: xxxx
+  Referer: https://xx.xx/
 
 # 快捷键配置
 shortcutKey:
-  enable: true
+  enable: false
   delay: 100 # 所有键位延时触发而不是立即触发（包括shift，以解决和浏览器键位冲突问题）
   shiftDelay: 200 # shift按下延时多久开启
 
@@ -1279,12 +1303,23 @@ pageThumbnailSuffix: ""
 
 # 隐私协议弹窗
 agreementPopup:
-  enable: true
-  url: /privacy-policy/
+  enable: false
+  url: /privacy
 
 # 右键菜单
 rightClickMenu:
+  enable: false
+
+# 首页随便逛逛people模式 而非技能点模式，关闭后为技能点模式需要配置creativity.yml
+peoplecanvas:
   enable: true
+  img: https://upload-bbs.miyoushe.com/upload/2023/09/03/125766904/ee23df8517f3c3e3efc4145658269c06_5714860933110284659.png
+
+# 动效
+dynamicEffect:
+  postTopWave: true # 文章顶部波浪效果
+  postTopRollZoomInfo: false # 文章顶部滚动时缩放
+  pageCommentsRollZoom: false # 非文章页面评论滚动时缩放显示（仅仅Twikoo生效）
 
 # Inject
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
@@ -1303,12 +1338,12 @@ inject:
 # 非必要请不要修改
 CDN:
   # The CDN provider of internal scripts (主题内部 js 的 cdn 配置)
-  # option: local/elemecdn/jsdelivr/unpkg/cdnjs/onmicrosoft/cbd/custom
+  # option: local/elemecdn/jsdelivr/unpkg/cdnjs/onmicrosoft/cbd/anheyu/custom
   # Dev version can only choose. ( dev版的主题只能设置为 local )
   internal_provider: local
 
   # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
-  # option: elemecdn/jsdelivr/unpkg/cdnjs/onmicrosoft/cbd/custom
+  # option: elemecdn/jsdelivr/unpkg/cdnjs/onmicrosoft/cbd/anheyu/custom
   third_party_provider: cbd
 
   # Add version number to CDN, true or false
@@ -1327,6 +1362,7 @@ CDN:
     # right_click_menu_js:
     # comment_barrage_js:
     # ai_abstract_js:
+    # people_js:
     # local_search:
     # algolia_js:
     # algolia_search:
