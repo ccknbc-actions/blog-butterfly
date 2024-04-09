@@ -37,6 +37,9 @@ const fallbackCdnUrls = [
 const invalidCdnUrls = [
     'https://cdn.jsdelivr.net',
     'https://cdn1.tianli0.top',
+    'https://cdn.jsdelivr.ren',
+    'https://cdn.chuqis.com',
+    'https://cdn2.chuqis.com'
 ];
 
 // 定义空引用URL的域名列表
