@@ -49,6 +49,6 @@
     "hexo-wordcount": "6.0.1",
     "hexo-yam": "8.0.0",
     "markdown-it-task-lists": "2.1.1",
-    "workbox-build": "7.0.0"
+    "workbox-build": "7.1.0"
   }
 }
