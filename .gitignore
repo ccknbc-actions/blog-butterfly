@@ -7,7 +7,6 @@ node_modules
 .deploy*
 .nojekyll
 themes/*/.git
-themes/anzhiyu
 source/_posts
 yuque
 *env

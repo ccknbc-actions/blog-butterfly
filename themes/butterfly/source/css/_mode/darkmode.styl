@@ -57,6 +57,11 @@ if hexo-config('darkmode.enable') || hexo-config('display_mode') == 'dark'
       .aplayer
         filter: brightness(.8)
 
+      kbd
+        border-color: #696969
+        background-color: #525252
+        color: #e2f1ff
+
     // 頭部
     #page-header
       &.nav-fixed > #nav,
@@ -132,3 +137,6 @@ if hexo-config('darkmode.enable') || hexo-config('display_mode') == 'dark'
     #operare_artitalk .c2
       background: #121212
 
+    #card-toc
+      +maxWidth900()
+        background: lighten(#121212, 5)

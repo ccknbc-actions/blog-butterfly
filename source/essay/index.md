@@ -15,7 +15,7 @@ description: CC的部落格 即刻短文页面
 </div>
 
 <div id="tip" style="text-align:center;">ipseak加载中</div>
-<div id="ispeak"></div>
+<div class='js-pjax' id="ispeak"></div>
 <link
   rel="stylesheet"
   href="https://jsd.cdn.zzko.cn/npm/highlight.js/styles/atom-one-dark.min.css"
@@ -31,11 +31,9 @@ description: CC的部落格 即刻短文页面
 <!-- CSS -->
 <link
   rel="stylesheet"
-  href="https://jsd.cdn.zzko.cn/npm/@waline/client@v2/dist/waline.css"
+  href="https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline.css"
 />
-<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/@waline/client@v2/dist/waline-meta.css"/>
-<!-- JS -->
-<script src="https://jsd.cdn.zzko.cn/npm/@waline/client@v2/dist/waline.js"></script>
+<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline-meta.css"/>
 <script>
   var head = document.getElementsByTagName('head')[0]
   var meta = document.createElement('meta')
@@ -56,39 +54,41 @@ description: CC的部落格 即刻短文页面
           // 4.4.0 之后在此回调函数中初始化评论
           const { _id, title, content } = speak
           const contentSub = content.substring(0, 30)
-          Waline.init({
-            el: '.ispeak-comment', // 默认情况下 ipseak 生成class为 ispeak-comment 的div
-            path: '/essay/speak?q=' + _id, // 手动传入当前speak的唯一id
-            title: title || contentSub, // 手动传入当前speak的标题(由于content可能过长，因此截取前30个字符)
-            serverURL: 'https://waline.ccknbc.cc',
-            pageSize: 10,
-            requiredMeta: ["nick", "mail"],
-            login: 'force',
-            dark: 'html[data-theme="dark"]',
-            imageUploader: function (file) {
-              let formData = new FormData();
-              let headers = new Headers();
-              formData.append("file", file);
-              formData.append("album_id", "10");
-              formData.append("permission", "0");
-              headers.append("Authorization", "Bearer 24|o8Crl5y0oK3luyUs17fBxDtAcevk1iiLHVFMNjpA");
-              headers.append("Accept", "application/json");
-              return fetch("https://wmimg.com/api/v1/upload", {
-                method: "POST",
-                headers: headers,
-                body: formData,
-              })
-                .then((resp) => resp.json())
-                .then((resp) => resp.data.links.url);
-              },
-            turnstileKey: '0x4AAAAAAAECBl27OB5SZrQT',
-            emoji:
-              [
-                "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/",
-                // "https://jsd.cdn.zzko.cn/npm/telegram-gif/Telegram-Gif/",
-                // "https://jsd.cdn.zzko.cn/npm/@waline/emojis/tw-emoji/"
-              ]
-          })
+          import("https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline.js").then((Waline) => {
+            Waline.init({
+              el: '.ispeak-comment', // 默认情况下 ipseak 生成class为 ispeak-comment 的div
+              path: '/essay/speak?q=' + _id, // 手动传入当前speak的唯一id
+              title: title || contentSub, // 手动传入当前speak的标题(由于content可能过长，因此截取前30个字符)
+              serverURL: 'https://waline.ccknbc.cc',
+              pageSize: 10,
+              requiredMeta: ["nick", "mail"],
+              login: 'force',
+              dark: 'html[data-theme="dark"]',
+              imageUploader: function (file) {
+                let formData = new FormData();
+                let headers = new Headers();
+                formData.append("file", file);
+                formData.append("album_id", "10");
+                formData.append("permission", "0");
+                headers.append("Authorization", "Bearer 24|o8Crl5y0oK3luyUs17fBxDtAcevk1iiLHVFMNjpA");
+                headers.append("Accept", "application/json");
+                return fetch("https://wmimg.com/api/v1/upload", {
+                  method: "POST",
+                  headers: headers,
+                  body: formData,
+                })
+                  .then((resp) => resp.json())
+                  .then((resp) => resp.data.links.url);
+                },
+              turnstileKey: '0x4AAAAAAAECBl27OB5SZrQT',
+              emoji:
+                [
+                  "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/",
+                  // "https://jsd.cdn.zzko.cn/npm/telegram-gif/Telegram-Gif/",
+                  // "https://jsd.cdn.zzko.cn/npm/@waline/emojis/tw-emoji/"
+                ]
+            })
+          }).catch(error => console.error('Waline加载失败', error));
         }
       })
       .then(function () {
@@ -99,4 +99,3 @@ description: CC的部落格 即刻短文页面
     document.getElementById('tip').innerHTML = 'ipseak依赖加载失败！'
   }
 </script>
-

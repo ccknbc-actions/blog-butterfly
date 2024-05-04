@@ -10,8 +10,8 @@ subtitle: Blogroll
 date: 2020-06-04 22:17:49
 updated: 2022-08-27 12:00:00
 ---
-<div id='blogroll'>
-<script src='https://jsd.cdn.zzko.cn/npm/butterfly-friend/butterfly-friend.umd.js'></script>
+<div class='js-pjax' id='blogroll'>
+<script class='js-pjax' src='https://jsd.cdn.zzko.cn/npm/butterfly-friend/butterfly-friend.umd.js'></script>
 <link rel="stylesheet" href='https://jsd.cdn.zzko.cn/npm/butterfly-friend/style.css'>
 <script>
 document.querySelector('.flink').insertAdjacentHTML('afterbegin',"<div id='friend1' class='js-pjax'></div>")

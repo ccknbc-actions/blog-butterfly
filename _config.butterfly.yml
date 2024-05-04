@@ -34,12 +34,16 @@ hide_sidebar_menu_child: false
 # Code Blocks (代碼相關)
 # --------------------------------------
 
-highlight_theme: mac light #  darker / pale night / light / ocean / mac / mac light / false
+highlight_theme: light # darker / pale night / light / ocean / false
+highlight_height_limit: false # unit: px
+code_word_wrap: false
+
+# highlight toolbar
+highlight_theme_macStyle: true # use mac style
 highlight_copy: true # copy button
 highlight_lang: true # show the code language
 highlight_shrink: false # true: shrink the code blocks / false: expand the code blocks | none: expand code blocks and hide the button
-highlight_height_limit: 450 # unit: px
-code_word_wrap: true
+highlight_fullpage: true # true: add button to toggle full page
 
 # copy settings
 # copyright: Add the copyright information after copied content (複製的內容後面加上版權信息)
@@ -58,13 +62,6 @@ social:
   fa-brands fa-bilibili: https://space.bilibili.com/1404413254 || BiliBili
   fa-brands fa-weibo: https://weibo.com/CommonCulture || Weibo
   fa-brands fa-telegram: https://t.me/ccknbc_bot || Telegram
-  # fa-brands fa-twitter: https://www.twitter.com/ccknbc || Twitter
-  # fa-solid fa-bell faa-ring animated: /sub/ || Sub
-  # fa-brands fa-line: https://line.me/ti/p/1vqM_WDef1 || LINE
-  # fa-brands fa-instagram: https://www.instagram.com/ccknbc || Instagram
-  # fa-brands fa-facebook: https://www.facebook.com/ccknbc || Facebook
-  # fa-brands fa-facebook-messenger: https://m.me/ccknbc || Messenger
-  # fa-brands fa-youtube: https://www.youtube.com/@ccknbc || YouTube
 
 # search (搜索)
 # --------------------------------------
@@ -215,9 +212,10 @@ post_meta:
     date_type: both # created or updated or both 主頁文章日期是創建日或者更新日或都顯示
     date_format: date # date/relative 顯示日期還是相對日期
     categories: true # true or false 主頁是否顯示分類
-    tags: true # true or false 主頁是否顯示標籤
+    tags: false # true or false 主頁是否顯示標籤
     label: true # true or false 顯示描述性文字
   post:
+    position: left # left or center 文章頁標題位置
     date_type: both # created or updated or both 文章頁日期是創建日或者更新日或都顯示
     date_format: date # date/relative 顯示日期還是相對日期
     categories: true # true or false 文章頁是否顯示分類
@@ -543,7 +541,7 @@ facebook_comments:
 
 # Chat Button [recommend]
 # It will create a button in the bottom right corner of website, and hide the origin button
-chat_btn: true
+chat_btn: false
 
 # The origin chat button is displayed when scrolling up, and the button is hidden when scrolling down
 chat_hide_show: true
@@ -590,11 +588,6 @@ footer:
     url: https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42088102000092
     text: 鄂公网安备 42088102000092 号
     icon: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/logo/gongan.png
-  upyun: # Chinese Gongan License
-    enable: false
-    url: https://www.upyun.com
-    text: 又拍云提供 CDN 加速服务
-    # icon: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/logo/upyun-white.svg
   live: #页脚运行时间
     enable: true
     prefix: "本站已运行"
@@ -610,11 +603,11 @@ footer:
 
 # Google Analytics
 # https://analytics.google.com/analytics/web/
-google_analytics: G-QB09N5MVV8
+# google_analytics: G-QB09N5MVV8
 
 # Cloudflare Analytics
 # https://www.cloudflare.com/web-analytics/
-# cloudflare_analytics: 35785b58f09f472ebfd7a2854973e6b8
+cloudflare_analytics: 35785b58f09f472ebfd7a2854973e6b8
 
 # Microsoft Clarity
 # https://clarity.microsoft.com/
@@ -1001,11 +994,13 @@ abcjs:
   enable: false
   per_page: true
 
-# mermaid
-# see https://github.com/knsv/mermaid
+# Mermaid
+# See https://github.com/mermaid-js/mermaid
 mermaid:
   enable: true
-  # built-in themes: default/forest/dark/neutral
+  # Write Mermaid diagrams using code blocks （以代碼塊形式書寫 Mermaid）
+  code_write: false 
+  # Built-in themes: default/forest/dark/neutral
   theme:
     light: default
     dark: dark
@@ -1051,8 +1046,8 @@ aplayerInject:
 snackbar:
   enable: true
   position: top-center
-  bg_light: "#696969" # The background color of Toast Notification in light mode
-  bg_dark: "#696969" # The background color of Toast Notification in dark mode
+  bg_light: '#49b1f5' # The background color of Toast Notification in light mode
+  bg_dark: '#1f1f1f' # The background color of Toast Notification in dark mode
 
 # https://instant.page/
 # prefetch (預加載)
@@ -1065,18 +1060,12 @@ pangu:
   field: post # site/post
 
 # Lazyload (圖片懶加載)
-# https://github.com/verlok/lazyload
+# https://github.com/verlok/vanilla-lazyload
 lazyload:
   enable: true
   field: site # site/post
   placeholder:
   blur: true
-
-snow:
-  enable: false
-
-instatus:
-  enable: true
 
 mourn:
   enable: true
@@ -1094,7 +1083,16 @@ pwa:
 
 # Open graph meta tags
 # https://developers.facebook.com/docs/sharing/webmasters/
-Open_Graph_meta: true
+Open_Graph_meta:
+  enable: true
+  option:
+    # twitter_card:
+    # twitter_image:
+    # twitter_id:
+    # twitter_site:
+    # google_plus:
+    # fb_admins:
+    # fb_app_id:
 
 # Add the vendor prefixes to ensure compatibility
 css_prefix: true

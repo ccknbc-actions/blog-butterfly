@@ -14,7 +14,7 @@ updated: 2023-02-19 13:12:35
 复制{% btn '/rss.xml',Rss,fa-solid fa-rss,outline orange %}或{% btn '/atom.xml',Atom,fa-solid fa-atom,outline blue %}地址通过邮件或阅读器阅读
 2. 浏览器订阅（摘要）
 您应该收到本站订阅弹窗通知，如果没有，您可能需要检查一下是否被广告拦截插件拦截。点击弹窗订阅按钮（可选择不同订阅主题），并确认允许本站通知后，即可在文章有更新时通过浏览器给您发送通知。建议您在 `Windows` 上采取此种方式，且 `Edge` 浏览器效果较好；由于谷歌推送服务的原因 `Chrome` 基本接收不到通知。即使您清除了本站浏览器数据，当您重新浏览本站时，可能也会为您自动重新订阅，除非您主动取消订阅
-    <div id="webpushr-subscription-button" data-background-color="#8fbc8f" data-size="small" data-button-text="订阅更新/通知" data-subscriber-count-text="位用户已订阅"></div> 点击按钮修改您的订阅配置 <span id="webpushr-subscription-toggle-button" data-size="1.5" data-text-when-denied="请点击按钮允许 CC的部落格 通知权限" data-color="#8fbc8f"></span>
+    <div class='js-pjax' id="webpushr-subscription-button" data-background-color="#8fbc8f" data-size="small" data-button-text="订阅更新/通知" data-subscriber-count-text="位用户已订阅"></div> 点击按钮修改您的订阅配置 <span id="webpushr-subscription-toggle-button" data-size="1.5" data-text-when-denied="请点击按钮允许 CC的部落格 通知权限" data-color="#8fbc8f"></span>
 
 3. 邮件订阅（全文）
 跳转后通过{% btn 'https://follow.it/ccknbc?pub',Follow.it,fa-solid fa-paper-plane,outline green %}订阅，注册用户支持自定义关键词、标签及多渠道（例如Telegram, Twitter，将来会支持微信）通知。

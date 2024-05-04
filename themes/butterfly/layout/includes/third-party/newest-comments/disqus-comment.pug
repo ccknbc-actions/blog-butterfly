@@ -15,7 +15,7 @@ script.
     }
 
     const getComment = () => {
-      fetch('!{theme.disqusjs.option.api}3.0/forums/listPosts.json?forum=!{forum}&related=thread&limit=!{theme.newest_comments.limit}&api_key=!{apiKey}')
+      fetch('https://disqus.com/api/3.0/forums/listPosts.json?forum=!{forum}&related=thread&limit=!{theme.newest_comments.limit}&api_key=!{apiKey}')
         .then(response => response.json())
         .then(data => {
           const disqusArray = data.response.map(item => {
@@ -28,7 +28,7 @@ script.
             }
           })
 
-          saveToLocal.set('disqus-newest-comments', JSON.stringify(disqusArray), !{theme.newest_comments.storage}/(60*24))
+          btf.saveToLocal.set('disqus-newest-comments', JSON.stringify(disqusArray), !{theme.newest_comments.storage}/(60*24))
           generateHtml(disqusArray)
         }).catch(e => {
           const $dom = document.querySelector('#card-newest-comments .aside-list')
@@ -47,7 +47,7 @@ script.
             const name = '!{theme.lazyload.enable ? "data-lazy-src" : "src"}'
             result += `<a href='${array[i].url}' class='thumbnail'><img ${name}='${array[i].avatar}' alt='${array[i].nick}'></a>`
           }
-
+          
           result += `<div class='content'>
           <a class='comment' href='${array[i].url}' title='${array[i].content}'>${array[i].content}</a>
           <div class='name'><span>${array[i].nick}</span><time> / ${btf.diffDate(array[i].date, true)}</time></div>
@@ -65,7 +65,7 @@ script.
 
     const newestCommentInit = () => {
       if (document.querySelector('#card-newest-comments .aside-list')) {
-        const data = saveToLocal.get('disqus-newest-comments')
+        const data = btf.saveToLocal.get('disqus-newest-comments')
         if (data) {
           generateHtml(JSON.parse(data))
         } else {
@@ -75,7 +75,7 @@ script.
     }
 
     newestCommentInit()
-    document.addEventListener('pjax:complete', newestCommentInit)
+    btf.addGlobalFn('pjaxComplete', newestCommentInit, 'disqus_newestComment')
   })
 
 

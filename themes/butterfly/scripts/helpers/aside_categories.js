@@ -83,13 +83,13 @@ hexo.extend.helper.register('aside_categories', function (categories, options) {
   const moreButton = function () {
     if (categories.length <= limit) return ''
     const moreHtml = `<a class="card-more-btn" href="${categoryDir}/" title="${buttonLabel}">
-    <i class="fa-solid fa-angle-right"></i></a>`
+    <i class="fas fa-angle-right"></i></a>`
 
     return moreHtml
   }
 
   return `<div class="item-headline">
-            <i class="fa-solid fa-folder-open"></i>
+            <i class="fas fa-folder-open"></i>
             <span>${this._p('aside.card_categories')}</span>
             ${moreButton()}
             </div>

@@ -24,13 +24,13 @@
     "clean:flowus": "npx elog clean -c ./elog/elog.config.flowus.js -a ./elog/elog.cache.flowus.json"
   },
   "hexo": {
-    "version": "7.1.1"
+    "version": "7.2.0"
   },
   "dependencies": {
     "@elog/cli": "0.14.0",
     "axios": "1.6.8",
     "hexo": "7.2.0",
-    "hexo-butterfly-tag-plugins-plus": "1.0.17",
+    "hexo-butterfly-tag-plugins-plus": "1.0.18",
     "hexo-filter-nofollow": "2.0.2",
     "hexo-generator-archive": "2.0.0",
     "hexo-generator-baidu-sitemap": "0.1.9",
@@ -44,8 +44,6 @@
     "hexo-renderer-pug": "3.0.0",
     "hexo-renderer-stylus": "3.0.1",
     "hexo-server": "3.0.0",
-    "hexo-tag-mmedia": "1.2.1",
-    "hexo-theme-anzhiyu": "github:anzhiyu-c/hexo-theme-anzhiyu#dev",
     "hexo-wordcount": "6.0.1",
     "hexo-yam": "8.0.0",
     "markdown-it-task-lists": "2.1.1",

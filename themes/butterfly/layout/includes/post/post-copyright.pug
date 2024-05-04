@@ -6,18 +6,18 @@ if theme.post_copyright.enable && page.copyright !== false
   .post-copyright
     .post-copyright__author
       span.post-copyright-meta
-        i.fa-solid.fa-circle-user
+        i.fas.fa-circle-user.fa-fw
         = _p('post.copyright.author') + ": "
       span.post-copyright-info
         a(href=authorHref)=author
     .post-copyright__type
       span.post-copyright-meta
-        i.fa-solid.fa-square-arrow-up-right
+        i.fas.fa-square-arrow-up-right.fa-fw
         = _p('post.copyright.link') + ": "
       span.post-copyright-info
         a(href=url_for(url))= theme.post_copyright.decode ? decodeURI(url) : url
     .post-copyright__notice
       span.post-copyright-meta
-        i.fa-solid.fa-circle-exclamation
+        i.fas.fa-circle-exclamation.fa-fw
         = _p('post.copyright.copyright_notice') + ": "
       span.post-copyright-info!= info

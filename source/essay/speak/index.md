@@ -10,17 +10,16 @@ aside: false
 description: CC的部落格 即刻短文页面
 ---
 <!-- CSS -->
-<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/@waline/client@v2/dist/waline.css"/>
-<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/@waline/client@v2/dist/waline-meta.css"/>
+<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline.css"/>
+<link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline-meta.css"/>
 <link rel="stylesheet" href="https://jsd.cdn.zzko.cn/npm/highlight.js/styles/atom-one-dark.min.css" />
 <div class='content'>
-  <img src='https://bu.dusays.com/2022/05/01/626e88f349943.gif'>
+  <img src='https://bu.dusays.com/2022/05/01/626e88f349943.gif'/>
 </div>
 {% btn 'https://blog.ccknbc.cc/essay/',查看全部,far fa-hand-point-right,block center blue larger %}
 <hr />
-<div class='ispeak-comment'></div>
+<div class='ispeak-comment js-pjax'></div>
 <!-- JS -->
-<script src="https://jsd.cdn.zzko.cn/npm/@waline/client@v2/dist/waline.js"></script>
 <script src="https://jsd.cdn.zzko.cn/npm/marked/marked.min.js"></script>
 <script src="https://jsd.cdn.zzko.cn/npm/highlight.js/highlight.min.js"></script>
 <script>
@@ -68,7 +67,8 @@ description: CC的部落格 即刻短文页面
       if(title){
         document.title = title;
       }
-      Waline.init({
+      import("https://jsd.cdn.zzko.cn/npm/@waline/client/dist/waline.js").then((Waline) => {
+        Waline.init({
         el: '.ispeak-comment',
         path: path + '?q=' + speakId,
         pageTitle: title || contentSub,
@@ -102,7 +102,8 @@ description: CC的部落格 即刻短文页面
             // "https://jsd.cdn.zzko.cn/npm/telegram-gif/Telegram-Gif/",
             // "https://jsd.cdn.zzko.cn/npm/@waline/emojis/tw-emoji/"
           ]
-      })
+        })
+      }).catch(error => console.error('Waline加载失败', error));
     }
   });
 </script>

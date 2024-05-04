@@ -6,6 +6,7 @@ block content
       include includes/header/post-info.pug
     if (theme.post_head_ai_description && theme.post_head_ai_description.enable)
       include includes/header/ai-info.pug
+
     article#article-container.post-content!=page.content
     include includes/post/post-copyright.pug
     .tag_share
@@ -14,7 +15,7 @@ block content
           each item, index in page.tags.data
             a(href=url_for(item.path)).post-meta__tags #[=item.name]
       include includes/third-party/share/index.pug
-
+        
     if theme.reward.enable && theme.reward.QR_code
       !=partial('includes/post/reward', {}, {cache: true})
 
@@ -30,4 +31,4 @@ block content
     if page.comments !== false && theme.comments && theme.comments.use
       - var commentsJsLoad = true
       !=partial('includes/third-party/comments/index', {}, {cache: true})
-    
+      
