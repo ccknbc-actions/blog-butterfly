@@ -29,9 +29,10 @@ self.addEventListener("activate", async () => {
 // 定义CDN镜像的URL列表
 const fallbackCdnUrls = [
     'https://cdn.jsdmirror.cn',
-    'https://jsd.cdn.zzko.cn',
-    'https://jsd.onmicrosoft.cn',
-    'https://jsdelivr.goodboyboy.top',
+    'https://cdn.jsdmirror.com',
+    'https://fastly.jsdelivr.net',
+    'https://gcore.jsdelivr.net',
+    'https://jsdelivr.goodboyboy.top'
 ];
 
 // 定义失效CDN镜像的URL列表
@@ -40,7 +41,9 @@ const invalidCdnUrls = [
     'https://cdn1.tianli0.top',
     'https://cdn.jsdelivr.ren',
     'https://cdn.chuqis.com',
-    'https://cdn2.chuqis.com'
+    'https://cdn2.chuqis.com',
+    'https://jsd.cdn.zzko.cn',
+    'https://jsd.onmicrosoft.cn'
 ];
 
 // 定义空引用URL的域名列表
