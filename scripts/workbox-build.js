@@ -1,5 +1,5 @@
 const workboxBuild = require('workbox-build');
-const UglifyJS = require('uglify-js');
+const { minify } = require('terser');
 const fs = require('hexo-fs');
 
 hexo.on("deployBefore", async function () {
@@ -31,7 +31,10 @@ hexo.on("deployBefore", async function () {
             const swFile = fs.readFileSync(swFilePath);
 
             // 压缩代码
-            const result = UglifyJS.minify(swFile.toString());
+            const result = await minify(swFile.toString(), {
+                compress: true,
+                mangle: true
+            });
             if (result.error) {
                 hexo.log.warn("压缩代码时发生错误：", result.error);
                 return;

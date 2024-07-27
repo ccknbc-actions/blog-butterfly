@@ -152,7 +152,7 @@ favicon: /favicon.ico
 
 # Avatar (頭像)
 avatar:
-  img: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/logo/logo.png
+  img: https://cdn.jsdmirror.cn/gh/ccknbc-backup/cdn/logo/logo.png
   effect: false
 
 disable_top_img: false
@@ -194,18 +194,18 @@ cover:
   # left/right/both
   position: left
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
-  default_cover: https://jsd.cdn.zzko.cn/npm/hexo-theme-anzhiyu/source/img/default_cover.jpg
+  default_cover: https://cdn.jsdmirror.cn/npm/hexo-theme-anzhiyu/source/img/default_cover.jpg
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
-  flink: https://jsd.cdn.zzko.cn/npm/hexo-theme-anzhiyu/source/img/404.jpg
-  post_page: https://jsd.cdn.zzko.cn/npm/hexo-theme-anzhiyu/source/img/friend_404.gif
+  flink: https://cdn.jsdmirror.cn/npm/hexo-theme-anzhiyu/source/img/404.jpg
+  post_page: https://cdn.jsdmirror.cn/npm/hexo-theme-anzhiyu/source/img/friend_404.gif
 
 # A simple 404 page
 error_404:
   enable: true
   subtitle: Oops! 页面不存在~
-  background: https://jsd.cdn.zzko.cn/npm/anzhiyu-blog@1.1.6/img/post/common/page-404.png
+  background: https://cdn.jsdmirror.cn/npm/anzhiyu-blog@1.1.6/img/post/common/page-404.png
 
 post_meta:
   page: # Home Page
@@ -280,10 +280,10 @@ reward:
   enable: true
   text: 赞赏
   QR_code:
-    - img: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/logo/qr.png
+    - img: https://cdn.jsdmirror.cn/gh/ccknbc-backup/cdn/logo/qr.png
       link: https://www.rocschool.com/tool/qr/qr/id/51.html
       text: 三合一
-    - img: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/logo/afdian.png
+    - img: https://cdn.jsdmirror.cn/gh/ccknbc-backup/cdn/logo/afdian.png
       link: https://afdian.net/@ccknbc
       text: 爱发电
 
@@ -415,18 +415,18 @@ waline:
       level6: 开吃
     emoji:
       [
-        "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/",
-        # "https://jsd.cdn.zzko.cn/npm/telegram-gif/Telegram-Gif/",
-        # "https://jsd.cdn.zzko.cn/npm/@waline/emojis/tw-emoji/",
+        "https://cdn.jsdmirror.cn/npm/sticker-heo/Sticker-100/",
+        # "https://cdn.jsdmirror.cn/npm/telegram-gif/Telegram-Gif/",
+        # "https://cdn.jsdmirror.cn/npm/@waline/emojis/tw-emoji/",
       ]
     reaction:
       [
-        "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/鼓掌.png",
-        "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/菜狗.png",
-        "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/正确.png",
-        "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/错误.png",
-        "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/思考.png",
-        "https://jsd.cdn.zzko.cn/npm/sticker-heo/Sticker-100/睡觉.png",
+        "https://cdn.jsdmirror.cn/npm/sticker-heo/Sticker-100/鼓掌.png",
+        "https://cdn.jsdmirror.cn/npm/sticker-heo/Sticker-100/菜狗.png",
+        "https://cdn.jsdmirror.cn/npm/sticker-heo/Sticker-100/正确.png",
+        "https://cdn.jsdmirror.cn/npm/sticker-heo/Sticker-100/错误.png",
+        "https://cdn.jsdmirror.cn/npm/sticker-heo/Sticker-100/思考.png",
+        "https://cdn.jsdmirror.cn/npm/sticker-heo/Sticker-100/睡觉.png",
       ]
 
 discuss:
@@ -438,7 +438,7 @@ discuss:
     # imgLoading:  # 评论图片懒加载，加载动画，默认为1像素白色base64图
     visitStat: false # 是否开启访问统计，默认: false
     color: "#8fbc8f"
-    emotCDN: "https://jsd.cdn.zzko.cn/npm/discuss"
+    emotCDN: "https://cdn.jsdmirror.cn/npm/discuss"
 
 # Twikoo
 # https://github.com/imaegoo/twikoo
@@ -501,7 +501,7 @@ valine:
   appKey:
   avatar: monsterid # gravatar style https://valine.js.org/#/avatar
   serverURLs: https://5J2LIPyE.api.lncldglobal.com # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
-  bg: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/image/comments/bg.jpg
+  bg: https://cdn.jsdmirror.cn/gh/ccknbc-backup/cdn/image/comments/bg.jpg
   visitor: false
   option:
     pageSize: 10 # comment list page size
@@ -510,7 +510,7 @@ valine:
     #Valine系统暂时停用，恢复时间待定  # valine comment input placeholder(like: Please leave your footprints )
     guest_info: nick,mail,link #valine comment header info (nick/mail/link)
     recordIP: true # Record reviewer IP
-    emojiCDN: https://jsd.cdn.zzko.cn/gh/GamerNoTitle/Valinecdn/
+    emojiCDN: https://cdn.jsdmirror.cn/gh/GamerNoTitle/Valinecdn/
     #https://valinecdn.bili33.top/
     enableQQ: true # enable the Nickname box to automatically get QQ Nickname and QQ Avatar
     requiredFields: mail # required fields (nick/mail)
@@ -582,12 +582,12 @@ footer:
     enable: true
     url: https://beian.miit.gov.cn
     text: 鄂 ICP 备 2020019764 号
-    icon: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/logo/icp.png
+    icon: https://cdn.jsdmirror.cn/gh/ccknbc-backup/cdn/logo/icp.png
   gongan: # Chinese Gongan License
     enable: true
     url: https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42088102000092
     text: 鄂公网安备 42088102000092 号
-    icon: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/logo/gongan.png
+    icon: https://cdn.jsdmirror.cn/gh/ccknbc-backup/cdn/logo/gongan.png
   live: #页脚运行时间
     enable: true
     prefix: "本站已运行"
@@ -835,7 +835,7 @@ preloader:
   # 2. pace (progress bar)
   source: 2
   # pace theme (see https://codebyzach.github.io/pace/)
-  pace_css_url: https://jsd.cdn.zzko.cn/gh/CodeByZach/pace/themes/green/pace-theme-flash.css
+  pace_css_url: https://cdn.jsdmirror.cn/gh/CodeByZach/pace/themes/green/pace-theme-flash.css
 
 # aside (側邊欄)
 # --------------------------------------
@@ -1078,8 +1078,8 @@ pwa:
   enable: false
   manifest: /manifest.json
   theme_color: "#ffffff"
-  apple_touch_icon: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/image/pwa/apple-touch-icon.png
-  mask_icon: https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/image/pwa/safari-pinned-tab.svg
+  apple_touch_icon: https://cdn.jsdmirror.cn/gh/ccknbc-backup/cdn/image/pwa/apple-touch-icon.png
+  mask_icon: https://cdn.jsdmirror.cn/gh/ccknbc-backup/cdn/image/pwa/safari-pinned-tab.svg
 
 # Open graph meta tags
 # https://developers.facebook.com/docs/sharing/webmasters/
@@ -1108,11 +1108,11 @@ inject:
   bottom:
     # - <div class="aplayer no-destroy" data-id="12838890" data-server="netease" data-type="artist" data-fixed="true" data-mini="true" data-listFolded="false" data-order="random" data-preload="none" data-autoplay="true" muted></div>
     # - '<div class="app-refresh" id="app-refresh"> <div class="app-refresh-wrap"> <label>✨ 网站已更新 👉</label> <a href="javascript:void(0)" onclick="location.reload()">✔ <b>点击刷新</b> 💫</a> </div></div><script>function showNotification(){if(GLOBAL_CONFIG.Snackbar){let t="light"===document.documentElement.getAttribute("data-theme")?GLOBAL_CONFIG.Snackbar.bgLight:GLOBAL_CONFIG.Snackbar.bgDark,e=GLOBAL_CONFIG.Snackbar.position;Snackbar.show({text:"✨ 部落格已更新 👉",backgroundColor:t,duration:1e4,pos:e,actionText:"✔ 点击刷新 💫",textColor:"#EEEEEE",actionTextColor:"#FFFFFF",onActionClick:function(t){location.reload()}})}else{let o=`top: 0; background: ${"light"===document.documentElement.getAttribute("data-theme")?"#49b1f5":"#1f1f1f"};`;document.getElementById("app-refresh").style.cssText=o}}"serviceWorker"in navigator&&(navigator.serviceWorker.controller&&navigator.serviceWorker.addEventListener("controllerchange",function(){showNotification()}),window.addEventListener("load",function(){navigator.serviceWorker.register("./sw.js")}));</script>'
-    # - <script defer src="https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/js/announcement.js"></script>
+    # - <script defer src="https://cdn.jsdmirror.cn/gh/ccknbc-backup/cdn/js/announcement.js"></script>
     # - <script>!function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"JgUfbwUA5BsLeAIc",ck:"JgUfbwUA5BsLeAIc",autoTrack:true});</script>
     # - <script>!(function(c,i,e,b){var h=i.createElement("script");var f=i.getElementsByTagName("script")[0];h.type="text/javascript";h.crossorigin=true;h.onload=function(){new c[b]["Monitor"]().init({id:"JgUg7s8ImDkwb2V7",sendSuspicious:true});};f.parentNode.insertBefore(h,f);h.src=e;})(window,document,"https://sdk.51.la/perf/js-sdk-perf.min.js","LingQue");</script>
     - <script defer src="/js/custom.js"></script>
-    # - <script defer src="https://jsd.cdn.zzko.cn/npm/jquery/dist/jquery.min.js"></script>
+    # - <script defer src="https://cdn.jsdmirror.cn/npm/jquery/dist/jquery.min.js"></script>
     # - <script defer id="rrbayJs" src="https://wza.rrbay.com/js/wza.min.js?bw" type="text/javascript"></script>
     # - <div id="music" key="6208da041a763" api="https://music.mx142.ltd"></div><script id="xplayer" src="https://music.mx142.ltd/Static/player4/js/player.js" ></script>
 
@@ -1131,7 +1131,7 @@ CDN:
   # Custom format
   # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
   #              https://cdn.jsdelivr.net/npm/${name}${verType}/${min_file}
-  custom_format: https://jsd.cdn.zzko.cn/npm/${name}/${file}
+  custom_format: https://cdn.jsdmirror.cn/npm/${name}/${file}
   # Add version number to CDN, true or false
   version: false
 

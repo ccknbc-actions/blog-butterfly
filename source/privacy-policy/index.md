@@ -34,7 +34,7 @@ description: CC的部落格 隐私政策
  统计工具会收集您的访问信息，用于网站的优化与文章分类、恶意访问识别（被动，存储，系统定期清理）
 
 您应该知道在您访问的时候以下信息会被统计功能使用：
-<!-- <script src="https://jsd.cdn.zzko.cn/gh/ccknbc-backup/cdn/js/privacy.js"></script> -->
+<!-- <script src="https://cdn.jsdmirror.cn/gh/ccknbc-backup/cdn/js/privacy.js"></script> -->
 
 <script>
     function getIpInfo() {

@@ -27,9 +27,9 @@
     "version": "7.2.0"
   },
   "dependencies": {
-    "@elog/cli": "0.14.1",
+    "@elog/cli": "0.14.2",
     "axios": "1.7.2",
-    "hexo": "7.2.0",
+    "hexo": "7.3.0",
     "hexo-butterfly-tag-plugins-plus": "1.0.18",
     "hexo-filter-nofollow": "2.0.2",
     "hexo-generator-archive": "2.0.0",
@@ -45,8 +45,9 @@
     "hexo-renderer-stylus": "3.0.1",
     "hexo-server": "3.0.0",
     "hexo-wordcount": "6.0.1",
-    "hexo-yam": "8.0.0",
+    "hexo-yam": "9.0.0",
     "markdown-it-task-lists": "2.1.1",
+    "terser": "5.31.3",
     "workbox-build": "7.1.1"
   }
 }

@@ -1,4 +1,4 @@
-importScripts("https://jsd.cdn.zzko.cn/npm/workbox-sw/build/workbox-sw.js");
+importScripts("https://cdn.jsdmirror.cn/npm/workbox-sw/build/workbox-sw.js");
 importScripts("https://cdn.webpushr.com/sw-server.min.js");
 
 // 提示
@@ -29,7 +29,7 @@ self.addEventListener("activate", async () => {
 // 定义CDN镜像的URL列表
 const fallbackCdnUrls = [
     'https://cdn.jsdmirror.cn',
-    'https://jsd.cdn.zzko.cn',
+    'https://cdn.jsdmirror.com',
     'https://jsd.onmicrosoft.cn',
     'https://jsdelivr.goodboyboy.top',
 ];
@@ -40,7 +40,9 @@ const invalidCdnUrls = [
     'https://cdn1.tianli0.top',
     'https://cdn.jsdelivr.ren',
     'https://cdn.chuqis.com',
-    'https://cdn2.chuqis.com'
+    'https://cdn2.chuqis.com',
+    'https://jsd.cdn.zzko.cn',
+    'https://jsd.onmicrosoft.cn'
 ];
 
 // 定义空引用URL的域名列表

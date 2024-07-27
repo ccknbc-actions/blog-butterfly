@@ -4,8 +4,8 @@ const util = require('hexo-util');
 const fs = require('hexo-fs');
 const moment = require('moment');
 const axios = require('axios');
-
 const config = hexo.config.webpushr;
+
 const endpoint = config.endpoint || 'segment';
 let newPostOnlineSite;
 let topic = [];
@@ -32,7 +32,7 @@ if (config.enable) {
             auto_hide: newPost.auto_hide || config.auto_hide || '1',
             webpushr: newPost.webpushr
         };
-        fs.writeFile('public/newPost.json', JSON.stringify(JSONFeed));
+        await fs.writeFile('public/newPost.json', JSON.stringify(JSONFeed));
     });
 
     // 生成 sw-js 文件
@@ -44,9 +44,9 @@ if (config.enable) {
 
     // 生成 html 后插入代码
     hexo.extend.filter.register('after_render:html', data => {
-        var swOption = (config.sw_self == true) ? "'none'" : "undefined";
+        const swOption = config.sw_self ? "'none'" : "undefined";
 
-        var payload = `(function (w, d, s, id) {
+        const payload = `(function (w, d, s, id) {
         if (typeof (w.webpushr) !== 'undefined') return;
         w.webpushr = w.webpushr || function () { (w.webpushr.q = w.webpushr.q || []).push(arguments) };
         var js, fjs = d.getElementsByTagName(s)[0];
@@ -65,64 +65,52 @@ if (config.enable) {
         return data.replace(/<body.+?>(?!<\/body>).+?<\/body>/s, str => str.replace('</body>', `<script>${decodeURI(payload)}</script></body>`));
     });
 
-
     // 部署前获取在线 newPost.json（旧版本）
     hexo.on("deployBefore", async () => {
         hexo.log.info('正在获取 在线 最新文章信息');
         newPostOnlineSite = async () => {
             try {
-                var result = await axios.get(`${hexo.config.url}/newPost.json`, {
+                const result = await axios.get(`${hexo.config.url}/newPost.json`, {
                     headers: { Accept: 'application/json' }
                 });
                 return result.data;
             } catch (e) {
-                return result = await JSON.parse(JSON.stringify(
-                    {}
-                ))
+                return {};
             }
         };
     });
 
     // 部署后读取本地和部署前获取到的在线版本信息
     hexo.on('deployAfter', async () => {
-        var newPostLocal = await fs.readFileSync('public/newPost.json');
-        newPostLocal = JSON.parse(newPostLocal);
-        if (!newPostLocal) {
+        let newPostLocal;
+        try {
+            newPostLocal = JSON.parse(await fs.readFileSync('public/newPost.json'));
+        } catch (e) {
             hexo.log.error('获取本地版本 "newPost.json" 失败，可能为未生成文件或读取超时');
             return false;
         }
-        newPostOnlineSite = await newPostOnlineSite();
-        newPostOnlineSite = await JSON.parse(JSON.stringify(newPostOnlineSite));
-        if (!newPostOnlineSite) {
+
+        let newPostOnlineSiteData;
+        try {
+            newPostOnlineSiteData = await newPostOnlineSite();
+        } catch (e) {
             hexo.log.error('获取在线版本 "newPost.json" 失败，可能为首次推送更新或站点无法访问');
             return false;
         }
-        // console.table({
-        //     "在线版本": newPostOnlineSite,
-        //     "本地版本": newPostLocal
-        // });
-        // console.log('本地版本 \n', newPostLocal);
-        // console.log('在线版本 \n', newPostOnlineSite);
 
         // 判断文章分类是否属于主题
         function isValidPostCategory() {
-            if (endpoint == 'segment' && config.categories && config.segment) {
-                for (var i = 0; i < newPostLocal.categories.length; i++) {
-                    topic[i] = config.categories.indexOf(newPostLocal.categories[i]);
-                    if (topic[i] === -1) {
-                        return false;
-                    }
-                    topic[i] = config.segment[topic[i]];
+            if (endpoint === 'segment' && config.categories && config.segment) {
+                for (let i = 0; i < newPostLocal.categories.length; i++) {
+                    const index = config.categories.indexOf(newPostLocal.categories[i]);
+                    if (index === -1) return false;
+                    topic[i] = config.segment[index];
                 }
             }
             return true;
         }
 
-        /**
-         * 判断是否需要推送通知
-         *
-         * @returns {boolean} 是否需要推送
-         */
+        // 判断是否需要推送通知
         function shouldPushNotification() {
             if (newPostLocal.webpushr === false) {
                 hexo.log.info('本文章配置为不推送,已跳过已跳过本次推送');
@@ -134,7 +122,7 @@ if (config.enable) {
                 return false;
             }
 
-            if (endpoint == 'segment' && !config.categories && !config.segment) {
+            if (endpoint === 'segment' && (!config.categories || !config.segment)) {
                 hexo.log.error('默认为按主题推送,需配置categories及segment');
                 return false;
             }
@@ -144,7 +132,7 @@ if (config.enable) {
                 return false;
             }
 
-            if (newPostOnlineSite.updated == newPostLocal.updated) {
+            if (newPostOnlineSiteData.updated === newPostLocal.updated) {
                 hexo.log.info('文章无更新,已跳过本次推送');
                 return false;
             }
@@ -162,7 +150,7 @@ if (config.enable) {
             };
 
             if (config.action_buttons && Array.isArray(config.action_buttons)) {
-                config.action_buttons.forEach(function (button) {
+                config.action_buttons.forEach(button => {
                     actionButtons.push({
                         title: button.title || '前往查看',
                         url: button.url || newPostLocal.target_url
@@ -193,41 +181,38 @@ if (config.enable) {
                 action_buttons: actionButtons,
             };
 
-            const delay = config.delay;
+            let payload = { ...payloadTemplate };
 
-            let payload = { ...payloadTemplate }
-
-            if (endpoint == 'segment') {
-                payload.segment = topic
-            };
+            if (endpoint === 'segment') {
+                payload.segment = topic;
+            }
 
             if (config.sid) {
-                payload.sid = config.sid
-                delete payload.image
-            };
+                payload.sid = config.sid;
+                delete payload.image;
+            }
 
-            if (actionButtons == false) {
-                delete payload.action_buttons
-            };
+            if (actionButtons.length === 0) {
+                delete payload.action_buttons;
+            }
 
-            if (delay == '0' && !actionButtons) {
-                delete payload.action_buttons
+            if (config.delay === '0' && actionButtons.length === 0) {
+                delete payload.action_buttons;
             } else {
-                payload.send_at = moment(newPostLocal.schedule).format()
-            };
+                payload.send_at = moment(newPostLocal.schedule).format();
+            }
 
             hexo.log.info('正在推送文章更新,请稍后');
             hexo.log.info('以下是推送内容:', payload);
 
-            axios.post(`https://api.webpushr.com/v1/notification/send/${endpoint}`, payload, { headers })
-                .then(res => {
-                    hexo.log.info(`《${newPostLocal.title}》推送更新成功!`);
-                    hexo.log.info('以下是接口返回信息:', res.data);
-                })
-                .catch(err => {
-                    hexo.log.error(`《${newPostLocal.title}》推送更新失败!`);
-                    hexo.log.error('以下是接口返回信息:', err.response.data);
-                });
+            try {
+                const res = await axios.post(`https://api.webpushr.com/v1/notification/send/${endpoint}`, payload, { headers });
+                hexo.log.info(`《${newPostLocal.title}》推送更新成功!`);
+                hexo.log.info('以下是接口返回信息:', res.data);
+            } catch (err) {
+                hexo.log.error(`《${newPostLocal.title}》推送更新失败!`);
+                hexo.log.error('以下是接口返回信息:', err.response ? err.response.data : err.message);
+            }
         }
     });
 }
