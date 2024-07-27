@@ -38,12 +38,7 @@ hexo.extend.filter.register('before_generate', () => {
       name: 'hexo-theme-butterfly',
       file: 'js/search/algolia.js',
       version
-    },
-    ai_abstract_js: {
-      name: "hexo-theme-butterfly",
-      file: "js/ai_abstract.js",
-      version,
-    },
+    }
   }
 
   const minFile = file => {
