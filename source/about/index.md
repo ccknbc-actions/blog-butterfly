@@ -6,6 +6,7 @@ translate_title: about
 subtitle: About
 date: 2020-08-08 14:55:19
 updated: 2024-05-12 23:16:29
+aside: false
 ---
 ## 镜像站点
 
@@ -13,4 +14,4 @@ updated: 2024-05-12 23:16:29
 
 ## 站点源码
 
-{% note success flat %} 本站所有内容完全公开，可前往以下地址查看源码</br>  **[GitHub](https://github.com/ccknbc-actions/blog-butterfly) | [GitLab](https://gitlab.com/CCKNBC/ccknbc.gitlab.io) | [JihuLab](https://jihulab.com/ccknbc-backup/blog-butterfly) | [Bitbucket](https://bitbucket.org/ccknbc/blog) | [Coding](https://ccknbc.coding.net/public/blog/blog-butterfly/git/files) | [Gitee](https://gitee.com/ccknbc/blog-butterfly)** {% endnote %}
+{% note success flat %} 本站所有内容完全公开，可前往以下地址查看源码</br>  **[GitHub](https://github.com/ccknbc-actions/blog-butterfly) | [GitLab](https://gitlab.com/CCKNBC/ccknbc.gitlab.io) | [Bitbucket](https://bitbucket.org/ccknbc/blog) | [Coding](https://ccknbc.coding.net/public/blog/blog-butterfly/git/files) | [Gitee](https://gitee.com/ccknbc/blog-butterfly)** {% endnote %}

@@ -1,51 +1,11 @@
 'use strict'
 
-const { stripHTML, escapeHTML, prettyUrls } = require('hexo-util')
+const { stripHTML, prettyUrls, truncate } = require('hexo-util')
 const crypto = require('crypto')
 
-hexo.extend.helper.register('page_description', function () {
-  const { config, page } = this
-  let description = page.description || page.content || page.title || config.description
-
-  if (description) {
-    description = escapeHTML(stripHTML(description).substring(0, 150)
-      .trim()
-    ).replace(/\n/g, ' ')
-    return description
-  }
+hexo.extend.helper.register('truncate', (content, length) => {
+  return truncate(stripHTML(content), { length, separator: ' ' }).replace(/\n/g, ' ')
 })
-
-hexo.extend.helper.register("get_page_fill_description", function () {
-  const { config, page } = this;
-  let description = page.content || page.description || page.title || config.description;
-
-  if (description) {
-    // 使用正则表达式匹配 h1-h6 标签中的文本内容
-    const regex = /<h[1-6][^>]*>(.*?)<\/h[1-6]>/g;
-    const headings = [];
-    let match;
-    while ((match = regex.exec(description))) {
-      headings.push(match[0]);
-    }
-
-    const contents = headings.map(heading => {
-      // 去掉 a 标签及其内容
-      const text = heading.replace(/<a[^>]*>.*?<\/a>/g, "");
-      // 去除特殊符号 &,:,; 等
-      return text.replace(/<\/?[^>]+>|&|:|;|quot;|，|,|“|”|"|'|#/g, "");
-    });
-
-    // 排除 div.post-ai-description 元素中的内容
-    const excludedDivRegex = /<div[^>]*class="?post-ai-description"?.*?>[\s\S]*?<\/div>/gi;
-    description = description.replace(excludedDivRegex, "");
-
-    description = escapeHTML(stripHTML(description).trim())
-      .replace(/\n/g, " ")
-      .replace(/[^\u4e00-\u9fa5]/gi, "");
-
-    return contents.join(", ") + description;
-  }
-});
 
 hexo.extend.helper.register('cloudTags', function (options = {}) {
   const env = this
@@ -64,14 +24,27 @@ hexo.extend.helper.register('cloudTags', function (options = {}) {
     sizes.push(length)
   })
 
+  const getRandomColor = () => {
+    const randomColor = () => Math.floor(Math.random() * 201)
+    const r = randomColor()
+    const g = randomColor()
+    const b = randomColor()
+    // 確保顏色不是太暗，通過增加一個最低值
+    return `rgb(${Math.max(r, 50)}, ${Math.max(g, 50)}, ${Math.max(b, 50)})`
+  }
+
+  const generateStyle = (size, unit) => {
+    const fontSize = parseFloat(size.toFixed(2)) + unit
+    const color = getRandomColor()
+    return `font-size: ${fontSize}; color: ${color};`
+  }
+
   const length = sizes.length - 1
   source.sort(orderby, order).forEach(tag => {
     const ratio = length ? sizes.indexOf(tag.length) / length : 0
     const size = minfontsize + ((maxfontsize - minfontsize) * ratio)
-    let style = `font-size: ${parseFloat(size.toFixed(2))}${unit};`
-    const color = 'rgb(' + Math.floor(Math.random() * 201) + ', ' + Math.floor(Math.random() * 201) + ', ' + Math.floor(Math.random() * 201) + ')' // 0,0,0 -> 200,200,200
-    style += ` color: ${color}`
-    result += `<a href="${env.url_for(tag.path)}" style="${style}">${tag.name}<sup>${tag.length}</sup></a>`
+    const style = generateStyle(size, unit)
+    result += `<a href="${env.url_for(tag.path)}" style="${style}">${tag.name}</a>`
   })
   return result
 })
@@ -116,5 +89,5 @@ hexo.extend.helper.register('findArchivesTitle', function (page, menu, date) {
 
 hexo.extend.helper.register('isImgOrUrl', function (path) {
   const imgTestReg = /\.(png|jpe?g|gif|svg|webp)(\?.*)?$/i
-  return path.indexOf('//') !== -1 || imgTestReg.test(path)
+  return path.includes('//') || imgTestReg.test(path)
 })

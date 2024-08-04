@@ -24,7 +24,7 @@ updated: 2022-06-26 15:24:00
 6. 因本人可能身边无亲属，不具法律效益，但希望尽可能能按照遗嘱置办
 
 ## English version
-<center><b><font size=4>I, Sun Zekang, make my own will and testament as follows</font></center></b>
+<center><b><font size=4>Me, Sun Zekang, make my own will and testament as follows</font></center></b>
 
 
 1. If I am over 60 years old and unable to eat or manage my own bowels for more than one year, I may be sent to a care center with a hospital background at my expense.
