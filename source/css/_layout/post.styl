@@ -87,6 +87,7 @@ beautify()
     margin: 0 auto 20px
     max-width: 100%
     transition: filter 375ms ease-in .2s
+    addBorderRadius()
 
   p
     margin: 0 0 16px
@@ -98,7 +99,6 @@ beautify()
     margin: 0 3px
     padding: 3px 5px
     border: 1px solid #b4b4b4
-    border-radius: 3px
     background-color: #f8f8f8
     box-shadow: 0 1px 3px rgba(0, 0, 0, .25), 0 2px 1px 0 rgba(255, 255, 255, .6) inset
     color: #34495e
@@ -107,6 +107,7 @@ beautify()
     font-size: .9em
     font-family: Monaco, 'Ubuntu Mono', monospace
     line-height: 1em
+    addBorderRadius(3)
 
   if hexo-config('anchor.click_to_scroll')
     h1,
@@ -181,7 +182,7 @@ beautify()
           background: $light-blue
           color: var(--white)
 
-    .post_share
+    .post-share
       display: inline-block
       float: right
       margin: 8px 0 0
@@ -203,6 +204,7 @@ beautify()
     padding: 10px 16px
     border: 1px solid var(--light-grey)
     transition: box-shadow .3s ease-in-out
+    addBorderRadius()
 
     &:before
       @extend .fontawesomeIcon
@@ -238,9 +240,9 @@ beautify()
     position: relative
     margin: 0 0 20px
     padding: .5em 1.2em
-    border-radius: 3px
     background-color: $noticeOutdate-bg
     color: $noticeOutdate-color
+    addBorderRadius(3)
 
     if hexo-config('noticeOutdate.style') == 'flat'
       padding: .5em 1em .5em 2.6em
@@ -257,137 +259,3 @@ beautify()
 
   .ads-wrap
     margin: 40px 0
-
-.post-ai-description
-  background: var(--hl-bg);
-  border-radius: 12px;
-  padding: 12px 16px;
-  line-height: 1.3;
-  margin-bottom: 10px;
-
-.ai-title
-  display: flex;
-  color: var(--font-color);
-  border-radius: 8px;
-  align-items: center;
-  padding: 0 5px;
-  i
-    font-weight: 800;
-    font-size: 20px;
-    line-height: 20px;
-    height 20px
-  .fa-podcast
-    // margin-left: auto;
-    // margin-right: 4px;
-    // font-size: 14px;
-    // opacity: 0;
-    margin-left: 4px;
-    cursor pointer
-    &:active
-      transform: scale(0.97);
-  .fa-arrow-rotate-right
-    // font-size: 14px;
-    // margin-left: 4px;
-    margin-right: 8px;
-    margin-left: auto;
-    cursor pointer
-
-  .ai-title-text
-    font-weight: bold;
-    margin-left: 8px;
-
-#ai-tag
-  font-size: 12px;
-  background-color: var(--btn-bg);
-  color: var(--btn-color);
-  border-radius: 4px;
-  line-height: 1;
-  padding: 4px 5px;
-  cursor pointer
-#ai-Toggle
-  // font-size: 12px;
-  background: var(--btn-bg);
-  color: var(--btn-color);
-  padding: 4px;
-  border-radius: 4px;
-  margin-left: 6px;
-  transform: scale(0.8);
-  cursor: pointer;
-  transition: 0.3s;
-  font-weight: bold;
-  // margin-left: auto;
-  &:hover
-    background: var(--btn-hover-color);
-    color: var(--card-bg);
-
-
-#go-tianli-blog
-  display: none
-.ai-explanation
-  margin-top: 12px;
-  padding: 8px 12px;
-  background: var(--card-bg);
-  border-radius: 8px;
-  font-size: 15px;
-  line-height: 1.4;
-
-.ai-cursor
-  display: inline-block;
-  width: 7px;
-  background: #333;
-  height: 16px;
-  margin-bottom: -2px;
-  opacity: 0.95;
-  margin-left: 3px;
-  transition: all 0.3s;
-
-[data-theme="dark"] .ai-cursor
-  background: rgb(255, 255, 255, 0.9);
-
-.ai-btn-box
-  font-size: 15.5px;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-.ai-btn-item
-  padding: 5px 10px;
-  margin: 10px 16px 0px 5px;
-  width: fit-content;
-  line-height: 1;
-  background: var(--btn-bg)
-  color: var(--btn-color);
-  border-radius: 6px;
-  user-select: none;
-  transition: all 0.3s;
-  cursor: pointer;
-  &:hover
-    background: var(--btn-hover-color);
-
-.ai-recommend
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  .ai-recommend-item
-    width: calc(50% - 20px);
-    margin: 10px;
-    background: var(--hltools-bg);
-    border-radius: 4px;
-    padding: 10px;
-    cursor pointer
-    transition: .3s;
-    animation: slide-in 0.6s 0.1s backwards;
-    span.index
-      padding: 4px
-    &:hover
-      color: var(--font-color);
-      background: var(--btn-hover-color);
-      a
-        color: var(--font-color);
-
-+maxWidth768()
-  .ai-btn-box
-    justify-content: center;
-  .ai-recommend .ai-recommend-item
-    width: 100%;

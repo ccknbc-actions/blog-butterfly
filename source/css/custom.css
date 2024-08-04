@@ -80,7 +80,7 @@
 
 /* 侧边栏二维码 */
 
-/* @media (max-width:768px) {
+@media (max-width:768px) {
     #card-qrcode {
         display: none;
     }
@@ -161,7 +161,7 @@
 #card-qrcode:hover #tj-box {
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
-} */
+}
 
 
 /* 圆角 */
