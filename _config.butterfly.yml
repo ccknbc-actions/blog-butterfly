@@ -109,8 +109,7 @@ category_per_img:
 footer_img: "linear-gradient(135deg,#fff1eb,#ace0f9)"
 
 # Website Background
-# Can set it to color or image
-# The formal of image: url(http://xxxxxx.com/xxx.jpg)
+# Can set it to color or image url
 background: "linear-gradient(45deg,#fff1eb,#ace0f9)"
 
 cover:
@@ -339,10 +338,10 @@ aside:
     limit: 3
     # Sort: date / updated
     sort: updated
-    sort_order:
+    sort_order: 0
   card_newest_comments:
     enable: true
-    sort_order:
+    sort_order: 1
     limit: 3
     # Unit: mins, save data to localStorage
     storage: 10
@@ -353,7 +352,7 @@ aside:
     limit: 8
     # Choose: none / true / false
     expand: true
-    sort_order:
+    sort_order: 2
   card_tags:
     enable: false
     # If set 0 will show all
@@ -363,7 +362,7 @@ aside:
     orderby: random
     # Sort of order. 1, asc for ascending; -1, desc for descending
     order: 1
-    sort_order:
+    sort_order: 3
   card_archives:
     enable: false
     # Type: monthly / yearly
@@ -374,7 +373,7 @@ aside:
     order: -1
     # If set 0 will show all
     limit: 8
-    sort_order:
+    sort_order: 4
   card_post_series:
     enable: false
     # The title shows the series name
@@ -387,7 +386,7 @@ aside:
     enable: true
     post_count: true
     last_push_date: true
-    sort_order:
+    sort_order: 5
     # Time difference between publish date and now
     # Formal: Month/Day/Year Time or Year/Month/Day Time
     # Leave it empty if you don't enable this feature

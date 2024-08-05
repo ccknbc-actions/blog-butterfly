@@ -203,3 +203,12 @@
     cursor: pointer;
     z-index: 1;
 }
+
+/* 背景渐变，因5.0版本不支持渐变配色 */
+#web_bg {
+    background: linear-gradient(45deg,#fff1eb,#ace0f9) !important;
+}
+footer#footer {
+    background: linear-gradient(45deg,#fff1eb,#ace0f9) !important;
+}
+
