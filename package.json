@@ -47,7 +47,7 @@
     "hexo-wordcount": "6.0.1",
     "hexo-yam": "9.0.0",
     "markdown-it-task-lists": "2.1.1",
-    "terser": "5.31.3",
+    "terser": "5.31.5",
     "workbox-build": "7.1.1"
   }
 }
