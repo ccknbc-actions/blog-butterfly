@@ -12,7 +12,7 @@ if theme.baidu_analytics
     }, 'baidu_analytics')
 
 if theme.google_analytics
-  script(async src=`https://www.googletagmanager.com/gtag/js?id=${theme.google_analytics}`)
+  script(async type="text/plain" data-type="application/javascript" data-name="google-analytics" data-src=`https://www.googletagmanager.com/gtag/js?id=${theme.google_analytics}`)
   script.
     window.dataLayer = window.dataLayer || []
     function gtag(){dataLayer.push(arguments)}
@@ -23,12 +23,12 @@ if theme.google_analytics
     }, 'google_analytics')
 
 if theme.cloudflare_analytics
-  script(defer data-pjax src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon=`{"token": "${theme.cloudflare_analytics}"}`)
+  script(defer type="text/plain" data-type="application/javascript" data-name="cloudflare-analytics" data-pjax data-src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon=`{"token": "${theme.cloudflare_analytics}"}`)
 
 if theme.microsoft_clarity
-  script.
+  script(type="text/plain" data-type="application/javascript" data-name="microsoft-clarity").
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        t=l.createElement(r);t.async=1;t.data-src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "!{theme.microsoft_clarity}");

@@ -86,6 +86,9 @@ mixin rightsideItem(array)
     if showArray
       +rightsideItem(showArray)
 
+    button#privacy-btn(type="button" title='隐私管理' onclick="if (typeof klaro !== 'undefined') { return klaro.show(); } else { console.warn('klaro is not defined'); return false; }")
+      i.fa-solid.fa-user-lock
+
     button#go-up(type="button" title=_p("rightside.back_to_top"))
       span.scroll-percent
       i.fa-solid.fa-arrow-up
