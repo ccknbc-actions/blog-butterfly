@@ -18,22 +18,22 @@ description: CC的部落格 即刻短文页面
 <div class='js-pjax' id="ispeak"></div>
 <link
   rel="stylesheet"
-  href="https://cdn.jsdmirror.cn/npm/highlight.js/styles/atom-one-dark.min.css"
+  href="https://jsd.onmicrosoft.cn/npm/highlight.js/styles/atom-one-dark.min.css"
 />
 <link
   rel="stylesheet"
-  href="https://cdn.jsdmirror.cn/npm/ispeak/style.css"
+  href="https://jsd.onmicrosoft.cn/npm/ispeak/style.css"
 />
 
-<script src="https://cdn.jsdmirror.cn/npm/highlight.js/highlight.min.js"></script>
-<script src="https://cdn.jsdmirror.cn/npm/marked@v3/marked.min.js"></script>
-<script src="https://cdn.jsdmirror.cn/npm/ispeak/ispeak.umd.js"></script>
+<script src="https://jsd.onmicrosoft.cn/npm/highlight.js/highlight.min.js"></script>
+<script src="https://jsd.onmicrosoft.cn/npm/marked@v3/marked.min.js"></script>
+<script src="https://jsd.onmicrosoft.cn/npm/ispeak/ispeak.umd.js"></script>
 <!-- CSS -->
 <link
   rel="stylesheet"
-  href="https://cdn.jsdmirror.cn/npm/@waline/client/dist/waline.css"
+  href="https://jsd.onmicrosoft.cn/npm/@waline/client/dist/waline.css"
 />
-<link rel="stylesheet" href="https://cdn.jsdmirror.cn/npm/@waline/client/dist/waline-meta.css"/>
+<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/npm/@waline/client/dist/waline-meta.css"/>
 <script>
   var head = document.getElementsByTagName('head')[0]
   var meta = document.createElement('meta')
@@ -54,7 +54,7 @@ description: CC的部落格 即刻短文页面
           // 4.4.0 之后在此回调函数中初始化评论
           const { _id, title, content } = speak
           const contentSub = content.substring(0, 30)
-          import("https://cdn.jsdmirror.cn/npm/@waline/client/dist/waline.js").then((Waline) => {
+          import("https://jsd.onmicrosoft.cn/npm/@waline/client/dist/waline.js").then((Waline) => {
             Waline.init({
               el: '.ispeak-comment', // 默认情况下 ipseak 生成class为 ispeak-comment 的div
               path: '/essay/speak?q=' + _id, // 手动传入当前speak的唯一id
@@ -83,9 +83,9 @@ description: CC的部落格 即刻短文页面
               turnstileKey: '0x4AAAAAAAECBl27OB5SZrQT',
               emoji:
                 [
-                  "https://cdn.jsdmirror.cn/npm/sticker-heo/Sticker-100/",
-                  // "https://cdn.jsdmirror.cn/npm/telegram-gif/Telegram-Gif/",
-                  // "https://cdn.jsdmirror.cn/npm/@waline/emojis/tw-emoji/"
+                  "https://jsd.onmicrosoft.cn/npm/sticker-heo/Sticker-100/",
+                  // "https://jsd.onmicrosoft.cn/npm/telegram-gif/Telegram-Gif/",
+                  // "https://jsd.onmicrosoft.cn/npm/@waline/emojis/tw-emoji/"
                 ]
             })
           }).catch(error => console.error('Waline加载失败', error));

@@ -19,6 +19,7 @@ nav:
 menu:
   # 首页: / || fa-solid fa-house-chimney
   # 浏览: javascript:toRandomPost(); || fa-solid fa-shuffle
+  隐私管理 : javascript:klaro.show(); || fa-solid fa-user-lock
   文章 || fa-solid fa-book-reader:
     归档: /archives/ || fa-solid fa-box-archive
     标签: /tags/ || fa-solid fa-tags
@@ -74,7 +75,7 @@ social:
 favicon: /favicon.ico
 
 avatar:
-  img: https://cdn.jsdmirror.cn/gh/ccknbc-backup/cdn/logo/logo.png
+  img: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/logo/CC.png
   effect: false
 
 # Disable all banner images
@@ -120,19 +121,19 @@ cover:
   # When cover is not set, the default cover is displayed
   default_cover:
     # - xxx.jpg
-    - https://cdn.jsdmirror.cn/npm/hexo-theme-anzhiyu/source/img/default_cover.jpg
+    - https://jsd.onmicrosoft.cn/npm/hexo-theme-anzhiyu/source/img/default_cover.jpg
 
 # Replace Broken Images
 error_img:
-  flink: https://cdn.jsdmirror.cn/npm/hexo-theme-anzhiyu/source/img/404.jpg
-  post_page: https://cdn.jsdmirror.cn/npm/hexo-theme-anzhiyu/source/img/friend_404.gif
+  flink: https://jsd.onmicrosoft.cn/npm/hexo-theme-anzhiyu/source/img/404.jpg
+  post_page: https://jsd.onmicrosoft.cn/npm/hexo-theme-anzhiyu/source/img/friend_404.gif
 
 
 # A simple 404 page
 error_404:
   enable: true
   subtitle: Oops! 页面不存在~
-  background: https://cdn.jsdmirror.cn/npm/anzhiyu-blog@1.1.6/img/post/common/page-404.png
+  background: https://jsd.onmicrosoft.cn/npm/anzhiyu-blog@1.1.6/img/post/common/page-404.png
 
 post_meta:
   # Home Page
@@ -230,10 +231,10 @@ reward:
   enable: true
   text: 赞赏
   QR_code:
-    - img: https://cdn.jsdmirror.cn/gh/ccknbc-backup/cdn/logo/qr.png
+    - img: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/logo/qr.png
       link: https://www.rocschool.com/tool/qr/qr/id/51.html
       text: 三合一
-    - img: https://cdn.jsdmirror.cn/gh/ccknbc-backup/cdn/logo/afdian.png
+    - img: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/logo/afdian.png
       link: https://ifdian.net/@ccknbc
       text: 爱发电
 
@@ -293,12 +294,12 @@ footer:
     enable: true
     url: https://beian.miit.gov.cn
     text: 鄂 ICP 备 2020019764 号
-    icon: https://cdn.jsdmirror.cn/gh/ccknbc-backup/cdn/logo/icp.png
+    icon: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/logo/icp.png
   gongan: # Chinese Gongan License
     enable: true
     url: https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42088102000092
     text: 鄂公网安备 42088102000092 号
-    icon: https://cdn.jsdmirror.cn/gh/ccknbc-backup/cdn/logo/gongan.png
+    icon: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/logo/gongan.png
   live: #页脚运行时间
     enable: true
     prefix: "本站已运行"
@@ -443,7 +444,7 @@ rightside_item_order:
   # Default: readmode,translate,darkmode,hideAside
   hide: hideAside,readmode,translate,darkmode
   # Default: toc,chat,comment
-  show: share,toc,chat,comment
+  show: privacy,share,toc,chat,comment
 
 # --------------------------------------
 # Global Settings
@@ -476,9 +477,9 @@ wordcount:
 
 # Busuanzi count for PV / UV in site
 busuanzi:
-  site_uv: true
-  site_pv: true
-  page_pv: true
+  site_uv: false
+  site_pv: false
+  page_pv: false
 
 # --------------------------------------
 # Math
@@ -708,18 +709,18 @@ waline:
       level6: 开吃
     emoji:
       [
-        "https://cdn.jsdmirror.cn/npm/sticker-heo/Sticker-100/",
-        # "https://cdn.jsdmirror.cn/npm/telegram-gif/Telegram-Gif/",
-        # "https://cdn.jsdmirror.cn/npm/@waline/emojis/tw-emoji/",
+        "https://jsd.onmicrosoft.cn/npm/sticker-heo/Sticker-100/",
+        # "https://jsd.onmicrosoft.cn/npm/telegram-gif/Telegram-Gif/",
+        # "https://jsd.onmicrosoft.cn/npm/@waline/emojis/tw-emoji/",
       ]
     reaction:
       [
-        "https://cdn.jsdmirror.cn/npm/sticker-heo/Sticker-100/鼓掌.png",
-        "https://cdn.jsdmirror.cn/npm/sticker-heo/Sticker-100/菜狗.png",
-        "https://cdn.jsdmirror.cn/npm/sticker-heo/Sticker-100/正确.png",
-        "https://cdn.jsdmirror.cn/npm/sticker-heo/Sticker-100/错误.png",
-        "https://cdn.jsdmirror.cn/npm/sticker-heo/Sticker-100/思考.png",
-        "https://cdn.jsdmirror.cn/npm/sticker-heo/Sticker-100/睡觉.png",
+        "https://jsd.onmicrosoft.cn/npm/sticker-heo/Sticker-100/鼓掌.png",
+        "https://jsd.onmicrosoft.cn/npm/sticker-heo/Sticker-100/菜狗.png",
+        "https://jsd.onmicrosoft.cn/npm/sticker-heo/Sticker-100/正确.png",
+        "https://jsd.onmicrosoft.cn/npm/sticker-heo/Sticker-100/错误.png",
+        "https://jsd.onmicrosoft.cn/npm/sticker-heo/Sticker-100/思考.png",
+        "https://jsd.onmicrosoft.cn/npm/sticker-heo/Sticker-100/睡觉.png",
       ]
 
 # Utterances
@@ -919,7 +920,7 @@ preloader:
   # 2. pace (progress bar)
   source: 2
   # pace theme (see https://codebyzach.github.io/pace/)
-  pace_css_url: https://cdn.jsdmirror.cn/gh/CodeByZach/pace/themes/green/pace-theme-flash.css
+  pace_css_url: https://jsd.onmicrosoft.cn/gh/CodeByZach/pace/themes/green/pace-theme-flash.css
 
 # Page Transition
 enter_transitions: true
@@ -1127,10 +1128,10 @@ lazyload:
 pwa:
   enable: false
   manifest: /manifest.json
-  apple_touch_icon: https://cdn.jsdmirror.cn/gh/ccknbc-backup/cdn/image/pwa/apple-touch-icon.png
-  favicon_32_32: https://cdn.jsdmirror.cn/gh/ccknbc-backup/cdn/image/pwa/16.png
-  favicon_16_16: https://cdn.jsdmirror.cn/gh/ccknbc-backup/cdn/image/pwa/32.png
-  mask_icon: https://cdn.jsdmirror.cn/gh/ccknbc-backup/cdn/image/pwa/safari-pinned-tab.svg
+  apple_touch_icon: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/image/pwa/apple-touch-icon.png
+  favicon_32_32: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/image/pwa/16.png
+  favicon_16_16: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/image/pwa/32.png
+  mask_icon: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/image/pwa/safari-pinned-tab.svg
 
 # Open graph meta tags
 # https://hexo.io/docs/helpers#open-graph
@@ -1153,10 +1154,9 @@ css_prefix: true
 inject:
   head:
     # - <link rel="stylesheet" href="/xxx.css">
-    - <script>if('serviceWorker'in navigator){navigator.serviceWorker.register("/sw.js",{scope:"/"}).then(reg=>{reg.onupdatefound=()=>{const installingWorker=reg.installing;installingWorker.onstatechange=()=>{if(installingWorker.state==='installed'){if(navigator.serviceWorker.controller){const isSnackbar=GLOBAL_CONFIG.Snackbar!==undefined;isSnackbar&&btf.snackbarShow("已刷新缓存，更新为最新内容");navigator.serviceWorker.controller.postMessage({type:"skipWaiting"})}else{console.log("第一次注册Service Worker")}}}}});navigator.serviceWorker.addEventListener("message",event=>{if(event.data&&event.data.type==="refresh"){console.log("收到刷新页面请求，开始刷新页面");window.location.reload()}})}</script>
+    # - <script>if('serviceWorker'in navigator){navigator.serviceWorker.register("/sw.js",{scope:"/"}).then(reg=>{reg.onupdatefound=()=>{const installingWorker=reg.installing;installingWorker.onstatechange=()=>{if(installingWorker.state==='installed'){if(navigator.serviceWorker.controller){const isSnackbar=GLOBAL_CONFIG.Snackbar!==undefined;isSnackbar&&btf.snackbarShow("已刷新缓存，更新为最新内容");navigator.serviceWorker.controller.postMessage({type:"skipWaiting"})}else{console.log("第一次注册Service Worker")}}}}});navigator.serviceWorker.addEventListener("message",event=>{if(event.data&&event.data.type==="refresh"){console.log("收到刷新页面请求，开始刷新页面");window.location.reload()}})}</script>
   bottom:
     # - <script src="xxxx"></script>
-    - <script defer src="/js/custom.js"></script>
 
 # CDN Settings
 # Don't modify the following settings unless you know how they work
@@ -1173,7 +1173,7 @@ CDN:
 
   # Custom format
   # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
-  custom_format: https://cdn.jsdmirror.cn/npm/${name}/${file}
+  custom_format: https://jsd.onmicrosoft.cn/npm/${name}/${file}
 
   option:
     # abcjs_basic_js:
@@ -1236,3 +1236,13 @@ CDN:
 mourn:
   enable: true
   days: [4-5, 5-12, 7-7, 9-18, 12-13]
+
+# AI 摘要
+ai_summary:
+  enable: true
+  postSelector: '#post #article-container'
+  key: 'VCtoijR43E2uiVWkrZiC'
+  postURL: "/^https?://[^/]+/posts/[^/]+/"
+  wordLimit: 1000
+  title: "AI 文章摘要"
+

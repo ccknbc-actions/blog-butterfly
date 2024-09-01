@@ -4,11 +4,11 @@ top_img: false
 translate_title: privacy-policy
 subtitle: Privacy Policy
 date: 2021-05-14 17:12:24
-updated: 2023-08-31 22:56:00
+updated: 2024-08-28 00:00:00
 description: CC的部落格 隐私政策
 aside: false
 ---
-本站非常重视用户的隐私和个人信息保护。您在使用网站时，可能会收集和使用您的相关信息。通过《隐私政策》向您说明在您访问 {% label blog.ccknbc.cc green %} 网站时，如何收集、使用、保存、共享和转让这些信息。由于本站性质为个人博客且为静态页面，暂未提供是否接受Cookies弹窗。即使我本人并不想搜集访客过多隐私信息，为了良好的浏览体验，默认启用全部功能，您可暂时使用隐私信息拦截插件去尽可能避免这种追踪。
+本站非常重视用户的隐私和个人信息保护。您在使用网站时，可能会收集和使用您的相关信息。通过《隐私政策》向您说明在您访问 {% label blog.ccknbc.cc blue %} 网站时，如何收集、使用、保存、共享和转让这些信息。即使我本人并不想搜集访客过多隐私信息，为了良好的浏览体验，不得不默认启用且无法禁用一些第三方服务，您可暂时使用隐私信息拦截插件去尽可能避免这种追踪。当然您可随时点击 <a class="btn-beautify inline-block green smaller" onclick="return klaro.show();" title="隐私管理" data-pjax-state=""><i class="fa-solid fa-user-lock"></i><span>隐私管理</span></a> 定制您的隐私设置，在其他页面面，您也可以在导航栏，右下角侧边栏找到隐私管理按钮。
 
 ## 如何收集和使用您的个人信息
 
@@ -18,9 +18,10 @@ aside: false
 
 - **[Microsoft 隐私声明 - Microsoft 隐私](https://privacy.microsoft.com/zh-cn/privacystatement)** 会收集你的访问操作过程和资源加载情况 *（甚至录制你的操作过程，但对隐私信息进行了打码保护，你仍可放心浏览）*，此外 **[Copilot - Clarity (microsoft.com)](https://clarity.microsoft.com/copilot)** 会基于GPT进行数据分析
 - **[隐私权政策 – 隐私权和条款 – Google](https://policies.google.com/privacy?hl=zh-CN)** 会收集你的访问信息
-- **[隐私协议 | Waline](https://waline.js.org/advanced/privacy.html)** 评论数据存储在 **[Privacy Policy (leancloud.app)](https://leancloud.app/privacy/)**，除基本的身份标识信息外，通知需要知晓您的电子邮件地址
+- **[隐私协议 | Waline](https://waline.js.org/advanced/privacy.html)** 评论数据存储在 **[Privacy Policy - TiDB](https://www.pingcap.com/privacy-policy/)**，除基本的身份标识，地理位置信息外，通知需要知晓您的电子邮件地址
 - **[Privacy Policy - Webpushr](https://www.webpushr.com/privacy-policy)** 推送更新服务也收集了您的信息方便识别不同用户，进行针对性推送
 - **[follow.it | Privacy & GDPR](https://follow.it/info/privacy)** 需要知晓您的电子邮件地址，以便邮件推送更新
+- **[Vercel - Privacy Policy](https://vercel.com/legal/privacy)** 需要收集您的访问信息，以便进行网站优化
 
 在访问时，本人仅会处于以下目的，使用你的个人信息：
 
@@ -35,7 +36,7 @@ aside: false
  统计工具会收集您的访问信息，用于网站的优化与文章分类、恶意访问识别（被动，存储，系统定期清理）
 
 您应该知道在您访问的时候以下信息会被统计功能使用：
-<!-- <script src="https://cdn.jsdmirror.cn/gh/ccknbc-backup/cdn/js/privacy.js"></script> -->
+<!-- <script src="https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/js/privacy.js"></script> -->
 
 <script>
     function getIpInfo() {
@@ -114,16 +115,21 @@ Cookies提供许多功能。例如，他们可以帮助我记住您喜欢深色�
 
 |                         第三方服务商                         |                             用途                             |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| [Algolia Docsearch](https://www.algolia.com/policies/privacy/) |        用于提供站内搜索服务，并辅助分析用户感兴趣内容        |
-|      [Instatus](https://instatus.com/policies/privacy)       | 用于[离线页面](/offline/)展示网站运行状态，提示用户网站状态  |
-| [Microsoft CLARITY](https://privacy.microsoft.com/zh-cn/privacystatement) |     用于国内用户统计站内访问情况，文章优化，恶意攻击排查     |
-| [Google Analytics](https://policies.google.com/privacy?hl=zh-CN) |     用于国外用户统计站内访问情况，文章优化，恶意攻击排查     |
-|       [leancloud.app](https://leancloud.app/privacy/)        |    在用户同意本站收集部分信息后，作为评论系统存储的数据库    |
-|     [ Webpushr](https://www.webpushr.com/privacy-policy)     | 在用户同意订阅推送后，作为推送服务提供商需存储用户的定制化数据 |
-|         [follow.it](https://follow.it/info/privacy)          | 在用户同意订阅推送后，作为推送服务提供商需存储用户的定制化数据 |
+| [Algolia Docsearch](https://www.algolia.com/policies/privacy/) | 用于提供站内搜索服务，并辅助分析用户感兴趣内容 |
+| [Instatus](https://instatus.com/policies/privacy) | 用于[离线页面](/offline/)展示网站运行状态，提示用户网站状态 |
+| [Microsoft CLARITY](https://privacy.microsoft.com/zh-cn/privacystatement) | 用于国内用户统计站内访问情况，文章优化，恶意攻击排查 |
+| [Google Analytics](https://policies.google.com/privacy?hl=zh-CN) | 用于国外用户统计站内访问情况，文章优化，恶意攻击排查 |
+| [Cloudflare Analytics](https://www.cloudflare.com/privacypolicy/) | 用于分析网站流量，恶意攻击排查 |
+| [~~Google Adsense~~](https://policies.google.com/technologies/partner-sites?hl=zh-CN) | ~~用于广告投放，广告优化，广告效果分析~~ |
+| [Google Tag Manager](https://policies.google.com/privacy?hl=zh-CN) | 用于广告投放，广告优化，广告效果分析 |
+| [Vercel](https://vercel.com/legal/privacy-policy) | 用于提供一些扩展服务，例如评论，友链，短文等 |
+| [TiDB](https://www.pingcap.com/privacy-policy/) | 在用户同意本站收集部分信息后，作为评论系统存储的数据库 |
+| [ Webpushr](https://www.webpushr.com/privacy-policy) | 在用户同意订阅推送后，作为推送服务提供商需存储用户的定制化数据 |
+| [Follow It](https://follow.it/info/privacy) | 在用户同意订阅推送后，作为推送服务提供商需存储用户的定制化数据 |
+| [Klaro](https://klaro.org/resources/privacy) | 用于管理隐私政策，并存储用户同意本站收集部分信息的数据 |
 
-## 对此 隐私政策的更改
+## 对此隐私政策的更改
 
-我可能对此 Cookies 政策所做的任何更改都将发布在此页面上。如果更改很重要，我会在博客首页明确指出该政策已更新。
+我可能对此隐私政策所做的任何更改都将发布在此页面上。如果更改很重要，我会在博客首页明确指出该政策已更新。
 
-{% btn '',最后修订时间：2023 年 8 月 31 日 22:56,fa-solid fa-history,block right green smaller %}
+{% btn '#',最后修订时间：2024 年 8 月 28 日 00:00,fa-solid fa-history,block right outline green smaller %}

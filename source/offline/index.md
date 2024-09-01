@@ -19,4 +19,4 @@ description: CC的部落格 离线页面
 {% note success flat %} 以下排名不分先后，请选择适合自己访问较快的即可</br> **[GitHub](https://github.blog.ccknbc.cc) | [GitLab](https://gitlab.blog.ccknbc.cc) | [Bitbucket](https://ccknbc.bitbucket.io) | [Vercel](https://vercel.blog.ccknbc.cc) | [Netlify](https://netlify.blog.ccknbc.cc) | [CloudFlare](https://cloudflare.blog.ccknbc.cc)** {% endnote %}
 
 
-<script class='js-pjax' src="https://cc.instatus.com/zh/22fec4f6/widget/script.js"></script>
+<script data-name="instatus" class="js-pjax" src="https://cc.instatus.com/zh/22fec4f6/widget/script.js"></script>

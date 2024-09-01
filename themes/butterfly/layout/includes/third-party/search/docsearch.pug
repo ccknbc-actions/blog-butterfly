@@ -3,7 +3,7 @@
 .docsearch-wrap
   #docsearch(style="display:none")
   link(rel="stylesheet" href=url_for(theme.asset.docsearch_css))
-  script(src=url_for(theme.asset.docsearch_js))
+  script(date-name="algolia-docsearch" src=url_for(theme.asset.docsearch_js))
   script.
     (() => {
       docsearch(Object.assign({
