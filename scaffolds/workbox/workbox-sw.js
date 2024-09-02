@@ -1,6 +1,74 @@
 importScripts("https://jsd.onmicrosoft.cn/npm/workbox-sw/build/workbox-sw.js");
 importScripts("https://cdn.webpushr.com/sw-server.min.js");
 
+// 定义主站和备用站点的URL列表
+const mainSiteUrl = 'https://blog.ccknbc.cc';
+const backupSiteUrls = [
+    'https://vercel.blog.ccknbc.cc',
+    'https://cloudflare.blog.ccknbc.cc',
+    'https://netlify.blog.ccknbc.cc',
+    'https://github.blog.ccknbc.cc',
+    'https://gitlab.blog.ccknbc.cc',
+    'https://ccknbc.bitbucket.io'
+];
+
+async function handleMainSiteRequest(request) {
+    let failedUrls = [];
+
+    const fallbackRequest = backupSiteUrls.reduce((acc, backupUrl) => {
+        if (!failedUrls.includes(backupUrl)) {
+            const fallbackRequest = new Request(backupUrl + request.url.substring(request.url.indexOf('/', 8)));
+            acc = acc.catch(async () => {
+                try {
+                    const response = await fetch(fallbackRequest, { cache: 'reload' });
+                    if (response.ok) {
+                        // 修改响应的 URL 为主站的 URL
+                        const modifiedResponse = new Response(response.body, {
+                            status: response.status,
+                            statusText: response.statusText,
+                            headers: response.headers
+                        });
+                        modifiedResponse.url = request.url;
+                        return modifiedResponse;
+                    } else {
+                        failedUrls.push(backupUrl);
+                        throw new Error('请求资源失败');
+                    }
+                } catch (error) {
+                    failedUrls.push(backupUrl);
+                    throw new Error('所有备用站点请求失败');
+                }
+            });
+        }
+        return acc;
+    }, Promise.reject());
+
+    return fallbackRequest;
+}
+
+
+async function raceMainSiteRequests(request) {
+    const promises = backupSiteUrls.map(backupUrl => {
+        const backupRequest = new Request(backupUrl + request.url.substring(request.url.indexOf('/', 8)));
+        return fetch(backupRequest).then(response => {
+            if (response.ok) {
+                // 修改响应的 URL 为主站的 URL
+                const modifiedResponse = new Response(response.body, {
+                    status: response.status,
+                    statusText: response.statusText,
+                    headers: response.headers
+                });
+                modifiedResponse.url = request.url;
+                return modifiedResponse;
+            }
+            throw new Error('请求资源失败');
+        });
+    });
+
+    return Promise.race(promises);
+}
+
+
 // 提示
 if (workbox) {
     console.log("Workbox 加载成功🎉");
@@ -117,7 +185,9 @@ self.addEventListener('fetch', event => {
     const url = new URL(request.url);
     const domain = url.hostname;
 
-    if (isCdnUrl(url.href, invalidCdnUrls) || isCdnUrl(url.href, fallbackCdnUrls)) {
+    if (url.href.startsWith(mainSiteUrl)) {
+        event.respondWith(fetch(request).catch(() => raceMainSiteRequests(request).catch(() => handleMainSiteRequest(request))));
+    } else if (isCdnUrl(url.href, invalidCdnUrls) || isCdnUrl(url.href, fallbackCdnUrls)) {
         event.respondWith(raceCdnRequests(request, fallbackCdnUrls).catch(() => handleCdnRequest(request, fallbackCdnUrls)));
     } else if (referrerDomains.includes(domain)) {
         event.respondWith(handleEmptyReferrer(request));
