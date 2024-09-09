@@ -27,7 +27,7 @@ description: CC的部落格 朋友圈页面
         expire_days: 1,
     }
 </script>
-<script type="text/javascript" src="https://jsd.onmicrosoft.cn/npm/fcircle-theme-yyyz/dist/fcircle.min.js"></script> -->
+<script type="text/javascript" src="https://ccknbc.cdn.xzzo.cn/npm/fcircle-theme-yyyz/dist/fcircle.min.js"></script> -->
 
 <div id="friend-circle-lite-root"></div>
 <script>
@@ -42,5 +42,5 @@ description: CC的部落格 朋友圈页面
         }
     }
 </script>
-<link rel="stylesheet" href="https://jsd.onmicrosoft.cn/gh/willow-god/Friend-Circle-Lite/main/fclite.min.css">
-<script src="https://jsd.onmicrosoft.cn/gh/willow-god/Friend-Circle-Lite/main/fclite.min.js"></script>
+<link rel="stylesheet" href="https://ccknbc.cdn.xzzo.cn/gh/ccknbc-actions/Friend-Circle-Lite/main/fclite.min.css">
+<script src="https://ccknbc.cdn.xzzo.cn/gh/ccknbc-actions/Friend-Circle-Lite/main/fclite.min.js"></script>

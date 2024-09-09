@@ -1,4 +1,4 @@
-importScripts("https://jsd.onmicrosoft.cn/npm/workbox-sw/build/workbox-sw.js");
+importScripts("https://ccknbc.cdn.xzzo.cn/npm/workbox-sw/build/workbox-sw.js");
 importScripts("https://cdn.webpushr.com/sw-server.min.js");
 
 // 定义主站和备用站点的URL列表
@@ -95,6 +95,7 @@ self.__WB_DISABLE_DEV_LOGS = true;
 
 // 定义CDN镜像的URL列表
 const fallbackCdnUrls = [
+    'https://ccknbc.cdn.xzzo.cn',
     'https://jsd.onmicrosoft.cn',
     'https://cdn.jsdmirror.cn',
     'https://cdn.jsdmirror.com',
