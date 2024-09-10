@@ -1,74 +1,6 @@
 importScripts("https://ccknbc.cdn.xzzo.cn/npm/workbox-sw/build/workbox-sw.js");
 importScripts("https://cdn.webpushr.com/sw-server.min.js");
 
-// 定义主站和备用站点的URL列表
-const mainSiteUrl = 'https://blog.ccknbc.cc';
-const backupSiteUrls = [
-    'https://vercel.blog.ccknbc.cc',
-    'https://cloudflare.blog.ccknbc.cc',
-    'https://netlify.blog.ccknbc.cc',
-    'https://github.blog.ccknbc.cc',
-    'https://gitlab.blog.ccknbc.cc',
-    'https://ccknbc.bitbucket.io'
-];
-
-async function handleMainSiteRequest(request) {
-    let failedUrls = [];
-
-    const fallbackRequest = backupSiteUrls.reduce((acc, backupUrl) => {
-        if (!failedUrls.includes(backupUrl)) {
-            const fallbackRequest = new Request(backupUrl + request.url.substring(request.url.indexOf('/', 8)));
-            acc = acc.catch(async () => {
-                try {
-                    const response = await fetch(fallbackRequest, { cache: 'reload' });
-                    if (response.ok) {
-                        // 修改响应的 URL 为主站的 URL
-                        const modifiedResponse = new Response(response.body, {
-                            status: response.status,
-                            statusText: response.statusText,
-                            headers: response.headers
-                        });
-                        modifiedResponse.url = request.url;
-                        return modifiedResponse;
-                    } else {
-                        failedUrls.push(backupUrl);
-                        throw new Error('请求资源失败');
-                    }
-                } catch (error) {
-                    failedUrls.push(backupUrl);
-                    throw new Error('所有备用站点请求失败');
-                }
-            });
-        }
-        return acc;
-    }, Promise.reject());
-
-    return fallbackRequest;
-}
-
-
-async function raceMainSiteRequests(request) {
-    const promises = backupSiteUrls.map(backupUrl => {
-        const backupRequest = new Request(backupUrl + request.url.substring(request.url.indexOf('/', 8)));
-        return fetch(backupRequest).then(response => {
-            if (response.ok) {
-                // 修改响应的 URL 为主站的 URL
-                const modifiedResponse = new Response(response.body, {
-                    status: response.status,
-                    statusText: response.statusText,
-                    headers: response.headers
-                });
-                modifiedResponse.url = request.url;
-                return modifiedResponse;
-            }
-            throw new Error('请求资源失败');
-        });
-    });
-
-    return Promise.race(promises);
-}
-
-
 // 提示
 if (workbox) {
     console.log("Workbox 加载成功🎉");
@@ -93,9 +25,39 @@ self.addEventListener("activate", async () => {
 
 self.__WB_DISABLE_DEV_LOGS = true;
 
+workbox.precaching.cleanupOutdatedCaches();
+
+// 缓存名称
+workbox.core.setCacheNameDetails({
+    prefix: "CC的部落格",
+    suffix: "缓存",
+    precache: "预先",
+    runtime: "运行时",
+    googleAnalytics: "离线谷歌分析",
+});
+
+workbox.precaching.precacheAndRoute(self.__WB_MANIFEST, {
+    ignoreUrlParametersMatching: [/.*/],
+    directoryIndex: null,
+});
+
+// 导航预加载
+workbox.navigationPreload.enable();
+
+const currentDomain = self.location.hostname;
+
+const MIN = 60;
+const HOUR = MIN * 60;
+const DAY = HOUR * 24;
+const WEEK = DAY * 7;
+const MONTH = DAY * 30;
+const YEAR = DAY * 365;
+
+// 定义主要CDN的URL
+const mainCdnUrl = 'https://ccknbc.cdn.xzzo.cn';
+
 // 定义CDN镜像的URL列表
 const fallbackCdnUrls = [
-    'https://ccknbc.cdn.xzzo.cn',
     'https://jsd.onmicrosoft.cn',
     'https://cdn.jsdmirror.cn',
     'https://cdn.jsdmirror.com',
@@ -121,45 +83,42 @@ const referrerDomains = [
     'f.video.weibocdn.com',
 ];
 
-const MIN = 60;
-const HOUR = MIN * 60;
-const DAY = HOUR * 24;
-const WEEK = DAY * 7;
-const MONTH = DAY * 30;
-const YEAR = DAY * 365;
-
-workbox.precaching.cleanupOutdatedCaches();
+// 定义主站和备用站点的URL列表
+const mainSiteUrl = 'https://blog.ccknbc.cc';
+const backupSiteUrls = [
+    'https://vercel.blog.ccknbc.cc',
+    'https://cloudflare.blog.ccknbc.cc',
+    'https://netlify.blog.ccknbc.cc',
+    'https://github.blog.ccknbc.cc',
+    'https://gitlab.blog.ccknbc.cc',
+    'https://ccknbc.bitbucket.io'
+];
 
 // 函数用于判断是否为 CDN URL
 function isCdnUrl(url, cdnList) {
     return cdnList.some(cdnUrl => url.startsWith(cdnUrl));
 }
 
+// 函数用于处理带有 CDN URL 的请求
 async function handleCdnRequest(request, cdnList) {
     let failedUrls = [];
 
-    const fallbackRequest = cdnList.reduce((acc, cdnUrl) => {
+    for (const cdnUrl of cdnList) {
         if (!failedUrls.includes(cdnUrl)) {
             const fallbackRequest = new Request(cdnUrl + request.url.substring(request.url.indexOf('/', 8)));
-            acc = acc.catch(async () => {
-                try {
-                    const response = await fetch(fallbackRequest, { cache: 'reload' });
-                    if (response.ok) {
-                        return response;
-                    } else {
-                        failedUrls.push(cdnUrl);
-                        throw new Error('请求资源失败');
-                    }
-                } catch (error) {
+            try {
+                const response = await fetch(fallbackRequest, { cache: 'reload' });
+                if (response.ok) {
+                    return response;
+                } else {
                     failedUrls.push(cdnUrl);
-                    throw new Error('所有备用 CDN 镜像请求失败');
                 }
-            });
+            } catch (error) {
+                failedUrls.push(cdnUrl);
+            }
         }
-        return acc;
-    }, Promise.reject());
-
-    return fallbackRequest;
+    }
+    throw new Error('所有备用 CDN 镜像请求失败');
 }
 
 // 函数用于处理带有空引用的请求
@@ -167,50 +126,70 @@ function handleEmptyReferrer(request) {
     return fetch(request, { referrerPolicy: "no-referrer" });
 }
 
-async function raceCdnRequests(request, cdnList) {
-    const promises = cdnList.map(cdnUrl => {
-        const cdnRequest = new Request(cdnUrl + request.url.substring(request.url.indexOf('/', 8)));
-        return fetch(cdnRequest).then(response => {
-            if (response.ok) {
-                return response;
-            }
-            throw new Error('请求资源失败');
-        });
-    });
+async function handleMainSiteRequest(request) {
+    let failedUrls = [];
 
-    return Promise.race(promises);
+    for (const backupUrl of backupSiteUrls) {
+        if (!failedUrls.includes(backupUrl)) {
+            const fallbackRequest = new Request(backupUrl + request.url.substring(request.url.indexOf('/', 8)));
+            try {
+                const response = await fetch(fallbackRequest, { cache: 'reload' });
+                if (response.ok) {
+                    // 修改响应的 URL 为主站的 URL
+                    const modifiedResponse = new Response(response.body, {
+                        status: response.status,
+                        statusText: response.statusText,
+                        headers: response.headers
+                    });
+                    modifiedResponse.url = request.url;
+                    return modifiedResponse;
+                } else {
+                    failedUrls.push(backupUrl);
+                }
+            } catch (error) {
+                failedUrls.push(backupUrl);
+            }
+        }
+    }
+    throw new Error('所有备用站点请求失败');
 }
 
+// fetch 事件监听器
 self.addEventListener('fetch', event => {
     const request = event.request;
     const url = new URL(request.url);
     const domain = url.hostname;
 
     if (url.href.startsWith(mainSiteUrl)) {
-        event.respondWith(fetch(request).catch(() => raceMainSiteRequests(request).catch(() => handleMainSiteRequest(request))));
+        event.respondWith(
+            fetch(request)
+                .then(response => {
+                    // 如果主站请求成功，直接返回响应
+                    if (response.ok) {
+                        return response;
+                    }
+                    throw new Error('主站请求失败');
+                })
+                .catch(() => handleMainSiteRequest(request))
+        );
+    } else if (url.href.startsWith(mainCdnUrl)) {
+        event.respondWith(
+            fetch(request)
+                .then(response => {
+                    // 如果主要CDN请求成功，直接返回响应
+                    if (response.ok) {
+                        return response;
+                    }
+                    throw new Error('主要CDN请求失败');
+                })
+                .catch(() => handleCdnRequest(request, fallbackCdnUrls))
+        );
     } else if (isCdnUrl(url.href, invalidCdnUrls) || isCdnUrl(url.href, fallbackCdnUrls)) {
-        event.respondWith(raceCdnRequests(request, fallbackCdnUrls).catch(() => handleCdnRequest(request, fallbackCdnUrls)));
+        event.respondWith(handleCdnRequest(request, fallbackCdnUrls));
     } else if (referrerDomains.includes(domain)) {
         event.respondWith(handleEmptyReferrer(request));
     }
 });
-
-// 缓存名称
-workbox.core.setCacheNameDetails({
-    prefix: "CC的部落格",
-    suffix: "缓存",
-    precache: "预先",
-    runtime: "运行时",
-    googleAnalytics: "离线谷歌分析",
-});
-
-workbox.precaching.precacheAndRoute(self.__WB_MANIFEST, {
-    ignoreUrlParametersMatching: [/.*/],
-    directoryIndex: null,
-});
-
-// 导航预加载
-workbox.navigationPreload.enable();
 
 // 结合 NetworkOnly 和离线后备
 const Offline = new workbox.routing.Route(
@@ -227,8 +206,6 @@ const Offline = new workbox.routing.Route(
 );
 workbox.routing.registerRoute(Offline);
 
-const currentDomain = self.location.hostname;
-
 // 缓存备用CDN资源
 workbox.routing.registerRoute(
     ({ request }) => {
@@ -238,9 +215,6 @@ workbox.routing.registerRoute(
             request.destination === 'script' ||
             request.destination === 'font' ||
             request.destination === 'worker' ||
-            // request.url.includes('favicon') ||
-            // request.url.includes('avatar') ||
-            // request.url.includes('logo') ||
             request.url.endsWith('woff2')
         );
     },
