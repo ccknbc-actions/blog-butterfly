@@ -23,6 +23,14 @@ self.addEventListener("activate", async () => {
     });
 });
 
+// 监听网络状态变化
+self.addEventListener('online', () => {
+    console.log('网络已恢复，通知客户端刷新页面');
+    self.clients.matchAll().then((clients) => {
+        clients.forEach((client) => client.postMessage({ type: "refresh" }));
+    });
+});
+
 self.__WB_DISABLE_DEV_LOGS = true;
 
 workbox.precaching.cleanupOutdatedCaches();
@@ -126,6 +134,7 @@ function handleEmptyReferrer(request) {
     return fetch(request, { referrerPolicy: "no-referrer" });
 }
 
+// 函数用于处理主站请求
 async function handleMainSiteRequest(request) {
     let failedUrls = [];
 
