@@ -1,6 +1,35 @@
 div
+  script.
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register("/sw.js", { scope: "/" }).then(reg => {
+        reg.onupdatefound = () => {
+          const installingWorker = reg.installing;
+          installingWorker.onstatechange = () => {
+            if (installingWorker.state === 'installed') {
+              if (navigator.serviceWorker.controller) {
+                const isSnackbar = GLOBAL_CONFIG.Snackbar !== undefined;
+                isSnackbar && btf.snackbarShow("已刷新缓存，更新为最新内容");
+                navigator.serviceWorker.controller.postMessage({ type: "skipWaiting" });
+              } else {
+                console.log("第一次注册Service Worker");
+              }
+            }
+          };
+        };
+      });
+      navigator.serviceWorker.addEventListener("message", event => {
+        if (event.data && event.data.type === "refresh") {
+          console.log("收到刷新页面请求，开始刷新页面");
+          window.location.reload();
+        }
+      });
+    }
+
+  script(defer src="https://api.kiprotect.com/v1/privacy-managers/a630a6d64b523552ab9cfab7dd02cd39/klaro.js")
+
   script(src=url_for(theme.asset.utils))
   script(src=url_for(theme.asset.main))
+  script(defer src="/js/custom.js")
 
   if theme.translate.enable
     script(src=url_for(theme.asset.translate))
@@ -63,3 +92,14 @@ div
     script(async data-pjax src= theme.asset.busuanzi || '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js')
 
   !=partial('includes/third-party/search/index', {}, {cache: true})
+
+  if theme.ai_summary.enable
+    link(rel="stylesheet" href="https://ai.tianli0.top/static/public/tianli_gpt.min.css")
+    script.
+      let tianliGPT_postSelector = '#{theme.ai_summary.postSelector}';
+      let tianliGPT_key = '#{theme.ai_summary.key}';
+      let tianliGPT_postURL = '#{theme.ai_summary.postURL}';
+      let tianliGPT_wordLimit = '#{theme.ai_summary.wordLimit}';
+      let tianliGPT_Title = '#{theme.ai_summary.title}';
+    //- script(defer type="text/plain" data-type="application/javascript" data-name="tianli-gpt-ai-summary" data-src="https://ai.tianli0.top/static/public/tianli_gpt.min.js")
+    script(defer data-name="tianli-gpt-ai-summary" src="https://ai.tianli0.top/static/public/tianli_gpt.min.js")

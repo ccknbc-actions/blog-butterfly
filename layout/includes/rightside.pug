@@ -32,11 +32,14 @@ mixin rightsideItem(array)
       when 'share'
         button#share-link(type="button" title='分享链接')
           i.fa-solid.fa-share
+      when 'privacy'
+        button#privacy-btn(type="button" title='隐私管理' onclick="return klaro.show();")
+          i.fa-solid.fa-user-lock
 
 #rightside
   - const { enable, hide, show } = theme.rightside_item_order
   - const hideArray = enable ? hide && hide.split(',') : ['readmode','translate','darkmode','hideAside']
-  - const showArray = enable ? show && show.split(',') : ['share','toc','chat','comment']
+  - const showArray = enable ? show && show.split(',') : ['share', 'privacy', 'toc','chat','comment']
 
   #rightside-config-hide
     if theme.edit.enable && page.edit !== false
@@ -85,9 +88,6 @@ mixin rightsideItem(array)
 
     if showArray
       +rightsideItem(showArray)
-
-    button#privacy-btn(type="button" title='隐私管理' onclick="if (typeof klaro !== 'undefined') { return klaro.show(); } else { console.warn('klaro is not defined'); return false; }")
-      i.fa-solid.fa-user-lock
 
     button#go-up(type="button" title=_p("rightside.back_to_top"))
       span.scroll-percent
