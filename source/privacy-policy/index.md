@@ -36,7 +36,7 @@ aside: false
  统计工具会收集您的访问信息，用于网站的优化与文章分类、恶意访问识别（被动，存储，系统定期清理）
 
 您应该知道在您访问的时候以下信息会被统计功能使用：
-<!-- <script src="https://ccknbc.cdn.xzzo.cn/gh/ccknbc-backup/cdn/js/privacy.js"></script> -->
+<!-- <script src="https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/js/privacy.js"></script> -->
 
 <script>
     function getIpInfo() {

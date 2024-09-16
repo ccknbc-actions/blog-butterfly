@@ -192,7 +192,7 @@ feed:
   content_limit: false
   content_limit_delim: " "
   order_by: -updated
-  icon: https://ccknbc.cdn.xzzo.cn/gh/ccknbc-backup/cdn/logo/CC.png
+  icon: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/logo/CC.png
   autodiscovery: true
   template:
     - ./scaffolds/rss/atom.xml
@@ -240,33 +240,33 @@ mmedia:
     default:
       controls: true
   aplayer:
-    js: https://ccknbc.cdn.xzzo.cn/npm/aplayer/dist/APlayer.min.js
-    css: https://ccknbc.cdn.xzzo.cn/npm/aplayer/dist/APlayer.min.css
+    js: https://jsd.onmicrosoft.cn/npm/aplayer/dist/APlayer.min.js
+    css: https://jsd.onmicrosoft.cn/npm/aplayer/dist/APlayer.min.css
     default:
       contents:
         lrcType: 3
   meting:
-    js: https://ccknbc.cdn.xzzo.cn/npm/meting/dist/Meting.min.js
+    js: https://jsd.onmicrosoft.cn/npm/meting/dist/Meting.min.js
     api: https://music.startly.cn/ # https://meting.ccknbc.cc/api （备用，支持 YouTube Spotify）
     default:
       theme: '#8fbc8f'
       list-folded: true
   dplayer:
-    js: https://ccknbc.cdn.xzzo.cn/npm/dplayer/dist/DPlayer.min.js
-    hls_js: https://ccknbc.cdn.xzzo.cn/npm/hls.js/dist/hls.min.js
-    dash_js: https://ccknbc.cdn.xzzo.cn/npm/dashjs/dist/dash.all.min.js
-    shaka_dash_js: https://ccknbc.cdn.xzzo.cn/npm/shaka-player/dist/shaka-player.compiled.js
-    flv_js: https://ccknbc.cdn.xzzo.cn/npm/flv.js/dist/flv.min.js
-    webtorrent_js: https://ccknbc.cdn.xzzo.cn/npm/webtorrent/webtorrent.min.js
+    js: https://jsd.onmicrosoft.cn/npm/dplayer/dist/DPlayer.min.js
+    hls_js: https://jsd.onmicrosoft.cn/npm/hls.js/dist/hls.min.js
+    dash_js: https://jsd.onmicrosoft.cn/npm/dashjs/dist/dash.all.min.js
+    shaka_dash_js: https://jsd.onmicrosoft.cn/npm/shaka-player/dist/shaka-player.compiled.js
+    flv_js: https://jsd.onmicrosoft.cn/npm/flv.js/dist/flv.min.js
+    webtorrent_js: https://jsd.onmicrosoft.cn/npm/webtorrent/webtorrent.min.js
     default:
       contents:
   artplayer:
-    js: https://ccknbc.cdn.xzzo.cn/npm/artplayer/dist/artplayer.js
-    hls_js: https://ccknbc.cdn.xzzo.cn/npm/hls.js/dist/hls.min.js
-    dash_js: https://ccknbc.cdn.xzzo.cn/npm/dashjs/dist/dash.all.min.js
-    shaka_dash_js: https://ccknbc.cdn.xzzo.cn/npm/shaka-player/dist/shaka-player.compiled.js
-    flv_js: https://ccknbc.cdn.xzzo.cn/npm/flv.js/dist/flv.min.js
-    webtorrent_js: https://ccknbc.cdn.xzzo.cn/npm/webtorrent/webtorrent.min.js
+    js: https://jsd.onmicrosoft.cn/npm/artplayer/dist/artplayer.js
+    hls_js: https://jsd.onmicrosoft.cn/npm/hls.js/dist/hls.min.js
+    dash_js: https://jsd.onmicrosoft.cn/npm/dashjs/dist/dash.all.min.js
+    shaka_dash_js: https://jsd.onmicrosoft.cn/npm/shaka-player/dist/shaka-player.compiled.js
+    flv_js: https://jsd.onmicrosoft.cn/npm/flv.js/dist/flv.min.js
+    webtorrent_js: https://jsd.onmicrosoft.cn/npm/webtorrent/webtorrent.min.js
     default:
       style: width:344px;height:193.5px
       contents:
@@ -328,14 +328,14 @@ tag_plugins:
   priority: 5 #过滤器优先权
   issues: false #issues标签开关
   link:
-    placeholder: https://ccknbc.cdn.xzzo.cn/gh/ccknbc-backup/cdn/logo/CC.png #link_card标签默认的图标图片
+    placeholder: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/logo/CC.png #link_card标签默认的图标图片
   CDN:
-    anima: https://ccknbc.cdn.xzzo.cn/npm/hexo-butterfly-tag-plugins-plus/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
-    # jquery: https://ccknbc.cdn.xzzo.cn/npm/jquery/dist/jquery.min.js #issues标签依赖
-    # issues: https://ccknbc.cdn.xzzo.cn/npm/hexo-butterfly-tag-plugins-plus/lib/assets/issues.js #issues标签依赖
+    anima: https://jsd.onmicrosoft.cn/npm/hexo-butterfly-tag-plugins-plus/lib/assets/font-awesome-animation.min.css #动画标签anima的依赖
+    # jquery: https://jsd.onmicrosoft.cn/npm/jquery/dist/jquery.min.js #issues标签依赖
+    # issues: https://jsd.onmicrosoft.cn/npm/hexo-butterfly-tag-plugins-plus/lib/assets/issues.js #issues标签依赖
     iconfont: false #参看https://akilar.top/posts/d2ebecef/
-    carousel: false #https://ccknbc.cdn.xzzo.cn/npm/hexo-butterfly-tag-plugins-plus/lib/assets/carousel-touch.js
-    tag_plugins_css: https://ccknbc.cdn.xzzo.cn/npm/hexo-butterfly-tag-plugins-plus/lib/tag_plugins.css
+    carousel: false #https://jsd.onmicrosoft.cn/npm/hexo-butterfly-tag-plugins-plus/lib/assets/carousel-touch.js
+    tag_plugins_css: https://jsd.onmicrosoft.cn/npm/hexo-butterfly-tag-plugins-plus/lib/tag_plugins.css
 
 wowjs:
   enable: false #控制动画开关。true是打开，false是关闭
@@ -385,7 +385,7 @@ webpushr:
   # 如果您的仓库私有，则无需担心此问题
 
   trackingCode: "BB9Y-w9p3u0CKA7UP9nupB6I-_NqE2MuODmKJjyC4W2YflX06Ff_hEhrNJfonrut5l6gCa28gC83q2OII7Qv-oA"
-  icon: "https://ccknbc.cdn.xzzo.cn/gh/ccknbc-backup/cdn/image/pwa/192.png" # 必须为192*192 png图片
+  icon: "https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/image/pwa/192.png" # 必须为192*192 png图片
   # auto_hide: "0" # 默认为 1，代表true，即自动隐藏
   # sort: "date" # 默认为updated，即只要最新文章更改了更新时间即推送新文章，改为date即文章第一次发布时间
   # delay: "30" # 延时推送，考虑到CDN缓存更新，默认定时为在 hexo d 10分钟后推送，单位为分钟（最短时间为5min）
