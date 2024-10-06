@@ -10,7 +10,7 @@ const urlFor = require('hexo-util').url_for.bind(hexo)
 
 const lazyload = htmlContent => {
   const bg = hexo.theme.config.lazyload.placeholder ? urlFor(hexo.theme.config.lazyload.placeholder) : 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'
-  return htmlContent.replace(/(<img[^>]*?)\s+src=/ig, `$1 src="${bg}" data-lazy-src=`)
+  return htmlContent.replace(/(<img.*? src=)/ig, `$1 "${bg}" data-lazy-src=`)
 }
 
 hexo.extend.filter.register('after_render:html', data => {
@@ -25,4 +25,3 @@ hexo.extend.filter.register('after_post_render', data => {
   data.content = lazyload(data.content)
   return data
 })
-

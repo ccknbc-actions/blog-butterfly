@@ -94,14 +94,8 @@
     })
   }
 
-  let postHeadAiDescription = 'undefined'
-  if (theme.post_head_ai_description && theme.post_head_ai_description.enable) {
-    postHeadAiDescription = JSON.stringify(theme.post_head_ai_description)
-  }
-
 script.
   const GLOBAL_CONFIG = {
-    postHeadAiDescription: !{postHeadAiDescription},
     root: '!{config.root}',
     algolia: !{algolia},
     localSearch: !{localSearch},
