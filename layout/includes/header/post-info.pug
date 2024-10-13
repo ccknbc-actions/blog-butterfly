@@ -60,38 +60,40 @@
           if block
             block
 
-      - const commentUse = comments.use && comments.use[0]
+      - const commentUse = comments && comments.use && comments.use[0]
       if page.comments !== false && commentUse && !comments.lazyload
-        case commentUse
-          when 'Valine'
-            if theme.valine.visitor
-              +pvBlock(url_for(page.path), 'leancloud_visitors', page.title)
-                span.leancloud-visitors-count
-                  i.fa-solid.fa-spinner.fa-spin
-          when 'Waline'
-            if theme.waline.pageview
-              +pvBlock('', '', '')
-                span.waline-pageview-count(data-path=url_for(page.path))
-                  i.fa-solid.fa-spinner.fa-spin
-          when 'Twikoo'
-            if theme.twikoo.visitor
-              +pvBlock('', '', '')
-                span#twikoo_visitors
-                  i.fa-solid.fa-spinner.fa-spin
-          when 'Artalk'
-            if theme.artalk.visitor
-              +pvBlock('', '', '')
-                span#ArtalkPV
-                  i.fa-solid.fa-spinner.fa-spin
-          default
-            if theme.umami_analytics.enable && theme.umami_analytics.UV_PV.page_pv
-              +pvBlock('', '', '')
-                span#umamiPV(data-path=url_for(page.path))
-                  i.fa-solid.fa-spinner.fa-spin
-            else if theme.busuanzi.page_pv
-              +pvBlock('', 'post-meta-pv-cv', '')
-                span#busuanzi_value_page_pv
-                  i.fa-solid.fa-spinner.fa-spin
+        - let handled = false
+
+        if commentUse === 'Valine' && theme.valine.visitor
+          +pvBlock(url_for(page.path), 'leancloud_visitors', page.title)
+            span.leancloud-visitors-count
+              i.fa-solid.fa-spinner.fa-spin
+          - handled = true
+        else if commentUse === 'Waline' && theme.waline.pageview
+          +pvBlock('', '', '')
+            span.waline-pageview-count(data-path=url_for(page.path))
+              i.fa-solid.fa-spinner.fa-spin
+          - handled = true
+        else if commentUse === 'Twikoo' && theme.twikoo.visitor
+          +pvBlock('', '', '')
+            span#twikoo_visitors
+              i.fa-solid.fa-spinner.fa-spin
+          - handled = true
+        else if commentUse === 'Artalk' && theme.artalk.visitor
+          +pvBlock('', '', '')
+            span#ArtalkPV
+              i.fa-solid.fa-spinner.fa-spin
+          - handled = true
+
+        if !handled
+          if theme.umami_analytics.enable && theme.umami_analytics.UV_PV.page_pv
+            +pvBlock('', '', '')
+              span#umamiPV(data-path=url_for(page.path))
+                i.fa-solid.fa-spinner.fa-spin
+          else if theme.busuanzi.page_pv
+            +pvBlock('', 'post-meta-pv-cv', '')
+              span#busuanzi_value_page_pv
+                i.fa-solid.fa-spinner.fa-spin
       else
         if theme.umami_analytics.enable && theme.umami_analytics.UV_PV.page_pv
           +pvBlock('', '', '')
