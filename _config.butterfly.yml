@@ -19,7 +19,7 @@ nav:
 menu:
   # 首页: / || fa-solid fa-house-chimney
   # 浏览: javascript:toRandomPost(); || fa-solid fa-shuffle
-  隐私管理 : javascript:klaro.show(); || fa-solid fa-user-lock
+  # 隐私管理 : javascript:klaro.show(); || fa-solid fa-user-lock
   文章 || fa-solid fa-book-reader:
     归档: /archives/ || fa-solid fa-box-archive
     标签: /tags/ || fa-solid fa-tags
@@ -608,7 +608,7 @@ comments:
   text: true
   # Lazyload: The comment system will be load when comment element enters the browser's viewport.
   # If you set it to true, the comment count will be invalid
-  lazyload: false
+  lazyload: true
   # Display comment count in post's top_img
   count: false
   # Display comment count in Home Page
@@ -1070,6 +1070,25 @@ mermaid:
   theme:
     light: default
     dark: dark
+
+# chartjs
+# see https://www.chartjs.org/docs/latest/
+chartjs:
+  enable: false
+  # Do not modify unless you understand how they work.
+  # The default settings are only used when the MD syntax is not specified.
+  # General font color for the chart
+  fontColor:
+    light: "rgba(0, 0, 0, 0.8)"
+    dark: "rgba(255, 255, 255, 0.8)"
+  # General border color for the chart
+  borderColor:
+    light: "rgba(0, 0, 0, 0.1)"
+    dark: "rgba(255, 255, 255, 0.2)"
+  # Background color for scale labels on radar and polar area charts
+  scale_ticks_backdropColor:
+    light: "transparent"
+    dark: "transparent"
 
 # Note - Bootstrap Callout
 note:

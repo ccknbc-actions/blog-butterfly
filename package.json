@@ -1,6 +1,6 @@
 {
   "name": "ccknbc-blog",
-  "version": "5.0.0-b3",
+  "version": "5.1.0-b1",
   "private": false,
   "scripts": {
     "build": "hexo generate",
