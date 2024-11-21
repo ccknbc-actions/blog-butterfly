@@ -1,10 +1,14 @@
 'use strict'
 
-const { stripHTML, prettyUrls, truncate } = require('hexo-util')
+const { truncateContent, postDesc } = require('../common/postDesc')
+const { prettyUrls } = require('hexo-util')
 const crypto = require('crypto')
+const moment = require('moment-timezone')
 
-hexo.extend.helper.register('truncate', (content, length) => {
-  return truncate(stripHTML(content), { length, separator: ' ' }).replace(/\n/g, ' ')
+hexo.extend.helper.register('truncate', truncateContent)
+
+hexo.extend.helper.register('postDesc', data => {
+  return postDesc(data, hexo)
 })
 
 hexo.extend.helper.register('cloudTags', function (options = {}) {
@@ -33,7 +37,7 @@ hexo.extend.helper.register('cloudTags', function (options = {}) {
     const ratio = length ? sizes.indexOf(tag.length) / length : 0
     const size = minfontsize + ((maxfontsize - minfontsize) * ratio)
     const style = generateStyle(size, unit)
-    return `<a href="${env.url_for(tag.path)}" style="${style}">${tag.name}</a>`
+    return `<a href="${env.url_for(tag.path)}" style="${style}">${tag.name}<sup>${tag.length}</sup></a>`
   }).join('')
 
   return result
@@ -91,4 +95,39 @@ hexo.extend.helper.register('getBgPath', path => {
   } else {
     return `background: ${path};`
   }
+})
+
+hexo.extend.helper.register('shuoshuoFN', (data, page) => {
+  const { limit } = page
+  let finalResult = ''
+
+  // Check if limit.value is a valid date
+  const isValidDate = date => !isNaN(Date.parse(date))
+
+  // order by date
+  const orderByDate = data => data.sort((a, b) => Date.parse(b.date) - Date.parse(a.date))
+
+  // Apply number limit or time limit conditionally
+  const limitData = data => {
+    if (limit && limit.type === 'num' && limit.value > 0) {
+      return data.slice(0, limit.value)
+    } else if (limit && limit.type === 'date' && isValidDate(limit.value)) {
+      const limitDate = Date.parse(limit.value)
+      return data.filter(item => Date.parse(item.date) >= limitDate)
+    }
+
+    return data
+  }
+
+  orderByDate(data)
+  finalResult = limitData(data)
+
+  // This is a hack method, because hexo treats time as UTC time
+  // so you need to manually convert the time zone
+  finalResult.forEach(item => {
+    const utcDate = moment.utc(item.date).format('YYYY-MM-DD HH:mm:ss')
+    item.date = moment.tz(utcDate, hexo.config.timezone).format('YYYY-MM-DD HH:mm:ss')
+  })
+
+  return finalResult
 })
