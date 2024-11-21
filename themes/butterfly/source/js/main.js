@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const altValue = item.title || item.alt
       if (!altValue) return
       const ele = document.createElement('div')
-      ele.className = 'img-alt is-center'
+      ele.className = 'img-alt text-center'
       ele.textContent = altValue
       item.insertAdjacentElement('afterend', ele)
     })
@@ -806,35 +806,15 @@ document.addEventListener('DOMContentLoaded', () => {
     btf.addEventListenerPjax(cardCategory, 'click', handleToggleBtn, true)
   }
 
-  const switchComments = () => {
-    const switchBtn = document.getElementById('switch-btn')
-    if (!switchBtn) return
-
-    let switchDone = false
-    const postComment = document.getElementById('post-comment')
-    const handleSwitchBtn = () => {
-      postComment.classList.toggle('move')
-      if (!switchDone && typeof loadOtherComment === 'function') {
-        switchDone = true
-        loadOtherComment()
-      }
-    }
-    btf.addEventListenerPjax(switchBtn, 'click', handleSwitchBtn)
-  }
-
   const addPostOutdateNotice = () => {
-    const { limitDay, messagePrev, messageNext, position } = GLOBAL_CONFIG.noticeOutdate
-    const diffDay = btf.diffDate(GLOBAL_CONFIG_SITE.postUpdate)
+    const ele = document.getElementById('post-outdate-notice')
+    if (!ele) return
+
+    const { limitDay, messagePrev, messageNext, postUpdate } = JSON.parse(ele.getAttribute('data'))
+    const diffDay = btf.diffDate(postUpdate)
     if (diffDay >= limitDay) {
-      const ele = document.createElement('div')
-      ele.className = 'post-outdate-notice'
       ele.textContent = `${messagePrev} ${diffDay} ${messageNext}`
-      const $targetEle = document.getElementById('article-container')
-      if (position === 'top') {
-        $targetEle.insertBefore(ele, $targetEle.firstChild)
-      } else {
-        $targetEle.appendChild(ele)
-      }
+      ele.hidden = false
     }
   }
 
@@ -911,7 +891,7 @@ document.addEventListener('DOMContentLoaded', () => {
     justifiedIndexPostUI()
 
     if (GLOBAL_CONFIG_SITE.isPost) {
-      GLOBAL_CONFIG.noticeOutdate !== undefined && addPostOutdateNotice()
+      addPostOutdateNotice()
       GLOBAL_CONFIG.relativeDate.post && relativeDate(document.querySelectorAll('#post-meta time'))
     } else {
       GLOBAL_CONFIG.relativeDate.homepage && relativeDate(document.querySelectorAll('#recent-posts time'))
@@ -924,7 +904,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollFn()
 
     forPostFn()
-    switchComments()
+    !GLOBAL_CONFIG_SITE.isShuoshuo && btf.switchComments(document)
     openMobileMenu()
   }
 
