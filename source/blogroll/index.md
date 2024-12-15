@@ -11,8 +11,8 @@ date: 2020-06-04 22:17:49
 updated: 2022-08-27 12:00:00
 ---
 <div class='js-pjax' id='blogroll'>
-<script class='js-pjax' src='https://jsd.onmicrosoft.cn/npm/butterfly-friend/butterfly-friend.umd.js'></script>
-<link rel="stylesheet" href='https://jsd.onmicrosoft.cn/npm/butterfly-friend/style.css'>
+<script class='js-pjax' src='https://ccknbc.cdn.xzzo.cn/npm/butterfly-friend/butterfly-friend.umd.js'></script>
+<link rel="stylesheet" href='https://ccknbc.cdn.xzzo.cn/npm/butterfly-friend/style.css'>
 <script>
 document.querySelector('.flink').insertAdjacentHTML('afterbegin',"<div id='friend1' class='js-pjax'></div>")
 xkFriend.init({
@@ -20,8 +20,8 @@ xkFriend.init({
   api: [
     'https://blogroll.ccknbc.cc/blogroll.json'
   ], // 你的json链接列表，可以是多个。
-  loading_img: 'https://jsd.onmicrosoft.cn/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif', // 加载中的图片
-  fail_img: 'https://jsd.onmicrosoft.cn/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif' // 加载失败的图片
+  loading_img: 'https://ccknbc.cdn.xzzo.cn/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif', // 加载中的图片
+  fail_img: 'https://ccknbc.cdn.xzzo.cn/gh/ccknbc-backup/photos/blog/2021-03-08~15-13-15.gif' // 加载失败的图片
 })
 </script>
 </div>
@@ -105,7 +105,7 @@ xkFriend.init({
     }
 </style> -->
 
-<!-- {% link 顺便看看友链截图列表，您可复制使用啦, https://jsd.onmicrosoft.cn/gh/ccknbc-actions/blogroll@webp/, https://jsd.onmicrosoft.cn/www.jsdelivr.com/c903573129ce0afdbc8b006baf86dba514615495/img/logo-horizontal.svg %} -->
+<!-- {% link 顺便看看友链截图列表，您可复制使用啦, https://ccknbc.cdn.xzzo.cn/gh/ccknbc-actions/blogroll@webp/, https://ccknbc.cdn.xzzo.cn/www.jsdelivr.com/c903573129ce0afdbc8b006baf86dba514615495/img/logo-horizontal.svg %} -->
 
 <!-- {% ghcard ccknbc-actions/blogroll, theme=vue %}  -->
 
@@ -117,7 +117,7 @@ xkFriend.init({
 ```yaml
 name: CC康纳百川
 link: https://blog.ccknbc.cc
-avatar: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/logo/CC.png
+avatar: https://ccknbc.cdn.xzzo.cn/gh/ccknbc-backup/cdn/logo/CC.png
 descr: CC康纳百川的小窝
 ```
 选填信息
@@ -131,7 +131,7 @@ border-style: solid
 animation: link_custom1 2s infinite alternate
 img_animation: auto_rotate_right 2s linear infinite
 card_style: card/item
-screenshot: https://jsd.onmicrosoft.cn/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
+screenshot: https://ccknbc.cdn.xzzo.cn/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
 # screenshot: https://s0.wordpress.com/mshots/v1/https://blog.ccknbc.cc?w=1280&h=960
 # screenshot: https://image.thum.io/get/width/1024/crop/768/https://blog.ccknbc.cc
 # 帮我选一个适合您站点的截图呗，默认的jsd每天更新
@@ -140,7 +140,7 @@ screenshot: https://jsd.onmicrosoft.cn/gh/ccknbc-actions/blogroll@webp/blog.cckn
 ```yaml
 name: CC的部落格
 link: https://blog.ccknbc.cc
-avatar: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/logo/CC.png
+avatar: https://ccknbc.cdn.xzzo.cn/gh/ccknbc-backup/cdn/logo/CC.png
 descr: CC康纳百川
 --primary-color: linear-gradient(0deg,#ffdee9 0,#b5fffc 100%)
 --namecolor: #8fbc8f
@@ -151,7 +151,7 @@ border-style: solid
 animation: link_custom1 2s infinite alternate
 img_animation: auto_rotate_right 2s linear infinite
 card_style: item
-screenshot: https://jsd.onmicrosoft.cn/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
+screenshot: https://ccknbc.cdn.xzzo.cn/gh/ccknbc-actions/blogroll@webp/blog.ccknbc.cc.webp
 ```
 
 <!-- endtab -->

@@ -3,7 +3,7 @@ mixin rightsideItem(array)
   each item in array
     case item
       when 'readmode'
-        if is_post() && readmode
+        if globalPageType === 'post' && readmode
           button#readmode(type="button" title=_p('rightside.readmode_title'))
             i.fa-solid.fa-book-open
       when 'translate'
@@ -78,7 +78,7 @@ mixin rightsideItem(array)
         button#rightside-config(type="button" title=_p("rightside.setting"))
           i.fa-solid.fa-cog
     else
-      if is_post()
+      if globalPageType === 'post'
         if (readmode || translate.enable || (darkmode.enable && darkmode.button))
           button#rightside-config(type="button" title=_p("rightside.setting"))
             i.fa-solid.fa-cog

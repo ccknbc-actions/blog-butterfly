@@ -1,4 +1,4 @@
-importScripts("https://jsd.onmicrosoft.cn/npm/workbox-sw/build/workbox-sw.js");
+importScripts("https://ccknbc.cdn.xzzo.cn/npm/workbox-sw/build/workbox-sw.js");
 importScripts("https://cdn.webpushr.com/sw-server.min.js");
 
 // 提示
@@ -62,13 +62,13 @@ const MONTH = DAY * 30;
 const YEAR = DAY * 365;
 
 // 定义主要CDN的URL
-const mainCdnUrl = 'https://jsd.onmicrosoft.cn';
+const mainCdnUrl = 'https://ccknbc.cdn.xzzo.cn';
 
 // 定义CDN镜像的URL列表
 const fallbackCdnUrls = [
-    'https://jsd.onmicrosoft.cn', // 主CDN
-    'https://ccknbc.cdn.xzzo.cn',
+    'https://ccknbc.cdn.xzzo.cn', // 主CDN
     'https://cdn.jsdmirror.cn',
+    'https://jsd.onmicrosoft.cn',
     'https://cdn.jsdmirror.com',
     'https://fastly.jsdelivr.net',
     'https://gcore.jsdelivr.net',
@@ -117,12 +117,16 @@ async function handleCdnRequest(request, cdnList) {
             const fallbackRequest = new Request(cdnUrl + request.url.substring(request.url.indexOf('/', 8)));
             try {
                 const response = await fetch(fallbackRequest, { cache: 'reload' });
-                if (response.ok) {
+
+                // 仅允许200、201、204（2xx）和304（3xx）
+                if (response.ok || response.status === 304) {
                     return response;
                 } else {
+                    console.warn(`CDN请求无效: ${cdnUrl}, 状态码: ${response.status}`);
                     failedUrls.push(cdnUrl);
                 }
             } catch (error) {
+                console.error(`请求失败: ${cdnUrl}`, error);
                 failedUrls.push(cdnUrl);
             }
         }

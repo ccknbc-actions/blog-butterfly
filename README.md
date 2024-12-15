@@ -10,4 +10,4 @@
 
 ## 站点源码
 
-**[GitHub](https://github.com/ccknbc-actions/blog-butterfly) | [GitLab](https://gitlab.com/CCKNBC/ccknbc.gitlab.io) | [Bitbucket](https://bitbucket.org/ccknbc/blog) | [Coding](https://ccknbc.coding.net/public/blog/blog-butterfly/git/files) | [Gitee](https://gitee.com/ccknbc/blog-butterfly)**
+**[GitHub](https://github.com/ccknbc-actions/blog-butterfly) | [GitLab](https://gitlab.com/CCKNBC/ccknbc.gitlab.io) | [Bitbucket](https://bitbucket.org/ccknbc-cc/blog) | [Coding](https://ccknbc.coding.net/public/blog/blog-butterfly/git/files) | [Gitee](https://gitee.com/ccknbc/blog-butterfly)**

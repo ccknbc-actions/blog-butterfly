@@ -9,9 +9,10 @@
 	url = git@github.com:ccknbc-actions/blog-butterfly.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
 	url = git@gitlab.com:ccknbc/ccknbc.gitlab.io.git
-	url = git@bitbucket.org:ccknbc/blog.git
 	url = git@e.coding.net:ccknbc/blog/blog-butterfly.git
 	url = git@gitee.com:ccknbc/blog-butterfly.git
+	url = git@bitbucket.org:ccknbc-cc/blog.git
 [branch "master"]
 	remote = origin
+	vscode-merge-base = origin/master
 	merge = refs/heads/master

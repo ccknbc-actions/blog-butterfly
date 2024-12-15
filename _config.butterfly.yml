@@ -75,7 +75,7 @@ social:
 favicon: /favicon.ico
 
 avatar:
-  img: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/logo/CC.png
+  img: https://ccknbc.cdn.xzzo.cn/gh/ccknbc-backup/cdn/logo/CC.png
   effect: false
 
 # Disable all banner images
@@ -121,19 +121,19 @@ cover:
   # When cover is not set, the default cover is displayed
   default_cover:
     # - xxx.jpg
-    - https://jsd.onmicrosoft.cn/npm/hexo-theme-anzhiyu/source/img/default_cover.jpg
+    - https://ccknbc.cdn.xzzo.cn/npm/hexo-theme-anzhiyu/source/img/default_cover.jpg
 
 # Replace Broken Images
 error_img:
-  flink: https://jsd.onmicrosoft.cn/npm/hexo-theme-anzhiyu/source/img/404.jpg
-  post_page: https://jsd.onmicrosoft.cn/npm/hexo-theme-anzhiyu/source/img/friend_404.gif
+  flink: https://ccknbc.cdn.xzzo.cn/npm/hexo-theme-anzhiyu/source/img/404.jpg
+  post_page: https://ccknbc.cdn.xzzo.cn/npm/hexo-theme-anzhiyu/source/img/friend_404.gif
 
 
 # A simple 404 page
 error_404:
   enable: true
   subtitle: Oops! 页面不存在~
-  background: https://jsd.onmicrosoft.cn/npm/anzhiyu-blog@1.1.6/img/post/common/page-404.png
+  background: https://ccknbc.cdn.xzzo.cn/npm/anzhiyu-blog@1.1.6/img/post/common/page-404.png
 
 post_meta:
   # Home Page
@@ -231,10 +231,10 @@ reward:
   enable: true
   text: 赞赏
   QR_code:
-    - img: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/logo/qr.png
+    - img: https://ccknbc.cdn.xzzo.cn/gh/ccknbc-backup/cdn/logo/qr.png
       link: https://www.rocschool.com/tool/qr/qr/id/51.html
       text: 三合一
-    - img: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/logo/afdian.png
+    - img: https://ccknbc.cdn.xzzo.cn/gh/ccknbc-backup/cdn/logo/afdian.png
       link: https://ifdian.net/@ccknbc
       text: 爱发电
 
@@ -294,12 +294,12 @@ footer:
     enable: true
     url: https://beian.miit.gov.cn
     text: 鄂 ICP 备 2020019764 号
-    icon: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/logo/icp.png
+    icon: https://ccknbc.cdn.xzzo.cn/gh/ccknbc-backup/cdn/logo/icp.png
   gongan: # Chinese Gongan License
     enable: true
     url: https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42088102000092
     text: 鄂公网安备 42088102000092 号
-    icon: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/logo/gongan.png
+    icon: https://ccknbc.cdn.xzzo.cn/gh/ccknbc-backup/cdn/logo/gongan.png
   live: #页脚运行时间
     enable: true
     prefix: "本站已运行"
@@ -709,18 +709,18 @@ waline:
       level6: 开吃
     emoji:
       [
-        "https://jsd.onmicrosoft.cn/npm/sticker-heo/Sticker-100/",
-        # "https://jsd.onmicrosoft.cn/npm/telegram-gif/Telegram-Gif/",
-        # "https://jsd.onmicrosoft.cn/npm/@waline/emojis/tw-emoji/",
+        "https://ccknbc.cdn.xzzo.cn/npm/sticker-heo/Sticker-100/",
+        # "https://ccknbc.cdn.xzzo.cn/npm/telegram-gif/Telegram-Gif/",
+        # "https://ccknbc.cdn.xzzo.cn/npm/@waline/emojis/tw-emoji/",
       ]
     reaction:
       [
-        "https://jsd.onmicrosoft.cn/npm/sticker-heo/Sticker-100/鼓掌.png",
-        "https://jsd.onmicrosoft.cn/npm/sticker-heo/Sticker-100/菜狗.png",
-        "https://jsd.onmicrosoft.cn/npm/sticker-heo/Sticker-100/正确.png",
-        "https://jsd.onmicrosoft.cn/npm/sticker-heo/Sticker-100/错误.png",
-        "https://jsd.onmicrosoft.cn/npm/sticker-heo/Sticker-100/思考.png",
-        "https://jsd.onmicrosoft.cn/npm/sticker-heo/Sticker-100/睡觉.png",
+        "https://ccknbc.cdn.xzzo.cn/npm/sticker-heo/Sticker-100/鼓掌.png",
+        "https://ccknbc.cdn.xzzo.cn/npm/sticker-heo/Sticker-100/菜狗.png",
+        "https://ccknbc.cdn.xzzo.cn/npm/sticker-heo/Sticker-100/正确.png",
+        "https://ccknbc.cdn.xzzo.cn/npm/sticker-heo/Sticker-100/错误.png",
+        "https://ccknbc.cdn.xzzo.cn/npm/sticker-heo/Sticker-100/思考.png",
+        "https://ccknbc.cdn.xzzo.cn/npm/sticker-heo/Sticker-100/睡觉.png",
       ]
 
 # Utterances
@@ -925,7 +925,7 @@ preloader:
   # 2. pace (progress bar)
   source: 2
   # pace theme (see https://codebyzach.github.io/pace/)
-  pace_css_url: https://jsd.onmicrosoft.cn/npm/pace-js/themes/green/pace-theme-flash.css
+  pace_css_url: https://ccknbc.cdn.xzzo.cn/npm/pace-js/themes/green/pace-theme-flash.css
 
 # Page Transition
 enter_transitions: true
@@ -1145,10 +1145,10 @@ lazyload:
 pwa:
   enable: false
   manifest: /manifest.json
-  apple_touch_icon: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/image/pwa/apple-touch-icon.png
-  favicon_32_32: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/image/pwa/16.png
-  favicon_16_16: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/image/pwa/32.png
-  mask_icon: https://jsd.onmicrosoft.cn/gh/ccknbc-backup/cdn/image/pwa/safari-pinned-tab.svg
+  apple_touch_icon: https://ccknbc.cdn.xzzo.cn/gh/ccknbc-backup/cdn/image/pwa/apple-touch-icon.png
+  favicon_32_32: https://ccknbc.cdn.xzzo.cn/gh/ccknbc-backup/cdn/image/pwa/16.png
+  favicon_16_16: https://ccknbc.cdn.xzzo.cn/gh/ccknbc-backup/cdn/image/pwa/32.png
+  mask_icon: https://ccknbc.cdn.xzzo.cn/gh/ccknbc-backup/cdn/image/pwa/safari-pinned-tab.svg
 
 # Open graph meta tags
 # https://hexo.io/docs/helpers#open-graph
@@ -1194,7 +1194,7 @@ CDN:
 
   # Custom format
   # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
-  custom_format: https://jsd.onmicrosoft.cn/npm/${name}/${file}
+  custom_format: https://ccknbc.cdn.xzzo.cn/npm/${name}/${file}
 
   option:
     # abcjs_basic_js:
