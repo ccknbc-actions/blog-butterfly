@@ -9,9 +9,9 @@ subtitle: Music
 date: 2020-11-08 15:29:33
 updated: 2023-06-09 23:13:42
 ---
-<link rel="stylesheet" href="https://ccknbc.cdn.xzzo.cn/npm/aplayer/dist/APlayer.min.css">
-<script src="https://ccknbc.cdn.xzzo.cn/npm/aplayer/dist/APlayer.min.js"></script>
-<script src="https://ccknbc.cdn.xzzo.cn/npm/@xizeyoupan/meting/dist/Meting.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdmirror.com/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdmirror.com/npm/aplayer/dist/APlayer.min.js"></script>
+<script src="https://cdn.jsdmirror.com/npm/@xizeyoupan/meting/dist/Meting.min.js"></script>
 <script>var meting_api="https://meting.ccknbc.cc/api?server=:server&type=:type&id=:id&auth=:auth&r=:r"</script>
 
 <!-- https://music.startly.cn/ 不支持 artist

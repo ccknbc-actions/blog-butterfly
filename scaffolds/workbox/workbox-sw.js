@@ -1,4 +1,4 @@
-importScripts("https://ccknbc.cdn.xzzo.cn/npm/workbox-sw/build/workbox-sw.js");
+importScripts("https://cdn.jsdmirror.com/npm/workbox-sw/build/workbox-sw.js");
 importScripts("https://cdn.webpushr.com/sw-server.min.js");
 
 // 提示
@@ -62,14 +62,13 @@ const MONTH = DAY * 30;
 const YEAR = DAY * 365;
 
 // 定义主要CDN的URL
-const mainCdnUrl = 'https://ccknbc.cdn.xzzo.cn';
+const mainCdnUrl = 'https://cdn.jsdmirror.com';
 
 // 定义CDN镜像的URL列表
 const fallbackCdnUrls = [
-    'https://ccknbc.cdn.xzzo.cn', // 主CDN
     'https://cdn.jsdmirror.cn',
+    'https://ccknbc.cdn.xzzo.cn',
     'https://jsd.onmicrosoft.cn',
-    'https://cdn.jsdmirror.com',
     'https://fastly.jsdelivr.net',
     'https://gcore.jsdelivr.net',
 ];

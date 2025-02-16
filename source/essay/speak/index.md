@@ -10,9 +10,9 @@ aside: false
 description: CC的部落格 即刻短文页面
 ---
 <!-- CSS -->
-<link rel="stylesheet" href="https://ccknbc.cdn.xzzo.cn/npm/@waline/client/dist/waline.css"/>
-<link rel="stylesheet" href="https://ccknbc.cdn.xzzo.cn/npm/@waline/client/dist/waline-meta.css"/>
-<link rel="stylesheet" href="https://ccknbc.cdn.xzzo.cn/npm/highlight.js/styles/atom-one-dark.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdmirror.com/npm/@waline/client/dist/waline.css"/>
+<link rel="stylesheet" href="https://cdn.jsdmirror.com/npm/@waline/client/dist/waline-meta.css"/>
+<link rel="stylesheet" href="https://cdn.jsdmirror.com/npm/highlight.js/styles/atom-one-dark.min.css" />
 <div class='content'>
   <img src='https://bu.dusays.com/2022/05/01/626e88f349943.gif'/>
 </div>
@@ -20,8 +20,8 @@ description: CC的部落格 即刻短文页面
 <hr />
 <div class='ispeak-comment js-pjax'></div>
 <!-- JS -->
-<script src="https://ccknbc.cdn.xzzo.cn/npm/marked/marked.min.js"></script>
-<script src="https://ccknbc.cdn.xzzo.cn/npm/highlight.js/highlight.min.js"></script>
+<script src="https://cdn.jsdmirror.com/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdmirror.com/npm/highlight.js/highlight.min.js"></script>
 <script>
   const searchParams = new URLSearchParams(window.location.search);
   const speakId = searchParams.get('q');
@@ -67,7 +67,7 @@ description: CC的部落格 即刻短文页面
       if(title){
         document.title = title;
       }
-      import("https://ccknbc.cdn.xzzo.cn/npm/@waline/client/dist/waline.js").then((Waline) => {
+      import("https://cdn.jsdmirror.com/npm/@waline/client/dist/waline.js").then((Waline) => {
         Waline.init({
         el: '.ispeak-comment',
         path: path + '?q=' + speakId,
@@ -98,9 +98,9 @@ description: CC的部落格 即刻短文页面
         turnstileKey: '0x4AAAAAAAECBl27OB5SZrQT',
         emoji:
           [
-            "https://ccknbc.cdn.xzzo.cn/npm/sticker-heo/Sticker-100/",
-            // "https://ccknbc.cdn.xzzo.cn/npm/telegram-gif/Telegram-Gif/",
-            // "https://ccknbc.cdn.xzzo.cn/npm/@waline/emojis/tw-emoji/"
+            "https://cdn.jsdmirror.com/npm/sticker-heo/Sticker-100/",
+            // "https://cdn.jsdmirror.com/npm/telegram-gif/Telegram-Gif/",
+            // "https://cdn.jsdmirror.com/npm/@waline/emojis/tw-emoji/"
           ]
         })
       }).catch(error => console.error('Waline加载失败', error));

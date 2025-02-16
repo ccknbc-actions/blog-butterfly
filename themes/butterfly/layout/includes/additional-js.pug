@@ -83,7 +83,7 @@ div
   if theme.busuanzi.site_uv || theme.busuanzi.site_pv || theme.busuanzi.page_pv
     script(async data-pjax src= theme.asset.busuanzi || '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js')
 
-  !=partial('includes/third-party/search/index', {}, {cache: true})
+  != partial('includes/third-party/search/index', {}, {cache: true})
 
   if theme.ai_summary.enable && is_post()
     link(rel="stylesheet" href="https://ai.tianli0.top/static/public/tianli_gpt.min.css")
