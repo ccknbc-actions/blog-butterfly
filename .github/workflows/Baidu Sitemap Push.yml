@@ -20,7 +20,7 @@ jobs:
       - name: Set Up Python
         uses: actions/setup-python@main
         with:
-          python-version: '3.13'
+          python-version: '3.14'
 
       - name: Install Requests
         run: pip install requests
