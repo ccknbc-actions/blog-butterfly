@@ -52,7 +52,7 @@ jobs:
           npm i
 
       - name: Download Elog Posts
-        uses: dawidd6/action-download-artifact@v11
+        uses: dawidd6/action-download-artifact@v12
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
           branch: master
@@ -61,7 +61,7 @@ jobs:
           if_no_artifact_found: warn
 
       - name: Download Elog Cache
-        uses: dawidd6/action-download-artifact@v11
+        uses: dawidd6/action-download-artifact@v12
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
           branch: master
