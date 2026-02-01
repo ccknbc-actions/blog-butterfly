@@ -110,7 +110,6 @@ jobs:
           git commit -m "${{ github.event.head_commit.message }} $(date +"%Z %Y-%m-%d %A %H:%M:%S") Updated By GitHub Actions"
           git push --force --quiet "https://ccknbc:${{ secrets.GH_TOKEN }}@github.com/CCKNBC/ccknbc.github.io.git" master:master
           git push --force --quiet "https://ccknbc:${{ secrets.BB_TOKEN }}@bitbucket.org/ccknbc/ccknbc.bitbucket.io.git" master:master
-          git push --force --quiet "https://${{ secrets.CD_USER }}:${{ secrets.CD_TOKEN }}@e.coding.net/ccknbc/blog/butterfly.git" master:master
 
       - name: Update GitLab Pages
         run: |
