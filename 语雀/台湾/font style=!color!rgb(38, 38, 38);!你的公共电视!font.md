@@ -3,14 +3,13 @@ title: '<font style=color:rgb(38, 38, 38);>你的公共电视</font>'
 urlname: '35'
 date: 2022-08-07T13:16:00.000Z
 updated: 2023-09-10T23:00:00.000Z
-author: CC康纳百川
 cover: 'https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/fa96706020ae1d6e9333e56be39b91f0_w1920_h1080_s75.jpg'
-description: 作为一个大陆人，时常希望有一个独立于官媒的非自媒体存在，而这次，我想和大家聊一聊这个台湾媒体中特别的存在【公共电视】（更新公视数位转型部分）
 translate_title: about-pts
 subtitle: About PTS
 tags: 台湾
 keywords: '<font style="color:rgb(38, 38, 38);">台湾</font>'
 categories: '<font style="color:rgb(38, 38, 38);">台湾</font>'
+description: 作为一个大陆人，时常希望有一个独立于官媒的非自媒体存在，而这次，我想和大家聊一聊这个台湾媒体中特别的存在【公共电视】（更新公视数位转型部分）
 '<font style="color:rgb(64, 64, 64);">id</font>': '<font style="color:rgb(64, 64, 64);">35</font>'
 ---
 查看本文[**语雀**](https://www.yuque.com/ccknbc/blog/35/)版本【首发】，自动同步更新至[**CC的部落格**](https://blog.ccknbc.cc/posts/about-pts/)！

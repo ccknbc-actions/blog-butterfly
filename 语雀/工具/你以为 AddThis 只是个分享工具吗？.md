@@ -3,9 +3,7 @@ title: 你以为 AddThis 只是个分享工具吗？
 urlname: '26'
 date: 2021-05-15T21:00:00.000Z
 updated: 2023-06-25T20:44:00.000Z
-author: CC康纳百川
 cover: 'https://cdn.nlark.com/yuque/0/2021/png/8391407/1621087089631-0df3f6a8-5f1c-4250-98ab-1a751c8a0343.png'
-description: 本文介绍了 AddThis 的使用
 translate_title: the-real-addthis
 subtitle: The Real Addthis
 '<font style="color:#404040;">tags': </font>工具

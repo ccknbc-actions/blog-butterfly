@@ -3,9 +3,7 @@ title: Hexo Butterfly Algolia 搜索的使用
 urlname: '24'
 date: 2021-05-11T11:00:00.000Z
 updated: 2023-02-16T19:11:40.000Z
-author: CC康纳百川
 cover: 'https://cdn.nlark.com/yuque/0/2021/png/8391407/1620704686808-3b3ea7dc-2529-4e1e-a930-9e338dc07963.png'
-description: 本文介绍了 Hexo Butterfly 主题下 Algolia 搜索的使用
 translate_title: hexo-butterfly-algolia
 subtitle: Hexo Butterfly Algolia
 '<font style="color:#404040;">tags': </font>工具

@@ -3,10 +3,9 @@ title: 我为什么选择了 Tidio 做聊天系统
 urlname: '-8'
 date: 2020-10-02T21:18:42.000Z
 updated: 2020-10-03T18:09:51.000Z
-author: CC康纳百川
 cover: 'https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/374954d02e9ba8b6387616ae3029b4b9_w2240_h1260_s757.jpg'
-tags: 工具
 description: 本篇文章简单介绍了我使用不同聊天系统的体会
+tags: 工具
 id: -8
 categories: 工具
 keywords: '工具,聊天'

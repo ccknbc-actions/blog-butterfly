@@ -3,7 +3,6 @@ title: CC的社畜日记 Part2
 urlname: '33'
 date: 2021-12-01T00:00:00.000Z
 updated: 2021-12-02T23:50:00.000Z
-author: CC康纳百川
 cover: 'https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/9f2faee04285de50560e0e522b9915a5_w1920_h1080_s1118.jpg'
 description: 选择一个人做好自己的本职工作，还是说去为了跳槽随便跳个坑？
 '<font style="color:rgb(64, 64, 64);">title': CC的社畜日记 Part2

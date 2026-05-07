@@ -3,10 +3,9 @@ title: Github Actions 为什么这么香
 urlname: '-9'
 date: 2020-10-06T10:51:58.000Z
 updated: 2020-10-06T12:00:00.000Z
-author: CC康纳百川
 cover: 'https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/731ab9880a63b4eb0d82d354cdbdadec_w2240_h1260_s743.jpg'
-tags: 工具
 description: 本篇文章简单介绍了 Github Actions 的用法，以及一些变量的解释
+tags: 工具
 id: -9
 categories: 工具
 keywords: GitHub Actions

@@ -3,10 +3,9 @@ title: 博客图片的 WebP 之路
 urlname: '15'
 date: 2020-11-29T16:38:36.000Z
 updated: 2020-12-15T13:30:00.000Z
-author: CC康纳百川
 cover: 'https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/a4d78fbe1ca6e99e19535a095681c5ba_w1920_h1080_s770.jpg'
-tags: 博客
 description: 在主流浏览器都支持的情况下，我趁着文章还少，把所有文章的图片全部转换为 WebP 格式，以寻求更快的加载速度和丝滑的体验
+tags: 博客
 comments: true
 keywords:
   - WebP

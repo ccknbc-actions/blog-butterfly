@@ -3,9 +3,7 @@ title: 语雀文章同步至Hexo笔记
 urlname: '36'
 date: '2022-08-23 19:37:47'
 updated: '2023-06-13 23:05:09'
-author: CC康纳百川
 cover: 'https://cdn.nlark.com/yuque/0/2022/png/8391407/1664909065830-991b4db8-2570-4687-a6b0-59eb2d66390c.png'
-description: 这篇文章主要讲一下如何用 GitHub Actions 来部署同步语雀上文章到我们的 Hexo 博客
 '<font style="color:rgb(38, 38, 38);">title': '</font>语雀文章同步至Hexo笔记<font style="color:rgb(38, 38, 38);">'
 '</font><font style="color:rgb(38, 38, 38);">translate_title': '</font>yuque-to-hexo<font style="color:rgb(38, 38, 38);">'
 '</font><font style="color:rgb(38, 38, 38);">subtitle': '</font>Yuque to Hexo<font style="color:rgb(38, 38, 38);">'

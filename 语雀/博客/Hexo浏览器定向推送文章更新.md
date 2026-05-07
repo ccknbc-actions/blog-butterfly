@@ -3,16 +3,15 @@ title: Hexo浏览器定向推送文章更新
 urlname: '37'
 date: '<font style="color:rgb(38, 38, 38);">2022-10-05 00:00:00</font>'
 updated: '<font style="color:rgb(38, 38, 38);">2023-08-29 13:05:00</font>'
-author: CC康纳百川
 cover: 'https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/d2a947d48815ed24936a919873b97841_w1366_h768_s31.png'
+translate_title: hexo-webpushr-notification
+subtitle: Hexo Webpushr Notification
 tags:
   - 博客
   - 工具
-description: '<font style="color:rgb(38, 38, 38);">这一次，CC的部落格可以根据读者订阅主题定向推送了，并且实现了NPM插件化</font>'
-translate_title: hexo-webpushr-notification
-subtitle: Hexo Webpushr Notification
 keywords: '<font style="color:rgb(38, 38, 38);">[博客, 工具, hexo, web push, webpushr]</font>'
 categories: 博客
+description: '<font style="color:rgb(38, 38, 38);">这一次，CC的部落格可以根据读者订阅主题定向推送了，并且实现了NPM插件化</font>'
 '<font style="color:rgb(64, 64, 64);">id</font>': '<font style="color:rgb(64, 64, 64);">37</font>'
 ---
 查看本文[**语雀**](https://www.yuque.com/ccknbc/blog/37/)版本【首发】，自动同步更新至[**CC的部落格**](https://blog.ccknbc.cc/posts/hexo-webpushr-notification/)！

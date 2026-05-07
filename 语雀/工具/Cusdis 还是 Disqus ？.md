@@ -3,9 +3,7 @@ title: Cusdis 还是 Disqus ？
 urlname: '25'
 date: 2021-05-11T18:00:00.000Z
 updated: 2021-05-12T12:00:00.000Z
-author: CC康纳百川
 cover: 'https://cdn.nlark.com/yuque/0/2021/png/8391407/1620734397431-dfd65654-d06b-4e42-a20e-b68857ccc9cf.png'
-description: 在中国大陆，如果追求用户的隐私保护，是否有更好的评论解决方案？
 translate_title: cusdis-or-disqus
 subtitle: Cusdis or Disqus
 '<font style="color:#404040;">tags': </font>工具

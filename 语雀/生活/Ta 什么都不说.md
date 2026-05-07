@@ -3,9 +3,7 @@ title: Ta 什么都不说
 urlname: '27'
 date: 2021-07-20T21:00:00.000Z
 updated: 2021-07-20T21:00:00.000Z
-author: CC康纳百川
 cover: 'https://cdn.nlark.com/yuque/0/2021/png/8391407/1626787314453-59340297-fe42-4efa-929d-44cfb5b9dd58.png'
-description: Ta 所认为的理所当然，原来根本就不存在
 translate_title: ta-said-nothing
 subtitle: Ta Said Nothing
 '<font style="color:#404040;">tags': </font>生活

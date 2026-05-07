@@ -3,12 +3,7 @@ title: CC的社畜日记 Part1
 urlname: '28'
 date: '2021-08-28 22:34:17'
 updated: '2023-02-10 21:33:50'
-author: CC康纳百川
 cover: 'https://cdn.nlark.com/yuque/0/2021/png/8391407/1630170656860-200ecb89-0033-4ab1-8fe7-5b83b2556778.png'
-tags:
-  - 工作
-  - 生活
-description: 一个半月的实习期过去了，我的生活发生了怎样的改变呢？
 '<font style="color:rgb(64, 64, 64);">title': CC的社畜日记 Part1
 '</font><font style="color:rgb(64, 64, 64);">translate_title': ccs-work-diary-part1
 '</font><font style="color:rgb(64, 64, 64);">subtitle': CC's Work Diary Part1

@@ -3,9 +3,7 @@ title: GitHub 自动合并 PR 笔记
 urlname: '21'
 date: '<font style="color:#262626;">2021-01-18 00:00:00</font>'
 updated: '<font style="color:#262626;">2021-01-18 00:00:00</font>'
-author: CC康纳百川
 cover: 'https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/75d33bcc96205123aa3a40aae776d793_w2560_h1440_s704.jpg'
-description: GitHub 自动合并 PR 笔记
 translate_title: github-automatically-merges-pull-requests-notes
 subtitle: GitHub Automatically Merges Pull Requests Notes
 tags: 工具
@@ -13,6 +11,7 @@ categories: 工具
 keywords:
   - 工具
   - GitHub
+description: GitHub 自动合并 PR 笔记
 comments: true
 id: 21
 ---

@@ -3,15 +3,14 @@ title: '<font style=color:rgb(38, 38, 38);>2023《好好》线上演唱会</font
 urlname: '38'
 date: '<font style="color:rgb(38, 38, 38);">2023-03-08 20:30:00</font>'
 updated: '<font style="color:rgb(38, 38, 38);">2023-03-12 17:00:00</font>'
-author: CC康纳百川
 cover: 'https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/fd4ab8b7ef7189003bfa3857a9a451ab_w1280_h720_s185.jpg'
+translate_title: '<font style="color:rgb(38, 38, 38);">song-about-you-live-in-the-sky-2023</font>'
+subtitle: '<font style="color:rgb(38, 38, 38);">Song About You live in the sky 2023</font>'
 tags:
   - 音乐
   - 台湾
-description: '<font style="color:rgb(38, 38, 38);">刘若英X苏慧伦X丁当X白安 2023《好好》线上演唱会 Song About You live in the sky 2023</font>'
-translate_title: '<font style="color:rgb(38, 38, 38);">song-about-you-live-in-the-sky-2023</font>'
-subtitle: '<font style="color:rgb(38, 38, 38);">Song About You live in the sky 2023</font>'
 categories: 音乐
+description: '<font style="color:rgb(38, 38, 38);">刘若英X苏慧伦X丁当X白安 2023《好好》线上演唱会 Song About You live in the sky 2023</font>'
 '<font style="color:rgb(64, 64, 64);">id</font>': '<font style="color:rgb(64, 64, 64);">38</font>'
 ---
 > 版权归属 台湾 相信音乐

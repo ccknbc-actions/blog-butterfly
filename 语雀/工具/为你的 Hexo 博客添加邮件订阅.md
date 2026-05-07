@@ -3,10 +3,9 @@ title: 为你的 Hexo 博客添加邮件订阅
 urlname: '11'
 date: 2020-10-16T18:00:00.000Z
 updated: 2021-05-15T21:30:00.000Z
-author: CC康纳百川
 cover: 'https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/8ef276d15312c362902f3d53a20ffe66_w2240_h1260_s772.jpg'
-tags: 工具
 description: 本篇文章简单介绍了利用mailchimp为你的Hexo博客添加邮件订阅功能
+tags: 工具
 id: 11
 categories: 工具
 keywords: '工具,订阅,邮件订阅'

@@ -3,11 +3,10 @@ title: Uptime 免费网站存活监控
 urlname: '-5'
 date: 2020-08-20T09:58:09.000Z
 updated: 2020-08-20T09:58:09.000Z
-author: CC康纳百川
 cover: 'https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/b1ef2519a492a061d11625023833d7f3_w2240_h1260_s2039.jpg'
-tags: 工具
 description: 本篇文章简单介绍了利用 Uptime 实现免费网站存活监控
 comments: false
+tags: 工具
 categories: 工具
 keywords: '网站存活监控,Uptime'
 copyright_author: 大白萝卜

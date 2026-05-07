@@ -3,10 +3,9 @@ title: HEXO 折腾
 urlname: '-3'
 date: 2020-07-01T08:00:00.000Z
 updated: 2020-07-01T12:00:00.000Z
-author: CC康纳百川
 cover: 'https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/45d888bd81b86777b3364e4a16ff72c6_w2240_h1260_s476.jpg'
-tags: 博客
 description: 本篇文章简单介绍了 HEXO 博客的搭建，部署更新等过程
+tags: 博客
 categories: 博客
 keywords: 博客
 id: -3

@@ -3,14 +3,13 @@ title: Google Adsense 配置手册
 urlname: '31'
 date: 2021-10-24T20:25:00.000Z
 updated: 2021-11-08T19:20:00.000Z
-author: CC康纳百川
 cover: 'https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/0a77436f677dd11422579e07ba6423b3_w1920_h1080_s188.jpg'
-tags: 博客
-description: 本文根据 CC 个人使用经验来介绍 Google Adsense 的食用方法
 translate_title: google-adsense-configuration-manual
 subtitle: Google Adsense Configuration Manual
+tags: 博客
 keywords: google adsense
 categories: 博客
+description: 本文根据 CC 个人使用经验来介绍 Google Adsense 的食用方法
 '<font style="color:rgb(64, 64, 64);">id</font>': '<font style="color:rgb(64, 64, 64);">31</font>'
 ---
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/31/)，自动同步更新至[**CC的部落格**](https://blog.ccknbc.cc/posts/google-adsense-configuration-manual/)

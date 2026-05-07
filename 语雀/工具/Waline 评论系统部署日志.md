@@ -3,9 +3,7 @@ title: Waline 评论系统部署日志
 urlname: '20'
 date: '<font style="color:#262626;">2021-01-17 00:00:00</font>'
 updated: '<font style="color:#262626;">2021-09-28 21:50:00</font>'
-author: CC康纳百川
 cover: 'https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/edd977e4a8569283e89ac7426b67dfc3_w1920_h1080_s366.jpg'
-description: Waline 评论系统部署日志，希望你也能用上这款评论系统
 translate_title: waline-comments-system-deployment-logs
 subtitle: Waline Comments System Deployment Logs
 tags: 工具
@@ -14,6 +12,7 @@ keywords:
   - 工具
   - 评论
   - Waline
+description: Waline 评论系统部署日志，希望你也能用上这款评论系统
 id: 20
 ---
 {% note danger simple %}本文大部分内容已作废，请直接查看[**官方文档**](https://waline.js.org/){% endnote %}

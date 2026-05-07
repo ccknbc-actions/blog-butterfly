@@ -3,13 +3,12 @@ title: 如何优雅隐藏 Hexo 文章
 urlname: '30'
 date: 2021-10-22T21:00:00.000Z
 updated: 2022-09-18T21:00:00.000Z
-author: CC康纳百川
 cover: 'https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/aa5ebc0731a66fa5fb73df76da759ae3_w1920_h1080_s557.jpg'
-description: 本文介绍三种方法来优雅隐藏 Hexo 文章
 translate_title: how-to-hide-hexo-articles-gracefully
 subtitle: How to hide Hexo articles gracefully
 tags: 博客
 categories: 博客
+description: 本文介绍三种方法来优雅隐藏 Hexo 文章
 id: 30
 ---
 本文首发在[**语雀**](https://www.yuque.com/ccknbc/blog/30/)，自动同步更新至[**CC的部落格**](https://blog.ccknbc.cc/posts/how-to-hide-hexo-articles-gracefully/)

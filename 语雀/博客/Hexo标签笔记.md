@@ -3,11 +3,10 @@ title: Hexo标签笔记
 urlname: '22'
 date: 2021-03-05T12:00:00.000Z
 updated: 2021-05-16T12:00:00.000Z
-author: CC康纳百川
 cover: 'https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/666ccfeb387717d69a0e3333cc1170dc_w1004_h591_s48.jpg'
-description: CC的部落格 Hexo标签笔记
 tags: 博客
 categories: 博客
+description: CC的部落格 Hexo标签笔记
 translate_title: introduction-of-plugin-tags-based-on-butterfly
 subtitle: Introduction Of Plugin Tags Based On Butterfly
 id: 22

@@ -3,10 +3,9 @@ title: 如何在中国大陆享受 JOOX 音乐服务
 urlname: '10'
 date: 2020-10-06T12:00:00.000Z
 updated: 2020-11-10T17:29:00.000Z
-author: CC康纳百川
 cover: 'https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/c45d99fe170ead3b6d12b103e320b732_w2560_h1440_s636.jpg'
-tags: 音乐
 description: 本篇文章主要说明如何绕过版权地区限制，在中国大陆享受 JOOX 音乐服务
+tags: 音乐
 id: 10
 categories: 音乐
 keywords:

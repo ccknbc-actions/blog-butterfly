@@ -3,14 +3,13 @@ title: CC的社畜日记 Part3
 urlname: '34'
 date: 2022-06-14T21:00:00.000Z
 updated: 2022-06-14T21:00:00.000Z
-author: CC康纳百川
 cover: 'https://pic1.afdiancdn.com/user/8a7f563c2e3811ecab5852540025c377/common/1235934c1edf46e7ce7b43f17e89d568_w1920_h1080_s70.jpg'
-description: 打破无趣，好好生活
 translate_title: '<font style="color:rgb(64, 64, 64);">ccs-work-diary-part3</font>'
 subtitle: '<font style="color:rgb(64, 64, 64);">CC''s Work Diary Part3</font>'
 tags: '<font style="color:rgb(64, 64, 64);">工作</font>'
 keywords: '<font style="color:rgb(64, 64, 64);">工作</font>'
 categories: '<font style="color:rgb(64, 64, 64);">工作</font>'
+description: 打破无趣，好好生活
 '<font style="color:rgb(64, 64, 64);">id</font>': '<font style="color:rgb(64, 64, 64);">34</font>'
 ---
 查看本文[**语雀**](https://www.yuque.com/ccknbc/blog/34/)版本【首发】，自动同步更新至[**CC的部落格**](https://blog.ccknbc.cc/posts/ccs-work-diary-part3/)！
