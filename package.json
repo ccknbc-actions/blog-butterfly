@@ -7,7 +7,7 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "elog": "npm run sync:yuque-token && npm run build && npm run deploy",
+    "elog": "npm run sync:yuque-pwd && npm run build && npm run deploy",
     "github": "npm run build && npm run deploy",
     "elog:init": "npx elog init",
     "local:yuque-token": "npx elog sync -c ./elog/elog.config.yuque-token.js -e ./elog/.elog.env -a ./elog/elog.cache.yuque.json",
