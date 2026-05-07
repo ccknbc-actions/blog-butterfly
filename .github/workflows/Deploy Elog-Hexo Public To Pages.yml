@@ -71,7 +71,7 @@ jobs:
 
       - name: Generate
         run: |
-          npm run clean:yuque-pwd && npm run sync:yuque-token && npm run build && npm run deploy
+          npm run clean:yuque-pwd && npm run sync:yuque-pwd && npm run build && npm run deploy
 
       - name: Upload Elog Cache
         uses: actions/upload-artifact@v7
